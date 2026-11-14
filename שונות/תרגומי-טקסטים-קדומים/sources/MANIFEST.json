@@ -20051,6 +20051,546 @@
      "c46bee645b2748235d18fd7e470614532af6687d6b0a000fd606361410700fbb"
     ]
    }
+  },
+  {
+   "id": "SEAL/Erra-and-Naram-Sin--node-1539/base.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "regenerate: python3 -I tools/seal_base.py seal sources/SEAL/Erra-and-Naram-Sin--node-1539/node-1539.md sources/SEAL/Erra-and-Naram-Sin--node-1539 (Round 8 run 4)",
+   "files": {
+    "SEAL/Erra-and-Naram-Sin--node-1539/base.tsv": [
+     17475,
+     "f1cd9aaabdef5a6d63fb644f8fef8ec17b08e448d42317338a7dbe00d4124195"
+    ]
+   }
+  },
+  {
+   "id": "SEAL/Erra-and-Naram-Sin--node-1539/node-1539.html",
+   "kind": "seal",
+   "tier": "work",
+   "source": "1539",
+   "note": "",
+   "files": {
+    "SEAL/Erra-and-Naram-Sin--node-1539/node-1539.html": [
+     240450,
+     "f8f9d5b11450d8487a8cf05405e9da8d8184ca050aab59ed70da27850434aacd"
+    ],
+    "SEAL/Erra-and-Naram-Sin--node-1539/node-1539.md": [
+     21132,
+     "d184eccb91d00f85a56c4aa31caf450cbb37e31970ff3af2371403165345a1d0"
+    ]
+   }
+  },
+  {
+   "id": "SEAL/Great-Revolt-against-Naram-Sin-A--node-1540/base.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "regenerate: python3 -I tools/seal_base.py seal sources/SEAL/Great-Revolt-against-Naram-Sin-A--node-1540/node-1540.md sources/SEAL/Great-Revolt-against-Naram-Sin-A--node-1540 (Round 8 run 4)",
+   "files": {
+    "SEAL/Great-Revolt-against-Naram-Sin-A--node-1540/base.tsv": [
+     7883,
+     "0317a1c4d3de8f2cfc0d898bc9a1a8d7d7382bae397d55fb9dbcffba116c3e06"
+    ]
+   }
+  },
+  {
+   "id": "SEAL/Great-Revolt-against-Naram-Sin-A--node-1540/node-1540.html",
+   "kind": "seal",
+   "tier": "work",
+   "source": "1540",
+   "note": "",
+   "files": {
+    "SEAL/Great-Revolt-against-Naram-Sin-A--node-1540/node-1540.html": [
+     192051,
+     "d31286ffccdd0f865b06a91748375a257a1871c050425a6fbb0f24e04efe3ebc"
+    ],
+    "SEAL/Great-Revolt-against-Naram-Sin-A--node-1540/node-1540.md": [
+     12604,
+     "00adb33a42b9f88d48de2eb15c5ecd6f7fbd53aace3d7126dd79fb64fbdd230b"
+    ]
+   }
+  },
+  {
+   "id": "SEAL/Great-Revolt-against-Naram-Sin-B--node-1542/base.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "regenerate: python3 -I tools/seal_base.py seal sources/SEAL/Great-Revolt-against-Naram-Sin-B--node-1542/node-1542.md sources/SEAL/Great-Revolt-against-Naram-Sin-B--node-1542 (Round 8 run 4)",
+   "files": {
+    "SEAL/Great-Revolt-against-Naram-Sin-B--node-1542/base.tsv": [
+     7815,
+     "dc1af933adce43a7927fc66f97949c243c4bbf7f513dde8d3c3f927e37f127b6"
+    ]
+   }
+  },
+  {
+   "id": "SEAL/Great-Revolt-against-Naram-Sin-B--node-1542/node-1542.html",
+   "kind": "seal",
+   "tier": "work",
+   "source": "1542",
+   "note": "",
+   "files": {
+    "SEAL/Great-Revolt-against-Naram-Sin-B--node-1542/node-1542.html": [
+     214926,
+     "16cc58e439946f1b28379872767cbbeffb6a779064060363899ef2a9c0f9d958"
+    ],
+    "SEAL/Great-Revolt-against-Naram-Sin-B--node-1542/node-1542.md": [
+     10730,
+     "3790b0aa338173954be95af07052f58f2b02892534fd8811217d9014f3abc3de"
+    ]
+   }
+  },
+  {
+   "id": "SEAL/Gulkishar-Epic--node-1597/base.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "regenerate: python3 -I tools/seal_base.py seal sources/SEAL/Gulkishar-Epic--node-1597/node-1597.md sources/SEAL/Gulkishar-Epic--node-1597 (Round 8 run 4)",
+   "files": {
+    "SEAL/Gulkishar-Epic--node-1597/base.tsv": [
+     17122,
+     "9e95dcef0535b9bc8b25b5b7a5ab2533d8cf79024bc78c62a0d637e1221252e1"
+    ]
+   }
+  },
+  {
+   "id": "SEAL/Gulkishar-Epic--node-1597/node-1597.html",
+   "kind": "seal",
+   "tier": "work",
+   "source": "1597",
+   "note": "",
+   "files": {
+    "SEAL/Gulkishar-Epic--node-1597/node-1597.html": [
+     190217,
+     "debdce6626a0be0faf0e67059d502c24c78d7ce45a6b5ea855ec7f2bfecf6941"
+    ],
+    "SEAL/Gulkishar-Epic--node-1597/node-1597.md": [
+     23297,
+     "38a4c7e9bf04866dff5601c067ef40b3ff201e48c2cea3de3dbfd5c9822c763e"
+    ]
+   }
+  },
+  {
+   "id": "SEAL/Naram-Sin-and-the-Lord-of-Apishal--node-7255/base.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "regenerate: python3 -I tools/seal_base.py seal sources/SEAL/Naram-Sin-and-the-Lord-of-Apishal--node-7255/node-7255.md sources/SEAL/Naram-Sin-and-the-Lord-of-Apishal--node-7255 (Round 8 run 4)",
+   "files": {
+    "SEAL/Naram-Sin-and-the-Lord-of-Apishal--node-7255/base.tsv": [
+     10651,
+     "80a7faeb6fdc9bca047f067fccab23cc95ae998f241f7e542e85be50b5eb8c1e"
+    ]
+   }
+  },
+  {
+   "id": "SEAL/Naram-Sin-and-the-Lord-of-Apishal--node-7255/node-7255.html",
+   "kind": "seal",
+   "tier": "work",
+   "source": "7255",
+   "note": "",
+   "files": {
+    "SEAL/Naram-Sin-and-the-Lord-of-Apishal--node-7255/node-7255.html": [
+     138613,
+     "138df9e627658145467d21ab4bd980c7994ee17c89e7853d40e5a40c29d84eb3"
+    ],
+    "SEAL/Naram-Sin-and-the-Lord-of-Apishal--node-7255/node-7255.md": [
+     14658,
+     "a174151b7bd04e9caed5e6a2c0a869ed1f9b97b9e7c67dc494582a3b6fe73833"
+    ]
+   }
+  },
+  {
+   "id": "SEAL/Sargon-Conquering-Hero--node-1548/base.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "regenerate: python3 -I tools/seal_base.py seal sources/SEAL/Sargon-Conquering-Hero--node-1548/node-1548.md sources/SEAL/Sargon-Conquering-Hero--node-1548 (Round 8 run 4)",
+   "files": {
+    "SEAL/Sargon-Conquering-Hero--node-1548/base.tsv": [
+     21223,
+     "a20ab73bc55344e6765bdf2f0521a18ffd8d2b8edc200ee104ee1ea71e529772"
+    ]
+   }
+  },
+  {
+   "id": "SEAL/Sargon-Conquering-Hero--node-1548/node-1548.html",
+   "kind": "seal",
+   "tier": "work",
+   "source": "1548",
+   "note": "",
+   "files": {
+    "SEAL/Sargon-Conquering-Hero--node-1548/node-1548.html": [
+     154396,
+     "6f445e1217570ce6b554c5e3424d20ace7e1561c292ba6144f0a7c12908b6db4"
+    ],
+    "SEAL/Sargon-Conquering-Hero--node-1548/node-1548.md": [
+     23988,
+     "a677b2b176de87b9ea8db8cd66425ae9edc10917b08b526e47b9700a4cc027dc"
+    ]
+   }
+  },
+  {
+   "id": "SEAL/Sargon-in-Foreign-Lands--node-1547/base.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "regenerate: python3 -I tools/seal_base.py seal sources/SEAL/Sargon-in-Foreign-Lands--node-1547/node-1547.md sources/SEAL/Sargon-in-Foreign-Lands--node-1547 (Round 8 run 4)",
+   "files": {
+    "SEAL/Sargon-in-Foreign-Lands--node-1547/base.tsv": [
+     17236,
+     "e8f6d2181c455118238993c414ac51ad704b4c0a5a5027aacf6fa9fab3ec3178"
+    ]
+   }
+  },
+  {
+   "id": "SEAL/Sargon-in-Foreign-Lands--node-1547/node-1547.html",
+   "kind": "seal",
+   "tier": "work",
+   "source": "1547",
+   "note": "",
+   "files": {
+    "SEAL/Sargon-in-Foreign-Lands--node-1547/node-1547.html": [
+     142594,
+     "2d5c4aa3e6f8ca2a2b750a4dd4db0a293908dd87f93004bfa428882814b90876"
+    ],
+    "SEAL/Sargon-in-Foreign-Lands--node-1547/node-1547.md": [
+     21744,
+     "c0dcbaf5ba8869a8352cadc66503e9608d613178ee2afb58abb8569d7be0b1d1"
+    ]
+   }
+  },
+  {
+   "id": "SEAL/Sargon-the-Lion--node-7525/base.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "regenerate: python3 -I tools/seal_base.py seal sources/SEAL/Sargon-the-Lion--node-7525/node-7525.md sources/SEAL/Sargon-the-Lion--node-7525 (Round 8 run 4)",
+   "files": {
+    "SEAL/Sargon-the-Lion--node-7525/base.tsv": [
+     8974,
+     "d75d84551bba5a25577fc45e12869198a51496b18b04d961c892841ff5f068c7"
+    ]
+   }
+  },
+  {
+   "id": "SEAL/Sargon-the-Lion--node-7525/node-7525.html",
+   "kind": "seal",
+   "tier": "work",
+   "source": "7525",
+   "note": "",
+   "files": {
+    "SEAL/Sargon-the-Lion--node-7525/node-7525.html": [
+     136092,
+     "a2789cadec81889ac071993b66ee34255d07e1180a982c108085c1c54e4c413d"
+    ],
+    "SEAL/Sargon-the-Lion--node-7525/node-7525.md": [
+     10873,
+     "6cd6f804c76942a3c5380af8ee910b1e8b9fbe50291ea190612636a3d3cc69a9"
+    ]
+   }
+  },
+  {
+   "id": "SEAL/Song-of-Bazi--node-1551/base.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "regenerate: python3 -I tools/seal_base.py seal sources/SEAL/Song-of-Bazi--node-1551/node-1551.md sources/SEAL/Song-of-Bazi--node-1551 (Round 8 run 4)",
+   "files": {
+    "SEAL/Song-of-Bazi--node-1551/base.tsv": [
+     17293,
+     "8bcc58b082da26a532a15f78c7050c73de27aa29bd6dd1bd4240dfa4e7b7f35f"
+    ]
+   }
+  },
+  {
+   "id": "SEAL/Song-of-Bazi--node-1551/node-1551.html",
+   "kind": "seal",
+   "tier": "work",
+   "source": "1551",
+   "note": "",
+   "files": {
+    "SEAL/Song-of-Bazi--node-1551/node-1551.html": [
+     241737,
+     "7a7796a44c40edbd0a3aefa0ae839d7f36221b65ff727ff98f1272df1d7e64b6"
+    ],
+    "SEAL/Song-of-Bazi--node-1551/node-1551.md": [
+     20607,
+     "215ab30c6e151bfed7a1f1b7fad622515c1416519b42e223eedc1e91bd3e450c"
+    ]
+   }
+  },
+  {
+   "id": "SEAL/Zimri-Lim-Epic--node-1552/base.tsv",
+   "kind": "adhoc",
+   "tier": "work",
+   "source": "",
+   "note": "regenerate: python3 -I tools/seal_base.py seal sources/SEAL/Zimri-Lim-Epic--node-1552/node-1552.md sources/SEAL/Zimri-Lim-Epic--node-1552 (Round 8 run 4)",
+   "files": {
+    "SEAL/Zimri-Lim-Epic--node-1552/base.tsv": [
+     34055,
+     "07af380b09ecf75311c5a3f16ee6418a142d85587977e0d3e20360c83d579a91"
+    ]
+   }
+  },
+  {
+   "id": "SEAL/Zimri-Lim-Epic--node-1552/node-1552.html",
+   "kind": "seal",
+   "tier": "work",
+   "source": "1552",
+   "note": "",
+   "files": {
+    "SEAL/Zimri-Lim-Epic--node-1552/node-1552.html": [
+     499117,
+     "f14a23cecf5cd857a3f53c18a6bd79d181e71d1da19b7affbb95fc1157014fc1"
+    ],
+    "SEAL/Zimri-Lim-Epic--node-1552/node-1552.md": [
+     46378,
+     "5546ca986648f3927de2caf24a976a0dd2facb1ca434992d1f29d7968c6b803c"
+    ]
+   }
+  },
+  {
+   "id": "eBL/Anzu-NA/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "10",
+    "Neo-Assyrian",
+    "-"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Anzu-NA/_raw/chapter-display.json": [
+     990571,
+     "3edfd87a6dee8ac88d39356d8d126038543edcff84e1360cd54f3f8459fb56e4"
+    ],
+    "eBL/Anzu-NA/bibliography.md": [
+     3196,
+     "468096d01fca859456464a20c599f5a347de1eaff5f50d198f65ed09787c9e1f"
+    ],
+    "eBL/Anzu-NA/chapter.atf": [
+     13930,
+     "f7f4da4d0b3e48b9cc7900b6c1494bf4f4804acc2ca3566669e8d4d27103b71b"
+    ],
+    "eBL/Anzu-NA/glossary.md": [
+     57180,
+     "607d760443eec72910bafae7fe0e1bedeb4c73e7fcdb0766d65c5e45323fc674"
+    ],
+    "eBL/Anzu-NA/manuscripts.md": [
+     680,
+     "1f0ece804a4416582387ba594332e1f4312d645f82cc3e2dd664947118d15c0f"
+    ],
+    "eBL/Anzu-NA/reading-edition.md": [
+     30469,
+     "248599a539fd0bbecda4c4959da0e81b5c3df61fd2399b034ac86b8e05e62889"
+    ]
+   },
+   "raw_files": 177
+  },
+  {
+   "id": "eBL/Anzu-OB-II/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "10",
+    "Old Babylonian",
+    "II"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Anzu-OB-II/_raw/chapter-display.json": [
+     1132975,
+     "3c964f247ba3e7740f5f1b636f69a582539491cc8bc4ed61bb272a0617c1ab2a"
+    ],
+    "eBL/Anzu-OB-II/bibliography.md": [
+     3489,
+     "4e33e333387c0b9d3ee54b223327a059b2d1bdcb0e0a3b927276021eabf43e85"
+    ],
+    "eBL/Anzu-OB-II/chapter.atf": [
+     21023,
+     "be6c525f47c4c2727b089c55f2e53617b2f6a3aaa954f3225c92adba4e43864e"
+    ],
+    "eBL/Anzu-OB-II/glossary.md": [
+     67595,
+     "02376beb54eac05f271f618ee11861ce7b18d4f3896b1358e48d63ef4c036878"
+    ],
+    "eBL/Anzu-OB-II/manuscripts.md": [
+     800,
+     "66fb645b9bf71d4ffd9796e1aeccceb9c7016d35db3330d069787b90454203e4"
+    ],
+    "eBL/Anzu-OB-II/reading-edition.md": [
+     47608,
+     "0f19c598aea8b845f461c72416ff869992c053f8cee396f3bed49d39a7b5fb56"
+    ]
+   },
+   "raw_files": 224
+  },
+  {
+   "id": "eBL/Anzu-OB-III/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "10",
+    "Old Babylonian",
+    "III"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Anzu-OB-III/_raw/chapter-display.json": [
+     497503,
+     "7cdc4bf517cd9340052390f3211de6570cc70e3173c6f2d43b18efbce962d6fa"
+    ],
+    "eBL/Anzu-OB-III/bibliography.md": [
+     3387,
+     "1a8047b75619dc2d61b312b40216b65d6bd056c880ed1d094df54308af59f1ca"
+    ],
+    "eBL/Anzu-OB-III/chapter.atf": [
+     8941,
+     "c4fb3f140c773c14658386e911916c2581b063b0e03370375c5fecc11233bcac"
+    ],
+    "eBL/Anzu-OB-III/glossary.md": [
+     40251,
+     "0ac46336f4cbdf1e25a5d431b803831ad964d5650c67e667370e253a4fc8e5f8"
+    ],
+    "eBL/Anzu-OB-III/manuscripts.md": [
+     815,
+     "8fd58e0a548b33a3b212c6884f0cbfb62c7988a8f0024651ab4ab35ab1a11b79"
+    ],
+    "eBL/Anzu-OB-III/reading-edition.md": [
+     19732,
+     "d377e791835e34882b66137c17018d1ddd6f3e926bdbc05eb2c54c7c785de614"
+    ]
+   },
+   "raw_files": 132
+  },
+  {
+   "id": "eBL/Anzu-SB-I/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "10",
+    "Standard Babylonian",
+    "I"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Anzu-SB-I/_raw/chapter-display.json": [
+     3483509,
+     "9271a8b69e697c37b6d5f4afb07720fa214649433169d86b1106f8f677fd409a"
+    ],
+    "eBL/Anzu-SB-I/bibliography.md": [
+     3363,
+     "dbffe4fa7840e1ec3571f3fde64536788fc83dda6cc26482b5fde63c24e191d2"
+    ],
+    "eBL/Anzu-SB-I/chapter.atf": [
+     53856,
+     "81cccc84828488326767ed8ecece9de9e6b2b9dabec3b5c121aa4200d0e1503f"
+    ],
+    "eBL/Anzu-SB-I/glossary.md": [
+     93224,
+     "96c1c3481e6f4297e4536fedd85148d17b4fc16de3ff770c14344b09e5d31551"
+    ],
+    "eBL/Anzu-SB-I/manuscripts.md": [
+     1932,
+     "f32dffb9a10caf6f50a67c635ee1ea0d236f147fb3e6e98e7987bb7cc7c20ae8"
+    ],
+    "eBL/Anzu-SB-I/reading-edition.md": [
+     110917,
+     "05151e89ab361bed81780c4c86977f214fd4b9afc3e10577bb640327ace1b482"
+    ]
+   },
+   "raw_files": 288
+  },
+  {
+   "id": "eBL/Anzu-SB-II/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "10",
+    "Standard Babylonian",
+    "II"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Anzu-SB-II/_raw/chapter-display.json": [
+     4084348,
+     "3f86c819dd1633090020b206d7640c5a424963c348018dc7640420bc99580edb"
+    ],
+    "eBL/Anzu-SB-II/bibliography.md": [
+     3601,
+     "df14cb0a9b63062472332f2f64d901e9a397e9d3aba6d3e7e6de3d409b737194"
+    ],
+    "eBL/Anzu-SB-II/chapter.atf": [
+     56648,
+     "0b38e71709b3223fdfda5e0db8a8fa264e175dcd92d71fd6e5fd9d7f617bd661"
+    ],
+    "eBL/Anzu-SB-II/glossary.md": [
+     79705,
+     "a27af246d76d00c55a10d8b4fc71262c4abd88714dbc721d9b982e76a10aa8b3"
+    ],
+    "eBL/Anzu-SB-II/manuscripts.md": [
+     1704,
+     "b08f8f7f79a5a0f7485cdbf6dbdf824040d832af0710eb196a778f577270dd79"
+    ],
+    "eBL/Anzu-SB-II/reading-edition.md": [
+     105864,
+     "1a2a4159c4a6c2a1f7b7d1bccf297da50994b0574c3fced8d4db4f6b9415464e"
+    ]
+   },
+   "raw_files": 252
+  },
+  {
+   "id": "eBL/Anzu-SB-III/",
+   "kind": "ebl-chapter",
+   "tier": "work",
+   "source": [
+    "L",
+    "1",
+    "10",
+    "Standard Babylonian",
+    "III"
+   ],
+   "note": "",
+   "files": {
+    "eBL/Anzu-SB-III/_raw/chapter-display.json": [
+     1824288,
+     "63d2c4b8c34c511fc84d8f845916adcd6dc9295ce8fd50cf792c1d52f78fbdc6"
+    ],
+    "eBL/Anzu-SB-III/bibliography.md": [
+     3749,
+     "24bd7bcdf6773a02c837967883a1dd52e6369c68795a85fecf01ba8780a156f0"
+    ],
+    "eBL/Anzu-SB-III/chapter.atf": [
+     29373,
+     "b5c380894ea86a92545740ff405c97acf90cf22a96d94ea1cba5e10e068e1178"
+    ],
+    "eBL/Anzu-SB-III/glossary.md": [
+     70523,
+     "73d0deb9ed1e57f81834ac7914e9a71bb7932cf2faa1f5dfab7f84c05baff9bc"
+    ],
+    "eBL/Anzu-SB-III/manuscripts.md": [
+     1001,
+     "afc8d534bdc4782abf607056ab650f346ef9bafa09ab84dc1588d8bbacec82ce"
+    ],
+    "eBL/Anzu-SB-III/reading-edition.md": [
+     61353,
+     "268338d0bf4d7bb1cea3bc6dbd9a84deaee481a46a1424e375d6193a8972a276"
+    ]
+   },
+   "raw_files": 240
   }
  ]
 }

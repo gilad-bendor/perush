@@ -684,6 +684,141 @@ Full list: `7-אנמרכר-ואנסוחגירנה/project.md` ("Part ES"); ES co
 - **Words:** *nam-maš-maš* `מְלַחֲשׁוּת` (coined; `מלאכת` reserved); *kur-gi₄* "goose" `אווז` (EA 436 and LZ 220 had `אווז(?)` for the uncertain *u₅*; harmonization 2026-11-09: *u₅{mušen}* = `שקנאי?` in every corpus, as Enki and the World Order 297, 418); *suḫ₁₀* `נזר` (harmonization 2026-11-09; was `עטרה`; EA 274 *saĝ muš₃* `עטרת ארטה`, its overlap with Etana's Akk. *meānu* cross-language, no reservation); *i₃* (dairy) `שמן` (LC; note "clarified butter"); *dim₂-ma* `תבונה` (Ur lament); *ma-na* `מָנֶה` [cognate]; *zi nam-til₃* `נשימת החיים` (not Gen 2:7's `נשמה`); by sense: *dag* `שוטט`, *la₂* `הושיט` / `המעיט` / `תלה`, *ĝiri₃* "path" `משעול`, *kud* `קטע`, *amar* `עגל` / `גוזל` / `עֹפֶר`; *ur* (126–127) `כלב` (EA's dog contest).
 - **Rulings:** the 13 open decisions kept as drafted (80 without a subject: both readings open). **Tool:** licences for Aruru (the `ארור` gate) and *šudu₃* (the `ברך` gate).
 
+## 13. Anzû, the Akkade legends, the OB royal epics, Idrimi (projects 8–11; Round 8 run 4, 2026-11-14) – fixed before the first part
+Fixed by the coordinator from the bases (eBL L/1/10; SEAL nodes 1548, 1547, 7525, 1540, 1542, 7255, 1539, 1552, 1551,
+1597; CDLI P270858 = EA 359, P500443 = Idrimi) and the earlier corpora. **§0.2, §10.2–§10.4 and §11 bind** (the eBL
+machinery, the Akkadian grammar, the gated words, the Cuthaean Legend's Akkade vocabulary). The rows are drafts for
+"look for", never "translate as" (guidelines §5.2 ★): the translator reads the transliteration first, may revise a row
+at its first occurrence with the reason in `project--<part>.md`; after the merge the row binds.
+
+**Why Anzû is in this corpus** (the coordinator's decision, the plan left it open): its bird is the Anzud of project 6
+(Lugalbanda) and the eagle-world of Etana, its versions are an eBL multi-version text like Etana and the Cuthaean Legend
+(the same `kings_tools.py` machinery, key AN), and its theme – who holds the Tablet of Destinies, who is king among the
+gods – is the theme of this corpus's kings. Its tie to Enūma eliš (`../סיפורי-הבריאה-המסופוטמיים/1-אנומה-אליש/`) is
+kept by the shared Hebrew (*ṭuppi šīmāti* `לוח הגורלות`) and recorded in the apparatus.
+
+### 13.1 Names (★ = vocalized at every occurrence; checked by TRAPS)
+| Source | Hebrew | Notes |
+|---|---|---|
+| Anzû (IM.DUGUD{mušen}) | אַנְזוּ | The lion-headed eagle; = Sumerian Anzud `אַנְזוּד` (project 6, Gudea): note at the first occurrence. |
+| Ninurta; Ningirsu; Ninšiku (= Ea); Mami ★; Bēlet-ilī ★ | נִינוּרְתָּה; נִינְגִּירְסוּ; נִנְשִׁיכּוּ; מָמִי; בֵּלֶת־אִילִי | earlier corpora; Mami: unvocalized `ממי` = "from me" |
+| Enlil (eBL *ellil*); Anu ★; Ea; Adad; Šara ★; Girra ★; Nusku; Dagan ★ | אֶנְלִיל; אָנוּ; אֵאָה; אֲדַד; שַׁרָא; גִּירָּה; נוּסְכּוּ; דָּגָן | Dagan the god: grep the corpora for the precedent before the first line (Ugarit `דָּגָן`; one law row `דָּגַן`): the first translator decides, with the reason |
+| Šarur (Ninurta's weapon) | שָׁרוּר ★ | |
+| Ekur; Duranki; Igigū; Anunnakkū; *ellilūtu* | אֵכּוּר; דּוּרַנְקִי; הָאִיגִיגִי; הָאֲנוּנָּכִּי; אֶנְלִילוּת | earlier corpora |
+| Sargon (*šarru-kīn*); Narām-Sîn ★; Akkade; Kiš; Uruk; Ištar ★; Ilaba; Annunītu; Šamaš ★; Erra; Enki; Šakkan ★; Subartu; Meslam | סַרְגּוֹן; נָרָם־סִין; אַכַּד; כִּישׁ; אוּרוּךְ; אִשְׁתַּר; אִילַבָּה; אֲנוּנִיתוּ; שַׁמַשׁ; אֶרָּה; אֶנְקִי; שַׁכַּן; סוּבַּרְתּוּ; מֶסְלָם | projects 2, 4 (§11) |
+| Zimrī-Lîm; Yaḫdun-Lîm; Mari ★; Ḫana ★; Terqa; Ḫabur | זִמְרִי־לִים; יַחְדּוּן־לִים; מָארִי; חָנָה; תֶּרְקָה; חָבוֹר | `זִמְרִי` is a biblical name (Num 25:14; 1 Kgs 16:9) and Ḫabur the Bible's `חָבוֹר` (2 Kgs 17:6): [cognate] notes; unvocalized `מרי` = "rebellion", `חנה` = "Hannah / camped" |
+| Idrimi; Ilim-ilimma; Ḫalab (Aleppo); Emar ★; Canaan; Ammiya; Mukiš; Niḫi ★; Amae; Alalaḫ; Barattarna; Pilliya; Kizzuwatna; Ḫatti; Šarruwa | אִדְרִימִי; אִלִּים־אִלִּימָּה; חַלַבּ; אֵמַר; כְּנַעַן; אַמִּיָּה; מוּקִישׁ; נִיחִי; אַמָאֶה; אֲלָלַח; בָּרַטַּרְנָה; פִּלִּיָּה; כִּזּוּוַתְנָה; חַתִּי; שַׁרּוּוָה | Canaan: the biblical form (guidelines §6.4 rule 6), [cognate]; Ḫatti ↔ `חֵת` [cognate] in a note; `אמר` unvocalized = "said" |
+| *ḫapiru* (SA.GAZ) | חַבִּירוּ ★ | **never** `עברים` in a line (gated): the Ḫapiru–`עִבְרִי` question is the apparatus's |
+| {d}IŠKUR / {d}IM (Idrimi; Alalaḫ's storm-god) | אֲדַד | the logogram's Akkadian reading (guidelines §6.3); the note says that at Alalaḫ he is the Hurrian Teššub |
+| Ḫebat; Ištar ({d}IŠ8.TAR2; Šauška) | חֶבַּת; אִשְׁתַּר | |
+The rest: transcribed from the base and recorded in the part's proposals.
+
+### 13.2 Grammar
+As §10.2 (Akkadian). The SEAL texts have no normalization: the translator reads the transliteration, SEAL's lemmas
+are a draft (check every form). The OB epics are poetry with archaic forms (the "hymno-epic" dialect: locative *-um*,
+terminative *-iš*, apocopated suffixes): render the form's sense, note the dialect where it carries a nuance.
+Idrimi's Akkadian is peripheral (Alalaḫ, 15th century), with Hurrian and West Semitic features (*akkana* "thus",
+*urtabbi* …): note each peculiar form; the Idrimi inscription is first-person narrative + curse (the curse formulas:
+precative `יְ…` / `לְמַעַן` never; `יכרית`, `ישמיד` by the verb).
+
+### 13.3 Formulas (the first copy fixes them; checked by FORMULAS after the merge)
+| Source | Hebrew (draft) | Where |
+|---|---|---|
+| *pâšu īpuš-ma iqabbi / izakkar(a) ana* … | `פתח את פיו ואמר, / אל … דיבר:` (guidelines §6.2; grep the eBL corpora for the exact precedent) | Anzû passim; the Sargon speeches |
+| the gods' council: *ilū … ummānu … mannu* … (who will go?) | the translator fixes the first copy (SB I) and copies it to each refusal; `מי ילך` / `את מי אשלח` are gated (Isa 6:8 in the apparatus) | SB I, OB II (Adad, Girra, Šara in turn) |
+| each god's refusal (*ana šadî lā alakki* …) | the first copy fixes it, the later ones copy it | SB I ≈ b+80–b+160 (Adad, Girra, Šara) |
+| Ea's / Mami's battle orders to Ninurta, and the messenger's repetitions (SB II) | command ↔ delivery ↔ execution in the same words and order (§5.2) | SB II, III |
+| *ṭuppi šīmāti* | `לוח הגורלות` (Enūma eliš; the creation corpus) | passim |
+| the Akkade speeches: *qurādu*, *ummānu*, *šarru* | `גִּבּוֹר` (gated, §11.4), `חַיִל` (CL1), `מֶלֶךְ` | AK |
+
+### 13.4 Reserved and gated (RESERVED_R8 in `kings_tools.py`; licensed by the eBL lemma, SEAL's lemmas, or the folded ATF)
+- **Inherited:** §11.4 (the Cuthaean gates, among them `מבול` *abūbu*, `גבור` *qurādu*/*qarrādu*/*eṭlu*, `צלם`
+  *ṣalmu*, `שבועה` *māmītu*, `נשבע` *tamû*, `מצבה` *narû*, `מלאכה` *šipru*, `שוב` *târu*, `קרא` *nabû*/*šasû*/*zakāru*).
+- **New gates:** `לוח` only *ṭuppu* / *ṭupšīmātu*; `גורל` only *šīmtu* / *šīmātu*; `כנען` only *Kinaḫ(ḫ)i*; `ברית` only
+  *riksu* / *rikiltu*; `משח` / `משיח` only *pašāšu*.
+- **Never** (apparatus only): `חושן`, `אורים`, `תומים` (Exod 28:15–30: the tablet on the breast); `כרוב`, `שרף` (Ezek
+  28:14–16; Isa 6:2); `מי ילך`, `את מי אשלח`, `ילך לנו` (Isa 6:8); `עליון`, `הילל`, `כוכבי אל` (Isa 14:12–14);
+  `לויתן`, `רהב`, `תנין` (Isa 27:1; 51:9; Ps 74:13–14); `רך הלבב`, `ירך לבבכם` (Deut 20:3, 8); `עברי` / `עברים`.
+
+### 13.5 What to look for ("look for", never "translate as")
+- **Anzû:** the theft of the Tablet of Destinies and of *ellilūtu* (Isa 14:12–15; Ezek 28:12–17); the council in which
+  god after god refuses (Isa 6:8; 1 Kgs 22:19–22; Job 1–2); the mother goddess sending her son (Mami, Ninurta); the
+  warrior god with storm and flood weapons, the seven winds (Ps 18:8–16; 29; Hab 3; Nah 1:3); the arrow that turns
+  back (2 Kgs 13:15–19?); the bird's wings cut, the wind carrying its feathers as a sign (Ezek 17); the victor's names
+  (Isa 9:5); Enūma eliš's debt to Anzû (the tablet on the breast; the champion);
+  Exod 28:30 (Urim and Thummim on the breast) [divergence].
+- **The Akkade legends:** the king's speech before battle and the warriors' answer (Deut 20:1–9; Josh 1:10–18;
+  2 Sam 10:12); the dark forest, the march beyond the known world (Gen 14 for the four kings' march; Isa 10:13–14 and
+  37:24–25 for a king's boasts); the merchants' plea (EA 359); the revolt of all the lands (Ps 2:1–3; Josh 10–11; Gen
+  14); Narām-Sîn's fall and Erra (the Curse of Agade, `../קינות-על-ערים/2-קללת-אכד/`).
+- **The royal epics:** the king's war in the language of the gods' war; Zimrī-Lîm's praise (Ps 18; 2 Sam 22); Bazi
+  and the water of the mountain; Gulkišar's war against Babylon.
+- **Idrimi:** the exiled younger son, the years among the Ḫapiru (Judg 11:3; 1 Sam 22:2), the omens by birds and
+  lambs, the return by sea, the treaty, the building of the palace, the curse on whoever removes the statue (Deut
+  27–28), the scribe's own blessing; the "seven years" (Gen 29:18–20; 41).
+
+### 13.6 The plan of the parts (one agent at a time; the coordinator merges proposals into §13.7 after each part)
+| Part | Lines | Translator |
+|---|---|---|
+| AN1 | Anzû SB I (201) | translator A |
+| AN2 | Anzû SB II–III (309) | A, resumed |
+| AN3 | Anzû OB II, OB III, NA (184), copying the SB Hebrew | A, resumed |
+| AK1 | CH, FL, LI, ST (310) | translator B |
+| AK2 | RA, RB, AP, EN (222) | B, resumed |
+| RE1 | ZL, BZ, GU (321) | translator C |
+| ID1 | Idrimi (104) | C, resumed |
+Then independent fidelity reviewers (Anzû; the rest), and the coordinator's consistency pass.
+
+### 13.7 Merged from the parts
+(The coordinator adds one record per part.)
+#### 13.7.1 Part AN1 (SB I), 2026-11-14
+The proposals of `8-אפוס-אנזו/project--AN1.md` ("Proposals for the corpus renderings") are **accepted as written and
+bind**: the speech formulas (`X פתח את פיו ואמר,` / `דיבר אל Y:`; `אל X דבר דיבר:`), the council (`"איזה אל – את אנזו
+יקטול,` / `ובכלל היישובים יגדיל את שמו?"`), the summons (`את X הצעיקו, בן אָנוּ;` / `שָׂם טַעַם, ואליו דיבר:`), Anu's
+eight-line speech, the answer (`X ענה לָאִמְרָה,` / `אל אָנוּ, אביו, דבר דיבר:`), the nine-line refusal, and the terms
+table (*gašru* `כַּבִּיר`, *ṭēmu* `טַעַם`, *ṣīt pî* `מוֹצָא פִי`, *kamû* `אָסַר`, *nêru* `קָטַל`, *parṣu* `פּוּלְחָן`, *māhāzu*
+`מָחוֹז` …). Decisions on its open items: *kiṣṣu* `מָעוֹן` (the root קדש stays reserved); *nagāšu* `נָדַד`; *šahāhu*
+`נִרְפָּה`; Dagan `דָּגָן` ★ (Ugarit and the school canon; Lipit-Ištar's `דָּגַן` is the outlier – left for the lead).
+**Split left for the lead:** *bukru* `צֶאֱצָא` (Enūma eliš's precedent) against the Cuthaean Legend's *perʾu* `צֶאֱצָא`.
+Tool: the `טוב` gate anchored at word ends (it read `טובל`); `ארר` licensed by *arāru* (RESERVED_R8).
+#### 13.7.2 Part AN2 (SB II–III), 2026-11-14
+`8-אפוס-אנזו/project--AN2.md`'s proposals accepted as written: Anu's promise copied to Ninurta (II 24–27, 122–125,
+144–147); the battle chains (Mami's orders II.17–27 = Ea's counsel 115–125 = Šarur's delivery 137–147; the failed shot
+59–69 = 75–85 = 92–102; Ea's second counsel 107–114 = 129–136, done in III.9–12) bind in their strings. Decisions:
+*tāhāzu* `מַעֲרָכָה` (`מלחמה` stays *anuntu*'s); III.b+133 follows eBL's *nebû*; the lemma slips followed by form
+(II.1, 36, 61, III.25) recorded in the project. **Split left for the lead:** *šanû* "repeat, change" = `שִׁנָּה`
+(the cognate, here) against §0.3's *nakāru* = `שִׁנָּה` (the Sumerian *kur₂* rule). Tool: the `ברך` gate anchored
+(`בברכיך` "your knees").
+#### 13.7.3 Part AN3 (OB II, OB III, NA), 2026-11-14
+`project--AN3.md` accepted: SB's Hebrew copied where the Akkadian is the same ("= SB …"), a different word where it
+differs ("~ SB …"); OB II.81–82 = OB III.1–2 (the Susa tablets) identical. Decisions: OB II.22 *iwwi* "became" (as SB);
+*rihiṣ* `שְׁטֹף` (eBL's "trust" a lemma slip); *elēnû* `עִלִּי` (`עליון` reserved). `verify AN --strict` OK (694).
+#### 13.7.4 Part AK1 (CH, FL, LI, ST), 2026-11-14
+`9-אגדות-מלכי-אכד/project--AK1.md` accepted: Anzû's speech formulas reused; the conquest list `את X קטלתי,`; the
+challenge `"לְכָה – המלך אשר ישתווה אליי,` / `באשר אנוכי התהלכתי –` / `הוא – יתהלך!"`; `ביום ההוא`; FL copies CH where
+the Akkadian is the same. Decisions: *tamḫāru* `עִמּוּת` (Anzû) – the ST title follows (`מלך העִמּוּת`); *etēqu* Š
+`נתן לחלוף` (`העביר` is *ebēru* Š); *ēnu* `אֵן` (`אדון` is *bēlu*); **_raqādu_ keeps `רָקַד`** (the cognate rule):
+Anzû's *mēlulu* moves to `שִׂחֵק` (2 Sam 6:21 [equivalent]) – applied by the Anzû reviewer. Tool: gates G1–G4 fixed
+(`ברך` licensed by *birku*; `השדמות`; ATF logograms and spellings for ST / ID; `גיבוריו`).
+#### 13.7.5 Part AK2 (RA, RB, AP, EN), 2026-11-14
+`project--AK2.md` accepted: RA copies RB; `X פתח את פיו,` / `ודיבר אל Y:` (no *iqabbi*); `מלך ארבע הקצוות`; *andurāru*
+`דְּרוֹר` [cognate]; *aḫḫūtu* `אַחֲוָה`; *pašīšu* `מָשׁוּחַ`. Decisions: *nabalkutu* "rebel" `מָרַד` (split by sense from
+"cross" `חָצָה`); *dannūtu* `חוֹזֶק`, *malku* `נָסִיךְ` by sense; **_qerēbu_ keeps `קָרַב`** (the cognate rule): Anzû's
+*ṭeḫû* moves to `נִגַּשׁ` – applied by the Anzû reviewer; FL i7′ `[נצחונו]?` (*ernittu* `נִצָּחוֹן`) – applied by the
+reviewer. Tool: G5–G8 (Ibrat licenses `אבר`; `Má-gan`; *ṭūbu*; `אשבע`).
+#### 13.7.6 Part RE1 (ZL, BZ, GU), 2026-11-14
+`10-…/project--RE1.md` accepted (ZL ii37 `שמע את אמירתו זו –`; *āpilum* `עוֹנֶה` – Mari's prophet, not SEAL's
+"diviner"; *imtu* `חֵמָה`; *enēnu* `חָנַן`; *lēʾu* `נֶסֶר`). Decisions: *balālu* `בָּלוּל` licensed (the cognate keeps
+it; Gen 11:7–9 stays the apparatus's); **_ayyābu_ = `צַר`** (renderings §0, Gilgameš; *nakru* keeps `אוֹיֵב`) and
+*zību* `זְאֵב` [cognate] – applied by the reviewer; *saḫāru* / *maḫāru* by sense. Tool: `בלול`, `תועבתו` + *ikkibu*,
+TRAPS for Bašar, Id, Laḫmu, Mer, Ḫabur.
+#### 13.7.7 Part ID1 (Idrimi), 2026-11-14
+`11-פסל-אידרימי/project--ID1.md` accepted (the Alalaḫ forms noted line by line; SA.GAZ `חַבִּירוּ`; the numeral gods of
+line 98 kept as numbers with a note; the scribe's dittography in 93 `<<…>>`). Its uncertain readings (*urtabbiaku
+urāk*, *innaḫū*, *…anwanda*, *uzakki*, *ušaqqûšunu*) wait for ORACC's edition. Tool: ATF logogram licences (ARAD,
+SAGA/DU10, NUMUN, ALAM) and `צלמי`. **All four projects drafted: `verify AN AK RE ID --strict` OK (1,651 entries).**
+
+
 ## Changelog
 - 2026-11-07: §12.6.1–§12.6.5 merged after each part (LC1, LC2, LZ1, LZ2, ES); *alan* reversed to `פֶּסֶל` (§12.6.3).
 - 2026-11-07: §12 the Uruk cycle (projects 5–7: LC, LZ, ES) – names, grammar, formulas, reserved and gated words, the plan of the parts; fixed by the Round 6 run 3 coordinator before the first part.

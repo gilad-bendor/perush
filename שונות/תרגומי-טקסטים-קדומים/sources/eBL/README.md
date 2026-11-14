@@ -119,3 +119,11 @@ Fetched with `tools/ebl_fetch.py L 2 5 "Standard Babylonian" -`. Edition T. D. N
 | `Maqlu-I/` … `Maqlu-VIII/`, `Maqlu-RT/` | *Maqlû* (eBL `Mag/1/1`), Standard Babylonian, Tablets I–VIII and the Ritual Tablet | I 152, II 231, III 202, IV 155, V 181, VI 161, VII 198, VIII 133 (63 numbered lines, then the fragments `A+1`–`A+46`, `B+1`–`B+22`), RT 182 (`1`, then `2'`–`180'`) = 1,595 | Nineveh (NinNA…), Aššur, Ḫuzirīna, Sippar, Nippur, Babylon, Uruk, school tablets and the Aššur commentary (`AššNACom…`); `manuscripts.md` per tablet |
 
 Fetched 2026-10-21 (re-generated 2026-10-23) with `tools/ebl_fetch.py Mag 1 1 "Standard Babylonian" <I…VIII|RT> …`. Edition T. Abusch (ed.), D. Schwemer (revision); translation Abusch. **eBL lemmatized only Tablet I** (152 lines, 335 dictionary words): for II–RT, `glossary.md` is empty and the reading edition has no **L:** lines – use `כשפים-ולחשים/maqlu_tools.py lem` (ORACC cmawro's glossary, same editors). **Converter fix:** Maqlû's incantation-opening lines (`1. %sb EN₂ %n …`), its rubrics (`36a. %sb KA.INIM.MA …`) and lines with no language marker (`160b. KA.INIM.MA ina muhhi …`, `121a. [...] ...`) were missed by `ebl_fetch.py`, and their manuscripts glued to the line before; fixed 2026-10-21/23 (`tools.md`). The reading edition prints N without the `%sb` / `%n` markers (`EN₂ nuska šurbû …`, `… TU₆ EN₂`). **Usefulness:** the base text of Maqlû; the only complete open edition (Abusch 2016, *The Magical Ceremony Maqlû*, AMD 10, Brill, is paid; Abusch 2015, SBL WAW 37, is not ours, guidelines §2.3). Gitignored (§8; built-in `sources_sync.py` rule).
+
+### Added 2026-11-14 (Round 8 run 4: the legends-of-kings corpus, project 8: Anzû, `אגדות-מלכים/8-אפוס-אנזו/`)
+| Folder | Text | Lines | Notes |
+|---|---|---|---|
+| `Anzu-OB-II/`, `Anzu-OB-III/` | *Anzû* (eBL `L/1/10`), Old Babylonian II, III (Susa) | 82 / 35 | ed. Heinrich, rev. Mitto, Jiménez, Hätinen; tr. Foster |
+| `Anzu-SB-I/`, `-SB-II/`, `-SB-III/` | Standard Babylonian I–III | 201 / 154 / 155 | |
+| `Anzu-NA/` | Neo-Assyrian, Sultantepe (Ḫuzirina) | 67 | cited by eBL as NA "-" |
+© eBL, git-ignored; restored by `sources_sync.py` (built-in rule). No empty N lines (checked).
