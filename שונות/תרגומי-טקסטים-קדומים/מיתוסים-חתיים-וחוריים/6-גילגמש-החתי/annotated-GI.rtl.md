@@ -2664,8 +2664,8 @@
 
 ### 6:46
 `[ ... ] ambaššin zatraš4[ ... ]`
-> […] קרבן־שרפה? של נוצה […]
-- **פירוק:** `ambaššin` – ambašši- "burnt offering", acc. ("קרבן־שרפה?"); `zatraš` – zatra- "feather?", gen. ("של נוצה").
+> […] שְׂרֵפָה? של נוצה […]
+- **פירוק:** `ambaššin` – ambašši- "burnt offering", acc. ("שְׂרֵפָה?": the Hurrian burnt offering; `עֹלָה` kept out of the line by the coordinator, Lev 1); `zatraš` – zatra- "feather?", gen. ("של נוצה").
 
 ### 6:47
 `nu {d}ulluya ŠU-an šar[ā ēpta?]`
@@ -2717,8 +2717,8 @@
 
 ### 6:56
 `ambaššin anapāš[ ... ]`
-> קרבן־שרפה? – [… ]
-- **פירוק:** `ambaššin` – "burnt offering" ("קרבן־שרפה?"); `anapāš[` – broken.
+> שְׂרֵפָה? – [… ]
+- **פירוק:** `ambaššin` – "burnt offering" ("שְׂרֵפָה?"); `anapāš[` – broken.
 
 ### 6:57
 `[ ... ] šarā ēpt[a]`
