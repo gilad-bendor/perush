@@ -111,8 +111,7 @@ mostly mood – imperatives and futures read as pasts – and speech limits).
 (1:14); *ḫappina-* `להבה` (1:16, 1:176); *ḫaḫḫal-* `שיח`; *ikšai-* `*נכבה*`; *antaki-* `חלציים` (1:20; `מתניים` is
 *paršina-*); *kariya-* `עטה` (1:21, AZ 11; AP `עטוי`); *ištappulli-* `מכסה` (TE); *walla-* `השתבח` / `הֱיוּ מְשֻׁבָּחִים`
 (1:11, 1:24; M4 `שיבח`); *šakai-* `אות` (1:28, 1:39); *ḫuišnu-* `החיה` (law); *ḫatnu-* `ייבש`; *ḫuwant-* `רוח`;
-*appuzzi-* / Ì.UDU `חֵלֶב` (vocalized; `שומן` stays *šakan*); *šanḫ-* "seek" `חיפש` (IN `דרש` "demand": a split by
-sense); *tuekka-* pl. "limbs" `איברים` (SG 1:69, LI 2:14; SR sg. `עצם`); *ḫarš-* `בקע` (1:80); *terip-* `חרש`; *nai-*
+*appuzzi-* / Ì.UDU `חֵלֶב` (vocalized; `שומן` stays *šakan*); *šanḫ-* "seek" `דרש` (as TE 52–56; my first draft's `חיפש` aligned to TE during MU); *tuekka-* pl. "limbs" `איברים` (SG 1:69, LI 2:14; SR sg. `עצם`); *ḫarš-* `בקע` (1:80); *terip-* `חרש`; *nai-*
 `הטה` (HL2 162.1); *damenk-* `הצמיד` / `צמוד`; *šuḫḫa-* `פיזר` (rituals); *aiš* `פה`; *ḫala-* `*ראש*`; *nakkešš-*
 `הכביד`; *tarnatt-* `*מנה*`; MAŠDA `עני`; *mugawar* `הפצרה`, *mugai-* `הפציר` (M4, as set); ZABAR `אָרָד`; *arimpa-*
 `*משען*`; GAG `יתד`; MAR `מעדר`; *alkišta-* `ענף`; *laḫḫura-* `דוכן`; DUG `כלי`; GAL "cup" `כוס`; *marnuwant-*
@@ -127,7 +126,7 @@ MUḪALDIM `מבשל` (IN). LI: *išḫa-* `אדון`; *tarpi-*, *parninka-*, *�
 IGI-*aš* GIG `מחלת העיניים`; *šipa-* `מוגלה`; *ḫarki-* (eye) `הלָבָן`; *inan* `חולי` (AM); *damašš-* `לחץ`;
 *ḫarganau-* `כף היד`, *kalulupa-* `אצבע`, *šankuwai-* `ציפורן`; *lalukkai-* `האיר`; *walula-* `*אישון*`; *enera-*
 `גבה`, *laplipa-* `ריס`; *aniya-* "work (land)" `עבד`; *warš-* `קצר` (HL2); *tiyeššar* `מטע`; *ḫašp-* "fell" `גדע`;
-*ḫink-* mid. "bow" `השתחווה` (active "present" `הציג`, HL1: a split by voice); *dala-* `הניח`; KANKAL `אדמה נטושה`;
+*ḫink-* mid. "bow" `קד` (active "present" `הציג`, HL1: a split by voice; `השתחווה` is MU's *aruwai-*); *dala-* `הניח`; KANKAL `אדמה נטושה`;
 *mališku-* `חלש`; *ḫatteššar* `גומה` (AM 251); *tarupp-* `כינס` (KU 138); *marriya-* `נמס` (KU 251). AZ: KA.GAG
 `שכר־קַגַּג`; LAM.GAL `עץ־פיסטוק`; *gulš-* `חקק` (IN); A.DA.GUR `קני־שתייה`; *išḫiya-* "bind (in)" `כרך` (the law
 sense "obligate" `חייב`); *šunna-* `מילא`; *walḫi-* `וַלְחִי` (IL 14); MUNUS ŠÀ.ZU `מיילדת`; *laḫuwai-* `יצק` (SR);
@@ -148,7 +147,7 @@ so if *ekun-* turns up in MU.
   candidate word immediately followed by the rest of the name, or match the whole name.
 - `_find_word` also splits a name at a bracket (`[לִיחְ]זִינָה`, LI 1:61 → VOCALIZE): the restoration was a single
   sign, so the corpus rule allowed `לִיחְזִינָה` unbracketed anyway.
-- Law H4 `מחץ` (*walḫ-*) fires on `למחצה` "half" (SG 1:93 `חצאי־אחים` written instead) and is licensed by the drink
+- Law H4 `מחץ` (*walḫ-*) fires on `למחצה` "half" (SG 1:93 `חצאי־אחים` written instead; restored to `אחים למחצה` after the coordinator's fix) and is licensed by the drink
   *walḫi-* (AZ 14). Proposal: exclude `למחצה`/`מחצית`, and drop `walḫi` from the licence.
 - My reserved-word scan of notes and intros (the tool checks `>` lines only) caught `גורל`, `ראשית`, `מדבר`, `כעס`,
   `זרה`, `בעל` in my own notes: fixed. Worth a `verify` option that runs the NEVER rows on `הערות` and intros, skipping
@@ -167,7 +166,52 @@ waters). SG 1:139: Jer 6:20 (`קָנֶה הַטּוֹב`, GI.DÙG.GA) [equivalen
 LI 1:36: Mic 7:19 (sins cast into the sea) [divergence]. AZ 35: TE 16 (the reversed shoes: here the shoe is written,
 E.SIR); AZ 43, 66: TE 19–24, 245–253; AZ 84: TE 196 (the hawthorn).
 
+### Round 8 run 5, translator 1, MU
+Drafted 2026-11-14: `annotated-MU.rtl.md` (274 clauses, CTH 325) with a Hebrew intro and `## CTH 325, § n – …` headings,
+and `translation--intro-MU.rtl.md`. `verify MU --strict`: one problem, the tool's (§4 below); `check_bible_quotes.py` 0.
+HPM read after drafting; ≈ 20 lines corrected (each in a **תרגומים** bullet: 26 *šiya-* mid. `*זינק*`, 79 "whoever",
+103 *mān* "how", 112 "has not yet heard", 114 "where to", 138 "twice … into his hand", 196 Telipinu?, 199 *alpa-*
+"cloud" `ענן`, 203 fem., 206 *wašši-* `עשבי־מרפא`, 260 *karpanu-* `*הוביל*`).
+
+**1. Fixed strings.** Every clause that repeats TE is TE's Hebrew, with MU's own brackets: 35–53 (the suffocation and
+withering list; *epp-* `תפס` where TE has *IṢBAT*/*wišuriya-*), 54–59 (the feast), 61–64 (`בני [אינו בפנים]: / זָעַם הוא, /
+וכל [טוב נשא עמו]`), 65–76 (the eagle; `דרוש` / `דרשתי`; 76 *AKŠUD* `השגתי`), 117–127 (the bee), 159–195 (the angers
+`החרון, הַזַּעַם, החטא (ו)הטינה`, `את חרונו לקחתי` …, the analogy `כמו ש… – כך גם …`, `שַׁלַּח את החרון!`), 217–259 (the
+path, the seven doors, the return, the *eya*-tree). The repeated-line check against TE is clean (MU 258 = TE 266).
+New fixed strings: *ḫuḫḫa-* `סב`; `כֹּה (אומר) אבי אֵל הַסְּעָרָה:` (85, 95, 113, 120); *wašta-* `חטא`, *waštai-* `החטא`;
+*urkiya-* `חקר`; SIG5-*ziya-* "put right" `תיקן` (108, 110); *aruwai-* "bow, prostrate" `השתחווה` (32); {D}UTU-ŠĪ "My Sun"
+`הוד מלכותי` (134, 138).
+
+**2. *mugai-* / *mugawar*.** Neither occurs in MU's preserved clauses (the title is the edition's): M4's `הפציר` /
+`הפצרה` stands unchanged; the intro explains *mugawar* `הפצרה`, the heading keeps `המוּגָוָר` (M4).
+
+**3. Rows aligned in my earlier keys during MU.** *šanḫ-* "seek": SG 1:65 `מחפשים` → `דורשים` (TE 52–56 `דרש`; my SG
+proposal of a split withdrawn). *ḫink-* mid. "bow": LI 1:70 `השתחוו` → `קדו` (`השתחווה` is *aruwai-*'s, MU 32). SG 1:93
+`חצאי־אחים` → `אחים למחצה` (after the `מחץ` gate fix).
+
+**4. Tool bugs.**
+- **HPM numbers two MU clauses 178** (the second stands for 180; the skeleton and base have both). `verify` keys entries by
+  label: it reports `duplicate entry 178` (the one remaining `--strict` problem) and reads the first 178's composite for
+  the second, so the NAME check demanded `אֵל הַסְּעָרָה` there (escaped `[היתר שם]`). Fix: relabel the second as `178a`
+  (or `180`) in the base, or key the checks by position.
+- **The `נשא` gate's licence reads the lemma only**: *pēdaš* inside a restoration has no lemma, so MU 44 and 63 (TE 28,
+  51 copied) failed; escaped `[היתר שער: נשא]`. Fix: add `pēd|ped-a` forms to the licence text from the bracket-free
+  composite.
+- **{D}UTU-ŠĪ** (with the macron) is caught by the {d}UTU row (`אֵל הַשֶּׁמֶשׁ`), not the law row `שִׁמְשִׁי`: escaped at
+  134, 138; I rendered the title `הוד מלכותי` (the sense in this ritual) – the lead may prefer the law table's `שִׁמְשִׁי`.
+- *taknaš=at {d}UTU-aš* (226) is missed by the Sun-goddess row because of the clitic: escaped, as TE 232.
+
+**5. Cruxes.** 1–33 (the broken opening); 26 *šiya-*; 84 *minu*; 116 *ḫink-* "present / hand over" (`אציג`, law
+precedent; HPM "übergeben"); 134–138 *waḫeššar* water (`*סיבוב*`); 183 *ḫemuš?* (TE's `*דמויות*` copied); 194–195 the
+"burden of spring / harvest"; 197–203 the oven, Ḫallara, the golden window, *karšani-*; 206–210; 230–231 iron lids
+and lead bolts (reversed against TE 236–237).
+
+**6. Parallels.** None quoted in the lines' apparatus; the comparison is TE's (Ps 44:24, Jer 14, Joel 1, Deut 28:23 at
+TE's lines). The new motif – the grandfather who seeks the culprit, "you alone have sinned … I will kill you", and the
+mother goddess who "will put it right" whether he sinned or not (79–112) – has no biblical counterpart to cite.
+
 ## Progress
+- 2026-11-14: Round 8 run 5, translator 1: MU 1–274 drafted whole, with intro; HPM read after drafting; `verify MU --strict` 1 (the duplicate label 178, a tool/base issue); `check_bible_quotes.py` 0. SG 1:65, 1:93 and LI 1:70 aligned (Proposals, MU §3).
 - 2026-11-14: Round 8 run 5, translator 1: SG 1:1–2:8 (219), LI 1:1–2:16 (104), AZ 1–104 (104) drafted whole, with intros; HPM read after each section; `verify --strict` 0 for each key; `check_bible_quotes.py` 0. Proposals above.
 - 2026-10-31: review pass (a) fidelity – 13 lines changed (3, 6, 8, 18, 90, 100, 128, 133, 138, 145, 164, 194, 207): brackets (3, 6, 8, 133, 138, 145, 164, 207), added words removed or put in ( ) (18 `יצא`, 128 `ו`, 194 `(מי)`), 90 *=še* "to him" (was `ולהם`), 100 *ḫāraš* nom. + instr. "with (his) wings" (was `כנף הנשר`). Open for pass (b): the analogy formula `כך גם X – כך Y` (133–195, 217, 222, 241; the note at 133) renders one QATAMMA twice and, at 222, leaves *namma* untranslated.
 - 2026-10-31: review pass (b) consistency – 14 lines changed (136, 140, 142, 145, 151, 168, 180, 181, 186, 190, 195, 217, 222, 241; the note at 133). The analogy formula (the coordinator's ruling): one `כך` per *QĀTAMMA*, `כמו ש… – כך …`, with *U* / *-a* / *-ya* `כך גם …`; no `כך` where the line has no *QĀTAMMA* (217, 241 `גם …`); 222 *[nam]ma* now rendered `[עוד]`; 181 `[וכמו ש…]` → `כמו ש[…]` (no *nu*). 168 *karaš* `כוסמת` and *išḫuwai-* `זריתי` (as the rituals' AM 4 `תבואה (ו)כוסמת אני זורה`). Recorded in renderings M2 / M3.

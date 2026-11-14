@@ -318,6 +318,8 @@ def _hpm_rows(key, kind, pre, base, idx, done):
             s = {"title": "Colofone"}
         elif kind == "chil" and not sec and key == "HL1":
             hl = "1"  # CHiL has no heading before HL 1
+        if any(o["label"] == lab for o in out) and kind == "myth":
+            lab = lab + "b"  # HPM numbers a clause twice (MU 178 / 178: the second stands for 180): 178b (2026-11-14)
         if pre:
             lab, sec = f"{pre}:{lab}", f"{pre} {sec}"
             s = {"title": f"{pre} {s.get('title', c['sec'])}"}

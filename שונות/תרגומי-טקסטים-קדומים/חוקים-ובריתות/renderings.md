@@ -505,8 +505,8 @@ vowels by *matres lectionis*; vocalized at the first occurrence per file (★ = 
 | `zip(?:p)?al(?:a)?nt` | `זִיפַּלַנְדָּה` | | Zippalanda. |
 | `tamalki` | `תַּמַלְקִי` | | |
 | `arzaw\|arzauw\|ar-za-u-wa` | `אַרְזַוָה` | | Arzawa (western Anatolia). |
-| `\{d\}utu-ši\b\|\{d\}utu-ši=` | `שִׁמְשִׁי` | ★ | "My Sun" = His Majesty, the king's title; a note. |
-| `(?<!taknaš )(?<!takna-aš )(?<!ták-na-aš )\{d\}utu(?!-ši)` | `אֵל הַשֶּׁמֶשׁ` | | The Sun-god (Ištanu); never `שֶׁמֶשׁ` alone. |
+| `\{d\}utu-š[iī]\b\|\{d\}utu-š[iī]=` | `שִׁמְשִׁי` | ★ | "My Sun" = His Majesty, the king's title; a note. |
+| `(?<!taknaš )(?<!takna-aš )(?<!ták-na-aš )\{d\}utu(?!-š[iī])` | `אֵל הַשֶּׁמֶשׁ` | | The Sun-god (Ištanu); never `שֶׁמֶשׁ` alone. |
 | `\{d\}(?:im\|10\|u\|iškur)\b` | `אֵל הַסְּעָרָה` | | The Storm-god (Tarḫunna), as the fifth-day dossier. |
 | `\{d\}(?:lamma\|kal)\b` | `אֵל הַמָּגֵן` | | The protective god (Kurunta, Innara). |
 | `labarn\|la-ba-ar-n` | `לַבַּרְנָה` | | Labarna, the royal title (as a name; IN 11.13). |
