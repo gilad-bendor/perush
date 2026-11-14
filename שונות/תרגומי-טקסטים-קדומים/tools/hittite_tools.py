@@ -529,12 +529,16 @@ def _heb_has(plain, h):
 
 
 def _find_word(heb, hp):
-    first = hp.split()[0].split("־")[0]
-    for w in re.split(r"[\s־,.;:!?–—()\[\]]+", heb):
-        p = strip_marks(w)
+    """The word of `heb` that begins the name `hp` (for the first-occurrence vocalization check). Brackets inside a word
+    are ignored (`[לִיחְ]זִינָה`), and a word equal to the name's first word counts only where the name's other words follow
+    (an unvocalized preposition `אל` before `אֵל הַסְּעָרָה` is not the name: fixed 2026-11-14, Round 8 run 5)."""
+    parts = [x for x in re.split(r"[\s־]+", strip_marks(hp)) if x]
+    ws = [w for w in re.split(r"[\s־,.;:!?–—()]+", heb) if w]
+    ps = [strip_marks(w.replace("[", "").replace("]", "")) for w in ws]
+    for i, p in enumerate(ps):
         for k in range(0, 4):
-            if re.fullmatch(r"[ובלמהכש]{0,3}", p[:k]) and p[k:] == first:
-                return w
+            if re.fullmatch(r"[ובלמהכש]{0,3}", p[:k]) and p[k:] == parts[0] and ps[i + 1:i + len(parts)] == parts[1:]:
+                return ws[i]
     return ""
 
 
