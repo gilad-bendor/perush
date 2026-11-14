@@ -339,7 +339,7 @@ Proposals; later translators follow the merged table):
 | *maghónī* | `בַּעֲלַת־הַשֶּׁפַע` | the feminine of *maghávan* `בעל־השפע` |
 | *r̥tú* | `עוֹנָה` | the ritual season (2.36–37 the season-cups; precedent RV 10.18.5b, 7.103.9b); *r̥túbhiḥ* `עם העונות` |
 | *r̥ṇá*, *r̥ṇayā́* | `חוֹב`, `גּוֹבֵה־הַחוֹב` | precedent AB 7.13.4a (2.23.17, 2.27.4, 2.28.9) |
-| *duṣvápnya* | `חֲלוֹם רַע` | 2.28.10 |
+| *duṣvápnya* | `חֲלוֹם רַע` | not in Book 2 (the pre-set row's "2.28.10" was wrong: that pāda has *svápne* "in sleep"; translator 4); kept for the later books |
 | *bheṣajá*, *jálāṣa* | `תְּרוּפָה`, `מַרְפֵּא` | Rudra 2.33 (precedents 7.46.3c, 7.35.6c) |
 | *ā́gas*, *énas*, √*muc*, √*mr̥ḍ*, √*hr̥̄*, *héḷas*, *pā́śa* | `אשמה`, `עוון`, `שחרר`, `רחם`, `זעף`, `רוגז`, `חבל` | the Varuṇa vocabulary of Book 7 (§11.18); 2.27–29, 2.33; **never** the root חטא, `פשע`, `סליחה`, `וידוי`, `חרון` (§7.4) |
 | *bráhmaṇas páti* | `בְּרַהְמַנַסְפַּתִי` | §3.1 (the name); *bŕ̥haspáti* `בְּרִהַסְפַּתִי` – the same god, two names, kept apart as the hymns keep them |
@@ -694,3 +694,8 @@ Hebrew):
 ### 11.25 RV 2.17–2.24 (Book 2, translator 3 = part 3; merged 2026-11-14)
 - **Binding:** the part's Decisions and Proposals (`9-ריגוודה-ספר-ב/project.md`, part 3). The 2.22 refrain `הוא התלווה אליו, הָאֵל אֶל הָאֵל, אֶל אִינְדְּרָה האמיתי –` / `הטיפה האמיתית.`; the Brahmaṇaspati closing (first copy 2.23.19abc = 2.24.16abc; 19c = 2.35.15c). Zurich writes *bráhmaṇas páti* as two words: the §3.1 regex does not fire on Book 2, the name is written `בְּרַהְמַנַסְפַּתִי` by hand (RV 10.72 precedent), alternating with `בְּרִהַסְפַּתִי` as the hymns do. Enemy words from Book 7; new: *pariráp* `מלעיז`, *dvayāvín* `כפול־הלשון`, *dhvarás* `מכשילה`, *hváras* `מלכודת`, *duchúnā* `פורענות`, *pīyú* `מלעיג`; *r̥ṇacít* `נוקם־החוב`; *gotrá* `רפת`; *yugá* `עול`; *sā́man* `נעימה`; *paribhū́* `סובב`.
 - For the consistency pass: *bhāgá* `נתח` (2.17.7d) / `חלק`; *ā́deva* `חסר־האלים` (2.22.4f) / `דבק־האלים` (part 1).
+
+### 11.26 RV 2.25–2.33 (Book 2, translator 4 = part 4; merged 2026-11-14)
+- **Binding:** the part's Decisions and Proposals (`9-ריגוודה-ספר-ב/project.md`, part 4). The 2.25 refrain `כל מי שבְּרַהְמַנַסְפַּתִי עושה (אותו) לשותף־הרתימה שלו.`; the closing 2.27.17abc = 2.28.11abc = 2.29.7abc; 2.32.6d (= 2.41.17d) `צאצאים, אֵלָה, הקצי לנו!`. *raśanā́* `רסן` (RV 10.18.14d; *pā́śa* `חבל`, *dā́man* `רצועה`); *abhí* √*kṣam* `היה מתון`; Rudra: `הרופא שברופאים`, √*krudh* `הקציף`, *hetí* `קליע`, *áva* √*tan* `הרפה`; Indrāṇī `אשת אִינְדְּרָה`.
+- For the consistency pass: √*ci* 2 `תבע` / Book 7 `מענישים`; √*śās* `ייסר` / `כוון`; √*vyadh* `נקב` / `שהושלך`; *khā́* `מקור` / *khá* `פתח`; *vásman* / *yóni* `קן`.
+- Scratch-generator trap (translators 2, 4): a grammar note with `("…")` inside a פירוק segment is read by `lexmap` as the Hebrew – write such notes with `:` and commas.

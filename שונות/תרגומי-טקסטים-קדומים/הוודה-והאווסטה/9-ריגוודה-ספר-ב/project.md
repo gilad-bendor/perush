@@ -659,4 +659,181 @@ corrected; `build RV2.17-24`, `verify RV2.17-24 --strict`: no problems, 0 repeat
     and *ukthá* are both `אמירה` (Book 7's collision, 7.18.5c), and *majmán* `בעוצמה` beside *śávas* `עָצְמָה` (plene
     `עוצמה`) – a Book 7 matter for a consistency pass, not changed here.
 
+## RV2.25–2.33 (part 4: Brahmaṇaspati, the Ādityas, Varuṇa, Rudra; translator 4, Round 8 run 3)
+
+### Scope
+RV 2.25–2.33, 340 pādas: 2.25 (20; Brahmaṇaspati, jagatī, the refrain 1–5d), 2.26 (16; Brahmaṇaspati, the four "only"
+clauses), 2.27 (68; the Ādityas), 2.28 (44; Varuṇa), 2.29 (28; the All-Gods, in content the Āditya sequence), 2.30 (44;
+Indra and others, the book's only conditional), 2.31 (28; the All-Gods, "our chariot"), 2.32 (32; Heaven and Earth,
+Rākā, Sinīvālī), 2.33 (60; Rudra). Nine annotated files, nine intros, built (`build RV2.25-33`); `verify RV2.25-33
+--strict`: no problems, 0 repeated-line differences in my range; `check_bible_quotes.py` on all my files (annotated,
+intros, generated): 0 problems.
+
+### Sources consulted
+The Zurich text and morphology (`data`); `freq RV2.25-33`, `lexmap` and a per-line workbook (each word with its lemma and
+its Hebrew so far), `lemma`, `grep`; translators 1–3's scratch generator (compact `meaning=Hebrew` draft → the annotated
+format) reused. After drafting each hymn: `tr` (Griffith, Grassmann, Geldner, Elizarenkova, Renou) and Jamison's
+commentary on II.25–33. Adopted from Jamison (attributed in the bullets): 2.25.1c *jāténa jātám* as rivalry (both
+readings in the note), 2.25.2a *vanuṣyatáḥ* acc. pl., 2.25.5b *dadhire* passive; 2.26.1a the decomposed bahuvrīhi,
+2.26.2a *manāyát* left neutral, 2.26.4c *rákṣatī* = *rákṣati* + *ī*, 4d *aṃhóḥ … urucákri*; 2.27.6c *téna* anticipating
+*śárma*, 2.27.9d *uruśáṃsa* "whose pronouncements hold broadly", 2.27.12b the *ca*; 2.28.6d (with Thieme) "far from you
+I am not master even of a blink", 2.28.7a the gapped verb, 7ab *iṣṭaú* not governing *énaḥ*, 2.28.9a the injunctive as
+imperative; 2.29.4c Renou's *r̥té* "without" (with `?`), 2.29.5b the gambler in the son's place; 2.30.1c "the night of
+the waters", 2.30.2 her reading of the conditional (alternatives in the note), 3c Vṛtra as subject, 4b *vŕ̥kadvaras*
+"moving like a wolf" (not a name), 5d *ardhá* √*kr̥* "go halves"; 2.31.1d *vanarṣád* both ways, 5d *trívayāḥ* neuter;
+2.32.3c *pádyā* "paces", 4d *śatádāya* "worth a hundred (cows)"; 2.33.5ab the rival's thought and *áva* √*dā* "cut
+off", 5d *manā́*, 10c the cosmogonic division of the formless, 12b 3rd sg. (with Kümmel, Macdonell), 15ab "just as … so".
+From Geldner: 2.25.3a the river simile with *kṣódaḥ* nominative; 2.29.1b *rahasū́*; 2.32.2a *āyóḥ* with *rípaḥ*.
+
+### Decisions
+- **The 2.25 refrain (first copy 1d; = 2d, 3d, 4d, 5d):** `כל מי שבְּרַהְמַנַסְפַּתִי עושה (אותו) לשותף־הרתימה שלו.` –
+  *yúj* `שותף־הרתימה` (Book 7, reviewer 3), the middle *kr̥ṇuté* as `שלו` ("for himself"), the name written by hand
+  (Zurich splits it; §11.25) and vocalized in every copy. *vanavad vanuṣyatáḥ* (2.25.1a, 2a, 2.26.1a) `יזכה נגד
+  החומסים` (√*van* `זכה`, *vanuṣyát* Book 7's `החומס`).
+- **The closing stanza (first copy 2.27.17abc; 2.28.11abc and 2.29.7abc copied character for character):**
+  `אַל אני – וַרוּנָה – אצל בעל־שפע אהוב,` / `רב־נתינה, אמצא חוסר של ידיד;` / `אַל אֵרֵד, מלך, מן העושר המרוסן היטב.`
+  – *āpí* `ידיד` (Book 7, 7.88.6a), *śū́na* `חוסר`, *suyáma* `המרוסן היטב`, *áva* √*sthā* `ירד` (vocalized `אֵרֵד`:
+  unvocalized "bronze").
+- **The Varuṇa vocabulary as Book 7 (§5.6, §11.18), met in real lines:** *ā́gas* `אשמה` (2.27.14b, 2.28.5a, 2.29.1b,
+  5a), *énas* `עוון` (2.28.7b), √*muc* `שחרר` (2.28.4c, 6c), √*mr̥ḍ* `רחם` (2.27.14a, 2.29.2d, 4b, 2.33.11c, 14d;
+  *mr̥ḷayā́ku* `הרחמנית` 2.33.7a), *pā́śa* `חבל` (2.27.16b, 2.29.5c), *r̥ṇá* `חוב` (2.27.4d, 2.28.9a), √*hr̥̄* `זעף`
+  (2.33.15b), *héḷas* `רוגז` (*áheḷant* `שאינה רוגזת`, 2.32.3a), *ánāgas* not met; √*śrath* `התיר` (§11.19) for
+  2.28.5a, 7d. **2.28.5a** `התר ממני את האשמה כמו רסן;` – *raśanā́* `רסן` (its one precedent, RV 10.18.14d; the
+  brief's "cord" is in the note: "rope, girth, rein"; `חבל` stays *pā́śa*'s). **2.28.6c** `כרצועה מן העגל – שחרר את
+  המצוקה,` mirrors 7.86.5d (*dā́man* `רצועה`, *vatsá* `עגל`). No word of the root חטא, `פשע`, `סליחה`, `וידוי`,
+  `חרון` in lines, notes or intros (grepped); the notes say "loosening, not forgiveness" where the contrast matters, and
+  name Geldner's "Sünde" / Griffith's "sin" (2.27.14b, 2.28.5a) as rank-3 words, not the source's. Biblical verses quoted
+  in the notes were chosen without those words (Ps 130:3, 8 rather than Ps 32:1).
+- **abhí √kṣam** (only in this group: 2.28.3d, 2.29.2c, 2.33.1c, 7d – Jamison) `היה מתון (כלפי)` – chosen to keep the
+  vocabulary of forgiveness out of the lines; the homograph *kṣám* "earth" (`תבל`) shares the folded lemma in `lexmap`.
+- **Rudra (2.33):** *bheṣajá* `תרופה`, *jálāṣa* `מרפא` (§5.6) in 2b, 4c, 7b, 12d, 13a; *bhiṣáj* / *bhiṣáktama*
+  `רופא` / `הרופא שברופאים` (4d, footnote); √*krudh* `הקציף` (4a; `כעס` is *manyú*'s, `רוגז` *héḷas*'s, `זעף` √*hr̥̄*'s);
+  *hetí* `קליע` (14a); *áva* √*tan* `הַרְפֵּה` (14c, a sense split from √*tan* `פרש`); *daívya rápas* `הפגע האלוהי`;
+  *babhrú* `חום`, *śvityáñc* `לבנבן`; *r̥dūdára* `רך־הלב` (the pun on *rudra* in the note); *kalmalīkín* `המנצנץ (?)`.
+- **2.32:** Rākā `רָאקָא`, Sinīvālī `סִינִיוָאלִי` (§3.1 (RV 2)); 4c `תתפור את מפעלה במחט שאינה נשברת;` (√*sīv*
+  `תפר`, part 3); **6d (first copy, = 2.41.17d)** `צאצאים, אֵלָה, הקצי לנו!` (√*diś* `הקצה`, Book 7 7.40.2c); *indrāṇī́*
+  `אשת אִינְדְּרָה` (as Book 7's *varuṇānī́* `אשת ורונה`; the Indra name check then passes without an escape).
+- **New words, one Hebrew each (grepped):** √*edh* `צמח` (`שגשג` is √*vakṣ* / √*puṣ*'s); √*arṣ* `גלש`; *abhí* √*vaś*
+  `מושל` (as *vaśín*; √*vaś* alone keeps `חפץ`); *śímīvant* `בעל־העמל`; *ánibhr̥ṣṭataviṣi* `שתוקפו לא נחלש`;
+  *urucákri* `עושה רוחב` (`מרחב` is *rájas*'s); *aṃhú* `מצר`; *manā́* `שקידה`, *manāyát* `השוקדים`; *yájvan* `זובח`;
+  *vr̥tratū́rya* `גבירה על וְרִטְרָה` (Book 7 names Vṛtra in every *vr̥tra-* compound; `עבירה על` = "violation");
+  *sákratu* `בני־רצון־אחד`; *dhā́rapūta* `מטוהר־כזרם`; *bhūryakṣá* `רב־העיניים`; *dīrghā́dhī* `ארוך־ההגות`; √*ci* 2
+  `תבע` (2.27.4d; Book 7 7.52.2d `מענישים` – a recorded split); *śvábhra* `פחת`, *kartá* `בור`; *anr̥kṣará* `בלי קוצים`;
+  *duṣparihántu* `שקשה לרסקו מסביב`; *rā́japutrā* `שבניה מלכים`; *puruvī́ra* `מרובה־גיבורים`; *rocaná* `אזור־אור`
+  (`מאור` reserved); *ásvapnaj* `שאינו נרדם`; *uruśáṃsa* `רחב־הקילוס`; *r̥tanī́* `מנהיג הסדר`; *yuṣmā́nīta* `מונהג
+  בידיכם`; *vr̥ddhávayas* `שמרצו גדל`; *támisrā* `עלטה` (`חושך` gated to *támas*); *ghr̥tásnu* `שעל גבו חמאה מזוקקת`;
+  *svarā́j* `המושל בעצמו` (Book 7); *sukīrtí* `הזכרה טובה`; *khā́* `מקור` (sense split from *khá* `פתח`); *tántu* `חוט`;
+  *apás* "worker" `פועל`; √*myakṣ* `הרחיק`; *ánu* √*gr̥bhāy* `קיבל אל`; *nimíṣ* `מצמוץ`; *pravasathá* `ריחוק`; √*bhrī*
+  `המעיד` (Book 7's `מעד`); *ápracyuta* `בלתי מוזז`; *párā* √*sū* `האיץ הלאה`; *mátkr̥ta* / *anyákr̥ta* `שעשיתי אני` /
+  `שעשה אחר`; *ávyuṣṭa* `שטרם הפציע`; *bhīrú* `מפוחד`; *rahasū́* `יולדת־בסתר`; √*śās* `ייסר` in 2.29.5b (a sense split
+  from Book 7's and 2.28.9d's `כוון`); *nijúr* `בליעה`; *ava-pád* `נפילה`; *sína* `ציוד`; √*kṣip* `זרק`; √*vyadh*
+  `נקב` (Book 7's one form `שהושלך` is "cast down"; `דקר` is √*snath*'s); *sánutya* `המרוחק` (`הנסתר` is √*guh*'s);
+  *jighatnú* `המבקש להכות`; √*tam* `התעייף`, √*tand* `התרשל`; *ánudhūpita* `מעושן`; *kártva* `שיש לעשותו`; *vásman*
+  `קן` (shared with *yóni* "nest", Book 7 7.97); *hŕ̥ṣīvant* `נרגש`; *vanarṣád* `יושב־העץ`; *sacābhū́* `נלווה יחד`;
+  *mithūdŕ̥ś* `מתחלף־המראה`; *apījū́* `ממריץ־גם`; *upastír* `לפרוש כמצע`; *trívayas* `משולש־המרץ`; √*kā* `חשק`;
+  *sakṣáṇi* `מכריע`; *br̥haddivā́* `רמת־השמים`; *suṣū́ma* `טובת־הלידה`, *bahusū́van* `מרובת־הלידות`; *pr̥thuṣṭukā*
+  `רחבת־הצמה`; *viśpátnī* `אדונת־השבט`; *sūcī́* `מחט`; *śatádāya* `שווה־מאה`; *sahasrapoṣá* `פריחה של אלף`;
+  *tvā́datta* `נתון־ממך`; *hímā* `חורף` (as *śatáhima*); √*cat* caus. `הבריח`; *áva* √*dā* 2 `ניתק`; *ghŕ̥ṇi* `חום`;
+  *áṅga* "limb" `איבר`; *niṣká* `ענק`; *gartasád* `יושב על הכס`; *upahatnú* `התוקף`; *apabhartár* `נושא־הלאה`.
+- **Sense splits recorded in the lines:** √*han* `ריסק` for the hooves (2.31.2d, Book 7's split); *pāṇí* "hand" as hooves
+  `כפות (רגליהם)`; *dákṣiṇā́* "on the right" `ימין` (§5.6); *prācī́na* `פונה מזרחה` (Book 7) in 2.27.11b; *pári* √*dhā*
+  "hand over" `מסור` (2.30.9d, Grassmann / Jamison: for *pári* √*dā*); *kṣódas* `שטף` (Book 7 7.95.1a) shares the word
+  with ŚB *ógha* – inherited.
+- **Escapes:** none needed. Names in the files only: Dakṣa `דַּקְשָׁה` (RV 10.72), Aṃśa `אַמְשָׁה` (part 1), Guṅgū
+  `גּוּנְגּוּ`, the Śaṇḍikas `הַשַּׁנְדִּיקָה`, the Āyus `בני אָיוּ`.
+
+### Open decisions for the user
+- 2.29.4c (*rátho madhyamavā́ḷ r̥té*): Renou / Jamison's *r̥té* "without (you)" is in the line with `?`; Geldner's "on the
+  truth's course, in the middle rank" in the note.
+- 2.30.2ab (the only conditional of the RV): who was going to bring "gear" to Vṛtra and who told – the line keeps the
+  words; Jamison's two scenarios in the note.
+- 2.32.2a *āyóḥ … áhan*: "the hidden tricks of Āyu, on the day" (Geldner) in the line; Jamison's "on the day of Āyu" (the
+  sacrifice) in the note.
+- 2.33.12b *nānāma*: 3rd sg. ("even a boy bows", Kümmel, Macdonell, Jamison) in the line; Geldner / Renou's 1st sg. in
+  the note.
+- 2.25.1c *jāténa jātám*: the Hebrew `בנולד – על פני נולד` leaves Jamison's rivalry and the standard "offspring after
+  offspring" both open.
+- 2.28.5a *raśanā́* `רסן` (precedent) or a new `רצועה`/`חבל` "cord" (the brief's wording): `חבל` is *pā́śa*'s,
+  `רצועה` *dā́man*'s – I kept the precedent.
+
+### Progress log
+- Drafted hymn by hymn in the compact format (translator 3's generator, workbook and checks copied to my own scratch
+  folder), each filled, verified and built before the next; `tr` and Jamison read after each draft and the readings above
+  adopted; intros written. Saved per hymn (no restart occurred).
+- Pass (a) fidelity: 2.25.3a re-read with Geldner (*kṣódaḥ* nominative: "like a river's flood"); 2.27.11a present
+  `איני מבחין`; 2.28.10b "in sleep" (no *duṣvápnya* in 2.25–2.33); 2.30.7d the missing *ā́* segment; 2.33.15c, 7c, 12b.
+- Pass (b) consistency: a lemma → Hebrew comparison of every word of the part with all files (`cons.py` on
+  `lexmap_dict`) and the pāda check (every פירוק Hebrew in its own line). Aligned: *ábhaya* `חסר־הפחד` (2.27.11d, 14c,
+  near Book 7's `חוסר־פחד`), √*nam* `התכופף` (2.33.12b), *daívya* `האלוהי` (2.33.7c), √*pr̥̄* `מילא` (2.30.7c), √*yu*
+  `הסיר` (2.32.2c, 2.33.1b), *havanaśrút* `שומע־ההזמנה` (Book 7), *śvábhra* moved to `פחת` so that *kartá* keeps `בור`.
+  A generator trap found: a morphology override containing `("…")` was read by `lexmap` as the Hebrew (2.26.3b,
+  2.27.17c and copies) – rewritten.
+- Pass (c) Hebrew: the generated files read through; `אַל` (prohibitive), `אֵרֵד`, `אֶזּוֹן`, `הַרְחֵק`, `הַאֵץ`,
+  `הַרְפֵּה`, `שַׁבַּח` vocalized; intros aligned with their lines (2.25 `כמתקפת אַגְנִי`, 2.26 `בגבירה על וְרִטְרָה`, 2.29
+  "confess"-like wording `מודה` removed, 2.33 `הפגע האלוהי`).
+- `build RV2.25-33`; `verify RV2.25-33 --strict`: 0 problems; `check_bible_quotes.py`: 0.
+
+### The text on its own terms
+- **The god's yoke-mate (2.25):** everything a man gains – victory over rivals, sons and grandsons, cattle, rivers that
+  roar toward him – follows from one fact, repeated five times: Brahmaṇaspati has made him "his yoke-mate".
+- **A contest among sacrificers (2.26, 2.33.5):** "only the god-seeker", "only the sacrificer will divide the
+  non-sacrificer's food"; and the rival who wants to "cut Rudra off for himself" by private praise – ritual is a
+  competition for divine favour, but a shared one.
+- **The all-seeing guardians of the contract (2.27):** the Ādityas cannot be deceived and seek to deceive deceivers, see
+  "inside" the crooked and the good, never sleep or blink, hold the three earths and three heavens, and "take note of the
+  debts" (4d) – the moral order as a ledger.
+- **Guilt as a knot (2.28.5–7, 2.29.1, 5):** the poet asks Varuṇa to loosen guilt "like a rein", to free distress "like a
+  rope from a calf", to cast guilt away "like a woman who gives birth in secret"; the god's own fetters and tricks are set
+  for the cheat (2.27.16). Nothing is forgiven: things are untied and sent away.
+- **Personal accounting (2.28.9, 2.29.5):** "drive away the debts I made; let me not live off what another did"; "I alone
+  have transgressed; do not seize me in my son, like a bird" – the poet asks that the reckoning be his own.
+- **Fear of the night and of dreams (2.27.14d, 2.28.10):** "let the long darknesses not reach us"; the terror a friend or
+  kinsman spoke "in sleep"; the thief and the wolf.
+- **The poet as weaver and worker (2.28.5cd):** "let the thread not be cut while I weave my thought; let the worker's
+  measure not break before its season" – the hymn as a fabric, the life as a workday.
+- **Goddesses of the moon and birth (2.32):** Rākā "sews her work with a needle that does not break" – the embryo in the
+  womb; Sinīvālī, broad-braided, "easy in birth, rich in births", apportions offspring.
+- **The fearful healer (2.33):** Rudra's arrows and anger and his "hand that is medicine"; the poet must not anger him
+  even by bowing wrongly or by inviting him with other gods; he is asked to unstring his own bows.
+- **Cosmogony by division (2.33.10c, Jamison):** "you divide all this formless mass" – creation as cutting the shapeless
+  into named, bounded things.
+- **The chariot of praise (2.31):** the poets "forged" the hymn like craftsmen, and race toward the prize like horses.
+
+### Key parallels
+- 2.28.5a / 6c – Ps 130:3, 8 [divergence]: the god who keeps account of guilt and redeems from it; here guilt is untied
+  like a rein or a calf's rope – loosening, not redemption or forgiveness; shared motifs of cultures that never met.
+- 2.33.4d – Deut 32:39 `מָחַצְתִּי וַאֲנִי אֶרְפָּא`, Hos 6:1, Exod 15:26 [equivalent]: the god who strikes and heals; Rudra
+  heals with remedies in his hand, not by word or covenant.
+- 2.29.5b – Deut 8:5 `כַּאֲשֶׁר יְיַסֵּר אִישׁ אֶת בְּנוֹ`, Prov 3:12 [equivalent]: the god who chastises like a father – here the
+  "son" is a gambler.
+- 2.29.5d – Deut 22:6 `לֹא תִקַּח הָאֵם עַל הַבָּנִים`, Deut 24:16 [divergence]: a bird, parent and young, and not seizing one
+  "for" the other.
+- 2.28.9b – Ezek 18:20 [divergence]: each answers for himself; here a plea not to "live off" another's deed.
+- 2.27.3c / 9c – Prov 15:3, Ps 121:4 [equivalent]: the all-seeing, sleepless guardians.
+- 2.28.10b – Job 7:14 [equivalent]: terror in dreams; in Job God terrifies, here Varuṇa protects.
+- 2.32.4c – Ps 139:13, Job 10:11 [equivalent]: the embryo woven / sewn in the womb by a divine hand.
+- 2.26.4d – Ps 118:5, Ps 4:2 [equivalent]: distress as a narrow place, rescue as wide space (Vedic *aṃh-* / *uru-*).
+- 2.30.5a – Josh 10:11 [equivalent]: stones hurled from heaven on the enemy.
+
+### Proposals for the shared renderings
+- **§5.6:** add *abhí* √*kṣam* `היה מתון` (2.28.3, 2.29.2, 2.33.1, 7); *bhiṣáj* `רופא`; √*krudh* `הקציף`; *hetí*
+  `קליע`; *raśanā́* `רסן` (kept from RV 10.18.14d; the coordinator's "cord" in the notes). **Correct the §5.6 row
+  *duṣvápnya* `חלום רע` "2.28.10":** 2.28.10b has *svápne* "in sleep" (`בשינה`), and *duṣvápnya* does not occur in
+  2.25–2.33; the row can stay for a later hymn but its line reference is wrong.
+- **§3.1 (RV 2):** no new regex needed. Files only: Dakṣa `דַּקְשָׁה`, Guṅgū `גּוּנְגּוּ`, Śaṇḍika `שַׁנְדִּיקָה`; Indrāṇī
+  `אשת אִינְדְּרָה` (as Book 7's `אשת ורונה`).
+- **The closing stanza 2.27.17abc = 2.28.11abc = 2.29.7abc** and **2.32.6d (first copy for 2.41.17d)** – fixed above;
+  part 5 copies 2.32.6d `צאצאים, אֵלָה, הקצי לנו!`.
+- **For the consistency pass:** √*ci* 2 `תבע` (2.27.4d) / Book 7 `מענישים` (7.52.2d); √*śās* `ייסר` (2.29.5b) / `כוון`;
+  √*vyadh* `נקב` / 7.69.7a `שהושלך`; *khā́* `מקור` / *khá* `פתח`; *kṣódas* `שטף` / ŚB *ógha* `שֶׁטֶף` (inherited); *vásman*
+  / *yóni* `קן`; *ā́deva*-like double √*kṣam* / *kṣám* in `lexmap` (homographs, not a split).
+
+### Lessons for the guidelines
+- **A morphology override inside the compact draft must not contain `("…")`:** the פירוק parser of `lexmap` takes the
+  first `("…")` after the lemma as the Hebrew, so an override like `(עם áva ("לרדת מן"))` silently registered a false
+  Hebrew for a lemma (found by the pāda check). Write overrides with `:` and commas only.
+- **Choose the Bible verses of a comparison by their words, too:** for a Rigveda line whose gate forbids the vocabulary
+  of sin, a verse that is itself made of that vocabulary (Ps 32:1) puts it back into the apparatus; another verse of the
+  same motif (Ps 130:3, 8) makes the point without it.
+
 ## Parallels index
