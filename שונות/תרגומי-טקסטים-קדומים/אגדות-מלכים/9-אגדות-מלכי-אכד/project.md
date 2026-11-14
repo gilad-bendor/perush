@@ -25,3 +25,23 @@ the folded ATF.
 |---|---|---|
 | AK1 | CH, FL, LI, ST | – |
 | AK2 | RA, RB, AP, EN | – |
+
+## Independent review (2026-11-14)
+Every entry of the eight files read against the SEAL / CDLI transliteration (fidelity, brackets, lemma slips, line
+ends), the repeats checked with `pars AK`, and a lemma → Hebrew map built from the פירוק bullets of AK, RE, ID and
+Anzû. **14 `>` lines changed** (apparatus changed with each):
+| File | Lines | Kind |
+|---|---|---|
+| CH | 9 | consistency: *ṭeḫû* `נִגַּשׁ` (§13.7.5: `קָרַב` is *qerēbu*'s), *ṣabātu* `תָּפַס` (§10.4; `אָחַז` is *aḫāzu*'s, ZL i9) |
+| FL | i5′; i7′; i13′ | *ṣabātu* `תָּפַס`; the coordinator's `[נצחונו]?` (*ernittu* `נִצָּחוֹן`); fidelity: *appašu* was dropped at the line end (`ליטף את` → `ליטף את אפו;`) |
+| LI | 8″, 10″; 15″ | *ṭeḫû* `ייגש`; *gaṣṣu* `הרצחני` (= GU 29′; was `חורק־השן`) |
+| ST | 10′ | *ṭeḫû* Gt `ניגש (אל) כיסאו` |
+| RB | 25 | fidelity: `בחלקת?` added a word the line lacks (RB has no A.ŠÀ, unlike RA o13) → `באוּגָר־סִין` |
+| AP | ii3; ii5; vi5; vi13 | `אֵל הארץ` vocalized (read "to the land"); *e-da-{ta}-am qarnīn* = BZ 37 `חד־הקרניים` (was `…`); *ṭeḫû* `ייגש`; Narām-Sîn ★ vocalized |
+| EN | 30 | fidelity: *šarrašu* `את מלכו` (was "her king") |
+Notes and headers: `ברית` removed from the EN intro and three notes (not licensed: no *riksu* in AK); LI's intro
+and `project--AK1.md` / `--AK2.md` rows follow the changed lines. `translation--intro.rtl.md` written; `build AK`,
+`verify AK --strict` OK (532); `check_bible_quotes.py` 0 problems.
+**Open:** EN 59's transliteration is corrupt in the base (`d}_La-az_ " ts="šar-ra-tu-um" me="queen">…`: SEAL HTML
+attributes leaked through `seal_base.py`) – fix the converter and re-`fill`; ST 21 / 24′ *inne(p)pušā* N preterite
+or present (left as drafted); the print stub (`הדפסה/אגדות-מלכים/9-…`) and a layout module do not exist yet.

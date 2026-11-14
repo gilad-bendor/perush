@@ -303,8 +303,8 @@
 
 ### ST.10'
 `[_lugal_]-ke3-en i-na pa-ni _ka2-gal_ it,-t,a2-hi _{gesz}gu-za_-szu lugal-ke3-en _|KAxU|_-szu e-ep-pu-sza`
-> [סַרְ]גּוֹן – לפני השער – קרב כיסאו; סַרְגּוֹן פתח את פיו
-- **פירוק:** `[_lugal_]-ke3-en` – "סרגון"; `i-na pa-ni _ka2-gal_` – *ina pān abulli* "לפני השער"; `it,-t,a2-hi` – *ṭeḫû* Gt פרפקט, 3 יחיד ("קרב, התקרב"); `_{gesz}gu-za_-szu` – *kussâšu* "כיסאו"; `lugal-ke3-en _|KAxU|_-szu e-ep-pu-sza` – "סרגון – את פיו פתח".
+> [סַרְ]גּוֹן – לפני השער – ניגש (אל) כיסאו; סַרְגּוֹן פתח את פיו
+- **פירוק:** `[_lugal_]-ke3-en` – "סרגון"; `i-na pa-ni _ka2-gal_` – *ina pān abulli* "לפני השער"; `it,-t,a2-hi` – *ṭeḫû* Gt פרפקט, 3 יחיד ("ניגש"; *ṭeḫû* = `נִגַּשׁ`, `קָרַב` ל־*qerēbu*, `../renderings.md` §13.7.5); `_{gesz}gu-za_-szu` – *kussâšu* "כיסאו"; `lugal-ke3-en _|KAxU|_-szu e-ep-pu-sza` – "סרגון – את פיו פתח".
 - **הערות:** *abullu* = `שַׁעַר` (CL3). הכיסא מוצב לפני שער העיר הכבושה – מקום המשפט והשלטון.
 
 ### ST.11'
@@ -391,7 +391,7 @@
 `[...] x _sza3 a-gar3_ be-lu sza re-s,u2-u2 _ugu_-szu`
 > […]… בתוך השדמה – אדון אשר תומך? עליו
 - **פירוק:** `[...] x` – …; `_sza3 a-gar3_` – *libbi ugāri* "בתוך השדמה"; `be-lu` – *bēlu* "אדון"; `sza re-s,u2-u2` – *ša rēṣu* "אשר עוזר, תומך"; `_ugu_-szu` – *elīšu* "עליו".
-- **הערות:** *ugāru* = `שְׁדֵמָה` (CH.56); *rēṣu* "עוזר, בעל ברית" = `תּוֹמֵךְ`. אחרי השורה – קו מפריד.
+- **הערות:** *ugāru* = `שְׁדֵמָה` (CH.56); *rēṣu* "עוזר, מסייע" = `תּוֹמֵךְ`. אחרי השורה – קו מפריד.
 
 ### ST.24'
 `[...] a#-na asz-ri-szu ni-is-sa3-har in-ne2-ep-sza li-isz-szi _{gesz}haszhur {gesz}pesz3 {gesz}szennur {gesz}gesztin_`

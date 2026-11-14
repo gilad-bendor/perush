@@ -35,7 +35,7 @@
 | LI.9'' | *anāku Šarrukīn nēškunu nadru* | `(ו)אנוכי, סַרְגּוֹן – אריכם האכזר!` | `כָּרַע רָבַץ כְּאַרְיֵה וּכְלָבִיא מִי יְקִימֶנּוּ` (בראשית מט:ט) | [equivalent] | the king names himself a lion |
 | LI.12'' | *šumī zukrā* | `הזכירו את שמי!` | `חֶרֶב לַיהוָה וּלְגִדְעוֹן` (שופטים ז:כ) | [equivalent] | the leader's name as battle-cry |
 | LI.14'' | *u atta mitaḫḫar Šamaš-ma* | `ואתה – אל שַׁמַשׁ התחנן!` | `וְהָיָה כְּקָרָבְכֶם אֶל הַמִּלְחָמָה; וְנִגַּשׁ הַכֹּהֵן וְדִבֶּר אֶל הָעָם` (דברים כ:ב) | [divergence] | the king speaks, the prayer is left to another |
-| LI.15'' | *nimrī … libbaš uzza* | `נמרי, חורק־השן – ילבש זעם!` | `וַיִּלְבַּשׁ בִּגְדֵי נָקָם תִּלְבֹּשֶׁת` (ישעיהו נט:יז) | [equivalent] | putting on rage; SEAL's lemma *bâšu* is *labāšu* |
+| LI.15'' | *nimrī … libbaš uzza* | `נמרי, הרצחני – ילבש זעם!` | `וַיִּלְבַּשׁ בִּגְדֵי נָקָם תִּלְבֹּשֶׁת` (ישעיהו נט:יז) | [equivalent] | putting on rage; SEAL's lemma *bâšu* is *labāšu* |
 | ST.12 | *iqtatâ idāni burkāni ītanḫā* | `[…] כלו זרועותינו, ברכינו עייפו בלכת הדרך.` | `חַזְּקוּ יָדַיִם רָפוֹת; וּבִרְכַּיִם כֹּשְׁלוֹת אַמֵּצוּ` (ישעיהו לה:ג) | [equivalent] | the merchants' knees – the inverse of CH.16 |
 | ST.14 | *ālik urḫi mušteššeru ḫarrāna* | `"[אֵלְךָ זַבַּ]בָּה – ההולך בדרך, המיישר את האוֹרַח, הצופה בקצוות;` | `יַשְּׁרוּ בָּעֲרָבָה מְסִלָּה לֵאלֹהֵינוּ` (ישעיהו מ:ג) | [equivalent] | the god who straightens the road; *ešēru* / `ישר` [cognate] |
 | ST.18 | *ul qarrādānu* | `… – לא גיבורים אנחנו!` | `מִי הָאִישׁ הַיָּרֵא וְרַךְ הַלֵּבָב יֵלֵךְ וְיָשֹׁב לְבֵיתוֹ` (דברים כ:ח) | [divergence] | the non-warriors ask for the war; `רך הלבב` in the apparatus only |

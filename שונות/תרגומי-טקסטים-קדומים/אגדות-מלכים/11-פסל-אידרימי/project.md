@@ -13,3 +13,19 @@ ATF alone, and **waits for a check against ORACC's lemmatized edition** when the
 | Part | Lines | Status |
 |---|---|---|
 | ID1 | 1–104 | – |
+
+## Independent review (2026-11-14)
+All 104 lines read against the CDLI ATF (no lemmas). **14 `>` lines changed:**
+| Lines | Kind |
+|---|---|
+| 15, 27, 31, 44, 46, 49, 64, 74 | consistency: ERIN₂.MEŠ *ṣābu* `צָבָא` (CL, ST, ZL, BZ; was `לוחמי`) |
+| 80; 92 | consistency: *epēšu* Š `עשיתי` (`בָּנָה` is *banû*'s); *nasāḫu* `ינסח` [cognate] (was `יעקור`; Deut 27:17's tag corrected to [equivalent]) |
+| 61; 103 | fidelity: *tabkū* is a stative and *abbūtiya* a genitive (`אשר (של) אבותיי – על הקרקע שפוכות?`, was "my fathers poured"); *lidanaggalšunu* – the object is the labours (`יצפו בהן`, was "on it") |
+| 32 | echo: `ודרך הים` (Isa 8:23's `דֶּרֶךְ הַיָּם`, not in the Akkadian) → `ובַּיָּם` |
+| 13 | vocalized `רַכָּבִי` (unvocalized: "my chariotry") |
+Notes: `ברית` / `לכרות ברית` (no *riksu* here) → `אמנה`; the intro paragraph and `project--ID1.md` rows follow the
+lines. `translation--intro.rtl.md` written (it says the translation awaits ORACC); `build ID`, `verify ID --strict`
+OK (104); `check_bible_quotes.py` 0 problems.
+**Open:** the check against ORACC's lemmatized edition (lines 26–27, 41, 46, 55, 59–63, 93, 95 are the doubtful
+ones); *unakkar* (96) `ישנה` uses §0.3's *nakāru* = `שִׁנָּה`, while AN2 gives `שִׁנָּה` to *šanû* (AP v8) – the
+split is the lead's; print stub and layout module not yet made.

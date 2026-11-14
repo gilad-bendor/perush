@@ -16,7 +16,7 @@
 | RB.20 | *kurṣêšunu uḫeppi* | `את אזיקיהם שבר.` | `פַּתֵּחַ חַרְצֻבּוֹת רֶשַׁע הַתֵּר אֲגֻדּוֹת מוֹטָה` (ישעיהו נח:ו) | [equivalent] | breaking fetters as release |
 | RB.23 | *lā nakar aḫḫūtum ayyâši* | `כִּישׁ לא התנכרה – אחווה (היא) לי.` | `לְהָפֵר אֶת הָאַחֲוָה בֵּין יְהוּדָה וּבֵין יִשְׂרָאֵל` (זכריה יא:יד) | [cognate] | *aḫḫūtu* / `אַחְוָה`: brotherhood between cities |
 | RA.r6' | *ana tāḫāzim uṣabbêm-ma … dīkū* | `[למערכה] יצא לצבא, וחמש רב[בות – נהרגו].` | `וַיִּצְבְּאוּ עַל מִדְיָן כַּאֲשֶׁר צִוָּה יְהוָה אֶת מֹשֶׁה; וַיַּהַרְגוּ כָּל זָכָר` (במדבר לא:ז) | [cognate] | *ṣabāʾu* / `צָבָא`; *ribbatu* / `רְבָבָה`; SEAL's *dekû* is *dâku* |
-| AP.ii3 | *il mātim illaku ištīšu* | `אל הארץ – הולך עמו;` | `כִּי יְהוָה אֱלֹהֵיכֶם הַהֹלֵךְ עִמָּכֶם לְהִלָּחֵם לָכֶם עִם אֹיְבֵיכֶם לְהוֹשִׁיעַ אֶתְכֶם` (דברים כ:ד) | [divergence] | the closest contact with Deut 20; here a guard of gods walks before, behind and beside the king (ii 4–7) |
+| AP.ii3 | *il mātim illaku ištīšu* | `אֵל הארץ – הולך עמו;` | `כִּי יְהוָה אֱלֹהֵיכֶם הַהֹלֵךְ עִמָּכֶם לְהִלָּחֵם לָכֶם עִם אֹיְבֵיכֶם לְהוֹשִׁיעַ אֶתְכֶם` (דברים כ:ד) | [divergence] | the closest contact with Deut 20; here a guard of gods walks before, behind and beside the king (ii 4–7) |
 | AP.v2 | *kīma nēšim-mi nāʾirim tabašši* | `כאריה נוהם – הִנְּךָ;` | `אַרְיֵה שָׁאָג מִי לֹא יִירָא` (עמוס ג:ח) | [equivalent] | |
 | AP.v5 | *ša kīka mannum* | `אין לך משתווה; אשר כמוך – מי?` | `מִי כָמֹכָה בָּאֵלִם יְהוָה` (שמות טו:יא) | [equivalent] | as ST.15′ |
 | AP.v18 | *attā-ma lū lābu nakrūka šunu lū šēlebū-ma* | `"אדוני, אתה – לביא; אויביך – הם שועלים; …` | `כְּשֻׁעָלִים בָּחֳרָבוֹת נְבִיאֶיךָ יִשְׂרָאֵל הָיוּ` (יחזקאל יג:ד) | [equivalent] | *lābu* / `לָבִיא`, *šēlebu* / `שׁוּעָל` [cognates] |

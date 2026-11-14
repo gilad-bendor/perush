@@ -13,15 +13,15 @@
 | ID.4 | *masiktu ittabši u ḫalqānu* | `מעשה רע אירע – ונמלטנו` | `וַיָּקָם יָרָבְעָם וַיִּבְרַח מִצְרַיִם אֶל שִׁישַׁק מֶלֶךְ מִצְרַיִם` (מלכים א יא:מ) | [equivalent] | the prince's flight and exile |
 | ID.10–12 | *mannum ana bīt abīšu … ana mārī Emar lū ardu* | `"מי <ב>בית אביו – יהא קטן, בינוני, גדול; ומי בבני אֵמַר – יהא עבד!"` | `וַיִּבְרַח יִפְתָּח מִפְּנֵי אֶחָיו וַיֵּשֶׁב בְּאֶרֶץ טוֹב` (שופטים יא:ג) | [equivalent] | the younger son who will not stay a servant |
 | ID.18 | *māt Kinanim* | `ארץ כְּנַעַן` | `וּכְנַעַן יָלַד אֶת צִידֹן בְּכֹרוֹ וְאֶת חֵת` (בראשית י:טו) | [cognate] | an early witness of the name |
-| ID.26–27 | *ana muḫḫīya ipḫurūnim … ṣāb ḫapiri* | `ואליי נאספו … לוחמי החַבִּירוּ` | `וַיִּתְקַבְּצוּ אֵלָיו כָּל אִישׁ מָצוֹק … וַיְהִי עֲלֵיהֶם לְשָׂר` (שמואל א כב:ב) | [equivalent] | the exile leader of uprooted men; the Ḫapiru–`עִבְרִי` question in the note only (Gen 14:13) |
+| ID.26–27 | *ana muḫḫīya ipḫurūnim … ṣāb ḫapiri* | `ואליי נאספו … צבא החַבִּירוּ` | `וַיִּתְקַבְּצוּ אֵלָיו כָּל אִישׁ מָצוֹק … וַיְהִי עֲלֵיהֶם לְשָׂר` (שמואל א כב:ב) | [equivalent] | the exile leader of uprooted men; the Ḫapiru–`עִבְרִי` question in the note only (Gen 14:13) |
 | ID.28 | *ana 7 šanāti ašbāku* | `לשבע שנים ישבתי` | `וַיַּעֲבֹד יַעֲקֹב בְּרָחֵל שֶׁבַע שָׁנִים` (בראשית כט:כ) | [equivalent] | seven years of waiting (twice: 28, 43) |
 | ID.33 | *pān šadî Ḫazi* | `מול הר חָזִי` | `לִפְנֵי בַּעַל צְפֹן נִכְחוֹ תַחֲנוּ עַל הַיָּם` (שמות יד:ב) | [equivalent] | Mt Ḫazi = Casius = Ugaritic Ṣapānu; also Ps 48:3 |
 | ID.37 | *kīma ištēn awīli* | `כאיש אחד` | `וַתִּקָּהֵל הָעֵדָה כְּאִישׁ אֶחָד` (שופטים כ:א) | [equivalent] | the same idiom |
-| ID.44 | *šar ṣāb Ḫurri* | `מלך לוחמי חוּרִי` | `וְאֶת הַחֹרִי בְּהַרְרָם שֵׂעִיר` (בראשית יד:ו) | [cognate?] | Hurrians and Horites – identity disputed |
+| ID.44 | *šar ṣāb Ḫurri* | `מלך צבא חוּרִי` | `וְאֶת הַחֹרִי בְּהַרְרָם שֵׂעִיר` (בראשית יד:ו) | [cognate?] | Hurrians and Horites – identity disputed |
 | ID.64 | *māt Ḫatte* | `ארץ חַתִּי` | `וּכְנַעַן יָלַד אֶת צִידֹן בְּכֹרוֹ וְאֶת חֵת` (בראשית י:טו) | [cognate] | |
-| ID.74 | *uzaʾʾiz ana ṣāb tillatīya* | `וחילקתי ללוחמי תגבורתי` | `כִּי כְּחֵלֶק הַיֹּרֵד בַּמִּלְחָמָה וּכְחֵלֶק הַיֹּשֵׁב עַל הַכֵּלִים יַחְדָּו יַחֲלֹקוּ` (שמואל א ל:כד) | [equivalent] | sharing the spoil |
+| ID.74 | *uzaʾʾiz ana ṣāb tillatīya* | `וחילקתי לצבא תגבורתי` | `כִּי כְּחֵלֶק הַיֹּרֵד בַּמִּלְחָמָה וּכְחֵלֶק הַיֹּשֵׁב עַל הַכֵּלִים יַחְדָּו יַחֲלֹקוּ` (שמואל א ל:כד) | [equivalent] | sharing the spoil |
 | ID.85 | *ša šubta lā uššabū anāku ušēšibūšunu* | `אשר מושב לא ישבו, אני הושבתי אותם` | `מֵקִים מֵעָפָר דָּל מֵאַשְׁפֹּת יָרִים אֶבְיוֹן לְהוֹשִׁיב עִם נְדִיבִים` (שמואל א ב:ח) | [equivalent] | the king settles the homeless |
-| ID.92 | *mannummē ṣalmī … inassaḫšu* | `מי אשר את צלמי זה יעקור` | `אָרוּר מַסִּיג גְּבוּל רֵעֵהוּ` (דברים כז:יז) | [equivalent] | curse on removing a fixed monument |
+| ID.92 | *mannummē ṣalmī … inassaḫšu* | `מי אשר את צלמי זה ינסח` | `אָרוּר מַסִּיג גְּבוּל רֵעֵהוּ` (דברים כז:יז) | [equivalent] | curse on removing a fixed monument |
 | ID.94 | *perʾašu lilqut* | `את צאצאו תלקט` | `יְהִי-אַחֲרִיתוֹ לְהַכְרִית; בְּדוֹר אַחֵר יִמַּח שְׁמָם` (תהלים קט:יג) | [equivalent] | the offspring cut off |
 | ID.96–98 | *šumašu u zērīšu liḫalliq* | `את שמו ואת זרעו – יאבדו` | `וּמָחָה יְהוָה אֶת שְׁמוֹ מִתַּחַת הַשָּׁמָיִם` (דברים כט:יט) | [equivalent] | name and seed destroyed |
 | ID.102 | *30 šanāti šarrāku* | `שלושים שנה – מלך הייתי` | `וְהַיָּמִים אֲשֶׁר מָלַךְ דָּוִד עַל יִשְׂרָאֵל אַרְבָּעִים שָׁנָה` (מלכים א ב:יא) | [equivalent] | the reign's total |

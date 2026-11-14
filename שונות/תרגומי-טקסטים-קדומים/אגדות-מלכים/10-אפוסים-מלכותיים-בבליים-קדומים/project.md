@@ -13,3 +13,19 @@ takes the three as one group; its broken lines are entries with `[…]`). Base f
 | Part | Texts | Status |
 |---|---|---|
 | RE1 | ZL, BZ, GU | – |
+
+## Independent review (2026-11-14)
+Every entry of ZL, BZ, GU read against SEAL's transliteration and lemmas; repeats checked with `pars RE`, lemmas
+against AK, ID and Anzû. **4 `>` lines changed:**
+| File | Lines | Kind |
+|---|---|---|
+| GU | 4′, 20 | the coordinator's *ayyābu* = `צַר` (vocalized `הַצַּר`: unvocalized it reads "the narrow"; *nakru* keeps `אוֹיֵב`) |
+| GU | 17 | the coordinator's *zību* = `זְאֵב` [cognate]: `כ[ת]ן` → `כ[ז]אב` |
+| ZL | iii16 | fidelity: *isḫur* preterite `פנה` (was the participle `פונה`) |
+Header word lists (GU) and notes updated; the ZL header's `עולם` (reserved) and one note's `בעלי הברית` replaced.
+RE1's open decisions 3–4 are thereby closed. `translation--intro.rtl.md` written; `build RE`, `verify RE --strict` OK
+(321); `check_bible_quotes.py` 0 problems.
+**Open:** GU 17 now gives *barbaru* (`זְאֵב`, CL and Gilgameš) and *zību* one Hebrew word in one line (a noted
+split; Gilgameš has *zību* `עַיִט`) – for the lead; ZL ii40 *lā ussaḫḫirū* (3rd person + subjunctive) is rendered
+as a prohibitive `אל תפנה` – an oath form "surely not" is possible; GU 24′ *qummûa* may be the subject (3pl verb:
+"my burnings will scorch them") – left as SEAL reads it; print stub and layout module not yet made.
