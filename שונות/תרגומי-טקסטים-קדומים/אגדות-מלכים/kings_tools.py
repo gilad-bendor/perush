@@ -89,6 +89,36 @@ for _k, _d, _n, _slug, _files, _q in (
                         etcsl_tr=_E.format(_n, _slug) + 'translation.md', lemmas=_E.format(_n, _slug) + 'lemmas.tsv',
                         oracc=_q, cycle=True)
 PROJECTS['EA']['cycle'] = True
+# Round 8 run 4 (2026-11-14): Anzû (eBL L/1/10, six chapters, key AN: the Etana / Cuthaean machinery), and three
+# projects whose base is a SEAL page or a CDLI ATF, converted by ../tools/seal_base.py into `base.tsv` (label,
+# transliteration, SEAL lemmas, SEAL's numbered translation line): labels `<text key>.<label>` as with eBL.
+AN_CHAPTERS = [
+    ('OBII', 'Anzu-OB-II', ('OB', 'II')), ('OBIII', 'Anzu-OB-III', ('OB', 'III')),
+    ('I', 'Anzu-SB-I', ('SB', 'I')), ('II', 'Anzu-SB-II', ('SB', 'II')), ('III', 'Anzu-SB-III', ('SB', 'III')),
+    ('NA', 'Anzu-NA', ('NA', '-')),
+]
+PROJECTS['AN'] = dict(dir='8-אפוס-אנזו', annotated=[f'annotated-{c}.rtl.md' for c, _, _ in AN_CHAPTERS], base='ebl',
+                      chapters=AN_CHAPTERS, textno='10')
+AK_TEXTS = [  # (key, base folder under sources/, English title)
+    ('CH', 'SEAL/Sargon-Conquering-Hero--node-1548', 'Sargon the Conquering Hero'),
+    ('FL', 'SEAL/Sargon-in-Foreign-Lands--node-1547', 'Sargon in Foreign Lands'),
+    ('LI', 'SEAL/Sargon-the-Lion--node-7525', 'Sargon the Lion'),
+    ('ST', 'CDLI/P270858--EA-359-Shar-tamhari', 'The King of Battle (šar tamḫāri, EA 359)'),
+    ('RA', 'SEAL/Great-Revolt-against-Naram-Sin-A--node-1540', 'The Great Revolt against Narām-Sîn A'),
+    ('RB', 'SEAL/Great-Revolt-against-Naram-Sin-B--node-1542', 'The Great Revolt against Narām-Sîn B'),
+    ('AP', 'SEAL/Naram-Sin-and-the-Lord-of-Apishal--node-7255', 'Narām-Sîn and the Lord of Apišal'),
+    ('EN', 'SEAL/Erra-and-Naram-Sin--node-1539', 'Erra and Narām-Sîn'),
+]
+RE_TEXTS = [
+    ('ZL', 'SEAL/Zimri-Lim-Epic--node-1552', 'The Epic of Zimrī-Lîm'),
+    ('BZ', 'SEAL/Song-of-Bazi--node-1551', 'The Song of Bazi'),
+    ('GU', 'SEAL/Gulkishar-Epic--node-1597', 'The Gulkišar Epic'),
+]
+ID_TEXTS = [('ID', 'CDLI/P500443--Idrimi-statue', 'The statue of Idrimi')]
+for _k, _d, _t in (('AK', '9-אגדות-מלכי-אכד', AK_TEXTS), ('RE', '10-אפוסים-מלכותיים-בבליים-קדומים', RE_TEXTS),
+                   ('ID', '11-פסל-אידרימי', ID_TEXTS)):
+    PROJECTS[_k] = dict(dir=_d, annotated=[f'annotated-{c}.rtl.md' for c, _, _ in _t], base='tsv', texts=_t)
+ATF_KEYS = {'ST', 'ID'}   # CDLI ATF (no lemmas): the licence is the transliteration, folded (sz → š, s, → ṣ …)
 CYCLE = ['EA', 'LC', 'LZ', 'ES']
 EXTRA_GREP_AKK = ['אפוס-גילגמש/1-הנוסח-הבבלי-התקני/annotated-*.rtl.md', 'אפוס-גילגמש/2-הנוסח-הבבלי-הקדום/annotated-*.rtl.md',
                   'סיפורי-המבול-המסופוטמיים/*/annotated*.rtl.md', 'סיפורי-הבריאה-המסופוטמיים/1-אנומה-אליש/annotated-*.rtl.md',
@@ -232,6 +262,27 @@ RESERVED_CL.update({
 for _k in [k for k in RESERVED_CL if '(גן|גנה|' in k]:
     RESERVED_CL[_k] = RESERVED_CL[_k] + [r'magan']          # Magan = מָגָן (CL1, SB.60)
 RESERVED['CL'] = RESERVED_CL
+# Round 8 run 4 (renderings.md §13.4): the Cuthaean gates (licensed by the eBL lemma for AN, by SEAL's lemmas or the
+# folded transliteration for AK, RE, ID), plus the words of Isa 6 and 14, Exod 28, Deut 20 and the Ḫapiru question.
+RESERVED_R8 = dict(RESERVED_CL)
+RESERVED_R8.update({
+    B + P + r'(לוח|לוחות|הלוח|לוחו|לוחי)' + E: [r'ṭuppu|ṭupšīmātu|ṭuppi|ṭup-pi|ṭu-up-pi|ṭup-ši-ma|DUB|dub\b|ṭuppa|ṭuppam'],
+    B + P + r'(גורל|גורלות|גורלו|גורלם|גורלך|גורלי|גורלה)' + E: [r'šīmtu|šīmātu|ṭupšīmātu|šimat|šīmat|šīmāt|ši-ma-t|NAM\.TAR|NAM'],
+    B + P + r'(חשן|חושן|אורים|תומים)' + E: [],                  # Exod 28:15–30 (the tablet on the breast): apparatus
+    B + P + r'(כרוב|כרובים|שרף|שרפים)' + E: [],                  # Ezek 28:14–16, Isa 6:2: apparatus
+    r'ילך לנו|מי ילך|את מי אשלח': [],                          # Isa 6:8 (the gods' "who will go?"): apparatus
+    B + P + r'(עליון|הילל|כוכבי אל)' + E: [],                   # Isa 14:12–14: apparatus
+    B + P + r'(לויתן|רהב|תנין|תנינים|התנין)' + E: [],            # Isa 27:1, 51:9, Ps 74:13–14: apparatus
+    r'רך הלבב|רך לבב|ירך לבבכם|הירא ורך': [],                  # Deut 20:3, 8 (the speech before battle): apparatus
+    B + P + r'(עברי|עברים|העברים|עבריה)' + E: [],                 # the Ḫapiru (SA.GAZ) = `חַבִּירוּ`: apparatus only
+    B + P + r'(כנען|כנעני|כנענים)' + E: [r'kinaḫ|kinaḫḫ|ki-in-a-ni|kinani|kinaʾ|Kinahn|kinaḫn|ki-na-aḫ'],
+    B + P + r'(ברית|בריתו|בריתי|בריתם)' + E: [r'riksu|rikiltu|ri-ki-il|ri-ik-s|rikis|rikilt|RIKSU'],
+    B + P + r'(משיח|משיחו|משח|משחו|נמשח)' + E: [r'pašāšu|piššatu'],  # anointing: only the Akkadian word for it
+})
+for _k in [k for k in RESERVED_R8 if '(שבועה|שבועת' in k]:
+    RESERVED_R8[_k] = RESERVED_R8[_k] + [r'mamit|ma-mi-t|NAM\.ERIM|nam-erim']
+for _k in ('AN', 'AK', 'RE', 'ID'):
+    RESERVED[_k] = RESERVED_R8
 # The Uruk cycle (renderings.md §12.4): Enmerkar's gates, plus the cycle's own (licensed by the transliteration + ETCSL
 # and ORACC lemmas: licence()).
 RESERVED_CY = dict(RESERVED_COMMON)
@@ -279,6 +330,11 @@ TRAPS = {  # stripped token (prefixes allowed) -> (name, transliteration regex)
     'שרא': ('Šara (שַׁרָא)', r'šara₂|šara\b'), 'שרה': ('Šara (שַׁרָא; "Sarah")', r'šara₂|šara\b'),
     'ארש': ('Ereš (אֵרֵשׁ; "betroth")', r'ereš\{ki\}|ereš₂|\beresh?\b'), 'ארורו': ('Aruru (אֲרוּרוּ)', r'aruru'),
     'סואן': ('Suen (סוּאֵן; "noisy")', r'\{d\}suen|suen-'), 'זבו': ('Zabu (זַבּוּ; "they flowed")', r'za-bu'),
+    # Round 8 run 4 (renderings §13.1)
+    'ממי': ('Mami (מָמִי; "from me")', r'\bmām[ie]\b|\bmami\b|\{d\}ma-mi|\bma-mi\b'), 'דגן': ('Dagan (the god, vocalized)', r'dagan|da-gan'),
+    'גירה': ('Girra (גִּירָּה; "cud")', r'girra|gi-ra|GIBIL'), 'שרור': ('Šarur (שָׁרוּר)', r'šarur|ša-ru-ur'),
+    'אמר': ('Emar (אֵמַר; "said")', r'e-mar|emar'), 'מרי': ('Mari (מָארִי; "rebellion")', r'ma-ri\{ki\}|mari\{ki\}|Ma-ri\b|\bmari\b'),
+    'חנה': ('Ḫana (חָנָה; "Hannah", "camped")', r'ḫa-na|ḫana|ha-na\b'), 'נחי': ('Niḫi (נִיחִי)', r'ni-ḫi|ni-hi'),
     'ציר': ('*ra-gaba* (צִיר)', r'ra₂?-gaba'), 'צירי': ('*ra-gaba* (צִירִי)', r'ra₂?-gaba'), 'צירה': ('*ra-gaba* (צִירָהּ)', r'ra₂?-gaba'),
 }
 PREFIX = re.compile(r'^(ו|ה|ב|ל|מ|כ|ש|וה|וב|ול|ומ|וכ|וש|שב|של|כש|מה|לה|בה)?')
@@ -351,6 +407,8 @@ FORMULAS_CY = [  # renderings.md §12.6 (fixed by the first copy)
 ]
 for _k in ('LC', 'LZ', 'ES'):
     FORMULAS[_k] = FORMULAS['EA'] + FORMULAS_CY
+for _k in ('AN', 'AK', 'RE', 'ID'):   # renderings §13.3: filled after the first copy of each formula
+    FORMULAS.setdefault(_k, [])
 
 
 def strip(s):
@@ -474,7 +532,32 @@ def ebl_all(key):
 
 def disp(key, label):
     """The label as the clean translation prints it (ET: without the chapter key)."""
-    return label.split('.', 1)[1] if PROJECTS[key]['base'] == 'ebl' and '.' in label else label
+    return label.split('.', 1)[1] if PROJECTS[key]['base'] in ('ebl', 'tsv') and '.' in label else label
+
+
+def atf_fold(s):
+    """A CDLI ATF transliteration folded for licence regexes: sz → š, s, → ṣ, t, → ṭ, h → ḫ, no hyphens or macrons."""
+    s = s.replace('sz', 'š').replace('SZ', 'Š').replace('s,', 'ṣ').replace('t,', 'ṭ').replace('S,', 'Ṣ').replace('T,', 'Ṭ')
+    return re.sub(r'[-#!?\[\]<>]', '', s.replace('h', 'ḫ'))
+
+
+def unaccent(s):
+    return s.translate(str.maketrans('āēīūâêîûĀĒĪŪÂÊÎÛ', 'aeiuaeiuAEIUAEIU'))
+
+
+def tsv_all(key):
+    """{full label: dict(label, T, lem, trn, text)} and the label order, over the project's texts (base.tsv)."""
+    if ('tsv', key) in _CACHE:
+        return _CACHE[('tsv', key)]
+    res, order = {}, []
+    for c, folder, _ in PROJECTS[key]['texts']:
+        for ln in open(os.path.join(SRC, folder, 'base.tsv'), encoding='utf-8'):
+            f = ln.rstrip('\n').split('\t') + ['', '', '']
+            k = f'{c}.{f[0]}'
+            res[k] = dict(label=f[0], T=f[1], lem=f[2], trn=f[3], text=c, full=k)
+            order.append(k)
+    _CACHE[('tsv', key)] = (order, res)
+    return order, res
 
 
 def base_lines(key):
@@ -482,6 +565,9 @@ def base_lines(key):
     if P['base'] == 'ebl':
         order, res = ebl_all(key)
         return [(k, res[k]['N']) for k in order]
+    if P['base'] == 'tsv':
+        order, res = tsv_all(key)
+        return [(k, res[k]['T']) for k in order]
     return etcsl_lines(P['etcsl']) if P['base'] == 'etcsl' else king_lines(P['king'])
 
 
@@ -492,6 +578,10 @@ def licence(key):
         lem = etcsl_lemmas(key)
         orc = oracc_by_content(key)
         return {k: ' '.join(c for _, c, _, _ in lem.get(k, [])) + ' || ' + orc.get(k, ('', ''))[1] for k, _ in base_lines(key)}
+    if PROJECTS[key]['base'] == 'tsv':
+        order, res = tsv_all(key)
+        return {k: re.sub(r'[_{}⌈⌉]', '', res[k]['T']) + ' || ' + atf_fold(res[k]['T']) + ' || ' +
+                ' '.join(re.findall(r'= ([^"]+?) [IVX]+ "', res[k]['lem'])) for k in order}
     if PROJECTS[key]['base'] != 'ebl':
         return {}
     order, res = ebl_all(key)
@@ -514,7 +604,9 @@ def check_reserved(key, label, heb, tr, problems):
     h = strip(FN.sub('', heb))
     for pat, allow in RESERVED[key].items():
         if re.search(pat, h):
-            if allow and any(re.search(a, tr) or re.search(a, norm_tr(tr)) for a in allow):
+            if allow and any(re.search(a, tr) or re.search(a, norm_tr(tr)) or re.search(unaccent(a), unaccent(tr))
+                             or (label.split('.')[0] in ATF_KEYS and re.search(re.sub(r'([a-zšṣṭḫ]{3,})[aeiu]\b', r'\1', unaccent(a)), unaccent(tr)))
+                             for a in allow):
                 continue
             problems.append(f'{label}: reserved string /{pat}/ in "{heb}"' + (f' (allowed only with {allow})' if allow else ''))
 
@@ -599,7 +691,7 @@ def verify(key, strict=False):
             if ln.startswith('## '):
                 for tok in re.split(r'[\s,.;:!?"\'()\[\]–—]+', ln[3:]):
                     base = PREFIX.sub('', strip(tok), count=1)
-                    if base in ('אותו', 'איננה', 'אן', 'שומר', 'אכי', 'אשתר', 'אתנה', 'שמש', 'אנו', 'מגן', 'מלוחה', 'סין', 'בלת', 'שרא', 'שרה', 'ארש', 'ארורו', 'סואן', 'זבו', 'שכן') and not NIQQUD.search(tok):
+                    if base in ('אותו', 'איננה', 'אן', 'שומר', 'אכי', 'אשתר', 'אתנה', 'שמש', 'אנו', 'מגן', 'מלוחה', 'סין', 'בלת', 'שרא', 'שרה', 'ארש', 'ארורו', 'סואן', 'זבו', 'שכן', 'ממי', 'דגן', 'גירה', 'שרור', 'אמר', 'מרי', 'חנה') and not NIQQUD.search(tok):
                         problems.append(f'heading "{ln.strip()}": unvocalized "{tok}"')
     if pending:
         (problems if strict else notes).append(f'{pending} entries not yet drafted')
@@ -832,10 +924,75 @@ def et_data(key, a, b, out):
     print(f'{out}: {j - i + 1} lines')
 
 
+def _tfold(x):
+    return re.sub(r'\s+', ' ', re.sub(r"[_\[\]⌈⌉{}()?!'’ʼ<>#*]|\.\.\.|…", '', x).replace('-', '')).strip().lower()
+
+
+def tsv_related(k, pool, minr=0.75):
+    """Lines of the Akkadian SEAL/CDLI projects (AK, RE, ID) near-identical to k (folded transliteration)."""
+    a = _tfold(pool[k][0])
+    out = []
+    if len(a.split()) < 3:
+        return out
+    for k2, (t2, heb) in pool.items():
+        if k2 == k:
+            continue
+        r = difflib.SequenceMatcher(None, a, _tfold(t2)).ratio()
+        if r >= minr:
+            out.append((r, k2, t2, heb))
+    return sorted(out, key=lambda x: -x[0])
+
+
+def tsv_pool():
+    pool = {}
+    for k in ('AK', 'RE', 'ID'):
+        order, res = tsv_all(k)
+        heb = et_hebrew(k)
+        for x in order:
+            pool[f'{k}:{x}'] = (res[x]['T'], heb.get(x))
+    return pool
+
+
+def tsv_data(key, a, b, out):
+    P = PROJECTS[key]
+    order, res = tsv_all(key)
+    pool = tsv_pool()
+    i, j = order.index(a), order.index(b)
+    texts = {c: (f, t) for c, f, t in P['texts']}
+    L = [f'# Translator data {key} {a}–{b} ({P["dir"]})', '',
+         'Per line: the base transliteration (SEAL, or CDLI ATF for ST and ID: copy it only through `fill`), SEAL\'s',
+         'lemmas (form = lemma "meaning": a draft – check the form and the stem yourself; the CDLI texts have none), and',
+         'SEAL\'s English line where its number equals the label (rank 3: read it only AFTER your own reading). The full',
+         'SEAL translation and notes: the `node-*.md` file in the base folder (sections "## Translation", "## Notes").',
+         'Then "Related lines": near-identical lines in all the SEAL/CDLI texts of the corpus, with any Hebrew given.', '']
+    seen = set()
+    for k in order[i:j + 1]:
+        c = res[k]['text']
+        if c not in seen:
+            seen.add(c)
+            L += [f'# {c}: {texts[c][1]} – base `../sources/{texts[c][0]}/`', '']
+        L.append(f'## {k}')
+        L.append(f'- **T:** `{res[k]["T"]}`')
+        if res[k]['lem']:
+            L.append(f'- **L:** {res[k]["lem"]}')
+        if res[k]['trn']:
+            L.append(f'- **SEAL:** {res[k]["trn"]}')
+        rel = tsv_related(f'{key}:{k}', pool)
+        if rel:
+            L.append('- **Related lines:**')
+            for r, k2, t2, heb in rel[:6]:
+                L.append(f'  - {k2} ({r:.2f}): `{t2}`' + (f' → > {heb}' if heb else ' → (not yet drafted)'))
+        L.append('')
+    open(out, 'w', encoding='utf-8').write('\n'.join(L) + '\n')
+    print(f'{out}: {j - i + 1} lines')
+
+
 def data(key, a, b, out):
     P = PROJECTS[key]
     if P['base'] == 'ebl':
         return et_data(key, a, b, out)
+    if P['base'] == 'tsv':
+        return tsv_data(key, a, b, out)
     if key != 'EA' and P.get('cycle'):
         return cycle_data(key, a, b, out)
     orc = oracc_aligned(key)
@@ -877,6 +1034,16 @@ def pars(key, a, b):
         return
     if P.get('cycle'):
         return cycle_pars(key, a, b)
+    if P['base'] == 'tsv':
+        order, res = tsv_all(key)
+        pool = tsv_pool()
+        for k in order[order.index(a):order.index(b) + 1]:
+            rel = tsv_related(f'{key}:{k}', pool)
+            if rel:
+                print(f'{k}: `{res[k]["T"]}`')
+                for r, k2, t2, heb in rel:
+                    print(f'    {r:.2f} {k2}: `{t2}`\n         > {heb or "(not yet drafted)"}')
+        return
     src = base_lines(key)
     d = os.path.join(HERE, P['dir'])
     order, ent = parse_annotated([os.path.join(d, x) for x in P['annotated']], [])
@@ -1069,7 +1236,11 @@ def skel(key, fname, a, b):
 def fill(key):
     """Replace every backticked `@` source line of the project's annotated files by eBL's N (never retype it)."""
     P = PROJECTS[key]
-    order, res = ebl_all(key)
+    if P['base'] == 'tsv':
+        order, r0 = tsv_all(key)
+        res = {k: dict(N=v['T']) for k, v in r0.items()}
+    else:
+        order, res = ebl_all(key)
     n = 0
     for a in P['annotated']:
         p = os.path.join(HERE, P['dir'], a)
