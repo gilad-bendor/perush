@@ -1047,11 +1047,11 @@ sitter. From Geldner: 2.34.5a "flaming" cows; 2.35.6c the unfired-brick forts; 2
 ### Key parallels
 - 2.35.4d – Exod 3:2 `וְהִנֵּה הַסְּנֶה בֹּעֵר בָּאֵשׁ וְהַסְּנֶה אֵינֶנּוּ אֻכָּל` [divergence]: a fire that does not depend on its fuel
   – the bush is not consumed, the waters' fire burns "without wood"; a shared motif of cultures that never met.
-- 2.38.8c – Ps 104:22–23 [equivalent]: the daily round of man and beast in an order set by the god; in the psalm the
+- 2.38.8c – Ps 104:22–23 [divergence] (reviewer 5: was [equivalent]): the daily round of man and beast in an order set by the god; in the psalm the
   beasts go out at night and man by day, here all return home at evening under Savitṛ's ordinance.
 - 2.39.6b – Song 4:5 `שְׁנֵי שָׁדַיִךְ כִּשְׁנֵי עֳפָרִים תְּאוֹמֵי צְבִיָּה` [divergence]: twinned body parts and twins in similes –
   the beloved's body compared to animal pairs there, the twin gods compared to body pairs here.
-- 2.41.16b – Ps 46:5 `נָהָר פְּלָגָיו יְשַׂמְּחוּ עִיר-אֱלֹהִים` [equivalent]: the holy river that gladdens; here the river is itself
+- 2.41.16b – Ps 46:5 `נָהָר פְּלָגָיו יְשַׂמְּחוּ עִיר-אֱלֹהִים` [divergence] (reviewer 5: was [equivalent]): the river that gladdens; here the river is itself
   a goddess and mother.
 - 2.42.1b – Qoh 10:20 `כִּי עוֹף הַשָּׁמַיִם יוֹלִיךְ אֶת הַקּוֹל` [divergence]: the bird as a carrier of voice and word – in
   Qohelet it betrays a secret, here its voice is an omen.
@@ -1079,5 +1079,63 @@ sitter. From Geldner: 2.34.5a "flaming" cows; 2.35.6c the unfired-brick forts; 2
 - **The pāda-wise lemma check catches swapped segments that the line hides:** a פירוק segment out of the source's order
   (2.38.10a) left the Hebrew line right but mapped two lemmas to each other's Hebrew in `lexmap` – run the
   lemma → Hebrew comparison before the build, not only the pāda check.
+
+### Review (reviewer 5)
+An independent fidelity review of all 359 pādas (each `>` line against `data` and its Zurich morphology; a pāda-wise
+check that every פירוק Hebrew stands in its line; a lemma → Hebrew comparison of the part against every other annotated
+file of the corpus; the notes, the intros, the הקבלה tags). **15 lines fixed**, 3 פירוק-only fixes, 2 tags, 4 intro /
+header passages. `build RV2.34-43`; `verify RV2.34-43 --strict`: 0 problems, 0 repeated-line differences in the part;
+`check_bible_quotes.py` on the part's files: 0.
+
+| Label | Before | After | Why |
+|---|---|---|---|
+| 2.34.2b | `הבריקו הגשמים` | `מבריקים הגשמים` | injunctive *dyutayanta* beside 2a's present *citayanta*: one timeless description, not two tenses |
+| 2.34.2d (פירוק) | `("הבוהק")` | `("בוהק")` | the פירוק Hebrew was not in the line (the only such case in the part) |
+| 2.34.10d | `בלתי־ניתנים להונאה` | `שאין להונותכם` | *ádābhya* is Book 7's `שאין להונותו/ם` (7.15.15c, 7.66.17a, 7.104.20b) |
+| 2.34.12b | `הם ישגרו אותנו` | `הם ישגרו נא אותנו` | imperative 3 pl. *hinvantu*: the wish marked as elsewhere (`ישתה נא`, `ישמינו נא`) |
+| 2.35.2b | `הלא ידע אותה` | `הלא יֵדַע אותה` | *védat* is a (perfect) subjunctive: future, vocalized against the past reading |
+| 2.35.5c | `הוא נשפך` | `הוא זרם` | √*sr̥* `זרם` (Book 7; the translator's own row: `פשט` only of the arms, 2.38.2b) |
+| 2.35.8c | `כענפים, אכן, …` | `ענפים, אכן, …` | no *iva* / *ná* in the source: the worlds *are* his branches (a metaphor, not a simile) |
+| 2.36.5b | `הונחו` | `הונח` | *hitáḥ* masc. sg. agrees with the soma (*eṣá*, 5a), not with the neuters *sáhas*, *ójas* |
+| 2.37.2b (פירוק) | `(""נותן"")` | `("נותן")` | doubled quotes: `lexmap` lost *dadí* here |
+| 2.37.4d | `(את) של נותן־הנכסים` | `(הוא) של נותן־הנכסים` | *drāviṇodasáḥ* is nominative (an *a*-stem acc. would be *-ám*): Geldner's reading; the cup reading in the note |
+| 2.37.5c | `– כי בואו!` | `– בואו הנה!` | *ā́ hí kaṃ gatám* is a new clause (Jamison): *ā́* "hither" rendered, *hí* untranslated as in 2.36.3a |
+| 2.38.5d | `תאוותו` | `כוונתו` | *kéta* `כוונה` (Book 7.18.25c; the translator's own Decisions row); Geldner's "Verlangen" stays in the note |
+| 2.38.6a | `ושב הביתה` | `ושב (הביתה)` | "home" is not in *samā́vavarti* (it is 6b's *amā́*): an addition goes in `( )` |
+| 2.38.10b | `יעזור לנו!` | `יעזור נא לנו!` | precative *avyāḥ*: a wish |
+| 2.40.2c / 2d (פירוק) | `בהם` | `להם` | dative (Jamison, as the translator's note adopts), parallel to 2d's `לסוֹמָה ולפּוּשָׁן`; both פירוק segments now say dative (Zurich: instr.; the forms coincide) |
+| 2.41.7a | `אל (בית) עשיר־בפרות` | `עשיר־בפרות` | *gómat* agrees with *vartíḥ* (7c `בסבב`), not with a supplied "house" |
+| 2.41.9a | `אותו – לנו` | `אתם – לנו` | *tā́* is nom. dual (the Aśvins); a singular "it" fits neither reading |
+| 2.38.8c, 2.41.16b (הקבלה; also Key parallels) | [equivalent] | [divergence] | each bullet itself describes a shared motif with different details (the psalm's night/day round; the river that gladdens vs the river as goddess); [equivalent] is the tag of a lexical concept-match |
+| intros / header | 2.34 "הסיוע … כמו גועה"; 2.40 "שם אִינְדְּרָה"; 2.42 "העיט או הצייד"; annotated 2.36 header listed `מכהונת־ההנהגה` | 2.34 "הרצון הטוב"; 2.40 "הוליד"; 2.42 the lines' "יפה־הכנפיים", "הגיבור בעל־החצים, היורה"; 2.36 header: stanza 3 names no office | the intros say only what the lines say |
+
+**Checked and found right:** 2.36–2.37 – the god of each stanza (2.36: Indra, the Maruts, Tvaṣṭar with the wives, Agni,
+Indra-as-Bṛhaspati, Mitra-Varuṇa; 2.37: Draviṇodas 1–4, the Aśvins 5, Agni 6), the offices in the ablative (2.36.3
+names none; *neṣṭrá* only in 2.37), the seasons only in 2.37 (refrain 1–3d character-identical, *r̥túnā* 6c); 2.39 –
+every pair-simile literal and in its own pāda, the name withheld until 7c; 2.38 – the aorists of the evening scene past,
+3a *mucāti* and 1c *dhā́ti* future (subjunctive; ví √*dhā* `חילק` has Book 7's precedent, so 1c `יחלק` beside 1d's *bhaj*
+`חילק` is not a collision), 9ab the gods' negated present; the copies 2.35.15c = 2.23.19c, 2.38.11c = 7.8.6c, 2.41.17d =
+2.32.6d and F9 (×5) character for character; no grammar note `("…")` in any פירוק segment of the part (one `("…")`
+per segment, each in its line); no §7.4 word in lines, notes or intros; every parallel says in words that it is a
+shared motif of cultures that never met.
+
+**Rulings on the translator's open questions** (the line stays as drafted in each):
+- **2.34.2d** *ájani*: keep "was born" in the line. It is a passive aorist, a formation typed for intransitive/passive
+  value, and Griffith and Max Müller already read it so; "begot" needs a transitive value attested nowhere else.
+- **2.34.10cd**: keep Jamison's supplied √*dhā* in `( )` – the half-stanza has no verb, the supply is marked, and the
+  scapegoat reading (Geldner, Renou) is in the note; either reading leaves the Hebrew words of the source unchanged.
+- **2.35.5c** *kŕ̥tā*: keep `כמו טוויות (?)`, marked uncertain; Oldenberg / Jamison's sexual reading and Renou's "plants"
+  stay in the note. No reading is secure enough to replace a neutral, marked one.
+- **2.38.8c** *mārtāṇḍá*: keep the name. The formulaic pair with *paśú* (domestic man and beast, each in its pen), the
+  Aditi myth of RV 10.72.8–9 and the Āditya triad of 9ab make Jamison's reading the stronger one; "bird" in the note.
+- **2.40.4–5**: leave "the one … the other" open, as the source does.
+- **2.41.19a**: the neutral `(שתי) מביאות־האושר` is right; the havirdhāna carts (Jamison; the Anukramaṇī's alternative)
+  and Heaven-and-Earth (20a, and 21a's "your lap") both stay in the note.
+
+**For the coordinator:** (1) 2.5.4d `כענפים` is right there (*vayā́ iva*), so 2.35.8c and 2.5.4d now differ by the
+source alone; (2) *jyéṣṭha* is `הגדול ביותר` in 2.35.9c, 2.38.5c but `הגדול` / `הגדולה` in Books 2 and 7 – one form for the lemma;
+(3) 2.38.8b *ániśitam* (adverbial acc.) is rendered `(הוא) שאינו שוקט`, an adjective of Varuṇa – acceptable, an adverb
+(`בלי הרף`) would be closer; (4) the corpus-level `parallels-index.md` should be regenerated after the merge (two tags
+changed).
 
 ## Parallels index
