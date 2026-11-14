@@ -577,8 +577,8 @@
 
 ### 1:103
 `⸢ūk?⸣=wa=ššan nepiši paimi`
-> ואני? – אל השמים אלך.
-- **פירוק:** `ūk?=wa=ššan` ("ואני?"); `nepiši` – d.-l. ("אל השמים"); `paimi` – pai-, pres. 1sg ("אלך").
+> אני? – אל השמים אלך.
+- **פירוק:** `ūk?=wa=ššan` ("אני?": no conjunction in the Hittite); `nepiši` – d.-l. ("אל השמים"); `paimi` – pai-, pres. 1sg ("אלך").
 
 ### 1:104
 `[ ... ŠU{ḪI.A}-uš?] GÌR{MEŠ}-uš ḫwišnut`
