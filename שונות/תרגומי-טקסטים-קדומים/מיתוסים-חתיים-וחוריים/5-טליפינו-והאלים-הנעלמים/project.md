@@ -79,7 +79,96 @@ the absent, "sleeping" god); Joel 1:10, Hag 1:10 (31); Joel 1:12, Hag 1:11 (35);
 rising in fury); Num 20:17 (230–231: the king's road, not field or vineyard); Deut 28:23 (235: bronze and iron); Isa 40:29 (255);
 Lev 7:32 (266: the right thigh). In words only: the Akkadian "land of no return" (240); Etana's eagle (53).
 
+### Round 8 run 5, translator 1, SG LI AZ
+Drafted 2026-11-14: `annotated-SG.rtl.md` (219 clauses, CTH 323.1 + 323.2), `annotated-LI.rtl.md` (104, CTH 331.1 + 331.2),
+`annotated-AZ.rtl.md` (104, CTH 333), each with a Hebrew intro and `## CTH …, § n′ – …` headings, and
+`translation--intro-{SG,LI,AZ}.rtl.md`. `verify SG/LI/AZ --strict` 0 problems; `check_bible_quotes.py` 0 on each file.
+HPM's German read after each section was drafted; every correction is in a **תרגומים** bullet (≈ 45 lines changed:
+mostly mood – imperatives and futures read as pasts – and speech limits).
+
+**1. Fixed strings (copy byte for byte).**
+- *Ḫaḫḫima-* = `קִפָּאוֹן`, **vocalized at every occurrence** (unvocalized `קפאון` is unreadable; the plene `קיפאון`
+  would not match the name check, which looks for the stripped vocalized form `קפאון`); the common noun "freezing" in notes `קיפאון`.
+  *tinnu-* "paralyse, bring to a standstill" `שיתק` (SG 1:40–1:75: `[קִפָּאוֹן] את כל הארץ שיתק,`); "seized" *IṢBAT*
+  `תפס` (TE 19): `ואת זַבַּבָּה קִפָּאוֹן תפס.`, `וגם אותו קִפָּאוֹן תפס.`; *ḫarzi* `מחזיק`.
+- The TE suffocation scene copied in AZ 43–50 and its reversal AZ 66–73 (TE 19–24, 245–253): `[את הבית תפס הערפל],` /
+  `את החלונות תפס העשן,` / `[על הַכַּנִּים נחנקו הָאֵלִים],` / `על האח [נחנקו הגזרים],` / `בדיר – הצאן [נחנקו],` /
+  `[ברפת] נחנקו השוורים;` / `[הָאֵם וגם הילד שלה – נחנקו],` / `האשה [וגם האיש שלה – נחנקו].`; reversal
+  `… הערפל שילח,` / `את [החלונות] – העשן שילח,` / `על הַכַּנִּים – [הָאֵלִים] החלימו,` … (SIG5-*yant-* `החלימו`, IL 92).
+  AZ has *INA TÙR=kan* without *anda*, so `בדיר` (TE 23 `בתוך הדיר` has *anda*); *É-er* and *AB* change places
+  against TE 19–20, and the Hebrew follows the Hittite.
+- TE 236 = LI 1:37 byte for byte: `מכסיהם – של עופרת,`.
+- The ritual refrains of SG §17″–§22″: `אֲדוֹן הָאֵל לפני הָאֵל הולך,` / `נעים מקטיר,` (*šanezzi šameš(iya)-*, UL 2:86
+  `הקטירה`) / `לחשים לוחש,` (*ḫukmai- ḫuek-*) / `שלוש פעמים מקיף,` (*irḫai-*) / `לחם עבה מתוק אחד – לאֵל הַשֶּׁמֶשׁ – פורס,`
+  (AM 46, 91–92) / `על שולחן אֵל הַשֶּׁמֶשׁ שָׂם,` / `ומַרְנוּוַנְט, שכר־דבש, יין – לאֵל הַשֶּׁמֶשׁ מקריב.` (*šipant-*
+  `מקריב`, the rituals) / *QĀTAMMA* "likewise" `כמו כן` (not the analogy formula's `כך`) / `כאשר טוב לאכול,`
+  (*mān adanna SIG5-atta*). SG 1:140–1:161 are feminine (the Old Woman), 1:163ff. masculine (the "lord of the god").
+- Reserved-word stand-ins: *kuwašk-* (iter. of *kuen-* "strike") `תוקף` (`הכה` reserved); *mutu* "husband" `האיש שלה`
+  (`בעל` reserved in the myths); EN SÍSKUR `אֲדוֹן הַטֶּקֶס`, BĒL DINGIR-LIM `אֲדוֹן הָאֵל`; *war-* "burn (intr.)" `דולק`
+  (`בער` reserved); *peran* "forward" `קדימה` (`לפנים` is *karū*'s).
+
+**2. New renderings (first line).** SG: *munnai-* `הטמין` (1:8; `הסתיר` is HE's *kariya-*); {DUG}ḪAB.ḪAB `קיתון`
+(1:14); *ḫappina-* `להבה` (1:16, 1:176); *ḫaḫḫal-* `שיח`; *ikšai-* `*נכבה*`; *antaki-* `חלציים` (1:20; `מתניים` is
+*paršina-*); *kariya-* `עטה` (1:21, AZ 11; AP `עטוי`); *ištappulli-* `מכסה` (TE); *walla-* `השתבח` / `הֱיוּ מְשֻׁבָּחִים`
+(1:11, 1:24; M4 `שיבח`); *šakai-* `אות` (1:28, 1:39); *ḫuišnu-* `החיה` (law); *ḫatnu-* `ייבש`; *ḫuwant-* `רוח`;
+*appuzzi-* / Ì.UDU `חֵלֶב` (vocalized; `שומן` stays *šakan*); *šanḫ-* "seek" `חיפש` (IN `דרש` "demand": a split by
+sense); *tuekka-* pl. "limbs" `איברים` (SG 1:69, LI 2:14; SR sg. `עצם`); *ḫarš-* `בקע` (1:80); *terip-* `חרש`; *nai-*
+`הטה` (HL2 162.1); *damenk-* `הצמיד` / `צמוד`; *šuḫḫa-* `פיזר` (rituals); *aiš* `פה`; *ḫala-* `*ראש*`; *nakkešš-*
+`הכביד`; *tarnatt-* `*מנה*`; MAŠDA `עני`; *mugawar* `הפצרה`, *mugai-* `הפציר` (M4, as set); ZABAR `אָרָד`; *arimpa-*
+`*משען*`; GAG `יתד`; MAR `מעדר`; *alkišta-* `ענף`; *laḫḫura-* `דוכן`; DUG `כלי`; GAL "cup" `כוס`; *marnuwant-*
+`מַרְנוּוַנְט` (IL 14); KAŠ.LÀL `שכר־דבש`; GEŠTIN.LÀL `יין־דבש`; SÍG BABBAR / ZA.GÌN / SA5 / SIG7.SIG7 / GE6 `צמר
+לָבָן / כחול / אָדֹם / ירוק / שחור`; SÍG *pittulaš* `חוט־צמר`; *kina-* `מסונן`; GI.DÙG.GA `קנה טוב` (law H4 `קנה`
+licensed by GI, [equivalent] Jer 6:20); *ḫurnai-* `ריסס` (IN 2.6); UNŪTU `חפצים` (HL1); MA.SÁ.AB `סל`; EMṢU `קֵבָה`
+(UH 32); GA.KIN.AG `גבינה`; *ašaš-* `הושיב`; {DUG}*paḫḫunalli-* `כלי־האש` (`מחתה` avoided: Lev 10:1); *ḫatk-* `סגר`;
+*lukk-* "dawn" `כשעולה השחר` (AS 42); KU7 `מתוק`; *parši(ya)-* `פרס` (AM); {UZU}*šuppa* `בשר`; *ḫuišu-* `חי`;
+ZAG.UDU `כתף`; GABA `חזה`; NÍG.GIG `כבד`; *zanu-* `בישל`; {UZU}TU7 `תבשיל` (IN); NINDA.Ì.E.DÉ.A `עוגת־שמן`
+(`בלולה בשמן` avoided); DÍLIM.GAL `צלחת גדולה` (`קערה` is *ḫuppar-*'s); *išpai-* "satiety" `שובע` (1:199, TE);
+MUḪALDIM `מבשל` (IN). LI: *išḫa-* `אדון`; *tarpi-*, *parninka-*, *ḫapanzi* transliterated; *išḫaḫru-* `דמעות` (HE);
+IGI-*aš* GIG `מחלת העיניים`; *šipa-* `מוגלה`; *ḫarki-* (eye) `הלָבָן`; *inan* `חולי` (AM); *damašš-* `לחץ`;
+*ḫarganau-* `כף היד`, *kalulupa-* `אצבע`, *šankuwai-* `ציפורן`; *lalukkai-* `האיר`; *walula-* `*אישון*`; *enera-*
+`גבה`, *laplipa-* `ריס`; *aniya-* "work (land)" `עבד`; *warš-* `קצר` (HL2); *tiyeššar* `מטע`; *ḫašp-* "fell" `גדע`;
+*ḫink-* mid. "bow" `השתחווה` (active "present" `הציג`, HL1: a split by voice); *dala-* `הניח`; KANKAL `אדמה נטושה`;
+*mališku-* `חלש`; *ḫatteššar* `גומה` (AM 251); *tarupp-* `כינס` (KU 138); *marriya-* `נמס` (KU 251). AZ: KA.GAG
+`שכר־קַגַּג`; LAM.GAL `עץ־פיסטוק`; *gulš-* `חקק` (IN); A.DA.GUR `קני־שתייה`; *išḫiya-* "bind (in)" `כרך` (the law
+sense "obligate" `חייב`); *šunna-* `מילא`; *walḫi-* `וַלְחִי` (IL 14); MUNUS ŠÀ.ZU `מיילדת`; *laḫuwai-* `יצק` (SR);
+*šarku-* `נעל` (UL); TŪDITTU `סיכה`; *pašk-* `תקע`; *ḫubiki-* `צעיף`; *ḫantezzi-* / *appezzi-* `קדמי` / `אחורי`;
+*tiya-* `צעד` (M3; *šarā tiya-* "stood up" `מעלה צעדה`); É.ŠÀ `החדר הפנימי` (UL); *ḫaluga-* `בשורה` (HE); *kinun*
+`עתה`; *waḫnu-* intr. `הסתובב` (M3 `סובב`); *kadupai-* `*כרסם*`; MUN `מלח`; Ú.SAL `כַּר` (= TE *wellu-*); *uwani-*
+`גוש־מלח`; *dandukeššar* `תמותה`; TI-*tar* `חיים`; *zinna-* mid. `הסתיים` (M3 `סיים`); *ukturi* `תמיד` (HE 12:13).
+
+**3. Pre-set rows (M4) checked against the lines.** *ḫaḫḫima-* `קִפָּאוֹן`, *mugai-* `הפציר` / *mugawar* `הפצרה`,
+*walliya-* `שיבח` (here reflexive `השתבח`): as set. *ekun-* `קפא` and *ekuna-* `קר` do not occur in SG, LI or AZ. No
+pre-set row changed. Note for the lead: M4's *ekun-* `קָפָא` shares the root of `קִפָּאוֹן` – harmless as a pair, but say
+so if *ekun-* turns up in MU.
+
+**4. Gate and name bugs (escaped by rewording, none bent the meaning).**
+- **The vocalization check (`check_line` → `_find_word`) takes the first word equal to the name's first word**: for
+  `אֵל הַסְּעָרָה` / `אֵל הַשֶּׁמֶשׁ` that is the unvocalized preposition `אל` before the name (`[אל] אֵל הַסְּעָרָה`,
+  SG 1:3; `אל אֵל הַשֶּׁמֶשׁ`, AZ 74) → a false VOCALIZE error. Escaped by vocalizing the preposition `אֶל`. Fix: skip a
+  candidate word immediately followed by the rest of the name, or match the whole name.
+- `_find_word` also splits a name at a bracket (`[לִיחְ]זִינָה`, LI 1:61 → VOCALIZE): the restoration was a single
+  sign, so the corpus rule allowed `לִיחְזִינָה` unbracketed anyway.
+- Law H4 `מחץ` (*walḫ-*) fires on `למחצה` "half" (SG 1:93 `חצאי־אחים` written instead) and is licensed by the drink
+  *walḫi-* (AZ 14). Proposal: exclude `למחצה`/`מחצית`, and drop `walḫi` from the licence.
+- My reserved-word scan of notes and intros (the tool checks `>` lines only) caught `גורל`, `ראשית`, `מדבר`, `כעס`,
+  `זרה`, `בעל` in my own notes: fixed. Worth a `verify` option that runs the NEVER rows on `הערות` and intros, skipping
+  the bullet label `הערות` itself (it matches the `ערות` row).
+
+**5. Cruxes (open).** SG 1:6, 1:45, 2:3 *waršula-* (`ריח`? HPM leaves it), *paišgataru*; 1:14 *ḫalḫaldani-* (HPM
+"shoulder", TLHdig "head"); 1:20 *antaki-*; 1:47–1:53 the speaker (HPM closes a speech at 1:53); 1:58 *kappuwatten*
+(past or imperative); 1:83 {NA4}*pirulūwari*; 1:90 *piššatti*; 1:93 *pappannikneš*; 1:108 *šiya-*; 1:112 *annanna-*
+(a name or HPM's "annanna-woman"); 1:118–1:121; 1:128, 1:135 *tarnatt-*; 1:136 *arimpa-*, *tuḫḫueššar*; 1:150
+*ḫupai-*; 1:157 *BĒL DINGIR-LIM* (genitive, with HPM); 1:199 *išpānaš* (HPM "satiety", not "night"). LI 1:50
+*lalukkit* (HPM a verb); 1:53 *walula-*; 1:66–1:67, 1:74–1:75 *tiyeššar*, *ḫašp-*; 1:76–1:87. AZ 5 *tarna-* of straws;
+38 TŪDITTU; 42 *tapinama-*; 66 *gakaeššar*, *ḫuinpa-*; 87 NINDA.ZU9, *kadupai-*; 92 the parenthesis; 95 *tiyawala*.
+
+**6. Parallels for the index.** SG 1:41: Deut 28:23 [equivalent]; Job 37:10, Ps 147:17 (the frost that stops the
+waters). SG 1:139: Jer 6:20 (`קָנֶה הַטּוֹב`, GI.DÙG.GA) [equivalent]. SG 1:174: Lev 7:31 (the breast) [equivalent].
+LI 1:36: Mic 7:19 (sins cast into the sea) [divergence]. AZ 35: TE 16 (the reversed shoes: here the shoe is written,
+E.SIR); AZ 43, 66: TE 19–24, 245–253; AZ 84: TE 196 (the hawthorn).
+
 ## Progress
+- 2026-11-14: Round 8 run 5, translator 1: SG 1:1–2:8 (219), LI 1:1–2:16 (104), AZ 1–104 (104) drafted whole, with intros; HPM read after each section; `verify --strict` 0 for each key; `check_bible_quotes.py` 0. Proposals above.
 - 2026-10-31: review pass (a) fidelity – 13 lines changed (3, 6, 8, 18, 90, 100, 128, 133, 138, 145, 164, 194, 207): brackets (3, 6, 8, 133, 138, 145, 164, 207), added words removed or put in ( ) (18 `יצא`, 128 `ו`, 194 `(מי)`), 90 *=še* "to him" (was `ולהם`), 100 *ḫāraš* nom. + instr. "with (his) wings" (was `כנף הנשר`). Open for pass (b): the analogy formula `כך גם X – כך Y` (133–195, 217, 222, 241; the note at 133) renders one QATAMMA twice and, at 222, leaves *namma* untranslated.
 - 2026-10-31: review pass (b) consistency – 14 lines changed (136, 140, 142, 145, 151, 168, 180, 181, 186, 190, 195, 217, 222, 241; the note at 133). The analogy formula (the coordinator's ruling): one `כך` per *QĀTAMMA*, `כמו ש… – כך …`, with *U* / *-a* / *-ya* `כך גם …`; no `כך` where the line has no *QĀTAMMA* (217, 241 `גם …`); 222 *[nam]ma* now rendered `[עוד]`; 181 `[וכמו ש…]` → `כמו ש[…]` (no *nu*). 168 *karaš* `כוסמת` and *išḫuwai-* `זריתי` (as the rituals' AM 4 `תבואה (ו)כוסמת אני זורה`). Recorded in renderings M2 / M3.
 - 2026-10-31: translator 4: TE 1–267 drafted, HPM read after drafting (no review passes by a second reader yet).
