@@ -586,4 +586,77 @@ aligned; 2.24.12 *indrābrahmaṇaspatī* as the trace of Bṛhaspati's origin i
 - The pāda-check (every פירוק Hebrew in its own line) caught a word moved across a pāda end in a repeated stanza
   (2.23.19b *bodhi*); run it before copying a first copy into its repeats.
 
+### Review (reviewer 3)
+Independent fidelity review of all 338 pādas against `data` (Zurich text and morphology), `tr` and Jamison's commentary
+on II.17–24; a script compared every part-3 Hebrew with the other Hebrew of its lemma (`lexmap`) in Book 7, RV 10 / 1.32
+and parts 1–2, and inside the part. **24 lines fixed** (with their פירוק and notes), 5 intros and 4 annotated heads
+corrected; `build RV2.17-24`, `verify RV2.17-24 --strict`: no problems, 0 repeated-line differences;
+`check_bible_quotes.py`: 0.
+
+| Label | Before | After | Why |
+|---|---|---|---|
+| 2.17.1b | `סערותיו נעים` | `סעריו נעים` | *śúṣma* is `סער` (m.); the plural of `סערה` also broke the agreement with `נעים` |
+| 2.17.7c | `עשה (אותו) גלוי` | `עשה סימן` | *praketá* is a noun, Book 7's `סימן` (7.11.1a, 7.33.9a; RV 10.129.2b) |
+| 2.17.7d | `נתח` | `חלק` | *bhāgá* is `חלק` everywhere (RV 10.16.4a, 7.56.14c, 2.10.6a, 2.23.2b); see the ruling below |
+| 2.17.8c | `עזור (לנו)` | `עזור לנו` | *naḥ* is in the source |
+| 2.18.3b | `כדי (שיבוא) הנה` | `לבוא הנה` | the verb is in the source (*āyaí*, infinitive): not an addition; renderings §4 infinitive |
+| 2.18.3d | `ירגיעו (אצלם)` | `יַשְׁהוּ (אצלם)` | *mó ṣú tvā … ní rīraman* is the formula of 7.32.1ab, where Book 7 has `יַשְׁהוּ` ("detain"); the translator's own note says "detain" |
+| 2.19.6d, 2.20.7b | `פיזר` | `הניע (… לכל עבר)` | *ví √īr*: √*īr* `הניע` + *ví* `לכל עבר`; keeps the ring Jamison notes (*vy aìrat* ← *praírayat* 3b) |
+| 2.20.2a | `אתה, אִינְדְּרָה,` | `אתה לנו, אִינְדְּרָה,` | *naḥ* (dative) was not rendered |
+| 2.20.6a | `הנודע` | `המפורסם` | *śrutá* = Book 7's `המפורסם` (7.18.12a) |
+| 2.20.6d | `הוריד` | `הביא` | *áva* is already `מטה` in 6c; √*bhr̥* `הביא` ("brought down", Jamison "pulled off") |
+| 2.21.3b | `לפי חפצו` | `לפי התענגותו` | *jóṣa* (√*juṣ* `התענג`); Book 7 *ánu jóṣam* `עד התענגות` (7.43.4a) |
+| 2.23.2c | `את (השחר) הוורודה` | `של (השחר) הוורוד` | the note (and Jamison: "all the standard tr.") read *usrā́ḥ* gen. sg., the line had the accusative; `השחר` is masculine |
+| 2.23.7a | `שירצה לפגוע` | `שיפגע` | a subjunctive in a relative clause; "want to" was added |
+| 2.23.10b, 18c | `השותף` | `שותף־הרתימה` | *yúj* = Book 7's `שותף־הרתימה` (7.1.13c, 7.31.6c) |
+| 2.24.12d | `זוכי־פרס רתומים` | `זוכי־פרס, שותפי־רתימה` | the same noun *yúj* (dual), not the participle of √*yuj* |
+| 2.23.18d | `את גל המים` | `את הגועש של המים` | *arṇavá* = `הגועש` (RV 10.190.2a, 7.63.2b), here substantivized |
+| 2.24.4d | `שאבו מן המעיין` | `יצקו את המעיין` | √*sic* "pour" `יצק` (Book 7, 2.14.1b, 2.18.6d); *útsam* is an accusative (Jamison "poured it out") |
+| 2.24.6a | `שהגיעו אל` | `שהשיגו את` | √*naś* `השיג` (the note said so; Book 7) |
+| 2.24.8b | `לשם הוא מגיע` | `אותו (המקום) הוא משיג` | √*aś* `השיג` as 2.19.7c, 8d, 2.23.4b; *tát* is an accusative |
+| 2.24.9c, 13b | `בתבונה` | `ברעיון` | *matí* `רעיון` (Book 7; 2.24.1d, 2.18.1d): a split inside the hymn |
+| 2.24.10a | `עליונה` | `ריבונית` | `עליון` is *paramá*'s; *prabhú* = Book 7's `ריבון` (7.82.3b) |
+
+- **Intros and heads:** "the sacred word" (`המקודשת`, the reserved root קדש) → `בעלת הכוח` (2.23 intro and head, notes at
+  2.17.3b, 2.23.1c, 2.24.3c); "the wicked" (`הרשעים`) and "blasphemers" (`המגדפים`) → `הפוגעים`, `מְגַנֵּי הָאֵלִים`
+  (2.23 head; notes 6d, 11c, where "punishment, not forgiveness" (`סליחה`) became "collection, not remission"); 2.23
+  "their trap returns to them" (the Ps 7 wording, not the line) → their own *duchúnā* crushes them (6d); "the mountain
+  opened" → `נפער` (18a). 2.19: the rivers do not go "to the sea" in 2cd (that is 3ab), "orders" → "brings to success" (3d),
+  "gives the sun" → `מפנה` (5b). 2.20: "stole the dawns with the sun" (instrument) → "together with" (5c, as the line),
+  "the black-wombed tribes" → (the forts) (7a). 2.21: the Aṅgirases are not named in 5ab (the line has "the
+  water-crossers"). 2.22 head: the refrain quoted as the line. 2.24: "opened the well" → `פילח` (4b); "saw their deceits"
+  → "surveyed the untruths" (6c); "the god as a bow" → an archer with a bow (8a); "debt-collector" is 2.23's word, 2.24.13c
+  has `לוקח את החוב`.
+- **Checked and kept:** the Indra closing stanza 2.17–2.20.9abc = 2.11.21abc and F9 character for character; the 2.22
+  refrain 1gh = 2fg = 3fg; the Brahmaṇaspati closing 2.23.19abc = 2.24.16abc; 2.18.7d = 7.23.5d, 2.20.3c = 2.12.14b,
+  2.21.2b = 7.46.1c. The two names alternate exactly as Zurich has them; the enemy vocabulary is one Hebrew per lemma
+  (*mŕ̥dh* noun `המזניחים` / *mŕ̥dhas* `ביזיון` are two lemmas; √*riṣaṇy* `ביקש להזיק` is a recorded sense split).
+  Tense and mood: the narrated injunctives (2.17.2c, 5a; 2.19.2b–6d; 2.20.4c–8d) are past in a past frame; 2.20.4c
+  *pīparat* future and 2.22.4f *bhúvat* subjunctive (Jamison) are defensible; the optatives (`נא`), the subjunctives
+  (2.18.8a, 2.20.3d, 2.23.4b, 15a–c, 2.24.1c *stávate* passive with Jamison) and 2.23.6d's intensive imperative are right.
+  2.23.14c's purposive *yád* + subjunctive is Jamison's; 2.23.16b `למזוננו` is Jamison's "our food". Hymns drafted before
+  and after the restart follow the same conventions (format, `(?)` for cruxes, Jamison-attributed readings); the
+  remaining differences were the lemma splits fixed above.
+- **Rulings for the coordinator:**
+  - ***bhāgá* `נתח` / `חלק`:** `חלק`. The two words are from one root (√*bhaj*) and the poet chains them (*bhágam* –
+    *bhāgám* – *bhojám*, Jamison); `חלק` – `חלק` keeps the echo and *bhāgá*'s Hebrew everywhere else. The collision
+    (*bhága* noun and *bhāgá* both `חלק`) is Book 7's (7.41.2d, 7.56.14c) and harmless: *bhága* is mostly the god
+    `בְּהַגָה`. Renderings §11.25's "for the consistency pass" line can be closed.
+  - ***ā́deva* 2.22.4f `חסר־אֵלִים` against part 1's `דבק־האלים` (2.4.1d):** keep both. Grassmann has two words: *ā́deva* 1
+    = *ádeva* lengthened for the metre (his 213,4 = this pāda) and *ā́deva* 2 "striving to the gods" (his 195,1 = 2.4.1);
+    Zurich's single lemma hides it. The note at 4f now says so. Not a split.
+  - ***krívi* (2.17.6c, 2.22.2a):** keep the name `קְרִיוִי` in the line, Jamison's "worm" in the note: the meaning is
+    unknown and a guessed common noun would put a reading into the line; the transcription commits to nothing.
+  - **2.23.16c:** keep the WG / Jamison line (`מצהירים … ובלבם מבטלים אותו`, *vráyas* `כוח־המחץ`): Jamison argues it at
+    length (√*vlī* "crush", "exactly contra Ge's 'Schwäche'") and endorses WG's two contrastive clauses; Geldner stays in
+    the note.
+  - **2.24.5b:** keep `חסמו` (*varanta*, √*vr̥* "close", the injunctive read as past in the myth); the "will open" reading
+    needs Grassmann's *ví*, which is not in this pāda – note only.
+  - **2.21.4d *uṣásaḥ*:** keep Geldner's acc. pl. in the line (the *janat* of the cosmogony, and 2.20.5c *uṣásaḥ* acc. pl.
+    with the sun one hymn before); Zurich's gen. sg. is in the פירוק and the note.
+  - **Left open:** 2.24.14d `זרמו` (plural, "the cows") for the singular *asarat* is an interpretation shared by the
+    standard translations; 2.17.6a / 2.18.2a `(מוכן) כראוי` for *áram* without a verb of its own is acceptable. *ucátha*
+    and *ukthá* are both `אמירה` (Book 7's collision, 7.18.5c), and *majmán* `בעוצמה` beside *śávas* `עָצְמָה` (plene
+    `עוצמה`) – a Book 7 matter for a consistency pass, not changed here.
+
 ## Parallels index
