@@ -1170,8 +1170,8 @@
 
 ### 207
 `[ ... ]-an {GIŠ}patalḫāi? [ ... ]`
-> […] בסוליה? […]
-- **פירוק:** `{GIŠ}patalḫāi?` – patalḫa- "sole (of a shoe); fetter?", d.-l. ("בסוליה?").
+> […] בכבל־רגליים? […]
+- **פירוק:** `{GIŠ}patalḫāi?` – patalḫa- "sole (of a shoe); fetter?", d.-l. ("בכבל־רגליים?": as SI, HPM "Fußfessel"; Round 8 run 5).
 
 ### 208
 `[ ... -a]lzi mān {d}IM-aš [ ... ]`
