@@ -800,6 +800,12 @@ the Akkadian is the same. Decisions: *tamḫāru* `עִמּוּת` (Anzû) – t
 `נתן לחלוף` (`העביר` is *ebēru* Š); *ēnu* `אֵן` (`אדון` is *bēlu*); **_raqādu_ keeps `רָקַד`** (the cognate rule):
 Anzû's *mēlulu* moves to `שִׂחֵק` (2 Sam 6:21 [equivalent]) – applied by the Anzû reviewer. Tool: gates G1–G4 fixed
 (`ברך` licensed by *birku*; `השדמות`; ATF logograms and spellings for ST / ID; `גיבוריו`).
+#### 13.7.5 Part AK2 (RA, RB, AP, EN), 2026-11-14
+`project--AK2.md` accepted: RA copies RB; `X פתח את פיו,` / `ודיבר אל Y:` (no *iqabbi*); `מלך ארבע הקצוות`; *andurāru*
+`דְּרוֹר` [cognate]; *aḫḫūtu* `אַחֲוָה`; *pašīšu* `מָשׁוּחַ`. Decisions: *nabalkutu* "rebel" `מָרַד` (split by sense from
+"cross" `חָצָה`); *dannūtu* `חוֹזֶק`, *malku* `נָסִיךְ` by sense; **_qerēbu_ keeps `קָרַב`** (the cognate rule): Anzû's
+*ṭeḫû* moves to `נִגַּשׁ` – applied by the Anzû reviewer; FL i7′ `[נצחונו]?` (*ernittu* `נִצָּחוֹן`) – applied by the
+reviewer. Tool: G5–G8 (Ibrat licenses `אבר`; `Má-gan`; *ṭūbu*; `אשבע`).
 
 
 ## Changelog

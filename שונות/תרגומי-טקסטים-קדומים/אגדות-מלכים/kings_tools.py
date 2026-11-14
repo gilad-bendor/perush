@@ -302,6 +302,13 @@ for _k in [k for k in RESERVED_R8 if '(גבור|גיבור|' in k]:
     RESERVED_R8[_k.replace('(גבור|גיבור|', '(גבור|גיבור|גיבוריי|גיבוריו|גבוריו|גבוריי|גיבוריך|גיבוריה|גיבורינו|')] = RESERVED_R8.pop(_k)
 for _k in [k for k in RESERVED_R8 if '(צלם|דמות)' in k]:
     RESERVED_R8[B + r'(?!ה?שדמות)' + _k[len(B):]] = RESERVED_R8.pop(_k)
+# AK2: G5 Ibrat (`אִבְרַת`) licenses `אבר`; G6 SEAL's `Má-gan-na`; G7 *ṭūbu*; G8 `אשבע`.
+for frag, lic in {'(אבר|': [r'ibrat|Ib-ra-at|ib-ra-at'], '(גן|גנה|': [r'má-gan|Má-gan|ma-gan'],
+                  '(טוב|': [r'ṭūbu|ṭu-ub|ṭú-ub|ṭu-u₂-b']}.items():
+    for _k in [k for k in RESERVED_R8 if frag in k]:
+        RESERVED_R8[_k] = RESERVED_R8[_k] + lic
+for _k in [k for k in RESERVED_R8 if '(נשבע|' in k]:
+    RESERVED_R8[_k.replace('(נשבע|', '(נשבע|אשבע|ואשבע|תשבע|נשבעים|')] = RESERVED_R8.pop(_k) + [r'lu-ut-ma|ta-ma-a|it-ma|ta-mu-u']  # SEAL lemmatizes AP v7 as *watû*
 for _k in ('AN', 'AK', 'RE', 'ID'):
     RESERVED[_k] = RESERVED_R8
 # The Uruk cycle (renderings.md §12.4): Enmerkar's gates, plus the cycle's own (licensed by the transliteration + ETCSL
