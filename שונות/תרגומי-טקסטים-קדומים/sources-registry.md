@@ -197,6 +197,7 @@ Cohen 1973, Kramer 1952, Vanstiphout 2003, the Nudimmud-spell articles (Kramer 1
 | `Perseus--Hesiod/` | Hesiod, *Theogony* (Evelyn-White 1914, PD text; Perseus markup CC BY-SA), committed. |
 | `TLHdig/CTH-321/` | The Illuyanka myth, KBo 3.7 etc., from TLHdig 0.3 (Zenodo 10.5281/zenodo.20328284, **CC BY 4.0**); the 74 MB zip is git-ignored (recipe in `fetch-recipes.tsv`), the CTH 321 files committed. The Hittite run (run 6) uses the same zip. |
 | `VedaWeb/rv_1.032--zurich.tsv` | Rigveda 1.32, the Zurich text and morphology layer (**CC BY 4.0**), extracted by `dossier_tools.py rvtsv` from VedaWeb's `rv_book_01.tei` (ignored: `VedaWeb/*.tei`). |
+| `VedaWeb/rv_2.001…043--zurich.tsv` | The whole of Rigveda Book 2, the Zurich text and morphology (**CC BY 4.0**, committed), made by `הוודה-והאווסטה/vedic_tools.py convert` from `rv_book_02.tei` (Round 8 run 3; 1,694 pādas – the converter now reads pādas `a`–`j`). |
 | `VedaWeb/rv_7.001…104--zurich.tsv` | The whole of Rigveda Book 7, the Zurich text and morphology (**CC BY 4.0**, committed), made by `הוודה-והאווסטה/vedic_tools.py convert` from `rv_book_07.tei` (Round 7 run 1). |
 | `Bugge-1867--Saemundar-Edda/hymis.html` | *Hýmiskviða* from Bugge 1867 (PD), `etext.old.no`. |
 | `Wikisource-zh--Kojiki/kojiki-jokan.html` | *Kojiki* Book 1 from zh.wikisource (PD text; page CC BY-SA). The Wikimedia API answered 429 to scripts once; the saved page serves. |
@@ -241,7 +242,7 @@ Cohen 1973, Kramer 1952, Vanstiphout 2003, the Nudimmud-spell articles (Kramer 1
 - **Not used (©, records only):** Hoffner 1997 (*The Laws of the Hittites*), Süel 1985, Taggar-Cohen 2006, Miller 2013 (WAW 31), Mouton 2016, Christiansen 2006 (StBoT 48), Bawanypeck 2005; Neufeld 1951 (English and Hebrew, not reached); Singer 2009 (`החתים ותרבותם`, Hebrew).
 
 ### 4.4w Vedic and Avestan: the Rigveda, the Brāhmaṇas, the Mahābhārata, the Kaṭha Upaniṣad, the Vīdēvdād (`הוודה-והאווסטה/`; Round 5 run 1, 2026-10-30)
-- **VedaWeb** (`sources/VedaWeb/`): the Rigveda TEI, books 1, 7, 10 (git-ignored); per hymn the **Zurich text and
+- **VedaWeb** (`sources/VedaWeb/`): the Rigveda TEI, books 1, 2, 7, 10 (git-ignored; book 2 added in Round 8 run 3); per hymn the **Zurich text and
   morphology** (CC BY 4.0) as committed TSVs (`rv_<B>.<HHH>--zurich.tsv`), and the translation layers (Griffith,
   Grassmann – PD; Geldner, Elizarenkova – ©) as local TSVs. Made by `הוודה-והאווסטה/vedic_tools.py convert`.
 - **TITUS** mirror `titus.fkidg1.uni-frankfurt.de` (`sources/TITUS/`): Weber's accented ŚB (1.2, 1.8) and Aufrecht's AB
@@ -253,7 +254,7 @@ Cohen 1973, Kramer 1952, Vanstiphout 2003, the Nudimmud-spell articles (Kramer 1
   analyses with Bartholomae's lemmas).
 - **Dictionaries** (`sources/Sanskrit-lexicon--csl-orig/`): Monier-Williams and Grassmann from csl-orig on GitHub raw (the
   Cologne site answers 403); ignored, per word.
-- **Rank 3** (`sources/Jamison--Rigveda-commentary/`, ©, ignored): Jamison's online commentary (2026-09 version), PDFs +
+- **Rank 3** (`sources/Jamison--Rigveda-commentary/`, ©, ignored): Jamison's online commentary (2026-09 version), PDFs + **Book II** (`II-9-25-26.pdf` / `.txt`) added in Round 8 run 3.
   Book 7 is complete since Round 7 run 1: `VII.1–55-9-25-26.pdf` / `.txt` added (2026-11-09; recipe + manifest items).
   text; (`sources/Archive-org--PD-translations/`, ignored): Eggeling SBE 12, Keith HOS 25, Darmesteter SBE 4, Hume 1921,
   Ganguli vols. 2–3, Bartholomae 1904 (OCR text).

@@ -20012,6 +20012,45 @@
      "9044ad9ef4c4978f983d1a8d4bfd4016e5e66b18156fb090fba4c23dd804dac0"
     ]
    }
+  },
+  {
+   "id": "VedaWeb/rv_book_02.tei",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://raw.githubusercontent.com/VedaWebProject/vedaweb-data/main/rigveda/TEI/rv_book_02.tei",
+   "note": "VedaWeb TEI (Round 8 run 3); the TSVs are made by הוודה-והאווסטה/vedic_tools.py convert",
+   "files": {
+    "VedaWeb/rv_book_02.tei": [
+     10358758,
+     "236269da756609ef371df54bfe0734c6fc6177060a4cbcdc1fa9dc047c3a8c4b"
+    ]
+   }
+  },
+  {
+   "id": "Jamison--Rigveda-commentary/II-9-25-26.pdf",
+   "kind": "url",
+   "tier": "work",
+   "source": "https://rigvedacommentary.alc.ucla.edu/wp-content/uploads/2026/09/II-9-25-26.pdf",
+   "note": "Jamison commentary (©, local; Round 8 run 3)",
+   "files": {
+    "Jamison--Rigveda-commentary/II-9-25-26.pdf": [
+     875178,
+     "3f9c0b197c8c7f1218212788ac1117b1185d49d0b2b90a6abf0c56746514bc68"
+    ]
+   }
+  },
+  {
+   "id": "Jamison--Rigveda-commentary/II-9-25-26.txt",
+   "kind": "pdftotext",
+   "tier": "work",
+   "source": "II-9-25-26.pdf",
+   "note": "",
+   "files": {
+    "Jamison--Rigveda-commentary/II-9-25-26.txt": [
+     477651,
+     "c46bee645b2748235d18fd7e470614532af6687d6b0a000fd606361410700fbb"
+    ]
+   }
   }
  ]
 }
