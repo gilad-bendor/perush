@@ -24,3 +24,8 @@ All four are readings, so they stay as the run drafted them, with the alternativ
 (the existential reading, with Jamison; the Psalms parallels as shared motifs); *bhága* in the Indra closing stanza as
 the god `בְּהַגָה`; the listed per-line readings; the refrain's `(בקול) רם`. The Book 7 alignments the run found are
 for the finalization's harmonization.
+
+## Run 4 (Anzû and the epics of Akkade) and run 5 (the Hittite myths) – no questions
+Run 4 raised none. Run 5's two "could be revisited" choices stay as drafted (the lead): Silver's name translated
+`כֶּסֶף` (as the corpus's speaking names) and Ḫaḫḫima `קִפָּאוֹן`; the Hittite Gilgameš keeps the Babylonian epic's Hebrew
+where the Hittite has the Akkadian's word (GURUŠ `עלם`, DANNA `בֵּרוּ`), so that the retelling shows against its source.
