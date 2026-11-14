@@ -522,6 +522,11 @@ def lic(rx, key, lab):
 
 def _heb_has(plain, h):
     h = strip_marks(h)
+    # plene spelling of a name whose table form strips to the defective (`גִּלְגָּמֶשׁ` → `גלגמש`, plain `גילגמש`;
+    # 2026-11-14, Round 8 run 5): a mater lectionis may stand between any two letters
+    rx = "".join(re.escape(c) + ("[יו]?" if c not in " ־" else "") for c in h)
+    if re.search(r"(?<![א-ת])[ובלמהכש]{0,3}" + rx + r"(?![א-ת])", plain):
+        return True
     for c in {h, h.replace("־", " ")}:
         if re.search(r"(?<![א-ת])[ובלמהכש]{0,3}" + re.escape(c) + r"(?![א-ת])", plain.replace("־", " ") if " " in c else plain):
             return True
