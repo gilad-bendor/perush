@@ -457,4 +457,133 @@ fixed** (with their פירוק and notes), 5 intros and 4 annotated heads correc
     המהלל` is stiff Hebrew; if the coordinator prefers the majority construal, the change must go into all seven copies at
     once (2.11, 2.15, 2.16, 2.17–2.20).
 
+## RV2.17–2.24 (part 3: Indra and Brahmaṇaspati; translator 3, Round 8 run 3)
+
+### Scope
+RV 2.17–2.24, 338 pādas: 2.17 (36; jagatī + triṣṭubh), 2.18 (36; the number hymn, 2 → 100 horses), 2.19 (36), 2.20 (36),
+2.21 (24; the hymn of epithets, nine *-jít* "winners"), 2.22 (30; the atyaṣṭi soma-drinker hymn with `e`–`h` pādas and
+the refrain 1gh = 2fg = 3fg), 2.23 (76; Brahmaṇaspati / Bṛhaspati, the Vala myth only in 18), 2.24 (64; the Vala myth
+told at length). Eight annotated files, eight intros, built (`build RV2.17-24`); `verify RV2.17-24 --strict`: no
+problems, 0 repeated-line differences; `check_bible_quotes.py` on all my files (annotated, intros, generated): 0.
+The run was interrupted once by a VM restart after 2.19 (the coordinator committed 2.17–2.19); 2.20–2.24 were drafted
+after it, from the same scratch tools.
+
+### Sources consulted
+The Zurich text and morphology (`data`); `freq RV2.17-24`, `lexmap` for every lemma (a workbook printing each word with
+its lemma and its Hebrew so far, and a reverse Hebrew → lemma lookup for every new Hebrew word), `grep --all`; Grassmann
+(`gra`) for *právayas*, *jīrí*, *amājúr*, *tuviṣváṇi*, *īśānakŕ̥t*, *krívi*; after each hymn `tr` (Griffith, Grassmann,
+Geldner, Elizarenkova, Renou) and Jamison's commentary on II.17–24. Adopted from Jamison (attributed in the bullets):
+2.17.3b *asya* = the singer's formulation; 2.17.6 the riddle solved by *vájra* in 6d, *krívi* possibly "worm";
+2.17.7 the unmarried girl's *bhága*; 2.18.1d *raṃhyà* gerundive with instrumental agents; 2.18.2 "the embryo of one
+(the kindling stick)"; 2.18.8a *ví √yu* transitive with "no one" supplied; 2.19.4 *hánti vr̥trám* as the present core of
+the hymn and *índro dāśad dāśúṣe* as a parenthesis; 2.19.8b the simile limited to the subject; 2.20.4b the subjects =
+the Āyus of old; 2.20.5c "the dawns along with the sun" (Vala); 2.20.7 *púraḥ* supplied from *puraṃdará*; 2.21.4a
+*anānudá* from *ánu √dā* "unyielding"; 2.21.5d *hinvānā́ḥ* reflexive; 2.22.2e the single *anyá* read both ways; 2.22.4d
+the pun on *ásu*; 2.23.4 the general relative + reward pattern; 2.23.7b *sānuká* "with hackles raised" (WG); 2.23.16c
+*ā́ … ví óhate* "proclaim … but disparage in their heart" (WG); 2.23.17 the god born *as* Brahmaṇaspati; 2.24.2d a split
+verb supplied for *ví*; 2.24.5ab the double reading (doors closed for months / to be opened); 2.24.5c sun and moon not
+aligned; 2.24.12 *indrābrahmaṇaspatī* as the trace of Bṛhaspati's origin in Indra. From Geldner: 2.18.8c, 2.21.4d
+*uṣásaḥ* acc. pl. ("die Morgenröten, die Sonne", against Zurich's gen. sg.), 2.23.12b *śāsā́m*, 2.24.7c "found".
+
+### Decisions
+- **The copies:** the Indra closing stanza 2.17.9abc = 2.18.9abc = 2.19.9abc = 2.20.9abc copies 2.11.21abc character for
+  character, with its פירוק; F9 in 2.17–2.20.9d, 2.23.19d, 2.24.16d. 2.18.7d = 7.23.5d `בסחיטה הזאת, גיבור, הִתְבַּסֵּם.`;
+  2.20.3c = 2.12.14b `אשר למקלס, אשר לטורח – בסיועו;`; 2.21.2b = 7.46.1c `לשאין לגבור עליו, לגובר, לנבון,`.
+  **The 2.22 refrain** (first copy 1gh, = 2fg = 3fg): `הוא התלווה אליו, הָאֵל אֶל הָאֵל, אֶל אִינְדְּרָה האמיתי –` /
+  `הטיפה האמיתית.` (*índu* `טיפה`, *satyá* `אמיתי`). **The Brahmaṇaspati closing** (first copy 2.23.19abc = 2.24.16abc):
+  `בְּרַהְמַנַסְפַּתִי, אתה, המרסן של זה –` / `של המזמור – היה, וקדם את התולדה!` / `כל זה טוב, אשר האֵלִים עוזרים לו.`
+  (19c = 2.35.15c, for part 5) – the word order keeps *bodhi* in its own pāda.
+- **The two names** as the hymns alternate them: *bŕ̥haspáti* `בְּרִהַסְפַּתִי`, *bráhmaṇas páti* `בְּרַהְמַנַסְפַּתִי`
+  (vocalized throughout). Zurich writes the latter as two words: the פירוק gives *bráhmaṇaḥ* `–` and *páti* the name
+  (the RV 10.72.2a precedent), so `lexmap` lists the name under *páti*. *indrābrahmaṇaspatī* `אִינְדְּרָה ובְּרַהְמַנַסְפַּתִי`.
+- **The enemy words, one Hebrew each, Book 7's where it has one:** *śátru* `אויב`, *árāti* `איבה` (*arātīván*
+  `בעל־האיבה`), *dvíṣ* `שונא` (*brahmadvíṣ* `שונא־הנוסח`), *drúh* `שקר`, *níd* `גנאי` (*devaníd* `מְגַנֵּי־הָאֵלִים`),
+  *ripú* `נוכל`, *stená* `גנב`, *vŕ̥ka* `זאב`, *rakṣás* `רקשס`, *duréva* `מרושע`, *duḥśáṃsa* `רע־הקילוס`, *ádeva*
+  `חסר־האלים`, *dásyu* / *dāsá* / *dā́sī* as Book 7 and part 2, *mŕ̥dh* (noun) `המזניחים` (√*mr̥dh* `הזניח`), √*dabh*
+  `הונה` (*abhidipsú* `המבקש להונות`, *amitradámbhana* `המונה את שאינם בני־רעות`). New, one Hebrew each: *pariráp*
+  `מלעיז`, *dvayāvín* `כפול־הלשון`, *dhvarás* `מכשילה`, *hváras* `מלכודת`, *duchúnā* `פורענות`, *hárasvant* `רב־הזעם`
+  (*háras* `זעם`, RV 10.16), *pīyú* `מלעיג`, *arśasāná* `מזיק`, *dódhat* `משתולל`, √*mr̥c* caus. `פגע`, √*riṣaṇy*
+  "seek to harm" `ביקש להזיק` (Book 7's `תיכשל` is the "stumble" sense). *arí* stays `אָרִי` (2.23.13c, 15a), *áraṇa*
+  `זר` (2.24.7d, Book 7).
+- **Debt:** *r̥ṇayā́* `גובה־החוב` (§5.6; 2.23.11c, 17c), *r̥ṇacít* `נוקם־החוב` (2.23.17c), *r̥ṇá* `חוב` (2.24.13c,
+  *ādadí* `לוקח`). No word of the root חטא, `פשע`, `סליחה`, `וידוי`, `חרון` in lines, notes or intros (grepped).
+- **New recurring words:** *gotrá* `רפת` (2.17.1c; *gotrabhíd* `מבקיע־הרפתות`; `דיר` is *svásara*'s, `מכלאה`
+  *vrajá*'s); *yugá* "yoke" `עול` (2.18.1b; Book 7's *yugá* "age" `עידן` is the other sense); *jīrí* `נחל`; √*sīv*
+  `תפר`; *amājúr* `המזדקנת־בבית`; *bhāgá* `נתח` in 2.17.7d only, beside *bhága* `חלק` in 7b (two "share" words in one
+  stanza; elsewhere *bhāgá* keeps part 1's `חלק`, 2.23.2b); *práyas* `מעדן`; *ví* "bird" `עוף` (the Avestan *vi*
+  cognate); *ucátha* `אמירה` (Book 7); *gaṇápati* `אדון־הלהקה`; *sā́man* `נעימה` (RV 10.90); *avatá* `באר`; *paribhū́*
+  `סובב` (*vibhú* keeps Book 7's `המקיף`); *rītí* `פלג` (`זרם` is *dhautí*'s); *tavasyà* `עוצם`; √*tū* `העצים`; √*muṣ*
+  `גזל`; *nr̥tú* `רקדן`; *mahiṣá* `תאו` (Book 7); *dhánvan* `קשת` (= *dhánus*, the gate passes it).
+- **Sense splits recorded in the lines:** *ā́* √*tr̥̄* `הגדיל` (2.17.2b; Jamison doubts every rendering); *prācī́na*
+  `הנעים קדימה` (2.17.5a, the moving mountains; Book 7 `פונה מזרחה`); √*ric* `פינה` (2.19.5b, as 2.13.5b, 2.15.8c) /
+  middle `עדף` (2.22.2e, Book 7); √*ubj* + *nís* `דחק החוצה` (2.23.18d; Book 7 `דכא`); *ní* √*kr̥* `הכניע` (2.23.12d).
+- **Names (files only):** Krivi `קְרִיוִי` (2.17.6c, 2.22.2a), the Śunahotras `בני שׁוּנַהוֹטְרָה` (2.18.6c), Kuyava
+  `קוּיַוָה` and Etaśa `אֵטַשָׁה` (Book 7's), Aśna `אַשְׁנָה` (part 2), Gaṇeśa `גַּנֵשָׁה` (a note only).
+- **Echo control:** *adhivaktár* `דובר־בעד`, not `מליץ` (Job 33:23); *sugopā́* `רועה טוב` without the article;
+  2.23.6d's self-destroying evil and 2.24.3c / 4a's word that splits rock and the well of rock are tagged as shared
+  motifs, the Hebrew of the lines stays Vedic.
+
+### Open decisions for the user
+- 2.17.6c / 2.22.2a *krívi*: a name (most translators) or Jamison's "worm" (a contemptuous word for the serpent).
+- 2.23.16c (*vráyas*, *ā́ … ví óhate*): the WG / Jamison reading is in the line; Geldner's "weakness" in the note.
+- 2.24.5b: "months and years closed the doors" in the line; Jamison's simultaneous "will open" (with Grassmann's *ví*)
+  in the note.
+- 2.21.4d *uṣásaḥ*: Geldner's acc. pl. in the line against Zurich's gen. sg.
+
+### Progress log
+- Drafted hymn by hymn in the compact format of parts 1–2 (translator 2's generator and workbook, reused), each filled,
+  verified and built before the next; `tr` and Jamison after each draft and the readings above adopted; intros written.
+- Pass (a) fidelity: 2.17.3b *asya*, 2.19.4, 2.19.8b, 2.20.5c, 2.20.7a, 2.21.4a, 2.21.5d revised after Jamison;
+  2.18.4d *mŕ̥dhas* back to Book 7's `ביזיון`; 2.19.5b √*ric* `פינה`; 2.22.4b *ápaḥ* "work" (Zurich *ápa*).
+- Pass (b) consistency: a lemma → Hebrew comparison of every word of the part with all other files and a check that
+  every פירוק Hebrew stands in its own `>` line: aligned *gotrá* (`דיר` → `רפת`, *svásara* has `דיר`), *avadyá* `קלון`
+  (2.19.5c), *arí* `אָרִי` (2.23.13c, 15a), *jyéṣṭha* `הגדול` (2.18.8c), *sukṣití* `דירה טובה` (2.19.8d), *pr̥thú*
+  `נרחב` (2.21.4c), *uttamá* `הגבוה ביותר` (2.23.10a), *vibhú* `המקיף` (2.24.10a, 11a; *paribhū́* moved to `סובב`);
+  2.23.19ab = 2.24.16ab re-ordered so that *bodhi* stays in its pāda.
+- Pass (c) Hebrew: the generated files read through; `הָאֵל` / `אֶל` vocalized in the 2.22 refrain; "divine" and
+  "the wicked" wording removed from notes and intros.
+- `build RV2.17-24`; `verify RV2.17-24 --strict`: 0 problems; `check_bible_quotes.py`: 0.
+
+### The text on its own terms
+- **The god who wears the cosmos** (2.17.2): he "wrapped his body" in battle and "put heaven on his head" – a god larger
+  than the world, who "sews up" the darknesses like cloth (2.17.4d).
+- **The poet's own share** (2.17.7): the poet compares himself to an unmarried daughter growing old in her parents' house,
+  begging for her portion – the singer's dependence on the god is a family economy.
+- **Number magic** (2.18): the morning sacrifice is a chariot of four yokes, three whips, seven reins, ten oars; Indra
+  is invited with 2, 4, 6 … 100 horses – and the rival sacrificers must not "detain" him (3cd, 7c, 8a).
+- **The mythic past is the present** (2.19.4): in a narrative of past deeds, the single present "he kills Vṛtra" – the
+  removal of obstacles happens again in every rite.
+- **A hymn of names** (2.21.1–4): a liturgy built almost entirely of epithets – nine "winners" in one stanza – with the
+  verb withheld to the end.
+- **Drink and drinker as two gods** (2.22): "the god attended upon the god, the real drop upon the real Indra"; the soma
+  makes Indra able to act, and some is left over.
+- **The god of the word** (2.23–24): Brahmaṇaspati is "begetter of all formulations", born from every melody; he opens
+  the Vala cave *with the formulation* (2.24.3c); the singers recognize the fire in the rock as their own (2.24.7cd).
+- **The moral world** (2.23): the god protects whoever offers, and "collects the debt" from the slanderer, the
+  double-tongued, the thief greedy for food, the scoffer who praises the gods aloud and disparages them in his heart
+  (16c) – the evildoer's own harm crushes him (6d).
+- **Rings and chains**: Jamison's lexical chaining from stanza to stanza in 2.23, the unexpected myth in 2.23.18; the
+  later fame of 2.23.1 as Gaṇeśa's mantra.
+
+### Key parallels
+- 2.23.6d – Ps 7:16–17 [equivalent]: the trap-setter undone by his own evil; here *duchúnā*, almost a being, crushes him.
+- 2.23.18a, 2.24.3c – Jer 23:29 [divergence]: a word that splits rock – an image in Jeremiah, a myth here.
+- 2.24.4a – Exod 17:6 [divergence]: water from the rock for the people to drink – the "stone-mouthed well" of the Vala
+  myth, from which all "who see the light" drink.
+
+### Proposals for the shared renderings
+- **§3.1 (RV 2):** the Brahmaṇaspati row should note that Zurich splits the name (*bráhmaṇas páti*) so the regex
+  never fires in Book 2; the files vocalize it anyway. Files only: Krivi `קְרִיוִי`, Śunahotra `שׁוּנַהוֹטְרָה`.
+- **New recurring words:** *gotrá* `רפת`, *pariráp* `מלעיז`, *dvayāvín* `כפול־הלשון`, *duchúnā* `פורענות`, *hváras*
+  `מלכודת`, *r̥ṇacít* `נוקם־החוב`, *sā́man* `נעימה`, *gaṇápati* `אדון־הלהקה`, *paribhū́* `סובב`, *yugá* "yoke" `עול`.
+- **No pre-set row revised**; §5.6's *r̥ṇayā́*, *dákṣiṇā*, *maghónī*, *ukthyà*, *vidátha*, √*vad* and F9 met in real lines.
+- **For the consistency pass:** *bhāgá* `נתח` (2.17.7d) / `חלק` (part 1, 2.23.2b); *mŕ̥dh* noun `המזניחים` / √*mr̥dh*;
+  *ā́deva* 1 read as *ádeva* `חסר־האלים` (2.22.4f, Jamison "godless") against part 1's *ā́deva* 2 `דבק־האלים`.
+
+### Lessons for the guidelines
+- A coordinator's message after a VM restart found the scratch tools intact; saving each hymn as soon as drafted lost
+  nothing. Keep the per-hymn draft files in the scratchpad *and* the annotated file on disk.
+- The pāda-check (every פירוק Hebrew in its own line) caught a word moved across a pāda end in a repeated stanza
+  (2.23.19b *bodhi*); run it before copying a first copy into its repeats.
+
 ## Parallels index
