@@ -836,4 +836,70 @@ From Geldner: 2.25.3a the river simile with *kṣódaḥ* nominative; 2.29.1b *r
   of sin, a verse that is itself made of that vocabulary (Ps 32:1) puts it back into the apparatus; another verse of the
   same motif (Ps 130:3, 8) makes the point without it.
 
+### Review (reviewer 4)
+Independent fidelity review of all 340 pādas against `data` (Zurich text and morphology), `tr` and Jamison's commentary
+on II.25–33 where a line was in doubt; a script compared every part-4 Hebrew with the other Hebrew of its lemma
+(`lexmap`) in Book 7, RV 10 / 1.32 and parts 1–3, and a second one checked every פירוק segment for exactly one
+`("…")` (the scratch-generator trap: none left). **14 lines fixed** (with their פירוק and notes), 1 פירוק-only fix,
+5 notes, 7 annotated heads and 6 intros corrected; `build RV2.25-33`, `verify RV2.25-33 --strict`: no problems, 0
+repeated-line differences; `check_bible_quotes.py`: 0.
+
+| Label | Before | After | Why |
+|---|---|---|---|
+| 2.25.4a | `לו גולשות (המים) השמימיים` | `לו גולשים (המים) השמימיים` | the verb disagreed with the supplied masculine `(המים)` and `שאינם` |
+| 2.27.11c, 2.29.3b | `טובים` | `וַסוּ` | *vasavaḥ* (voc.) is `הַוַּסוּ` / `וַסוּ` in Book 7 also when the Ādityas are addressed (7.52.2d, an Āditya hymn); a split against Book 7 |
+| 2.27.13b | `הוא שוכן (לידם)` | `הוא שוכן` | *úpa* was rendered twice: `ליד` in 13a (before the accusative *apáḥ* it governs) and again in brackets; the פירוק and the 13a note now say so |
+| 2.27.13c | `אין מי שהורגים אותו` | `אין הורגים אותו` | *nákis* + 3 pl. *ghnanti*: `אין מי` with a plural verb was ungrammatical; `אין` is Book 7's other *nákis* (7.32.16d, 2.24.7d) |
+| 2.28.5b | `נגשים נא … את מקור הסדר שלך` | `נגשים נא לך … את מקור הסדר` | *te* is a dative ("for you"), not a possessive |
+| 2.28.9c | `רבים עוד השחרים` | `רבות עוד השחרים` | *bhū́yasīḥ* fem.; the dawns take feminine agreement (renderings §11.18; 2.28.2c `בעלות־הפרות`) |
+| 2.30.9a | `מי שלנו – … המבקש להכות` | `מי – … המבקש להכות אותנו` | *naḥ* is the object of *jighatnú* ("whoever seeks to strike us"), not a possessive |
+| 2.31.2a | `עזרו לנו (לעלות) מעלה` | `את שלנו עזרו (לעלות) מעלה` | *naḥ* is the owner of *rátham* (2b: "help our chariot up", as 1a `את מרכבתנו … עזרו`), not the one helped |
+| 2.32.1a | `לזה שלי` | `של זה שלי` | *asyá* is a genitive, with *avitrī́* "helpers of" (1b `של הדיבור`) |
+| 2.33.1c | `יהיה הגיבור מתון` | `יהיה נא הגיבור מתון` | *kṣameta* optative: a wish (renderings §4) |
+| 2.33.6d | `אבקש לזכות בו` | `אבקש נא לזכות בו` | *vivāseyam* optative, parallel to 6c `אשיג נא` |
+| 2.33.7a | `ידך הרחמנית` | `הרחמנית שלך –` | `יד` was added without brackets: *hásta* is in 7b (`היד`); *te* `שלך` |
+| 2.33.14a | `יעקוף אותנו` | `יעקוף נא אותנו` | *vr̥jyāḥ* precative; the similar line 7.84.2c has `יעקוף נא אותנו` |
+| 2.29.4c (פירוק) | *vaḥ* `("בלעדיכם")` | `("כם")` | `בלעדי` is *r̥té*'s; the pronoun was counted twice |
+
+- **Notes, heads, intros:** the vocabulary of forgiveness had come back as contrast – "not `מחילה`, not `כפרה`" (2.28.5a
+  note, 2.28 head and intro "`נמחלת`"), "mercy, not `מחילה`" (2.27.14b), "chosen to keep the vocabulary of `מחילה` out"
+  (2.28.3d) – rewritten in the source's own terms (a knot untied, patience, mercy); 2.33.14a's parallel note used the root
+  חטא ("that it miss") – now "that the arrow pass us by". Geldner's "Sünde" / Griffith's "sin", named as rank-3 words, are
+  kept. Heads and intros aligned with the lines: 2.25 (`המים השמימיים גולשים`), 2.26 (`מרחיב לו מן המצוקה`, not "rescues"),
+  2.27 (the songs "with ghee on their back", not "like ghee"; `פחתים`, not "pits"; "three earths"; "no one slays him",
+  not "whole"), 2.28 (`שותף־רתימה או חבר`, not "a kinsman"), 2.30 ("battle and booty" → "battle"; "to whoever comes with
+  cows", not "to the god"), 2.31 (the closing simile as the line), 2.32 ("a hero", not "a son"; `טובת־הלידה`; 2ab and 3a as
+  the lines: `משמעת`, not "response"), 2.33 (the quotations as the corrected lines).
+- **Checked and kept:** the 2.25 refrain 1d = 2d = 3d = 4d = 5d and the closing 2.27.17abc = 2.28.11abc = 2.29.7abc character
+  for character; F9 (2.27.17d, 2.28.11d, 2.29.7d, 2.33.15d); 2.32.6d. No word of the root חטא, `פשע`, `סליחה`, `וידוי`,
+  `חרון` in lines, notes or intros, and no Psalm idiom in the Varuṇa lines (√*muc* `שחרר`, √*śrath* `התיר`, √*mr̥ḍ* `רחם`,
+  *ā́gas* `אשמה`, *énas* `עוון` as Book 7). Mood: Rudra's prohibitives (1b, 4ab, 5cd with *mā́* + injunctive), imperatives
+  (2d, 3cd, 4c, 11ac, 14cd, 15c) and optatives are right; 2.33.8c *namasyā́* as 1 sg. (Jamison) is defensible, Geldner's
+  imperative is in the note. Tense: the narrative perfects and aorists of 2.30.2–3 past, the conditional `עמד להביא`; the
+  perfect of state 2.28.4d present. Names vocalized at their first occurrence (Dakṣa, Guṅgū, the Śaṇḍikas, Rākā, Sinīvālī).
+- **Rulings on the translator's open questions:**
+  - **2.29.4c *r̥té*:** keep Renou / Jamison's "without (you)" with `?` (Jamison: *vaḥ* in Wackernagel's position, cf.
+    VI.67.8); Geldner's "on the course of truth" stays in the note.
+  - **2.30.2ab:** keep the line's literal words (`מי שעמד להביא … הכריזה היולדת ליודע`) – the conditional is rendered, the
+    riddle is not solved in the line; Jamison's two scenarios stay in the note.
+  - **2.32.2a:** keep Geldner's *āyóḥ* with *rípaḥ* (`הרמאויות … של אָיוּ, ביום (ההוא)`); Jamison's "on the day of Āyu"
+    in the note. The bracketed `(ההוא)` commits to nothing.
+  - **2.33.12b *nānāma*:** keep the 3rd sg. (Zurich, Jamison, Kümmel): *kumāráḥ* is the subject in the same stanza.
+  - **2.25.1c:** keep `בנולד – על פני נולד`: it leaves both readings open, as the translator intended.
+  - **2.28.5a *raśanā́*:** keep `רסן` (its one precedent; `חבל` and `רצועה` are *pā́śa*'s and *dā́man*'s).
+- **Rulings on the consistency items (renderings §11.26):**
+  - **√*ci* 2 `תבע` (2.27.4d) / 7.52.2d `מענישים`:** keep both as a recorded sense split: with *r̥ṇā́ni* "debts" the verb
+    is "exact, keep account of"; in 7.52.2d (with a deed as object) "punish".
+  - **√*śās* `ייסר` (2.29.5b) / `כוון` (Book 7, 2.28.9d):** keep: a father "correcting" a gambler is chastisement, not
+    direction; the echo of Deut 8:5 is the source's own sense and is tagged.
+  - **√*vyadh* `נקב` (2.30.4a, 9b) / Book 7 `השליך` (7.69.7a, 7.104.3b, 5d):** keep: Book 7's three are all with a
+    preverb and a goal ("hurl into"); here the bare verb with an instrument ("with heat as with a stone", "with the sharp
+    one") is "pierce, hit".
+  - ***khā́* `מקור` / *khá* `פתח`:** keep: two Zurich lemmas (fem. "well-spring", neut. "opening").
+  - ***vásman* / *yóni* `קן`:** two lemmas in one Hebrew. *vásman* has only this sense and keeps `קן`; *yóni* is `רחם`
+    everywhere but 7.97.4a – for the coordinator's consistency pass (Book 7's file).
+  - **New, for the coordinator:** *áheḷant* is `שאינה רוגזת` here (with *héḷas* `רוגז`, §5.6) but `שאינה כועסת` in
+    7.67.7c (`כעס` is *manyú*'s) – align 7.67.7c to `רוגזת`. *achidyamāna* `שאינה נשברת` (2.32.4c) shares `נשבר` with
+    √*śr̥̄* (2.28.5d `תישבר`), while √*chid* is `נקרע` (2.28.5c): left (two Zurich lemmas; a needle does not "tear").
+
 ## Parallels index
