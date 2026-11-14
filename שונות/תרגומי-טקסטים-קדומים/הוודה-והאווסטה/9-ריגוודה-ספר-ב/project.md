@@ -902,4 +902,182 @@ repeated-line differences; `check_bible_quotes.py`: 0.
     7.67.7c (`כעס` is *manyú*'s) – align 7.67.7c to `רוגזת`. *achidyamāna* `שאינה נשברת` (2.32.4c) shares `נשבר` with
     √*śr̥̄* (2.28.5d `תישבר`), while √*chid* is `נקרע` (2.28.5c): left (two Zurich lemmas; a needle does not "tear").
 
+## RV2.34–2.43 (part 5: the Maruts, Apāṃ Napāt, the season-cups, Savitṛ, the Aśvins, the omen bird; translator 5, Round 8 run 3)
+
+### Scope
+RV 2.34–2.43, 359 pādas: 2.34 (60; the Maruts, jagatī + a triṣṭubh close), 2.35 (60; Apāṃ Napāt), 2.36 (24) and 2.37
+(24; the season-cups, *r̥tugraha*), 2.38 (44; Savitṛ at evening), 2.39 (32; the Aśvins in pair-similes), 2.40 (24; Soma
+and Pūṣan), 2.41 (66; various gods in tṛcas, Sarasvatī 16–18), 2.42 (12) and 2.43 (13; the omen bird). Ten annotated
+files, ten intros, built (`build RV2.34-43`); `verify RV2.34-43 --strict`: no problems, 0 repeated-line differences;
+`check_bible_quotes.py` on all my files (annotated, intros, generated): 0 problems. With this part Book 2 is drafted
+whole (43 hymns, 1,694 pādas).
+
+### Sources consulted
+The Zurich text and morphology (`data`); `freq RV2.34-43`, `lexmap` (translator 4's workbook and generator scripts,
+copied to my own scratch folder; a prefix lookup over `lexmap_dict` for every new lemma; a reverse Hebrew → lemma
+lookup for every new Hebrew word), `grep`; Grassmann for the hapaxes. After drafting each hymn: `tr` (Griffith,
+Grassmann, Geldner, Elizarenkova, Renou) and Jamison's commentary on II.34–43. Adopted from Jamison (attributed in the
+bullets): 2.34.2d *ájani* passive ("Rudra was born as the gleaming bull in Pṛśni's udder", against the standard
+"begot"); 2.34.3b *nadá* "reed(-whip)"; 2.34.4a *pr̥kṣé* as a dative infinitive; 2.34.10cd the supplied √*dhā* (`(שמתם)`)
+for a verbless half-stanza; 2.34.12c the Maruts unclosing the dark clouds as Dawn the nights (the Vala image); 2.35.5c
+*kŕ̥tā* (Oldenberg's "made" women, with WG's "spinners" and Renou's "plants" in the note); 2.35.6a *svàr* as an archaic
+genitive; 2.35.9 the transition from water to fire (*jihmá* also the piled firewood); 2.35.14b "paths" supplied (note);
+2.36.2b *añjíṣu* with *śubhrā́saḥ*; 2.36.4c *práti* √*vī* "receive"; 2.36.5 Indra as Bṛhaspati (the brahman's cup);
+2.37.2b *dadíḥ* as the quoted name; 2.37.3b *áriṣaṇyant* "not failing", *vanaspati* = the chariot; 2.38.1c *dhā́ti*
+subjunctive; 2.38.3c *ahyárṣu* "snake-stabber" (a bird of prey); 2.38.4 the human weaver, the intensive *adardhar*
+"(always) held apart", *arámati* as a pun; 2.38.5 the evening meal; 2.38.6c *víkr̥ta* "not done (to the end)"; 2.38.7 the
+three habitats (waters, wastelands, woods); 2.38.8a *yādrādhyà*, 8c *mārtāṇḍá* = Mārtāṇḍa, man (not "bird"); 2.39.1a
+√*gr̥* "awaken", 2b *váram ā́* "at pleasure", 2d the marriage, 3c the cakravāka pair, 4c Yama's two dogs (WG), 4d
+*khŕ̥gala* "amulet", 5a "two rivers into one", 6c "nostrils", 7a *śaktí* (spear/power), 7b Heaven and Earth corralling
+the airy realms; 2.40.2c *ābhyā́m* dative; 2.40.4–5 the "one … other" as an open riddle; 2.41.11a *ca* "if"; 2.41.19–21
+the two havirdhāna carts; 2.42.1c *ca* "if", 1d *abhibhā́* "evil eye", 3a *dakṣiṇatáḥ* "south"; 2.43.3b the silent
+sitter. From Geldner: 2.34.5a "flaming" cows; 2.35.6c the unfired-brick forts; 2.35.12c "the back (of the fire-place)";
+2.38.8a "as far as possible"; 2.40.4d the navel "unbound" (offspring); 2.43.3c *karkarí* "lute".
+
+### Decisions
+- **Copies:** 2.35.15c = 2.23.19c `כל זה טוב, אשר האֵלִים עוזרים לו.`; 2.38.11c = 7.8.6c `אשר יהיה אושר למשבחים ולידיד,`;
+  2.41.17d = 2.32.6d `צאצאים, אֵלָה, הקצי לנו!` – each character for character, with its פירוק; F9 in 2.35.15d,
+  2.39.8d, 2.40.6d, 2.42.3d, 2.43.3d. Near copies kept parallel in word order: 2.34.11b ~ 7.40.5b (`של וִישְׁנוּ החפוז –
+  בהבאה, …`), 2.40.5a ~ 2.35.2d (`את כל ההוויות – האחד / האָרְיָה – הוליד`), 2.40.6c ~ 7.40.4c (`האֵלָה אַדִיטִי, שאין לה
+  מתקיף`), 2.37.1c ~ 2.14.2c (`לו – את זה הביאו`).
+- **The Maruts (2.34)** with Book 7's vocabulary (renderings §11.15): `מַרוּטִים` vocalized at every occurrence, *añjí*
+  `קישוט`, *khādín* `בעל־הצמידים`, *rukmá* `עדי־זהב`, *r̥ṣṭí* `כידון`, *pŕ̥ṣatī* `סוסות מנומרות` (*pŕ̥ṣadaśva*
+  `בעל־הסוסים־המנומרים`), *bhŕ̥mi* `מתערבל`, *dávidhvat* `מנער ומנער`, *yā́man* `מסע`, *sámanyu* `שווה־הכעס`,
+  *evayā́van* `הולך־המסלול`, *jīrádānu* `זריז־הטיפות`, *sudā́nu* `טוב־המתן`; the plural *agnáyaḥ* `אַגְנִים` (Book 7);
+  *rudrā́ḥ* (the Maruts) `רוּדְרָה` / `הרוּדְרָה`, *rudríya* `בני רוּדְרָה`; Pṛśni `פְּרִשְׁנִי` (part 1); Trita `טְרִיטָה` (part 2);
+  new: the Daśagvas `הדַּשַׁגְוָה` (as RV 10.14's `הנוגוה`).
+- **Apāṃ Napāt (2.35)** `נכד המים` (§3.1), vocalized `נֶכֶד הַמַּיִם` at the first occurrence the name check reads (3d,
+  where *nápātam* is unsandhied) and in 1c; *anidhmá* `בלא עצים`, *ghr̥tánirṇij* `לבוש־חמאה־מזוקקת`, *ásmera* `שאינן
+  מחייכות`, *yuvatí* `עלמה`, *yahvī́* `תוססת`, *āmá* "raw, unfired" `לא־אפוי` (also 2.40.2c, where it keeps the
+  cooked/raw paradox: `את האפוי בתוך הלא־אפויות`), *mántra* `מַנְתְּרָה` (§11.22), *aryá* `האָרְיָה` (Book 7 7.64.3a),
+  *sā́nu* `רכס`, √*dhā* 2 "suck" `ינק`, √*viṣ* "be active" `פעל`, *átka* `גלימה`.
+- **The season-cups (2.36–2.37):** the priests' offices as part 1 fixed them, in the ablative "from the cup of":
+  *hotrá* `מכהונת־הקריאה`, *potrá* `מכהונת־הטיהור`, *neṣṭrá* `מכהונת־ההנהגה`, *praśāstrá* `מכהונת־ההדרכה`;
+  new: *ā́gnīdhra* `מכהונת־מצית־אַגְנִי` (from *agnídh* `מצית־אַגְנִי`), neuter *brā́hmaṇa* "the brahman's office"
+  `מכהונת־הנוסח` (a sense split from masc. *brāhmaṇá* `בְּרַהְמִין`, as *hotrá* / *hótar*). *r̥tú* `עונה`: the refrain
+  2.37.1–3d `מכהונת־X – את הסוֹמָה, נותן־הנכסים, שתה עם העונות!` (*r̥túbhiḥ* `עם העונות`, §5.6); *r̥túnā* `בעונה`
+  (2.37.6c), *r̥tuthā́* `לפי העונות` (2.43.1b), *r̥tú* acc. pl. `העונות` (2.38.4c). *svā́hā* `סְוָאהָא`, *váṣaṭ* `וַשַׁט`
+  (*váṣaṭkr̥ta* `שנעשה בוַשַׁט`, as part 1's `שנעשה בסְוָאהָא`); *nivíd* `הכרזה`; *āvŕ̥t* `תור` (not `סבב`, which is
+  *vartís*'s); *draviṇodā́s* `נותן־הנכסים` (part 1); *vimócana* `התרה`.
+- **Savitṛ (2.38):** √*sū* / *savá* `האיץ` / `האצה` (Book 7); *vratá* `תקנה` (a god's ordinance, §11.6) five times;
+  √*ram* `נרגע` / caus. `הרגיע`; *ví* √*muc* `שחרר` (unharness); *mókī* `המשחררת` (the night); √*sr̥* `פשט` of the arms
+  (Book 7's split; `זרם` elsewhere); *kéta* `כוונה`; √*iṣ* 1 `הזעיק` (Book 7 `מוזעק`); *śóka* "glow" `התלקחות` and
+  *prabhavá* "powerful" `עוצמתי` (the Kaṭha's *śoka* "grief", *prabhava* "origin" are the later senses: splits);
+  *ápya* "watery" `מימי` (Book 7's *ápya* "friendship" `ידידות` is another word, from *āpí*); Mārtāṇḍa `מָארְטָאנְדָּה`
+  (§3.1, RV 10.72) kept as the name with Jamison (Geldner "bird" in the note).
+- **The Aśvins (2.39):** every simile literal and in its pāda, `כשני / כשתי X`; the name withheld until 7c, as in the
+  source. *yamá* "twin" `תאומים` (with a name escape: not Yama); *gŕ̥dhra* `עיט` (Book 7 *gr̥dhrayātu*); *nidhí*
+  `מטמון` (Book 7); *cakravāká* `ברווז־צַ'קְרַוָואקָה` (transcribed, glossed); *khŕ̥gala* `קמיע`; *ákṣ* `עיניים` beside
+  *cákṣus* `עין` ("with the eye", literal); *óṣṭha* `שפה` (the string `שפתיים` is also Book 7's *śíprā* – noted, a near
+  collision of two lemmas, not one word); *kṣṇótra* `אבן־משחזת`; *svádhiti* `גרזן` (Book 7).
+- **Soma and Pūṣan (2.40):** `סוֹמָה ופּוּשָׁן` for the dual dvandva; *jánana* `מוליד`; *nā́bhi* `טבור`; √*jinv*
+  `המריץ` (√*jū*'s Hebrew: the two are one family – recorded); *viśvaminvá* `מפעיל־הכל` (Book 7), *áviśvaminva*
+  `שאינה מפעילה־הכל`.
+- **2.41:** *vāyú* `רוּחַ` (§11.19, masc., no article); *mitrā́váruṇā* `מִיטְרָה וְוַרוּנָה` (§3.1); Sarasvatī's superlatives
+  *ámbitamā*, *nádītamā*, *dévitamā* in the pattern of part 4's `הרופא שברופאים`: `האם שבאמהות, הנהר שבנהרות, האֵלָה
+  שבאֵלוֹת`; *amba* `אמא`; *dā́nu* (n.) "gift" `מתן` (with a name escape: not Dānu); *pū́ṣarāti* `שפּוּשָׁן נותן־המתנות
+  שלהם`; the Śunahotras `בני שׁוּנַהוֹטְרָה` (part 3).
+- **The omen bird (2.42–2.43), the bird words fixed once:** *śakuní* `צִפּוֹר`, *śakúnti* `צִפּוֹרִית` (Grassmann: a
+  small bird; two lemmas, two words), *ví* `עוף` (part 3), RV 10.16's *śakuná* `העוף` (a related word, noted);
+  *kapiñjala* is the Anukramaṇī's name (intro only). *sumaṅgála* `טוב־הבשורה` (`מזל` is *subhága*'s, `סימן` *praketá*'s,
+  `אות` reserved), *bhadravādín* `מדבר־הטוב`, *púṇya* `הצלחה` (not the root ברך, gated), *abhibhā́* `עין־רעה`,
+  *suparṇá* `יפה־הכנפיים`, *íṣumant* `בעל־החצים`, *ástar* `יורה`. The chant words by Book 2's precedents: *sā́man*
+  `נעימה` (§11.25), *sāmagā́* `שר־הנעימה`, *udgātár* `כוהן־הזמרה` (AB precedent), *brahmaputrá* `בן־הנוסח`; the meters
+  *gāyatrá* / *traíṣṭubha* transcribed `הגָאיַטְרִי` / `הטְרִשְׁטֻבְּה` (the intros' spelling of the meters).
+- **Escapes (each with its reason in the line):** `[היתר שם]` for *yā́man* (2.34.10a, 2.36.2b: Yama), *mitrā́ya*
+  "alliance" (2.34.4b), *bháge* (2.34.8b), *bhāgá* (2.36.4d, 2.38.5c, 7a), *yamā́* "twins" (2.39.2b), *dā́nunaḥ* (2.41.6b);
+  `[היתר שער: הנחשים]` for *ahyárṣu* "snake-stabber" (2.38.3c: the compound contains *áhi*). 2.34.8d *jána* (sg.) `איש`
+  after the `אדם` gate caught my first draft.
+- **Sense splits recorded in the lines:** *kṣoṇī́* pl. `המון` (2.34.13a; dual `שתי הארצות`, part 2); *pŕ̥kṣ* as an
+  infinitive `להזין` (2.34.4a; noun `מזון־הכוח`); *nadá* `קנה` kept with "roarer" in the note; *ā́* √*yu* `משך אל`
+  (2.37.3c; `הסיר` without the preverb); *ní* √*yam* `עצר` (2.38.3c; `הושיט`); *práti* √*vī* `קבל`; *pradhí* `חישוק`
+  shares part 1's *nemí* `חישוק` (two words for the felloe).
+
+### Open decisions for the user
+- 2.34.2cd: *ájani* passive (Jamison, Griffith: Rudra "was born" as the bull in Pṛśni's udder) in the line; the standard
+  "Rudra begot you" in the note.
+- 2.34.10cd (Trita, "the aging of the aging"): Jamison's supplied √*dhā* `(שמתם)` in the line; the scapegoat reading
+  (Geldner, Renou) in the note.
+- 2.35.5c *kŕ̥tā* `כמו טוויות (?)` (WG) – Oldenberg / Jamison's sexual-slang reading in the note.
+- 2.38.8c *mārtāṇḍá*: the name (Jamison: man as Mārtāṇḍa's offspring) in the line, "bird" (Geldner, most) in the note.
+- 2.40.4–5: which of the two gods is "the one" and "the other" – left open, as the source leaves it.
+- 2.41.19a: the two "bringers of weal" – the havirdhāna carts (Jamison) or Heaven and Earth (20a).
+
+### Progress log
+- Drafted hymn by hymn in the compact format (translator 4's generator and checks, adapted), each filled, verified and
+  built before the next; `tr` and Jamison read after each draft and the readings above adopted; intros written.
+- Pass (a) fidelity: 2.34.2d *śukráḥ* nominative (Zurich) – `הפר – נולד, בוהק, בעטין של פְּרִשְׁנִי` (my draft had the
+  bright udder); 2.34.4a infinitive; 2.34.12c feminine subject (Dawn); 2.36.2b; 2.38.10a the word order of *vājáyantaḥ*
+  (a פירוק segment was out of order – the lemma check caught it); 2.41.11a conditional *ca*; 2.42.1c the same.
+- Pass (b) consistency: a lemma → Hebrew comparison of every word of the part with all other files (`lexmap_dict`) and
+  the pāda check (every פירוק Hebrew in its own line). Aligned: *ajasra* `בלתי פוסק` (no hyphen, Book 7); √*vah*
+  `הוביל` (2.35.9c, 2.41.9a, was `נושאות` / `הביאו`); √*bhaj* `חילק` (2.38.1d); *vástu* `בוקר` (2.39.3c); *víśvyā*
+  `מכל מקום` (2.42.1d, freeing `מכל עבר` for *viśvátas*); *vā́ta* masc. `רוּחוֹת` (2.39.5a); *śaktí* `כושר` (2.39.7a,
+  a draft `כוח` is *bála*'s); *āvŕ̥t* moved off `סבב` (*vartís*); *tápus* `צורב` (2.34.9c) and *árṇas* `משבר`
+  (2.34.12d) kept against first drafts.
+- Pass (c) Hebrew: the generated files read through; `אַל` (prohibitive), `אֶל`, `הָאֵלֶּה` / `אֵלֶּה` vocalized where the
+  verifier or the reading asked (2.40.2ab, 2.41.21a); 2.34.9b re-phrased.
+- `build RV2.34-43`; `verify RV2.34-43 --strict`: 0 problems; `check_bible_quotes.py`: 0. No word of the root חטא,
+  `פשע`, `סליחה`, `וידוי`, `חרון` in lines, notes or intros (grepped; the only hits were `האחרון`).
+
+### The text on its own terms
+- **The storm as a cattle raid (2.34.1d, 10b, 12):** the Maruts "uncover the cows" and "milk Pṛśni's udder" – the rain
+  is milk, the cloud a dappled cow, and the storm repeats Indra's opening of the Vala cave.
+- **Fire in water (2.35):** a god who "shines without fuel, ghee-clad, in the waters", whom the waters "kindle", suckle
+  and lick like cows their calf, who "with another's body" (Agni's) acts here – the paradox at the centre of Vedic
+  thought about fire, lightning and the waters.
+- **The secret name (2.35.11):** "his face and his dear name, hidden, grow" – a god's true name is a hidden thing that
+  grows with the rite.
+- **Ritual as a round (2.36–2.37):** every priest's cup in its turn, "with the seasons" – the order of the rite is the
+  order of time; even the chariot-shed ("Lord of the Forest") is asked to hold firm.
+- **Evening in a Vedic village (2.38):** the weaver rolls up her cloth, the craftsman lays down his work half-done, the
+  mother sets aside the best portion for her son, everyone who went out "to win" comes home – a rare picture of daily
+  life, all under Savitṛ's ordinance.
+- **A god who assigns every creature its place (2.38.7–8):** fish to water, beasts to the wasteland, birds to the
+  woods, man and cattle to the pen, even Varuṇa to his watery womb; and the great gods do not break his ordinance.
+- **Thinking in pairs (2.39):** twins described entirely by twinned things – stones, vultures, priests, goats, wives, a
+  married couple, horns, hooves, ruddy geese, ships, eyes, hands, feet, lips, breasts, nostrils, ears.
+- **The cooked in the raw (2.40.2c):** milk "cooked" inside the living cow – a wonder the poets attribute to the gods.
+- **Sarasvatī, "best of mothers, best of rivers, best of goddesses" (2.41.16):** the poet calls her "Mama" (*amba*) and
+  asks her for a good name and for children.
+- **The omen bird (2.42–2.43):** a household charm at the end of a priestly hymnal; the bird's cry is read for good or
+  bad by its direction ("south of the houses", "towards the fathers"), and its song is likened to the priests' chant –
+  even its silence is a sign.
+
+### Key parallels
+- 2.35.4d – Exod 3:2 `וְהִנֵּה הַסְּנֶה בֹּעֵר בָּאֵשׁ וְהַסְּנֶה אֵינֶנּוּ אֻכָּל` [divergence]: a fire that does not depend on its fuel
+  – the bush is not consumed, the waters' fire burns "without wood"; a shared motif of cultures that never met.
+- 2.38.8c – Ps 104:22–23 [equivalent]: the daily round of man and beast in an order set by the god; in the psalm the
+  beasts go out at night and man by day, here all return home at evening under Savitṛ's ordinance.
+- 2.39.6b – Song 4:5 `שְׁנֵי שָׁדַיִךְ כִּשְׁנֵי עֳפָרִים תְּאוֹמֵי צְבִיָּה` [divergence]: twinned body parts and twins in similes –
+  the beloved's body compared to animal pairs there, the twin gods compared to body pairs here.
+- 2.41.16b – Ps 46:5 `נָהָר פְּלָגָיו יְשַׂמְּחוּ עִיר-אֱלֹהִים` [equivalent]: the holy river that gladdens; here the river is itself
+  a goddess and mother.
+- 2.42.1b – Qoh 10:20 `כִּי עוֹף הַשָּׁמַיִם יוֹלִיךְ אֶת הַקּוֹל` [divergence]: the bird as a carrier of voice and word – in
+  Qohelet it betrays a secret, here its voice is an omen.
+- 2.35.2d (no verse quoted) [divergence]: the god who begets "all beings" from within the waters, against Gen 1's waters
+  before creation.
+
+### Proposals for the shared renderings
+- **§5.6 (Book 2):** the offices in the ablative as written (`מכהונת־X`); add *ā́gnīdhra* `כהונת־מצית־אַגְנִי`, *brā́hmaṇa*
+  (n.) `כהונת־הנוסח`; the 2.37 refrain `מכהונת־X – את הסוֹמָה, נותן־הנכסים, שתה עם העונות!` (a candidate formula,
+  1–3d); *svā́hā* / *váṣaṭ* `סְוָאהָא` / `וַשַׁט`; *nivíd* `הכרזה`; *āvŕ̥t* `תור`.
+- **New recurring words:** *śakuní* `צִפּוֹר`, *śakúnti* `צִפּוֹרִית`, *sumaṅgála* `טוב־הבשורה`, *abhibhā́* `עין־רעה`;
+  *sāmagā́* `שר־הנעימה`; *anidhmá* `בלא עצים`; *āmá* `לא־אפוי`, *pakvá* `אפוי`; *jánana* `מוליד`; *gŕ̥dhra* `עיט`;
+  *yamá* (common noun) `תאום`; *mókī* `המשחררת`; *śákman* `מלאכה`; *dhánvan* `מדבר`; *ápya* "watery" `מימי`;
+  the superlative pattern `X שב־X־ים` for *-tama* of a noun (2.41.16, as part 4's `הרופא שברופאים`).
+- **Names (files only):** the Daśagvas `הדַּשַׁגְוָה` (2.34.12a); *cakravāká* `ברווז־צַ'קְרַוָואקָה`; the meters
+  `גָאיַטְרִי`, `טְרִשְׁטֻבְּה` in a line (2.43.1d).
+- **§3.1:** the Apāṃ Napāt regex (` apam napat`) does not fire on the sandhi forms *nápād* (2.35.1c, 2c, 7c, 9a, 10b,
+  13c) nor on the inverted *náptur apā́m* (11b); a regex ` apam napa[td]` would check them. Mārtāṇḍa's row could note
+  RV 2.38.8c.
+- **No pre-set row revised.**
+
+### Lessons for the guidelines
+- **A name escape is matched by the word, not the phrase:** the `[היתר שער: …]` of a gate must name the token the gate
+  reports (`הנחשים`, not `נחשים` and not the whole compound); the verifier's message gives it.
+- **The pāda-wise lemma check catches swapped segments that the line hides:** a פירוק segment out of the source's order
+  (2.38.10a) left the Hebrew line right but mapped two lemmas to each other's Hebrew in `lexmap` – run the
+  lemma → Hebrew comparison before the build, not only the pāda check.
+
 ## Parallels index

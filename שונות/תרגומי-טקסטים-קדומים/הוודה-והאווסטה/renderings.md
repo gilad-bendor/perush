@@ -127,7 +127,7 @@ rendered).
 | Sarasvant (RV 7) | ` sarasvan` | `סַרַסְוַנְט` |  | Sarasvatī's male counterpart (7.96) |
 | Vaiśvānara (RV 7) | ` vaisvanar` | `וַאישְׁוָנָרָה` |  | "belonging to all men", Agni's epithet, transliterated |
 | Jātavedas (RV 7) | ` jatavedas` | `יודע־הנולדים` |  | Agni's epithet, translated (precedent RV 10.16) |
-| Apāṃ Napāt (RV 7) | ` apam napat` | `נכד המים` |  | the fire in the waters, translated (7.34–35, 47) |
+| Apāṃ Napāt (RV 7) | ` apam napa[td]` | `נכד המים` |  | the fire in the waters, translated (7.34–35, 47) |
 | Mitra (RV 7) | ` mitr(?:a\|ah\|o\|am\|asya\|aya\|ena\|e\|au\|as\|ayoh)\b` | `מִיטְרָה` | ★ | alone (the god); the common noun *mitrá* "ally" takes `[היתר שם: …]` (part 1) |
 | Bhāratī (RV 7) | ` bharati` | `בְּהָארַטִי` |  | the goddess of the Āprī hymns (7.2.8) |
 | Nahus (RV 7) | ` nahus` | `נַהוּשׁ` |  | an ancestral people / king (7.6.5) |
@@ -699,3 +699,6 @@ Hebrew):
 - **Binding:** the part's Decisions and Proposals (`9-ריגוודה-ספר-ב/project.md`, part 4). The 2.25 refrain `כל מי שבְּרַהְמַנַסְפַּתִי עושה (אותו) לשותף־הרתימה שלו.`; the closing 2.27.17abc = 2.28.11abc = 2.29.7abc; 2.32.6d (= 2.41.17d) `צאצאים, אֵלָה, הקצי לנו!`. *raśanā́* `רסן` (RV 10.18.14d; *pā́śa* `חבל`, *dā́man* `רצועה`); *abhí* √*kṣam* `היה מתון`; Rudra: `הרופא שברופאים`, √*krudh* `הקציף`, *hetí* `קליע`, *áva* √*tan* `הרפה`; Indrāṇī `אשת אִינְדְּרָה`.
 - For the consistency pass: √*ci* 2 `תבע` / Book 7 `מענישים`; √*śās* `ייסר` / `כוון`; √*vyadh* `נקב` / `שהושלך`; *khā́* `מקור` / *khá* `פתח`; *vásman* / *yóni* `קן`.
 - Scratch-generator trap (translators 2, 4): a grammar note with `("…")` inside a פירוק segment is read by `lexmap` as the Hebrew – write such notes with `:` and commas.
+
+### 11.27 RV 2.34–2.43 (Book 2, translator 5 = part 5; merged 2026-11-14)
+- **Binding:** the part's Decisions and Proposals (`9-ריגוודה-ספר-ב/project.md`, part 5). The season-cups 2.36–37: the offices in the ablative (`מכהונת־הקריאה` …; new `מכהונת־מצית־אַגְנִי`, the neuter `מכהונת־הנוסח`), the refrain `… שתה עם העונות!`; the superlative of a class `האם שבאמהות, הנהר שבנהרות, האֵלָה שבאֵלוֹת` (2.41.16, as 2.33's `הרופא שברופאים`); *śakuní* `צִפּוֹר`, *śakúnti* `צִפּוֹרִית`, *sumaṅgála* `טוב־הבשורה`, *udgātár* `כוהן־הזמרה`. The §3.1 Apāṃ Napāt regex now takes the sandhi form *nápād* (` apam napa[td]`).
