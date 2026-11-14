@@ -781,6 +781,14 @@ table (*gašru* `כַּבִּיר`, *ṭēmu* `טַעַם`, *ṣīt pî* `מוֹ
 `נִרְפָּה`; Dagan `דָּגָן` ★ (Ugarit and the school canon; Lipit-Ištar's `דָּגַן` is the outlier – left for the lead).
 **Split left for the lead:** *bukru* `צֶאֱצָא` (Enūma eliš's precedent) against the Cuthaean Legend's *perʾu* `צֶאֱצָא`.
 Tool: the `טוב` gate anchored at word ends (it read `טובל`); `ארר` licensed by *arāru* (RESERVED_R8).
+#### 13.7.2 Part AN2 (SB II–III), 2026-11-14
+`8-אפוס-אנזו/project--AN2.md`'s proposals accepted as written: Anu's promise copied to Ninurta (II 24–27, 122–125,
+144–147); the battle chains (Mami's orders II.17–27 = Ea's counsel 115–125 = Šarur's delivery 137–147; the failed shot
+59–69 = 75–85 = 92–102; Ea's second counsel 107–114 = 129–136, done in III.9–12) bind in their strings. Decisions:
+*tāhāzu* `מַעֲרָכָה` (`מלחמה` stays *anuntu*'s); III.b+133 follows eBL's *nebû*; the lemma slips followed by form
+(II.1, 36, 61, III.25) recorded in the project. **Split left for the lead:** *šanû* "repeat, change" = `שִׁנָּה`
+(the cognate, here) against §0.3's *nakāru* = `שִׁנָּה` (the Sumerian *kur₂* rule). Tool: the `ברך` gate anchored
+(`בברכיך` "your knees").
 
 
 ## Changelog
