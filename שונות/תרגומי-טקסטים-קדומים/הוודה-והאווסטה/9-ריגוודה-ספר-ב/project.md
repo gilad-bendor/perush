@@ -230,4 +230,175 @@ intros corrected; `build RV2.1-10`, `verify RV2.1-10 --strict`: no problems; `ch
   `נבלוט` 2.2.10b "stand out", Jamison's double readings) beside Book 7's `הבחין` / `נגלה`; a consistency pass may want
   to fold `נבלוט` into `נגלה`.
 
+## RV2.11–2.16 (part 2: the Indra hymns; translator 2, Round 8 run 3)
+
+### Scope
+RV 2.11–2.16, 320 pādas: 2.11 (84; triṣṭubh in 10-syllable (virāj) pādas, the first Indra hymn, with the Indra closing stanza 21), 2.12 (60;
+"he, o peoples, is Indra", F11 in 1–14d), 2.13 (52; jagatī + a triṣṭubh closing stanza; the shifting refrain *sā́sy
+ukthyàḥ*), 2.14 (48; "o Adhvaryus"), 2.15 (40; F10 in 2–9d), 2.16 (36; the bull hymn). Six annotated files, six intros,
+built (`build RV2.11-16`); `verify RV2.11-16 --strict`: no problems; `check_bible_quotes.py` on all my files (annotated,
+intros, generated): 0 problems.
+
+### Sources consulted
+The Zurich text and morphology (`data`); `freq RV2.11-16`, `lexmap` (every lemma of the part, by a scratch workbook that
+prints each word's Zurich lemma with its Hebrew so far), `grep --all`; Grassmann (`gra`) for *paurá*, *dhamáni*, *aśúṣa*,
+*suprāvyà*; after each hymn `tr` (Griffith, Grassmann, Geldner, Elizarenkova, Renou) and Jamison's commentary on II.11–16
+(with her complete revised translations of II.11 and II.13). Adopted from Jamison (attributed in the lines' bullets):
+2.11.3a *cākán* as 2nd person; 2.11.5c the serpent "who had blocked (√*stambh*) the waters and heaven"; 2.11.8c the
+singers (Aṅgirases) as subject; 2.11.11c *kukṣí* "cheeks"; 2.11.12a "abided in you"; 2.11.15c the supplied
+"(strengthen)"; 2.11.20a the genitive with *vāvr̥dhāná*; 2.12.4a *cyávana* "stirring deed"; 2.12.5b existential
+"he is not" (and 15b as its answer); 2.12.8 *krándasī* "the two war-cries" (Thieme), *nā́nā* "every man for himself";
+2.12.15a *dudhrá* nominative; 2.13.1–4 the soma reading of the opening stanzas and her whole construal of 8–10, 12
+(Sarapas a river, the blind and the lame "made famed"); 2.14.3cd *bharata* supplied, *jū́ḥ* "fast mares"; 2.14.7d
+"wrenched down"; 2.15.3a "fixed apart" (√*mi*, not √*mā*), 3c *vŕ̥thā* "at (their) will", 4a "abductors", 7b–c the
+subject switch to the shunned, the lame and the blind, 9a "strewn with sleep", 9c *rambhín* the old man with a staff;
+2.16.7 the poet's speech as boat and chariot, 7d √*sic* "scoop (from a well)", 8 Indra as cow, the worshippers as bulls.
+From Geldner: 2.16.4c Indra the subject of *yajasva*. From Grassmann: 2.11.11d *paurá* "the filler (of the belly)".
+
+### Decisions
+- **The formulas as fixed:** F11 `הוא – אנשים! – אִינְדְּרָה.` at the end of 2.12.1–14d, after a comma
+  (`בגדולת הגבריות, הוא – אנשים! – אִינְדְּרָה.`); F10 `בהתבסמות הסוֹמָה את אלה עשה אִינְדְּרָה.` (2.15.2–9d); F9 in
+  2.11.21d, 2.13.13d, 2.14.12d, 2.15.10d, 2.16.9d. 2.12.15d (*suvī́rāso vidátham ā́ vadema*) is a variant, not F9:
+  `רבי־גיבורים, נדבר נא אל המועצה.` (F9's words, *vidátham ā́* "to the assembly").
+- **The Indra closing stanza (first copy, 2.11.21abc; copied in 2.15.10abc, 2.16.9abc; part 3 copies it in
+  2.17–2.20.9):** `עתה היא, את מבחרך, אל המהלל` / `תחלוב נא, אִינְדְּרָה, שכר־הכוהנים, בעלת־השפע;` / `השתדל למען
+  המשבחים; אל יחלוף על פנינו בְּהַגָה!` – *práti* `אל` (with *jaritré*), *vára* `מבחר`, *duhīyát* (opt. middle)
+  `תחלוב נא`, *dákṣiṇā* `שכר־הכוהנים`, *maghónī* `בעלת־השפע`, √*śak* desid. `השתדל` (Book 7), *mā́ áti dhak*
+  `אל יחלוף על פנינו` (√*dagh* "reach" + *áti*), *bhága* the god `בְּהַגָה` (the §3.1 name: "Portion / fortune", the note
+  gives Jamison's "fortune"; a common noun `חלק` would need a name escape in six hymns).
+- **The 2.13 refrain** *sá asi ukthyàḥ* `אתה הוא הראוי־לאמירה` (as 2.12.15b *sá kílāsi satyáḥ* `אתה הוא, באמת,
+  האמיתי`: *sá* + 2nd person = `אתה הוא`); 2.13.2–4d `אשר את אלה עשית ראשון – אתה הוא הראוי־לאמירה.` (*tā́* `את אלה`,
+  as F10); 1d neuter `זה – ראוי־לאמירה`. 2.13.13abc = 2.14.12abc identical.
+- **Copies:** 2.11.2b = 7.21.3b `הרבים, שהוקפו בידי הנחש, גיבור;` and 2.15.1c = 1.32.3b `בשלושת הגביעים שתה מן
+  הסחוט.` copied exactly; 2.12.12b follows 1.32.12d (3rd person); 2.15.1b *vocam* `אכריז` as 1.32.1a; 2.11.5d F2 in the
+  2nd person `הרגת את הנחש` with `[סטייה מן הנוסחה]`.
+- **Indra's vocabulary as Book 7:** *vájra* `וַגְ'רָה`, *hárī* `שני הצהבהבים`, *śū́ra* / *vīrá* `גיבור`, *vŕ̥ṣan* /
+  *vr̥ṣabhá* `פר`, √*mad* / *máda* `התבסם` / `התבסמות`, √*mand* `ביסם`, √*su* `סחט`, *ándhas* `עסיס`, *tríkadruka*
+  `שלושת הגביעים`, *suśiprá* `יפה־השפתיים`, *śatákratu* `בעל־מאה־הרצונות`, *vájrabāhu* / *vájrahasta* `שהוגרה
+  בזרועו` / `בידו`, *śúṣma* `סער`, *śávas* `עצמה`, *ójas* `חוסן`, *samád* `התגוששות`, √*tr̥̄* `עבר (על)`, *dásyu*
+  `דַּסְיוּ`, *dāsá* `דָּאסָה`, *ā́rya* `אָרְיָה`, *arí* `אָרִי`, *púr* `מבצר`, *yajatá* `הראוי לזבח`, *bhojá* `המפרנס`,
+  *sádam* `בכל עת`, *tr̥pát* `עד שׂבעה`, *svápna* `שינה` (7.86.6d), *pátnī* `רעיה`.
+- **New (recurring in Books 2 and later):** *valá* `וַלָה` (the cave; 2.11.20d, 12.3b, 14.3b, 15.8a); *ukthyà*
+  `רָאוּי־לָאֲמִירָה` met (§5.6); *mandín* `מבסם`; *mandasāná* `מתבסם`; *ápas* `מפעל`; *adhvaryú* voc. pl.
+  `כוהני־המעשה`; *dhúni* `שואג` (Book 7) and Dhuni the demon `דְּהוּנִי` (2.15.9a); *apadhā́* `הסרה (המכסה)`;
+  *saṃvŕ̥j* `הגורף`; *cyávana* `מעשה מטלטל`; *acyutacyút* `מזיז את הבלתי־מזוז`; *śvaghnín* `"הורג־הכלב"` (the gambler);
+  *lakṣá* `קופה`; *víj* `הימור`; *krándas* `זעקה`; *nā́nā* `איש־איש לחוד`; *dudhrá* `עקשן`; *grā́ma* `מחנה` (not
+  `כפר`: the root כפר is reserved); *pradíś* "instruction" `הנחיה` (Book 7's *pradíś* `הכיוונים` is the spatial sense);
+  *raśmí* `מיתר` (Book 7) in *saptáraśmi* `בעל־שבעת־המיתרים`; *jánitrī* `יולדת`; *pīyū́ṣa* `חלב־הבכורה`; *āhanás*
+  `תאוותנית`; *śevadhí* `מטמון` (`אוצר` is *rátna*'s); *dhautí* `זרם`; *dā́na* "division" `חלוקה (?)` (2.13.7b),
+  *dāná* "gift" `מתן` (7.18.22c); *kr̥tnú* `מצליח`; *rodhaná* `מעצור`; *jātū́ṣṭhira* `יציב־מלידה`; *parāvŕ̥j*
+  `מנודה`; *anákṣ* `חסר־העיניים`; *śroṇá* `צולע`; *andhá* `עיוור`; *apagohá* `מחבוא`; *kanī́* `עלמה`; *vŕ̥thā* `כאוות
+  נפשם`; *avaṃśá* `חסר־קורות` (Book 7); *pravoḷhár* `חוטף`; *asnātár* `שאינו שוחה`; *údañc* `פונה מעלה`; *ánas*
+  `עגלה`; √*piṣ* `מעך`; *rambhín* `בעל־המקל`; *aurṇavābhá* `בן־העכביש`; *tvāṣṭrá* `(בן) תְּוַשְׁטָר`; *sākhyá*
+  `חברות`; *dhamáni* `נשיפה` (`תרועה` is *ráva*'s); *svārá* `קול`; *kukṣí* `לחי`; *paurá* `הממלא`; *pastyā̀vant*
+  `בעל־המדור` (`מושב` is *sádman*'s); *ágraṇīti* `המנה הראשונה`; *pŕ̥t* `מאבק` (*pŕ̥tanā* keeps `קרב`); *drahyát*
+  `בחוזקה`; *aśúṣa* `זללן`; *vyàṃsa* `פרוש־הכתפיים` (1.32.5a); *ū́rdara* `אסם`; *gábhastipūta* `המטוהר־בידיים`;
+  *madirá* `מרנין`; *hástya* `שביד`; *kāmín* `חושק`; *tadvaśá* `החפץ בו`; *jaṭhára* `בטן`; *indriyá* (Indra's power)
+  `הכוח האִינְדְּרִי` (the Kaṭha's *indriya* "senses" is the later sense); *kṣoṇī́* `שתי הארצות`; *vr̥ṣabhā́nna*
+  `אוכל־הפרים`; *sambādhá* `לחץ`; *jyéṣṭhatama* `הבכיר ביותר`; *yójana* `יוֹגַ'נָה` (MBh 3.185.17a).
+- **Sense splits (recorded in the lines):** √*sphur* `בעט` "kick" (2.11.9b, 12.12c; Book 7 `מקפץ`); √*rū* intens.
+  `נהם שוב ושוב` (2.11.10a; Book 7 101.1d `שואג ושואג` collides with √*krand* `שאג`); √*vr̥j* *ní* `כפף` "wrench down"
+  (2.14.7d; Book 7 `שזר` "twist (ropes)"); √*sic* `נשאב` "scoop from a well" (2.16.7d; `יצק` 2.14.1b); *dā́na*
+  "division" (2.13.7b, `?`); *sámbhr̥ta* "gathered" `נאספו` (2.16.2b, as RV 10.90.8b).
+- **Collisions avoided or moved in pass (b):** √*puṣ* `פרח` (2.12.4d `הפורחים`; *puṣṭí* `פריחה` part 1), because
+  √*vakṣ* has `שגשג` (Book 7, part 1, 2.16.1c); *puṣpín* therefore `מלבלב` (2.13.7a); *viśvárūpa* `בעל כל הצורות`
+  (RV 10.10.5b, without hyphens; 2.11.19c) beside *viśvápsnya* `בעל־כל־הצורות` (7.71.4d; 2.13.2b) – an inherited
+  near-collision, followed both ways; *yajatá* without the hyphen (precedent).
+- **Escapes:** `[היתר שם]` for *mitrám* "alliance" `רֵעוּת` (2.11.14a), *bhárati* "bears" (2.16.2d, not Bhāratī),
+  *yāmi* "I go" (2.16.7b, not Yamī); `[היתר שער: הטובה]` for *vasavyà* (2.13.13b = 2.14.12b, as 2.9.5a); `[סטייה מן
+  הנוסחה]` 2.11.5d.
+- **Gates respected:** `רוּחַ` only for *vāyú* / *vā́ta* (2.11.3d, 14d; 2.14.3c); `אדמה` only *bhū́mi*; `נחש` only
+  *áhi* (and *ahihán*); `עוון` for *énas* (2.12.10a), never a word of the root חטא, `פשע`, `סליחה` (§7.4).
+
+### Open decisions for the user
+- 2.12.5b *naíṣó asti*: `"אין הוא"` (existential, with Jamison and all standard translations) – a reader may hear
+  "he is not (here)"; the note says which.
+- 2.11.21c / 2.15.10c / 2.16.9c *bhága*: the god `בְּהַגָה` (Geldner "das Glück", Jamison "fortune"). Choosing the common
+  noun `חלק` would need a name escape in each of the seven copies (parts 2–3).
+- 2.13.7b *dā́na* `בחלוקה (?)` (Jamison "in their reaping ... in their division" against Zurich's *dā́na* "gift"); 2.13.8c
+  *ūrjáyantī* as a river ("המשביע"), after Jamison; 2.13.12a Sarapas a river (Brereton).
+- 2.12.15a *dudhrá* nominative ("headstrong", Geldner, Jamison's preference) or locative (Renou, the published tr.).
+
+### Progress log
+- Drafted hymn by hymn from a compact per-word draft (a scratch generator decodes the Zurich tags into the פירוק forms;
+  translator 1's tool, reused), each filled, verified and built before the next; `tr` and Jamison after each draft; the
+  readings above adopted with attribution; intros written.
+- Pass (a) fidelity: 2.13.6c *sá* + 2nd person `(אתה) הוא`; 2.15.9c *vivide* read as 3rd sg. (Zurich: 1st); 2.13.9a
+  *ā́* accounted for; 2.12.10 Griffith's and Geldner's "sinners", "pardons", "vergibt" noted as a rank-3 false echo
+  (the line says `אינו מוותר`); 2.15.1–7 the subject switch in 7b–c (Jamison).
+- Pass (b) consistency: a lemma → Hebrew comparison of every word of the part with all other files (`cons.py` on
+  `lexmap_dict`) and a check that every פירוק Hebrew stands in its own `>` line (no word moved across a pāda end);
+  aligned: *bhojá* `המפרנס` (2.14.10b), *sádam* `בכל עת` (2.14.1c), *yajatá* (2.14.10d, 2.16.4a), *tr̥pát* (2.11.15b),
+  *dāná* `מתן` (2.13.13a = 2.14.12a), *pátnī* `רעיה` (2.16.8d), √*puṣ* / *puṣpín* (above), *pastyā̀vant* (above),
+  *viśvárūpa* (above).
+- Pass (c) Hebrew: the generated files read through; `טוֹב` vocalized in 2.13.13a = 2.14.12a (the vocative); `הָאֵל` /
+  `הָאֵלִים` vocalized (2.12.1b, 2.13.5d).
+- `build RV2.11-16`; `verify RV2.11-16 --strict`: 0 problems; `check_bible_quotes.py`: 0 problems.
+
+### The text on its own terms
+- **The riddle and its answer (2.12):** each stanza is a chain of "who …" clauses – the deeds – and the refrain names the
+  doer to the crowd: "he, o peoples, is Indra"; the hymn is a public proof by deeds, ending in "you are truly real"
+  (15b) against those who ask "where is he?" and say "he is not" (5ab). Doubt about a god's existence is voiced inside the
+  liturgy itself, and answered by the list of his works and an order to the audience: "put trust in him" (5d).
+- **The god who grows on praise (2.11.1–4, 15d; 2.12.14c):** the hymns, the oblations and the soma "make Indra great";
+  the priests "place the mace in his arms"; he "made heaven great with lofty chants" – the word strengthens god and world.
+- **Soma is Indra's strength (2.15's refrain):** every deed was done "in the exhilaration of soma"; the drink is poured,
+  filtered "by the hands", fills his cheeks, is shaken in his beard (2.11.17c) – a physical, bodily god.
+- **The ordered cosmos is Indra's work:** heaven propped up without beams (2.15.2a), the earth steadied, the flying
+  mountains set down (2.11.7–8, 2.12.2), the river beds fixed and drilled (2.15.3), the midspace measured (2.12.2c).
+- **The cosmic war:** Vṛtra the "obstruction" who held the waters, the Vala cave of the cows (opened with the singing
+  Aṅgirases), Śambara's forts, Dānu, Rauhiṇa climbing to heaven, the demons of sleep (2.15.9).
+- **The protector of the weak (2.12.6, 2.13.12, 2.15.5, 7):** the feeble, the starving, the shunned child of a hidden
+  birth, the lame and the blind "made famed", the non-swimmers carried across the river, the old man with a staff who
+  finds gold.
+- **Human and divine society:** the Ārya and the Dāsa / Dasyu, the "stranger" (*arí*) whose wealth Indra takes like a
+  gambler sweeping the pot (2.12.4–5, 2.13.10), the two armies who both call him, "every man for himself" (2.12.8).
+- **The priests at work (2.14):** the Adhvaryus measure, pour, filter and "fill Indra like a granary with barley"; the
+  poet "knows" a treasure is laid aside for him (2.14.10c).
+- **The bull and the cow (2.16):** everything is "bull" – god, soma, stones, priests, weapons – and then the god is a cow
+  returning to her calf, the worshippers the bulls who unite with his favours "as with their wives".
+- **The economy of the gift:** the closing stanza asks the *dákṣiṇā*, a cow "rich in bounty", to "yield as milk" Indra's
+  boon for the singer (2.11.21).
+
+### Key parallels
+- 2.12.5a – Ps 42:11 `אַיֵּה אֱלֹהֶיךָ` [divergence]: "where is he?" asked of an unseen god – in the psalm the enemies'
+  taunt, here an open question answered by deeds; a shared motif of cultures that never met.
+- 2.12.5b – Ps 14:1 `אֵין אֱלֹהִים`; Jer 5:12 `לוֹא הוּא` [divergence]: the denial "there is none / not he" – in the Bible
+  the fool's moral denial, here human doubt about a god no one sees.
+- 2.12.5d – 2 Chr 20:20 `הַאֲמִינוּ בַּיהוָה אֱלֹהֵיכֶם` [equivalent]: a call to the crowd to trust the god (*śrád*
+  √*dhā*); content, not words.
+- 2.12.15b – Jer 10:10 `וַיהוָה אֱלֹהִים אֱמֶת` [equivalent]: the "real / true" god against the deniers (*satyá* from √*as*
+  "be"; `אֱמֶת` from "firm").
+- 2.12.2d – Job 9:8 `נֹטֶה שָׁמַיִם לְבַדּוֹ` [divergence]: the god who fixes heaven and earth; here a builder's work of
+  propping and measuring.
+- 2.13.12d – Isa 35:5–6 (the blind, the lame) [divergence]: the god and the blind and the lame; Indra "makes them famed",
+  he does not heal.
+- 2.15.5b – Exod 14:29 [divergence]: the god halts a river and carries his protégés across; no pursuing enemy, no
+  divided sea.
+
+### Proposals for the shared renderings
+- **§3.1 names (RV 2) – a check worth having:** Vala `וַלָה` (regex ` val(?:a|am|asya|ena|at|e)\b`: Book 2–3 Indra hymns,
+  2.11.20d, 2.12.3b, 2.14.3b, 2.15.8a, and Brahmaṇaspati 2.23–24); Trita `טְרִיטָה` (` trit(?:a|ah|asya|aya)\b`;
+  2.11.19d, 20a). Files only: Arbuda `אַרְבּוּדָה`, Rauhiṇa `רָאוּהִינָה`, Dṛbhīka `דְּרִבְּהִיקָה`, Uraṇa `אוּרַנָה`, Aśna
+  `אַשְׁנָה` ("Devourer"), Pipru `פִּיפְּרוּ`, Namuci `נַמוּצִ'י` (Book 7), Rudhikrā `רוּדְהִיקְרָא`, Varcin `וַרְצִין`
+  (Book 7's spelling, without geresh), Kutsa / Āyu / Atithigva (Book 7 / part 1), Cumuri `צוּמוּרִי` (Book 7), Dhuni
+  `דְּהוּנִי`, Nṛmara's son `בן־נְרִמַרָה`, Pṛkṣa `פְּרִקְשָׁה`, Dāsaveśa `דָּאסַוֵשָׁה`, Sarapas `סַרַפַּס`, Turvīti
+  `טוּרְוִיטִי`, Vayya `וַיְּיָה`.
+- **New recurring words** (see Decisions): *mandín* `מבסם`, *mandasāná* `מתבסם`, *ukthyà* confirmed, *valá*, *apadhā́*,
+  *cyávana* "deed", *pradíś* "instruction" `הנחיה` (a sense split from Book 7's `הכיוונים`), *grā́ma* `מחנה`,
+  *śevadhí* `מטמון`, *pŕ̥t* `מאבק`, *dhamáni* `נשיפה`, *indriyá* (RV) `הכוח האִינְדְּרִי`.
+- **For the round's consistency pass:** *viśvárūpa* `בעל כל הצורות` / *viśvápsnya* `בעל־כל־הצורות` (one string, two
+  lemmas, inherited from RV 10.10 and 7.71); *mandín* `המבסם` / *mádya* `המבסם` (7.92.1c) – one Hebrew for two words of
+  the √*mad* / √*mand* family; √*rū* intens. `נהם` against 7.101.1d `שואג ושואג`; √*sphur* `בעט` against Book 7 `מקפץ`.
+- **No pre-set row revised.** F9, F10, F11 confirmed in real lines; §5.6's *dákṣiṇā* `שכר־הכוהנים`, *maghónī*
+  `בעלת־השפע`, *ukthyà* `רָאוּי־לָאֲמִירָה` met.
+
+### Lessons for the guidelines
+- **Reuse the previous translator's scratch tools inside one project:** translator 1's generator (`gen.py`: a compact
+  `meaning=Hebrew` draft per Zurich word → the annotated format) and workbook (each word with its lemma and its Hebrew so
+  far) made 320 pādas a matter of translation, not formatting; one trap: a `;` inside a grammar override splits the
+  segment (2.15.10c) – write overrides with commas.
+- **The name regexes catch verb forms:** *bhárati* "bears" (Bhāratī), *yāmi* "I go" (Yamī) – the verifier's escape is
+  right, but a regex anchored to the noun endings would spare the escapes.
+
 ## Parallels index
