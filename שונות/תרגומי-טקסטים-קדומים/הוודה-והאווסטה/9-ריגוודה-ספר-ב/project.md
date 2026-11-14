@@ -401,4 +401,60 @@ From Geldner: 2.16.4c Indra the subject of *yajasva*. From Grassmann: 2.11.11d *
 - **The name regexes catch verb forms:** *bhárati* "bears" (Bhāratī), *yāmi* "I go" (Yamī) – the verifier's escape is
   right, but a regex anchored to the noun endings would spare the escapes.
 
+### Review (reviewer 2)
+Independent fidelity review of all 320 pādas against `data` (Zurich text and morphology), `tr` and Jamison (her revised
+translations of II.11 and II.13 and the commentary on II.11–16); `lexmap` for the part's lemmas against Book 7 (a
+script flagged every part-2 Hebrew sharing no stem with Book 7's); a script re-checked that every פירוק Hebrew stands in
+its own `>` line (no word moved across a pāda end; the 8 hits are discontinuous renderings inside one line). **9 lines
+fixed** (with their פירוק and notes), 5 intros and 4 annotated heads corrected; `build RV2.11-16`, `verify RV2.11-16
+--strict`: no problems, 0 repeated-line differences; `check_bible_quotes.py`: 0.
+
+| Label | Before | After | Why |
+|---|---|---|---|
+| 2.11.3d | `זורמות קדימה, ולרוּחַ, כמו הנאות.` | `זורמות קדימה – כמו הנאות לרוּחַ.` | the `ו` is not in the source; *ná* takes *vāyáve* and *śubhrā́ḥ* together: "like the gleaming (streams) to Vāyu" (Geldner, Renou, Elizarenkova) |
+| 2.11.13a | `אלה (שלך)` | `אלה שלך` | *te* is in the source: not an addition (as reviewer 1, 2.4.5a) |
+| 2.11.13d, 14a (×2), 14b | `העניק` | `הענק` | *rāsi* is an imperative; plene `העניק` reads "he granted"; Book 7's imperative is `הענק` (7.16.4d) |
+| 2.12.15b | `קורע (ומוציא)` | `מבקיע שוב ושוב` | √*dr̥* intensive = Book 7's `הבקיע שוב ושוב` (7.18.13b, 7.55.4ab): a split against Book 7, and the intensive was unmarked |
+| 2.14.3d | `כמו את המהירות` | `כמו את (הסוסות) המהירות` | `המהירות` reads "the speed"; Jamison's "fast mares" needs the noun supplied |
+| 2.14.10c | `זה (בשבילי)` | `זה בשבילי` | *me* is in the source |
+| 2.16.7a | `קדימה אליך – …` | `(אני שולח) קדימה אליך – …` | the pāda has no verb (*prá* alone) but an object (`את (המלה)`); supplied as Elizarenkova "посылаю", Renou "(envoie)" |
+
+- **Intros and heads:** 2.11 "the priests fill his cheeks with soma" → the soma fills them (11c); "killed the Dāsa" → split
+  (2d, *ávābhinat*); "calmed the earth and the mountain" → the earth spread, the mountain came to rest (7cd: no agent);
+  "trembled at the sound of the vajra" → before the vajra (9d); "the next six Indra hymns" → 2.15–20; `כפרה` ("heifer",
+  but read as "atonement", the reserved root כפר) → `פרה` (also the 21b note). 2.12 "killed Śambara … and Rauhiṇa" →
+  found Śambara (11b *anvávindat*), killed Dānu, kicked Rauhiṇa (12c) – intro and head. 2.13 "one priest recites, another
+  offers", "the fire eats" → the line's wording, Jamison's identifications marked as hers; `כפת` → `קשר` (9c). 2.14
+  Arbuda "killed" → pressed down (4c) – intro and head. 2.15 "smashed" → `מעך` (6b), "raised the shunned one" → the
+  shunned one rose (7b, the subject switch the lines follow), "the demons" Cumuri and Dhuni → the names only (the lines
+  do not say "demons").
+- **Checked and kept:** F11 (2.12.1–14d), F10 (2.15.2–9d), F9 and the Indra closing stanza (2.11.21abc = 2.15.10abc =
+  2.16.9abc) character for character; 2.11.2b = 7.21.3b, 2.15.1c = 1.32.3b; 2.13.2–4d, 2.13.13abc = 2.14.12abc. The
+  narrated injunctives (2.11.2a *sr̥jáḥ*, 8d, 20d; 2.13.9c; 2.15.2c, 7c, 8abc) are past in a past frame, as renderings
+  §4 allows; the present injunctive 2.13.2b and the subjunctives (2.11.10b, 14d; 2.14.8ab; 2.16.7cd) and optatives (`נא`)
+  are right; 2.15.1b *vocam* `אכריז` as 1.32.1a. The 2.12 notes call 5a (Ps 42), 5b (Ps 14, Jer 5), 5d (2 Chr 20) and
+  15b (Jer 10) shared motifs, not sources, and set out the difference each time (the biblical denier is a moral fool;
+  here a doubter answered by deeds); the 10ab note keeps `עוון` and names the rank-3 "sinners / pardons" as false echoes.
+  No reserved word in lines, notes or intros after the `כפרה` fix.
+- **Rulings on the open questions (for the coordinator):**
+  - **2.11.21abc (the closing stanza):** kept unchanged, so the seven copies need no change. Its grammar is Jamison's
+    ("yield your boon for the singer as its milk": *te* with *váram*, *práti* with the verb and the dative), a defensible
+    construal; Geldner, Renou and Elizarenkova take *te* with *dákṣiṇā* and *práti váram* as "according to wish". The
+    21a note now gives the alternative. `תחלוב` for the middle "yield milk" follows Book 7 (`חולבות` 7.41.7c). *bhága* as
+    the god `בְּהַגָה`: kept (a common noun would need a name escape in every copy). *mā́ áti dhak* `אל יחלוף` against
+    7.56.21b `נפגר` (*paścā́ √dagh* "fall behind") is a justified sense split.
+  - **2.12.5b `"אין הוא"`:** keep. *ná … asti* in a main clause is existential (Jamison; Renou "il n'existe pas"; RV
+    8.100.3 *néndro astī́ti*); `איננו` would lean to "he is not here", the reading the poet's own answer (15b *satyáḥ*
+    "real") rules out.
+  - **2.13.7b *dā́na* `בחלוקה (?)`:** keep, with the `?`. Zurich's "gift" makes no sense in the pāda; Jamison reads both
+    "reaping" (√*dā* 2, with the plants) and "division" (√*dā* 4, with the streams, as JPB), and *ví … ádhārayaḥ* with
+    the streams favours "division"; the note lists both.
+  - **2.12.15a *dudhrá* nominative `עקשן`:** keep. The Padapāṭha, Geldner and Jamison's stated preference; *dudhrá*
+    elsewhere qualifies Indra (I.56.3, VI.22.4); the locative (Renou, the published JPB) stays in the note.
+  - **For the consistency pass:** √*puṣ* `פרח` (2.12.4d) / *puṣṭí* `פריחה` (part 1) against Book 7's √*puṣ* `שגשג`
+    (7.32.9c, 16b; 7.56.5b; 7.57.5d), which Book 7 also gave √*vakṣ* (7.8.2d): the book-2 split resolves a Book 7
+    collision, but it is a split; one of the two families should move in Book 7 too. 2.11.21a `עתה היא, את מבחרך, אל
+    המהלל` is stiff Hebrew; if the coordinator prefers the majority construal, the change must go into all seven copies at
+    once (2.11, 2.15, 2.16, 2.17–2.20).
+
 ## Parallels index
