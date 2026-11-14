@@ -26,6 +26,7 @@ for three thousand years), the Brāhmaṇas' ritual thinking, and Zoroastrian Ir
 |  |  | RV10.14–18 | the funeral hymns | 288 | Gen 3:19; 5 |
 | 6 | `6-המהמר-והצפרדעים/` | RV10.34, (RV7.103) | the gambler; the frogs (7.103 lives in project 7 since Round 7 and is embedded here) | 96 | (the soul); Ex 7:26–8:11 (the frogs) |
 | 7 | `7-ריגוודה-ספר-ז/` | RV7.1 … RV7.104 | **the Rigveda, Book 7, whole** – the Vasiṣṭha family book (Round 7 run 1) | 3,190 | Varuṇa 7.86–89 (Ps 32, 51; Job 4:19); 7.18 (Judg 5:21); 7.104 (Ps 109, 58) |
+| 9 | `9-ריגוודה-ספר-ב/` | RV2.1 … RV2.43 | **the Rigveda, Book 2, whole** – the Gṛtsamada family book (Round 8 run 3) | 1,694 | 2.12 "where is he?" (Ps 42, 14); Varuṇa 2.28 (Ps 130 [divergence]); Rudra 2.33 (Deut 32:39) |
 | 8 | `8-קטהה-אופנישד/` | KU1, KU2 | **the Kaṭha Upaniṣad, whole** (Round 7 run 3): adhyāya 1 (vallīs 1–3, moved from project 4) and adhyāya 2 (vallīs 4–6) | 146 + 111 | Gen 22 (KU 1); Eccl 12:7, Ps 139 (the self) – in progress |
 
 ## Bases and tools
