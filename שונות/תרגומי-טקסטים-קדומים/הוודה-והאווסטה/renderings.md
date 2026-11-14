@@ -683,3 +683,6 @@ Hebrew):
   `התחנן` in both books; *sūktá* `מזמור` (AB 7.16.9e as Book 7) – *mántra* is now `מנתרה`; *sámbhr̥ta* `מצוידים` (7.73.4b)
   / RV 10.90.8b `נאספה` (another sense: "gathered") / MBh *yukta* `מצויד` (another lemma – a collision for the lead).
 - **The Rigveda reserves** the root חטא, `פשע`, `סליחה`, `וידוי`, `חרון` (§7.4; the gate `RV_RESERVED`, selftest §10).
+
+### 11.23 RV 2.1–2.10 (Book 2, translator 1 = part 1; merged 2026-11-14)
+- **Binding for Books 2 and 7 from now on:** every row of the part's Decisions and Proposals (`9-ריגוודה-ספר-ב/project.md`, part 1). The priests as one family: *néṣṭar* `כוהן־ההנהגה`, *praśāstár* `כוהן־ההדרכה`, *agnídh* `מצית־אַגְנִי`, the neuter offices `כהונת־` + the same noun (*hotrá* `כהונת־הקריאה`; *hótrā* keeps `נסך`: a recorded split). The 2.1 frame `אתה, אַגְנִי, X`. √*añj* `קישט` (never `משח`); *védi* `מזבח` (gate-licensed). Names in the files only: Aṃśa `אַמְשָׁה`, Atri `אַטְרִי`, Pṛśni `פְּרִשְׁנִי`, the Bhṛgus `בני בְּרִגוּ`, Āyu `אָיוּ` (*āyú* adj. `נע`), Puraṃdhi `פּוּרַמְדְהִי`, Iḷā `אִילָה`. *svadhā́* outside the funeral hymns `כוח עצמי` (as RV 10.129); *anuṣvadhám* `לפי הכוח העצמי`; *svā́hākr̥ta* `שנעשה בסְוָאהָא`. F9 confirmed in real lines; no pre-set row revised.
