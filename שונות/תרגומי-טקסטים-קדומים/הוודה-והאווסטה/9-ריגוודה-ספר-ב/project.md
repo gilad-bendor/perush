@@ -188,4 +188,46 @@ had gone out" (Zurich's lemma); 2.5.1c *jénya* "inherited"; 2.5.5c "dearer than
 - The reserved-word gate caught a simile the source does not have (2.2.9c `כפרה`): the gates double as a fidelity check.
 
 
+### Review (reviewer 1)
+Independent fidelity review of all 337 pādas against `data` (Zurich text and morphology), `tr` and Jamison; Book 7's
+7.2 for the Āprī hymn; `lexmap` for the part's lemmas against Book 7. **11 lines fixed** (and their פירוק / notes), 7
+intros corrected; `build RV2.1-10`, `verify RV2.1-10 --strict`: no problems; `check_bible_quotes.py`: 0.
+
+| Label | Before | After | Why |
+|---|---|---|---|
+| 2.2.5d | `הבליט את שתי המחצות, לאורכן` | `נגלה לאורך שתי המחצות` | injunctive in a present stanza; √*cit* intrans. "appear" = Book 7 `נגלה` (7.11.3a); "perceive" left to the note |
+| 2.2.7d | `הברקת` | `הַבְרֵק …!` | injunctive in a run of imperatives (7a *dā́ḥ* `תן`, 7b–c impv.); all of `tr` read an imperative |
+| 2.2.10a | `בסוס דוהר – או (נשיג במבט)` | `או בסוס דוהר (נשיג נא במבט)` | *vā … vā* is "by steed or by formulation": the first `או` belongs to the steed; the supplied verb is optative like *citayema* |
+| 2.3.3a | `שמתפללים אליו, אַגְנִי` | `שמתפללים אליך, אַגְנִי` | *īḷitáḥ* stands with the vocative and the 2nd-sg. impv. of 3b: 3rd person clashed |
+| 2.3.11a | `בחמאה מזוקקת הוא מהודק` | `חמאה מזוקקת מהודקת (בו)` | *ghr̥tám* is nominative, the subject of *mimikṣe* ("ghee clings (to him)": Geldner, Elizarenkova, Renou); √*mikṣ* keeps Book 7's root |
+| 2.4.5a | `(בעיניי)` | `בעיניי` | *me* is in the source: not an addition |
+| 2.4.5c, 6c | `נראה` | `נגלה` | *cikite* / *ciketa* "appeared" (Jamison): Book 7's `נגלה` for √*cit* "appear" |
+| 2.4.6b | `הרעיש` | `מרעיש` | injunctive *svānīt* beside present *bhā́ti* (6a) |
+| 2.5.3b | `יאמר נוסחים` | `אומר נוסחים` | injunctive *vócat* coordinated with *véḥ* `רודף` (present); Jamison makes both main verbs |
+| 2.9.1a | `(משהו) נמצא` | `(משעה ש)נמצא` | Jamison: "once recognized / found" – the hotar himself, not "something" |
+
+- **Intros:** 2.1 "therefore it is equal to them" (a causal link the lines lack) → "and it is equal"; 2.2 "brought it down
+  from the airspace" → "moved it down into the depths of the airspace" (*budhné rájasaḥ* is locative), "the holy word"
+  (root קדש) → "the contest of song"; 2.4 "who make a covenant (`כורתים ברית`) with their settlement" → "who set up
+  an ally for themselves", "like their fathers, the hidden fire" → "in secret (perhaps the hidden fire)"; 2.5 "the
+  seven reins" → "the seven cords" (the line's `מיתרים`), "rejoices when the ghee comes" → "at their coming", "lies
+  in her" → "is in you too" (the line, 8c); 2.6 `שכורת רעות` → `בן־העם, איש־הרעות` (the line); 2.9 "to sing" → "to
+  make the praiser"; 2.10 `שד` → `רקשס` (the line's word).
+- **Checked and kept:** the 2.1 frame (`אתה, אַגְנִי, X` / `אותך, אַגְנִי` / `בך, אַגְנִי`) and every §3.1 name at
+  its first occurrence; F9 in 2.1.16d = 2.2.13d and 2.1.16 = 2.2.13 character for character; 2.3 against 7.2
+  (`קילוס־הגברים`, the doors, `השחר והלילה`, `שלוש האֵלוֹת … מצע העשב הזה`, `התר` / `יתיר נא`, `אדון־היער`,
+  `ימתיק`, `המשקיט`, `סְוָאהָא`); the moods of the part's optatives (`נא`), subjunctives (future) and precatives
+  (2.10.2a, 6a); no word moved across a pāda end (a script compared every פירוק Hebrew with its own `>` line); no
+  reserved or biblical-idiom word in lines, notes or intros. The remaining `lexmap` splits against Book 7 are recorded
+  ones (*yáma* "rein", √*uṣ* / √*dah*, *bhū́man* `אזור` as 7.69 / 7.86) or homonyms folded together (√*mr̥ś* / √*mr̥ṣ*,
+  √*vas* "dwell" / "shine").
+- **Rulings on the open cruxes (for the coordinator):** 2.1.4c *sambhújam* – I agree with the noun `הסעודה המשותפת (?)`:
+  *yásya* "whose" wants a noun predicate, and a 1st-sg. subjunctive in a litany of 2nd-person identifications would be
+  the only "I" of the hymn's body. 2.10.3c *śíriṇā* – keep `באפלה (?)`: the hapax stands beside *aktúnā* "by night"
+  and *áparīvr̥taḥ* "uncovered", a night word fits the pāda; Jamison's "birth canal" stays in the note. 2.8.5a – keep
+  `כמו אצל אַטְרִי` with the Svarbhānu reading in the note only; the line does not depend on it.
+- **For the coordinator:** √*cit* now has three Hebrew in this part by design (`נגלה` "appear", `המבחין` "perceive",
+  `נבלוט` 2.2.10b "stand out", Jamison's double readings) beside Book 7's `הבחין` / `נגלה`; a consistency pass may want
+  to fold `נבלוט` into `נגלה`.
+
 ## Parallels index
