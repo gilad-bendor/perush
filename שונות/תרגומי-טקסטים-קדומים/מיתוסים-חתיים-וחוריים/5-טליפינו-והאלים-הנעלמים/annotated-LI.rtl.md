@@ -26,16 +26,16 @@
 
 ### 1:4
 `[ ... arḫa d]āu`
-> [… הלאה ייקח]!
-- **פירוק:** `[arḫa d]āu` – da- "take" + arḫa "away", imp. 3sg ("[הלאה ייקח]").
+> [… הלאה] ייקח!
+- **פירוק:** `[arḫa d]āu` – da- "take" + arḫa "away", imp. 3sg ("[הלאה] ייקח": only the first sign of *dāu* restored).
 
 ## CTH 331.1, § 2′ – הרעות: "ממנו ייקח!"
 
 
 ### 1:5
 `[tarpin=ši=kan d]āu`
-> [את הטַרְפִּי – ממנו ייקח]!
-- **פירוק:** `[tarpin=ši=kan d]āu` – tarpi- (an evil condition) + =ši "from him" + da-, imp. 3sg ("[את הטַרְפִּי – ממנו ייקח]").
+> [את הטַרְפִּי – ממנו] ייקח!
+- **פירוק:** `[tarpin=ši=kan d]āu` – tarpi- (an evil condition) + =ši "from him" + da-, imp. 3sg ("[את הטַרְפִּי – ממנו] ייקח": *dāu* preserved but for its first sign).
 - **הערות:** *tarpi-* ו־*parninka-* – מצבים רעים או מחלות שטיבם אינו ידוע (TLHdig "übler Zustand"); השארנו אותם בתעתיק. הרשימה כולה היא רשימת הרעות שהטקס מסלק מגופו של האדם.
 
 ### 1:6
@@ -232,8 +232,8 @@
 
 ### 1:40
 `par[ninkan] daiš`
-> את הפַּרְ[נִינְקָה] שָׂם,
-- **פירוק:** `par[ninkan]` ("את הפַּרְ[נִינְקָה]"); `daiš` ("שָׂם").
+> את [הפַּרְנִינְקָה] שָׂם,
+- **פירוק:** `par[ninkan]` ("את [הפַּרְנִינְקָה]": the stem restored, the word bracketed whole); `daiš` ("שָׂם").
 
 ### 1:41
 `ēšḫar daiš`
@@ -355,8 +355,8 @@
 
 ### 1:62
 `n=an=kan n[a]tta taruḫzi kwēnzi`
-> ואותה לא יכול להרוג;
-- **פירוק:** `n=an=kan` ("ואותה"); `n[a]tta` ("לא"); `taruḫzi` – tarḫ- "be able, prevail", pres. 3sg ("יכול", M3 with an infinitive); `kwēnzi` – kuen- "kill", pres. 3sg ("להרוג").
+> ואותה אינו יכול להרוג;
+- **פירוק:** `n=an=kan` ("ואותה"); `n[a]tta` ("אינו"); `taruḫzi` – tarḫ- "be able, prevail", pres. 3sg ("אינו יכול": the narrative present as a participle, as 1:61 `תוקף`; M3 with an infinitive); `kwēnzi` – kuen- "kill", pres. 3sg ("להרוג").
 
 ### 1:63
 `n=aš {URU}liḫzini MU 8{KAM} ēšta`
@@ -441,7 +441,7 @@
 
 ### 1:77
 `KANKAL-li=wa uddanā[š ... ] mališku`
-> באדמה הנטושה – של הדבר […] – חלש …
+> באדמה הנטושה – של הדבר […] – חלש.
 - **פירוק:** `KANKAL-li=wa` – KANKAL "fallow, uncultivated land", d.-l. ("באדמה הנטושה"); `uddanā[š` ("של הדבר"); `mališku` – mališku- "weak" ("חלש").
 
 ### 1:78

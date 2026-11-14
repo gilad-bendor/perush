@@ -41,8 +41,8 @@
 
 ### 7
 `[U]L=wa=tta [ ... ]`
-> [לא] לך […]
-- **פירוק:** `[U]L=wa=tta` – UL "not" + =tta "to you" ("[לא] לך").
+> לא לך […]
+- **פירוק:** `[U]L=wa=tta` – UL "not" + =tta "to you" ("לא לך": one sign of Ú-UL restored).
 
 ### 8
 `[ ... ] NÍT[A? ...3 ] SIG5-in [ ... ]`
@@ -194,8 +194,8 @@
 
 ### 37
 `[INA GUNNI=šan andan {GIŠ}kalmīšenēš] wešuriy[antati]`
-> [על האח הגזרים] נחנקו,
-- **פירוק:** `[INA GUNNI=šan andan {GIŠ}kalmīšenēš]` ("[על האח הגזרים]", TE 21); `wešuriy[antati]` – wišuriya- "choke", pret. 3pl mid. ("נחנקו": the stem preserved).
+> [על האח] נחנקו [הגזרים],
+- **פירוק:** `[INA GUNNI=šan andan {GIŠ}kalmīšenēš]` ("[על האח] … [הגזרים]", TE 21's order `על האח נחנקו הגזרים`); `wešuriy[antati]` – wišuriya- "choke", pret. 3pl mid. ("נחנקו": the stem preserved).
 
 ## CTH 325, § 6″ – הנחנקים; האמהות הממאנות
 
@@ -212,8 +212,8 @@
 
 ### 40
 `[INA É.GU4=kan andan GU4{Ḫ]}I.A [wešuriyantati]`
-> [בתוך הרפת] השוורים [נחנקו];
-- **פירוק:** `[INA É.GU4=kan andan GU4{Ḫ]}I.A` ("[בתוך הרפת] השוורים", TE 24); `[wešuriyantati]` ("[נחנקו]").
+> [בתוך הרפת נחנקו השוורים];
+- **פירוק:** `[INA É.GU4=kan andan GU4{Ḫ]}I.A` ("[בתוך הרפת … השוורים]", TE 24: GU4 restored, only the plural sign ḪI.A preserved); `[wešuriyantati]` ("[נחנקו]"; TE 24's order).
 
 ### 41
 `[UDU-uš=za SILA4-SU memmaš]`
@@ -293,8 +293,8 @@
 
 ### 54
 `GAL-iš=za {d}U[TU-u]š EZE[N4-an yēt]`
-> אֵל הַשֶּׁמֶשׁ הגדול [חג עשה],
-- **פירוק:** `GAL-iš=za {d}U[TU-u]š` ("אֵל הַשֶּׁמֶשׁ הגדול": only a sign restored); `EZE[N4-an yēt]` ("[חג עשה]", TE 42).
+> אֵל הַשֶּׁמֶשׁ הגדול חג [עשה],
+- **פירוק:** `GAL-iš=za {d}U[TU-u]š` ("אֵל הַשֶּׁמֶשׁ הגדול": only a sign restored); `EZE[N4-an yēt]` ("חג [עשה]", TE 42: the sign EZEN4 partly preserved).
 
 ### 55
 `[nu=za L]IM DINGIR{MEŠ} ḫalzāiš`
@@ -345,8 +345,8 @@
 
 ### 64
 `[ḫalk]in {d}immarnin šalḫanti[n manni]ttin išpiyatarr=a pēdaš`
-> [את התבואה], את אִימַּרְנִי, את הצמיחה, את ה*שגשוג* ואת השובע – נשא."
-- **פירוק:** `[ḫalk]in` ("[את התבואה]"); `{d}immarnin` ("את אִימַּרְנִי"); `šalḫanti[n manni]ttin išpiyatarr=a` ("את הצמיחה, את ה*שגשוג* ואת השובע", TE 28); `pēdaš` ("נשא").
+> [את התבואה], את אִימַּרְנִי, את הצמיחה, [את ה*שגשוג*] ואת השובע – נשא."
+- **פירוק:** `[ḫalk]in` ("[את התבואה]"); `{d}immarnin` ("את אִימַּרְנִי"); `šalḫanti[n manni]ttin išpiyatarr=a` ("את הצמיחה, [את ה*שגשוג*] ואת השובע", TE 28: the stem of *mannittin* restored); `pēdaš` ("נשא").
 
 ## CTH 325, § 10″ – הנשר נשלח לדרוש
 
@@ -902,8 +902,8 @@
 
 ### 167
 `{d}IM-naš kardimiyauwa[(n)z ZI-ŠU NÍ.TE-ŠU {GIŠ}waršamaš] wešuriyattati37`
-> אֵל הַסְּעָרָה זו[עם; נפשו, גופו – בזרדים] נחנקו.
-- **פירוק:** `{d}IM-naš` ("אֵל הַסְּעָרָה"); `kardimiyauwa[(n)z` – "angry" ("זו[עם", TE 177); `ZI-ŠU NÍ.TE-ŠU {GIŠ}waršamaš]` ("[נפשו, גופו – בזרדים]", TE 178; NÍ.TE `גוף`, AM); `wešuriyattati` ("נחנקו").
+> אֵל הַסְּעָרָה זועם; [נפשו, גופו – בזרדים] נחנקו.
+- **פירוק:** `{d}IM-naš` ("אֵל הַסְּעָרָה"); `kardimiyauwa[(n)z` – "angry" ("זועם": the stem preserved, TE 177); `ZI-ŠU NÍ.TE-ŠU {GIŠ}waršamaš]` ("[נפשו, גופו – בזרדים]", TE 178; NÍ.TE `גוף`, AM); `wešuriyattati` ("נחנקו").
 
 ### 168
 `nu kūš {G[}IŠwaršamuš maḫḫan warnuēr]`
@@ -1237,8 +1237,8 @@
 
 ### 229
 `kattan dankuwa[i taknī ZABAR palḫi arta]`
-> מטה, [בתוך האדמה האפלה, דודי אָרָד עומדים];
-- **פירוק:** `kattan` ("מטה"); `dankuwa[i taknī ZABAR palḫi arta]` ("[בתוך האדמה האפלה, דודי אָרָד עומדים]", F37; TE 235).
+> מטה, [בתוך האדמה] האפלה, [דודי אָרָד עומדים];
+- **פירוק:** `kattan` ("מטה"); `dankuwa[i taknī ZABAR palḫi arta]` ("[בתוך האדמה] האפלה, [דודי אָרָד עומדים]": *dankuwa[i]* preserved; F37; TE 235).
 
 ### 230
 `ištapp[ulli=šmet] AN.BAR-aš`

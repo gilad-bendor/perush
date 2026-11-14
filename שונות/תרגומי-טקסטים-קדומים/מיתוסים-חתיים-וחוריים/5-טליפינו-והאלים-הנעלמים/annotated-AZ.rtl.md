@@ -23,8 +23,8 @@
 
 ### 3
 `{GIŠ}LAM.GAL! gul(a)šzi`
-> ועץ־פיסטוק חוקק?;
-- **פירוק:** `{GIŠ}LAM.GAL!` – "pistachio (tree)" ("ועץ־פיסטוק"); `gul(a)šzi` – gulš- "incise, engrave", pres. 3sg ("חוקק?"; IN 8.23 `חקוק`; HPM "ritzt?").
+> עץ־פיסטוק חוקק?;
+- **פירוק:** `{GIŠ}LAM.GAL!` – "pistachio (tree)" ("עץ־פיסטוק": no conjunction in the Hittite); `gul(a)šzi` – gulš- "incise, engrave", pres. 3sg ("חוקק?"; IN 8.23 `חקוק`; HPM "ritzt?").
 
 ### 4
 `n[=at? ... ]`
@@ -81,8 +81,8 @@
 
 ### 14
 `EGIR-ŠU=ma 1 {DUG}KUKKUB MÊ 1 [{DUG}KUKKUB KAŠ?] 1 {DUG}KUKKUB walḫi 1 {DUG}KUKK[UB marnuwan? dāi?]`
-> ואחר כך – קנקן אחד של מים, [קנקן] אחד [של שכר?], קנקן אחד של וַלְחִי, קנ[קן] אחד [של מַרְנוּוַנְט? לוקח?].
-- **פירוק:** `EGIR-ŠU=ma` – "afterwards" ("ואחר כך"); `1 {DUG}KUKKUB MÊ` – "one jug of water" ("קנקן אחד של מים", AS 21); `walḫi` – walḫi-, a drink ("וַלְחִי", IL 14; not *walḫ-* "strike"); `[marnuwan?]` ("[של מַרְנוּוַנְט?]", IL 14); the verb restored by HPM, "[nimmt er]" ("[לוקח?]").
+> ואחר כך – קנקן אחד של מים, [קנקן] אחד [של שכר?], קנקן אחד של וַלְחִי, קנקן אחד [של מַרְנוּוַנְט? לוקח?].
+- **פירוק:** `EGIR-ŠU=ma` – "afterwards" ("ואחר כך"); `1 {DUG}KUKKUB MÊ` – "one jug of water" ("קנקן אחד של מים", AS 21); `walḫi` – walḫi-, a drink ("וַלְחִי", IL 14; not *walḫ-* "strike"); `{DUG}KUKK[UB` ("קנקן": the sign partly preserved); `[marnuwan?]` ("[של מַרְנוּוַנְט?]", IL 14); the verb restored by HPM, "[nimmt er]" ("[לוקח?]").
 
 ## CTH 333, § 4′ – מול האלה: יושבת על האדמה
 
@@ -286,8 +286,8 @@
 
 ### 51
 `[ ... ḫalz]aiš`
-> [… ק]ראה,
-- **פירוק:** `ḫalz]aiš` – ḫalzai- "call", pret. 3sg ("[… ק]ראה").
+> [… קראה],
+- **פירוק:** `ḫalz]aiš` – ḫalzai- "call", pret. 3sg ("[… קראה]": the stem restored, the word bracketed whole).
 
 ### 52
 `nu=za DINGIR{MEŠ} GAL ḫalzaiš`
@@ -296,13 +296,13 @@
 
 ### 53
 `[ ... šan]ezzi? edun`
-> "[… נע]ים? אכלתי,
-- **פירוק:** `šan]ezzi?` ("[… נע]ים?"); `edun` – ed- "eat", pret. 1sg ("אכלתי").
+> "[… נעים?] אכלתי,
+- **פירוק:** `šan]ezzi?` ("[… נעים?]": the stem restored); `edun` – ed- "eat", pret. 1sg ("אכלתי").
 
 ### 54
 `[ ... ek]un? ⸢UL⸣`
-> [… שתי]תי? – לא."
-- **פירוק:** `ek]un?` – eku- "drink", pret. 1sg ("[… שתי]תי?"); `UL` ("לא").
+> [… שתיתי?] – לא."
+- **פירוק:** `ek]un?` – eku- "drink", pret. 1sg ("[… שתיתי?]": the stem restored); `UL` ("לא").
 
 ## CTH 333, § 10″ – העצים הריחניים בבית אֲדוֹן הַטֶּקֶס
 
@@ -446,8 +446,8 @@
 
 ### 81
 `kinu[n=za ... ]`
-> עת[ה …]"
-- **פירוק:** `kinu[n=za` ("עת[ה").
+> עתה […]"
+- **פירוק:** `kinu[n=za` ("עתה": the stem preserved).
 
 ## CTH 333, § 14″ – האלה תחת העוזרד: אוכלת מכל השולחן
 
@@ -500,19 +500,19 @@
 
 ### 91
 `Ú.SAL-LUM uwaniyaz=kan maḫḫan UL zinnattari`
-> כמו שגוש־המלח של הַכַּר אינו נגמר –
-- **פירוק:** `Ú.SAL-LUM` ("של הַכַּר"); `uwaniyaz=kan` ("גוש־המלח": HPM "der Sal[zblock] der! Wiese"); `maḫḫan` – "as" ("כמו ש", M2); `UL zinnattari` – zinna- mid. "come to an end", pres. 3sg ("אינו נגמר").
+> כמו שגוש־המלח של הַכַּר אינו מסתיים –
+- **פירוק:** `Ú.SAL-LUM` ("של הַכַּר"); `uwaniyaz=kan` ("גוש־המלח": HPM "der Sal[zblock] der! Wiese"); `maḫḫan` – "as" ("כמו ש", M2); `UL zinnattari` – zinna- mid. "come to an end", pres. 3sg ("אינו מסתיים", as 95–97 `יסתיים`).
 - **הערות:** לחש השוואה (M2: `כמו ש…`), בלי *QĀTAMMA* ולכן בלי `כך`; המשכו (92–98): כשם שגוש־המלח שבכר, שהבהמות מלקקות ממנו, אינו אוזל, כך לא יסתיימו חייו של אֲדוֹן הַטֶּקֶס.
 
 ### 92
 `[EGIR-Š]U KUR-anza dandukešnaš D[UMU-an uš]kezzi`
-> [אחר] כך הארץ את [בן־התמותה] רואה תמיד,
-- **פירוק:** `[EGIR-Š]U` ("[אחר] כך"); `KUR-anza` – KUR "land", erg. ("הארץ"); `dandukešnaš D[UMU-an` – dandukeššar "mortality", gen. + DUMU "son" ("את [בן־התמותה]"); `[uš]kezzi` – au(š)- "see", iter. pres. 3sg ("רואה תמיד").
+> [אחר] כך הארץ את [בן]־התמותה [רואה תמיד],
+- **פירוק:** `[EGIR-Š]U` ("[אחר] כך"); `KUR-anza` – KUR "land", erg. ("הארץ"); `dandukešnaš D[UMU-an` – dandukeššar "mortality", gen. + DUMU "son" ("את [בן]־התמותה": *dandukešnaš* preserved, DUMU restored); `[uš]kezzi` – au(š)- "see", iter. pres. 3sg ("[רואה תמיד]": the stem restored).
 
 ### 93
 `apāš=a EGIR-anda EGIR-and[a ... ]`
-> והוא – אחר כך, אחר כ[ך …]
-- **פירוק:** `apāš=a` ("והוא"); `EGIR-anda EGIR-and[a` – "afterwards, afterwards" ("אחר כך, אחר כ[ך").
+> והוא – אחר כך, אחר כך […]
+- **פירוק:** `apāš=a` ("והוא"); `EGIR-anda EGIR-and[a` – "afterwards, afterwards" ("אחר כך, אחר כך": only the ending restored).
 
 ## CTH 333, § 15″ – "חיי אֲדוֹן הַטֶּקֶס – אַל יסתיימו!"
 
@@ -572,8 +572,8 @@
 
 ### 103
 `nu DINGIR-L[UM ... ]`
-> ואת הָאֵל[ה …]
-- **פירוק:** `nu DINGIR-L[UM` ("ואת הָאֵל[ה").
+> והאלה […]
+- **פירוק:** `nu DINGIR-L[UM` ("והאלה": the logogram preserved, only the complement restored; the case is unknown, so no `את`).
 
 ### 104
 `[ ... ]`

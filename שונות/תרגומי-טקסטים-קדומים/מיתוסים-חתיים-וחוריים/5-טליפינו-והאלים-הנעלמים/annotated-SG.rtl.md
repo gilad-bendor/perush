@@ -128,14 +128,14 @@
 
 ### 1:21
 `n=aš {DUG}ḪA[B.ḪAB ... ] DUḪ.LÀL gariēt`
-> והוא את הקית[ון …] בשעווה עטה,
-- **פירוק:** `n=aš` ("והוא"); `{DUG}ḪA[B.ḪAB` ("את הקית[ון"); `DUḪ.LÀL` – "wax" ("בשעווה"); `gariēt` – kariya- "cover", pret. 3sg ("עטה").
+> והוא את הקיתון […] בשעווה עטה,
+- **פירוק:** `n=aš` ("והוא"); `{DUG}ḪA[B.ḪAB` ("את הקיתון": half of the two-sign logogram preserved); `DUḪ.LÀL` – "wax" ("בשעווה"); `gariēt` – kariya- "cover", pret. 3sg ("עטה").
 - **הערות:** *kariya-* `עטה` (AP 1:21 `עטוי`; בשירת חֶדַמּוּ `הסתיר`: M3). השעווה האוטמת – כבטקס תֶּלִיפִּינוּ, אך כאן היא חותמת את הכלי.
 
 ### 1:22
 `šer=a namma URUDU-an išta[p- ... ]`
-> וגם מעל, עוד, מכ[סה] של נחושת […].
-- **פירוק:** `šer=a` – šer "above" + =a ("וגם מעל"); `namma` ("עוד"); `URUDU-an` – "copper", acc. ("של נחושת"); `išta[p-` – ištappulli- "lid" ("מכ[סה]"; TE 236 `מכסיהם`).
+> וגם מעל, עוד, מכסה? של נחושת […].
+- **פירוק:** `šer=a` – šer "above" + =a ("וגם מעל"); `namma` ("עוד"); `URUDU-an` – "copper", acc. ("של נחושת"); `išta[p-` – ištappulli- "lid"? ("מכסה?": the stem preserved, the word uncertain; TE 236 `מכסיהם`).
 - **תרגומים:** טיוטתנו: הפועל *ištap-* `כי[סה]`; HPM: "einen kupfernen Deck[el? auf]" – שם העצם "מכסה"; תוקן.
 
 ### 1:23
@@ -232,7 +232,7 @@
 `ḫa[ḫḫimaš] utnē ḫūman tinut`
 > [קִפָּאוֹן] את כל הארץ שיתק,
 - **פירוק:** `ḫa[ḫḫimaš]` – Ḫaḫḫima- "Torpor, Frost" ("[קִפָּאוֹן]", M4); `utnē ḫūman` – utne- "land" + ḫumant- "all" ("את כל הארץ"); `tinut` – tinnu- "paralyse, bring to a standstill", pret. 3sg ("שיתק").
-- **הערות:** קִפָּאוֹן – *Ḫaḫḫima-*, "הקיפאון, הקהות" (HPM "Erstarrung"): שם בעל משמעות, ולכן מתורגם ככינוי בלי ה' הידיעה (M4). הוא אינו הכפור שעל פני הארץ אלא הקפיאה, השיתוק, שתופס את הכל – מים, צמחים, בהמות ואלים – כשהשמש נעלמת. *tinnu-* "לגרום לעמוד מלכת" `שיתק` – הפועל החוזר של המיתוס.
+- **הערות:** קִפָּאוֹן – *Ḫaḫḫima-*, "הקיפאון, הקהות" (HPM "Erstarrung"): שם הנושא משמעות, ולכן מתורגם ככינוי בלי ה' הידיעה (M4). הוא אינו הכפור שעל פני הארץ אלא הקפיאה, השיתוק, שתופס את הכל – מים, צמחים, בהמות ואלים – כשהשמש נעלמת. *tinnu-* "לגרום לעמוד מלכת" `שיתק` – הפועל החוזר של המיתוס.
 
 ### 1:41
 `widār ḫatnut`
@@ -279,8 +279,8 @@
 
 ### 1:48
 `DUMU{MEŠ} karta=šma ḫalkiuš [U]L tinnuzi`
-> את הילדים, את לבם, את התבואות – [לא] משתק;
-- **פירוק:** `DUMU{MEŠ}` – "children" ("את הילדים"); `karta=šma` – kard- "heart" + =šmaš "their" ("את לבם"); `ḫalkiuš` – ḫalki- "grain", acc. pl. ("את התבואות", TE 28); `[U]L tinnuzi` – tinnu-, pres. 3sg ("[לא] משתק").
+> את הילדים, את לבם, את התבואות – לא משתק;
+- **פירוק:** `DUMU{MEŠ}` – "children" ("את הילדים"); `karta=šma` – kard- "heart" + =šmaš "their" ("את לבם"); `ḫalkiuš` – ḫalki- "grain", acc. pl. ("את התבואות", TE 28); `[U]L tinnuzi` – tinnu-, pres. 3sg ("לא משתק": one sign of Ú-UL restored, as UL 3.1, LA).
 - **הערות:** את הלב של הילדים ואת הגרעין שבתבואה הקיפאון אינו משתק – החיים הנסתרים שבפנים שורדים את החורף (ראו 1:50).
 
 ### 1:49
@@ -429,8 +429,8 @@
 
 ### 1:76
 `[U]L=war=aš gimraš DUMU-aš`
-> [הלא] בן הַבָּר הוא!"
-- **פירוק:** `[U]L=war=aš` – UL "not" + =aš "he" ("[הלא] … הוא"); `gimraš DUMU-aš` – gimra- "open country", gen. + DUMU "son" ("בן הַבָּר", TE 28).
+> הלא בן הַבָּר הוא!"
+- **פירוק:** `[U]L=war=aš` – UL "not" + =aš "he" ("הלא … הוא": one sign restored); `gimraš DUMU-aš` – gimra- "open country", gen. + DUMU "son" ("בן הַבָּר", TE 28).
 
 ### 1:77
 `nu apūnn=a ḫaḫḫimaš IṢB[AT]`
@@ -625,7 +625,7 @@
 `ūgg=a {f}annannaš ēšmi`
 > "וגם אני – אַנַּנָּה אני.
 - **פירוק:** `ūgg=a` – uk "I" + =a ("וגם אני"); `{f}annannaš` – Annanna ("אַנַּנָּה"); `ēšmi` – eš- "be", pres. 1sg ("אני").
-- **הערות:** הזקנה – *MUNUS ŠU.GI*, "האשה הזקנה", מומחית הטקסים החתית – מציגה את עצמה בשם: אַנַּנָּה (שם המזכיר את *anna-* "אם"). מכאן ואילך מדברת היא בגוף ראשון.
+- **הערות:** הזקנה – *MUNUS ŠU.GI*, "האשה הזקנה", מומחית הטקסים החתית – מציגה את עצמה בשם: אַנַּנָּה (שם המזכיר את *anna-* "אם"). מכאן ואילך היא אומרת את דבריה בגוף ראשון.
 - **תרגומים:** HPM: "und ich bin auch eine annanna-Frau" – תואר ולא שם; האות {f} שלפני המלה מתאימה לשם, ושמרנו את השם (H2).
 
 ## CTH 323.1, § 10″ – דברי הזקנה: שמאל וימין
@@ -697,8 +697,8 @@
 
 ### 1:125
 `t=an mugami`
-> ואותו אפציר."
-- **פירוק:** `t=an` – OH ta + =an "him" ("ואותו"); `mugami` – mugai- "invoke, entreat", pres.-fut. 1sg ("אפציר", M4; IL 10).
+> ובו אפציר."
+- **פירוק:** `t=an` – OH ta + =an "him" ("ובו": Hebrew `הפציר ב־`); `mugami` – mugai- "invoke, entreat", pres.-fut. 1sg ("אפציר", M4; IL 10).
 - **תרגומים:** טיוטתנו: בינוני (`אומרת … מפצירה`); HPM: עתיד ("werde ich … sprechen und ihn anrufen"), במשפט ה־*mān* (1:123); תוקן.
 - **הערות:** *mugai-* `הפציר` (M4): הקריאה הטקסית לאל הנעלם שישוב.
 
@@ -781,8 +781,8 @@
 
 ### 1:139
 `[ ... NINDA.GU]R4.RA GAL 1 DUG GEŠTIN 1 DUG marnuwan 1 DUG KAŠ.LÀL 1 DUG GEŠTIN.L[ÀL 1 GAL Ì.DÙ]G.GA 1 GAL LÀL 1 GAL Ì.UDU ⸢SÍG⸣ BABBAR SÍG ZA.GÌN SÍG.SA5 SÍG SIG7.S[IG7 SÍG GE6 SÍ]G pittulaš šanezzi kinānta {GIŠ}šāḫiš? [ḫappur]iyaš GI.DÙG.GA`
-> [… לחם] עבה גדול; כלי אחד של יין, כלי אחד של מַרְנוּוַנְט, כלי אחד של שכר־דבש, כלי אחד של יין־[דבש, כוס אחת של שמן] טוב, כוס אחת של דבש, כוס אחת של חֵלֶב; צמר לָבָן, צמר כחול, צמר אָדֹם, צמר [ירוק, צמר שחור], חוט־צמר; נעים, מסונן: עץ־שָׁחִי?, [עץ־חַפּוּרִ]יָּה, קנה טוב.
-- **פירוק:** `NINDA.GU]R4.RA GAL` – "big thick bread" ("[לחם] עבה גדול", AS); `DUG GEŠTIN` – DUG "vessel" + "wine" ("כלי … של יין"); `marnuwan` – marnuwant-, a beer ("מַרְנוּוַנְט", IL 14); `KAŠ.LÀL` – "honey beer" ("שכר־דבש"); `GEŠTIN.L[ÀL` – "honeyed wine" ("יין־[דבש"); `GAL Ì.DÙ]G.GA` – GAL "cup" + "fine oil" ("[כוס … של שמן] טוב"); `LÀL` – "honey" ("דבש", TE); `Ì.UDU` – "tallow" ("חֵלֶב", 1:50); `SÍG BABBAR / ZA.GÌN / SA5 / SIG7.SIG7 / GE6` – "white / blue / red / green / black wool" ("צמר לָבָן / כחול / אָדֹם / [ירוק / שחור]"); `SÍ]G pittulaš` – pittula- "loop, knot", gen. ("חוט־צמר"; HPM "Wol]lschnur"); `šanezzi` – "pleasant, fine" ("נעים", M2); `kinānta` – kina- "sift, select", part. ("מסונן"; HPM "ausgesuchtes Erstklassiges": the woods that follow); `{GIŠ}šāḫiš?` – šaḫi- (an aromatic wood) ("עץ־שָׁחִי?"); `[ḫappur]iyaš` – ḫappuriya- (a plant) ("[עץ־חַפּוּרִ]יָּה"); `GI.DÙG.GA` – "sweet reed" ("קנה טוב").
+> [… לחם] עבה גדול; כלי אחד של יין, כלי אחד של מַרְנוּוַנְט, כלי אחד של שכר־דבש, כלי אחד של יין־[דבש, כוס אחת של שמן] טוב, כוס אחת של דבש, כוס אחת של חֵלֶב; צמר לָבָן, צמר כחול, צמר אָדֹם, צמר [ירוק, צמר שחור], חוט־צמר; נעים, מסונן: עץ־שָׁחִי?, [עץ־חַפּוּרִיָּה], קנה טוב.
+- **פירוק:** `NINDA.GU]R4.RA GAL` – "big thick bread" ("[לחם] עבה גדול", AS); `DUG GEŠTIN` – DUG "vessel" + "wine" ("כלי … של יין"); `marnuwan` – marnuwant-, a beer ("מַרְנוּוַנְט", IL 14); `KAŠ.LÀL` – "honey beer" ("שכר־דבש"); `GEŠTIN.L[ÀL` – "honeyed wine" ("יין־[דבש"); `GAL Ì.DÙ]G.GA` – GAL "cup" + "fine oil" ("[כוס … של שמן] טוב"); `LÀL` – "honey" ("דבש", TE); `Ì.UDU` – "tallow" ("חֵלֶב", 1:50); `SÍG BABBAR / ZA.GÌN / SA5 / SIG7.SIG7 / GE6` – "white / blue / red / green / black wool" ("צמר לָבָן / כחול / אָדֹם / [ירוק / שחור]"); `SÍ]G pittulaš` – pittula- "loop, knot", gen. ("חוט־צמר"; HPM "Wol]lschnur"); `šanezzi` – "pleasant, fine" ("נעים", M2); `kinānta` – kina- "sift, select", part. ("מסונן"; HPM "ausgesuchtes Erstklassiges": the woods that follow); `{GIŠ}šāḫiš?` – šaḫi- (an aromatic wood) ("עץ־שָׁחִי?"); `[ḫappur]iyaš` – ḫappuriya- (a plant) ("[עץ־חַפּוּרִיָּה]": the stem restored, the whole word bracketed); `GI.DÙG.GA` – "sweet reed" ("קנה טוב").
 - **הקבלה:** [equivalent] GI.DÙG.GA, "הקנה הטוב" (באכדית *qanû ṭābu*), הוא קנה הבושם של המזרח הקדום: `וְקָנֶה הַטּוֹב מֵאֶרֶץ מֶרְחָק` (ירמיהו ו:כ). שם הוא מנחה שהאל אינו רוצה בה; כאן – אחד הריחות הנעימים שבהם מושכים את האל לשוב.
 - **הערות:** `לָבָן`, `אָדֹם` מנוקדים (מלכודות החוקים). הצמר בחמשת צבעיו ו"צמר הלולאה" – אולי לקשירת האל אל ביתו או לקישוט הכנים.
 - **תרגומים:** HPM מתרגם את 1:140–1:161 בנקבה ("sie"): העושה היא הזקנה (1:157); תיקנו את הפעלים לנקבה. מ־1:163 העושה הוא "אֲדוֹן הָאֵל".
@@ -797,8 +797,8 @@
 
 ### 1:141
 `[ ... ]=ma kiššan É-ri anda 2 {GIŠ}BANŠUR {GIŠ}luttiya d[āi]`
-> [… ]ו כך: בתוך הבית – שני שולחנות, ליד החלון, שָׂמָה;
-- **פירוק:** `=ma` ("ו"); `kiššan` – "thus" ("כך"); `É-ri anda` – "in the house" ("בתוך הבית"); `2 {GIŠ}BANŠUR` ("שני שולחנות", M2); `{GIŠ}luttiya` – luttai- "window", d.-l. ("ליד החלון", TE 19); `d[āi]` – dai- "put", pres. 3sg ("שָׂם").
+> […] וכך: בתוך הבית – שני שולחנות, ליד החלון, שָׂמָה;
+- **פירוק:** `=ma` ("ו"); `kiššan` – "thus" ("וכך"); `É-ri anda` – "in the house" ("בתוך הבית"); `2 {GIŠ}BANŠUR` ("שני שולחנות", M2); `{GIŠ}luttiya` – luttai- "window", d.-l. ("ליד החלון", TE 19); `d[āi]` – dai- "put", pres. 3sg ("שָׂם").
 
 ### 1:142
 `[nu=šš]an kuwapiya 1 NINDA.GUR4.RA dāi`
@@ -976,8 +976,8 @@
 
 ### 1:174
 `[{UZU}šupp]a ḫuišu ŠA UDU {UZU}ZAG.UDU {UZU}GABA SAG.DU GÌR{MEŠ} [ANA {d}UTU d]āi`
-> [בשר] חי של השה – הכתף, החזה, הראש, הרגליים – [לאֵל הַשֶּׁמֶשׁ שָׂם];
-- **פירוק:** `[{UZU}šupp]a` – šuppa "(sacred) meat" ("[בשר]"); `ḫuišu` – ḫuišu- "raw, fresh" ("חי"); `ŠA UDU` ("של השה"); `{UZU}ZAG.UDU` – "shoulder" ("הכתף"); `{UZU}GABA` – "breast" ("החזה"); `SAG.DU` ("הראש", law precedent); `GÌR{MEŠ}` ("הרגליים"); `[ANA {d}UTU d]āi` ("[לאֵל הַשֶּׁמֶשׁ שָׂם]").
+> [בשר] חי של השה – הכתף, החזה, הראש, הרגליים – [לאֵל הַשֶּׁמֶשׁ] שָׂם;
+- **פירוק:** `[{UZU}šupp]a` – šuppa "(sacred) meat" ("[בשר]"); `ḫuišu` – ḫuišu- "raw, fresh" ("חי"); `ŠA UDU` ("של השה"); `{UZU}ZAG.UDU` – "shoulder" ("הכתף"); `{UZU}GABA` – "breast" ("החזה"); `SAG.DU` ("הראש", law precedent); `GÌR{MEŠ}` ("הרגליים"); `[ANA {d}UTU d]āi` ("[לאֵל הַשֶּׁמֶשׁ] שָׂם": only the first sign of *dāi* restored).
 - **הקבלה:** [equivalent] `וְהָיָה הֶחָזֶה לְאַהֲרֹן וּלְבָנָיו` (ויקרא ז:לא) – החזה והשוק נתחי הכבוד; כאן הם נתחי האל, מונחים חיים על שולחנו.
 
 ### 1:175
@@ -987,8 +987,8 @@
 
 ### 1:176
 `{UZU}N[ÍG.GIG {UZ]}UŠÀ ḫappinit zanuanzi`
-> את [הכבד ואת] הלב – בלהבה מבשלים;
-- **פירוק:** `{UZU}N[ÍG.GIG` – "liver" ("את [הכבד"); `{UZ]}UŠÀ` – "heart" ("ואת] הלב"); `ḫappinit` – ḫappina- "open flame", instr. ("בלהבה", 1:16); `zanuanzi` – zanu- "cook", pres. 3pl ("מבשלים", AS 47, UH 31).
+> את [הכבד] (ו)את הלב – בלהבה מבשלים;
+- **פירוק:** `{UZU}N[ÍG.GIG` – "liver" ("את [הכבד]"); `{UZ]}UŠÀ` – "heart" ("(ו)את הלב": no conjunction in the Hittite); `ḫappinit` – ḫappina- "open flame", instr. ("בלהבה", 1:16); `zanuanzi` – zanu- "cook", pres. 3pl ("מבשלים", AS 47, UH 31).
 
 ### 1:177
 `1 NINDA.GUR4.RA paršiy[a]`
@@ -997,8 +997,8 @@
 
 ### 1:178
 `[nu=ššan ŠA UDU {UZU}ZAG].UDU dāi`
-> [ועליו את כתף] השה שָׂם,
-- **פירוק:** `[nu=ššan ŠA UDU {UZU}ZAG].UDU` ("[ועליו את כתף] השה"); `dāi` ("שָׂם").
+> [ועליו] את כתף [השה] שָׂם,
+- **פירוק:** `[nu=ššan ŠA UDU {UZU}ZAG].UDU` ("[ועליו] את כתף [השה]": UDU of ZAG.UDU "shoulder" preserved, ŠA UDU "of the sheep" restored); `dāi` ("שָׂם").
 
 ### 1:179
 `INA {GIŠ}BANŠUR {d}UTU dāi`
@@ -1144,12 +1144,12 @@
 
 ### 1:206
 `[INA UD 3{KAM} mān adann]a SIG5-att[a]`
-> [ביום השלישי, כאשר טוב לאכול],
-- **פירוק:** `[INA UD 3{KAM} mān adann]a` ("[ביום השלישי, כאשר … לאכול]"); `SIG5-att[a]` ("[טוב]", 1:185: the meaning-bearing sign restored with the stem of *adanna*).
+> [ביום השלישי, כאשר] טוב [לאכול],
+- **פירוק:** `[INA UD 3{KAM} mān adann]a` ("[ביום השלישי, כאשר … לאכול]"); `SIG5-att[a]` ("טוב", 1:185: SIG5 preserved, only the ending restored).
 
 ### 1:207
 `[B]ĒL DINGIR-LIM [PĀNI DINGIR-LIM paizzi]`
-> [אֲדוֹן] הָאֵל [לפני הָאֵל הולך],
+> אֲדוֹן הָאֵל [לפני הָאֵל הולך],
 - **פירוק:** (1:163).
 
 ### 1:208
@@ -1164,8 +1164,8 @@
 
 ### 1:210
 `[ ... ]ANA ⸢{d}UTU⸣ [d]āi`
-> […] לאֵל הַשֶּׁמֶשׁ [שָׂם],
-- **פירוק:** `ANA {d}UTU` ("לאֵל הַשֶּׁמֶשׁ"); `[d]āi` ("[שָׂם]").
+> […] לאֵל הַשֶּׁמֶשׁ שָׂם,
+- **פירוק:** `ANA {d}UTU` ("לאֵל הַשֶּׁמֶשׁ"); `[d]āi` ("שָׂם": one sign restored).
 
 ### 1:211
 `[ ... ]x ⸢ANA⸣ [{d}te]lipin[u ... ]`
@@ -1198,8 +1198,8 @@
 
 ### 2:5
 `[ ... a]ppuzzi karta-[ ... ]`
-> [… החֵ]לֶב, הלב […]
-- **פירוק:** `a]ppuzzi` – appuzzi- "tallow" ("[החֵ]לֶב", 1:50); `karta-[` – kard- "heart" ("הלב", 1:48).
+> […] החֵלֶב, הלב […]
+- **פירוק:** `a]ppuzzi` – appuzzi- "tallow" ("החֵלֶב", 1:50: one sign restored); `karta-[` – kard- "heart" ("הלב", 1:48).
 
 ### 2:6
 `[ ... -z]i`
@@ -1213,5 +1213,5 @@
 
 ### 2:8
 `[ ... {UZU}ap]puzzianza[ ... ]`
-> [… החֵ]לֶב […]
-- **פירוק:** `{UZU}ap]puzzianza` ("[… החֵ]לֶב", 1:50).
+> […] החֵלֶב […]
+- **פירוק:** `{UZU}ap]puzzianza` ("[…] החֵלֶב", 1:50: one sign restored).
