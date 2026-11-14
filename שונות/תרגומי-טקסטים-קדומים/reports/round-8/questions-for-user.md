@@ -18,3 +18,9 @@ None needs the user; each keeps the run's default, and the user may overrule any
 3. The open wordings stay as drafted, with their `?` and notes; 311.3 / 311.7 keep both layers of the wall.
 4. The possibly foreign words stay transliterated with `?`; a check against Steiner 2011 (©, not in the folder) is
    recorded as a later improvement, not a blocker.
+
+## Run 3 (the Rigveda, Book 2) – its questions, settled by the lead
+All four are readings, so they stay as the run drafted them, with the alternatives in the notes: 2.12.5b `אין הוא`
+(the existential reading, with Jamison; the Psalms parallels as shared motifs); *bhága* in the Indra closing stanza as
+the god `בְּהַגָה`; the listed per-line readings; the refrain's `(בקול) רם`. The Book 7 alignments the run found are
+for the finalization's harmonization.
