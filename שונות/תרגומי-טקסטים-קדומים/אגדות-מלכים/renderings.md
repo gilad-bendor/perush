@@ -771,6 +771,16 @@ Then independent fidelity reviewers (Anzû; the rest), and the coordinator's con
 
 ### 13.7 Merged from the parts
 (The coordinator adds one record per part.)
+#### 13.7.1 Part AN1 (SB I), 2026-11-14
+The proposals of `8-אפוס-אנזו/project--AN1.md` ("Proposals for the corpus renderings") are **accepted as written and
+bind**: the speech formulas (`X פתח את פיו ואמר,` / `דיבר אל Y:`; `אל X דבר דיבר:`), the council (`"איזה אל – את אנזו
+יקטול,` / `ובכלל היישובים יגדיל את שמו?"`), the summons (`את X הצעיקו, בן אָנוּ;` / `שָׂם טַעַם, ואליו דיבר:`), Anu's
+eight-line speech, the answer (`X ענה לָאִמְרָה,` / `אל אָנוּ, אביו, דבר דיבר:`), the nine-line refusal, and the terms
+table (*gašru* `כַּבִּיר`, *ṭēmu* `טַעַם`, *ṣīt pî* `מוֹצָא פִי`, *kamû* `אָסַר`, *nêru* `קָטַל`, *parṣu* `פּוּלְחָן`, *māhāzu*
+`מָחוֹז` …). Decisions on its open items: *kiṣṣu* `מָעוֹן` (the root קדש stays reserved); *nagāšu* `נָדַד`; *šahāhu*
+`נִרְפָּה`; Dagan `דָּגָן` ★ (Ugarit and the school canon; Lipit-Ištar's `דָּגַן` is the outlier – left for the lead).
+**Split left for the lead:** *bukru* `צֶאֱצָא` (Enūma eliš's precedent) against the Cuthaean Legend's *perʾu* `צֶאֱצָא`.
+Tool: the `טוב` gate anchored at word ends (it read `טובל`); `ארר` licensed by *arāru* (RESERVED_R8).
 
 
 ## Changelog

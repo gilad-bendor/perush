@@ -281,6 +281,11 @@ RESERVED_R8.update({
 })
 for _k in [k for k in RESERVED_R8 if '(שבועה|שבועת' in k]:
     RESERVED_R8[_k] = RESERVED_R8[_k] + [r'mamit|ma-mi-t|NAM\.ERIM|nam-erim']
+# AN1 (2026-11-14): the inherited `טוב` gate was unanchored (`טובל` "bathes"); `ארר` had only Sumerian licences.
+for _k in [k for k in RESERVED_R8 if k.startswith('טוב|')]:
+    RESERVED_R8[B + P + r'(טוב|טובה|טובים|טובות)' + E] = RESERVED_R8.pop(_k)
+for _k in [k for k in RESERVED_R8 if k.startswith('ארור|')]:
+    RESERVED_R8[_k] = RESERVED_R8[_k] + [r'arāru|erretu|arratu|a-ra-ru|ar-ra-r']
 for _k in ('AN', 'AK', 'RE', 'ID'):
     RESERVED[_k] = RESERVED_R8
 # The Uruk cycle (renderings.md §12.4): Enmerkar's gates, plus the cycle's own (licensed by the transliteration + ETCSL
