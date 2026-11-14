@@ -81,7 +81,8 @@ P_SER = os.path.join(MYTH, "1-אילויאנקה-וחדמו")
 P_KUM = os.path.join(MYTH, "2-מחזור-קומרבי")
 P_SR = os.path.join(MYTH, "3-שירת-השחרור")
 P_TALE = os.path.join(MYTH, "4-זלפה-אפו-ואלקונירשה")
-P_TE = os.path.join(MYTH, "5-טליפינו")
+P_TE = os.path.join(MYTH, "5-טליפינו-והאלים-הנעלמים")  # renamed 2026-11-14 (Round 8 run 5: the vanishing-god myths beside Telipinu)
+P_GI = os.path.join(MYTH, "6-גילגמש-החתי")  # Round 8 run 5: the Hittite Gilgameš (CTH 341.III)
 
 
 def _hpm_myth(cth, parts=None):
@@ -113,16 +114,26 @@ UNITS = {
     "EL": (P_TALE, "אֶלְקוּנִירְשָׁא ואַשֶּׁרְתּוּ (CTH 342)", "myth",
            _hpm_myth("342", ["1.1", "1.2", "1.3", "2.1", "2.2", "2.3", "2.4", "2.5"]), "CTH-342"),
     "TE": (P_TE, "מיתוס תֶּלִיפִּינוּ, הנוסח הראשון (CTH 324.1)", "myth", _hpm_myth("324.1"), "CTH-324"),
+    # Round 8 run 5 (2026-11-14): the vanishing-god myths beside Telipinu, the rest of the Kumarbi cycle, the Hittite Gilgameš
+    "SG": (P_TE, "היעלמות אֵל הַשֶּׁמֶשׁ ושיבתו (CTH 323)", "myth", _hpm_myth("323", ["1", "2"]), "CTH-323"),
+    "LI": (P_TE, "אֵל הַסְּעָרָה בלִיחְזִינָה (CTH 331)", "myth", _hpm_myth("331", ["1", "2"]), "CTH-331"),
+    "AZ": (P_TE, "אַנְזִילִי וזוּקִּי (CTH 333)", "myth", _hpm_myth("333"), "CTH-333"),
+    "MU": (P_TE, "המוּגָוָר של אֵל הַסְּעָרָה (CTH 325)", "myth", _hpm_myth("325"), "CTH-325"),
+    "LA": (P_KUM, "שירת אֵל הַמָּגֵן: מלכותו של LAMMA (CTH 343)", "myth",
+           _hpm_myth("343", ["1", "2", "3.1", "3.2", "4", "5", "6"]), "CTH-343"),
+    "SI": (P_KUM, "שירת הכסף (CTH 364)", "myth", _hpm_myth("364", ["1", "2", "3", "4", "5", "6"]), "CTH-364"),
+    "GI": (P_GI, "גִּלְגָּמֶשׁ החתי (CTH 341.III)", "myth", _hpm_myth("341.III", [str(i) for i in range(1, 20)]), "CTH-341"),
 }
 PROJECT_ORDER = {P_HL: ["HL1", "HL2", "HLPT"], P_IN: ["IN"], P_RIT: ["AS", "UH", "PU", "AM", "AM2"],
-                 P_SER: ["IL", "HE"], P_KUM: ["KU", "UL"], P_SR: ["SR"], P_TALE: ["ZA", "AP", "EL"], P_TE: ["TE"]}
+                 P_SER: ["IL", "HE"], P_KUM: ["KU", "UL", "LA", "SI"], P_SR: ["SR"], P_TALE: ["ZA", "AP", "EL"],
+                 P_TE: ["TE", "SG", "LI", "AZ", "MU"], P_GI: ["GI"]}
 WITNESSES_HL1 = {"291.1": "HPM/CHiL--CTH-291.1", "291.3": "HPM/CHiL--CTH-291.3", "291.4": "HPM/CHiL--CTH-291.4",
                  "291.5": "HPM/CHiL--CTH-291.5"}
 NIQ = "֑-ֽֿ-ׇ"
 RITUAL_GLOSS_FOLDERS = ["CTH-394", "CTH-410", "CTH-407", "CTH-391", "CTH-757"]
 REND = [os.path.join(ROOT, LAWS, "renderings.md"), os.path.join(ROOT, RIT, "renderings.md"),
         os.path.join(ROOT, MYTH, "renderings.md")]
-MYTH_KEYS = ("IL", "HE", "KU", "UL", "SR", "ZA", "AP", "EL", "TE")  # the myth renderings' H-tables apply to these only;
+MYTH_KEYS = ("IL", "HE", "KU", "UL", "SR", "ZA", "AP", "EL", "TE", "SG", "LI", "AZ", "MU", "LA", "SI", "GI")  # the myth renderings' H-tables apply to these only;
 # the law and ritual files' H-tables apply to every Hittite text (2026-10-30, Round 5 run 2)
 DOSSIER_DIR = os.path.join(ROOT, "מיתוסים-אוגריתיים", "3-תיק-היום-החמישי")
 # The fifth-day dossier's excerpts copied from the myth corpus (checked by `verify <KEY>`): KEY → (the dossier's annotated

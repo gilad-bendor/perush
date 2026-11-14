@@ -1,0 +1,214 @@
+{
+"kind": "MYTH",
+"cth": "CTH 343.3.2",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 343.3.2 (TX 2009-08-30, TRde 2009-08-30)",
+"sections": [
+{
+"id": "§ 1",
+"title": "§ 1",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1",
+"hl": "",
+"master": "[ ... ]-eda[n ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 1",
+"[ ... ]x-⸢e?-da⸣-a[n ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1",
+"hl": "",
+"master": "{d}IŠTAR ANA {d}LAMMA[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 2",
+"{d}IŠTAR A-NA {d}LAMMA[ ... ]"
+]
+],
+"tr": "Ištar [ ... ] zu LAMMA [ ... ]:",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1",
+"hl": "",
+"master": "nu=wa ŠA DINGIR{MEŠ} [ ... ḫ]atrāši",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 3",
+"nu-wa ŠA DINGIR{MEŠ} x[ ... ] [ḫ]a-[a]t-ra-a-ši"
+]
+],
+"tr": "„Du [t]eilst [ ... ] der Götter mit.",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1",
+"hl": "",
+"master": "{d}30[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 4",
+"{d}30[ ... ]"
+]
+],
+"tr": "[ ... ] Mondgott [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1",
+"hl": "",
+"master": "[{d}]EA LUGAL {d}[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 5",
+"[{d}]É-A LUGAL {d}x[ ... ]"
+]
+],
+"tr": "Ea, der König, [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1",
+"hl": "",
+"master": "[ ... ]-āzzarašḫa-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 6",
+"[ _ (_) ]-a-az-za-ra-aš-ḫa-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1",
+"hl": "",
+"master": "[ ... AN]A {d}LAMMA LUGAL [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 7",
+"[ ... A-N]A1 {d}LAMMA LUGAL x[ ... ]"
+]
+],
+"tr": "[ ... ] LAMMA, dem König [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1",
+"hl": "",
+"master": "[nu=w]a kēdani [ ... t]iyatten",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 8",
+"[nu-w]a ke-e-da-ni x[ ... ] [t]i-ya-at-tén"
+]
+],
+"tr": "[ ... ] diesem [ ... t]retet hin!",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 1",
+"hl": "",
+"master": "nu=wa [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 9",
+"nu-wa x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 1",
+"hl": "",
+"master": "[ ... ] šaḫi[n ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 10",
+"x x x x ša-ḫi-i[n ... ]"
+]
+],
+"tr": "[ ... ] šaḫi-Holz [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 1",
+"hl": "",
+"master": "[ ... ] {d}zu-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 11",
+"[ ... ] {d}zu-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 1",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 12",
+"[ ... ]x x[ ... ]"
+],
+[
+"A",
+"",
+"Vs. I bricht ab. Die Rs. ist, soweit erhalten, unbeschrieben."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1:1": "Diese Lesung ist nach Kollation am Foto gut möglich."
+}
+}

@@ -1,0 +1,134 @@
+{
+"kind": "MYTH",
+"cth": "CTH 341.III.19",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 341.III.19 (TX 2009-08-27, TRde 2009-08-27)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] {d}ḫep[at? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ] {d}ḫé-p[át? 1... ]"
+]
+],
+"tr": "[ ... ] Ḫe[pat? ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[{d}ḫ]uwawa=ka[n? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[{d}?ḫ]u?-wa-wa-ká[n ... ]"
+]
+],
+"tr": "[H]uwawa [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[n]u=wa ma-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[n]u-wa ma?-x[ ... ]"
+]
+],
+"tr": "„Und [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-ruta [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ]-ru-ta [ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... ]x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Rychtařík, Chatessar 4, 2001, 46, liest die Zeile: ]-an i-x[; Groddek, DBH 24, 2008, 89: -]an I-N[A."
+}
+}

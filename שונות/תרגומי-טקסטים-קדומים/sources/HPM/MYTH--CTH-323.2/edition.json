@@ -1,0 +1,153 @@
+{
+"kind": "MYTH",
+"cth": "CTH 323.2",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 323.2 (TX 2009-08-26, TRde 2009-08-26)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] mu-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]x ⸢mu⸣-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-ya",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]-ya ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... paišk]ettaru",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... pa-iš-k]it9-ta-ru"
+]
+],
+"tr": "[ ... ] soll [geh]en!",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu Ú{ḪI.A}-an ēš-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"nu Ú{ḪI.A}-an e-⸢eš⸣-[ ... ]"
+]
+],
+"tr": "Die Pflanzen [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... a]ppuzzi karta-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... a]p-pu-uz-zi kar-ta-[ ... ]"
+]
+],
+"tr": "[ ... T]alg entfern[- ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... -z]i",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... -z]i"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "takku=uš šēr [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"ták-⸢ku⸣-uš še-e-er [ ... ]"
+]
+],
+"tr": "Wenn [ ... ] sie oben [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... {UZU}ap]puzzianza[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... {UZU}ap]-pu-⸢uz-zi-an-za⸣[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "Der [T]alg [ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

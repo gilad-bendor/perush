@@ -1,0 +1,155 @@
+{
+"kind": "MYTH",
+"cth": "CTH 341.III.18",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 341.III.18 (TX 2009-08-27, TRde 2009-08-27)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... k]āš akku[š-? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... k]a-a-aš ak-ku-u[š?-1 ... ]"
+]
+],
+"tr": "[ ... ] dieser trink[- ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-atta",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]-at-ta"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-ḫuyan [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ]-ḫu-ya-an [ ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ŠU]M-ŠU? tez[zi?]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ŠU]M?-ŠU te-ez-[zi?]"
+]
+],
+"tr": "[ ... ] nen[nt?] seinen [Na]men?.",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]-ramm[a ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ] [ ... ]x-ra-am-m[a ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... N]Í.TE [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... N]Í.TE [ ... ]"
+]
+],
+"tr": "[ ... Kö]rper [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]-iš-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ]-iš-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ ... ]x x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Vgl. dazu KBo 10.46(+) Vs. I 22'' (CTH 341.III.1 Text E). Siehe HED 1 25."
+}
+}

@@ -1,0 +1,232 @@
+{
+"kind": "MYTH",
+"cth": "CTH 341.III.8",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 341.III.8 (TX 2009-08-27, TRde 2009-08-27)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2''",
+"title": "§ 2''",
+"hl": ""
+},
+{
+"id": "§ 3''",
+"title": "§ 3''",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"li. Kol. 1'",
+"[ ... ]x"
+],
+[
+"A",
+"",
+"Der Rest der Kolumne ist nicht erhalten."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 2''",
+"hl": "",
+"master": "[ ... ] NINDA?-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 1'",
+"NINDA?-x[ ... ]"
+]
+],
+"tr": "[ ... ] Brot? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 2''",
+"hl": "",
+"master": "[ ... ] pi-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 1'",
+"[ ... ] pí-x-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2''",
+"hl": "",
+"master": "[ ... ] war-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 2'",
+"[ ... ] wa-ar-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2''",
+"hl": "",
+"master": "n=at akku-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 4'",
+"na-at ⸢ak-ku⸣-x1[ ... ] ¬¬¬"
+]
+],
+"tr": "Und [sie?] trink[en] es.",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 3''",
+"hl": "",
+"master": "GIM-an=ma=an {d}[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 5'",
+"GIM-an-ma-an {d}G[IŠ?2.GIM.MAŠ?... ]"
+]
+],
+"tr": "Als ihn aber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 3''",
+"hl": "",
+"master": "nu=šmaš {d}GIŠ.GIM.MA[Š-uš ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 6'",
+"nu-uš-ma-aš {d}GIŠ.GIM.MA[Š-uš ... ]"
+]
+],
+"tr": "[ ... ] Gilgame[sch ... ] ihnen [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... ] UR.SAG-in ÉRIN{MEŠ} [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 6'",
+"[ ... ] UR.SAG-in ÉRIN{MEŠ} [ ... ]"
+]
+],
+"tr": "[ ... ] die heldenhaften Truppe[n? ... ]1",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 3''",
+"hl": "",
+"master": "namma=at IŠ-TU[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 8'",
+"nam-ma-at IŠ-TU[ ... ]"
+]
+],
+"tr": "Dann [ ... ] es von [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 3''",
+"hl": "",
+"master": "nu UR.SAG-iš ÉRIN[{MEŠ} ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 9'",
+"nu UR.SAG-iš ÉRIN[{MEŠ} ... ]"
+]
+],
+"tr": "Die heldenhaften Trup[pen? ... ]2",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 3''",
+"hl": "",
+"master": "nu=wa {GU4}ALÛ-u[š ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 10'",
+"nu-wa {GU4}A-LU-u[š ... ]"
+]
+],
+"tr": "„Der Himmelsstie[r ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 11'",
+"x[ ... ]"
+],
+[
+"A",
+"",
+"Die re. Kol. bricht ab."
+]
+],
+"tr": "[ ... ]“",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 2'':1": "⸢ak-ku⸣-u[š?-kán-zi?",
+"§ 3'':2": "Rychtařík, Chatressar 4, 2001, 42, liest: {d}E[N.KI.DU4.",
+"T1": "Rychtařík, Chatessar 4, 2001, übersetzt: „den Helden die Truppen“.",
+"T2": "Rychtařík, Chatessar 4, 2001, übersetzt: „der Held die Truppen“."
+}
+}

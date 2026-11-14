@@ -1,0 +1,285 @@
+{
+"kind": "MYTH",
+"cth": "CTH 331.2",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 331.2 (TX 2009-08-26, TRde 2009-08-26)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ta]rp[iš marrattat]1",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 1'",
+"[ta-a]r-p[í-iš ... ]"
+]
+],
+"tr": "[ta]rp[i- löste sich auf].",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... marr]atta[t]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 1'",
+"[ ... ] [mar-r]a-at-ta-a[t]"
+]
+],
+"tr": "[parninka- lö]st[e sich auf].",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 2'",
+"[ ... ]"
+]
+],
+"tr": "[Das Blut löste sich auf.]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ḫap]anzi marratt[at]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 3'",
+"[ḫa-p]a-an-zi mar-⸢ra⸣-at-t[a-at]"
+]
+],
+"tr": "[ḫap]anzi- löst[e sich auf].",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 3'",
+"[ ... ]"
+]
+],
+"tr": "[Das Rote löste sich auf.]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "išḫaḫru marratta[t]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 4'",
+"iš-ḫa-aḫ-ru mar-ra-at-ta-a[t]"
+]
+],
+"tr": "Der Tränenstrom löst[e] sich auf.",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] marrattat",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 4'",
+"[ ... ] mar-ra-at-ta-at"
+]
+],
+"tr": "[Die Krankheit der Augen] löste sich auf.",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "šipan ma[rrattat]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 5'",
+"ši-pa-an ma[r-ra-at-ta-at] ¬¬¬"
+]
+],
+"tr": "Der Eiter lö[ste sich auf].",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "gamarāš KI.MIN",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 6'",
+"⸢ga⸣-ma-ra-a-aš KI.MIN"
+]
+],
+"tr": "Die Trübung (der Augen) desgleichen.",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2'",
+"hl": "",
+"master": "ḫarki KI.MIN",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 6'",
+"ḫar-ki KI.MIN"
+]
+],
+"tr": "Das Weiße desgleichen.",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2'",
+"hl": "",
+"master": "in[an KI.MIN]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 6'",
+"i-n[a-an ... ]"
+]
+],
+"tr": "[Die] Krank[heit desgleichen].",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ma]rrattat=aš",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 7'",
+"[ma]r-ra-at-ta-ta-aš"
+]
+],
+"tr": "Sie [lö]ste sich auf.",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 2'",
+"hl": "",
+"master": "n=aš=kan u-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 7'",
+"na-aš-kán ú-[ ... ]"
+]
+],
+"tr": "[ ... ] sie [ ... ].",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 2'",
+"hl": "",
+"master": "[DUMU].LÚ.U19.[L]U tuekkeš=šeš2 [ ... ] KI.MIN",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 8'",
+"[DUMU].LÚ.⸢U19⸣.[L]U tu-ek-ke-eš-še-eš x[ ... ] [ ... ]x-x KI.MIN"
+]
+],
+"tr": "Die Glieder des [Men]sch[e]n [ ... ] desgleichen.",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu=ššan[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 9'",
+"nu-uš-ša-an[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]ištan[za?- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 10'",
+"[ ... ]⸢iš⸣-ta-⸢an3⸣-[za?- ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ] See[le? ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Vgl. zu diesem Paragraphen z.B. KUB 33.66 + Vs. II 11'-14' (CTH 331.1).",
+"§ 2':2": "Im Paralleltext KUB 33.66+ (CTH 331.1) steht hier ein Singular.",
+"§ 2':3": "Nach Kollation am Original passen die Reste zu an."
+}
+}

@@ -1,0 +1,240 @@
+{
+"kind": "MYTH",
+"cth": "CTH 364.3",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 364.3 (TX 2009-08-31, TRde 2009-09-02)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2''",
+"title": "§ 2''",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"lk. Kol. 1'",
+"[ ... ]x"
+],
+[
+"A",
+"",
+"Der Rest der lk. Kol. ist weggebrochen."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 2''",
+"hl": "",
+"master": "{d}kumarb[i- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 1'",
+"{d}ku-mar-b[i- ... ]"
+]
+],
+"tr": "Kumarb[i ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 2''",
+"hl": "",
+"master": "[ ... ] ḫink[att]a",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 1'",
+"[ ... ] ḫi-in-k[at-t]a"
+]
+],
+"tr": "Er vernei[gte s]ich ... ].",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 2'",
+"x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2''",
+"hl": "",
+"master": "n=a-[ ... ]-š[a(-) ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 3'",
+"⸢na⸣-[ _ _ ]-š[a(-) ... ]"
+]
+],
+"tr": "Und [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2''",
+"hl": "",
+"master": "[ ... ]-an(-)[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 4'",
+"x x x x-an(-)[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2''",
+"hl": "",
+"master": "INIM{ḪI.A}-x-y[a?(-) ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 5'",
+"INIM{ḪI.A}-x-y[a?(-) ... ]"
+]
+],
+"tr": "Worte und? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2''",
+"hl": "",
+"master": "[ ... ] {GIŠ}LAM.[GA]L-aš [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 5'",
+"[ ... ] {GIŠ}LAM.[GA]L-aš [ ... ]"
+]
+],
+"tr": "[ ... ] aus Pistazienholz [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2''",
+"hl": "",
+"master": "[ ... ] {GIŠ}patalḫa[z ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 6'",
+"[ ... ] {GIŠ}pa-tal-ḫa-a[z ... ]"
+]
+],
+"tr": "[ ... von] der Fußfessel [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2''",
+"hl": "",
+"master": "n=an INA [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 8'",
+"na1-an I-NA [ ... ]"
+]
+],
+"tr": "[ ... ] ihn in [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2''",
+"hl": "",
+"master": "[ ... ] {d}10-ni n[a- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 8'",
+"[ ... ] {d}10-ni n[a- ... ]"
+]
+],
+"tr": "[ ... ] dem Wettergott [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 2''",
+"hl": "",
+"master": "[ ... me]mišk[iuwan dāiš]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 9'",
+"[ ... ] [me]-⸢mi-iš⸣-k[i-u-wa-an ... ]"
+]
+],
+"tr": "[ ... begann, ... zu spre]chen.",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 2''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 10'",
+"[ ... ] [ _ ]x[ ... ]"
+],
+[
+"A",
+"",
+"Die re. Kol. bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 2'':1": "Nach Kollation am Foto Zeichen über Rasur."
+}
+}

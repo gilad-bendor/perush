@@ -1,0 +1,413 @@
+{
+"kind": "MYTH",
+"cth": "CTH 341.III.9",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 341.III.9 (TX 2009-08-27, TRde 2009-08-27)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3''",
+"title": "§ 3''",
+"hl": ""
+},
+{
+"id": "§ 4''",
+"title": "§ 4''",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[n]u kāša u-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 1",
+"[n]u ka-a-⸢ša ú⸣-x[ ... ]"
+]
+],
+"tr": "Hier [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] pāmi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 1",
+"[ ... ] pa-a-mi"
+]
+],
+"tr": "Ich gehe [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu kwitma[n ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 2",
+"nu ku-it-ma-a[n ... ]"
+]
+],
+"tr": "Und solang[e ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=mu=kan edaš pašša-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 3",
+"nu-mu-kán e-da-aš pa-aš-ša-x[ ... ]"
+]
+],
+"tr": "[ ... ] mich jenen [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] šalli {d}UTU-i warnušk[e- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 3",
+"[ ... ] šal-li {d}UTU-i wa-ar-nu-uš-k[e- ... ]"
+]
+],
+"tr": "[ ... ] verbrenn[- ... ] für den großen Sonnengott.",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] EGIR-pa UL uwāmi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 4",
+"[ ... ] ⸢EGIR⸣-pa Ú-UL ú-wa-a-mi"
+]
+],
+"tr": "Ich komme nicht zurück [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 5",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=mu aggantan ḫarkant[an? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 6",
+"nu-mu ag-ga-<an->ta-an ḫar-kán-t[a-an?1 ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ] mir/mich den toten, vernichte[ten? ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu GIM-an {URU}urukumni2 A.ŠÀ A.G[ÀR ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 7",
+"nu GIM-an {URU}u-ru-kum-ni A.ŠÀ A.G[ÀR ... ]"
+]
+],
+"tr": "Als [ ... ] in Feld und Flu[r] von Uruk [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu ūški",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 8",
+"nu ú-uš-ki"
+]
+],
+"tr": "und beobachte!",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu ḫalukan tarn[a(-) ...? ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 8",
+"nu ḫa-lu-kán tar-n[a(-) ... ]"
+]
+],
+"tr": "[ ... ] lass[- ... ] die Botschaft [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] ḫalukan ištamaššanz[i]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 8",
+"[ ... ] ḫa-lu-kán iš-ta-ma-aš-ša-an-z[i]"
+]
+],
+"tr": "Sie höre[n] die Botschaft [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ḫ]ūmanza IGI-anda wezz[i]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 9",
+"[ ... ] [ḫ]u-u-ma-an-za IGI-an-da ú-ez-z[i]"
+]
+],
+"tr": "[J]eder komm[t ... ] entgegen.",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] ⸢IGI-anda?⸣ [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. II 11",
+"[ _ _ ]x x x ⸢IGI-an-da?⸣ [ ... ]"
+],
+[
+"A",
+"",
+"Vs. II bricht ab."
+]
+],
+"tr": "[ ... ] entgegen? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... ] {d}impalur[i(-) ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 1'",
+"[ ... ]x ⸢{d}im⸣-pa-lu-r[i(-) ... ]"
+]
+],
+"tr": "[ ... ] Impalur[i ... ]",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... ]-aš wezzi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 2'",
+"[ ... ]-aš ú-ez-zi"
+]
+],
+"tr": "[ ... ] kommt [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 3''",
+"hl": "",
+"master": "EG[IR ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 2'",
+"EG[IR?3 ... ]"
+]
+],
+"tr": "Hint[erher? ... ]",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... ] kwin wal(a)[ḫ?- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 3'",
+"[ ... ]x ku-in wa-al-a[ḫ?- ... ] ¬¬¬"
+]
+],
+"tr": "Wen [ ... ] schla[g- ... ],",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... ]-š=an=mu ēpt[a]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 4'",
+"[ ... ]x-ša-an-mu e-ep-t[a]"
+]
+],
+"tr": "[ ... ] ergri[ff] ihn für mich.",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... U]R.SAG-en {d}GIŠ.GIM.MA[Š-un ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 4'",
+"[ ... ] [ ... U]R.SAG-en {d}GIŠ.GIM.MA[Š-un ... ]"
+]
+],
+"tr": "[ ... ] den [H]elden Gilgame[sch ... ]",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... -r]ā? dāi",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 6'",
+"[ ... -r]a?-a da-a-i"
+]
+],
+"tr": "[ ... ] nimmt/legt [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 4''",
+"hl": "",
+"master": "na-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 6'",
+"na?-[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... {f}na]ḫmizule[n ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. III 7'",
+"[ ... {f}na-a]ḫ-mi-zu-le-[en ... ]"
+],
+[
+"A",
+"",
+"Rs. III bricht ab. Noch ein bis zwei Zeilen bis zum Kolumnenende."
+]
+],
+"tr": "[ ... Na]ḫmizuli1 [ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Vgl. HED 1, 19.",
+"§ 2':2": "Zur Form s. RGTCSupp. 181.",
+"§ 3'':3": "Nach Kollation am Original mögliche Lesung.",
+"T1": "Vgl. dazu van Gessel 1998, 321."
+}
+}
