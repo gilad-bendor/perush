@@ -789,6 +789,10 @@ Tool: the `טוב` gate anchored at word ends (it read `טובל`); `ארר` lic
 (II.1, 36, 61, III.25) recorded in the project. **Split left for the lead:** *šanû* "repeat, change" = `שִׁנָּה`
 (the cognate, here) against §0.3's *nakāru* = `שִׁנָּה` (the Sumerian *kur₂* rule). Tool: the `ברך` gate anchored
 (`בברכיך` "your knees").
+#### 13.7.3 Part AN3 (OB II, OB III, NA), 2026-11-14
+`project--AN3.md` accepted: SB's Hebrew copied where the Akkadian is the same ("= SB …"), a different word where it
+differs ("~ SB …"); OB II.81–82 = OB III.1–2 (the Susa tablets) identical. Decisions: OB II.22 *iwwi* "became" (as SB);
+*rihiṣ* `שְׁטֹף` (eBL's "trust" a lemma slip); *elēnû* `עִלִּי` (`עליון` reserved). `verify AN --strict` OK (694).
 
 
 ## Changelog
