@@ -197,6 +197,14 @@ bee, the dark earth, the bronze cauldrons): wherever SG, LI, AZ, MU repeat a TE 
 
 **Reserved in every myth line from this run** (§H3 rows added): `צלם`/`דמות` (Gen 1:26), the root יצר (Gen 2:7), `יהוה`.
 
+**After the drafts and reviews (2026-11-14, the coordinator):** the translators' Proposals (each project's `project.md`) are
+merged here by reference; their fixed strings bind later work on these keys. Decisions:
+- {D}UTU-ŠI / -ŠĪ "My Sun" = `שִׁמְשִׁי` (the law row, now also reading the macron; MU's `הוד מלכותי` aligned).
+- *ambašši-* "burnt offering" (Hurrian) = `שְׂרֵפָה?` (GI 6:46, 6:56): `עֹלָה` (Lev 1) is kept out of the line.
+- *patalḫa-* = `כֶּבֶל־רַגְלַיִם` (SI, HPM "Fußfessel"; KU 207 aligned).
+- **Homonyms, not splits:** *kuwaš(š)-* "kiss" `נשק` (LA 1:47, UL 3.1:131) / *kuwašk-* iterative of *kuen-* "strike" `תקף` (SI 4:5, LI 1:61).
+- **Splits kept by sense:** *šamnai-* `עִצֵּב` "fashion" (GI) / `הִצִּיב` "set up" (HE 23:2, UL 3.1:179, 207); *weya-* `בכה` (SI) / `צעק` (KU 146); *maniyaḫḫ-* `ניהל` "govern" (SI) / `הפקיד` "entrust" (UL); *ninink-* `עורר` animals (LA) / `הניע` objects (UL); *nanna-* `דחק` (SI) / `העביר?` (KU 277, of a word); *ḫink-* `קדו` (LI) / *aruwai-* `השתחווה` (MU); *išḫiya-* `כרך` "bind" (SG) / the Laws' `חייב`; GI keeps the Akkadian epic's Hebrew where the Hittite has its word: GURUŠ `עֶלֶם` (as *eṭlu*; HE, AP `בחור`), DANNA `בֵּרוּ` (as *bēru*; HLPT, HE `פרסאות`), *ara-* `רֵעַ` (the Laws `חבר`); *epp-* `תפס` even in the calque "seized the road" (GI 1:196); *šakuwai-* `צופה`.
+
 ## H2. Names (machine-read; the myth texts only)
 | Source (regex) | Hebrew | ★ | Note |
 |---|---|---|---|
