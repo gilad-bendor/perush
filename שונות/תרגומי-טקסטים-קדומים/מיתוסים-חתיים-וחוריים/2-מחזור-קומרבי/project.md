@@ -209,7 +209,98 @@ hear); Exod 16:16 (2:105: GULGULLATU [cognate]); Gen 11:4 [divergence] (3.1:30);
 10:15 (3.1:142: the saw); Ps 2:12 (3.1:132: kissing the feet); Gen 1:6–7 [divergence] and Th. 176–181 (3.1:219, 3.1:234:
 heaven and earth cut apart); Gen 3:19 (3.1:252: the dead as dust).
 
+### Round 8 run 5, translator 2, LA SI
+Drafted 2026-11-14: `annotated-LA.rtl.md` (LA 1:1–6:8, all 223 clauses) and `annotated-SI.rtl.md` (SI 1:1–6:15, all 193),
+with `translation--intro-LA.rtl.md` and `translation--intro-SI.rtl.md`. `verify LA --strict` 0, `verify SI --strict` 0;
+`check_bible_quotes.py` 0 on all four files. HPM's German was read after each text was drafted (LA in two blocks, SI in one);
+every adopted correction is in a **תרגומים** bullet (LA 1:16, 1:24, 1:42, 1:47, 1:84–85, 1:94, 1:100, 1:127, 1:144, 1:147,
+1:153, 1:155, 3.2:8; SI 1:1, 1:9, 2:4, 2:5, 2:37, 2:38, 2:55, 2:56, 2:58, 2:60, 2:66, 4:8, 4:11, 4:12, 5:4, 5:22, 6:4, 6:11).
+No review passes by a second reader yet; `translation-LA/SI.rtl.md` not built (the build of the shared `translation.rtl.md`
+is the coordinator's).
+
+**1. Pre-set rows (M4) kept.** {D}LAMMA `אֵל הַמָּגֵן` (vocalized at its first line, LA 1:13; `אֵל` vocalized everywhere as a
+trap; the note there names Kurunta, the god of the countryside and the hunt; also KU 244's `אֵל הַמָּגֵן שֶׁל הַבָּר`).
+KÙ.BABBAR as the hero `כֶּסֶף` (no article; vocalized at the first occurrence in each fragment: SI 1:7, 2:21/2:23, 4:2,
+5:9/5:10, 6:6). **Title:** the skeleton's `שירת הכסף` is `שירת כֶּסֶף` (the name has no article); LA's title is `מלכות אֵל
+הַמָּגֵן (CTH 343)` (M4 rejects `LAMMA` in Latin letters: **the tool's own title for LA, `שירת אֵל הַמָּגֵן: מלכותו של
+LAMMA`, should change**, and "שירה" is not attested for LA – no colophon survives).
+
+**2. Fixed strings (copy byte for byte).**
+| Hittite | Hebrew | Lines |
+|---|---|---|
+| *INA* MU 9.KAM X *nepiši* LUGAL-*uš ēšta* | `תשע שנים היה אֵל המגן מלך בשמים.` (KU 14 `תשע שנים ספורות היה אללו מלך בשמים.` with *kappuwant-*) | LA 1:45 |
+| *aši kwin* {D}LAMMA-*an nepiš(i)* LUGAL-*un iyawen* | `את אֵל המגן ההוא, אשר עשינו אותו למלך בשמים –`; with *=ma*: `ואילו את אֵל המגן, אשר עשינו אותו למלך בשמים –` | LA 1:83, 1:111 |
+| *apāš* GIM-*an :niwaralliš* / KUR.KUR.MEŠ-*ya QĀTAMMA :niwaralatta* (M2 analogy) | `כמו שהוא *עוין* –` / `כך גם הארצות נעשו *עוינות*,` | LA 1:84–85 = 1:112–113 |
+| *namma* DINGIR.MEŠ-*aš* NINDA.GUR₄.RA *išpanduzzi UL kuiški pāi* | `ועוד לָאֵלִים לחם עבה (ו)נסך אף אחד לא נותן!` | LA 1:86 = 1:114 |
+| *īt=kan kattan dankuwai taknī* | `"לך מטה אל [האדמה] האפלה!` (SI 5:3 `"לך מטה [אל האדמה האפלה]!"`) | LA 1:104, SI 5:3 |
+| *nu=tta uddār kwe temi* | `ואת הדברים אשר אני אומר לך –` (UL 1:130) | LA 1:105 |
+| *nu=wa=mu uddār ištamaš* | `ושמע את דבריי:` (F33) | LA 1:108, 1:137 |
+| *wannummiyaš* DUMU-*aš* | `הילד היתום`; *zik=a … anzel iwar wannummiyaš* DUMU-*aš* `גם אתה – כמונו – ילד יתום!` | SI 4:2–4:19 |
+| *kuwat=wa=naš walḫiškeši / kuwaškeši* | `מדוע [אתה מוחץ אותנו]?` / `ומדוע אתה תוקף אותנו?` (4:17–18 the same words, quoted) | SI 4:4–5, 4:17–18 |
+| the months (*ITU n pāer … ITU 10 tiyazzi*) | `החודש הרביעי הלכו, … [והחודש העשירי צועד].` (KU 268–271 in the singular `הלך` / past `צעד`) | SI 2:8–2:10 |
+| *išḫaḫru parā PA₅.ḪI.A-uš mān arš-* | `ודמעותיו זורמות החוצה כמו פלגים.` (UL 2:62, copied) | SI 2:12 |
+| *1-anki=at šarrer* | `ובבת אחת [חצו],` (HE 1:92, UL 1:159) | SI 2:63 |
+| EGIR-*pa* X *memiškiwan dāiš* with a word between | `החל לומר את הד[ברים] בחזרה אל אמו:` (F30 fires, not F31: see 5) | SI 4:10 |
+
+**3. New renderings (first line).** LA: GAG.Ú.TAG.GA `חץ` (1:13); UBUR `דד` (1:14, = Sum. *ubur*); GABA `חזה`; *šalwai-*
+`*חדר*` (1:14, 1:16); *tiyarit-* `*גלגלים*` (as UL); ZAḪḪIRU `*זַחְחִיר*` (HPM "Opferschale?"); *ḫaliya-* mid. of a wheel `נע`
+(1:17, as HL2 198.5); KIR₄.TAB.ANŠE `רסן` (1:27–1:35); *šešḫa-* `קבע` (as KU); *šarganiya-* `*נקרע*` (as UL 3.1:24; HPM "erhob
+sich"); UDU sg. `שה` (as HL1 458); *šar(a)war* `*סערה*`; UR.BAR.RA `זאב`, NÍ.ZU `גנב` (as the Laws); ZÌ.DA `קמח`, BA.BA.ZA
+`דייסה`; ***kuwašk-* "kiss" `נשק` (LA 1:47, HPM) but "beat" `תקף` (SI 4:5, 4:18, as LI 1:61): a split by sense – the lead
+should settle *kuwašk-* across LI, LA, SI**; *tawal*, *walḫi* transcribed `תַּוַל`, `וַלְחִי`; Ì.NUN `חמאה` (as TE 144);
+*ašk-* `שער`; *ḫari-* `עמק`; *lalḫuwai-* `שפך`; *šuwaru* `במלואו`; *āšma* `הֵן` (M3 split); *ḫuḫḫa-* `אבות־אבות`; *ḫink-*
+`הרכין (ראש)` (imperative `הרכן`, 1sg `אַרְכִּין`); NINDA.GUR₄.RA `לחם עבה` (AS); *išpanduzzi-* `נסך`; *walliwalli-*
+`*עצום*` (UL 2:43 `*בעוצמה*`); *niwaralli-* / *niwarala-* `*עוין*` / `נעשה *עוין*` (HPM "feindselig"); *ḫatrai-* `הודיע`
+(1:91, 3.2:3; SR *ḫatreššar* `הודעה`); *tittanu-* `העמיד`, *arḫa tittanu-* `הדיח` (1:110); *kartimmiyanu-* `הִזְעִים` (from
+*kartimmiya-* `זעם`); *ninink-* `עורר` (1:116, 3.1:6; HPM "aufscheuchen"); *taknaš ḫuitar* `חיות האדמה` (M3: *taknaš*
+`האדמה`; Gen 1:25 `חַיַּת הָאָרֶץ` in the apparatus only); *iškiš-* / *išḫiš-* `גב` (as AZ); *ikdu-* `*שוק*` (vocalized
+`הַשּׁוֹק`, HPM "Unterschenkel"); *mark-* `פירק` (as IN 7.3); *išpar-* `פרש` (as AS; HPM here "traten nieder"); *zuwa-*
+`מזון`. SI: *mal* `תבונה` (KU 228); *mišriwatar* `הדר`; *ḫandatar* `השגחה`; *ḫattant-* `חכם`; *wannummiya-* `יתום`
+(no Hittite gate; Egyptian tfn, Ugaritic *ytm* have their own); *paḫḫur* `אש`; *ḫanneššar* `דין` (`משפט` avoided);
+*attaišši* (Hurrian) `אב`; *ḫuinu-* `הריץ` (as TE 16, PU 48); *ḫarnamniya-* `הסעיר`; *waḫanna* `להסתובב` (the root of *weḫ-*);
+BÚN `רעם`; LAM.GAL `*בטנה*` (HPM "Pistazie"); ***patalḫa-* `כבל־רגליים`** (HPM "Fußfessel"; KU 207 has `סוליה?`, UL `כף רגל`
+of the body part – **for the lead: KU 207 → `כבל־רגליים?`**); *nanna-* `דחק` (KU 277 `העביר?` – one verb wanted); *karš-*
+`כרת`; MÚ.SAR `גן`; Ú.SAL `אחו`; *teriya-* `*התריס*` (HPM "trotzen"); *ḫazzikk-* `חבט` (HPM "einprügeln"; `מכה` reserved);
+*weya-* "weep" `בכה` (SI 4:8–9; KU 146 `צעק` of Kumarbi in pain: a split by sense); *nakkiyatar* `כובד` (KU 79); *mari-*
+`רומח`; *kaniniya-* `התכופף`; *lalukkima-* **`מקורות האור`** (not `מאורות`: Gen 1:16 stays in the apparatus);
+*maniyaḫḫ-* "govern" `ניהל` (UL `הפקיד` "entrust": a split by sense); *zuppari-* `לפיד`; *aššiyatar* `אהבה`; *kuwaya-*
+`פחד` (`ירא` is *naḫḫ-*'s); *peḫute-* `הביא`.
+
+**4. Names.** All from §H2 / M1 (Kubaba, Izzummi, Našalma, Ninurta, Nara, Napšara, Ḫupešna, Duddulla, Urkiš, Abzuwa); no new
+rows. Duddulla (LA 1:89) has no §H2 row (M1 only) – harmless.
+
+**5. Tool bugs (escaped or worked around, never written around in the Hebrew).**
+- **LA 1:82: the base has an empty composite.** HPM's composite `eḫu EGIR-pa pāweni` was read by the converter as a
+  manuscript named "--" (`data LA 1:82` shows `ms -- : eḫu EGIR-pa pāweni`). The entry keeps the empty backticks (so `verify`
+  passes) and the הערות give the composite; please fix the converter and the skeleton.
+- **The law table's Ḫatra name row (`ḫatr…`) reads the verb *ḫatrai-* "send word"** as the town `חַתְרָה` (LA 3.2:3
+  *ḫatrāši*; escaped `[היתר שם: …]`). Anchor it to `{uru}ḫatr`.
+- **A gate does not see a word inside a restoration** (known): `ירא` at SI 2:37, 2:42 (*nāḫi* restored), escaped
+  `[היתר שער: …]`.
+- **F30 fires when a word stands between EGIR-*pa* and *memiškiwan dāiš*** (SI 4:10 *EGIR-pa anni=šši memiškiwan dāiš*):
+  rendered `החל לומר … בחזרה`, which is also the most literal; F31's regex could allow one word between.
+- **§H3 `קרבו` (Lev 18) blocks "his battle"** (*zaḫḫai-* + poss., SI 1:5): written `הקרב שלו`; harmless, but the gate could
+  exempt the noun.
+
+**6. Cruxes.** LA 1:16 ZAḪḪIRU and *tiyarit-* (chariot parts? HPM "Opferschale?"); 1:24 *šarganiya-* (torn / rose);
+1:46–1:47 *šar(a)war* "storm?"; 1:47 *kuwašk-* "kiss" or "strike"; 1:49–1:50 the two *dāi* (put / take); 1:79 statement
+(HPM, ironic?) or rhetorical question (ours); 1:84–85 *niwaralli-* (Luwian; "hostile"?); 1:93–95 2nd or 3rd person (HPM 3rd);
+1:100 *kappuwai-* "count" or "care" (HPM); 1:106 Nara Napšara as one god ("my brother"); 1:110 Ea's preterite "I deposed
+him" before the deposition; 1:141, 1:147 *ikdu-*; 1:153 *pandu* "henceforth" (ours, as KU 156) or a verb (HPM). SI 1:3–1:6
+(comparatives of praise); 2:4 "stone of Ḫupešna" = alabaster (HPM); 2:5 IM wind or Storm-god (HPM); 2:23 *kuen-* "kill"
+(the mother to her son); 2:26 Hurrian *attaišši*; 2:37–2:42 which god Silver must fear (Kumarbi, 2:42); 2:47 *waḫanna*;
+2:55, 2:66 *nakki-* "in honour?"; 4:12 *teriya-*; 5:21 NÍ.TE-*it* "with your body" = "yourself" (HPM).
+
+**7. Parallels for the index.** LA: 2 Kgs 17:1 [equivalent] (1:45: nine years of reign; KU 14); Lev 26:6 (1:46: no wild
+beasts in the blessed years); Joel 4:18 (1:55: the land flowing with drink); Isa 14:13, Ezek 28:2 (1:79: the king who exalts
+himself over the gods); Qoh 10:20 (1:80: the words carried to the ruler by the air); Deut 32:15 (1:86: plenty that makes one
+forget the god; Ea's argument, cf. HE); Gen 1:25 (1:116: the animals of the earth, `חיות האדמה`). SI: Exod 15:1 and UL 1:4
+(1:7: "I sing"); 1 Sam 1:20 (2:8: the months of pregnancy, KU 268–271); Lam 3:48 (2:12 = UL 2:62); 1 Sam 2:7 (2:40: the god
+who brings down the high and raises the low); Judg 11:1–2 (4:6: the son mocked for his birth – Jephthah, in words only);
+Isa 14:12 and KU 34 (5:11: the heavenly bodies pulled down); Gen 1:16 (5:17: the two great lights; `מאורות` not in the line).
+
 ## Progress
+- 2026-11-14: Round 8 run 5, translator 2: LA 1:1–6:8 (223) and SI 1:1–6:15 (193) drafted, with their intros; `verify LA SI --strict` 0; no review passes yet.
 - 2026-10-30: translator 2, part 2: UL 2:1–10:10 drafted (no review passes yet); UL complete.
 - 2026-10-30: translator 2, part 1: KU 1–296 and UL 1:1–1:253 drafted (no review passes yet).
 - 2026-10-30: base secured, renderings fixed, brief written (the coordinator).

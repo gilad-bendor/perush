@@ -119,9 +119,9 @@ UNITS = {
     "LI": (P_TE, "אֵל הַסְּעָרָה בלִיחְזִינָה (CTH 331)", "myth", _hpm_myth("331", ["1", "2"]), "CTH-331"),
     "AZ": (P_TE, "אַנְזִילִי וזוּקִּי (CTH 333)", "myth", _hpm_myth("333"), "CTH-333"),
     "MU": (P_TE, "המוּגָוָר של אֵל הַסְּעָרָה (CTH 325)", "myth", _hpm_myth("325"), "CTH-325"),
-    "LA": (P_KUM, "שירת אֵל הַמָּגֵן: מלכותו של LAMMA (CTH 343)", "myth",
+    "LA": (P_KUM, "מלכות אֵל הַמָּגֵן (CTH 343)", "myth",
            _hpm_myth("343", ["1", "2", "3.1", "3.2", "4", "5", "6"]), "CTH-343"),
-    "SI": (P_KUM, "שירת הכסף (CTH 364)", "myth", _hpm_myth("364", ["1", "2", "3", "4", "5", "6"]), "CTH-364"),
+    "SI": (P_KUM, "שירת כֶּסֶף (CTH 364)", "myth", _hpm_myth("364", ["1", "2", "3", "4", "5", "6"]), "CTH-364"),
     "GI": (P_GI, "גִּלְגָּמֶשׁ החתי (CTH 341.III)", "myth", _hpm_myth("341.III", [str(i) for i in range(1, 20)]), "CTH-341"),
 }
 PROJECT_ORDER = {P_HL: ["HL1", "HL2", "HLPT"], P_IN: ["IN"], P_RIT: ["AS", "UH", "PU", "AM", "AM2"],
@@ -306,6 +306,9 @@ def _hpm_rows(key, kind, pre, base, idx, done):
                     if pf in idx and pf not in seen:
                         seen.add(pf)
                         words.append((fm, "", " | ".join(idx[pf][:3])))
+        if not c["master"].strip() and any(m[0] == "--" for m in c["mss"]):
+            # hpm2md read the composite as a manuscript named "--" (LA 1:82; 2026-11-14, Round 8 run 5)
+            c = dict(c, master=[m[2] for m in c["mss"] if m[0] == "--"][0], mss=[m for m in c["mss"] if m[0] != "--"])
         s = secs.get(c["sec"], {})
         sec = c["sec"]
         hl = c.get("hl") or s.get("hl", "")

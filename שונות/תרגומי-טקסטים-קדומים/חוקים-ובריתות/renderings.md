@@ -499,7 +499,7 @@ vowels by *matres lectionis*; vocalized at the first occurrence per file (★ = 
 | `n[eē]rik` | `נֵרִיק` | | |
 | `\{uru\}pal[aā]\b` | `פָּלָא` | ★ | (unvocalized "wonder") |
 | `zalpa` | `זַלְפָּה` | ★ | (≠ biblical `זִלְפָּה`) |
-| `ḫatr[aā]` | `חַתְרָה` | | |
+| `\{uru\}ḫatr[aā]` | `חַתְרָה` | | |
 | `tašḫiniy` | `תַּשְׁחִינִיָּה` | | |
 | `ḫemuw` | `חֶמוּוָה` | | |
 | `zip(?:p)?al(?:a)?nt` | `זִיפַּלַנְדָּה` | | Zippalanda. |
