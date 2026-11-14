@@ -314,6 +314,13 @@ for _k in [k for k in RESERVED_R8 if '(בלל|' in k]:
     RESERVED_R8[_k.replace('(בלל|', '(בלל|בלול|בלולה|בלולים|')] = RESERVED_R8.pop(_k) + [r'balālu|ba-la-l|bal-lu']
 for _k in [k for k in RESERVED_R8 if '(תועבה|' in k]:
     RESERVED_R8[_k.replace('(תועבה|', '(תועבה|תועבתו|תועבתם|תועבתי|תועבתך|')] = RESERVED_R8.pop(_k) + [r'ikkibu|ik-ki-b|ik-ki-ib']
+# ID1: ATF logograms (ARAD, SAGA / DU10 / damiq, NUMUN, ALAM) and `צלמי`.
+for frag, lic in {'עבד|עבוד': [r'_arad|arad_|\barad\b|ARAD'], '(טוב|': [r'da-mi-iq|damiq|du10|saga\b|_saga|SIG5|sig5'],
+                  '(זרע|': [r'numun|NUMUN'], '(צלם|': [r'alam\b|_alam|ALAM|ṣa-lam|s,a-lam']}.items():
+    for _k in [k for k in RESERVED_R8 if frag in k]:
+        RESERVED_R8[_k] = RESERVED_R8[_k] + lic
+for _k in [k for k in RESERVED_R8 if '(צלם|דמות)' in k]:
+    RESERVED_R8[_k.replace('(צלם|דמות)', '(צלם|צלמי|צלמו|צלמך|דמות)')] = RESERVED_R8.pop(_k)
 for _k in ('AN', 'AK', 'RE', 'ID'):
     RESERVED[_k] = RESERVED_R8
 # The Uruk cycle (renderings.md §12.4): Enmerkar's gates, plus the cycle's own (licensed by the transliteration + ETCSL

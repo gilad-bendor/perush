@@ -812,6 +812,11 @@ reviewer. Tool: G5–G8 (Ibrat licenses `אבר`; `Má-gan`; *ṭūbu*; `אשב�
 it; Gen 11:7–9 stays the apparatus's); **_ayyābu_ = `צַר`** (renderings §0, Gilgameš; *nakru* keeps `אוֹיֵב`) and
 *zību* `זְאֵב` [cognate] – applied by the reviewer; *saḫāru* / *maḫāru* by sense. Tool: `בלול`, `תועבתו` + *ikkibu*,
 TRAPS for Bašar, Id, Laḫmu, Mer, Ḫabur.
+#### 13.7.7 Part ID1 (Idrimi), 2026-11-14
+`11-פסל-אידרימי/project--ID1.md` accepted (the Alalaḫ forms noted line by line; SA.GAZ `חַבִּירוּ`; the numeral gods of
+line 98 kept as numbers with a note; the scribe's dittography in 93 `<<…>>`). Its uncertain readings (*urtabbiaku
+urāk*, *innaḫū*, *…anwanda*, *uzakki*, *ušaqqûšunu*) wait for ORACC's edition. Tool: ATF logogram licences (ARAD,
+SAGA/DU10, NUMUN, ALAM) and `צלמי`. **All four projects drafted: `verify AN AK RE ID --strict` OK (1,651 entries).**
 
 
 ## Changelog
