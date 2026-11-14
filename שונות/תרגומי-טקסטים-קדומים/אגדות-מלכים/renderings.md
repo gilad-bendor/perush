@@ -793,6 +793,13 @@ Tool: the `טוב` gate anchored at word ends (it read `טובל`); `ארר` lic
 `project--AN3.md` accepted: SB's Hebrew copied where the Akkadian is the same ("= SB …"), a different word where it
 differs ("~ SB …"); OB II.81–82 = OB III.1–2 (the Susa tablets) identical. Decisions: OB II.22 *iwwi* "became" (as SB);
 *rihiṣ* `שְׁטֹף` (eBL's "trust" a lemma slip); *elēnû* `עִלִּי` (`עליון` reserved). `verify AN --strict` OK (694).
+#### 13.7.4 Part AK1 (CH, FL, LI, ST), 2026-11-14
+`9-אגדות-מלכי-אכד/project--AK1.md` accepted: Anzû's speech formulas reused; the conquest list `את X קטלתי,`; the
+challenge `"לְכָה – המלך אשר ישתווה אליי,` / `באשר אנוכי התהלכתי –` / `הוא – יתהלך!"`; `ביום ההוא`; FL copies CH where
+the Akkadian is the same. Decisions: *tamḫāru* `עִמּוּת` (Anzû) – the ST title follows (`מלך העִמּוּת`); *etēqu* Š
+`נתן לחלוף` (`העביר` is *ebēru* Š); *ēnu* `אֵן` (`אדון` is *bēlu*); **_raqādu_ keeps `רָקַד`** (the cognate rule):
+Anzû's *mēlulu* moves to `שִׂחֵק` (2 Sam 6:21 [equivalent]) – applied by the Anzû reviewer. Tool: gates G1–G4 fixed
+(`ברך` licensed by *birku*; `השדמות`; ATF logograms and spellings for ST / ID; `גיבוריו`).
 
 
 ## Changelog

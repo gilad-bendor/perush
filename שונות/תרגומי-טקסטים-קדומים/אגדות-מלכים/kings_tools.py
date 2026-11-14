@@ -288,6 +288,20 @@ for _k in [k for k in RESERVED_R8 if k.startswith('ברך|')]:   # AN2: `בבר�
     RESERVED_R8[B + r'ו?[לבכמהש]{0,2}(ברך|ברכה|ברכת|ברכו|יברך|יבורך|מבורך|מברך|ברכני|ברכתי|ברכות)' + E] = RESERVED_R8.pop(_k)
 for _k in [k for k in RESERVED_R8 if k.startswith('ארור|')]:
     RESERVED_R8[_k] = RESERVED_R8[_k] + [r'arāru|erretu|arratu|a-ra-ru|ar-ra-r']
+# AK1 (2026-11-14): G1 `ברך` "knee" (*birku*); G2 `השדמות` read as ה־ש־דמות; G3 ATF logograms and spellings for the
+# CDLI texts (ST, ID); G4 the plural-suffixed `גיבוריו`.
+_ADD = {'ברך|': [r'birku|burku|bir-ki|bi-ir-ki|bur-ki'], 'היכל': [r'e2-gal|É\.GAL|e₂-gal|ēkall'],
+        '(נהר|': [r'\bi7\b|\bid2\b|ÍD|na-ri|na-a-ri'], '(טוב|': [r'ṭa-a-b|t,a-a-b|ṭa-ab|t,a-ab|ṭābu|DÙG|dug3'],
+        '(השליך|': [r'it-ta-du|id-di|ad-di|na-de|it-ta-di'], 'שוב' + E: [r'tu-te-er|tu-ur|u2-te-er|u2-ter|tu-ra|i-tu-ur|ta-a-ru'],
+        '(גבור|': [r'ur-sag|UR\.SAG|qar-ra-d|qu2-ra-d|qu-ra-d']}
+for _k in list(RESERVED_R8):
+    for frag, lic in _ADD.items():
+        if frag in _k:
+            RESERVED_R8[_k] = RESERVED_R8[_k] + lic
+for _k in [k for k in RESERVED_R8 if '(גבור|גיבור|' in k]:
+    RESERVED_R8[_k.replace('(גבור|גיבור|', '(גבור|גיבור|גיבוריי|גיבוריו|גבוריו|גבוריי|גיבוריך|גיבוריה|גיבורינו|')] = RESERVED_R8.pop(_k)
+for _k in [k for k in RESERVED_R8 if '(צלם|דמות)' in k]:
+    RESERVED_R8[B + r'(?!ה?שדמות)' + _k[len(B):]] = RESERVED_R8.pop(_k)
 for _k in ('AN', 'AK', 'RE', 'ID'):
     RESERVED[_k] = RESERVED_R8
 # The Uruk cycle (renderings.md §12.4): Enmerkar's gates, plus the cycle's own (licensed by the transliteration + ETCSL
