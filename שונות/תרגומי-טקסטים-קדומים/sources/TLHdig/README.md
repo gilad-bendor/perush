@@ -15,7 +15,7 @@
   - `CTH-3/` (the Tale of Zalpa: KBo 22.2 leads; KBo 3.38 is not in TLHdig), `CTH-789/` (the Song of Release, 123
     files; each line carries `lg="Hit"` or `lg="Hur"`: the Hittite side is read by script), `CTH-324/`, `CTH-342/`,
     `CTH-344/`, `CTH-345/`, `CTH-348/`, `CTH-360/` (the myths' manuscripts, for the word glosses of the HPM editions)
-    – added 2026-10-30, Round 5 run 2;
+    – added 2026-10-30, Round 5 run 2; `CTH-323/`, `325/`, `331/`, `333/`, `341/`, `343/`, `364/` – added 2026-11-14, Round 8 run 5 (the new myth keys' manuscripts);
   - `CTH-391/`, `CTH-394/`, `CTH-407/`, `CTH-410/`, `CTH-757/` (KUB 9.31, the collective tablet with Uḫḫamuwa, Zarpiya and
     Ašḫella) – the elimination rituals' manuscripts, for the word glosses (the composites are HPM's, `../HPM/`).
 - **Format notes:** `<lb lnr="Vs. I 9"/>` lines (`{€n}` = which joined fragment); `<w trans=… mrp0sel=… mrp1=…>`: the

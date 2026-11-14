@@ -499,14 +499,14 @@ vowels by *matres lectionis*; vocalized at the first occurrence per file (★ = 
 | `n[eē]rik` | `נֵרִיק` | | |
 | `\{uru\}pal[aā]\b` | `פָּלָא` | ★ | (unvocalized "wonder") |
 | `zalpa` | `זַלְפָּה` | ★ | (≠ biblical `זִלְפָּה`) |
-| `ḫatr[aā]` | `חַתְרָה` | | |
+| `\{uru\}ḫatr[aā]` | `חַתְרָה` | | |
 | `tašḫiniy` | `תַּשְׁחִינִיָּה` | | |
 | `ḫemuw` | `חֶמוּוָה` | | |
 | `zip(?:p)?al(?:a)?nt` | `זִיפַּלַנְדָּה` | | Zippalanda. |
 | `tamalki` | `תַּמַלְקִי` | | |
 | `arzaw\|arzauw\|ar-za-u-wa` | `אַרְזַוָה` | | Arzawa (western Anatolia). |
-| `\{d\}utu-ši\b\|\{d\}utu-ši=` | `שִׁמְשִׁי` | ★ | "My Sun" = His Majesty, the king's title; a note. |
-| `(?<!taknaš )(?<!takna-aš )(?<!ták-na-aš )\{d\}utu(?!-ši)` | `אֵל הַשֶּׁמֶשׁ` | | The Sun-god (Ištanu); never `שֶׁמֶשׁ` alone. |
+| `\{d\}utu-š[iī]\b\|\{d\}utu-š[iī]=` | `שִׁמְשִׁי` | ★ | "My Sun" = His Majesty, the king's title; a note. |
+| `(?<!taknaš )(?<!takna-aš )(?<!ták-na-aš )\{d\}utu(?!-š[iī])` | `אֵל הַשֶּׁמֶשׁ` | | The Sun-god (Ištanu); never `שֶׁמֶשׁ` alone. |
 | `\{d\}(?:im\|10\|u\|iškur)\b` | `אֵל הַסְּעָרָה` | | The Storm-god (Tarḫunna), as the fifth-day dossier. |
 | `\{d\}(?:lamma\|kal)\b` | `אֵל הַמָּגֵן` | | The protective god (Kurunta, Innara). |
 | `labarn\|la-ba-ar-n` | `לַבַּרְנָה` | | Labarna, the royal title (as a name; IN 11.13). |
@@ -579,7 +579,7 @@ vowels by *matres lectionis*; vocalized at the first occurrence per file (★ = 
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:זקנים\|זקני\|זקן)(?![א-ת])` | `šu\.gi\|greis\|mekkešš` | `זקנים` only for *LÚ.MEŠ ŠU.GI* (Deut 21:3) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:שכב\|ישכב\|ישכבו\|שוכב\|שוכבים\|שוכבת\|שוכבות\|שכבה\|תשכב\|שכבו\|לשכב)(?![א-ת])` | `\bšeš-(?!š)\|\bšeš(?:k\|zi\|ten\|ta\b\|un\b)\|\bše-eš-(?!š)\|šašt\|(?<![\w=])šaš\b\|šašzi\|šešzi\|šeški\|šiš=?k\|šešk\|(?<!ù ")(?<!šeš ")(?<!šeš-šu ")schlafen\|šēš` | `שכב` only for *šeš-* |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:לפנים)(?![א-ת])` | `karū\|karu\b\|karupat` | `לפנים` only for *karū* (F2) |
-| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:מחץ\|ימחץ\|ימחצו\|מחצו\|מוחץ\|מחצה\|ימחצנו)(?![א-ת])` | `walḫ\|walaḫ\|walḫ=\|gul-aḫ\|gulaḫ` | `מחץ` only for *walḫ-* |
+| `(?<![א-ת])(?!ו?למחצה(?![א-ת]))ו?(?:ש\|כש)?[בלהמכ]?(?:מחץ\|ימחץ\|ימחצו\|מחצו\|מוחץ\|מחצה\|ימחצנו)(?![א-ת])` | `walḫ\|walaḫ\|walḫ=\|gul-aḫ\|gulaḫ` | `מחץ` only for *walḫ-* (`למחצה` "half" exempted 2026-11-14, Round 8 run 5) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:פיצה\|יפצה\|יפצו\|פיצוי\|פיצויים\|פצה)(?![א-ת])` | `šarnink\|šarnikz\|šar=nink` | `פיצה` only for *šarnink-* |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:בן חורין\|בת חורין\|בני חורין\|בנות חורין)(?![א-ת])` | `ellu\|elletu\|el-lum\|el-li\|el-le\|araw\|\bfrei\b` | `בן חורין` only for *ELLUM* / *arawanni-* |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:חטא\|חוטא\|חוטאת\|יחטא\|חטאו\|חטאת)(?![א-ת])` | `wašt\|wašt=\|ušt[uú]l\|freveln\|sünde\|wašd\|ušd[uú]l\|wa-aš-du` | `חטא` only for *wašta-* / *waštul* |

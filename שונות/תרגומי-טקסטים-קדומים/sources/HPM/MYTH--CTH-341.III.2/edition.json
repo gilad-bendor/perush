@@ -1,0 +1,617 @@
+{
+"kind": "MYTH",
+"cth": "CTH 341.III.2",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 341.III.2 (TX 2009-08-27, TRde 2009-08-21)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2''",
+"title": "§ 2''",
+"hl": ""
+},
+{
+"id": "§ 3''",
+"title": "§ 3''",
+"hl": ""
+},
+{
+"id": "§ 4'''",
+"title": "§ 4'''",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ANA {d}GIŠ.GIM.MAŠ? E]GIR-pa mem[i- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 1'",
+"[ ... E]GIR-pa me-m[i- ... ]"
+]
+],
+"tr": "[ ... ] sprec[h- ... wi]eder [zu Gilgamesch]:",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[šar]ā uwawen",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 2'",
+"[ša-ra]-⸢a ú⸣-wa-u-⸢en⸣"
+]
+],
+"tr": "„Gehen wir [hina]uf!1",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] ANA ḪUR.SAG[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol 2'",
+"x[ _ (_) ]x A-NA ḪUR.⸢SAG⸣[ ... ]"
+]
+],
+"tr": "[ ... ] zu [den] Berg[en ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=wa kwit pēdum[men]i ANA {d}E[N.LÍL ... ] EGIR-pa",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol 3'",
+"nu-wa ku-it pé-e-du-⸢um?⸣-[me-n]i A-NA {d}E[N.LÍL ... ] EGIR-pa"
+]
+],
+"tr": "Was bri[ng]en wir zu E[nlil ... ] zurück?",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "{GIŠ}ERIN=man=ka[n k]aršuweni",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 4'",
+"{GIŠ}ERIN-ma-an-ká[n k]ar-šu-u-e-ni"
+]
+],
+"tr": "Sollten wir die Zeder [sc]hlagen?",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "kwiš=m[a(-) ... ] ŠA {d}EN.LÍL É DINGIR-LIM [K]Á.GAL-TIM 1-edaz[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 4'",
+"ku-⸢iš⸣-m[a(-) ... ] ŠA {d}EN.LÍL É DINGIR-LIM [K]Á?.GAL-TIM 1-e-da-az[ ... ]"
+]
+],
+"tr": "Welcher [ ... ] a[ber ... das T]or des Tempels des Enlil aus einem [ ... ]?",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "parā=ta=za ištappinue[r]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 6'",
+"pa-ra-a-ta-za iš-tap!-pí-⸢nu⸣-e[r]"
+]
+],
+"tr": "Sie schloss[en] dich aus.2",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] QĀTAMMA ašān[du?]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 6'",
+"[ (_) ]x QA-TAM-MA a-ša-a-an-[du?1]"
+]
+],
+"tr": "[ ... ] solle[n] ebenso sein!“",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] {GIŠ}ERIN karšer",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 6'",
+"[ ... ] {GIŠ}ERIN kar-še-er"
+]
+],
+"tr": "Sie schlugen die Zeder,",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 1'",
+"hl": "",
+"master": "n=at=[kan] ANA {ÍD}malā [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 7'",
+"na-at-[kán] ⸢A⸣-NA {ÍD}ma-la-⸢a⸣ [ ... ]"
+]
+],
+"tr": "und sie [ ... ] sie zum Malafluss.",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 1'",
+"hl": "",
+"master": "n=at=kan GIM-an KUR-ean[z]a? IGI-anda au[šta]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 8'",
+"na-at-kán GIM-an KUR-e-an-[z]a? IGI-an-da ⸢a⸣-u[š-ta]"
+]
+],
+"tr": "Als das La[n]d sie (kommen) sa[h],3",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=šmaš=at duškiškanzi",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 9'",
+"nu-uš-ma-ša-at du-uš-k[i-i]š-⸢kán⸣-zi"
+]
+],
+"tr": "freuen sie sich über sie.",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 9'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=šmaš {d}GIŠ.GIM.MAŠ-uš [{d}EN.K]I.DU4-u[šš=a ... ] {TÚG}NÍG.LÁM{MEŠ} arḫa pe[ššiēr]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 10'",
+"nu-uš-ma-aš {d}GIŠ.GIM.MAŠ-uš [{d}EN.K]I.DU4-u[š-ša ... ] {TÚG}NÍG.LÁM{MEŠ} ar-ḫa pé-e[š-ši-e-er]2"
+]
+],
+"tr": "Gilgamesch [und Enk]idu wa[rfen ] die Prachtgewänder von sich ab",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=šmaš parku[škanzi?]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 12'",
+"nu-uš-ma-aš pár-⸢ku⸣-u[š?-kán-zi?]"
+]
+],
+"tr": "und sie rein[igen] sich.",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 12'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=šmaš=k[an ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 13'",
+"nu-uš-ma-aš-k[án ... ]"
+]
+],
+"tr": "[ ... ] ihnen [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 1'",
+"hl": "",
+"master": "GIM-a[n ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"re. Kol. 14'",
+"GIM-a[n ... ]"
+],
+[
+"A",
+"",
+"Die rechte Kolumne bricht ab."
+]
+],
+"tr": "Al[s ... ]",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 2''",
+"hl": "",
+"master": "[nu {d}GIŠ.GIM.MAŠ-u]š ANA {d}IŠTAR me[miškezzi]",
+"words": [],
+"mss": [
+[
+"B",
+"1'",
+"[ ... {d}GIŠ.GIM.MAŠ-u]š ⸢A-NA {d}IŠTAR me⸣-[mi-iš-ke-ez-zi3]"
+]
+],
+"tr": "[Gilgamesch] sp[richt] zu Ištar:",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 2''",
+"hl": "",
+"master": "[{É}ḫalen]tuwa=wa=tta [ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"2'",
+"[{É}ḫa-le-en]-tu-wa-wa-at-ta [ ... ]"
+]
+],
+"tr": "„Der [Pal]ast [ ... ] dir [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 2''",
+"hl": "",
+"master": "[ ... ]-aḫḫuš=ma=wa=ka[n ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"3'",
+"[ ... ]x-aḫ-ḫu-uš-ma-wa-ká[n ... ]"
+]
+],
+"tr": "[ ... ] aber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 2''",
+"hl": "",
+"master": "[KÁ-aš {GIŠ}kat]taluzzi=ma I[ŠTU? {NA4}ZA.GÌN? {NA4}kiri]nnazi=ya teḫḫ[i]",
+"words": [],
+"mss": [
+[
+"B",
+"4'",
+"[ ... {GIŠ}kat]-⸢ta⸣-lu-uz-zi-ma I[Š?-TU? ... ] [{NA4}ki-ri-i]n-na-zi-ya4 te-eḫ-ḫ[i]"
+]
+],
+"tr": "Die [Sch]welle [des Tores] aber leg[e i]ch m[it Lapislazuli] und mit [kiri]nni-Stein aus.“4",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 2''",
+"hl": "",
+"master": "[nu {d}IŠTAR-iš ANA {d}GIŠ].GIM.MAŠ EGIR-pa memi[škezzi]",
+"words": [],
+"mss": [
+[
+"B",
+"5'",
+"[ ... ] [ ... {d}GIŠ].GIM.MAŠ EGIR-pa me-mi-i[š-ke-ez-zi5]"
+]
+],
+"tr": "[Ištar] antwor[tet Gil]gamesch:",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§ 2''",
+"hl": "",
+"master": "[UL=wa] šakti {d}GIŠ.GIM.[MAŠ]",
+"words": [],
+"mss": [
+[
+"B",
+"7'",
+"[ ... ] ša-ak-ti {d}GIŠ.GIM.[MAŠ]"
+]
+],
+"tr": "„Weißt du [nicht], Gilga[mesch],",
+"trlang": "DE"
+},
+{
+"n": "25",
+"sec": "§ 2''",
+"hl": "",
+"master": "[ ... ] UL ēšzi",
+"words": [],
+"mss": [
+[
+"B",
+"8'",
+"[ ... Ú]-UL e-eš-zi"
+]
+],
+"tr": "[dass ... ] nicht ist?",
+"trlang": "DE"
+},
+{
+"n": "26",
+"sec": "§ 2''",
+"hl": "",
+"master": "nu=wa=[šši ... U]L IŠTU KÙ.BABBAR [ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"8'",
+"nu-wa-a[š-ši ... ] [ ... Ú-U]L IŠ-TU KÙ.BABBAR x[ ... ]"
+]
+],
+"tr": "[ ... ihm ... ni]cht aus Silber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "27",
+"sec": "§ 2''",
+"hl": "",
+"master": "[ ...? KÁ]-aš {GIŠ}kattaluzz[i(-) ... {NA4}]ZA.GÌN {NA4}kirin[nazi=ya ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"10'",
+"[ ... KÁ]-aš {GIŠ}kat-ta-lu-uz-z[i(-) ... ] [ ... {NA4}]ZA.GÌN {NA4}ki-ri-in-[na-zi-ya ... ] ¬¬¬"
+]
+],
+"tr": "[Die] Schwell[e des To]res [ ... ] Lapislazuli [und] kirin[ni-Stein ... ]“",
+"trlang": "DE"
+},
+{
+"n": "28",
+"sec": "§ 3''",
+"hl": "",
+"master": "[{d}IŠTAR] ANA {d}GIŠ.GIM.MAŠ EGI[R-pa memiškezzi6]",
+"words": [],
+"mss": [
+[
+"B",
+"12'",
+"[ ... ] A-NA {d}GIŠ.GIM.MAŠ EGI[R-pa ... ]"
+]
+],
+"tr": "[Ištar] ant[wortet] Gilgamesch:",
+"trlang": "DE"
+},
+{
+"n": "29",
+"sec": "§ 3''",
+"hl": "",
+"master": "[eḫu? {d}G]IŠ.GIM.MAŠ",
+"words": [],
+"mss": [
+[
+"B",
+"13'",
+"[ ... {d}G]IŠ.GIM.MAŠ"
+]
+],
+"tr": "„[Komm?, G]ilgamesch!",
+"trlang": "DE"
+},
+{
+"n": "30",
+"sec": "§ 3''",
+"hl": "",
+"master": "nu=mu=za {L[}ÚMUTU-YA? ēš?]",
+"words": [],
+"mss": [
+[
+"B",
+"13'",
+"nu-mu-za {L[}Ú?MU-DU-YA?] [ ... ]"
+]
+],
+"tr": "[Sei?] mir [mein Ehemann?]!“",
+"trlang": "DE"
+},
+{
+"n": "31",
+"sec": "§ 3''",
+"hl": "",
+"master": "[n]u {d}GIŠ.GIM.MAŠ-uš A[NA {d}IŠTAR EGIR-pa mem]iškezzi",
+"words": [],
+"mss": [
+[
+"B",
+"14'",
+"[n]u {d}GIŠ.GIM.MAŠ-uš ⸢A⸣-[NA ... ] [me-mi]-iš-ke-ez-zi"
+]
+],
+"tr": "Gilgamesch [antwo]rtet [Ištar]:",
+"trlang": "DE"
+},
+{
+"n": "32",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... (-)š]ar[u(-) ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"16'",
+"[ ... (-)š]a-r[u(-) ... ]"
+]
+],
+"tr": "„[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "33",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... U]L? [ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"17'",
+"[ ... Ú-U]L? x[ ... ]"
+],
+[
+"B",
+"",
+"Der Text bricht ab."
+]
+],
+"tr": "[ ... nic]ht [ ... ]“",
+"trlang": "DE"
+},
+{
+"n": "34",
+"sec": "§ 4'''",
+"hl": "",
+"master": "[ ... ]-an",
+"words": [],
+"mss": [
+[
+"A7",
+"li. Kol. 4'",
+"[ ... ]x-⸢an⸣"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "35",
+"sec": "§ 4'''",
+"hl": "",
+"master": "[ ... -p]a?",
+"words": [],
+"mss": [
+[
+"A",
+"li. Kol. 7'",
+"[ ... -p]a?"
+],
+[
+"A",
+"",
+"Die linke Kolumne bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Vgl. Beckman 2001, 162.",
+"§ 1':2": "In KUB 23.9 11 noch Reste eines Zeichens",
+"§ 2'':3": "Vgl. Polvani. Friedrich: me-[mi-iš-ki-u-wa-an da-a-iš]",
+"§ 2'':4": "Ergänzung Boysan-Dietrich, THeth 12, 1987, S. 121.",
+"§ 2'':5": "Vgl. Polvani. Friedrich: me-mi-i[š-ta ... ].",
+"§ 3'':6": "Friedrich: me-mi-iš-ta].",
+"§ 4''':7": "Diese Kolumne lässt sich nicht in den Textzusammenhang einordnen.",
+"T1": "Beckman 2001, 162, übersetzt hier präterital: „[When(?)] we went [forth... ] to the mountains, [we ... ]“",
+"T2": "Vgl. HED 2, 473f.",
+"T3": "Siehe CHD L-N 282b.",
+"T4": "Vgl. hierzu HED 4, 189."
+}
+}

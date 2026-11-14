@@ -81,7 +81,8 @@ P_SER = os.path.join(MYTH, "1-אילויאנקה-וחדמו")
 P_KUM = os.path.join(MYTH, "2-מחזור-קומרבי")
 P_SR = os.path.join(MYTH, "3-שירת-השחרור")
 P_TALE = os.path.join(MYTH, "4-זלפה-אפו-ואלקונירשה")
-P_TE = os.path.join(MYTH, "5-טליפינו")
+P_TE = os.path.join(MYTH, "5-טליפינו-והאלים-הנעלמים")  # renamed 2026-11-14 (Round 8 run 5: the vanishing-god myths beside Telipinu)
+P_GI = os.path.join(MYTH, "6-גילגמש-החתי")  # Round 8 run 5: the Hittite Gilgameš (CTH 341.III)
 
 
 def _hpm_myth(cth, parts=None):
@@ -113,16 +114,26 @@ UNITS = {
     "EL": (P_TALE, "אֶלְקוּנִירְשָׁא ואַשֶּׁרְתּוּ (CTH 342)", "myth",
            _hpm_myth("342", ["1.1", "1.2", "1.3", "2.1", "2.2", "2.3", "2.4", "2.5"]), "CTH-342"),
     "TE": (P_TE, "מיתוס תֶּלִיפִּינוּ, הנוסח הראשון (CTH 324.1)", "myth", _hpm_myth("324.1"), "CTH-324"),
+    # Round 8 run 5 (2026-11-14): the vanishing-god myths beside Telipinu, the rest of the Kumarbi cycle, the Hittite Gilgameš
+    "SG": (P_TE, "היעלמות אֵל הַשֶּׁמֶשׁ ושיבתו (CTH 323)", "myth", _hpm_myth("323", ["1", "2"]), "CTH-323"),
+    "LI": (P_TE, "אֵל הַסְּעָרָה בלִיחְזִינָה (CTH 331)", "myth", _hpm_myth("331", ["1", "2"]), "CTH-331"),
+    "AZ": (P_TE, "אַנְזִילִי וזוּקִּי (CTH 333)", "myth", _hpm_myth("333"), "CTH-333"),
+    "MU": (P_TE, "המוּגָוָר של אֵל הַסְּעָרָה (CTH 325)", "myth", _hpm_myth("325"), "CTH-325"),
+    "LA": (P_KUM, "מלכות אֵל הַמָּגֵן (CTH 343)", "myth",
+           _hpm_myth("343", ["1", "2", "3.1", "3.2", "4", "5", "6"]), "CTH-343"),
+    "SI": (P_KUM, "שירת כֶּסֶף (CTH 364)", "myth", _hpm_myth("364", ["1", "2", "3", "4", "5", "6"]), "CTH-364"),
+    "GI": (P_GI, "גִּלְגָּמֶשׁ החתי (CTH 341.III)", "myth", _hpm_myth("341.III", [str(i) for i in range(1, 20)]), "CTH-341"),
 }
 PROJECT_ORDER = {P_HL: ["HL1", "HL2", "HLPT"], P_IN: ["IN"], P_RIT: ["AS", "UH", "PU", "AM", "AM2"],
-                 P_SER: ["IL", "HE"], P_KUM: ["KU", "UL"], P_SR: ["SR"], P_TALE: ["ZA", "AP", "EL"], P_TE: ["TE"]}
+                 P_SER: ["IL", "HE"], P_KUM: ["KU", "UL", "LA", "SI"], P_SR: ["SR"], P_TALE: ["ZA", "AP", "EL"],
+                 P_TE: ["TE", "SG", "LI", "AZ", "MU"], P_GI: ["GI"]}
 WITNESSES_HL1 = {"291.1": "HPM/CHiL--CTH-291.1", "291.3": "HPM/CHiL--CTH-291.3", "291.4": "HPM/CHiL--CTH-291.4",
                  "291.5": "HPM/CHiL--CTH-291.5"}
 NIQ = "֑-ֽֿ-ׇ"
 RITUAL_GLOSS_FOLDERS = ["CTH-394", "CTH-410", "CTH-407", "CTH-391", "CTH-757"]
 REND = [os.path.join(ROOT, LAWS, "renderings.md"), os.path.join(ROOT, RIT, "renderings.md"),
         os.path.join(ROOT, MYTH, "renderings.md")]
-MYTH_KEYS = ("IL", "HE", "KU", "UL", "SR", "ZA", "AP", "EL", "TE")  # the myth renderings' H-tables apply to these only;
+MYTH_KEYS = ("IL", "HE", "KU", "UL", "SR", "ZA", "AP", "EL", "TE", "SG", "LI", "AZ", "MU", "LA", "SI", "GI")  # the myth renderings' H-tables apply to these only;
 # the law and ritual files' H-tables apply to every Hittite text (2026-10-30, Round 5 run 2)
 DOSSIER_DIR = os.path.join(ROOT, "מיתוסים-אוגריתיים", "3-תיק-היום-החמישי")
 # The fifth-day dossier's excerpts copied from the myth corpus (checked by `verify <KEY>`): KEY → (the dossier's annotated
@@ -295,6 +306,9 @@ def _hpm_rows(key, kind, pre, base, idx, done):
                     if pf in idx and pf not in seen:
                         seen.add(pf)
                         words.append((fm, "", " | ".join(idx[pf][:3])))
+        if not c["master"].strip() and any(m[0] == "--" for m in c["mss"]):
+            # hpm2md read the composite as a manuscript named "--" (LA 1:82; 2026-11-14, Round 8 run 5)
+            c = dict(c, master=[m[2] for m in c["mss"] if m[0] == "--"][0], mss=[m for m in c["mss"] if m[0] != "--"])
         s = secs.get(c["sec"], {})
         sec = c["sec"]
         hl = c.get("hl") or s.get("hl", "")
@@ -307,6 +321,8 @@ def _hpm_rows(key, kind, pre, base, idx, done):
             s = {"title": "Colofone"}
         elif kind == "chil" and not sec and key == "HL1":
             hl = "1"  # CHiL has no heading before HL 1
+        if any(o["label"] == lab for o in out) and kind == "myth":
+            lab = lab + "b"  # HPM numbers a clause twice (MU 178 / 178: the second stands for 180): 178b (2026-11-14)
         if pre:
             lab, sec = f"{pre}:{lab}", f"{pre} {sec}"
             s = {"title": f"{pre} {s.get('title', c['sec'])}"}
@@ -506,6 +522,11 @@ def lic(rx, key, lab):
 
 def _heb_has(plain, h):
     h = strip_marks(h)
+    # plene spelling of a name whose table form strips to the defective (`גִּלְגָּמֶשׁ` → `גלגמש`, plain `גילגמש`;
+    # 2026-11-14, Round 8 run 5): a mater lectionis may stand between any two letters
+    rx = "".join(re.escape(c) + ("[יו]?" if c not in " ־" else "") for c in h)
+    if re.search(r"(?<![א-ת])[ובלמהכש]{0,3}" + rx + r"(?![א-ת])", plain):
+        return True
     for c in {h, h.replace("־", " ")}:
         if re.search(r"(?<![א-ת])[ובלמהכש]{0,3}" + re.escape(c) + r"(?![א-ת])", plain.replace("־", " ") if " " in c else plain):
             return True
@@ -518,12 +539,16 @@ def _heb_has(plain, h):
 
 
 def _find_word(heb, hp):
-    first = hp.split()[0].split("־")[0]
-    for w in re.split(r"[\s־,.;:!?–—()\[\]]+", heb):
-        p = strip_marks(w)
+    """The word of `heb` that begins the name `hp` (for the first-occurrence vocalization check). Brackets inside a word
+    are ignored (`[לִיחְ]זִינָה`), and a word equal to the name's first word counts only where the name's other words follow
+    (an unvocalized preposition `אל` before `אֵל הַסְּעָרָה` is not the name: fixed 2026-11-14, Round 8 run 5)."""
+    parts = [x for x in re.split(r"[\s־]+", strip_marks(hp)) if x]
+    ws = [w for w in re.split(r"[\s־,.;:!?–—()]+", heb) if w]
+    ps = [strip_marks(w.replace("[", "").replace("]", "")) for w in ws]
+    for i, p in enumerate(ps):
         for k in range(0, 4):
-            if re.fullmatch(r"[ובלמהכש]{0,3}", p[:k]) and p[k:] == first:
-                return w
+            if re.fullmatch(r"[ובלמהכש]{0,3}", p[:k]) and p[k:] == parts[0] and ps[i + 1:i + len(parts)] == parts[1:]:
+                return ws[i]
     return ""
 
 

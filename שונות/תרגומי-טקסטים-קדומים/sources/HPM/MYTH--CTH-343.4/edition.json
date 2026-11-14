@@ -1,0 +1,150 @@
+{
+"kind": "MYTH",
+"cth": "CTH 343.4",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 343.4 (TX 2009-08-30, TRde 2009-08-30)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] ⸢ZI-KA⸣[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]x ⸢ZI-KA⸣[ ... ]"
+]
+],
+"tr": "[ ... ] deine Seele [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... {.Ḫ]}I.A=ma=kan ḫa-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... {.Ḫ]}I.A-ma-kán ḫa-[ ... ]"
+]
+],
+"tr": "Die [ ... ] aber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-aš=mu tūri-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ]x-aš-mu tu-u-ri-[ ... ]"
+]
+],
+"tr": "[ ... ] mir [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... {d}]EA-aš {d}LAMMA [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... {d}]É-A-aš {d}LAMMA x[ ... ]"
+]
+],
+"tr": "[ ... ] Ea, LAMMA [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -i]t=kan ne-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... -i]t-kán ne-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-niškez[zi?]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ]x-ni-iš-ke-ez-[zi?]"
+]
+],
+"tr": "[ ...]t [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-a? UL n[i?- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ]x-a? (Rasur) Ú1-UL n[i?- ... ] ¬¬¬"
+],
+[
+"A",
+"",
+"Der Text bricht ab."
+]
+],
+"tr": "[ ... ] nicht [ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Nach Kollation am Foto über Rasur."
+}
+}

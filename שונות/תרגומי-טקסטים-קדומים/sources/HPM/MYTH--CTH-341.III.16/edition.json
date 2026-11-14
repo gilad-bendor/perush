@@ -1,0 +1,105 @@
+{
+"kind": "MYTH",
+"cth": "CTH 341.III.16",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 341.III.16 (TX 2009-08-27, TRde 2009-08-27)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]x"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "⸢nu=šmaš⸣ [ ... dankuwai? ta]knī arnumi",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"⸢nu-uš-ma-aš⸣ x x [ ... tá]k-ni-i ar-nu-⸢mi⸣ ¬¬¬"
+]
+],
+"tr": "Und euch [ ... ] führe ich in die [dunkle? Er]de.",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] UL i[š- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ] Ú-UL i[š- ... ]x"
+]
+],
+"tr": "[ ... ] nicht [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] U[L ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ] Ú-U[L ... ]"
+]
+],
+"tr": "[ ... ] nic[ht ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ](-)ar(-)[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... ](-)⸢ar⸣(-)[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

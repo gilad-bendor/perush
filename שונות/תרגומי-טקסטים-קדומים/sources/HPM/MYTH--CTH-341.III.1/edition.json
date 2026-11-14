@@ -1,0 +1,4671 @@
+{
+"kind": "MYTH",
+"cth": "CTH 341.III.1",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 341.III.1 (TX 2009-08-27, TRde 2009-08-27)",
+"sections": [
+{
+"id": "§ 1",
+"title": "§ 1",
+"hl": ""
+},
+{
+"id": "§ 2",
+"title": "§ 2",
+"hl": ""
+},
+{
+"id": "§ 3",
+"title": "§ 3",
+"hl": ""
+},
+{
+"id": "§ 4",
+"title": "§ 4",
+"hl": ""
+},
+{
+"id": "§ 5'",
+"title": "§ 5'",
+"hl": ""
+},
+{
+"id": "§ 6'",
+"title": "§ 6'",
+"hl": ""
+},
+{
+"id": "§ 7'",
+"title": "§ 7'",
+"hl": ""
+},
+{
+"id": "§ 8'",
+"title": "§ 8'",
+"hl": ""
+},
+{
+"id": "§ 9'",
+"title": "§ 9'",
+"hl": ""
+},
+{
+"id": "§ 10''",
+"title": "§ 10''",
+"hl": ""
+},
+{
+"id": "§ 11'''",
+"title": "§ 11'''",
+"hl": ""
+},
+{
+"id": "§ 12''''",
+"title": "§ 12''''",
+"hl": ""
+},
+{
+"id": "§ 13''''",
+"title": "§ 13''''",
+"hl": ""
+},
+{
+"id": "§ 14''''",
+"title": "§ 14''''",
+"hl": ""
+},
+{
+"id": "§ 15''''",
+"title": "§ 15''''",
+"hl": ""
+},
+{
+"id": "§ 16'''''",
+"title": "§ 16'''''",
+"hl": ""
+},
+{
+"id": "§ 17'''''",
+"title": "§ 17'''''",
+"hl": ""
+},
+{
+"id": "§ 18'''''",
+"title": "§ 18'''''",
+"hl": ""
+},
+{
+"id": "§ 19'''''",
+"title": "§ 19'''''",
+"hl": ""
+},
+{
+"id": "§ 20'''''",
+"title": "§ 20'''''",
+"hl": ""
+},
+{
+"id": "§ 21''''''",
+"title": "§ 21''''''",
+"hl": ""
+},
+{
+"id": "§ 22''''''",
+"title": "§ 22''''''",
+"hl": ""
+},
+{
+"id": "§ 23''''''",
+"title": "§ 23''''''",
+"hl": ""
+},
+{
+"id": "§ 24''''''",
+"title": "§ 24''''''",
+"hl": ""
+},
+{
+"id": "§ 25''''''",
+"title": "§ 25''''''",
+"hl": ""
+},
+{
+"id": "§ 26''''''",
+"title": "§ 26''''''",
+"hl": ""
+},
+{
+"id": "§ 27'''''''",
+"title": "§ 27'''''''",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1",
+"hl": "",
+"master": "[ ... ]-yan [ ... ] UR.SAG-in",
+"words": [],
+"mss": [
+[
+"A+H",
+"1",
+"x-x-x-x-⸢ya-an⸣ x-x[ ... ]2 ⸢UR⸣.SAG-in [] ¬¬¬"
+]
+],
+"tr": "[ ... ], den Helden.1",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 2",
+"hl": "",
+"master": "šamniyantan UR.SAG-iš {d}k[u?- ... 3] ⸢{d}⸣GIŠ.GIM.MAŠ-un ALAM-an",
+"words": [],
+"mss": [
+[
+"A+H",
+"3",
+"ša-am-ni-ya-an-ta-an UR.SAG-iš {d}k[u?- ... ] ⸢{d}⸣GIŠ.GIM.MAŠ-un ALAM-an"
+]
+],
+"tr": "Der Held K[u-2 ... ] den Gilgamesch, (nämlich seine) Gestalt als Geschaffenen.3",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 2",
+"hl": "",
+"master": "šamner=ma [šallauš? DINGIR{MEŠ}-uš?] {d}GIŠ.GIM.MAŠ-un ALAM-an",
+"words": [],
+"mss": [
+[
+"A+H",
+"4",
+"ša-am-né-er-ma [ ... ] {d}GIŠ.GIM.MAŠ-un ALAM-an"
+]
+],
+"tr": "Es schufen aber [die großen? Götter?] Gilgamesch, (nämlich seine) Gestalt.",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2",
+"hl": "",
+"master": "{d}UTU ŠAMÊ-(i)4=šš[i LÚ-natar?] pāiš",
+"words": [],
+"mss": [
+[
+"A+H",
+"5",
+"{d}UTU ŠA-ME-E-iš-š[i ... ] ⸢pa!?⸣5-a-iš"
+]
+],
+"tr": "Der Sonnengott des Himmels gab ih[m Männlichkeit?].",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2",
+"hl": "",
+"master": "{d}10-aš=ma=šši UR.SAG-tar pāiš",
+"words": [],
+"mss": [
+[
+"A+H",
+"6",
+"{d}10-aš-ma-aš-ši UR.SAG-tar pa-a-iš"
+]
+],
+"tr": "Der Wettergott aber gab ihm Heldenmut.",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2",
+"hl": "",
+"master": "š[amner=ma] šallauš DINGIR.MEŠ-uš {d}GIŠ.GIM!.MAŠ-un",
+"words": [],
+"mss": [
+[
+"A+H",
+"6",
+"š[a-am-né-er-ma] šal-la-uš DINGIR.MEŠ-uš {d}GIŠ.GIM!.MAŠ-un"
+]
+],
+"tr": "Es s[chufen aber] die großen Götter den Gilgamesch.",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2",
+"hl": "",
+"master": "ALAM=ši p[argašti] 11 AMMATUM",
+"words": [],
+"mss": [
+[
+"A+H",
+"7",
+"ALAM-ši p[ár-ga-aš-ti] 11 AM-MA-TUM"
+]
+],
+"tr": "Seine Gestalt (beträgt)4 [in der] H[öhe] elf Ellen,",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2",
+"hl": "",
+"master": "GABA=ma=šši palḫāšti 9 w[akšur?]",
+"words": [],
+"mss": [
+[
+"A+H",
+"8",
+"GABA-ma-aš-ši pal-ḫa-a-aš-ti 9 w[a-ak-šur?]6"
+]
+],
+"tr": "Seine Brust aber (beträgt)5 in der Breite neun S[pannen].",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2",
+"hl": "",
+"master": "[{U]}ZUḫarniuš=ma=šši dalugašti ⸢3?⸣[ ... ]",
+"words": [],
+"mss": [
+[
+"A+H",
+"9",
+"[{U]}ZUḫar!?7-ni-uš-ma-aš-ši da-lu-ga-aš-ti ⸢3?⸣[ ... ] ¬¬¬"
+]
+],
+"tr": "Sein ḫarniu-6 aber (beträgt)7 in der Länge drei [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 3",
+"hl": "",
+"master": "[nu] KUR.KUR{MEŠ} ḫūmanta weḫeškezz[i]",
+"words": [],
+"mss": [
+[
+"A+H",
+"10",
+"[ _ ] KUR.KUR{MEŠ} ḫu-u-ma-an-ta ú-e-ḫe-eš-ke-ez-z[i]"
+]
+],
+"tr": "Er durchstreif[t] alle Länder,",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 3",
+"hl": "",
+"master": "[n=aš=kan] {URU}uraga URU-ri ār(a)š",
+"words": [],
+"mss": [
+[
+"A+H",
+"10",
+"[ ... ] [{URU}u]-ra-ga URU-ri a-ar-aš"
+],
+[
+"E",
+"Vs. I 1'",
+"⸢{URU}u-ru⸣-x [ ... ]"
+]
+],
+"tr": "[und er] gelangte nach Uruk in die Stadt.",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 3",
+"hl": "",
+"master": "n=aš=za=kan k[a?- ... ]",
+"words": [],
+"mss": [
+[
+"A+H",
+"11",
+"na-aš-za-kán k[a?- ... ]8"
+],
+[
+"E",
+"Vs. I 1'",
+"[ ... ]"
+]
+],
+"tr": "Und er [ ... ] sich [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 3",
+"hl": "",
+"master": "nu=za UD.KAM-tili ŠA {URU}uraga {LÚ.MEŠ}GU[RUŠ] taruḫḫiškiuwan dāiš",
+"words": [],
+"mss": [
+[
+"A+H",
+"12",
+"[ _ _ ] UD.KAM-ti-li ŠA {URU}u-ra-ga {LÚ.MEŠ}GU[RUŠ] [tar-uḫ-ḫ]i-iš-ki-u-wa-an9 da-a-iš"
+],
+[
+"E",
+"Vs. I 2'",
+"nu-za UD.KAM-ti-⸢li⸣ Š[A ... ] tar-uḫ-ḫi-iš-ki-u-wa-an [d]a-a-i[š]"
+]
+],
+"tr": "Er begann, täglich die ju[ngen] Männer von Uruk zu besiegen.",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 3",
+"hl": "",
+"master": "nu DINGIR.MA[Ḫ(-) ... ]",
+"words": [],
+"mss": [
+[
+"A+H",
+"13",
+"nu DINGIR.MA[Ḫ(-) ... ]"
+],
+[
+"E",
+"Vs. I 3'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ] Muttergött[in ... ]",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 3",
+"hl": "",
+"master": "n=aš=kan {d}GIŠ.GIM.MAŠ-aš IM{MEŠ}-aš and[a- ... ]",
+"words": [],
+"mss": [
+[
+"A+H",
+"14",
+"[ _ _ _ {d}GI]Š.⸢GIM⸣.MAŠ-aš IM!{MEŠ}-aš an-d[a]-x[ ... ]"
+],
+[
+"E",
+"Vs. I 4'",
+"na-aš-kán {d}GIŠ.⸢GIM⸣.[MAŠ-u]š IM{MEŠ} [ ... ]"
+]
+],
+"tr": "und sie [ ... ] i[n] den Winden des Gilgamesch [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 3",
+"hl": "",
+"master": "DINGIR.MAḪ-[ ... ]-an aušt[a]",
+"words": [],
+"mss": [
+[
+"A+H",
+"15",
+"[ ... ]x x x x[ ... ]"
+],
+[
+"A+H",
+"",
+"KUB 8.57 Vs. I bricht ab."
+],
+[
+"E",
+"Vs. I 5'",
+"⸢DINGIR.MAḪ⸣-x x[ ... ]x-an a-uš-t[a]"
+]
+],
+"tr": "[ ... ] Muttergöttin sa[h] den [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 3",
+"hl": "",
+"master": "[n]=aš=[za ... ] ⸢ŠÀ-BI-i⸣=šš[i? ka]rtimmi[yattat]",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. I 6'",
+"[n]a?-aš-[za ... ] ⸢ŠÀ?-BI?-iš?⸣-š[i? ka]r-⸢tim-mi⸣-[ya-at-ta-at] ¬¬¬"
+]
+],
+"tr": "[und] sie [wurde] in ihr[em] Innern? [zor]nig.",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 4",
+"hl": "",
+"master": "nu DINGIR{MEŠ} ḫūm[anteš DINGIR.MAḪ-an?10 p]arranta [ ...? ] tuliyaš p[edi? ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. I 7'",
+"nu DINGIR{MEŠ} ḫu-u-m[a-an-te-eš ... p]ár-ra-an-ta [ ...? ] tu-li-ya-aš p[é?-di? ... ]"
+]
+],
+"tr": "Al[le] Götter [ ... die Muttergöttin? h]inüber zum P[latz] der Versammlung,",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 4",
+"hl": "",
+"master": "[n=aš=ka]n? pait",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. I 8'",
+"[na-aš?-ká]n? pa-it"
+]
+],
+"tr": "[und sie] ging.",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 4",
+"hl": "",
+"master": "nu[ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. I 8'",
+"nu[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 4",
+"hl": "",
+"master": "unin=wa kw[in? {d}GIŠ.GIM.MAŠ-un? š]amniyatt[en]",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. I 9'",
+"u-ni-in-wa ku-[in? ... š]a-am-ni-ya-at-t[e?-en?]11"
+]
+],
+"tr": "„Jenen [Gilgamesch da], de[n ihr? ge]schaffen hab[t],",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 4",
+"hl": "",
+"master": "nu ammuk[ ... š]amniyanu[n]",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. I 10'",
+"nu am-mu-uk[ ... š]a-am-ni-ya-nu-u[n]"
+]
+],
+"tr": "und [den] ich [ ... ges]chaffen ha[be],",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 4",
+"hl": "",
+"master": "n=a-[ ... (-)a]nda immiy[a- ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. I 11'",
+"⸢na?⸣-x-x[ ... (-)a]n-da im-mi-y[a- ... ]"
+],
+[
+"E",
+"",
+"KBo 10.47a Vs. I bricht ab."
+]
+],
+"tr": "misch[- ... ] zusammen.“",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§ 5'",
+"hl": "",
+"master": "[nu? DINGIR{ME]}Š ḫūmante[š ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. I 1''",
+"[ _ DINGIR{ME]}Š ḫu-u-ma-an-⸢te⸣-e[š ... ]"
+]
+],
+"tr": "Alle [Götte]r [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "25",
+"sec": "§ 5'",
+"hl": "",
+"master": "[UR.SAG-i]n {d}GIŠ.GIM.MAŠ-un [ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. I 2''",
+"[UR.SAG-i]n {d}GIŠ.GIM‹.MAŠ›-un x[ ... ]"
+]
+],
+"tr": "[ ... de]n [Helde]n Gilgamesch [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "26",
+"sec": "§ 5'",
+"hl": "",
+"master": "[{d}GIŠ.GIM.MAŠ?-u]šš=a=wa {LÚ.MEŠ}G[URUŠ tarruḫḫiškezzi?]",
+"words": [],
+"mss": [
+[
+"A+H",
+"1'",
+"[ ... ]x x x x x[ ... ]"
+],
+[
+"E",
+"Vs. I 3''",
+"[{d}GIŠ.GIM.MAŠ?-u]š?-ša-wa {LÚ.MEŠ}G[URUŠ ... ]"
+]
+],
+"tr": "„Und [Gilgamesch? besiegt?] die j[ungen Män]ner (weiterhin).“",
+"trlang": "DE"
+},
+{
+"n": "27",
+"sec": "§ 5'",
+"hl": "",
+"master": "[mān=a]š? enešša[n išt]amašta",
+"words": [],
+"mss": [
+[
+"A+H",
+"2'",
+"[ ... iš-t]a-ma-aš-ta"
+],
+[
+"E",
+"Vs. I 4''",
+"[ma-a-an?-a]š? e-né-eš-ša-a[n ... ]"
+]
+],
+"tr": "[Als si]e? auf jene Wei[se geh]ört hatte,",
+"trlang": "DE"
+},
+{
+"n": "28",
+"sec": "§ 5'",
+"hl": "",
+"master": "nu=kan DINGIR.M[AḪ-a]š? [ ... ]-azza12 mītar? arḫa dāš",
+"words": [],
+"mss": [
+[
+"A+H",
+"2'",
+"nu-kán ⸢DINGIR⸣.M[AḪ?-aš] [ ... mi-i-ta]r?13 ar-ḫa da-a-aš"
+],
+[
+"E",
+"Vs. I 4''",
+"[ ... DINGIR.MAḪ-a]š [ _ _ _ ]-az-za mi-i-tar [ ... ]"
+]
+],
+"tr": "nahm die Muttergö[tti]n das Gedeihen? aus dem [ ... ] fort.",
+"trlang": "DE"
+},
+{
+"n": "29",
+"sec": "§ 5'",
+"hl": "",
+"master": "n=aš=k[an iy]anneš?",
+"words": [],
+"mss": [
+[
+"A+H",
+"3'",
+"na-aš-k[án ... ]"
+],
+[
+"E",
+"Vs. I 5''",
+"[ ... i-y]a?-an-né-eš"
+]
+],
+"tr": "Sie [g]ing",
+"trlang": "DE"
+},
+{
+"n": "30",
+"sec": "§ 5'",
+"hl": "",
+"master": "[nu=kan? U]R.SAG-in {d}enkitan LÍL-ri ⸢anda⸣ š[a]mniyat",
+"words": [],
+"mss": [
+[
+"A+H",
+"4'",
+"[ ... ] ⸢{d}⸣en-ki-ta-an LÍL-ri ⸢an-da⸣ š[a-am-ni-ya-at] ¬¬¬"
+],
+[
+"E",
+"Vs. I 6''",
+"[ _ _ _ U]R.SAG-in {d}E[N.KI.DU-un ... ša-a]m-ni-ya-at ¬¬¬"
+]
+],
+"tr": "[und] s[c]huf den [H]elden Enkidu in der Steppe.",
+"trlang": "DE"
+},
+{
+"n": "31",
+"sec": "§ 6'",
+"hl": "",
+"master": "[nu=kan? U]R.SAG-iš {d}enkitaš LÍL-ri and[a ēšt]a?",
+"words": [],
+"mss": [
+[
+"A+H",
+"5'",
+"[ ... {d}]en-ki-ta-aš LÍL-ri an-d[a ... ]"
+],
+[
+"E",
+"Vs. I 7''",
+"[ _ _ U]R.SAG-iš {d}EN.KI.[DU-uš LÍL-ri an-da e-eš?-t]a?"
+]
+],
+"tr": "Der [H]eld Enkidu [wa]r? i[n] der Steppe,",
+"trlang": "DE"
+},
+{
+"n": "32",
+"sec": "§ 6'",
+"hl": "",
+"master": "[n=an MÁŠ].ANŠE{ḪI.A} šallanuškanzi",
+"words": [],
+"mss": [
+[
+"A+H",
+"6'",
+"[ ... šal-la-nu]-⸢uš⸣-kán-zi"
+],
+[
+"E",
+"Vs. I 8''",
+"[ _ _ MÁŠ?].ANŠE{ḪI.A} šal-la-nu-u[š-kán-zi]"
+]
+],
+"tr": "[und] die [Ti]ere ziehen ihn groß.8",
+"trlang": "DE"
+},
+{
+"n": "33",
+"sec": "§ 6'",
+"hl": "",
+"master": "nu=šši[ ... -z]i",
+"words": [],
+"mss": [
+[
+"A+H",
+"6'",
+"nu-uš-ši[ ... ]"
+],
+[
+"E",
+"Vs. I 9''",
+"x[ _ (_) -z]i"
+]
+],
+"tr": "[ ... ] ihm [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "34",
+"sec": "§ 6'",
+"hl": "",
+"master": "nu kwēz MÁŠ.ANŠE{ḪI.A} weši[yauwanzi] iy[an]tari",
+"words": [],
+"mss": [
+[
+"A+H",
+"7'",
+"[ ... M]ÁŠ.ANŠE{ḪI.A} ú-e-ši-[ya-u-wa-an-zi14 ... ]"
+],
+[
+"E",
+"Vs. I 9''",
+"nu ku-e-ez M[ÁŠ.ANŠE{ḪI.A} ... ] i-y[a-an]-ta-ri"
+]
+],
+"tr": "Wo immer die Tiere zum We[iden] hing[eh]en,",
+"trlang": "DE"
+},
+{
+"n": "35",
+"sec": "§ 6'",
+"hl": "",
+"master": "{d}EN.KI.DU-[u]š=š(a)maš=šta [GAM-an iyattari]",
+"words": [],
+"mss": [
+[
+"A+H",
+"8'",
+"[{d}EN.KI.DU-u]š-ša-ma-aš-ta [ ... ]"
+],
+[
+"E",
+"Vs. I 10''",
+"{d}EN.KI.⸢DU⸣-[uš-ša-ma-aš-ta? ... ]"
+]
+],
+"tr": "Enkid[u] aber [geht mit] ihnen.",
+"trlang": "DE"
+},
+{
+"n": "36",
+"sec": "§ 6'",
+"hl": "",
+"master": "š[akur]ūwauwanzi=ya [kwēz iyantari]",
+"words": [],
+"mss": [
+[
+"A+H",
+"9'",
+"[ša-ku-ru-u-wa-u-wa]-an-zi-y[a ... ]"
+],
+[
+"E",
+"Vs. I 11''",
+"š[a-ku15-r]u-u-wa-u-wa-an-zi-⸢ya⸣ [ ... ]"
+]
+],
+"tr": "Und [wo immer sie] zum T[rin]ken [hingehen],",
+"trlang": "DE"
+},
+{
+"n": "37",
+"sec": "§ 6'",
+"hl": "",
+"master": "[{d}EN.K]I.DU-š=a=šmaš GAM-a[n iyattari]",
+"words": [],
+"mss": [
+[
+"A+H",
+"10'",
+"[ .... ]x[ ... ]16"
+],
+[
+"E",
+"Vs. I 12''",
+"[{d}EN.K]I.DU-ša-aš-ma-aš GAM-a[n ... ] ¬¬¬"
+]
+],
+"tr": "Enkidu aber [geht] mit ihnen.9",
+"trlang": "DE"
+},
+{
+"n": "38",
+"sec": "§ 7'",
+"hl": "",
+"master": "[nu] {m}šangašuš {LÚ}GU[RUŠ ... ] ANA MÁŠ.ANŠE{ḪI.A} :akku[šša17 :aggatiušša=ya18?] tarniškezzi",
+"words": [],
+"mss": [
+[
+"A+H",
+"1''",
+"[A-NA MÁ]Š.⸢ANŠE⸣{Ḫ[}I.A ... ] ⸢tar-ni-iš⸣-ke-ez-⸢zi⸣"
+],
+[
+"E",
+"Vs. I 13''",
+"[ _ ] ⸢{m}ša⸣-an-ga-šu-uš {LÚ}GU[RUŠ ... ] A-NA MÁŠ.ANŠE19{ḪI.A} :ak-ku-u[š-ša ... ] tar-ni-eš-ke-ez-zi"
+]
+],
+"tr": "Šangašu, ein ju[nger] Mann, legt Fall[en und Fangnetze] für die Tiere aus.",
+"trlang": "DE"
+},
+{
+"n": "39",
+"sec": "§ 7'",
+"hl": "",
+"master": "{d}E[N.KI.DU-uš=ma=šši peran20] iyattari",
+"words": [],
+"mss": [
+[
+"A+H",
+"2''",
+"⸢{d}⸣[EN.KI.DU-uš-ma-aš-ši ... ] i-ya-at-ta-ri"
+],
+[
+"E",
+"Vs. I 15''",
+"{d}E[N.KI.DU-uš-ma-aš-ši ... ] i-ya-at-ta-ri"
+]
+],
+"tr": "E[nkidu aber] geht [ihm voraus]",
+"trlang": "DE"
+},
+{
+"n": "40",
+"sec": "§ 7'",
+"hl": "",
+"master": "nu=kan [:akkušša? SAḪAR{ḪI.A}-az] šaḫiškezzi",
+"words": [],
+"mss": [
+[
+"A+H",
+"3''",
+"nu-kán [ ... ] ša-ḫi-iš-ke-ez-zi"
+],
+[
+"E",
+"Vs. I 16''",
+"nu-k[án ... ] ša-ḫi-iš-ke-ez-z[i]"
+]
+],
+"tr": "und füllt [die Fallen? mit Erde].10",
+"trlang": "DE"
+},
+{
+"n": "41",
+"sec": "§ 7'",
+"hl": "",
+"master": ":a[ggatiušš=a kwiēš tarniškezzi?]",
+"words": [],
+"mss": [
+[
+"A+H",
+"4''",
+":a[g-ga-ti-uš-ša ... ]"
+],
+[
+"E",
+"Vs. I 17''",
+"[ ... ]"
+]
+],
+"tr": "[Und die] F[angnetze, die er (scil. Šangašu) aus(ge)legt (hatte),]",
+"trlang": "DE"
+},
+{
+"n": "42",
+"sec": "§ 7'",
+"hl": "",
+"master": "n=aš=kan ÍD-i anda i[šḫuwaiškezzi]",
+"words": [],
+"mss": [
+[
+"A+H",
+"5''",
+"na-aš-kán ÍD-i an-da i[š-ḫu-wa-iš-ke-ez-zi]"
+],
+[
+"E",
+"Vs. I 18''",
+"na-aš-kán ÍD-⸢i⸣ [ ... ]"
+]
+],
+"tr": "w[irft er (scil. Gilgameš)] in den Fluss.",
+"trlang": "DE"
+},
+{
+"n": "43",
+"sec": "§ 7'",
+"hl": "",
+"master": "{m}šangašuš=ma pait",
+"words": [],
+"mss": [
+[
+"A+H",
+"6''",
+"{m}ša-an-ga-šu-uš-ma pa-i[z-zi]"
+],
+[
+"E",
+"Vs. I 18''",
+"[ ... ] pa-it"
+]
+],
+"tr": "Šangašu aber ging (A+H: geht)",
+"trlang": "DE"
+},
+{
+"n": "44",
+"sec": "§ 7'",
+"hl": "",
+"master": "nu AN[A? {d}GIŠ.GIM.MAŠ] memiškezzi?",
+"words": [],
+"mss": [
+[
+"A+H",
+"8''",
+"[ ... ] me-mi!-iš-ke-ez-zi"
+],
+[
+"E",
+"Vs. I 19''",
+"nu ⸢A21⸣-N[A? ... ]"
+]
+],
+"tr": "und spricht? z[u Gilgamesch]:",
+"trlang": "DE"
+},
+{
+"n": "45",
+"sec": "§ 7'",
+"hl": "",
+"master": "{LÚ}GURUŠ-a[nza=wa ammuk? p]eran iyattari",
+"words": [],
+"mss": [
+[
+"A+H",
+"7''",
+"{LÚ}GURUŠ-a[n-za? ... ] [p]é-ra-an i-ya-at-ta-ri"
+],
+[
+"E",
+"Vs. I 20''",
+"{LÚ}GURUŠ-a[n-za-wa ... ] x x [ ... ]"
+]
+],
+"tr": "„Ein junger Man[n] geht [mir? v]oraus,",
+"trlang": "DE"
+},
+{
+"n": "46",
+"sec": "§ 7'",
+"hl": "",
+"master": "nu=wa=šš[i ... ]-iš",
+"words": [],
+"mss": [
+[
+"A+H",
+"8''",
+"n[u ... ]"
+],
+[
+"E",
+"Vs. I 21''",
+"nu-wa-aš-š[i _ _ _ (_) ]-⸢iš⸣"
+]
+],
+"tr": "und [ ... ] ih[m ... ]",
+"trlang": "DE"
+},
+{
+"n": "47",
+"sec": "§ 7'",
+"hl": "",
+"master": "nu=wa=kan gimran[ ... ]",
+"words": [],
+"mss": [
+[
+"A+H",
+"9''",
+"[n]u-wa-kán gi-im-ra-an[ ... ]"
+],
+[
+"E",
+"Vs. I 21''",
+"nu-wa-kán [ ... ]"
+]
+],
+"tr": "[ ... ] die Steppe [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "48",
+"sec": "§ 7'",
+"hl": "",
+"master": "nu=wa :akkušša kwe ammu[k tarniškemi]",
+"words": [],
+"mss": [
+[
+"A+H",
+"10''",
+"[n]u-wa :ak-ku-ša ku-e [ ... ]"
+],
+[
+"E",
+"Vs. I 22''",
+"⸢nu-wa⸣ [:]⸢ak⸣-ku-uš-ša ku-e am-mu-u[k ... ]"
+]
+],
+"tr": "Die Fallen, die ic[h lege],",
+"trlang": "DE"
+},
+{
+"n": "49",
+"sec": "§ 7'",
+"hl": "",
+"master": "apāš=ma=war=at=kan SAḪAR{ḪI.A}-a[z šaḫiškezzi?22]",
+"words": [],
+"mss": [
+[
+"A+H",
+"11''",
+"⸢a⸣-pa-a-aš-ma-at-kán ⸢SAḪAR⸣[{ḪI.A}-az ... ]"
+],
+[
+"E",
+"Vs. I 23''",
+"[a-pa]-aš-ma<-wa>-ra-at-kán SAḪAR{ḪI.A}-a[z ... ]"
+]
+],
+"tr": "[füllt] der aber mi[t] Erde.",
+"trlang": "DE"
+},
+{
+"n": "50",
+"sec": "§ 7'",
+"hl": "",
+"master": ":aggatiuš=ma=wa kwiē[š ammuk tarniškemi?]23",
+"words": [],
+"mss": [
+[
+"A+H",
+"12''",
+":ag-ga-ti-uš-m[a-wa ... ]"
+],
+[
+"E",
+"Vs. I 24''",
+"[:ag]-ga-ti-uš-ma-wa ku-i-e-e[š ... ]"
+]
+],
+"tr": "Die Fangnetze aber, di[e ich auslege],",
+"trlang": "DE"
+},
+{
+"n": "51",
+"sec": "§ 7'",
+"hl": "",
+"master": "apāš=ma=(war)=aš šarā d[āi?]",
+"words": [],
+"mss": [
+[
+"A+H",
+"13''",
+"a-pa-a-aš-ma-wa-r[a-aš ... ]"
+],
+[
+"E",
+"Vs. I 25''",
+"⸢a⸣-[p]a-a-aš-ma-aš ša-ra-a d[a?-a-i?]"
+]
+],
+"tr": "h[ebt] der aber auf",
+"trlang": "DE"
+},
+{
+"n": "52",
+"sec": "§ 7'",
+"hl": "",
+"master": "[n]u=war=aš=ka[n ÍD-i anda] išḫūwaiškezzi",
+"words": [],
+"mss": [
+[
+"A+H",
+"14''",
+"[n]u-wa-ra-aš-ká[n ... iš-ḫu-wa-iš-ke-e]z-zi ¬¬¬"
+],
+[
+"E",
+"Vs. I 25''",
+"[ ... ] ⸢iš-ḫu⸣-u-wa-iš-ke-ez-z[i] ¬¬¬"
+]
+],
+"tr": "[u]nd wirf[t] sie [in den Fluss].“",
+"trlang": "DE"
+},
+{
+"n": "53",
+"sec": "§ 8'",
+"hl": "",
+"master": "[nu] {d}GIŠ.GIM.MAŠ-uš ANA [{m}šangašu] {LÚ}ṢĀ’IDU EGIR-pa [mem]iškiuwan [dāiš]",
+"words": [],
+"mss": [
+[
+"A+H",
+"15''",
+"[ _ ] {d}GIŠ.GI[M.MAŠ-uš ... ] {LÚ}ṢA-I-DU EGIR-pa [me-mi]-iš-ki-⸢u⸣-[wa-an ... ]"
+],
+[
+"E",
+"Vs. I 27''",
+"[{d}GI]Š.⸢GIM⸣.MAŠ-uš A-NA [ ... ] [me-mi-i]š-ki-wa-an [ ... ]"
+]
+],
+"tr": "Gilgamesch [begann, Šangašu], dem Jäger, zu ant[wo]rten:",
+"trlang": "DE"
+},
+{
+"n": "54",
+"sec": "§ 8'",
+"hl": "",
+"master": "[ ... ] {MUNUS}KAR.KID pēḫute",
+"words": [],
+"mss": [
+[
+"A+H",
+"16''",
+"[ ... ]{MUNUS}KAR.KID pé-e-ḫ[u-te]"
+],
+[
+"E",
+"Vs. I 28''",
+"[ ... ] [pé-e-ḫ]u?-te"
+]
+],
+"tr": "„Schaff eine Prostituierte hin!",
+"trlang": "DE"
+},
+{
+"n": "55",
+"sec": "§ 8'",
+"hl": "",
+"master": "nu=w[a(-) ... ] šešdu",
+"words": [],
+"mss": [
+[
+"A+H",
+"17''",
+"[ ... ]x še-eš-⸢du⸣24"
+],
+[
+"E",
+"Vs. I 29''",
+"nu-w[a(-) ... ]"
+]
+],
+"tr": "Sie soll [ ... ] schlafen!“11",
+"trlang": "DE"
+},
+{
+"n": "56",
+"sec": "§ 8'",
+"hl": "",
+"master": "[{d}EN.K]I.D[U4-uš? ... -r]ā ginuššar[i- ... ]",
+"words": [],
+"mss": [
+[
+"A+H",
+"18''",
+"[ ... -r]a?-a ⸢gi⸣-nu-uš-ša-r[i- ... ]"
+],
+[
+"E",
+"Vs. I 30''",
+"[{d}EN.K]I.D[U4-uš? ... ]"
+],
+[
+"E",
+"",
+"KBo 10.47c Vs. I bricht ab."
+]
+],
+"tr": "[Enk]id[u knie[- ... ]",
+"trlang": "DE"
+},
+{
+"n": "57",
+"sec": "§ 8'",
+"hl": "",
+"master": "[ ... {m}šan]gašun {MUNUS}KAR.[KID ... ]",
+"words": [],
+"mss": [
+[
+"A+H",
+"19''",
+"[ ... {m}ša-an]-⸢ga⸣-šu-un {MUNUS}KAR.[KID ... ]"
+]
+],
+"tr": "[ ... den Šan]gašu (und?) die Prostit[uierte ... ]",
+"trlang": "DE"
+},
+{
+"n": "58",
+"sec": "§ 8'",
+"hl": "",
+"master": "[ ... še]šta",
+"words": [],
+"mss": [
+[
+"A+H",
+"20''",
+"[ ... še-e]š-ta ¬¬¬"
+]
+],
+"tr": "[ ... schl]ief [ ... ]12",
+"trlang": "DE"
+},
+{
+"n": "59",
+"sec": "§ 9'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A+H",
+"21''",
+"[ ... ]x x x[ ... ]"
+],
+[
+"A+H",
+"",
+"KBo 26.101 bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "60",
+"sec": "§ 10''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. I 1'''",
+"[ ... ]x[ _ (_) ]x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "61",
+"sec": "§ 10''",
+"hl": "",
+"master": "[ ... AN]A {d}EN.KI.DU4 mem[iškiwan dāiš]",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. I 2'''",
+"[ ... A-N]A {d}EN.KI.DU4 me-m[i-iš-ki-wa-an ... ]"
+]
+],
+"tr": "[ ... begann, z]u Enkidu [zu] spr[echen]:",
+"trlang": "DE"
+},
+{
+"n": "62",
+"sec": "§ 10''",
+"hl": "",
+"master": "[ ... p]āiweni",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. I 3'''",
+"[ ... p]a-a-i-u-e-ni"
+]
+],
+"tr": "„Wir [g]ehen [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "63",
+"sec": "§ 10''",
+"hl": "",
+"master": "nu=wa=⸢za?⸣ [ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. I 3''",
+"nu-wa-⸢za?⸣[ ... ] ¬¬¬"
+],
+[
+"E",
+"",
+"In KBo 10.47d Kolumnenende erreicht."
+]
+],
+"tr": "Und [ ... ] sich [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "64",
+"sec": "§ 11'''",
+"hl": "",
+"master": "[ ... -w]a-[ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 1'",
+"[ ... -w]a-x[]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "65",
+"sec": "§ 11'''",
+"hl": "",
+"master": "[ ... -u]š?",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 2'",
+"[ ... -u]š?"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "66",
+"sec": "§ 11'''",
+"hl": "",
+"master": "[ ... -k]iuš",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 3'",
+"[ ... -k]i-uš"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "67",
+"sec": "§ 11'''",
+"hl": "",
+"master": "[ ... -t]a?",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 4'",
+"[ ... -t]a?"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "68",
+"sec": "§ 11'''",
+"hl": "",
+"master": "nu {d}EN.KI.DU-uš [ ... {TÚG}NÍG].LÁM{MEŠ} ḫarta",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 4'",
+"nu {d}EN.KI.DU-uš [ ... {TÚG}NÍG].LÁM{MEŠ} ḫar-ta"
+]
+],
+"tr": "Enkidu hielt [Pracht]gewänder [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "69",
+"sec": "§ 11'''",
+"hl": "",
+"master": "[ ... ]-a=šši [ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 6'",
+"[ ... ]x-x-x-aš-ši[ ... ]"
+],
+[
+"E",
+"",
+"KBo 10.47f bricht ab."
+]
+],
+"tr": "[ ... ] ihm [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "70",
+"sec": "§ 12''''",
+"hl": "",
+"master": "[nu {d}EN.KI.DU-uš ANA {f}šanḫatu EGI]R-pa memi[šta]",
+"words": [],
+"mss": [
+[
+"B+D",
+"Vs. II 1'",
+"[ ... EGI]R-pa me-mi-i[š-ta]"
+]
+],
+"tr": "[Enkidu an]twort[ete Šanḫatu]:",
+"trlang": "DE"
+},
+{
+"n": "71",
+"sec": "§ 12''''",
+"hl": "",
+"master": "[ ... ]-gaš?",
+"words": [],
+"mss": [
+[
+"B+D",
+"Vs. II 2'",
+"[ ... ]x-⸢ga?⸣-aš"
+],
+[
+"C",
+"Vs. II 4",
+"[ ... ]x[ ... ]"
+]
+],
+"tr": "„[ ... ]“",
+"trlang": "DE"
+},
+{
+"n": "72",
+"sec": "§ 12''''",
+"hl": "",
+"master": "nu {f}šanḫa[tum ANA {d}EN.KI.DU EGIR-pa me]miškezzi",
+"words": [],
+"mss": [
+[
+"B+D",
+"Vs. II 2'",
+"nu {f}ša-an-ḫa-[tum] [ ... EGIR-pa me]-mi-iš-ke-ez-zi"
+],
+[
+"C",
+"Vs. II 5",
+"[ ... me-mi-iš-ke-ez]-zi"
+]
+],
+"tr": "Šanḫa[tu antw]ortet [Enkidu]:",
+"trlang": "DE"
+},
+{
+"n": "73",
+"sec": "§ 12''''",
+"hl": "",
+"master": "{d}GIŠ.GIM.[MAŠ ... p]ēḫuteškanzi",
+"words": [],
+"mss": [
+[
+"B+D",
+"Vs. II 3'",
+"{d}GIŠ.GIM.[MAŠ] [ ... pé]-⸢e⸣-ḫu-te-eš-kán-zi"
+],
+[
+"C",
+"Vs. II 5",
+"{d}[GIŠ.GIM.MAŠ] [ ... pé-e-ḫ]u-⸢te⸣-iš-kán-z[i]"
+]
+],
+"tr": "„Gilga[mesch, ... s]chaffen [ ... ] hin.",
+"trlang": "DE"
+},
+{
+"n": "74",
+"sec": "§ 12''''",
+"hl": "",
+"master": "{LÚ}GURUŠ-ant[i=ma ... mā]n pianzi",
+"words": [],
+"mss": [
+[
+"B+D",
+"Vs. II 4'",
+"{LÚ}GURUŠ-an-t[i-ma] [ ... ma-a-an pí-a]n-zi"
+],
+[
+"C",
+"Vs. II 6",
+"[ ... ] [ ... ma-a]-an pí-an-z[i]"
+]
+],
+"tr": "[Wen]n sie [aber ... ] eine[m] jungen Mann geben,",
+"trlang": "DE"
+},
+{
+"n": "75",
+"sec": "§ 12''''",
+"hl": "",
+"master": "nu=wa=šši kwitman [ ... man]inkūwan nāwi pai[zzi]",
+"words": [],
+"mss": [
+[
+"B+D",
+"Vs. II 5'",
+"nu-wa-aš-ši ku-it-ma-an x[ ... ] [ ... ma-ni]-in-ku-u-wa-an na-a-wi5 pa-i[z-zi]"
+],
+[
+"C",
+"Vs. II 7",
+"[ ... ] [ ... ]⸢ma⸣-ni-in-ku-wa-an [ ... ]"
+]
+],
+"tr": "und solange er ihr noch nicht [n]ahe kom[mt],13",
+"trlang": "DE"
+},
+{
+"n": "76",
+"sec": "§ 12''''",
+"hl": "",
+"master": "[ ... -p]a? ANA {d}GIŠ.GIM.MAŠ EGIR-an arḫa [ ... ]",
+"words": [],
+"mss": [
+[
+"B+D",
+"Vs. II 7'",
+"[ ... -p]a? A-NA {d}GIŠ.GIM.MAŠ!25 EGIR!26-an ar-ḫa x[ ... ] ¬¬¬"
+],
+[
+"C",
+"Vs. II 9",
+"[ ... ] ⸢{d}⸣GIŠ.GIM!.MAŠ EGI[R-an ...] ¬¬¬"
+]
+],
+"tr": "[ ... ] dem Gilgamesch [ ... ] wieder fort. “14",
+"trlang": "DE"
+},
+{
+"n": "77",
+"sec": "§ 13''''",
+"hl": "",
+"master": "[GIM-an=ma {d}EN.KI].DU4-uš unin memiyan išta[mašta]",
+"words": [],
+"mss": [
+[
+"B+D",
+"Vs. II 8'",
+"[ ... {d}EN.KI].DU4-uš u-ni-in me-mi-ya-an iš-ta-[ma-aš-ta]"
+],
+[
+"C",
+"",
+"Die Zeilen 10 – 12 sind zerstört."
+]
+],
+"tr": "[Als aber Enki]du jenes Wort hör[te],",
+"trlang": "DE"
+},
+{
+"n": "78",
+"sec": "§ 13''''",
+"hl": "",
+"master": "[nu=šši kartimm]iyaz kišat",
+"words": [],
+"mss": [
+[
+"B+D",
+"Vs. II 9'",
+"[ ... kar-tim-m]i-ya-az ki-ša-at"
+],
+[
+"C",
+"",
+"Die Zeilen 10 – 12 sind zerstört."
+]
+],
+"tr": "entstand [ihm Zo]rn.",
+"trlang": "DE"
+},
+{
+"n": "79",
+"sec": "§ 13''''",
+"hl": "",
+"master": "nu {d}GIŠ.GIM.[MAŠ ... ]",
+"words": [],
+"mss": [
+[
+"B+D",
+"Vs. II 9'",
+"nu {d}GIŠ.⸢GIM⸣.[MAŠ ... ]"
+],
+[
+"C",
+"",
+"Die Zeilen 10 – 12 sind zerstört."
+]
+],
+"tr": "Gilga[mesch ... ]",
+"trlang": "DE"
+},
+{
+"n": "80",
+"sec": "§ 13''''",
+"hl": "",
+"master": "[ ... ] peran EGIR-pa [ ... ]",
+"words": [],
+"mss": [
+[
+"B+D",
+"Vs. II 10'",
+"[ ... ]x pé-ra-an EGIR-⸢pa⸣ x x x[ ... ]"
+],
+[
+"C",
+"Vs. II 13",
+"[ ... EGIR-p]a?"
+]
+],
+"tr": "[ ... ] wieder vor [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "81",
+"sec": "§ 13''''",
+"hl": "",
+"master": "[ ... ]-a [ ... p]ait?",
+"words": [],
+"mss": [
+[
+"B+D",
+"Vs. II 11'",
+"[ ... p]a?-it?"
+],
+[
+"C",
+"Vs. II 14",
+"[ ... ]"
+],
+[
+"E",
+"Vs. II 1''",
+"[ ... ]-a"
+]
+],
+"tr": "[ ... g]ing? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "82",
+"sec": "§ 13''''",
+"hl": "",
+"master": "n[a-? ... {d}EN.KI.D]U-ušš=a? [ ... memi]škanz[i?]",
+"words": [],
+"mss": [
+[
+"B+D",
+"Vs. II 11'",
+"n[a?- ... ]"
+],
+[
+"B+D",
+"",
+"KUB 8.55 bricht ab."
+],
+[
+"C",
+"Vs. II 14",
+"[ ... me-mi-i]š?-kán-z[i]"
+],
+[
+"E",
+"Vs. II 2''",
+"[ ... {d}EN.KI.D]U?-uš-ša [ ... ]"
+]
+],
+"tr": "[ ... ] und [Enkid]u? [spr]eche[n ... ]",
+"trlang": "DE"
+},
+{
+"n": "83",
+"sec": "§ 13''''",
+"hl": "",
+"master": "[ ... ]ēpta",
+"words": [],
+"mss": [
+[
+"C",
+"Vs. II 15",
+"[ ... ]⸢e⸣-ep-⸢ta⸣"
+],
+[
+"E",
+"Vs. II 3''",
+"[ ... ]e-ep-ta"
+],
+[
+"C",
+"",
+"Die Zeilen Vs. II 16 und 17 sind zerstört."
+]
+],
+"tr": "[ ... ] ergriff [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "84",
+"sec": "§ 13''''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Vs. II 18",
+"[ ... ]x"
+],
+[
+"C",
+"",
+"Vs. II bricht ab."
+],
+[
+"E",
+"",
+"Die Zeilen Vs. II 4'' – 6'' sind weggebrochen."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "85",
+"sec": "§ 13''''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 7''",
+"[ ... ]x"
+],
+[
+"E",
+"",
+"Die Zeile Vs. II 8'' ist weggebrochen."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "86",
+"sec": "§ 13''''",
+"hl": "",
+"master": "[ ... p]i(-)ḫū-[ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 9''",
+"[ ... p]í?(-)⸢ḫu-u?⸣-x-x ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "87",
+"sec": "§ 14''''",
+"hl": "",
+"master": "[ ... ] ⸢{d}GIŠ.GIM.MAŠ-uš⸣ [ ... ] appantati",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 10''",
+"[ ... ]ap-pa-an-ta-ti"
+],
+[
+"F",
+"Vs. II 1'",
+"[ ... ]⸢{d}GIŠ.GIM.MAŠ-uš⸣ [ ... ]x"
+]
+],
+"tr": "[ ... ] (und) Gilgamesch fassten sich [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "88",
+"sec": "§ 14''''",
+"hl": "",
+"master": "nu {d}GIŠ.GIM.MAŠ-uš [ ... ] arḫa [ ... -z]i",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 11''",
+"[ ... ]ar-ḫa [ ... -z]i (Rasur)"
+],
+[
+"F",
+"Vs. II 2'",
+"nu {d}GIŠ.⸢GIM⸣.MAŠ-uš [ ... ]"
+]
+],
+"tr": "Gilgamesch [ ...]t [ ... ] fort.",
+"trlang": "DE"
+},
+{
+"n": "89",
+"sec": "§ 14''''",
+"hl": "",
+"master": "[ ... ] {LÚ}aran",
+"words": [],
+"mss": [
+[
+"E",
+"",
+"Die Zeile Vs. II 13'' ist weggebrochen."
+],
+[
+"F",
+"Vs. II 3'",
+"[ ... ]x x x {LÚ}a-ra-an"
+]
+],
+"tr": "[ ... ], den Freund.",
+"trlang": "DE"
+},
+{
+"n": "90",
+"sec": "§ 14''''",
+"hl": "",
+"master": "[nu G]IM-an e[t]er? ekwer",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 14''",
+"[ ... ]"
+],
+[
+"F",
+"Vs. II 4'",
+"[ ... G]IM-an ⸢e?⸣-[t]e?-er e-ku-⸢er⸣"
+]
+],
+"tr": "[A]ls sie a[ß]en? (und) tranken,",
+"trlang": "DE"
+},
+{
+"n": "91",
+"sec": "§ 14''''",
+"hl": "",
+"master": "[nu {d}GIŠ.GIM.MAŠ-u]š ANA {d}EN.KI.DU [E]GIR-pa memiškiuwan [dāiš]",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 14''",
+"[ ... {d}GIŠ.GIM.MAŠ-u]š A-⸢NA⸣ {d}⸢EN.KI⸣.DU [ ... ]"
+],
+[
+"F",
+"Vs. II 5'",
+"[ ... A-N]A {d}EN.KI.D[U4 E]GIR-pa me-mi-eš-ki-u-wa-an [ ... ]"
+]
+],
+"tr": "[begann Gilgamesch, wi]eder zu Enkidu zu sprechen:",
+"trlang": "DE"
+},
+{
+"n": "92",
+"sec": "§ 14''''",
+"hl": "",
+"master": "[ ... ]{MEŠ}27=wa=kan kwit šallišta",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 15''",
+"[ _ {MEŠ}-wa-k]án k[u-i]t [ ... ]"
+],
+[
+"F",
+"Vs. II 6'",
+"[ ... ]x{MEŠ}-wa-kán ⸢ku⸣-it šal-⸢li⸣-iš-ta"
+]
+],
+"tr": "„Weil [ ... ] groß geworden ist,",
+"trlang": "DE"
+},
+{
+"n": "93",
+"sec": "§ 14''''",
+"hl": "",
+"master": "[ ... ] anda weḫešket",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 16''",
+"[ ... ú-e-ḫe-e]š-ke-et"
+],
+[
+"F",
+"Vs. II 7'",
+"[ ... ]x28 an-da ú-e-ḫi-iš-⸢ke⸣-et"
+]
+],
+"tr": "ist er in [ ... ] umhergestreift?",
+"trlang": "DE"
+},
+{
+"n": "94",
+"sec": "§ 14''''",
+"hl": "",
+"master": "[ ... ]-ri",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 17''",
+"[ ... ]"
+],
+[
+"F",
+"Vs. II 8'",
+"[ ... ]x29-ri"
+]
+],
+"tr": "[ ... ]“",
+"trlang": "DE"
+},
+{
+"n": "95",
+"sec": "§ 14''''",
+"hl": "",
+"master": "nu {d}EN.KI.DU4-uš [ANA {d}GIŠ.GIM.MAŠ EGIR-pa memi]škiuwan dāi[š]",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 17''",
+"[ ... {d}EN.KI.DU4-u]š? [ ... da-a-i]š"
+],
+[
+"F",
+"Vs. II 8'",
+"nu {d}EN.KI.DU4-uš [ ... me-mi-i]š-⸢ki-u-wa-an da⸣-a-i[š]"
+]
+],
+"tr": "Enkidu bega[nn, Gilgamesch] zu [antwo]rten:",
+"trlang": "DE"
+},
+{
+"n": "96",
+"sec": "§ 14''''",
+"hl": "",
+"master": "[ ... {Ḫ]}I.A-uš=ma=wa=za [ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 19''",
+"[ ... .{Ḫ]}I?.A-uš-ma-wa-za [ ... ]"
+],
+[
+"F",
+"Vs. II 10'",
+"[ ... ]x x x[ ... ]"
+],
+[
+"F",
+"",
+"Vs. II bricht ab."
+]
+],
+"tr": "„[ ... ] aber [ ... ] die [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "97",
+"sec": "§ 14''''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 20''",
+"[ ... ]x"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "98",
+"sec": "§ 14''''",
+"hl": "",
+"master": "[ ... -š]in [ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 21''",
+"[ ... -š]i?-in [ ... ]"
+],
+[
+"J",
+"Vs. II 1'",
+"[ ... ]x x x"
+]
+],
+"tr": "[ ... ]“",
+"trlang": "DE"
+},
+{
+"n": "99",
+"sec": "§ 14''''",
+"hl": "",
+"master": "[nu {d}GIŠ.GIM.MAŠ-uš LU]GAL-uš [ANA {d}EN.KI.DU EGIR-pa mem]iškiuwan dā[iš]",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 22''",
+"[ ... LU]GAL?-uš [ ... me-mi]-iš-ki-u-wa-an da-[a-iš]"
+],
+[
+"J",
+"Vs. II 2'",
+"[ ... ]"
+]
+],
+"tr": "[Gilgamesch], der [Kö]nig, beg[ann, Enkidu] zu [antwo]rten:",
+"trlang": "DE"
+},
+{
+"n": "100",
+"sec": "§ 14''''",
+"hl": "",
+"master": "[nu?=nn]aš INA EGIR.UD{KAM} [ ... ]-weni",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 24''",
+"[nu-un?-n]a-aš I-NA EGI[R.UD{KAM}?] [ ... -u-e-n]i? ¬¬¬"
+],
+[
+"J",
+"Vs. II 3'",
+"[nu-un?-na-a]š? ⸢I⸣-NA EGIR.⸢UD{KAM}⸣ [ ... ]x-u-⸢e?⸣-ni ¬¬¬"
+]
+],
+"tr": "„Wir [ ...]en [u]ns in Zukunft [ ... ]“",
+"trlang": "DE"
+},
+{
+"n": "101",
+"sec": "§ 15''''",
+"hl": "",
+"master": "[ ... ] {d}GIŠ.GIM.MAŠ KARAŠ{ḪI.A} [ ... tar]uptat",
+"words": [],
+"mss": [
+[
+"E",
+"Vs. II 26''",
+"[ ... KARAŠ]⸢{ḪI?}.A?⸣"
+],
+[
+"E",
+"",
+"Vs. II bricht ab."
+],
+[
+"J",
+"Vs. II 5'",
+"[ ... ]⸢{d}⸣GIŠ.⸢GIM⸣.MAŠ KARAŠ{ḪI.A} [ ... ta-r]u-up-ta-⸢at⸣"
+]
+],
+"tr": "[ ... ] (des?) Gilgamesch Heer [ver]sammelte sich [ ... ]15",
+"trlang": "DE"
+},
+{
+"n": "102",
+"sec": "§ 15''''",
+"hl": "",
+"master": "[ ... -a]nzi",
+"words": [],
+"mss": [
+[
+"J",
+"Vs. II 7'",
+"[ ... -a]n-zi"
+]
+],
+"tr": "Sie [ ...]en [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "103",
+"sec": "§ 15''''",
+"hl": "",
+"master": "nu=za EZEN4-an iyat",
+"words": [],
+"mss": [
+[
+"J",
+"Vs. II 8'",
+"nu30-za ⸢EZEN4⸣-an i-ya-⸢at⸣"
+]
+],
+"tr": "Er bereitete ein Fest",
+"trlang": "DE"
+},
+{
+"n": "104",
+"sec": "§ 15''''",
+"hl": "",
+"master": "[ ... ḫūm]anteš ḫalzāiš31",
+"words": [],
+"mss": [
+[
+"J",
+"Vs. II 9'",
+"[ ... ḫu-u-m]a-an-te-⸢eš⸣ ḫal-za-a-iš"
+]
+],
+"tr": "und rief [al]le [ ... ] (herbei).",
+"trlang": "DE"
+},
+{
+"n": "105",
+"sec": "§ 15''''",
+"hl": "",
+"master": "[ ... ] E[GI]R-pa memiškiuwan [dāiš]",
+"words": [],
+"mss": [
+[
+"J",
+"Vs. II 9'",
+"[ ... ]x-x E[GI]R-⸢pa⸣ me-mi-iš-ki-u-wa-an [ ... ]"
+]
+],
+"tr": "[ ... begann], wi[ed]er [ ... ] zu sprechen:",
+"trlang": "DE"
+},
+{
+"n": "106",
+"sec": "§ 15''''",
+"hl": "",
+"master": "[... {d}ḫuw]awain=wa [ ... ]-allu",
+"words": [],
+"mss": [
+[
+"J",
+"Vs. II 10'",
+"[... {d}ḫu-w]a-⸢wa-in⸣-wa x-⸢al-lu⸣32 ¬¬¬"
+],
+[
+"J",
+"",
+"Ende von Vs. II 33"
+]
+],
+"tr": "„Ich will den [Ḫuw]awa [ ...]en!“",
+"trlang": "DE"
+},
+{
+"n": "107",
+"sec": "§ 16'''''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"F",
+"Rs. III 1'",
+"[ ... ]x[ ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "108",
+"sec": "§ 17'''''",
+"hl": "",
+"master": "[ ... ]-tati",
+"words": [],
+"mss": [
+[
+"F",
+"Rs. III 2'",
+"[ ... ]x-⸢ta⸣-ti"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "109",
+"sec": "§ 17'''''",
+"hl": "",
+"master": "{d}GI[Š.G]IM.MAŠ-[uš {d}EN.KI.DU-ušš=a ... ] pāer",
+"words": [],
+"mss": [
+[
+"F",
+"Rs. III 2'",
+"{d}GI[Š.G]IM.⸢MAŠ⸣-[uš] [ ... ]x pa-a-er"
+]
+],
+"tr": "Gi[lg]amesch [und Enkidu] gingen [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "110",
+"sec": "§ 17'''''",
+"hl": "",
+"master": "nu=šmaš=k[an ... ] ⸢20⸣ DANNA [ ...? ]",
+"words": [],
+"mss": [
+[
+"F",
+"Rs. III 3'",
+"nu-uš34-ma-aš-k[án _ (_) ] ⸢20⸣ DANNA [ ...? ]"
+]
+],
+"tr": "und [ ... ] ihnen zwanzig Meilen [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "111",
+"sec": "§ 17'''''",
+"hl": "",
+"master": "[30?35 D]ANNA=ma=kan šēšu-[ ... ]-ki",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 1'",
+"[ ... ]x x[ _ ]x x x[ ... ]x[ ... ]"
+],
+[
+"F",
+"Rs. III 4'",
+"[ ... D]ANNA-ma-⸢kán še?⸣-⸢e?⸣-šu-x[ _ _ ]-ki"
+]
+],
+"tr": "[Dreißig M]eilen aber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "112",
+"sec": "§ 17'''''",
+"hl": "",
+"master": "[G]IM-an INA {ÍD}mala NUNDUM=ši [erer]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 2'",
+"[G]IM-an I-NA {ÍD}ma-la NUNDUM-ši [ ... ]"
+],
+[
+"F",
+"Rs. III 5'",
+"[ ... {ÍD}ma-l]a [N]UNDUM-ši [ ... ]"
+]
+],
+"tr": "[A]ls [sie] an den Malafluss, (nämlich) an sein Ufer, [gelangten],",
+"trlang": "DE"
+},
+{
+"n": "113",
+"sec": "§ 17'''''",
+"hl": "",
+"master": "[ ... ] SÍSKUR piēr",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 3'",
+"[ ... ]x SÍSKUR pí-e-er"
+],
+[
+"F",
+"Rs. III 6'",
+"[ ... ]"
+]
+],
+"tr": "führten sie ein Ritual [ ... ] aus.16",
+"trlang": "DE"
+},
+{
+"n": "114",
+"sec": "§ 17'''''",
+"hl": "",
+"master": "apēzz=a [ ... ]",
+"words": [],
+"mss": [
+[
+"F",
+"Rs. III 7'",
+"[ ... ]"
+]
+],
+"tr": "Von dem aber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "115",
+"sec": "§ 17'''''",
+"hl": "",
+"master": "[ ... INA UD 1]6{KAM} ŠÀ ḪUR.SAG{MEŠ} erer",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 4'",
+"[ ... 1]6{KAM} ŠÀ ḪUR.SAG{MEŠ} e-re-er ¬¬¬"
+],
+[
+"F",
+"Rs. III 7'",
+"[ ... 1]⸢6⸣{KAM}"
+],
+[
+"F",
+"",
+"Rs. III bricht ab."
+]
+],
+"tr": "[Am sech]zehnten [Tag] gelangten sie in das Innere der Berge.",
+"trlang": "DE"
+},
+{
+"n": "116",
+"sec": "§ 18'''''",
+"hl": "",
+"master": "[nu? mān?37 Š]À ḪUR.SAG{MEŠ} erer",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 5'",
+"[ ... Š]À ḪUR.SAG{MEŠ} e-re-er"
+]
+],
+"tr": "[Nachdem sie in das Inn]ere der Berge gelangt waren,",
+"trlang": "DE"
+},
+{
+"n": "117",
+"sec": "§ 18'''''",
+"hl": "",
+"master": "nu ḪUR.SAG{MEŠ} [ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 5'",
+"nu ḪUR.SAG{MEŠ}[] [ ... ]"
+]
+],
+"tr": "[ ... ] die Berge [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "118",
+"sec": "§ 18'''''",
+"hl": "",
+"master": "[{G]}IŠERIN=ma=šmaš šakuškanz[i]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 6'",
+"[{G]}IŠERIN-ma-aš-ma-aš ša-ku-uš-kán-z[i]"
+]
+],
+"tr": "Sie sehe[n] sich aber die Zeder an17",
+"trlang": "DE"
+},
+{
+"n": "119",
+"sec": "§ 18'''''",
+"hl": "",
+"master": "[ ... {d}ḫuw]awaiš katta šakuške[zzi]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 7'",
+"[ ... {d}ḫu-w]a-wa-iš kat-ta ša-ku-uš-ke-e[z-zi]"
+]
+],
+"tr": "[und Ḫuw]awa sie[ht ...] hinab.18",
+"trlang": "DE"
+},
+{
+"n": "120",
+"sec": "§ 18'''''",
+"hl": "",
+"master": "[ ... ] AŠRĪ{ḪI.A} ŠA DINGIR-LIM kwit [erer?]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 8'",
+"[ ... ] AŠ-RI{ḪI.A} ŠA DINGIR-LIM ku-it[] [ ... ]"
+]
+],
+"tr": "Weil [sie zu] den Orten der Gottheit [gelangten?],",
+"trlang": "DE"
+},
+{
+"n": "121",
+"sec": "§ 18'''''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 9'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "122",
+"sec": "§ 18'''''",
+"hl": "",
+"master": "[Š]A DINGIR-LIM {GIŠ}ERIN=ma=wa [ ... ]kar(a)ppan ḫarkanzi",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 9'",
+"[Š]A DINGIR-LIM {GIŠ}ERIN-ma-wa [] [ ... ]kar-ap-pa-an ḫar-kán-zi []"
+]
+],
+"tr": "„Sie haben aber die Zedern der Gottheit [ ... ] entfernt.“19",
+"trlang": "DE"
+},
+{
+"n": "123",
+"sec": "§ 18'''''",
+"hl": "",
+"master": "[ ...? {d}EN.KI.DU-uš {d}GI]Š.GIM.MAŠ-ušš=a memiškanzi",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 11'",
+"[ ... {d}GI]Š.GIM.MAŠ-⸢uš⸣-ša me-mi-iš-kán-zi"
+]
+],
+"tr": "[Enkidu] und [Gi]lgamesch sprechen:",
+"trlang": "DE"
+},
+{
+"n": "124",
+"sec": "§ 18'''''",
+"hl": "",
+"master": "[ ... ]=kan UL āššiyanteš ḪUR.SAG{MEŠ}-uš [ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 12'",
+"[ ... ]-kán Ú-⸢UL⸣ a-aš-ši-ya-an-te-eš ḪUR.SAG{MEŠ}-uš"
+]
+],
+"tr": "„[ ... ] nicht die geliebten Berge [ ... ]?",
+"trlang": "DE"
+},
+{
+"n": "125",
+"sec": "§ 18'''''",
+"hl": "",
+"master": "[ ... =w]a ḪUR.SAG{MEŠ}-[u]š warḫūnuškezzi",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 13'",
+"[ ... -w]a ḪUR.SAG{MEŠ}-[u]š wa-ar-ḫu-u-nu-uš-ke-ez-zi"
+]
+],
+"tr": "[ ... ] bepflanzt die Ber[g]e dicht.",
+"trlang": "DE"
+},
+{
+"n": "126",
+"sec": "§ 18'''''",
+"hl": "",
+"master": "[ ... ]lappinit aršanteš [ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 14'",
+"[ ... ]la-ap-pí-ni-⸢it⸣ ar-ša-an-te-eš [ ... ]"
+]
+],
+"tr": "[ ... ] mit der lappina-Pflanze fließende [ ... ]20",
+"trlang": "DE"
+},
+{
+"n": "127",
+"sec": "§ 18'''''",
+"hl": "",
+"master": "[ ... DUMU.LÚ].U19.LU parra[nt]a pāuwanzi [ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 15'",
+"[ ... DUMU.LÚ].⸢U19⸣.LU pár-ra-a[n-t]a pa-a-u-wa-an-zi [ ... ]"
+]
+],
+"tr": "[ ... zum Mensc]hen hinü[be]rzugehen.21",
+"trlang": "DE"
+},
+{
+"n": "128",
+"sec": "§ 18'''''",
+"hl": "",
+"master": "[ ... ] ŠA {GIŠ}ERIN [ ... ] {GIŠ}alkištanuš [ ... ] ḫarkanzi",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 16'",
+"[ ... ]x ŠA {GIŠ}ERIN x[ (_) ]x {GIŠ}al-kiš-ta-nu-uš [ ... ]-x ḫar-kán-zi"
+]
+],
+"tr": "[ ... ] halten die Zweige [ ... ] der Zeder [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "129",
+"sec": "§ 18'''''",
+"hl": "",
+"master": "nu=wa[(-) ... ] ḪUR.SAG{MEŠ}-aš ištarna [ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 17'",
+"nu-wa[(-) _ _ ]ḪUR.SAG{MEŠ}-aš iš-tar-na [ ... ]"
+]
+],
+"tr": "und [ ... ] inmitten der Berge [ ... ]“",
+"trlang": "DE"
+},
+{
+"n": "130",
+"sec": "§ 18'''''",
+"hl": "",
+"master": "[ ... ]-maš IŠTU IN[IM? du]škettari?38",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 18'",
+"[ ... ]x-⸢ma?⸣-aš IŠ-TU IN[IM? du?-u]š-kit9-ta-ri"
+]
+],
+"tr": "[ ... er]freut sich an den Wor[ten].",
+"trlang": "DE"
+},
+{
+"n": "131",
+"sec": "§ 18'''''",
+"hl": "",
+"master": "[ ... ]-nutti miti[t? ... ]-tiya a-[ ... ] {d}ḫuwawa [ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 19'",
+"[ ... ]x-⸢ti⸣-ya a-x[ _ ]x {d}ḫu-wa-wa [ ... ]"
+],
+[
+"L",
+"4'",
+"[ _ ]-⸢nu?-ut?⸣-ti mi-ti-i[t? ... ]39"
+]
+],
+"tr": "[ ... ] mi[t] rot[em ... ] Ḫuwawa [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "132",
+"sec": "§ 18'''''",
+"hl": "",
+"master": "iwar40 {LÚ}NAR [ ... ] ḪUR.S[AG? ḫa]zzikkanzi",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 20'",
+"[ ... ]⸢ḪUR?⸣.S[AG? ḫa?-a]z-zi-ik-kán-zi ¬¬¬"
+],
+[
+"L",
+"5'",
+"⸢i⸣-wa-ar {LÚ}⸢NAR⸣ [ ... ] ¬¬¬"
+]
+],
+"tr": "Sie [sp]ielen [ ... ] nach Art eines Musikanten [ ... ] Be[rg ... ]",
+"trlang": "DE"
+},
+{
+"n": "133",
+"sec": "§ 19'''''",
+"hl": "",
+"master": "nu GIM-an {d}GIŠ.GIM.MAŠ [ŠA {d}ḫuwaw]a urkin aušta",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 21'",
+"[ ... {d}ḫu-wa-w]a úr-ki-in [ ... ]"
+],
+[
+"L",
+"6'",
+"nu GIM-an {d}GIŠ.⸢GIM!⸣.MAŠ [ ... ] a-uš-ta"
+]
+],
+"tr": "Als Gilgamesch [des Ḫuwaw]a Spur sah,",
+"trlang": "DE"
+},
+{
+"n": "134",
+"sec": "§ 19'''''",
+"hl": "",
+"master": "⸢n⸣=aš I[M ... ā]r(a)š",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 22'",
+"[ ... a-a]r-aš"
+],
+[
+"L",
+"7'",
+"⸢na⸣-aš I[M ... ]"
+]
+],
+"tr": "[gel]angte er [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "135",
+"sec": "§ 19'''''",
+"hl": "",
+"master": "n=an na[ḫ- ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"",
+"Rs. III 23' ist weggebrochen."
+],
+[
+"L",
+"8'",
+"na-an na-a[ḫ?- _ ]-x[ ... ]"
+]
+],
+"tr": "und fürch[- ... ] ihn [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "136",
+"sec": "§ 19'''''",
+"hl": "",
+"master": "nu {d}EN.KI.DU4-uš [ANA {d}GIŠ.GIM.MAŠ memiškiuwa]n? dāiš",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 24'",
+"[ ... {d}EN.KI.D]U-uš [ ... me-mi-iš-ki-u-wa?-a]n? da-a-iš"
+],
+[
+"L",
+"9'",
+"nu {d}⸢EN.KI.DU4-uš⸣[ ... ] ⸢da-iš⸣"
+]
+],
+"tr": "Enkidu begann, [zu Gilgamesch z]u [sprechen?]:",
+"trlang": "DE"
+},
+{
+"n": "137",
+"sec": "§ 19'''''",
+"hl": "",
+"master": "kuwat=wa [ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 26'",
+"[ ... ]"
+],
+[
+"L",
+"10'",
+"⸢ku?⸣-wa-at-wa [ ... ]"
+]
+],
+"tr": "„Warum [ ... ]?",
+"trlang": "DE"
+},
+{
+"n": "138",
+"sec": "§ 19'''''",
+"hl": "",
+"master": "[k]uwatt=a IGI-an[da ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 26'",
+"[ku-wa-a]t-ta [ ... ]"
+],
+[
+"L",
+"11'",
+"[k]u?-wa-at-ta IGI-an-[da ... ]"
+]
+],
+"tr": "Und [w]arum [ ... ] gegenüb[er ... ]?",
+"trlang": "DE"
+},
+{
+"n": "139",
+"sec": "§ 19'''''",
+"hl": "",
+"master": "[ ... ] GAM-an UL art[ati]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 27'",
+"[ ... ]"
+],
+[
+"L",
+"11'",
+"[ ... ] ⸢GAM⸣-an Ú-UL ar-t[a-ti?]"
+]
+],
+"tr": "[ ... ] stan[dest du?] nicht bei? [ ... ]?",
+"trlang": "DE"
+},
+{
+"n": "140",
+"sec": "§ 19'''''",
+"hl": "",
+"master": "[nu=w]a=mu [ ... ] {d}ḫuwawaiš mena[ḫḫanda ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 27'",
+"[nu?-w]a-mu [ ... ]"
+],
+[
+"L",
+"13'",
+"⸢{d}⸣ḫu-wa-wa-iš me-na-a[ḫ-ḫa-an-da ... ]"
+]
+],
+"tr": "Und Ḫuwawa [ ... ] mir gege[nüber ... ]",
+"trlang": "DE"
+},
+{
+"n": "141",
+"sec": "§ 19'''''",
+"hl": "",
+"master": "nu UN-aš mekki [ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 28'",
+"[ ... ]⸢{d}ḫu-wa⸣-w[a]41"
+],
+[
+"E",
+"",
+"KBo 10.47g Rs. III bricht ab."
+],
+[
+"L",
+"14'",
+"nu UN-aš42 me-ek-ki x[ ... ]"
+]
+],
+"tr": "Der Mensch [ ... ] viel [ ...]",
+"trlang": "DE"
+},
+{
+"n": "142",
+"sec": "§ 19'''''",
+"hl": "",
+"master": "nu=war=aš mān [ ... ]",
+"words": [],
+"mss": [
+[
+"L",
+"15'",
+"nu-wa-ra-aš ma-a-an x[ ... ]"
+]
+],
+"tr": "Und wenn er [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "143",
+"sec": "§ 19'''''",
+"hl": "",
+"master": "nu=war=aš=kan anzā[š ... ]",
+"words": [],
+"mss": [
+[
+"L",
+"16'",
+"nu-wa-ra-aš-kán an-za-a-[aš ... ]"
+]
+],
+"tr": "[ ... ] er un[s ... ]",
+"trlang": "DE"
+},
+{
+"n": "144",
+"sec": "§ 19'''''",
+"hl": "",
+"master": "ḫaštaliyanz[a ... ]",
+"words": [],
+"mss": [
+[
+"L",
+"17'",
+"ḫa-aš-ta!?43-li-ya-an-z[a ... ] ¬¬¬"
+]
+],
+"tr": "De[r] heldenhaf[te ... ]“",
+"trlang": "DE"
+},
+{
+"n": "145",
+"sec": "§ 20'''''",
+"hl": "",
+"master": "[nu=šm]aš kwiš ḫa-[ ... ]",
+"words": [],
+"mss": [
+[
+"L",
+"18'",
+"[nu-uš-m]a-aš? ku-iš ḫa-[ ... ]"
+]
+],
+"tr": "Wer [ih]nen [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "146",
+"sec": "§ 20'''''",
+"hl": "",
+"master": "[ ... {d}E]N.K[I.DU(-) ... ]",
+"words": [],
+"mss": [
+[
+"L",
+"19'",
+"[ ... {d}E]N.K[I.DU(-) ... ]"
+],
+[
+"L",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... E]nk[idu ... ]",
+"trlang": "DE"
+},
+{
+"n": "147",
+"sec": "§ 21''''''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. III 1''",
+"[ ... ]x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "148",
+"sec": "§ 21''''''",
+"hl": "",
+"master": "[ ... ]nepiša[z?]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 1'",
+"[ ... ]ne-⸢pí-ša⸣-[az?]"
+],
+[
+"E",
+"",
+"Die Zeilen Rs. III 2'' – 4'' sind weggebrochen."
+]
+],
+"tr": "[ ... aus] dem Himmel [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "149",
+"sec": "§ 21''''''",
+"hl": "",
+"master": "[ ... SA]G-ŠU?",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 2'",
+"[ ... SA]G!?44-ŠU"
+],
+[
+"E",
+"",
+"Die Zeilen Rs. III 2'' – 4'' sind weggebrochen."
+]
+],
+"tr": "[ ... ] sein [Ko]pf? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "150",
+"sec": "§ 21''''''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 3'",
+"[ ... ] ¬¬¬"
+],
+[
+"E",
+"",
+"Die Zeilen Rs. III 2'' – 4'' sind weggebrochen."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "151",
+"sec": "§ 22''''''",
+"hl": "",
+"master": "[ ... ] šummittantan ŠU-az ēpt[a]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 4'",
+"[ ... ]x šum-mi-it-ta-an-ta-an ŠU-⸢az⸣ e-ep-t[a]"
+],
+[
+"E",
+"Rs. III 5''",
+"¬¬¬ [ ... šu-um-mi-ta-an-t]a-an45 ¬¬¬"
+],
+[
+"E",
+"",
+"Ende von Rs. III"
+]
+],
+"tr": "[ ... 22] ergri[ff] die Axt mit der Hand.",
+"trlang": "DE"
+},
+{
+"n": "152",
+"sec": "§ 22''''''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 5'",
+"[ ... ]"
+],
+[
+"E",
+"Rs. IV 1",
+"[ ... ]x"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "153",
+"sec": "§ 22''''''",
+"hl": "",
+"master": "GIM-an=ma {d}GIŠ.GIM.MAŠ-u[š ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 5'",
+"[{d}GI]Š.GIM!.MAŠ-x46-ma GIM-an [ ... ]"
+],
+[
+"E",
+"Rs. IV 1",
+"GIM-an-ma {d}GIŠ.GIM‹.MAŠ›-u[š ... ] [ ... ]x"
+]
+],
+"tr": "Als aber Gilgamesch [ ... ],",
+"trlang": "DE"
+},
+{
+"n": "154",
+"sec": "§ 22''''''",
+"hl": "",
+"master": "nu apāšš=a ḪAṢṢINNU [ ... ŠU-az?] ēpta",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 6'",
+"⸢a⸣-pu-uš-ša ḪA-AṢ‹-ṢÍ›-IN-NU [ ... ] e-ep-ta"
+],
+[
+"E",
+"Rs. IV 2",
+"nu a-pa-a-aš-ša ḪA-AṢ-ṢÍ-I[N-NU ... ]"
+]
+],
+"tr": "ergriff auch der die Axt [ ... mit der Hand?]",
+"trlang": "DE"
+},
+{
+"n": "155",
+"sec": "§ 22''''''",
+"hl": "",
+"master": "[ ... ]-ašš=a {GIŠ}ERIN kar(a)šta",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 8'",
+"[ ... ] kar-aš-ta"
+],
+[
+"E",
+"Rs. IV 3",
+"[ ... ]x-⸢aš?⸣-ša {GIŠ}ERIN kar-aš-ta []"
+]
+],
+"tr": "und schlug die Zeder [ ... ] ab.",
+"trlang": "DE"
+},
+{
+"n": "156",
+"sec": "§ 22''''''",
+"hl": "",
+"master": "[GIM-an=ma {d}]ḫu[wawai]š? taḫaran47 ištamašta",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 9'",
+"[ ... {d}]⸢ḫu⸣-[wa-wa-iš?] ta-ḫa-ra-an iš-ta-ma-aš-ta"
+],
+[
+"E",
+"Rs. IV 4",
+"[ ... {d}ḫu-wa-wa-i]š? [ta-ḫa-r]a-[a]n ⸢iš-ta⸣-m[a-aš-ta]"
+]
+],
+"tr": "[Als aber] Ḫu[wawa] den Lärm? hörte,",
+"trlang": "DE"
+},
+{
+"n": "157",
+"sec": "§ 22''''''",
+"hl": "",
+"master": "[nu]=šši [ka]rtimmiyaza kišat",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 10'",
+"[ _ _ _ ka]r-tim-mi-⸢ya-za ki⸣-ša-at"
+],
+[
+"E",
+"Rs. IV 5",
+"[nu-u]š-ši [ ... ]"
+]
+],
+"tr": "entstand ihm [Z]orn.",
+"trlang": "DE"
+},
+{
+"n": "158",
+"sec": "§ 22''''''",
+"hl": "",
+"master": "kwiš=wa w[et]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 10'",
+"ku-iš-wa ú-[et]"
+],
+[
+"E",
+"Rs. IV 6",
+"[ku-i]š-wa ⸢ú⸣-[et]"
+]
+],
+"tr": "„Wer ist geko[mmen]",
+"trlang": "DE"
+},
+{
+"n": "159",
+"sec": "§ 22''''''",
+"hl": "",
+"master": "[kwe GIŠ{ḪI.A}?48 a]mmel šallanuwantat[i] ḪUR.SAG{MEŠ}-aš? i[štarn]a",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 11'",
+"[ ... a]m-me-el šal-la-nu-wa-an-ta-t[i Ḫ]UR.SAG{MEŠ}-aš49 [iš-tar-n]a"
+],
+[
+"E",
+"Rs. IV 6",
+"[ ... ] ḪUR.SAG{MEŠ}-aš i[š-tar-na]"
+]
+],
+"tr": "(und) hat die Zedern, [welche] (als) [m]eine i[n]mitten der Berge hoch wuch[sen],",
+"trlang": "DE"
+},
+{
+"n": "160",
+"sec": "§ 22''''''",
+"hl": "",
+"master": "nu=kan {GIŠ}ERIN [k]ar(a)šta",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 12'",
+"nu-kán {GIŠ}ERIN [k]ar-aš-ta ¬¬¬"
+],
+[
+"E",
+"Rs. IV 7",
+"[ ... ] ¬¬¬"
+]
+],
+"tr": "[ab]geschlagen?“23",
+"trlang": "DE"
+},
+{
+"n": "161",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "nu=wa=šmaš=kan nepišaz kattan {d}UTU ŠAMÊ memiškezz[i]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 13'",
+"[nu]-wa-aš-ma«-ma»-aš-kán ne-pí-⸢ša⸣-[a]z kat-ta-⸢an⸣ ⸢{d}⸣UTU ŠA-ME-E me-mi-iš-ke-ez-z[i]"
+],
+[
+"E",
+"Rs. IV 8",
+"nu-uš-ma-aš-kán n[e-pí-ša-az ... ] me-mi-iš-ke-ez-z[i]"
+]
+],
+"tr": "Zu ihnen sprich[t] aus dem Himmel hinab der Sonnengott des Himmels:",
+"trlang": "DE"
+},
+{
+"n": "162",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "tiyatt[en=wa]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 14'",
+"⸢ti⸣-ya-at-t[én-wa]"
+],
+[
+"E",
+"Rs. IV 9",
+"[ ... ]"
+]
+],
+"tr": "„Tret[et] (vor)!",
+"trlang": "DE"
+},
+{
+"n": "163",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "lē=wa naḫtēni",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 15'",
+"[l]e-e-wa na-aḫ-te-e-ni"
+],
+[
+"E",
+"Rs. IV 10",
+"le-e-wa na-aḫ-te-[ni]"
+]
+],
+"tr": "Fürchtet euch nicht!",
+"trlang": "DE"
+},
+{
+"n": "164",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "n[u=wa ... ] iyanniyatten",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 15'",
+"n[u-wa ... ] i-ya-an-ni-ya-at-tén"
+],
+[
+"E",
+"Rs. IV 10",
+"[ ... ]"
+]
+],
+"tr": "Geht [ ... ],",
+"trlang": "DE"
+},
+{
+"n": "165",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "kwitman=war=aš=ka[n] É-ri anda nāwi paiz[zi]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 16'",
+"ku-i[t-ma-an-wa-ra-aš-kán] É-ri an-da na-a-wi5 pa-iz-[zi]"
+],
+[
+"E",
+"Rs. IV 11",
+"ku-it-ma-an-wa-ra-aš-ká[n ... ]"
+]
+],
+"tr": "solange er noch nicht ins Haus gegangen i[st]!",
+"trlang": "DE"
+},
+{
+"n": "166",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 17'",
+"[ ... ]"
+],
+[
+"E",
+"Rs. IV 11",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "167",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "nu=wa=za :galpariwala50 nā[wi? ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 18'",
+"nu-wa-za :gal-pa-ri-wa-la na-[a-wi5? ... ]"
+],
+[
+"E",
+"Rs. IV 12",
+"[n]u-wa-za :kal?-pa-ri-wa-l[a ... ]"
+]
+],
+"tr": "[ ... ] noch [nicht ... ].“",
+"trlang": "DE"
+},
+{
+"n": "168",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "[ ... ] išdammašta {d}EN.KI.DU4-u[š]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 18'",
+"[ ... ] iš-dam-ma-a[š-t]a {d}EN.KI.DU4-u[š]"
+],
+[
+"E",
+"Rs. IV 12",
+"[ ... ] [i]š-ta-ma-aš-ta {d}EN.KI.D[U4?-uš]"
+]
+],
+"tr": "[ ... ] hörte, der Enkidu,",
+"trlang": "DE"
+},
+{
+"n": "169",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "[nu=šši kartimmiyaz] ki-ša-at",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 19'",
+"[ ... ] ki-ša-at"
+],
+[
+"E",
+"Rs. IV 13",
+"[ ... ] ki-⸢ša⸣-at"
+]
+],
+"tr": "[und ihm] entstand [Zorn].",
+"trlang": "DE"
+},
+{
+"n": "170",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "nu=šši=kan {d}EN.[KI.DU4-uš] {d}GIŠ.GIM.MAŠ-ušš=a anda iyanner",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 20'",
+"nu-uš-ši-kán {d}EN.[KI.DU4-uš] {d}GIŠ.GIM!.MAŠ-uš-ša an-da i-ya-[an-nir?]"
+],
+[
+"E",
+"Rs. IV 14",
+"nu-⸢uš⸣-ši-kán {d}EN.K[I.DU-uš ... ] an-da ⸢i⸣-ya-an-nir!51"
+]
+],
+"tr": "En[kidu] und Gilgamesch gingen zu ihm hinein",
+"trlang": "DE"
+},
+{
+"n": "171",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "nu {d}ḫuwawain ḫalluwa[ntan? wemier] ḪUR.SAG{MEŠ}-aš=kan ištarna",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. III 22'",
+"nu {d}ḫu-wa-wa-in ḫal-lu-wa-a[n-ta-an? ú-e-mi-er]52 ¬¬¬"
+],
+[
+"C",
+"",
+"Ende von Rs. III."
+],
+[
+"E",
+"Rs. IV 15",
+"nu {d}ḫu-wa-w[a-in ... ] ḪUR.SAG⸢{MEŠ}⸣-aš-kán iš-tar-na"
+]
+],
+"tr": "und [fanden] den gereiz[ten] Ḫuwawa inmitten der Berge.",
+"trlang": "DE"
+},
+{
+"n": "172",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "nu=šma[š=kan {d}ḫuwawaiš] memiš[k]ezzi",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. IV 16",
+"nu-uš-ma-a[š-kán ... ] me-mi-iš-[k]e-ez-zi"
+],
+[
+"K",
+"1'",
+"[ ... ]x[ ... ]"
+]
+],
+"tr": "[Ḫuwawa] spri[c]ht zu ihn[en]:",
+"trlang": "DE"
+},
+{
+"n": "173",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "šarā=wa=šmaš [ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. IV 17",
+"ša-ra-a-⸢wa⸣-aš-ma-a[š ... ]"
+],
+[
+"K",
+"2'",
+"[ša]-⸢ra-a-wa⸣-aš-ma-aš x[ ... ]"
+]
+],
+"tr": "„Hinauf [ ... ] euch [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "174",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "nu=wa=šmaš=⸢kan⸣ nepiši šarā pēdaḫḫ[i]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. IV 18",
+"nu-wa-aš-ma-aš-⸢kán⸣ ne-pí-ši ⸢ša!⸣-ra-a pé-⸢e⸣-[da-aḫ-ḫi]"
+],
+[
+"K",
+"2'",
+"[ ... ] [š]a-ra-a pé-e-da-aḫ-ḫ[i]"
+]
+],
+"tr": "Ich schaff[e] euch hinauf in den Himmel!",
+"trlang": "DE"
+},
+{
+"n": "175",
+"sec": "§ 23''''''",
+"hl": "",
+"master": ":taršamaš=[šm]aš wal(a)ḫmi",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. IV 19",
+":tar-ša-ma-a[š-m]a-aš wa-al-aḫ-mi"
+],
+[
+"K",
+"3'",
+"[ ... ]"
+]
+],
+"tr": "Ich schlage [eu]ch auf die Schädel!24",
+"trlang": "DE"
+},
+{
+"n": "176",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "nu=šmaš=kan [GAM-an] dankuwai [takn]ī arnumi",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. IV 19",
+"nu-uš-ma-aš-ká[n ... ] da-an-ku-wa-i [ták-n]i-i ar-nu-mi []"
+],
+[
+"K",
+"4'",
+"[nu-u]š-ma-aš-kán da-an-ku-⸢i⸣ [ ... ] [a]r-nu-mi"
+]
+],
+"tr": "Ich bringe euch [hinunter] in die dunkle [Erd]e!“",
+"trlang": "DE"
+},
+{
+"n": "177",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "šarā=aš t[a- ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. IV 21",
+"ša-ra-a-aš t[a- _ _ ]x"
+]
+],
+"tr": "Hinauf [ ... ] er [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "178",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "šarā=šmaš=[kan nepiši] UL arnut53",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. IV 21",
+"na-aš ne-p[í-ši ... ]"
+],
+[
+"G",
+"1'",
+"[ ... ] x x [ ... ]"
+],
+[
+"K",
+"5'",
+"ša-ra-a-aš-ma-aš-[kán ne-pí-ši] ⸢Ú⸣-UL ar-nu-nu-un"
+]
+],
+"tr": "Er (K: Ich25) brachte euch nicht hinauf [in den Himmel].",
+"trlang": "DE"
+},
+{
+"n": "179",
+"sec": "§ 23''''''",
+"hl": "",
+"master": ":taršamaš wa[l(a)ḫta]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. IV 22",
+":tar-ša-ma-aš wa-[al-aḫ-ta]"
+],
+[
+"G",
+"2'",
+"[tar-š]a-⸢ma-aš-ma⸣-aš x[ ... ]54"
+],
+[
+"K",
+"6'",
+"tar-ša-ma-a[š-ma-aš ... ]"
+]
+],
+"tr": "[Er] sc[hlug] (euch) auf die Schädel.26",
+"trlang": "DE"
+},
+{
+"n": "180",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "[nu]=mu {NA4}pērunaš GÌR-an IGI-an[da? ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"",
+"Kolon fehlt."
+],
+[
+"G",
+"3'",
+"[ ... {NA4}]⸢pé-ru-na-aš⸣ GÌR-⸢an IGI?-an?⸣-[da?]"
+],
+[
+"K",
+"7'",
+"[nu]-mu {NA4}pé-e-ru-na-aš GÌR-an [ ... ]"
+]
+],
+"tr": "Und mir [ ... ] der Stein27 den Fuß entgeg[en? ... ]",
+"trlang": "DE"
+},
+{
+"n": "181",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "[nu]=šmaš=kan dankui t[aknī] UL arnut",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. IV 22",
+"[n]a-aš-kán GAM-an [ ... ] Ú-UL ar-nu-ut"
+],
+[
+"G",
+"4'",
+"[ ... ]GE6-i KI-⸢pí⸣ GAM-an-⸢da⸣[ ... ]"
+],
+[
+"K",
+"8'",
+"[nu-u]š-ma-aš-kán da-an-ku-i t[ák-ni-i] ⸢Ú⸣-UL ar-nu-nu-un"
+]
+],
+"tr": "Er (K: Ich) brachte euch nicht hinunter in die dunkle E[rde].",
+"trlang": "DE"
+},
+{
+"n": "182",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "ēpper {d}ḫuwawai[n ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. IV 23",
+"[e-ep-pi]r {d}ḫu-w[a-wa- ... ]"
+],
+[
+"G",
+"5'",
+"[e-e]p-pir {d}ḫu-⸢wa-wa⸣-i[n ... ]"
+],
+[
+"K",
+"9'",
+"e-ep-p[é-er ... ] [ (_) ]x-wa"
+]
+],
+"tr": "[Sie ergrif]fen den Ḫuwawa [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "183",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "nu tētanit [ ... ]-unni[r]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. IV 24",
+"nu te-e-ta-ni-i[t _ _ _ (_) ]x-un-ni[r ...? ]"
+],
+[
+"G",
+"6'",
+"[ ... ]ḪUR.⸢SAG.MEŠ?⸣ x[ (_) ]x-x-⸢un⸣-[nir? ... ]"
+],
+[
+"K",
+"10'",
+"nu te-e-da-ni-it x55[ ... ]"
+]
+],
+"tr": "Sie [ ...]te[n ... ] am Haar (in die?) Berge.",
+"trlang": "DE"
+},
+{
+"n": "184",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "namma=wa=šmaš=kan ZŪTU kwiš ar-[ ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. IV 25",
+"nam-ma-wa-aš-ma-aš-ká[n ... ku-i]š ⸢ar⸣-x[ ... ]"
+],
+[
+"G",
+"7'",
+"[ ... ku-i]š a[r?- _ (_) ]x x-y[a ... ]"
+],
+[
+"K",
+"11'",
+"[nam-ma-w]a-aš-ma-aš-kán ZU-U-DU ku-i[š? ... ]"
+]
+],
+"tr": "Der Schweiß, der ihnen dann [ ... ],28",
+"trlang": "DE"
+},
+{
+"n": "185",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "nu ANŠE.KUR.RA{ḪI.A}-uš paškeškan[tuš ... a]rriyanti56",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. IV 26",
+"nu ANŠE.KUR.RA{ḪI.A}-uš(-)x[ _ _ (_) a]r-ri-ya-an-[ti]"
+],
+[
+"G",
+"8'",
+"[ ... ar]-ri-ya-⸢an⸣-ti"
+],
+[
+"K",
+"12'",
+"[ _ ANŠ]E.KUR.RA{MEŠ}-uš pa-aš-ke-eš-kán[-57 ... ]"
+]
+],
+"tr": "Die Pferde, den feststecken[den Staub,] waschen? sie.29",
+"trlang": "DE"
+},
+{
+"n": "186",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "SAḪAR{ḪI.A}-uš=ma kwiēš areškantari",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 1'",
+"[...]x a-r[a-iš-kán-ta-ri?]"
+],
+[
+"E",
+"Rs. IV 27",
+"SAḪAR{ḪI.A}-uš-ma ku-i-⸢e⸣-[eš a-ri-i]š-kán-ta-ri!"
+],
+[
+"G",
+"8'",
+"⸢SAḪAR⸣{ḪI.A}-u[š-ma] [ ... ]"
+],
+[
+"K",
+"12'",
+"[ ... ] [ku-i]-⸢e⸣-eš a-re-eš-kat58-ta-ri"
+]
+],
+"tr": "Welche aber den Staub aufwirbeln,30",
+"trlang": "DE"
+},
+{
+"n": "187",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "nu nepiš UL tukkišzi",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 1'",
+"[ ... ] ⸢tu⸣-uk-ki-iš-z[i]"
+],
+[
+"E",
+"Rs. IV 28",
+"nu ne-pí-iš ⸢Ú⸣-[UL tu-uk]-ki-iš-zi"
+],
+[
+"G",
+"9'",
+"[n]u ⸢ne-pí⸣-iš Ú-UL[ ... ]"
+],
+[
+"K",
+"13'",
+"[ ... ] [tu-u]k-ke-eš-zi"
+]
+],
+"tr": "(so dass) der Himmel nicht sichtbar ist.31",
+"trlang": "DE"
+},
+{
+"n": "188",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "nu=za=kan {d}GIŠ.GIM.MAŠ-uš {d}UTU ŠAMÊ {GIŠ}Š[Ú.A?] šarā aušta",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 2'",
+"[ ... ] ⸢{d}UTU⸣ ŠA-ME-E ⸢{GIŠ}⸣Š[Ú?.A? ... ]"
+],
+[
+"E",
+"Rs. IV 28",
+"nu-za-[kán ... ] {d}UTU ŠA-ME-⸢E⸣ [ ... š]a-ra-a a-uš-ta[]"
+],
+[
+"G",
+"10'",
+"[ ... ]-⸢kán⸣? {d}⸢GIŠ⸣.GIM!.MAŠ-uš [] [ ... a-u]š-ta []"
+],
+[
+"K",
+"14'",
+"nu-za-kán [ ... ] [ (_) ]x-an ša-ra-a a-u[š-ta]"
+]
+],
+"tr": "Gilgamesch sah hinauf zum Sonnengott des Himmels, (zu seinem) Th[ron?],",
+"trlang": "DE"
+},
+{
+"n": "189",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "n=aš wīškezz[i]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 4'",
+"na-aš ú-i-iš-ke-ez-z[i]"
+],
+[
+"E",
+"Rs. IV 30",
+"[n]a-aš ú-i-i[š-ke-ez-zi]"
+],
+[
+"G",
+"12'",
+"[ ... ]"
+],
+[
+"K",
+"15'",
+"[ ... ]"
+]
+],
+"tr": "und er ruf[t]32.",
+"trlang": "DE"
+},
+{
+"n": "190",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "[ ... -a]zza=ma=kan ŠA {d}UTU ŠAMÊ anda [ ... ] aušta",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 5'",
+"ŠA {d}UTU ŠA-ME-E an-da x[ ... ]"
+],
+[
+"E",
+"Rs. IV 30",
+"[ ... ]x-⸢za?-ma⸣-kán ŠA [ ... ] [ _ ]x a-u[š?-ta?]"
+],
+[
+"G",
+"12'",
+"[ ... -z]a-ma-kán [] [ ... a-u]š?-⸢ta⸣ []"
+],
+[
+"K",
+"16'",
+"[ _ (_) -a]z-za-ma-kán Š[A? ... ] [ _ _ (_) ]x x[ ... ]59"
+],
+[
+"K",
+"",
+"Text bricht ab."
+]
+],
+"tr": "Vom [ ... ] des Sonnengottes des Himmels aber sah er in [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "191",
+"sec": "§ 23''''''",
+"hl": "",
+"master": "nu=šši=kan išḫaḫru :P[A5{ḪI.A}-uš mān arš]anzi",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 6'",
+"nu-uš-ši-kán iš-ḫa-aḫ-ru :P[A5{ḪI.A}-uš ... ] ¬¬¬"
+],
+[
+"E",
+"Rs. IV 31",
+"[ ... iš-ḫa-a]ḫ-ru P[A5{ḪI.A}-uš] [ ... ar-ša-an-z]i60"
+],
+[
+"E",
+"",
+"KBo 10.47h Rs. IV bricht ab."
+],
+[
+"G",
+"14'",
+"[ ... ar-š]a!?-an-z[i!?]"
+],
+[
+"G",
+"",
+"Text bricht ab."
+]
+],
+"tr": "und ihm [flie]ßen die Tränen [wie] Ka[näle] hervor.",
+"trlang": "DE"
+},
+{
+"n": "192",
+"sec": "§ 24''''''",
+"hl": "",
+"master": "nu {d}GIŠ.GIM.MAŠ-aš ANA {d}UTU ŠAMÊ m[emiškezzi?]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 7'",
+"nu {d}GIŠ.GIM!.MAŠ-aš A-NA {d}UTU ŠA-ME-E m[e-mi-iš-ke-ez-zi?]"
+]
+],
+"tr": "Gilgamesch s[pricht] zum Sonnengott des Himmels:",
+"trlang": "DE"
+},
+{
+"n": "193",
+"sec": "§ 24''''''",
+"hl": "",
+"master": "kāš=wa apāš UD{KAM}-za INA UR[U]-ri [ ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 8'",
+"ka-a-aš-wa a-pa-a-aš UD{KAM}-za I-NA UR[U]-ri61[ ... ]"
+]
+],
+"tr": "„Dies ist der Tag in der St[ad]t [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "194",
+"sec": "§ 24''''''",
+"hl": "",
+"master": "[ ...? ]62 kwit URU-ri EGIR-pa ašešanut",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 9'",
+"ku-it URU-ri EGIR-pa a-še-ša-nu-ut [] ¬¬¬"
+]
+],
+"tr": "weil er [ ... ] wieder in der Stadt ansiedelte.",
+"trlang": "DE"
+},
+{
+"n": "195",
+"sec": "§ 25''''''",
+"hl": "",
+"master": "ammuk=ma=za=⸢kan⸣ ANA {d}UTU ŠAMÊ [ ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 10'",
+"am-mu-uk!63-ma-za-⸢kán⸣ A-NA {d}UTU ⸢ŠA⸣-M[E]-⸢E⸣ x[ ... ]"
+]
+],
+"tr": "Ich aber [ ... ] zum Sonnengott des Himmels [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "196",
+"sec": "§ 25''''''",
+"hl": "",
+"master": "nu KASKAL-an ēppun",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 11'",
+"nu KASKAL-an e-ep-pu-⸢un⸣"
+]
+],
+"tr": "und nahm den Weg.",
+"trlang": "DE"
+},
+{
+"n": "197",
+"sec": "§ 25''''''",
+"hl": "",
+"master": "š[akiy]aḫḫa-[ ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 11'",
+"š[a-ki-y]a?-⸢aḫ?-ḫa⸣-x64 x[ ... ]"
+]
+],
+"tr": "[ ... ] ein Vorzeichen geb[- ... ]“",
+"trlang": "DE"
+},
+{
+"n": "198",
+"sec": "§ 25''''''",
+"hl": "",
+"master": "[{d}UT]U ŠAMÊ Š[A {d}]GIŠ.GIM.MAŠ arkuw[ar] ištamašta",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 12'",
+"[{d}UT]U ⸢ŠA⸣-ME-E Š[A {d}]GIŠ.GIM!.MAŠ ar-ku-w[a-ar] iš-ta-ma-aš-⸢ta⸣"
+]
+],
+"tr": "Der [Sonneng]ott des Himmels hörte das Gebe[t] d[es] Gilgamesch",
+"trlang": "DE"
+},
+{
+"n": "199",
+"sec": "§ 25''''''",
+"hl": "",
+"master": "nu ANA {d}ḫuwawa IM[{MEŠ}-uš] GAL{MEŠ}-iš araezzi",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 13'",
+"nu A-NA {d}ḫu-wa-wa IM[{MEŠ}-uš] GAL{MEŠ}-iš a-ra-ez-zi"
+]
+],
+"tr": "und erhebt gegen Ḫuwawa [die] großen Wind[e]:33",
+"trlang": "DE"
+},
+{
+"n": "200",
+"sec": "§ 25''''''",
+"hl": "",
+"master": "IM.GAL [{I]}MILTĀNU[ ... ] {IM}ZIQZIQQU {IM}ŠURUPPÛ {IM}AŠ[AMŠŪTU] {IM}ANḪULLU",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 14'",
+"IM.GAL [{I]}MEL-TA-NU[ ... ] {IM}ZI-IK!-ZI-KU! {IM}ŠU-RU-UP-PU-U {IM}A-Š[A-AM-ŠU-TU] {IM}AN-ḪU-UL-LU"
+]
+],
+"tr": "den großen Wind, den Nord[w]ind, [ ...34 ] den Sturm, den Kältewind, den Gew[ittersturm] (und) den Hitzewind.",
+"trlang": "DE"
+},
+{
+"n": "201",
+"sec": "§ 25''''''",
+"hl": "",
+"master": "8 IM{MEŠ}-a=šš[i] arāer",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 16'",
+"8 IM{MEŠ}-aš-š[i] ⸢a?-ra⸣-a-er"
+]
+],
+"tr": "Die acht Winde aber erhoben sich gegen ih[n]",
+"trlang": "DE"
+},
+{
+"n": "202",
+"sec": "§ 25''''''",
+"hl": "",
+"master": "nu=⸢kan⸣ [ANA {d}ḫuwawa] IGI{ḪI.A}-wa EGIR-pa walḫi[šk]anzi",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 16'",
+"nu-⸢kán⸣ [ ... ] IGI{ḪI.A}-wa EGIR-pa wa-al-ḫi-i[š-k]án-zi"
+]
+],
+"tr": "und schl[ag]en [dem Ḫuwawa] die Augen zurück.35",
+"trlang": "DE"
+},
+{
+"n": "203",
+"sec": "§ 25''''''",
+"hl": "",
+"master": "nu=šši UL parā i[y]anniyauwa[nzi] kišari",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 18'",
+"nu-uš-ši Ú-UL pa-ra-a ⸢i⸣-[y]a-an-ni-ya-u-wa-a[n-zi] «Ú-UL65» ki-ša-ri"
+]
+],
+"tr": "Es ist ihm nicht möglich, vorwärts [zu] g[e]hen,",
+"trlang": "DE"
+},
+{
+"n": "204",
+"sec": "§ 25''''''",
+"hl": "",
+"master": "UL=ma=šši EGIR-pa tiy[auwanzi] kišari",
+"words": [],
+"mss": [
+[
+"B+D",
+"Rs. IV 1'",
+"[ ... ] ti-y[a-u-wa-an-zi ... ]"
+],
+[
+"C",
+"Rs. IV 19'",
+"Ú-UL-⸢ma⸣-aš-ši EGIR-pa t[i-ya-u-wa-an-zi] ki-ša-ri"
+]
+],
+"tr": "nicht aber ist es ihm möglich, sich wieder hi[nzustellen].",
+"trlang": "DE"
+},
+{
+"n": "205",
+"sec": "§ 25''''''",
+"hl": "",
+"master": "nu=za {d}ḫuwawaiš arḫa daliy[at]",
+"words": [],
+"mss": [
+[
+"B+D",
+"Rs. IV 2'",
+"[ ... a]r-ḫa da-a-⸢li⸣-y[a-at] ¬¬¬"
+],
+[
+"C",
+"Rs. IV 20'",
+"nu-za {d}ḫu-wa-wa-iš ar-ḫa da-l[i-ya-at] ¬¬¬"
+]
+],
+"tr": "Ḫuwawa lie[ß] (davon) ab.36",
+"trlang": "DE"
+},
+{
+"n": "206",
+"sec": "§ 26''''''",
+"hl": "",
+"master": "nu {d}ḫuwawaiš ANA {d}GIŠ.GIM.MAŠ EGIR-pa memiškez[zi]",
+"words": [],
+"mss": [
+[
+"B+D",
+"Rs. IV 3'",
+"[ ... ] ⸢{d}⸣GIŠ.GIM.MAŠ EGIR-pa me-mi-iš-ke-⸢ez⸣-[zi]"
+],
+[
+"C",
+"Rs. IV 21'",
+"nu {d}ḫu-wa-wa-iš A-NA {d}GIŠ.GIM!.MAŠ EGIR-pa me-m[i-iš-ke-ez-zi]"
+]
+],
+"tr": "Ḫuwawa sprich[t] wieder zu Gilgamesch:",
+"trlang": "DE"
+},
+{
+"n": "207",
+"sec": "§ 26''''''",
+"hl": "",
+"master": "arḫa=wa=mu dāli {d}GIŠ.GIM.MAŠ",
+"words": [],
+"mss": [
+[
+"B+D",
+"Rs. IV 3'",
+"[ ... ] [ ... {d}GIŠ.GIM.MA]Š"
+],
+[
+"C",
+"Rs. IV 22'",
+"ar-ḫa-wa-mu da-a-li {d}GIŠ.GIM!.MAŠ"
+]
+],
+"tr": "„Lass ab von mir, Gilgamesch!",
+"trlang": "DE"
+},
+{
+"n": "208",
+"sec": "§ 26''''''",
+"hl": "",
+"master": "nu=wa=mu=za zik EN-aš ēš",
+"words": [],
+"mss": [
+[
+"B+D",
+"Rs. IV 4'",
+"nu-wa-mu-za zi-ik EN-aš e-eš[]"
+],
+[
+"C",
+"Rs. IV 22'",
+"nu-mu-za zi-i[k ... ]"
+]
+],
+"tr": "Sei du mir Herr!",
+"trlang": "DE"
+},
+{
+"n": "209",
+"sec": "§ 26''''''",
+"hl": "",
+"master": "ammuk=ma=ddu=za ARAD-iš ēšlut",
+"words": [],
+"mss": [
+[
+"B+D",
+"Rs. IV 5'",
+"[ ... ]"
+],
+[
+"C",
+"Rs. IV 23'",
+"am-mu-uk-ma-ad-du-za ARAD-iš e-eš-lu-ut"
+]
+],
+"tr": "Ich aber will dir Diener sein!",
+"trlang": "DE"
+},
+{
+"n": "210",
+"sec": "§ 26''''''",
+"hl": "",
+"master": "n[u]=t[t]a? [{GIŠ}]ERIN{MEŠ}? kwiēš šallanuškenun",
+"words": [],
+"mss": [
+[
+"B+D",
+"Rs. IV 5'",
+"[nu-ut-t]a? x ⸢ERIN?66⸣{MEŠ} ku-i-⸢e⸣-e[š] [ ... ]"
+],
+[
+"C",
+"Rs. IV 23'",
+"n[u?-u]t?-[ta? ... ] [k]u-i-e-eš šal-la-nu-uš-ke-nu-un"
+]
+],
+"tr": "Die Zedern, die ich d[i]r großgezogen habe,",
+"trlang": "DE"
+},
+{
+"n": "211",
+"sec": "§ 26''''''",
+"hl": "",
+"master": "nu [ ... ] daššauš :pulpulī[(-) ... ] [k]ar(a)šmi",
+"words": [],
+"mss": [
+[
+"B+D",
+"Rs. IV 6'",
+"[ ... ]x[ ... ]"
+],
+[
+"B+D",
+"",
+"KUB 33.123 bricht ab."
+],
+[
+"C",
+"Rs. IV 24'",
+"nu x x[ ... ] ⸢da⸣-aš-ša-uš :pu-ul-pu-li-⸢i⸣[(-) ... ] [k]ar-aš-mi"
+]
+],
+"tr": "[s]chlage ich [ ... ] (als) starke [ ... ] ab.37",
+"trlang": "DE"
+},
+{
+"n": "212",
+"sec": "§ 26''''''",
+"hl": "",
+"master": "nu=za {É.MEŠ}ḫal[enduwa? ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 26'",
+"nu-za {É.MEŠ}⸢ḫa⸣-l[e-en-du-wa? ... ]"
+]
+],
+"tr": "[ ... ] Pal[ast? ... ]“",
+"trlang": "DE"
+},
+{
+"n": "213",
+"sec": "§ 26''''''",
+"hl": "",
+"master": "[n]u {d}EN.KI.DU4-uš AN[A {d}GIŠ.GIM.MAŠ memiškezzi]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 27'",
+"[n]u {d}EN.KI.DU4-uš A-N[A ... ]"
+]
+],
+"tr": "Enkidu [spricht] z[u Gilgamesch]:",
+"trlang": "DE"
+},
+{
+"n": "214",
+"sec": "§ 26''''''",
+"hl": "",
+"master": "{d}ḫuwawaiš kwin m[emiyan memišta]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 28'",
+"⸢{d}⸣ḫu-wa-wa-iš ⸢ku⸣-in m[e-mi-ya-an ... ]"
+]
+],
+"tr": "„Das W[ort], das Ḫuwawa [sprach],",
+"trlang": "DE"
+},
+{
+"n": "215",
+"sec": "§ 26''''''",
+"hl": "",
+"master": "n=an lē išt[amašti]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 29'",
+"na-an le-e iš-t[a-ma-aš-ti]"
+]
+],
+"tr": "soll[st du] nicht hö[ren]!",
+"trlang": "DE"
+},
+{
+"n": "216",
+"sec": "§ 26''''''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 29'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "217",
+"sec": "§ 26''''''",
+"hl": "",
+"master": "lē {d}ḫuwaw[ain daliyaši?]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 30'",
+"⸢le⸣-e {d}ḫu-wa-w[a-in ... ]"
+]
+],
+"tr": "[Lass?] nicht [ab von] Ḫuwaw[a]!",
+"trlang": "DE"
+},
+{
+"n": "218",
+"sec": "§ 26''''''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 30'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "219",
+"sec": "§ 26''''''",
+"hl": "",
+"master": "[nu? Ḫ]UR.SAG{MEŠ} [ ... ]",
+"words": [],
+"mss": [
+[
+"C",
+"Rs. IV 31'",
+"[ _ Ḫ]UR.SAG{MEŠ}[ ... ]"
+],
+[
+"C",
+"",
+"KBo 6.1 bricht ab."
+]
+],
+"tr": "[ ... B]erge [ ... ]“",
+"trlang": "DE"
+},
+{
+"n": "220",
+"sec": "§ 27'''''''",
+"hl": "",
+"master": "D[UB? 1{KAM} ... ]",
+"words": [],
+"mss": [
+[
+"E",
+"Rs. IV 1''",
+"D[UB? ... ]"
+]
+],
+"tr": "",
+"trlang": "DE"
+},
+{
+"n": "221",
+"sec": "§ 27'''''''",
+"hl": "",
+"master": "ŠU {m}ipizzi",
+"words": [],
+"mss": [
+[
+"E",
+"li. Rd.",
+"ŠU {m}i-pí-iz-zi"
+],
+[
+"E",
+"",
+"Ende der Rs IV.."
+]
+],
+"tr": "",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1:2": "Laroche, RHA 26/82, 1968, 7, ergänzt: [wa]-al-l[a-aḫ-ḫi-]ya-an {d}G[ILGAMEŠ-un?] nach Kollation am Foto -al- am Anfang möglich, Rest unsicher.",
+"§ 1:T1": "Vgl. Beckman 2001, 158: „[Of Gilgamesh], the hero, [I will sing his praises...]“",
+"§ 2:3": "Friedrich: [ ... lamniyat?] mit Zusatz, dass die Ergänzung sehr unsicher sei.",
+"§ 2:4": "Ungewöhnlich und wohl graphisch bedingt.",
+"§ 2:5": "Friedrich: pa? nach Kollation.",
+"§ 2:6": "CHD P 65a liest š[ekan. (siehe dazu auch den Kommentar: „Both readings are problematic but s. is easier.“) Nach RlA s.v. Masse und Gewichte 518a gibt es keine sicheren Belege für wakšur als Längenmaß.",
+"§ 2:7": "Friedrich: ḫar/ḫur? nach Kollation.",
+"§ 2:T2": "Beckman 2001, 158, schlägt Ea(?) vor.",
+"§ 2:T3": "Vgl. CHD Š 125a: „The valiant [... ...-ed] Gilgamesh, (his) form, (as) a created one, but [it was the ...-s who] created Gilgamesh, (his) form; ... [but] (it was) the great gods (who) cr[eated] Gilgamesh..“",
+"§ 2:T4": "Wörtl.: „Die Gestalt (beträgt) ihm ...“",
+"§ 2:T5": "Wörtl.: „Die Brust aber (beträgt) ihm ...“",
+"§ 2:T6": "HW Ḫ 323a+b legt sich bei ḫarniuš auf keine Bedeutung fest, sondern ordnet es nur als Körperteil ein und analysiert es als A.pl.: „[So aber(?)] sch[ufen] die großen Götter Gilgamesch: Seine Gestalt (betrug) an Hö[he] (wörtlich: die Gestalt war ihm an Höhe) 11 Ellen. Seine Brust aber (maß) an Breite 9 S[pannen]. Seine ḫarni- aber (maßen) an Länge 3 [x].“; Friedrich, Weitenberg u.a. analysieren ḫarniuš als N.sg. eines u-Stamms.",
+"§ 2:T7": "Wörtl.: „Das ḫarniu- aber (beträgt) ihm ...“",
+"§ 3:8": "k[a?-at-ta e-ša-at]? Vgl. Beckman 2001, 158, der übersetzt: „and he [settled] down.“",
+"§ 3:9": "Nach Kollation am Foto -wa-an über Rasur.",
+"§ 4:10": "Vgl. Beckman 2001, 158, der hier übersetzt: „Then all the gods [summonded the Mother-goddess] over to [the place] of assembly.“ (Vgl. auch zu den restlichen Ergänzungen in E ebd.)",
+"§ 4:11": "CHD Š 124b liest hier ša-am-ni-ia-at als 3.Sg.Prät.",
+"§ 5':12": "Beckman 2001, 158: „... the Mother-[goddess] took the power of growth from [the river(?)] ...“",
+"§ 5':13": "Nach Kollation am Foto passen die Spuren gut zu tar.",
+"§ 6':14": "Vgl. zur Ergänzung Laroche, RHA 26/82, 1968, 9.",
+"§ 6':15": "Vgl. hierzu CHD Š 51a, wo für eine Lesung š[a-ak-r]u-u-wa-u-wa-an-zi-ia plädiert wird.",
+"§ 6':16": "An dieser Stelle fehlt in Exemplar A+H eine Zeile (Bruchstelle zwischen zwei Tafelteilen). Ein Paragraphenstrich hat deshalb wohl auch in A+H gestanden.",
+"§ 7':17": "Vgl. dazu auch Melchert, CLL 6.",
+"§ 7':18": "Nach Melchert, CLL 5 lautet der Akk.Pl. akkatiuš. Das würde eine Analyse akkatiušš=a nahe legen, genau wie unten in Z. 12'' (Text A+H).",
+"§ 7':19": "ANŠE über Rasur.",
+"§ 7':20": "Zu den Ergänzungen in E Vs. I 15'' und 16'' siehe Puhvel, Fs Laroche, 1979, 301, der wie folgt ergänzt: akku[šša] tarneškizzi {D}en[kiduš-ma-šši piran] iyattari nu k[an ŠAḪAR.ḪI.A-az] šaḫiškizzi „(Sangasu) keeps sinking pits, (but) Enkidu will go abead of him nad stuff (them) with dirt.“ Auch Laroche, RHA 26/82, 1968, 9 ergänzt -šši.",
+"§ 7':21": "Der vermeintliche Waagrechte in der Autographie ist nach Kollation am Original wohl Kratzer.",
+"§ 7':22": "Laroche, RHA 26/82, 1968, 9, ergänzt: ša-ḫi-iš-ki-mi, was jedoch hier wohl keinen Sinn ergibt, vgl. auch Beckman 2001, 158: „[He always stops up] with earth the pits...“ und HED I 25.",
+"§ 7':23": "HED I 25 schlägt isparnuskimi (?) vor. Ebenso CHD Š 218b.",
+"§ 8':24": "Laroche, RHA 26/82, 1968, 10, verlesen: še-eš-ki. Nach Kollation am Foto ist eine Lesung ki für den Zeichenrest am Ende der Zeile eher unwahrscheinlich.",
+"§ 12'''':25": "Text: PA.",
+"§ 12'''':26": "Das Logogramm EGIR hat an dieser Stelle die selbe Form wie in Vs. II 10'.",
+"§ 14'''':27": "{GIŠ}ERI]N{MEŠ}-? Vgl. Beckman 2001, 159: „Because the trees(?) (...)“",
+"§ 14'''':28": "Vgl. Beckman 2001, 159: „You wandered about [in the steppe(?)“. Der Zeichenrest hinter dem Bruch sieht nach Kollation am Original allerdings nicht nach -ri aus.",
+"§ 14'''':29": "Beckman 2001, 159: „in the steppe(?)“. Das Zeichen könnte nach Kollation am Original im sein und eine Ergänzung zu gi-i]m-ri wäre damit möglich.",
+"§ 15'''':30": "Über Rasur.",
+"§ 15'''':31": "Beckman 2001, 159: „summoning all [the soldiers to the place of assembly].“",
+"§ 15'''':32": "Erwartet: ú-wa-al-lu, vgl. Beckman 2001, 159: „I want to see Huwawa!“ Nach Kollation am Original sehen die Spuren in etwa so aus wie in der Autographie.",
+"§ 15'''':33": "Auf der nicht kopierten Rückseite zu KUB 60.14 sind Reste von 3 Zeilen erhalten. Die erste Zeile ist mit Sicherheit Rasur, die zweite wahrscheinlich auch Rasur und in der dritten Zeile ist nur der Rest eines Zeichens erhalten.",
+"§ 17''''':34": "nu-uš nach Foto über Rasur.",
+"§ 17''''':35": "Vgl. Beckman 2001, 160: „At thirty] double leagues (...)“",
+"§ 18''''':36": "In Exemplar F nach Rs. III 7' Platz für eine Zeile, nach der mglw. ein §-Strich gestanden hat.",
+"§ 18''''':37": "Wohl Platz für mehr Zeichen.",
+"§ 18''''':38": "Anders Beckman 2001, 160: „But [Huwawa] was watching them from [ ... ]“",
+"§ 18''''':39": "Die Zeilen 1'-3' von Text L ( 1' [ ... ]x[ ... ] 2' [ ... ]x-tar[ ... ] 3' [ ... ]-iš x[ ... ]) gehören wohl zu den vorherigen drei Kola (128-130), lassen sich aber aufgrund ihrer fragmentarischen Erhaltung nicht zuordnen.",
+"§ 18''''':40": "Zur Stellung von iwar vor Logogrammen siehe Melchert – Hoffner 2008, 256.",
+"§ 19''''':41": "Die Zuordnung von E Rs. III 28' zu diesem Kolon ist nicht sicher.",
+"§ 19''''':42": "Oder nu-un<-na>-aš?",
+"§ 19''''':43": "Zeichen sieht nach Kollation am Original so aus wie in der Autographie.",
+"§ 21'''''':44": "Lesung nach Kollation durch Ehelolf.",
+"§ 22'''''':45": "Nach Rs. III 5'' ist noch Platz für eine weitere Zeile; anschließend folgt der Kolumnenendstrich.",
+"§ 22'''''':46": "Über Rasur, mglw. aš zu lesen.",
+"§ 22'''''':47": "HEG T 14 hat keinen eigenen Eintrag zu diesem Wort, bemerkt jedoch unter taḫḫara- (luw. Benennung einer brennbaren Substanz), dass ein von Friedrich ZA 39, 1929, 8f., 42, angesetztes taḫara- „Lärm, Geräusch“ wohl nicht existiert, da es sich um eine im Anlaut vermutlich unvollständige Form handele.",
+"§ 22'''''':48": "Wohl zu wenig Platz! CHD Š 88a ergänzt: [kuiēš].",
+"§ 22'''''':49": "Es scheint ein senkrechter Keil zu folgen, der aber wohl Kratzer oder Rasur ist. CHD Š 88a liest: Ḫ]UR.SAG{MEŠ}-aš.",
+"§ 23'''''':50": "Vgl. dazu Melchert CLL 98 (N.-Akk.Pl. u.B.; eventuell adverbial gebraucht); Starke, StBoT 31, 1990, 271 Anm. 919.",
+"§ 23'''''':51": "Ist nach Kollation am Original \"normalere\" Zeichenform von nir als in der Autographie.",
+"§ 23'''''':52": "HED 3, 50, ergänzt anders: nu {D}ḫuwawain ḫalluwa[nzi] „they fight H.“; dort auch keine Belege für ein Partizip ḫalluwant- aufgeführt. Vgl. auch HW2 Ḫ 87a, die der hier vorliegenden Ergänzung nicht widersprechen.",
+"§ 23'''''':53": "arnut hier so wie auch in Kolon 176, beide Male gegen Ex. K. Vgl. Beckman 2001, 161, der übersetzt: „(...) but he [did] not [carry] them [up] to heaven.“",
+"§ 23'''''':54": "Lesung der Zeile nach Kollation am Foto.",
+"§ 23'''''':55": "Ḫ[UR?",
+"§ 23'''''':56": "Bei dieser Form könnte es sich um eine ansonsten nicht belegte luwische 3.Pl.Präs. des hethitischen Verbs arr-, ar(r)a-, arriya- „waschen“ handeln.",
+"§ 23'''''':57": "Vgl. CHD P 207b: iter.pres.3.Pl. pa-aš-ke-eš-kán[-zi?].",
+"§ 23'''''':58": "kat Über Rasur",
+"§ 23'''''':59": "Die Hälfte der Zeile gehört mglw. zum nächsten Kolon.",
+"§ 23'''''':60": "An diese Stelle bricht KBo 10.47c+h Rs. IV ab, der §-Strich dürfte sich also innerhalb des Bruchs befunden haben.",
+"§ 24'''''':61": "Friedrich {URU}ri?-[.",
+"§ 24'''''':62": "Vgl. für eine mögliche Ergänzung Beckman 2001, 161: „because she(?) resettled [Enkidu(?)] in the city.“",
+"§ 25'''''':63": "Text: -az-.",
+"§ 25'''''':64": "Die Lesung folgt Friedrich: š[a-ki-y]a?-aḫ?-ḫa?-[an.",
+"§ 25'''''':65": "Nach Kollation am Foto sieht es so aus als sei Ú-UL unter Rasur und damit vom Schreiber getilgt.",
+"§ 26'''''':66": "Vgl.CHD Š 88a; Spuren passen zu ERIN; davor aber wohl kein GIŠ.",
+"T1": "Vgl. Beckman 2001, 158: „[Of Gilgamesh], the hero, [I will sing his praises...]“",
+"T2": "Beckman 2001, 158, schlägt Ea(?) vor.",
+"T3": "Vgl. CHD Š 125a: „The valiant [... ...-ed] Gilgamesh, (his) form, (as) a created one, but [it was the ...-s who] created Gilgamesh, (his) form; ... [but] (it was) the great gods (who) cr[eated] Gilgamesh..“",
+"T4": "Wörtl.: „Die Gestalt (beträgt) ihm ...“",
+"T5": "Wörtl.: „Die Brust aber (beträgt) ihm ...“",
+"T6": "HW Ḫ 323a+b legt sich bei ḫarniuš auf keine Bedeutung fest, sondern ordnet es nur als Körperteil ein und analysiert es als A.pl.: „[So aber(?)] sch[ufen] die großen Götter Gilgamesch: Seine Gestalt (betrug) an Hö[he] (wörtlich: die Gestalt war ihm an Höhe) 11 Ellen. Seine Brust aber (maß) an Breite 9 S[pannen]. Seine ḫarni- aber (maßen) an Länge 3 [x].“; Friedrich, Weitenberg u.a. analysieren ḫarniuš als N.sg. eines u-Stamms.",
+"T7": "Wörtl.: „Das ḫarniu- aber (beträgt) ihm ...“",
+"T8": "CHD Š 87 übersetzt es als Präs.hist.: „[The wild] animals were rais[ing him].“",
+"T9": "Vgl. eine abweichende Übersetzung mit anderer Ergänzung in CHD Š 51a: „Enkidu goes with the animals from the place from which he goes to pasture them and [from the place where] (Enkidu) [goes to w]ater (them), Enkidu also goes with them.“",
+"T10": "Vgl. CHD Š 1b, wo allerdings der erste Kolon noch aufgeteilt wird: „Šangašu, the young m[an, goes (?) and] sinks hunting pit[s] (to trap) wild animals. [But] En[kidu] goes [ahead of them (the animals (=šši))] and fills [the pits with earth.“ Vgl. auch Beckman 2001, 158: „The [young] man Shangashu, [a hunter], used to prepare pits [and traps in the steppe] for the wild beasts, [but Enkidu] went out [before him] and kept stopping up [the pits with earth.]“",
+"T11": "Anders Beckman 2001, 158: „so that he might sleep [with the harlot.]“",
+"T12": "Vgl. Beckman 2001, 158: „Then] Shangashu [led] the harlot [out to Enkidu. And he] slept [with the harlot.]“",
+"T13": "Ich würde übersetzen: „und solange [ ... ] ihm noch nicht nahe kommt.“",
+"T14": "Beckman 2001, 159: „[When a young woman] is given in marriage to a young man, before [her husband] has yet drawn near to her, [they] discreetly [take that woman] to Gilgamesh.“",
+"T15": "Anders Beckman 2001, 159: „The fighting men [of Uruk] gathered [to] Gilgamesh [...“",
+"T16": "Vgl. zu dieser Übersetzung CHD P 49f.",
+"T17": "Vgl. zum reflexiven Gebrauch des Pers.Pr. CHD Š 56a und Hoffner – Melchert 2008, 358.",
+"T18": "Vgl. dazu CHD Š 56a: „Huwawa looks down [from Mount ...].“ Mit Hinweis auf weitere Übersetzungen.",
+"T19": "Anders Beckman 2001, 160: „’Seeing that [they have reached] the place of the god, have they finished [cutting down ...] the god's cedars?’“",
+"T20": "CHD L-N 45a stellt es zu aršai-/aršiya- „pflanzen“ und übersetzt: „[the ...s] are planted with lappina-plants...“ In HW2 A 342b zu arš(iye)- „fließen“ gestellt; ebenso HED I 171: „[over]flowing“ (with vegetation).",
+"T21": "Vgl. zur Übersetzung CHD P 33b. Anders CHD L-N 45a: „... (so that) a mor]tal [cannot(?)] go over.“ Vgl. Beckman 2001, 160: „They are covered in brambles(?), [so that it is not possible for a mortal] to cross.“",
+"T22": "Beckman 2001, 161, ergänzt: „Enkidu“.",
+"T23": "Übersetzung folgt CHD Š 88a.; Neu, StBoT 5, 147: „Wer ist gekommen, ... die als meine großgezogen worden sind inmitten der Berge und hat die Zeder gefällt?“",
+"T24": "Übersetzung folgt HEG III 221. tarsamas dürfte dabei D.-L.Pl. sein.",
+"T25": "Vgl. die Anmerkung in der Transliteration.",
+"T26": "HEG III 222 hat ein UL mehr: ÚL ... :tar-ša-ma-aš walḫta.",
+"T27": "Vgl. dazu CHD P 314a.",
+"T28": "Vgl. zu diesen Kola Beckman 2001, 161: „[They grabbed] Huwawa, and by the hair they [ ... ] in the mountains. ... Then he [ ... ] away their ... They stuck the horses in ...“",
+"T29": "Sehr unsichere Verbalform; vgl. dazu auch die Anmerkungen der Transliteration sowie die vorangehende Fußnote.",
+"T30": "Vgl. dazu HED 1 125.",
+"T31": "Vgl. dazu HEG III 428 mit der Bemerkung: Bedeutung kontextuell unklar. Vgl. allerdings Beckeman 2001, 161: „The dust clouds which were raised [were so thick] that heaven was not visible.“",
+"T32": "Vgl. dazu EHS 490.",
+"T33": "Vgl. Beckman 2001, 161: „... and raised up(?) the great winds against Huwawa.“ Siehe auch HED 1 123.",
+"T34": "Haas, Literatur 2006, 275 ergänzt: „[Westwind]“. Beckman 2001, 161: „[the ... Wind, the ... Wind]“.",
+"T35": "Vgl. CHD Š 73b; gemeint ist wohl, dass er gezwungen wegzuschauen, um das Gesicht vor den Winden zu schützen.",
+"T36": "Vgl. Beckman 2001, 161: „Then Huwawa gave up.“",
+"T37": "Vgl. dazu CHD P 375f. mit Diskussion der Stelle."
+}
+}
