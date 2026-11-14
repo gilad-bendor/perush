@@ -309,6 +309,11 @@ for frag, lic in {'(אבר|': [r'ibrat|Ib-ra-at|ib-ra-at'], '(גן|גנה|': [r'
         RESERVED_R8[_k] = RESERVED_R8[_k] + lic
 for _k in [k for k in RESERVED_R8 if '(נשבע|' in k]:
     RESERVED_R8[_k.replace('(נשבע|', '(נשבע|אשבע|ואשבע|תשבע|נשבעים|')] = RESERVED_R8.pop(_k) + [r'lu-ut-ma|ta-ma-a|it-ma|ta-mu-u']  # SEAL lemmatizes AP v7 as *watû*
+# RE1: `בלול` (*balālu*, the cognate: licensed here); `תועבתו` and *ikkibu*.
+for _k in [k for k in RESERVED_R8 if '(בלל|' in k]:
+    RESERVED_R8[_k.replace('(בלל|', '(בלל|בלול|בלולה|בלולים|')] = RESERVED_R8.pop(_k) + [r'balālu|ba-la-l|bal-lu']
+for _k in [k for k in RESERVED_R8 if '(תועבה|' in k]:
+    RESERVED_R8[_k.replace('(תועבה|', '(תועבה|תועבתו|תועבתם|תועבתי|תועבתך|')] = RESERVED_R8.pop(_k) + [r'ikkibu|ik-ki-b|ik-ki-ib']
 for _k in ('AN', 'AK', 'RE', 'ID'):
     RESERVED[_k] = RESERVED_R8
 # The Uruk cycle (renderings.md §12.4): Enmerkar's gates, plus the cycle's own (licensed by the transliteration + ETCSL
@@ -362,6 +367,9 @@ TRAPS = {  # stripped token (prefixes allowed) -> (name, transliteration regex)
     'ממי': ('Mami (מָמִי; "from me")', r'\bmām[ie]\b|\bmami\b|\{d\}ma-mi|\bma-mi\b'), 'דגן': ('Dagan (the god, vocalized)', r'dagan|da-gan'),
     'גירה': ('Girra (גִּירָּה; "cud")', r'girra|gi-ra|GIBIL'), 'שרור': ('Šarur (שָׁרוּר)', r'šarur|ša-ru-ur'),
     'אמר': ('Emar (אֵמַר; "said")', r'e-mar|emar'), 'מרי': ('Mari (מָארִי; "rebellion")', r'ma-ri\{ki\}|mari\{ki\}|Ma-ri\b|\bmari\b'),
+    'בשר': ('Bašar (בַּשַׁר; "flesh")', r'ba-ša-ar|bašar|Ba-ša-ar'), 'איד': ('Id, the river god (אִיד; "calamity")', r'\{d\}ÍD|\{d\}id₂|\{d\}i₇|\{d\}I₇'),
+    'לחמו': ('Laḫmu (לַחְמוּ; "their bread")', r'la-aḫ-mu|laḫmu|La-aḫ-mu'), 'מר': ('Mer (מֵר; "bitter")', r'\{d\}me-er|\{d\}Me-er|\{d\}mer\b'),
+    'חבור': ('Ḫabur (חָבוֹר)', r'ḫa-bur|Ḫa-bu-ur|ḫa-bu-ur|Ḫa-bur'),
     'חנה': ('Ḫana (חָנָה; "Hannah", "camped")', r'ḫa-na|ḫana|ha-na\b'), 'נחי': ('Niḫi (נִיחִי)', r'ni-ḫi|ni-hi'),
     'ציר': ('*ra-gaba* (צִיר)', r'ra₂?-gaba'), 'צירי': ('*ra-gaba* (צִירִי)', r'ra₂?-gaba'), 'צירה': ('*ra-gaba* (צִירָהּ)', r'ra₂?-gaba'),
 }

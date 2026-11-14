@@ -806,6 +806,12 @@ Anzû's *mēlulu* moves to `שִׂחֵק` (2 Sam 6:21 [equivalent]) – applied 
 "cross" `חָצָה`); *dannūtu* `חוֹזֶק`, *malku* `נָסִיךְ` by sense; **_qerēbu_ keeps `קָרַב`** (the cognate rule): Anzû's
 *ṭeḫû* moves to `נִגַּשׁ` – applied by the Anzû reviewer; FL i7′ `[נצחונו]?` (*ernittu* `נִצָּחוֹן`) – applied by the
 reviewer. Tool: G5–G8 (Ibrat licenses `אבר`; `Má-gan`; *ṭūbu*; `אשבע`).
+#### 13.7.6 Part RE1 (ZL, BZ, GU), 2026-11-14
+`10-…/project--RE1.md` accepted (ZL ii37 `שמע את אמירתו זו –`; *āpilum* `עוֹנֶה` – Mari's prophet, not SEAL's
+"diviner"; *imtu* `חֵמָה`; *enēnu* `חָנַן`; *lēʾu* `נֶסֶר`). Decisions: *balālu* `בָּלוּל` licensed (the cognate keeps
+it; Gen 11:7–9 stays the apparatus's); **_ayyābu_ = `צַר`** (renderings §0, Gilgameš; *nakru* keeps `אוֹיֵב`) and
+*zību* `זְאֵב` [cognate] – applied by the reviewer; *saḫāru* / *maḫāru* by sense. Tool: `בלול`, `תועבתו` + *ikkibu*,
+TRAPS for Bašar, Id, Laḫmu, Mer, Ḫabur.
 
 
 ## Changelog
