@@ -82,6 +82,58 @@ read after each section; every correction recorded in **תרגומים** (1:21, 
 - Lam 3:48 [equivalent]: tears like canals (1:191).
 - Where the Hittite adapter kept, changed or dropped the Babylonian epic (all in the notes): kept – the gods' gifts, 11 cubits, the young men of Uruk, Enkidu made in the steppe and living with the animals, the hunter's pits and traps, "bring a harlot", the ius primae noctis (OB II 156–161), the wrestling, 20/30 leagues, the singing forest, Šamaš's voice from heaven, the weeping before the Sun, the great winds, Ḫuwawa's offer of service and Enkidu's "do not listen", the cedar for Enlil's temple door (SB V 316–318), the cleansing and Ištar's "come, be my husband"; changed – Gilgameš roams all lands before reaching Uruk, the mother goddess (not Anu) is angered, the hunter is named Šangašu and goes straight to Gilgameš (his father dropped), 9 (not 4) spans, the 16th day (not the 3rd), eight (not thirteen) winds, Gilgameš (not Ḫuwawa) weeps and cries out, horses at the battle, Ištar answered first by Gilgameš; dropped – the prologue and the walls of Uruk, the complaints of Uruk's women, the dreams on the road, Ninsun.
 
+### Round 8 run 5, translator 3, GI part 2
+Drafted GI 3:1–19:7 (CTH 341.III.3–19, 355 clauses; the placeholder removed): all 611 clauses of GI are now in
+`annotated-GI.rtl.md`. `verify GI --strict`: 0 problems (2 "identical source, different Hebrew" notices, both on broken
+lines of one or two letters: GI 11:5 ~ UL 2:6, GI 6:33 ~ UL 2:168 / LA 1:159 – no real repetition). `check_bible_quotes.py`:
+0 on both files (one remembered verse, Qoh 9:7, caught and corrected). The last sentence of `translation--intro-GI.rtl.md`
+now summarizes tablet 3 and the fragments as they are. HPM's German read after each section; corrections in **תרגומים**
+(3:1, 3:5, 3:8–3:10, 3:20, 3:30, 3:88–3:90, 3:102–3:105, 3:111, 3:113, 6:39, 8:5, 8:8–10, 9:8, 10:3, 18:1).
+
+**Fixed strings**
+- The council's sentence (3:14–3:15): `'אנקידו – ימות! / וגִּלְגָּמֶשׁ – אַל ימות!'` (*lē aki* = `אַל` + future).
+- Enkidu's lament (3:23–3:28): `"אחי, / אחי היקר! / … / ובין הָאִטִּים אשב, / ואת מפתן הָאִ[טִּים אחצה], / ואת אחי היקר בעיניי לא [אראה] עוד."`
+- Tears like canals, now three times: 1:191 `ודמעותיו זורמות [כפלגים].`, 3:22 `ודמעותיו זורמות הלאה [כ]פלגים.` (+ *parā*), 3:33 (past) `ו[דמעותיו] כ[פלגים] זר[מו] הלאה.`
+- *UMMA* PN `כֹּה X:` (3:91, 3:93); *lukk-* "it dawned" `האיר` (3:2, 3:82).
+- The axe command / execution (3:106 → 3:109): `תפוס את הגרזן בידך,` → `תפ[ס] את הגרזן בידו,`; poles `מוטות של … אמות` (3:107, 3:110).
+- Ullu's blessing: TI-*aš ēšdu* `יהי חי!`, TI-*za ēš* `היה חי`, TI-*tar* `חיים` (6:28–6:54).
+
+**New renderings**
+- ŠEŠ "brother" `אח` (Enkidu calls Gilgameš "my brother", where the Akkadian has *ibrī* `רֵעִי`); *nakki-* "dear" `יקר` (3:24, 3:28, 6:31).
+- GIDIM (= *eṭemmu*) `אִט` (always vocalized, as the Gilgameš corpus): 3:26–3:27. *šarra-* "cross (a threshold)" `חצה` (M3's verb): 3:27.
+- {GU4}ALÛ `השור` (the Hittite writes no "of heaven"; note at 3:8): 3:8, 3:17, 5:9, 8:11. *:niwalla-* "innocent" `החף` (`צדיק`, `נקי` avoided): 3:18.
+- {LÚ}TAPPĪ (= *tappû*) `חבר` (the Gilgameš corpus): 3:20. *kartimmiya-* (verb) `זָעַם` (3:19), as *šāi-* (14:10).
+- UR.MAḪ (= *nēšu*) `אריה`; {GU4}AM (= *rīmu*) `רְאֵם`: 3:54, 3:56, 3:78. MUNUS.KÚRUN.NA (= *sābītu*) `בעלת־המסבאה` (SB X 1): 3:85, 12:3. NAMSĪTU `גיגית`.
+- ALAM `תואר` (M4) also for the statues: `שני תו[ארים]` of the lions (3:79), `שני תוארי האבן` = SB's *šūt abnī* `אנשי האבן` (3:92). `פסל` avoided (Sumerian *alan*'s).
+- *aggannaš wetenaš* `מי המוות` (SB X 84, 86): 3:104. :*winala-* `מוטות`; *gipeššar* `אמה` (as AMMATU; a Hittite measure of about a cubit – a merger for the lead): 3:107, 3:110. {GIŠ}MÁ `ספינה`; *:pintant-* `*מוט־ההיגוי*`.
+- *ḫurzai-* "curse" `קילל` (`ארר` is the Akkadian's): 3:71. *ḫink-* `הרכין (ראש)` (KU 12): 3:65. *laḫḫiyai-* `נודד` (not `נד`): 3:49. *zai-* "cross" `עבר`, *zainu-* `העביר` (3:51, 3:88–3:92).
+- *ezzan* "chaff" `מוץ` (as *pû*): 3:44. *ḫaluka-* `בשורה`; *ḫuitar* `חיות`; *irman-* `חולי`; *kalutti-* `שורה`; *ambašši-* `עולה?` (the burnt offering; not reserved in Hittite lines – check); *zandanatar* transliterated `*הזַּנְדַּנָתַר*`; MÁŠ-*tar* `משפחה` (HPM "Familie"); GISKIM `אות`; *ḫali-* `משמרת`; *laknu-* `הפיל`; SÌR `שירה` (`שירת גִּלְגָּמֶשׁ`, as UL 1:252), NU.TIL `לא נשלם` (KU 286).
+- Names (first occurrence vocalized): Itiḫa- `אִיתִיחַ[…]` (3:38), Naḫmizuli `נַחְמִיזוּלִי` (5:4, 9:23), Šušḫaruwa `שׁוּשְׁחַרוּוָה` (6:40), Itla `אִיתְלָה`, Impaluri `אִמְפַּלּוּרִי` (9:15), Ḫebat `חֶבַּ[ת?]` (19:1).
+
+**Pre-set rows / decisions applied**
+- The coordinator's decisions applied: *šamnai-* `עיצב`, 1:196 `תפס` unchanged. Gilgameš left vocalized in every line (harmless; the name check is fixed).
+- *šakuwai-*, *iya-* mid., *epp-* as in part 1. *ḫark-* "perish" `אבד` (M3): 9:8 `האבוד`.
+
+**Gate / name bugs**
+- None new. (The part 1 escapes at 1:13 `לגבור` and 1:55 `תשכב` are still in place; 1:13 may now lose its escape.)
+
+**Cruxes**
+- 3:1: HPM's 1st plural "while we slept" – Enkidu narrating?
+- 3:8–3:10: *kuit* "why?" (HPM; ours now) or "because"; who "cleared the mountains of cedar" (Ḫuwawa or Gilgameš).
+- 3:67–3:71: Gilgameš's greeting to the Sea and the cursing (of Gilgameš? of the fate goddesses?) – no Babylonian parallel.
+- 3:88–3:90: who says "you cross it" to whom (Šiduri to Ur-šanabi?).
+- 3:105: *GIM-an iyaši* "if you do (it)" (HPM) or "how will you do?" (SB X 86).
+- 6:22 KUN₅ "doors? ladders?"; 6:45, 6:55 *zandanatar*; 6:47 who raises the hand to Ullu.
+- 14:5–14:6: the speaker who knows "the day on which they bore me" from an omen (Gilgameš? Ullu?).
+
+**Parallels for the index**
+- Gen 2:17 [equivalent]: the god's death sentence (3:14–3:15).
+- Gen 18:23 [equivalent]: a god protests the death of the innocent (3:18).
+- Deut 18:11 [equivalent]: GIDIM / *eṭemmu* `אִט` (3:26).
+- Qoh 9:7 [equivalent]: "eat, drink" offered to the hero (6:18).
+- To the Babylonian epic (in the notes): the council of the gods fills SB VII 2–26; kept – Šiduri "who sits" (SB X 1), the Stone Ones as stone figures, the waters of death, the axe and the poles (SB X 159–167), "a month and a half" read as one month and fifteen days (SB X 171), the lions and the prayer to the Moon (SB IX 8–18), the Sun crossing the sea (SB X 81–82); changed – "brother" for "friend", the Moon orders lion statues for his temple, 40 or 50 ells for SB's five rods (and no number of poles), Gilgameš bows to the Sea, Ullu (Hurrian) for Ūta-napišti, the blessings of "life" for Ullu and Gilgameš (vs. the plant of SB XI); dropped (or lost) – the Bull of Heaven episode itself (only mentioned), Enkidu's curse of the door and of Šamḫat, the funeral, the scorpion people, the flood story.
+
 ## Progress
 - 2026-11-14: base secured (19 HPM editions), key GI added, renderings M4 fixed, brief written (the coordinator).
 - 2026-11-14: GI 1:1–1:221 and 2:1–2:35 drafted (256 clauses; CTH 341.III.1–2), `translation--intro-GI.rtl.md` written; verify 0 problems, check_bible_quotes 0 (Round 8 run 5, translator 3, part 1 of 2). Next: 3:1–19:7.
+- 2026-11-14: GI 3:1–19:7 drafted (355 clauses; CTH 341.III.3–19): all 611 clauses drafted; intro updated; verify --strict 0 problems, check_bible_quotes 0 (Round 8 run 5, translator 3, part 2 of 2). Next: review.
