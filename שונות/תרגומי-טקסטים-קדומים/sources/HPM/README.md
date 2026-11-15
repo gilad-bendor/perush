@@ -18,7 +18,7 @@
     `txhet_myth`, German), the same page format as BESRIT: CTH 321 (Illuyanka), 324.1–9 (Telipinu), 342.1.1–2.5
     (Elkunirša), 344 (the Song of Emergence), 345.I.1–10 (Ullikummi), 346.1–21 (Kumarbi fragments), 348.I.1–29 (Ḫedammu),
     360.1–4 (Appu). Fetch: `python3 -I tools/hpm2md.py fetch MYTH "CTH 348.I.1" sources/HPM/MYTH--CTH-348.I.1 "E. Rieken et
-    al." DE`, then `parse`. The index: `https://hethport.net/txhet_myth/textindex.php?g=myth&x=`. Not in HPM: the Tale of
+    al." DE`, then `parse`. The index: `https://hethport.net/txhet_myth/textindex.php?g=myth&x=`. Added 2026-11-14 (Round 8 run 5): CTH 323.1–2, 325, 331.1–2, 333, 343.1–6, 364.1–6, 341.III.1–19. Not in HPM: the Tale of
     Zalpa (CTH 3) and the Song of Release (CTH 789): our composites from TLHdig.
 - **URL:** `https://hethport.net/txhet_chil/partitur.php?xst=CTH%20291.2&lang=EN&praep=1`;
   `https://hethport.net/txhet_besrit/partitur.php?xst=CTH%20394&prgr=§1&lg=DE&ed=A.%20Chrzanowska` (one page per §) and

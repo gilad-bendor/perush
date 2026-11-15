@@ -1,0 +1,171 @@
+{
+"kind": "MYTH",
+"cth": "CTH 341.III.15",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 341.III.15 (TX 2009-08-27, TRde 2009-08-27)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]x x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -i]ššan1 [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... -i]š-ša-an [ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] GIŠ-ru l[aknu- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ]x GIŠ-ru l[a-ak-nu- ... ]"
+]
+],
+"tr": "[ ... ] f[äll- ... ] Holz.",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... GIŠ-r]u laknut",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... GIŠ-r]u la-ak-⸢nu-ut⸣"
+]
+],
+"tr": "[ ... ] fällte [Hol]z.",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... n]epišaš e-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ] [ ... n]e-pí-ša-aš e-x[ ... ]"
+]
+],
+"tr": "[ ... ] des [H]immels [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-anza kiša[t]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ]x-an-za ki-ša-a[t]"
+]
+],
+"tr": "[ ... ] wur[de ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... U]L? išduwār[i]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ] [ ... -Ú-U]L? iš-du-wa-a-r[i] ¬¬¬"
+]
+],
+"tr": "[ ... ] wir[d nich]t offenbar.",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... Š]A {d}UT[U ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ ... Š]A {d}UT[U ... ]"
+]
+],
+"tr": "[ ... de]s Sonnengo[ttes ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]-ga[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"[ ... ]x-ga[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Oder [ ... -i]=ššan?"
+}
+}

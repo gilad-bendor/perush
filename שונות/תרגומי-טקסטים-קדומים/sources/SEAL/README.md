@@ -56,3 +56,13 @@ Downloaded with a browser User-Agent (SEAL returns an error page to curl's defau
 | | 1530 | Gilg. OB Nippur | the same |
 | | 1526 | Gilg. OB Harmal 1 | the same |
 Retrieved with a browser User-Agent and converted by `tools/seal2md.py`. Second opinion on the eBL OB chapters (`eBL/Gilgamesh-OB-*`, the base texts): the SEAL translation is George's, so it is not an independent rank-3 check; its lemmas and line labels (by column) are the value. Line labels: by column (`i 1'`), against eBL's running labels (`1'`, `a+1`, `b+1`): align by content.
+
+### Added 2026-11-14 (Round 8 run 4: `אגדות-מלכים/` projects 9–10)
+One folder per text, `<Text>--node-<N>/`: `node-<N>.html` (saved with a browser UA), `node-<N>.md` (`tools/seal2md.py`),
+`base.tsv` (`tools/seal_base.py seal`: label, transliteration, SEAL lemmas, SEAL's numbered English line; labels made
+unique by a column / side prefix where SEAL's restart; SEAL's typo "ii5" for ii51 in Zimrī-Lîm fixed; leaked HTML
+attributes in Erra and Narām-Sîn 59 cleaned). Nodes: 1548 Sargon the Conquering Hero (123), 1547 Sargon in Foreign
+Lands (83), 7525 Sargon the Lion (40: obv. 18 + a two-witness score of 22 composite lines), 1540 / 1542 the Great Revolt
+A (41) / B (38), 7255 Narām-Sîn and the Lord of Apišal (71), 1539 Erra and Narām-Sîn (72), 1552 the Zimrī-Lîm Epic (162),
+1551 the Song of Bazi (64), 1597 the Gulkišar epic (95). © HUJI: git-ignored; html/md restored by `sources_sync.py`
+(built-in rule), `base.tsv` by its recipe (regenerate). SEAL's lemmas have slips (the translators listed ≈ 20).

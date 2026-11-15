@@ -1,0 +1,158 @@
+{
+"kind": "MYTH",
+"cth": "CTH 343.6",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 343.6 (TX 2009-08-30, TRde 2009-08-30)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]x x x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -a]n? arḫa ga-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... -a]n? ar-ḫa ⸢ga?⸣-x[ ... ]"
+]
+],
+"tr": "[ ... ] fort [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... =ka]n {d}LAMMA-aš GAM-anda [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... -ká]n {d}LAMMA-aš GAM-an-⸢da⸣ [ ... ] ¬¬¬"
+]
+],
+"tr": "LAMMA [ ... ] hinab [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] {d}LAMMA-an {d}10-aš LÚ-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ] {d}LAMMA-an {d}10-aš LÚ-x[ ... ]"
+]
+],
+"tr": "[ ... ] Mann? des Wettergottes den LAMMA [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... =w]ar=an=kan? [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... -w]a?-ra-an-kán x x x[ ... ]"
+]
+],
+"tr": "„[ ... ] ihn [ ... ]“",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... š]arā uwat[i- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... š]a-ra-a ú-wa-t[i- ... ] ¬¬¬"
+]
+],
+"tr": "[ ... h]inauf [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ]x x x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ ... ]x x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

@@ -1,0 +1,148 @@
+{
+"kind": "MYTH",
+"cth": "CTH 341.III.12",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 341.III.12 (TX 2009-08-27, TRde 2009-08-27)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] ⸢aruna⸣(-)[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]x ⸢a-ru-na⸣(-)[ ... ]"
+]
+],
+"tr": "[ ... ] Meer [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-r=an=kan UL [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]x-⸢ra⸣-an-kán Ú-UL x[ ... ]"
+]
+],
+"tr": "„[ ... ] ihn nicht [ ... ]“",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... {MUNUS}K]ÚRUN.NA EGIR-pa IQBI",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... {MUNUS}K]ÚRUN.NA EGIR-pa IQ-BI"
+]
+],
+"tr": "[ ... ] antwortete [der W]irtin:",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-ši?",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"x[ ... ] [ ... ]-ši?"
+]
+],
+"tr": "„Du? [ ...]st [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "KASKAL-an=wa kwin [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"KASKAL-an-wa ku-in x[ ... ]"
+]
+],
+"tr": "Welchen Weg [ ... ],",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... {m}U]RŠANABI-iš [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... {m}U]R-ŠA-NA-BI-iš x[ ... ]"
+]
+],
+"tr": "[ ... U]ršanabi [ ... ]“",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] arḫa [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ] ⸢ar⸣-ḫa [ ... ]"
+]
+],
+"tr": "[ ... ] fort [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ]x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

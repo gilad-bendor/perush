@@ -402,3 +402,4 @@ epithet; *qablu* `קרב` beside *qerbu* (vocalized); *emēdu* by sense (`השי
 `גִּדְרוֹן` and `נֶשֶׁר` as names, the epithet `התשוש והדל` (*akû lapnu*); *qinna qanānu* `קינן קן` (Gilgameš), *watmu*
 `אפרוח` (Etana), *surdû* `נֵץ`, *dayyān kitti* `דיין האמת`, *ṣabābu* `הניף` (not `רחף`). Jiménez's "master of flies"
 (SP 19) is not Baal-zebub: *bēl arni* … *lāʾiṭ zubbī* (a false echo of the English, corrected).
+2026-11-15 harmonization (after Round 8) (`../reports/round-8/harmonization-batch-B.md`): *perʾu* = `חֹטֶר` (Gilgameš I 133, V 94, 170; `צֶאֱצָא` is *bukru*'s): PM 38 `יפריחו את חוטריו`.

@@ -1,0 +1,496 @@
+{
+"kind": "MYTH",
+"cth": "CTH 364.5",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 364.5 (TX 2009-09-02, TRde 2009-09-02)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]ēpt[a?]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... e?]-ep-t[a?]"
+]
+],
+"tr": "[ ... ] ergrif[f ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... IŠPU]R?",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... IŠ-PU]R?"
+]
+],
+"tr": "[ ... schick]te? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "īt katta[n dankuwāi takni]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"i-it kat-ta-a[n] [ ... ]"
+]
+],
+"tr": "„Geh hina[b in die dunkle Erde]!“",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[n]=an=kan {GIŠ}pat[alḫit ... d]āiš",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[n]a-an-kán {GIŠ}pa-t[al-ḫi-it] [ ... d]a-a-iš ¬¬¬"
+]
+],
+"tr": "[ ... be]gann, ihn mit der Fuß[fessel? ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]=šet ištapta",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... ]x-še-et iš-tap-ta"
+]
+],
+"tr": "[ ... ] verschloss [ ... ] sein [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]-tit ḫanni[š(-) ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ]x-ti-it ḫa-an-ni-i[š(-) ... ]"
+]
+],
+"tr": "[ ... ] richt[-",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu DINGIR{MEŠ}-iš ḫūmante[š ... ] uwanzi",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"nu DINGIR{MEŠ}-iš ḫu-u-ma-an-te-[eš] [ ... ] ⸢ú⸣-wa-an-zi"
+],
+[
+"B",
+"1'",
+"[ _ _ ]x [ ... ]"
+]
+],
+"tr": "All[e] Götter kommen [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "nakkiyatar=z[a IṢBAT ŠU{M]}EŠ-it K[Ù.BABBAR-anza]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"na-ak-⸢ki⸣-ya-tar-z[a] [ ... ]"
+],
+[
+"B",
+"1'",
+"[ ... ] [ŠU{M]}EŠ-it K[Ù.BABBAR-an-za]"
+]
+],
+"tr": "Die Macht [ergriff es] mit den [Hände]n, [das] S[ilber],",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ēpt]a? {GIŠ}marin KÙ.BABBAR-anza",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"[e-ep-t]a? {GIŠ}ma-ri-in KÙ.BABBAR-an-za"
+],
+[
+"B",
+"2'",
+"[ ... ]"
+]
+],
+"tr": "es [ergri]ff? die Lanze, das Silber,",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2'",
+"hl": "",
+"master": "[n]=ašta nepiš[az! {d}UTU-u]n {d}30-ann=a GAM ḫuittiyat",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"[ ... {d}UTU-u]n {d}30!1-an-na GAM ḫu-it-ti-ya-at"
+],
+[
+"B",
+"3'",
+"[n]a-aš-ta ne!-pí!-š[a-az ... ]"
+]
+],
+"tr": "[und] zog den [Sonnengott] und den Mondgott [aus dem] Himmel herab.",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 2'",
+"hl": "",
+"master": "{d}UTU-uš {d}30-ašš=a! katt[an ka]niniēr",
+"words": [],
+"mss": [
+[
+"A",
+"11'",
+"[ ... ka]-ni-ni-e-er"
+],
+[
+"B",
+"4'",
+"⸢{d}⸣UTU-uš {d}30!-aš-ša2 ⸢kat⸣-t[a-an ... ]"
+]
+],
+"tr": "Der Sonnengott und der Mondgott [be]ugten sich nie[der],",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 2'",
+"hl": "",
+"master": "n=at KÙ.BABBAR-i [ḫ]inkantati",
+"words": [],
+"mss": [
+[
+"A",
+"11'",
+"na-at KÙ.BABBAR-i [ ... ]"
+],
+[
+"B",
+"4'",
+"[ ... ] [ḫi]-in-kán-ta-ti"
+]
+],
+"tr": "und sie [ve]rneigten sich (vor) dem Silber.",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 2'",
+"hl": "",
+"master": "{d}UTU-u[š] {d}30-ašš=a KÙ.BABBAR-i memiškiuwan dāer",
+"words": [],
+"mss": [
+[
+"A",
+"12'",
+"[ ... ] ⸢{d}⸣30!3-aš-ša KÙ.BABBAR-i me-mi-iš-ki-u-wa-⸢an⸣ [ ... ] ¬¬¬"
+],
+[
+"B",
+"5'",
+"{d}UTU-u[š! ... ] [me-m]i-iš-ki-u-wa-an da-a-⸢er⸣"
+]
+],
+"tr": "Der Sonnengo[tt] und der Mondgott begannen, zum Silber zu sprechen:",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 2'",
+"hl": "",
+"master": "[KÙ.BABBAR-wa BĒL-NI]",
+"words": [],
+"mss": [
+[
+"A",
+"13'",
+"[ ... ]"
+],
+[
+"B",
+"6'",
+"[ ... ]"
+]
+],
+"tr": "[„Silber, unser Herr,]",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 2'",
+"hl": "",
+"master": "[l]ē=wa=nnaš=kan kweši",
+"words": [],
+"mss": [
+[
+"A",
+"13'",
+"[l]e-e-wa-an-na-aš-kán ku-e-ši"
+],
+[
+"B",
+"7'",
+"[l]e-e-wa-an-na-aš-kán ku-e-ši"
+]
+],
+"tr": "töte uns [nic]ht!",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 2'",
+"hl": "",
+"master": "weš=a=wa [nepišaš taknašš]=a lalukkimiš",
+"words": [],
+"mss": [
+[
+"A",
+"13'",
+"ú-⸢e⸣-ša-wa [ ... ták-na-aš-š]a la-lu-uk-⸢ki⸣-mi-iš"
+],
+[
+"B",
+"7'",
+"[ ... ] [ZALA]G.[G]A4-aš-mi-iš"
+]
+],
+"tr": "Wir aber (sind) die Lichtquellen [des Himmels] und [der Erde].",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 2'",
+"hl": "",
+"master": "zik=a=wa kwe [KUR.KUR{ḪI.A} maniyaḫḫiškeš]i",
+"words": [],
+"mss": [
+[
+"A",
+"14'",
+"zi-ik-wa ku-e [ ... ] [ma-ni-ya-aḫ-ḫi-iš-ke-š]i"
+],
+[
+"B",
+"8'",
+"zi-ga-wa ku-⸢e⸣ [ ... ]"
+]
+],
+"tr": "[Die Länder,] die [d]u [verwaltes]t,",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 2'",
+"hl": "",
+"master": "weš=a=wa=z {GIŠ}zuppari [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"15'",
+"⸢ú⸣-e-ša-⸢u⸣-wa-az {GIŠ}zu-up-pa-ri [ ... ]"
+],
+[
+"B",
+"9'",
+"[ú]-⸢e⸣-ša-wa {GIŠ}zu-up-pa-ru x[ ... ]"
+]
+],
+"tr": "wir aber [ ... ] Fackel.1",
+"trlang": "DE"
+},
+{
+"n": "20",
+"sec": "§ 2'",
+"hl": "",
+"master": "[mān=naš=kan k]weši",
+"words": [],
+"mss": [
+[
+"A",
+"16'",
+"[ ... k]u-⸢e⸣-ši"
+],
+[
+"B",
+"9'",
+"[ ... ]"
+]
+],
+"tr": "[Wenn] du [uns t]ötest,",
+"trlang": "DE"
+},
+{
+"n": "21",
+"sec": "§ 2'",
+"hl": "",
+"master": "nu uwaši KUR-e GE6.GE6-anta NÍ.[TE-it m]aniyaḫḫiškeši",
+"words": [],
+"mss": [
+[
+"A",
+"16'",
+"nu ⸢ú⸣-wa-ši KUR-e [ ... m]a-⸢ni⸣-ya-aḫ-ḫi-iš-⸢ke-ši⸣"
+],
+[
+"B",
+"10'",
+"[ _ ú-wa]-ši KUR-e GE6.GE6-an-ta ⸢NÍ⸣.[TE-it ... ]"
+]
+],
+"tr": "dann wirst du se[lbst] dunkle Länder [r]egieren.“",
+"trlang": "DE"
+},
+{
+"n": "22",
+"sec": "§ 2'",
+"hl": "",
+"master": "[nu=šši=ka]n ZI-anza anda āšš[iyaunit šunnanza ēšta?]",
+"words": [],
+"mss": [
+[
+"A",
+"18'",
+"[ ... ]x x[ ... ]"
+],
+[
+"A",
+"",
+"Der Text bricht ab."
+],
+[
+"B",
+"11'",
+"[nu-uš-ši-ká]n ZI-an-za an-da a-aš-š[i-ya-ú-ni-it ... ]"
+]
+],
+"tr": "[Ihm war] die Seele innen [mit] Li[ebe gefüllt].",
+"trlang": "DE"
+},
+{
+"n": "23",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]{MEŠ}-uš=wa genz[u! ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"12'",
+"[ ... ]⸢{MEŠ}⸣-uš<<-aš>>-⸢wa⸣ ⸢ge!⸣-en-z[u5 ... ]"
+]
+],
+"tr": "[ ... ] Freundlich[keit ... ]",
+"trlang": "DE"
+},
+{
+"n": "24",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"B",
+"14'",
+"[ ...? ] [ ... ]x x[ ... ]"
+],
+[
+"B",
+"",
+"Der Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 2':1": "Text: DINGIR{MEŠ}-.",
+"§ 2':2": "Zeichen nach Kollation am Foto über Rasur.",
+"§ 2':3": "Text: DINGIR{MEŠ}-.",
+"§ 2':4": "Hoffner, Fs Otten2 1988, 160 Anm. 112, nach Kollation.",
+"§ 2':5": "Text: ⸢ze⸣-en-z[u.",
+"T1": "Anders Haas, Literatur 2006, 151: „Wir sind die Fackel(n) [der Länder], über welche d[u herrschst.“ Ähnlich auch Hoffner, Myths2 1998, 50: „We are the torches of what [lands] you [govern.“"
+}
+}

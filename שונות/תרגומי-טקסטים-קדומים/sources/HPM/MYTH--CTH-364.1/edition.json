@@ -1,0 +1,283 @@
+{
+"kind": "MYTH",
+"cth": "CTH 364.1",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 364.1 (TX 2009-09-02, TRde 2009-09-02)",
+"sections": [
+{
+"id": "§ 1",
+"title": "§ 1",
+"hl": ""
+},
+{
+"id": "§ 2",
+"title": "§ 2",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1",
+"hl": "",
+"master": "[ ... {d}UT]U-an {d}[ ... {d}IŠTAR] {URU}nen[uwa? ... ] UL kwiški iyazi1",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 1",
+"[ ... {d}UT]U-an {d}x[ _ _ (_) ] {URU}ne-n[u-wa? ... ] [ ... ] ⸢Ú⸣-UL ku-iš-⸢ki i⸣-ya-zi"
+]
+],
+"tr": "Niemand feiert den [Sonne]ngott, [ ... Ištar von] Nin[ive ... ]1",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1",
+"hl": "",
+"master": "mā[l?=šet UL kwiški šakki]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 2",
+"ma-a-a[l?-še-et ... ] [ ... ]"
+]
+],
+"tr": "[Niemand kennt seinen] Verst[and2].3",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1",
+"hl": "",
+"master": "[ut]tar=šett=a=šta uddān[aš=šmaš? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 3",
+"[ut]-tar-še-et-ta-aš-ta ud-da-a-n[a-aš-ma-aš? ... ]"
+]
+],
+"tr": "Auch sein Wort [ ... (als) ihre?] Wort[e ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1",
+"hl": "",
+"master": "[ḫatt]atar=šet=ašta ḫat<t>annaš=š[maš? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 4",
+"[ḫa-at-t]a-tar-še-et-aš-ta ḫa-at<-ta>-an-na-aš-[ma-aš? ... ]"
+]
+],
+"tr": "Seine [Weis]heit [ ... ] (als) ih[re?] Weisheit4 [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1",
+"hl": "",
+"master": "[ ... ] zaḫḫaiš=šiš mišriw[atar=šet? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 5",
+"[ _ _ (_) ] za-aḫ-ḫa-iš-ši-iš mi-iš-ri-w[a-tar-še-et? ... ]"
+]
+],
+"tr": "Sein Kampf [ ... seine?] Prac[ht ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1",
+"hl": "",
+"master": "[ḫan]dannaš=šaš=ši=kan ḫand[atar=šemet UL GAL-li?]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 6",
+"[ḫa-an]-da-an-na-aš-ša-aš-ši-kán ḫa-an-d[a-tar-še-me-et ... ] ¬¬¬"
+]
+],
+"tr": "[Ihr] göttliches W[alten] (ist jedoch) für ihn [nicht größer?] (als) sein [göttlic]hes Walten5.",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2",
+"hl": "",
+"master": "[i]šḫamiḫḫi=an KÙ.BABBAR-an šanezz[in? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 7",
+"[i]š-ḫa-mi-iḫ-ḫi-ya-an KÙ.BABBAR-an ⸢ša⸣-né-ez-z[i-in? ... ]"
+]
+],
+"tr": "Ich [b]esinge es, das erstklass[ige] Silber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2",
+"hl": "",
+"master": "[n]u=mu ḫaddanteš LÚ{MEŠ}-uš wan[numiaš DUMU-aš ... memer?]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 8",
+"[n]u-mu ḫa-ad-da-an-te-eš LÚ{MEŠ}-uš wa-an-[nu-mi-aš ... ]"
+]
+],
+"tr": "Weise Männer [berichteten?] mir [ ...6 des] Wais[enkindes].",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2",
+"hl": "",
+"master": "[N]U.GÁL=at ēšta",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 9",
+"[N]U.GÁL-at e-eš-ta"
+]
+],
+"tr": "Es existierte [ni]cht(s).",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2",
+"hl": "",
+"master": "karū KÙ.BABBAR-i [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 9",
+"ka-ru-ú KÙ.BABBAR-⸢i⸣ [ ... ]"
+]
+],
+"tr": "Früher [ ... ] dem Silber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2",
+"hl": "",
+"master": "[ ... ]-išta(n)=šann2=a UL šekk[anzi?]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 10",
+"[ _ ]-⸢iš⸣-ta-aš-ša-an-na Ú-UL še-ek-k[án-zi? ...? ]"
+]
+],
+"tr": "Auch [ ... ] kenn[en?] nicht [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 2",
+"hl": "",
+"master": "[ ... -u]š=ma LÚ{MEŠ}-uš zaḫḫī piddā[er?]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 11",
+"[ ... 3-u]š-ma LÚ{MEŠ}-uš za-aḫ-ḫi-i píd-da-⸢a?⸣-[er? ...? ]"
+]
+],
+"tr": "[ ... -]e Männer aber eilt[en?] zur Schlacht.",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 2",
+"hl": "",
+"master": "[ ... ] ⸢NU.GÁL⸣ ēšta",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 12",
+"[ _ _ _ ] x ⸢NU.GÁL⸣ e-eš-ta"
+]
+],
+"tr": "[ ... ] existierte nicht.",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 2",
+"hl": "",
+"master": "nu ḫalki[š ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 12",
+"nu ḫal-⸢ki⸣-i[š ... ]"
+]
+],
+"tr": "Das Getrei[de ... ]",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 2",
+"hl": "",
+"master": "[ ... ] ⸢kiš⸣[(-) ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 13",
+"[ ... ] x x ⸢ki-iš⸣[(-) ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]7",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1:1": "Hoffner, Fs Otten2 1988, 144, ergänzt: [{d}10-ni=za {d}UT]U.AN {d}[ ... {d}IŠTAR] {URU}nen[uwa? DINGIR{MEŠ}-ašš=a ḫūmandaš ištarna apūn?] UL kwiški iyazi.",
+"§ 1:T1": "Vgl. für eine Ergänzung Hoffner, Myths2 1998, 48: „[Among Tessub], the Sungod of the Sky, Sauska(?), Nineveh's(?) [Queen, and all the gods,] no one worships(?) [him].“",
+"§ 1:T2": "CHD L-N 124 lässt mal unübersetzt (mit Diskussion); ebenso Hoffner, Myths2, 1998, 48. Haas, Literatur 2006, 148, „Kraft“; HED 6, 20f. „brains, wits, wisdom, mindset, disposition“ o.ä. Vgl. auch Anmerkung zu KUB 33.87+ Vs. I 35'f. (CTH 345.I.2 Kolon 68f.).",
+"§ 1:T3": "Vgl. Haas, Literatur 2006, 148: „Unter allen Göttern aber] verehrt [ihn] niemand, (obgleich) [seine] Kraft [größer ist als ihre Kräfte]“.",
+"§ 1:T4": "Form Plural.",
+"§ 1:T5": "Hier handelt es sich eigentlich um einen D./L.Pl. Die Konstruktion ist chiastisch zu den vorangehenden Kola, so dass hier inhaltlich wohl mit einer Kontrastierung zu rechnen ist.",
+"§ 2:2": "Vgl. Hoffner, Fs Otten2 1988, 146 Anm. 32.",
+"§ 2:3": "Für die von Hoffner, Fs Otten2 1988, 145, vorgeschlagene Ergänzung [UR.SAG-li-u]š-ma ist nach Autographie der Platz nicht ausreichend.",
+"§ 2:T6": "Haas, Literatur 2006, 148, ergänzt „die Geschichte“.",
+"§ 2:T7": "Vgl. für mögliche Ergänzungen der letzten Zeilen Hoffner, Myths2 1998, 48: „And they do not know his [sp]lendor. [Heroic(?)] men ran to battle. [Abundance(?)] did not exist. And grain [did not grow(?)]. [ ... ] hungry(?) [ ... ].“",
+"T1": "Vgl. für eine Ergänzung Hoffner, Myths2 1998, 48: „[Among Tessub], the Sungod of the Sky, Sauska(?), Nineveh's(?) [Queen, and all the gods,] no one worships(?) [him].“",
+"T2": "CHD L-N 124 lässt mal unübersetzt (mit Diskussion); ebenso Hoffner, Myths2, 1998, 48. Haas, Literatur 2006, 148, „Kraft“; HED 6, 20f. „brains, wits, wisdom, mindset, disposition“ o.ä. Vgl. auch Anmerkung zu KUB 33.87+ Vs. I 35'f. (CTH 345.I.2 Kolon 68f.).",
+"T3": "Vgl. Haas, Literatur 2006, 148: „Unter allen Göttern aber] verehrt [ihn] niemand, (obgleich) [seine] Kraft [größer ist als ihre Kräfte]“.",
+"T4": "Form Plural.",
+"T5": "Hier handelt es sich eigentlich um einen D./L.Pl. Die Konstruktion ist chiastisch zu den vorangehenden Kola, so dass hier inhaltlich wohl mit einer Kontrastierung zu rechnen ist.",
+"T6": "Haas, Literatur 2006, 148, ergänzt „die Geschichte“.",
+"T7": "Vgl. für mögliche Ergänzungen der letzten Zeilen Hoffner, Myths2 1998, 48: „And they do not know his [sp]lendor. [Heroic(?)] men ran to battle. [Abundance(?)] did not exist. And grain [did not grow(?)]. [ ... ] hungry(?) [ ... ].“"
+}
+}

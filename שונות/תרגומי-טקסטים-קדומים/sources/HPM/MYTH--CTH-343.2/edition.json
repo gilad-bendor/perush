@@ -1,0 +1,292 @@
+{
+"kind": "MYTH",
+"cth": "CTH 343.2",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 343.2 (TX 2009-08-30, TRde 2009-08-30)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "ištanza-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 1'",
+"⸢iš-ta-an-za?⸣-x[ ... ]"
+]
+],
+"tr": "[ ... ] Seele [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] ḫin(i)kmi",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 1'",
+"[ ... ] ḫ[i]-in-ik-mi"
+]
+],
+"tr": "Ich verneige mich [ ... ].",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "apūš [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 2'",
+"a-pu-u-uš [ ... ]"
+]
+],
+"tr": "[ ... ] die [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[n]=at=kan arāer",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 3'",
+"[n]a-at-kán a-ra-a-er"
+]
+],
+"tr": "Sie erhoben sich.",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=šmaš[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 3'",
+"nu-uš-⸢ma-aš⸣[ ... ]"
+]
+],
+"tr": "Und ihnen [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[nu]=šmaš KAxU-aš :zūwan U[L? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 4'",
+"[nu-u]š-⸢ma⸣-aš KAxU-aš :zu-u-wa-an ⸢Ú?⸣-U[L? ... ]"
+]
+],
+"tr": "[ ... ] ihnen ni[cht] Essen in die Münder [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[KAS]KAL-an=⸢ma⸣ kwin iyandari",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 5'",
+"[KAS]KAL-an-⸢ma⸣ ku-in i-ya-an-da-ri"
+]
+],
+"tr": "Der [We]g aber, den sie gehen,",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 5'",
+"nu[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 1'",
+"hl": "",
+"master": "[n]u {d}LAMMA-aš uddār IM{MEŠ} {d}[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 6'",
+"[n]u {d}⸢LAMMA⸣-aš ud-da-a-ar IM{MEŠ} ⸢{d}⸣[ ... ]"
+]
+],
+"tr": "Des LAMMA Worte [ ... ] die Winde [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 1'",
+"hl": "",
+"master": "maḫḫan=ma {d}É.A-aš {d}L[AMMA? ... ] išta[m]ašta",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 7'",
+"ma-aḫ-ḫa-[a]n-ma {d}É.A-aš {d}L[AMMA? ... ] iš-ta-[m]a-aš-ta"
+]
+],
+"tr": "Als aber Ea des L[AMMA? Worte] ge[hö]rt hatte,",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=šši [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 8'",
+"nu-uš-ši x[ ... ]"
+]
+],
+"tr": "[ ... ] ihm [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu=⸢za⸣ ITTI {d}kumarbi m[emiškiuwan? dāiš?]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 9'",
+"nu-⸢za⸣ IT-TI {d}ku-mar-bi m[e?-mi-iš-ki-u-wa-an? ... ]"
+]
+],
+"tr": "und [begann?], zu Kumarbi [zu] s[prechen?]:",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 1'",
+"hl": "",
+"master": "pāiweni",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 10'",
+"p[a]-⸢a-i⸣-u-e-ni"
+]
+],
+"tr": "„Gehen wir!",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 1'",
+"hl": "",
+"master": "kwin {d}[LAMMA-? ... ]-aḫḫuwe[n]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 10'",
+"ku-in ⸢{d}⸣[LAMMA?- ... ] [ _ _ (_) ]x-aḫ-ḫu-u-e[n]"
+]
+],
+"tr": "[LAMMA?], den wir [ ...]ten,",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 11'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]=ya QĀT[AMMA? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 12'",
+"[ _ _ (_) ]x-ya QA-T[AM?-MA ... ]"
+]
+],
+"tr": "Auch [ ... ] eb[enso? ... ]",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. I 13'",
+"[ ... ]x x[ ... ]"
+],
+[
+"A",
+"",
+"Vs. I bricht ab. Rs. IV ist, soweit erhalten, unbeschrieben."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

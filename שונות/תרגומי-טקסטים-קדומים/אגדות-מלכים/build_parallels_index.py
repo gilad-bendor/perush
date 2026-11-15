@@ -20,6 +20,10 @@ SOURCES = [("EA", os.path.join(A, "1-אנמרכר-ואדון-ארטה", "project
            ("ET", os.path.join(A, "3-אגדת-אתנה", "project.md")), ("CL", os.path.join(A, "4-אגדת-כותה", "project.md")),
            ("LC", os.path.join(A, "5-לוגלבנדה-במערת-ההר", "project.md")), ("LZ", os.path.join(A, "6-לוגלבנדה-וציפור-האנזוד", "project.md")),
            ("ES", os.path.join(A, "7-אנמרכר-ואנסוחגירנה", "project.md"))]  # the Uruk cycle (Round 6 run 3)
+# Round 8 run 4: the parts' own project files (one table per part)
+for _p, _d, _parts in (("AN", "8-אפוס-אנזו", ["AN1", "AN2", "AN3"]), ("AK", "9-אגדות-מלכי-אכד", ["AK1", "AK2"]),
+                       ("RE", "10-אפוסים-מלכותיים-בבליים-קדומים", ["RE1"]), ("ID", "11-פסל-אידרימי", ["ID1"])):
+    SOURCES += [(_p, os.path.join(A, _d, f"project--{_x}.md")) for _x in _parts]
 OUT = os.path.join(A, "parallels-index.md")
 G = {'א': 1, 'ב': 2, 'ג': 3, 'ד': 4, 'ה': 5, 'ו': 6, 'ז': 7, 'ח': 8, 'ט': 9, 'י': 10, 'כ': 20, 'ל': 30, 'מ': 40, 'נ': 50,
      'ס': 60, 'ע': 70, 'פ': 80, 'צ': 90, 'ק': 100, 'ר': 200, 'ש': 300, 'ת': 400}
@@ -33,7 +37,7 @@ SECTIONS = [("Genesis", ['בראשית']), ("Exodus", ['שמות']), ("Leviticus
             ("Isaiah, Jeremiah, Ezekiel", ['ישעיהו', 'ירמיהו', 'יחזקאל']),
             ("The Twelve", ['הושע', 'יואל', 'עמוס', 'עובדיה', 'יונה', 'מיכה', 'נחום', 'חבקוק', 'צפניה', 'חגי', 'זכריה', 'מלאכי']),
             ("Psalms", ['תהלים']), ("Wisdom and the Writings", ['משלי', 'איוב', 'קהלת', 'שיר השירים', 'רות', 'איכה', 'אסתר', 'דניאל', 'עזרא', 'נחמיה', 'דברי הימים א', 'דברי הימים ב'])]
-ORDER = ['EA1', 'EA2', 'EA3', 'EA4', 'SB', 'ET1', 'ET2', 'ET3', 'ET4', 'CL1', 'CL2', 'CL3', 'CL4', 'LC1', 'LC2', 'LZ1', 'LZ2', 'ES']
+ORDER = ['EA1', 'EA2', 'EA3', 'EA4', 'SB', 'ET1', 'ET2', 'ET3', 'ET4', 'CL1', 'CL2', 'CL3', 'CL4', 'LC1', 'LC2', 'LZ1', 'LZ2', 'ES', 'AN1', 'AN2', 'AN3', 'AK1', 'AK2', 'RE1', 'ID1']
 CL_CH = ['OBI', 'OBII', 'MBA', 'MBB', 'SB']  # the Cuthaean Legend: eBL chapter keys in reading order
 ET_CH = ['OBM', 'OBS', 'MA', 'I', 'II', 'III']  # Etana: eBL chapter keys in reading order
 refre = re.compile(r'(%s)[\s\-]+([א-ת]{1,3}):([א-ת]{1,3})' % '|'.join(

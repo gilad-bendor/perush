@@ -1,0 +1,180 @@
+{
+"kind": "MYTH",
+"cth": "CTH 343.5",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 343.5 (TX 2009-08-30, TRde 2009-08-30)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[š]anezzi?[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[š]a?-né-⸢ez-zi?⸣[ ... ]"
+]
+],
+"tr": "[E]rstklassig? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "DINGIR{MEŠ}-aš=kan išt[arna? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"DINGIR{MEŠ}-aš-kán iš-t[ar?-na? ... ]"
+]
+],
+"tr": "[ ... ] un[ter?] den Göttern [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "UL kwiški[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"Ú-UL ku-iš-ki[ ... ]"
+]
+],
+"tr": "Niemand [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "{d}EA-aš {d}k[umarbi ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"{d}É-A-aš {d}k[u-mar-bi ... ]"
+]
+],
+"tr": "Ea, K[umarbi ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "DINGIR{MEŠ} addaš [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"DINGIR{MEŠ} ad-da-aš x x[ ... ]"
+]
+],
+"tr": "Der Vater der Götter [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[š]arā pāiwen[i]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[š]a-⸢ra⸣-a pa-a-i-u-e-n[i]"
+]
+],
+"tr": "„Gehe[n] wir [h]inauf!",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... nepi]ši? LUGAL-un iy[a- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ] [ne?-pí?]-ši LUGAL-un i-y[a- ... ]"
+]
+],
+"tr": "[ ... ] im [Himm]el? zum König ma[ch- ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-an? nepiš[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ _ (_) ]x-an? ne-pí-iš[ ... ]"
+]
+],
+"tr": "[ ... ] Himmel [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... n]epiš LUGAL-u[š ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"[ _ (_) n]e-pí-iš LUGAL-u[š ... ]"
+]
+],
+"tr": "[ ... H]immel Köni[g ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]UL=ma [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"[ ... ]⸢Ú⸣-UL-ma [ ... ]"
+],
+[
+"A",
+"",
+"Der Text bricht ab."
+]
+],
+"tr": "Nicht aber [ ... ]“",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

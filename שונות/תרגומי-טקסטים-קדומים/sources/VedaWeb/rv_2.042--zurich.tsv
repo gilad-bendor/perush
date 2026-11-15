@@ -1,0 +1,15 @@
+# Rigveda 2.42 – the Zurich text and morphology of VedaWeb (CC BY 4.0), one pāda per row:
+# label<TAB>pāda<TAB>tokens (surface – lemma (grammar; features), joined by ' ‖ ').
+# Made by הוודה-והאווסטה/vedic_tools.py convert from ../VedaWeb/rv_book_02.tei.
+1a	kánikradaj janúṣam prabruvāṇáḥ-	`kánikradat` – √krand- (root; NOM.M.SG.PRS.ACT.PTCP.INT) ‖ `janúṣam` – janúṣ- (nominal stem; ACC.M.SG) ‖ `prabruvāṇáḥ` – √brū- (root; NOM.M.SG.PRS.MED.PTCP.LP)
+1b	íyarti vā́cam aritéva nā́vam	`íyarti` – √r̥- (root; SG.3.IND.PRS.ACT) ‖ `vā́cam` – vā́c- (nominal stem; ACC.F.SG) ‖ `aritā́` – aritár- (nominal stem; NOM.M.SG) ‖ `iva` – iva (invariable) ‖ `nā́vam` – naú- ~ nā́v- (nominal stem; ACC.F.SG)
+1c	sumaṅgálaś ca śakune bhávāsi	`sumaṅgálaḥ` – sumaṅgála- (nominal stem; NOM.M.SG) ‖ `ca` – ca (invariable) ‖ `śakune` – śakuni- (nominal stem; VOC.M.SG) ‖ `bhávāsi` – √bhū- (root; SG.2.SBJV.PRS.ACT)
+1d	mā́ tvā kā́ cid abhibhā́ víśvyā vidat	`mā́` – mā́ (invariable) ‖ `tvā` – tvám (pronoun; ACC.SG) ‖ `kā́` – ká- (pronoun; NOM.F.SG) ‖ `cit` – cid (invariable) ‖ `abhibhā́` – abhibhā́- (nominal stem; NOM.F.SG) ‖ `víśvyā` – víśva- (nominal stem; INS.F.SG) ‖ `vidat` – √vid- 1 (root; SG.3.INJ.AOR.ACT)
+2a	mā́ tvā śyená úd vadhīn mā́ suparṇó	`mā́` – mā́ (invariable) ‖ `tvā` – tvám (pronoun; ACC.SG) ‖ `śyenáḥ` – śyená- (nominal stem; NOM.M.SG) ‖ `út` – úd (invariable; LP) ‖ `vadhīt` – √vadhⁱ- (root; SG.3.INJ.AOR.ACT) ‖ `mā́` – mā́ (invariable) ‖ `suparṇáḥ` – suparṇá- (nominal stem; NOM.M.SG)
+2b	mā́ tvā vidad íṣumān vīró ástā	`mā́` – mā́ (invariable) ‖ `tvā` – tvám (pronoun; ACC.SG) ‖ `vidat` – √vid- 1 (root; SG.3.INJ.AOR.ACT) ‖ `íṣumān` – íṣumant- (nominal stem; NOM.M.SG) ‖ `vīráḥ` – vīrá- (nominal stem; NOM.M.SG) ‖ `ástā` – ástar- (nominal stem; NOM.M.SG)
+2c	pítryām ánu pradíśaṃ kánikradat	`pítryām` – pítrya- (nominal stem; ACC.F.SG) ‖ `ánu` – ánu (invariable; LP) ‖ `pradíśam` – pradíś- (nominal stem; ACC.F.SG) ‖ `kánikradat` – √krand- (root; NOM.M.SG.PRS.ACT.PTCP.INT)
+2d	sumaṅgálo bhadravādī́ vadehá	`sumaṅgálaḥ` – sumaṅgála- (nominal stem; NOM.M.SG) ‖ `bhadravādī́` – bhadravādín- (nominal stem; NOM.M.SG) ‖ `vada` – √vadⁱ- (root; SG.2.IMP.PRS.ACT) ‖ `ihá` – ihá (invariable)
+3a	áva kranda dakṣiṇató gr̥hā́ṇāṃ	`áva` – áva (invariable; LP) ‖ `kranda` – √krand- (root; SG.2.IMP.PRS.ACT) ‖ `dakṣiṇatáḥ` – dakṣiṇatás (invariable) ‖ `gr̥hā́ṇām` – gr̥há- (nominal stem; GEN.M.PL)
+3b	sumaṅgálo bhadravādī́ śakunte	`sumaṅgálaḥ` – sumaṅgála- (nominal stem; NOM.M.SG) ‖ `bhadravādī́` – bhadravādín- (nominal stem; NOM.M.SG) ‖ `śakunte` – śakúnti- (nominal stem; VOC.M.SG)
+3c	mā́ na stená īśata mā́gháśaṃso	`mā́` – mā́ (invariable) ‖ `naḥ` – ahám (pronoun; GEN.PL) ‖ `stenáḥ` – stená- (nominal stem; NOM.M.SG) ‖ `īśata` – √īś- (root; SG.3.INJ.AOR.MED) ‖ `mā́` – mā́ (invariable) ‖ `agháśaṃsaḥ` – agháśaṃsa- (nominal stem; NOM.M.SG)
+3d	br̥hád vadema vidáthe suvī́rāḥ	`br̥hát` – br̥hánt- (nominal stem; ACC.N.SG) ‖ `vadema` – √vadⁱ- (root; PL.1.OPT.PRS.ACT) ‖ `vidáthe` – vidátha- (nominal stem; LOC.N.SG) ‖ `suvī́rāḥ` – suvī́ra- (nominal stem; NOM.M.PL)

@@ -1,0 +1,134 @@
+{
+"kind": "MYTH",
+"cth": "CTH 341.III.13",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 341.III.13 (TX 2009-08-27, TRde 2009-08-27)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... {d}E]N.KI.DU4-uš [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... {d}E]N.⸢KI⸣.DU4-uš x[ ... ]"
+]
+],
+"tr": "[E]nkidu [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]{d}GIŠ.GIM.MAŠ-uš LU[GAL? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]⸢{d}⸣GIŠ.GIM!.MAŠ-uš LU[GAL? ... ]"
+]
+],
+"tr": "Gilgamesch, der Kö[nig ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... me]miškezz[i]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... me]-mi-iš-ke-ez-z[i]"
+]
+],
+"tr": "[ ... sp]rich[t]:",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ]"
+]
+],
+"tr": "„[ ... ]“",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-uš=ma=šma[š? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... 1]-⸢uš⸣-ma-aš-ma-[aš? ... ]"
+]
+],
+"tr": "[ ... ] aber [ ... ] ihne[n ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ](-)KI(-)[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... ]x(-)KI(-)x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-eš?[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ]x-⸢eš?⸣[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 1':1": "Rychtařík, Chatessar 4, 2001, 46, ergänzt ungrammatisches nu]-."
+}
+}

@@ -18,25 +18,31 @@ the law and ritual corpora's Hittite tables (every Hittite text).
 | `4-זלפה-אפו-ואלקונירשה/` | ZA | The Tale of Zalpa (CTH 3.1), the Old Script tablet KBo 22.2 (its New Script duplicate KBo 3.38 is not in TLHdig) | our composite from TLHdig, `composite-ZA.tsv` | 36 |
 | | AP | Appu and his two sons (CTH 360.1–4) | HPM | 204 |
 | | EL | Elkunirša and Ašertu (CTH 342.1.1–2.5: two versions in eight fragments) | HPM | 301 |
-| `5-טליפינו/` | TE | The Telipinu myth, first version (CTH 324.1) | HPM | 267 |
+| `5-טליפינו-והאלים-הנעלמים/` (renamed from `5-טליפינו/`, 2026-11-14) | TE | The Telipinu myth, first version (CTH 324.1) | HPM | 267 |
+| | SG | The Sun-god's disappearance and return (CTH 323.1–2) – Round 8 run 5 | HPM | 219 |
+| | LI | The Storm-god in Liḫzina (CTH 331.1–2) – Round 8 run 5 | HPM | 104 |
+| | AZ | Anzili and Zukki (CTH 333) – Round 8 run 5 | HPM | 104 |
+| | MU | The Storm-god's *mugawar* (CTH 325) – Round 8 run 5 | HPM | 274 |
+| `2-מחזור-קומרבי/` | LA | The Kingship of LAMMA (CTH 343.1–6) – Round 8 run 5 | HPM | 223 |
+| | SI | The Song of Silver (CTH 364.1–6) – Round 8 run 5 | HPM | 193 |
+| `6-גילגמש-החתי/` | GI | The Hittite Gilgameš (CTH 341.III.1–19); pointed to from `../אפוס-גילגמש/corpus.md` (project 4 there) | HPM | 611 |
 
-**Left for later (recorded, not translated):** the other Telipinu versions (CTH 324.2–9) and the related vanishing-god
-myths (CTH 322–335); the Kumarbi fragments (CTH 346.1–21; fetched to `sources/HPM/`); the 67 small Hittite fragments of
+**Left for later (recorded, not translated):** the other Telipinu versions (CTH 324.2–9) and the small vanishing-god
+fragments (CTH 322, 326–328, 332, 334–337; the main ones – 323, 325, 331, 333 – done in Round 8 run 5); the Kumarbi fragments (CTH 346.1–21; fetched to `sources/HPM/`); the 67 small Hittite fragments of
 the Song of Release outside the main tablets (≈ 490 lines in TLHdig `CTH-789/`); the Hurrian side of the Song of Release;
-the Hittite Gilgameš (CTH 341.III), Kešši, Gurparanzaḫ, the Sun-god and the fisherman, the Song of Silver, LAMMA (all in
-HPM, not in this run's plan).
+Kešši, Gurparanzaḫ, the Sun-god and the fisherman (in HPM; the Hittite Gilgameš, Silver and LAMMA done in Round 8 run 5).
 
 ## Labels
 - An HPM text with one edition (IL, KU, TE): the edition's clause numbers ("kola"), the HPM citation form "CTH 321 §2,
   kolon 8".
-- An HPM text in several editions (HE, UL, AP, EL): `<fragment>:<clause>`, the fragment as the last part of the CTH
+- An HPM text in several editions (HE, UL, AP, EL, SG, LI, LA, SI, GI): `<fragment>:<clause>`, the fragment as the last part of the CTH
   number (HE `6:3` = CTH 348.I.6 kolon 3; UL `3.1:45` = CTH 345.I.3.1 kolon 45; EL `2.1:18` = CTH 342.2.1 kolon 18).
 - Our composites: SR `<tablet>.<§>.<n>` (KBo 32.14 → `14.3.5` = the 5th Hittite line of its 3rd paragraph); ZA `<§>.<n>`.
   The manuscript line is in the TSV and printed by `data`.
 
 ## Reading order
 IL → HE (the serpents; the dossier) → KU → UL (the Kumarbi cycle: kingship in heaven, then the stone that reaches heaven)
-→ SR → ZA, AP, EL (the tales) → TE.
+→ LA → SI (the rest of the cycle) → SR → ZA, AP, EL (the tales) → TE → SG, LI, AZ, MU (the vanishing gods) → GI.
 
 ## Status
 **First draft complete (2026-10-31, Round 5 run 2):** all nine texts, 3,164 lines – drafted by four translators, three
@@ -45,3 +51,5 @@ stubs in `../הדפסה/מיתוסים-חתיים-וחוריים/`, the parallel
 the user. Pending for the lead: the splits of `renderings.md` M3. Done at the Round 5 finalization (2026-11-02): the four dossier
 revisions of `renderings.md` §H8 applied to the dossier's IL (the table is empty now); Ḫedammu in the dossier (key HD:
 60 lines of HE, copied byte for byte; `hittite_tools.py verify HE` keeps them identical, as `verify IL` does for IL 8–17). Details per text: each `project.md`.
+
+**Round 8 run 5 (2026-11-14):** the Hittite myths completed – the vanishing-god myths beside Telipinu (SG, LI, AZ, MU), the rest of the Kumarbi cycle (LA, SI), the Hittite Gilgameš (GI, a new project 6): 1,728 clauses, three translators, three independent reviews (40 + 42 + 192 lines fixed); renderings M4; report `../reports/round-8/run-5.md`.

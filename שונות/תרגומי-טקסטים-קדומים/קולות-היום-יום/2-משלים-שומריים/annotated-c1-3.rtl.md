@@ -425,10 +425,10 @@
 
 ### D53
 `an sumun₂?-am₃ ki ku₆-am₃`
-> למעלה – ראמה; למטה – דג.
+> למעלה – פרת־בר; למטה – דג.
 - **פירוק:** `an sumun₂?-am₃` "למעלה (שמים) – פרת בר הוא"; `ki ku₆-am₃` "למטה (ארץ) – דג הוא".
 - **תרגומים:** ETCSL: "At the top it is a wild cow, at the bottom it is a fish. At the top it is shattered potsherds, at the bottom it is half a cubit." (D53–D54).
-- **הערות:** חידה (בת הים?). *sumun₂* (= אכדית *rīmtu*) = `רְאֵמָה` (LAOS 4 20 o.9).
+- **הערות:** חידה (בת הים?). *sumun₂* (= אכדית *rīmtu*) = `פָּרַת־בָּר` (2026-11-15 harmonization: `רְאֵמָה` הוא של *rīmtu* האכדית, הקוגנט, ואינו מושאל למקבילה השומרית – הכלל של 2026-11-09; כמו *u₃-sumun₂* בקנון בית הטבלה ובאגדות המלכים).
 
 ### D54
 `an šika de₅ ki MAŠ kuš₃`

@@ -1,0 +1,449 @@
+{
+"kind": "MYTH",
+"cth": "CTH 364.4",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 364.4 (TX 2009-08-31, TRde 2009-09-02)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2' ",
+"title": "§ 2' ",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-yann[i? ... -i]t? dašk[e?- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ _ ]x x-⸢ya-an⸣-n[i? _ -i]t? ⸢da?-aš⸣?-k[e?- ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ] nehm?[- ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 2' ",
+"hl": "",
+"master": "[nu] wannummiyan DUMU-an KÙ.BABBAR-anza {GIŠ}GI[DRU-it GUL-aḫta]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ _ ] wa-an-nu-um-mi-ya-an DUMU-an KÙ.BABBAR-an-za ⸢{GIŠ}⸣GI[DRU-it ... ]"
+]
+],
+"tr": "Das Silber [schlug] ein Waisenkind [mit einem] St[ock],",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 2' ",
+"hl": "",
+"master": "⸢nu⸣ wannumiyaš DUMU-aš KÙ.BABBAR-i menaḫḫa[nda] ḪUL-lu uttar tet",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"⸢nu⸣ wa-an-nu-mi-ya-aš DUMU-aš KÙ.BABBAR-i me-na-aḫ-ḫa-a[n-da] ḪUL-lu ut-tar te-et"
+],
+[
+"B",
+"1'",
+"[nu wa-nu-u]m-⸢mi-ya⸣-aš DUMU-aš ⸢KÙ⸣.[BABBAR-i ... ] [ ... ut-t]ar te-et"
+]
+],
+"tr": "und das Waisenkind sprach dem Silber gegenü[ber] das böse Wort:",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2' ",
+"hl": "",
+"master": "KÙ.BABBAR-YA kuwat=w[a=naš GUL-aḫḫiškeši]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"KÙ.BABBAR-YA ku-wa-at-w[a-na-aš ... ]"
+],
+[
+"B",
+"2'",
+"KÙ.BABBAR-YA ⸢ku⸣-[wa-at-wa-na-aš ... ]"
+]
+],
+"tr": "„Mein Silber, warum [schlägst du uns]?",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 2' ",
+"hl": "",
+"master": "nu=wa=naš=kan kuwat kuwaškeši",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"nu-wa-na-aš-kán ku-wa-at ku-wa-aš-ke-ši"
+],
+[
+"B",
+"3'",
+"[nu-wa-na-aš-k]án ku-wa-at ku-wa-aš-ke-š[i]"
+]
+],
+"tr": "Warum prügelst du uns?",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2' ",
+"hl": "",
+"master": "zikk[=a=wa=za] anzel iwar wannummiyaš DUMU-aš",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"zi-ik-k[a4-wa-za] an-ze-el i-wa-ar wa-nu-um-mi-ya-aš DUMU-aš"
+],
+[
+"B",
+"3'",
+"[ ... ] [ ... i]-wa-ar wa-an-nu-um-mi-y[a-aš ... ]"
+]
+],
+"tr": "[Auch] du (bist) wie wir ein Waisenkind.“",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2' ",
+"hl": "",
+"master": "[mān KÙ.BABBAR-anza=ma INIM{ḪI.A} ištamašt]a1",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ]"
+],
+[
+"B",
+"4'",
+"[ ... ] [iš-ta-ma-aš-t]a"
+]
+],
+"tr": "[Als das Silber aber die Worte gehört hat]te,",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2' ",
+"hl": "",
+"master": "n=aš wīškiuwan dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[n]a-aš ú-i-iš-ki-u-wa-an da-a-iš"
+],
+[
+"B",
+"5'",
+"na-aš ú-i2-iš-ki-u-w[a-an ... ]"
+]
+],
+"tr": "begann es zu weinen.",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2' ",
+"hl": "",
+"master": "nu=kan wīškiuwanza KÙ.BABBAR-anza anda parna=šša pait",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"nu-kán ú-i-[iš-ki-u-wa-an-za] KÙ.BABBAR-an-za an-da pár-na-aš-ša pa-it"
+],
+[
+"B",
+"6'",
+"[nu-kán ú-i-i]š-ki-u-wa-an-za KÙ.BABBAR-an-za a[n-da ... ]"
+]
+],
+"tr": "Das weinende Silber ging in sein Haus.",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2' ",
+"hl": "",
+"master": "KÙ.BABBAR-anza IN[IM{ḪI.A}-ar EGIR]-pa anni=šši memiškiuwan dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"KÙ.BABBAR-an-za IN[IM{ḪI.A}-ar ... ] me-mi-iš-ki-u-wa-an da-a-iš"
+],
+[
+"B",
+"6'",
+"[ ... ] [ ... EGIR-p]a (Rasur) an-ni-iš-ši me-mi-i[š-ki-u-wa-an ... ]"
+]
+],
+"tr": "Das Silber begann, [die] Wo[rte] vor seiner Mutter zu [wie]derholen:",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2' ",
+"hl": "",
+"master": "peran āški=za DUMU{MEŠ} kwedaš kattan ḫazzikkenun",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"pé-ra-an a-aš-ki-za DUM[U{MEŠ} ... ] kat-ta-an ḫa-az-⸢zi-ik⸣-ke-nu-un"
+],
+[
+"B",
+"8'",
+"[ ... a-a]š-ki-za DUMU{MEŠ} ku-e-da-aš GA[M-an ... ]"
+],
+[
+"C",
+"1'",
+"[ḫa-a]z-z[i-ik-ke-nu-un]"
+]
+],
+"tr": "„Die Kinder, auf welche ich vor dem Tor eingeprügelt habe,",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 2' ",
+"hl": "",
+"master": "nu=mu teriškanzi",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"nu-mu te-ri-iš-k[án-zi] ¬¬¬"
+],
+[
+"B",
+"9'",
+"[ ... t]i-re-eš-kán-zi ¬¬¬"
+],
+[
+"C",
+"1'",
+"[ ... ] ¬¬¬"
+]
+],
+"tr": "trotzen mir.1",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 3'",
+"hl": "",
+"master": "⸢nu⸣ DUMU-an {GIŠ}GIDRU-it GUL-aḫḫun",
+"words": [],
+"mss": [
+[
+"A",
+"11'",
+"[ _ ] DUMU-an {GIŠ}GIDRU-it ⸢GUL⸣-aḫ-ḫu-un"
+],
+[
+"B",
+"10'",
+"[ ... {GIŠ}GIDRU-i]t ⸢GUL⸣-aḫ-ḫu-u[n]"
+],
+[
+"C",
+"2'",
+"⸢nu⸣ DUMU-an {GIŠ}GIDRU-it [ ... ]"
+]
+],
+"tr": "Ein Kind schlug ich mit dem Stock.",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 3'",
+"hl": "",
+"master": "apāš=ma=mu EGI[R-pa ḪUL-lu] uttar tet",
+"words": [],
+"mss": [
+[
+"A",
+"11'",
+"a-pa-a-aš-ma-mu EGI[R-pa ... ]"
+],
+[
+"B",
+"10'",
+"[ ... ] [ ... ]"
+],
+[
+"C",
+"2'",
+"[ ... ] ut-tar te-et"
+]
+],
+"tr": "Das aber a[nt]wortete mir [ein schlechtes] Wort.",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 3'",
+"hl": "",
+"master": "nu=mu wanummiyaš DUMU-aš kwe uttar te[t]",
+"words": [],
+"mss": [
+[
+"A",
+"12'",
+"[nu-m]u wa-nu-um-mi-ya<-aš> DUMU-aš ku-e ut-tar te-e[t]"
+],
+[
+"B",
+"11'",
+"[ ... wa-nu-u]m?-⸢mi?⸣-[ya-aš ... ]"
+],
+[
+"B",
+"",
+"Der Text bricht ab."
+],
+[
+"C",
+"3'",
+"nu-mu [ ... ] ⸢ku⸣-it ut-tar ⸢te⸣-e[t]"
+]
+],
+"tr": "Das Wort, das mir das Waisenkind sag[te],",
+"trlang": "DE"
+},
+{
+"n": "16",
+"sec": "§ 3'",
+"hl": "",
+"master": "[n=a]t AMA-YA ištamaš",
+"words": [],
+"mss": [
+[
+"A",
+"13'",
+"[na-a]t AMA-YA iš-⸢ta⸣-ma-aš"
+]
+],
+"tr": "meine Mutter, höre [e]s!",
+"trlang": "DE"
+},
+{
+"n": "17",
+"sec": "§ 3'",
+"hl": "",
+"master": "kuwat[=wa=naš GUL-aḫḫi]škeši",
+"words": [],
+"mss": [
+[
+"A",
+"13'",
+"ku-⸢wa-at⸣-[wa-na-aš]3 [GUL-aḫ-ḫi-i]š-⸢ke⸣-ši"
+],
+[
+"C",
+"4'",
+"[ ... ]"
+]
+],
+"tr": "‚Warum [schlä]gst du [uns]?",
+"trlang": "DE"
+},
+{
+"n": "18",
+"sec": "§ 3'",
+"hl": "",
+"master": "nu=wa=na[š=k]an? [kuwat kuwaškeši]",
+"words": [],
+"mss": [
+[
+"A",
+"14'",
+"nu-⸢wa⸣-[n]a-[aš-kán ... ]"
+],
+[
+"C",
+"5'",
+"[nu-w]a?-⸢na?⸣-[aš-k]án? [ ... ]"
+],
+[
+"C",
+"",
+"Der Text bricht ab."
+]
+],
+"tr": "[Warum prügelst du] un[s]?",
+"trlang": "DE"
+},
+{
+"n": "19",
+"sec": "§ 3'",
+"hl": "",
+"master": "[zikk=a=wa=za anz]e[l iwar wanummiyaš DUMU-aš]",
+"words": [],
+"mss": [
+[
+"A",
+"15'",
+"[ ... an-z]e-[el ... ]"
+],
+[
+"A",
+"",
+"Der Text bricht ab."
+]
+],
+"tr": "[Auch du] (bist) [wie w]i[r ein Waisenkind].‘“",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 2' :1": "Bei nur normaler Zeichenverteilung ist für dieses Kolon sowohl in A als auch in B nur Platz für etwa 8-10 Zeichen.",
+"§ 2' :2": "-i über Rasur.",
+"§ 3':3": "Hoffner, Fs Otten2 1988, 150 ergänzt: ku-⸢wa-at⸣-[wa-na-aš kat-ta-an], was vom Platz her möglich ist, aber inhaltlich nicht sinnvoll erscheint, weil das Silber hier die Worte des Waisenkindes von oben wiederholt, der Wortlaut also der gleiche sein sollte; oben kann wohl kein kattan mehr eingefügt werden.",
+"T1": "So nach Hoffner, Myths2 1998, 49; vgl. HEG III 334: „halten mir dauernd (böse) Reden“ mit Diskussion der Bedeutung. Text B: „belei]digen?“; vgl. zu dem Wort EHS 482."
+}
+}

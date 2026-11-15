@@ -1,0 +1,196 @@
+{
+"kind": "MYTH",
+"cth": "CTH 341.III.10",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 341.III.10 (TX 2009-08-27, TRde 2009-08-27)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... k]ar(a)š(-)an-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... k]ar?-aš(-)an-x[ ... ] [ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[{d}GIŠ.GI]M.MAŠ-uš=ma=an ki?-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[{d}GIŠ.GI]M.MAŠ-uš-ma-an ki?-[ ... ]"
+]
+],
+"tr": "[Gilga]mesch aber [ ... ] ihn [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... (-)i]mmiyat?",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... (-)i]m?-mi-ya-at"
+]
+],
+"tr": "[ ... zü]rnte?.",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... -z]a? ēšta",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... -z]a? e-eš-ta"
+]
+],
+"tr": "[ ... ] war [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"nu-x[ ... ]"
+]
+],
+"tr": "und [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] aruni GAM-a[n ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... ]x a-ru-ni GAM-a[n ... ] [ ... ]"
+]
+],
+"tr": "[ ... ] unten am Meer [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "[{m}URŠ]ANABI-in=ma?[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[{m}UR-Š]A-NA-BI-in-ma?[ ... ]"
+]
+],
+"tr": "[Den Urš]anabi aber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]{d}GIŠ.GIM.MAŠ[(-) ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ]{d}GIŠ.GIM.MAŠ[(-) ... ]"
+]
+],
+"tr": "[ ... ] Gilgamesch [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-zi KASKAL-an[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ ... ]x-zi KASKAL-an[ ... ]"
+]
+],
+"tr": "[ ... ] den Weg [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"[ ... ]x x x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

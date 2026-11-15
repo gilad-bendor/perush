@@ -131,7 +131,7 @@ The rule is the same: a Sumerian word takes LH's Hebrew of its Akkadian equivale
 | Utu | `אוּתוּ` (always vocalized: `אותו` "him") | flood corpus | 27, 430′, 438′, 485′ |
 | Inanna | `אִינַנָּה` (**always vocalized**: plain `איננה` reads "is not"; 2026-10-21 harmonization, was `אִינַאנָּה`) | six corpora | 51 |
 | Ninurta | `נִינוּרְתָּה` | corpus §1 | 496′ |
-| Ašnan; Šakkan | `דָּגָן` (always vocalized; not the god Dagan `דָּגַן`); `שַׁכַּן` (always vocalized) | creation corpus §3 (*ašnan* = `דָּגָן`) | 478′ |
+| Ašnan; Šakkan | `דָּגָן` (always vocalized; the god Dagan is `דָּגָן` too since the 2026-11-15 harmonization – the note tells them apart); `שַׁכַּן` (always vocalized) | creation corpus §3 (*ašnan* = `דָּגָן`) | 478′ |
 | Lipit-Ištar | `לִיפִּית־אִישְׁתַּר` (plain `ליפית־אישתר`, as T5) | | 21, 35, 39, 84, 434′ |
 | Isin; Nippur; Ur; Eridu; Uruk; Ekur | `אִיסִין`; `נִיפּוּר`; `אוּר` (always vocalized: `אור` "light"); `אֶרִידוּ`; `אוּרוּךְ` (note `אֶרֶךְ`); `אֵכּוּר` | LH §3; flood and creation corpora | 13, 41–47, 58–62; 456′, 483′ |
 | *ki-en-gi ki-uri* | `שׁוּמֶר וְאַכַּד` | corpus §1 | passim |
@@ -182,7 +182,7 @@ The rule is the same: a Sumerian word takes LH's Hebrew of its Akkadian equivale
 | *di-ku₅ an-ki*; *ka-inim maḫ* | *dayyān šamê u erṣetim*; *qibītu ṣīrtu* | `הדיין של השמים והארץ`; `מאמר נעלה` | | LH 3459′–3461′ ↔ `הֲשֹׁפֵט כָּל הָאָרֶץ` (בראשית יח:כה) | 485′–486′ |
 | *du₆*; *šid*; *suḫuš … gin*; *ur₂* | *tīlu*; *manû*; *išda kunnu*; *šuršu* | `תל` (`לתלים`); `מנה`; `את יסוד … כונן`; `שורש` | | `תל` ↔ `וְהָיְתָה תֵּל עוֹלָם` (דברים יג:יז); LH 3524′ | 489′, 492′–494′ |
 | *ur-saĝ kal-ga* | *qarrādu dannu* | `הגיבור החזק` | | LH 3527′, 3575′ | 497′ |
-| *maškim* | *rābiṣu* | `הממונה` (by meaning) | `רוֹבֵץ` (corpus §4: the demon), `שוטר` (Deut 16:18) | [cognate via Akk.] ↔ `לַפֶּתַח חַטָּאת רֹבֵץ` (בראשית ד:ז), in the apparatus | 499′ |
+| *maškim* | *rābiṣu* | `הנציב` (by meaning; 2026-11-15 harmonization, was `הממונה`, which is *nu-banda₃*'s) | `רוֹבֵץ` (corpus §4: the demon), `שוטר` (Deut 16:18) | [cognate via Akk.] ↔ `לַפֶּתַח חַטָּאת רֹבֵץ` (בראשית ד:ז), in the apparatus | 499′ |
 | *u₄ da-ri₂* | *ūmī dārûti* | `לימי נצח` | `לעולם` | corpus §0 | 500′ |
 | *šagina*; *ša₃ e₂-gal*; *nu-banda₃* | *šakkanakku*; (*ša libbi ekalli*); *laputtû* | `מושל הצבא`; `(איש) פנים ההיכל`; `המפקח` | `שר הצבא` (Gen 21:22), `נוגש`, `שוטר` (Exod 5) | | 104′–106′ |
 | *ensi₂*; *ugnim* | *iššiakku*; *ummānu* | `מושל`; `החיל` | | LH 3384′, 3564′ | 467′, 97′ |

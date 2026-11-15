@@ -736,7 +736,7 @@ File `annotated-B1.rtl.md`, 218 entries (ETCSL composite 815–1032; no lost lin
 | B.ix.15 | *{ĝiš}gigir kug an mul-a erin₂-na-da* | את המרכבה הטהורה, הנוצצת בַּשָּׁמַיִם – לצמוד | `רֶכֶב אֱלֹהִים רִבֹּתַיִם אַלְפֵי שִׁנְאָן` (תהלים סח:יח); `וְאֶת מַרְכְּבוֹת הַשֶּׁמֶשׁ שָׂרַף בָּאֵשׁ` (מלכים ב כג:יא) | equivalent; divergence | The god's chariot; in Judah the chariots given to the sun at the temple were burnt. |
 | B.ix.21 | *lu₂ ug-gin₇ šeg₁₂ gi₄-a* | האיש השואג כְּלַיִשׁ | `שְׁאָגָה לוֹ כַּלָּבִיא; וִשְׁאַג (יִשְׁאַג) כַּכְּפִירִים` (ישעיהו ה:כט) | equivalent | The roaring warrior. |
 | B.ix.22 | *mar-uru₅-gin₇ zig₃-ga* | הקם כסופה | `יְהוָה בְּסוּפָה וּבִשְׂעָרָה דַּרְכּוֹ` (נחום א:ג) | equivalent | *mar-uru₅* (tempest) = `סופה`. |
-| B.ix.23 | *maškim da-ga {d}nin-ĝir₂-su-ka* | הממונה המשוטט של נינגירסו | `לַפֶּתַח חַטָּאת רֹבֵץ` (בראשית ד:ז) | cognate | *maškim* = Akk. *rābiṣu* (bailiff; also a demon) ~ `רֹבֵץ` (wisdom corpus); the word only, not the motif. |
+| B.ix.23 | *maškim da-ga {d}nin-ĝir₂-su-ka* | הנציב המשוטט של נינגירסו | `לַפֶּתַח חַטָּאת רֹבֵץ` (בראשית ד:ז) | cognate | *maškim* = Akk. *rābiṣu* (bailiff; also a demon) ~ `רֹבֵץ` (wisdom corpus); the word only, not the motif. |
 
 ### Key findings (B1)
 **Bible.**

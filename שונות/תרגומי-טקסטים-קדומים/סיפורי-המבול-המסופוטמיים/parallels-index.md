@@ -470,7 +470,7 @@ The commentary asks of each word in Genesis: *why exactly this word?* These are 
 |---|---|---|---|---|---|
 | 8:20 `וַיִּבֶן נֹחַ מִזְבֵּחַ לַיהוָה … וַיַּעַל עֹלֹת בַּמִּזְבֵּחַ` (ח:כ) | Atr. III v 30–31 (partly restored) | *ana šāri erbet ittaqi niqâ* | ל[ארבע] הרוחות / זבח [זבח] | [divergence] | No altar, no burnt offering, no clean animals named. |
 | 8:20 | Gilg. XI 157–160 | libations and aromatics to the four winds, on the mountain top | הוצאתי, ולארבע הרוחות זבחתי זבח … מנחה … קנה, ארז והדס | [divergence] | No altar, no burnt offering. |
-| 8:20–21 | Sum. D 10–11 (210–211) | `giri₁₇ ki su-ub ba-gub / gud im-ma-ab-gaz-e udu im-ma-ab-šar₂-re` | לפני אותו השתחווה, אפו ארצה. / המלך שוחט שור, צאן מרבה | [divergence] | Prostration and sacrifice to the sun-god, apparently before the animals come out. |
+| 8:20–21 | Sum. D 10–11 (210–211) | `giri₁₇ ki su-ub ba-gub / gud im-ma-ab-gaz-e udu im-ma-ab-šar₂-re` | לפני אותו השתחווה, אפו ארצה. / המלך הורג שור, צאן מרבה | [divergence] | Prostration and sacrifice to the sun-god, apparently before the animals come out. |
 | 8:20 | Berossus B7.4.12 | βωμὸν ἱδρυσάμενον καὶ θυσιάσαντα τοῖς θεοῖς | הקים מזבח וזבח לאלים | [equivalent] (the act) / [divergence] (gods; kind) | **LXX ≠ θυσιαστήριον**: the LXX avoids βωμός for Noah's altar. No reaction of the gods [absent]. |
 | 8:20 | Berossus B7.4.11 | προσκυνήσαντα τὴν γῆν | השתחווה לארץ | [absent] | |
 | 8:20 | Berossus B7.6.4 | a second sacrifice, by the others | זבחו לאלים | [divergence] | |

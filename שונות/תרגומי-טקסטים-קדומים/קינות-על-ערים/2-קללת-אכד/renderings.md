@@ -211,7 +211,7 @@ Words used only in this text (the shared terms are in `../renderings.md`). Table
 | *en-na sukud-ra₂-bi*; *a-nir … sa₂* | `עד גובהה`; `אנחה תשתווה` | [equivalent] Lam 2:8 | | 227 |
 | *saḫar-gin₇ … dub* | `כעפר תיערם` | [equivalent] 2 Kgs 13:7 | | 228 |
 | *ĝuruš maḫ ĝeštin naĝ-a-gin₇*; *ki-še₃ … ĝa₂-ĝa₂* (no agent) | `כבחורים נשגבים ששתו יין`; `ארצה יִשָּׂמוּ` | [equivalent] Jer 25:27 | Nifal, vocalized (not `יושמו`) | 230 |
-| *gud gaz-gaz* | `מכה־השוורים` | [equivalent] Isa 22:13 | *gaz* = `הכה` | 237 |
+| *gud gaz-gaz* | `הורג־השוורים` | [equivalent] Isa 22:13 | *gaz* = `הרג` in the slaughter formula *gud gaz* (2026-11-15 harmonization; was `מכה־השוורים`) | 237 |
 | *udu šum-šum*; *šum* | `טַבַּח־הצאן`; `טבח` | [cognate] *ṭabāḫu* | not `טובח` (`טוב`) | 238 |
 | *ukur₃*; *dumu kug-ge-eš pad₃* | `עני`; `*במוצאו ילד לכסף*` | [equivalent] Joel 4:3; Neh 5:5 | our reading | 239 |
 | *kar-ke₄*; *eš₂-dam*; *ni₂ … la₂* | `זונה`; `פונדק`; `את עצמה תתלה` | [divergence] Josh 2:15 | | 240 |

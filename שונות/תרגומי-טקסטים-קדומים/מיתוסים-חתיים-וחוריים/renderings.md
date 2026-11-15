@@ -173,6 +173,38 @@ mid. "stand" `עָמַד`; *eš-* "sit" `יָשַׁב` / "be" `הָיָה`; *ḫ
 
 - **2026-11-02 harmonization** (the Round 5 finalization, `../harmonization--2026-11-02.md`): no myth `>` line changed. The tool: F8 (*pāi* `ייתן`) scoped to the law keys (its escapes removed from KU 126, HE 4:44, HE 22:9, AP 1:17–19); F18 requires *aššuli* in its formula (escape removed from SR 10.1.2); *kupri-* licenses `כֹּפֶר` (HE 25:15, 25:17 [cognate, Gen 6:14]; escapes removed). The §H8 revisions applied to the dossier's IL; the dossier now also copies HE as HD (60 lines, `verify HE`). Kept by sense, with reasons in the table: SISKUR `מנחה` (Ḫedammu) / `טקס` (the rituals, EN SISKUR), *ḫarnink-* `השמיד` (myths) / `השחית` (the Laws), and the M3 splits.
 
+## M4. Round 8 run 5 (2026-11-14): the vanishing-god myths, LAMMA and Silver, the Hittite Gilgameš
+Fixed by the run's coordinator before the first line; the translators' Proposals (each project's `project.md`) revise it.
+Keys: SG (CTH 323), LI (331), AZ (333), MU (325) in `5-טליפינו-והאלים-הנעלמים/`; LA (343), SI (364) in `2-מחזור-קומרבי/`;
+GI (CTH 341.III) in the new project `6-גילגמש-החתי/`. **Telipinu's Hebrew binds the other vanishing-god myths** (TE's
+Proposals, `5-…/project.md`: the four angers, the withering list, the analogy formula `כמו ש… – כך …`, the eagle, the
+bee, the dark earth, the bronze cauldrons): wherever SG, LI, AZ, MU repeat a TE clause, copy TE's Hebrew (`data` shows the
+"similar" lines with their Hebrew). **The Gilgameš corpus's names bind GI** (`../אפוס-גילגמש/renderings.md` §1).
+
+| Hittite | Hebrew | Rejected | Echo | Reason |
+|---|---|---|---|---|
+| *ḫaḫḫima-* "frost, torpor" (personified, SG) | **קִפָּאוֹן** (a name, no article; the common noun the same) | `כְּפוֹר` (*ḫaḫḫima-* is the numbness, not the rime) | | HPM "Erstarrung"; speaking names as Hesiod's (guidelines §5.2). |
+| *mugai-* "invoke, entreat (a god to return)"; *mugawar* "invocation" | **הִפְצִיר**; **הַפְצָרָה** | `הִתְפַּלֵּל`, `תְּחִנָּה` (the Psalms' prayer words) | | The ritual genre of MU; the title `המוּגָוָר` transliterated, with its meaning in the note. |
+| {D}LAMMA (Kurunta), the god made king (LA) | **אֵל הַמָּגֵן** | `LAMMA` in Latin letters | | The law table's row; the note at the first line: Kurunta, the protective god of the countryside. |
+| KÙ.BABBAR as the name of the hero (SI) | **כֶּסֶף** (a name, no article, vocalized at the first occurrence in each fragment) | | | The speaking-name rule; the metal is `כסף` too: the note says where the text plays on it. |
+| ALAM / *ešri-* "form, figure, statue" | **תֹּאַר** | `צֶלֶם`, `דְּמוּת` (reserved, §H3: Gen 1:26), `פֶּסֶל` (Sumerian *alan*'s) | [divergence] ↔ `נַעֲשֶׂה אָדָם בְּצַלְמֵנוּ כִּדְמוּתֵנוּ` (בראשית א:כו) | GI 1:2–3: the gods fashion Gilgameš's figure; IL's *ešri-* `תואר` (M3). |
+| *šamnai-* "create, fashion" | **עִצֵּב** | `בָּרָא`, `יָצַר` (reserved, §H3) | [divergence] ↔ Gen 1:27, 2:7 | The Hittite word of making a being (GI 1:2–3). |
+| ŠU.SI / AMMATU "cubit" (Gilgameš's measures) | **אַמָּה** ★ (the trap of §H6) | | | GI: his height in cubits. |
+| {GIŠ}ERIN "cedar"; the cedar forest | **אֶרֶז**; **יַעַר הָאֲרָזִים** | | | As the Gilgameš corpus (*erēnu* `אֶרֶז`). |
+| LÚ.ŠU.I / UR.SAG: Gilgameš the hero | UR.SAG **גִּבּוֹר** (gated, §H4) | | | |
+| *walliya-* "praise, glorify" | **שִׁבַּח** | `הִלֵּל` (the Psalms') | | |
+| *ekuna-* "cold"; *ekun-* "be cold, freeze" (SG) | **קַר**; **קָפָא** | | | |
+
+**Reserved in every myth line from this run** (§H3 rows added): `צלם`/`דמות` (Gen 1:26), the root יצר (Gen 2:7), `יהוה`.
+
+**After the drafts and reviews (2026-11-14, the coordinator):** the translators' Proposals (each project's `project.md`) are
+merged here by reference; their fixed strings bind later work on these keys. Decisions:
+- {D}UTU-ŠI / -ŠĪ "My Sun" = `שִׁמְשִׁי` (the law row, now also reading the macron; MU's `הוד מלכותי` aligned).
+- *ambašši-* "burnt offering" (Hurrian) = `שְׂרֵפָה?` (GI 6:46, 6:56): `עֹלָה` (Lev 1) is kept out of the line.
+- *patalḫa-* = `כֶּבֶל־רַגְלַיִם` (SI, HPM "Fußfessel"; KU 207 aligned).
+- **Homonyms, not splits:** *kuwaš(š)-* "kiss" `נשק` (LA 1:47, UL 3.1:131) / *kuwašk-* iterative of *kuen-* "strike" `תקף` (SI 4:5, LI 1:61).
+- **Splits kept by sense:** *šamnai-* `עִצֵּב` "fashion" (GI) / `הִצִּיב` "set up" (HE 23:2, UL 3.1:179, 207); *weya-* `בכה` (SI) / `צעק` (KU 146); *maniyaḫḫ-* `ניהל` "govern" (SI) / `הפקיד` "entrust" (UL); *ninink-* `עורר` animals (LA) / `הניע` objects (UL); *nanna-* `דחק` (SI) / `העביר?` (KU 277, of a word); *ḫink-* `קדו` (LI) / *aruwai-* `השתחווה` (MU); *išḫiya-* `כרך` "bind" (SG) / the Laws' `חייב`; GI keeps the Akkadian epic's Hebrew where the Hittite has its word: GURUŠ `עֶלֶם` (as *eṭlu*; HE, AP `בחור`), DANNA `בֵּרוּ` (as *bēru*; HLPT, HE `פרסאות`), *ara-* `רֵעַ` (the Laws `חבר`); *epp-* `תפס` even in the calque "seized the road" (GI 1:196); *šakuwai-* `צופה`.
+
 ## H2. Names (machine-read; the myth texts only)
 | Source (regex) | Hebrew | ★ | Note |
 |---|---|---|---|
@@ -228,7 +260,7 @@ mid. "stand" `עָמַד`; *eš-* "sit" `יָשַׁב` / "be" `הָיָה`; *ḫ
 | `\{d\}išḫar` | `אִישְׁחָרָה` | | Išḫara (KU 6; M1) |
 | `\{uru\}urkiš` | `אוּרְקִישׁ` | | Kumarbi's city (UL 1:15) |
 | `\{d\}ka\.zal` | `קַזַל` | | KA.ZAL (KU 118) |
-| `\{d\}en\.ki\b` | `אֶנְקִי` | | Enki = Ea (KU 225) |
+| `\{d\}en\.ki\b(?!\.)` | `אֶנְקִי` | | Enki = Ea (KU 225); `(?!\.)` added 2026-11-14 so that {D}EN.KI.DÙ (Enkidu, GI) is not read as Enki |
 | `ašḫapal` | `אַשְׁחַפָּלָה` | | the scribe of KU (KU 287, 292) |
 | `\{d\}šuwaliy` | `שׁוּוַלִיַּת` | | Šuwaliyatt (SR 13.2.1; KU 89; Round 5 run 2, translator 3) |
 | `\{d\}zuen` | `אֵל הַיָּרֵחַ` | | the Moon-god written {D}ZUEN (SR 13.11.2; translator 3) |
@@ -256,6 +288,39 @@ mid. "stand" `עָמַד`; *eš-* "sit" `יָשַׁב` / "be" `הָיָה`; *ḫ
 | `\{uru\}amurr` | `אֱמֹרִי` | | Amurru (EL 1.2:58; the biblical form, guidelines §6.4) |
 | `za\.ba4\.ba4` | `זַבַּבָּה` | | Zababa (EL 2.2:16, 2.3:16; M1) |
 | `\{d\}nin\.é\.gal` | `נִינֶגַל` | | Ninegal (EL 2.3:10) |
+| `ḫaḫḫim` | `קִפָּאוֹן` | | Ḫaḫḫima "Frost / Torpor", a speaking name without the article (SG; Round 8 run 5) |
+| `ḫašammil` | `חַשַּׁמִּילִי` | | Ḫašammili (SG) |
+| `\{f\}annann` | `אַנַּנָּה` | | the old woman Annanna (SG) |
+| `\{d\}gul\(?a\)?š` | `גּוּלְשֶׁשׁ` | | the fate goddesses, spelled Gul(a)šša- (SG) |
+| `\{d\}en\.zu` | `אֵל הַיָּרֵחַ` | | the Moon-god written EN.ZU (SG) |
+| `za[-.]ba4[-.]ba4` | `זַבַּבָּה` | | Zababa, hyphenated (SG) |
+| `liḫzin` | `לִיחְזִינָה` | | Liḫzina (LI) |
+| `anzil` | `אַנְזִילִי` | | Anzili (AZ) |
+| `\{d\}\[?zukk` | `זוּקִּי` | | Zukki (AZ) |
+| `immarn` | `אִימַּרְנִי` | | Immarni (MU; TE 28) |
+| `\{d\}ḫalki` | `חַלְקִי` | | Ḫalki, the grain deity (MU; the common noun *ḫalki-* "grain" = `תבואה`) |
+| `miyatanzip` | `מִיַּתַּנְזִיפָּה` | | (MU) |
+| `\{d\}ḫapantal` | `חַפַּנְתַּלִי` | | Ḫapantali (MU; TE 164) |
+| `\{d\}ḫallar` | `חַלַּרָה` | | (MU) |
+| `\{d\}papay` | `פַּפַּיָּה` | | (MU) |
+| `\{d\}nāra` | `נָרָה` | | Nara spelled with ā (LA; M1) |
+| `\{d\}napš[aā]r` | `נַפְּשָׁרָה` | | Napšara with ā (LA) |
+| `izzumm` | `אִיזּוּמִּי` | | Izzummi, Ea's vizier (LA) |
+| `\{f\}kuba` | `קוּבַּבָּה` | | Kubaba (LA) |
+| `našalm` | `נַשַׁלְמָה` | | Mount Našalma (LA) |
+| `nin\.urta` | `נִינוּרְתָּה` | | Ninurta (LA; the Akkadian corpora's form) |
+| `ḫupešn` | `חוּפֶּשְׁנָה` | | Ḫupešna (SI) |
+| `giš\.gim\.maš\|giš\.gim\.\|gilgam` | `גִּלְגָּמֶשׁ` | | Gilgameš (GI; the Gilgameš corpus's form) |
+| `\{d\}en\.ki\.dù\|enkit\|enkid` | `אֶנְקִידוּ` | | Enkidu (GI) |
+| `ḫuwaw` | `חוּוָוָה` | ★ | Ḫuwawa (GI; unvocalized "Eve"; the Gilgameš corpus's form) |
+| `\{d\}\]?ullu(?!ku\|ik\|-ku)` | `אוּלּוּ` | | Ullu, the Hurrian name of the flood hero (= Ūta-napišti; GI) |
+| `uršanab` | `אוּרְשַׁנַבִּי` | | Ur-šanabi (GI) |
+| `zidur` | `שִׁידוּרִי` | | Šiduri (GI; the Gilgameš corpus's form) |
+| `šanḫat` | `שַׁמְחַת` | ★ | Šamḫat, spelled Šanḫatu (GI; the Gilgameš corpus's form; unvocalized "joy of") |
+| `šangaš` | `שַׁנְגַּשׁוּ` | | Šangašu (GI) |
+| `\{m\}ipizz` | `אִיפִּיזִּי` | | (GI) |
+| `\{uru\}itl` | `אִיתְלָה` | | Itla (GI) |
+| `šušḫar` | `שׁוּשְׁחַרוּוָה` | | (GI) |
 
 ## H3. Reserved: never in a myth line (machine-read; the myth texts only)
 | Hebrew (regex on the unvocalized, bracket-free line) | Licence | Why |
@@ -279,12 +344,14 @@ mid. "stand" `עָמַד`; *eš-* "sit" `יָשַׁב` / "be" `הָיָה`; *ḫ
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:עשתרת\|עשתורת\|עשתרות)(?![א-ת])` | NEVER | Ištar = `אִשְׁתַּר` (guidelines §6.4) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:עדן)(?![א-ת])` | NEVER | Gen 2:8 (no Eden in these texts) |
 | `(?<![א-ת])ראשו בשמים(?![א-ת])` | NEVER | Gen 11:4 `וְרֹאשׁוֹ בַשָּׁמַיִם`: only where the Hittite has "head" and "heaven" (then `[היתר שער: ראשו]` with the reason) |
+| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:צלם\|צלמו\|צלמם\|בצלמו\|דמות\|דמותו\|כדמותו)(?![א-ת])` | NEVER | Gen 1:26 (ALAM = `תואר`; 2026-11-14) |
+| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:יצר\|ייצר\|ויצר\|יוצר\|נוצר\|נוצרו\|יצרו\|יצרה\|יצרם)(?![א-ת])` | NEVER | Gen 2:7 (*šamnai-* = `עיצב`; 2026-11-14) |
 
 ## H4. Gated: allowed only where the source word is in the line (machine-read; the myth texts only)
 | Hebrew (regex) | Licence (regex on the licence text: composite + lemmas + glosses, lower case) | Why |
 |---|---|---|
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:נחש\|נחשים\|ניחש)(?![א-ת])` | `muš\|illuyank\|illiyank\|elliyank\|illiunk\|ḫedamm\|schlange` | `נחש` only for MUŠ / *illuyanka-* (the dossier's comparison word) |
-| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:גבור\|גיבור\|גבורים\|גיבורים\|גבורה\|גבורת)(?![א-ת])` | `(?<!ḫ)ur\.sag\|ḫaštal\|qarrad\|qarrād\|held` | `גבור` only for UR.SAG / *ḫaštali-* (Gen 6:4) |
+| `(?<![א-ת])(?!לגבור(?![א-ת]))ו?(?:ש\|כש)?[בלהמכ]?(?:גבור\|גיבור\|גבורים\|גיבורים\|גבורה\|גבורת)(?![א-ת])` | `(?<!ḫ)ur\.sag\|ḫaštal\|qarrad\|qarrād\|held` | `גבור` only for UR.SAG / *ḫaštali-* (Gen 6:4) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:ערום\|עירום\|ערומה\|עירומה\|ערומים\|עירומים\|עירמה)(?![א-ת])` | `nekum\|nackt` | `ערום` only for *nekumant-* (Gen 2:25, 3:7) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:מגדל\|מגדלו\|מגדלים)(?![א-ת])` | `an\.za\.gàr\|an\.za\.gar` | `מגדל` only for AN.ZA.GÀR "tower" (SR's tower parable ↔ Gen 11:4; Ullikummi is a stone, not a tower). Made a gate 2026-10-30 (translator 3) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:בריח\|בריחים\|הבריח)(?![א-ת])` | `ḫattal\|riegel` | `בריח` only for *ḫattalu-* "bolt" (the rituals' word; Isa 27:1 `נָחָשׁ בָּרִחַ` stays the apparatus's) |

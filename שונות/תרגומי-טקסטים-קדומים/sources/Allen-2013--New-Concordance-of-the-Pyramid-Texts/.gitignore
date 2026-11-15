@@ -1,0 +1,4 @@
+# Allen 2013 is (c): only the README is committed (the PDF, its text and our parse stay local)
+*
+!README.md
+!.gitignore

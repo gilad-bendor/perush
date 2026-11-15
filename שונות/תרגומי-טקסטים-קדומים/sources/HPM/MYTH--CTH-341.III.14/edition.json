@@ -1,0 +1,283 @@
+{
+"kind": "MYTH",
+"cth": "CTH 341.III.14",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 341.III.14 (TX 2009-08-27, TRde 2009-08-27)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2''",
+"title": "§ 2''",
+"hl": ""
+},
+{
+"id": "§ 3''",
+"title": "§ 3''",
+"hl": ""
+},
+{
+"id": "§ 4''",
+"title": "§ 4''",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 1'",
+"x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] TÚG? [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Vs. 1'",
+"[ ... ] TÚG? [ ... ]"
+],
+[
+"A",
+"",
+"Vs. bricht ab."
+]
+],
+"tr": "[ ... ] Gewand? [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 2''",
+"hl": "",
+"master": "[ ... ]-na-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 1'",
+"[ _ _ ]x-⸢na?⸣-x[ ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ...? ] {d}GIŠ.GIM.MAŠ-aš {d}[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 2'",
+"{d}GIŠ.GIM.MAŠ-aš {d}x[ ... ]"
+]
+],
+"tr": "[ ... ] Gilgamesch [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 3''",
+"hl": "",
+"master": "ḫašer=mu=za kwed[ani UD-ti? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 3'",
+"ḫa-šir-mu-za ku-e-d[a-ni ... ]"
+]
+],
+"tr": "[Den Tag?, an] dem sie mir [ ... ] gebaren/zeugten,",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... ] GISKIM-az šakkaḫḫ[i]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 3'",
+"[ ... ] GISKIM-az ša-ak-ka4-aḫ-ḫ[i]"
+]
+],
+"tr": "kenn[e] ich aus dem Omen.",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 3''",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 4'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 3''",
+"hl": "",
+"master": "nu apēdani UD-ti {d}[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 5'",
+"nu a-pé-e-da-ni UD-ti ⸢{d}⸣[ ... ]"
+]
+],
+"tr": "An dem Tag [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 3''",
+"hl": "",
+"master": "1-edani=ma ḫāl[i- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 6'",
+"1-⸢e-da-ni-ma1⸣ ḫa-a-l[i- ... ] ¬¬¬"
+]
+],
+"tr": "In einem [ ... ] aber [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 4''",
+"hl": "",
+"master": "nu=za=kan DINGIR-LIM-YA {d}[ ... ] ⸢šāet⸣",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 7'",
+"nu-za-kán DINGIR-LIM-YA ⸢{d}⸣2[ ... ] ⸢ša-a-et⸣"
+]
+],
+"tr": "Meine Gottheit [ ... ] wurde zornig",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 4''",
+"hl": "",
+"master": "nu {d}[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 8'",
+"nu ⸢{d}⸣[ ... ]"
+]
+],
+"tr": "und [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 4''",
+"hl": "",
+"master": "[ ... ] karū za-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 8'",
+"[ ... ] ka-ru-ú za?-x[ ... ]"
+]
+],
+"tr": "[ ... ] früher [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 4''",
+"hl": "",
+"master": "4 ME MU{KAM.ḪI.A}[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 10'",
+"4 ME MU{KAM.ḪI.⸢}A⸣[ ... ]"
+]
+],
+"tr": "Vierhundert Jahre [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 4''",
+"hl": "",
+"master": "ta-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 11'",
+"ta-x-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 4''",
+"hl": "",
+"master": "{d}[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"Rs. 12'",
+"⸢{d}⸣[ ... ]"
+],
+[
+"A",
+"",
+"Die Rs. bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 3'':1": "Über Rasur? Offenbar darunter sind offenbar Spuren eines anderen Zeichens zu sehen.",
+"§ 4'':2": "Name?"
+}
+}

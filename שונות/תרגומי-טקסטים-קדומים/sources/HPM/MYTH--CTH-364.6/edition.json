@@ -1,0 +1,279 @@
+{
+"kind": "MYTH",
+"cth": "CTH 364.6",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 364.6 (TX 2009-09-02, TRde 2009-09-02)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+},
+{
+"id": "§ 3'",
+"title": "§ 3'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ] x [ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-ma {d}IŠTAR [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]-ma {d}IŠTAR [ ... ]"
+]
+],
+"tr": "[ ... ] Ištar [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] LÚ-nili [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ]x LÚ-ni-li [ ... ]"
+]
+],
+"tr": "[ ... ] nach Art eines Mannes [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] :kuway[a- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ]x :ku-wa-y[a- ... ]"
+]
+],
+"tr": "[ ... ] fürcht[- ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... ]x (Rasur) ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... K]Ù.BABBAR-i INIM-an[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... K]Ù.BABBAR-i INIM-an[ ... ]"
+]
+],
+"tr": "[ ... ] zum [S]ilber das Wort [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]=za eku um-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ]x x-za1 e-ku um-x2[ ... ]"
+]
+],
+"tr": "Trink [ ... ]!",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ .... memiškiuwa]n dāiš",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ .... me-mi-iš-ki-u-wa-a]n da-a-iš"
+]
+],
+"tr": "[ ... ] begann zu [spreche]n:",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 2'",
+"hl": "",
+"master": "kwi[t ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"ku-i[t] [ ... ]"
+]
+],
+"tr": "„Wa[s ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 2'",
+"hl": "",
+"master": "ūkk=a=wa au?-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"9'",
+"ú-uk-ka4-wa a-⸢ú⸣?-[ ... ]"
+]
+],
+"tr": "Auch ich [ ... ] seh?[- ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... =w]a=mu peḫuteške-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"10'",
+"[ ... -w]a-mu pé-ḫu-te-eš-ke-[ ... ]"
+]
+],
+"tr": "[ ... ] schaff[- ... zu] mir hin.“",
+"trlang": "DE"
+},
+{
+"n": "12",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... udd]ār KÙ.BABBAR-ianza [IŠME?]",
+"words": [],
+"mss": [
+[
+"A",
+"11'",
+"[ ... ud-da]-⸢a⸣-ar KÙ.BABBAR-i-an-za [ ... ]"
+]
+],
+"tr": "[Nachdem] das Silber die [Wor]te [gehört hatte],",
+"trlang": "DE"
+},
+{
+"n": "13",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] {d}IŠTAR-iš KÙ.BABBAR-i me[naḫḫanda? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"12'",
+"[ ... ] ⸢{d}⸣IŠTAR-iš KÙ.BABBAR-i me-[na-aḫ-ḫa-an-da?] [ ... ]x3"
+]
+],
+"tr": "[begann] Ištar dem Silber ge[genüber zu sprechen]:",
+"trlang": "DE"
+},
+{
+"n": "14",
+"sec": "§ 2'",
+"hl": "",
+"master": "ūkk=a=wa [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"13'",
+"ú-uk-ka4-wa x[ ... ]"
+],
+[
+"A",
+"",
+"Zeile 14' enthält keine Zeichen ¬¬¬"
+]
+],
+"tr": "„Auch ich [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "15",
+"sec": "§ 3'",
+"hl": "",
+"master": "[ ... ] ⸢katta⸣? ḫi-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"15'",
+"[ ... ] ⸢kat?-ta⸣ ḫi-x[ ... ]"
+],
+[
+"A",
+"",
+"Der Text bricht ab."
+]
+],
+"tr": "[ ... ] hinab?[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"§ 2':1": "Hoffner, Fs Otten2 1988, 161 Anm. 122: e-ez-z]a-[a]z-za oder zi-i]g-[g]a-za?",
+"§ 2':2": "Hoffner, Fs Otten2 1988, 161 Anm. 123: x weder -m[a noch -m[e.",
+"§ 2':3": "Hoffner, Fs Otten2 1988, 161 Anm. 126: mglw. ein schlecht gezeichnetes -li. Nach Kollation am Foto sieht es fast aus wie Z]I-ŠÚ aus."
+}
+}

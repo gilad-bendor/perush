@@ -1,0 +1,166 @@
+{
+"kind": "MYTH",
+"cth": "CTH 343.3.1",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 343.3.1 (TX 2009-08-30, TRde 2009-08-30)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-iš [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]x-⸢iš⸣ [ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]{d}nāraš [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]{d}na-a-ra-aš [ ... ]"
+]
+],
+"tr": "Nara [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ]x"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu {d}nāraš[ ... ] iyat",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"nu {d}na-a-ra-aš[ ... ] [ ... ] i-ya-at"
+]
+],
+"tr": "Nara machte [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-ta ninikt[a?]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... ]x-ta ni-ni-ik-t[a?]"
+]
+],
+"tr": "[ ... ] scheucht[e ... ] auf.1",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]kattan arḫa [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[ ... ] [ ... ]kat-ta-an ar-ḫa [ ... ]"
+]
+],
+"tr": "[ ... ] unten fort [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ḫ]uwittianz[a ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ḫ]u?-u-it-ti-an-z[a ... ]"
+]
+],
+"tr": "[ ... g]ezogen [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ ... ]x x x x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {
+"T1": "Vgl. zur Übersetzung KUB 33.114+ Rs. III 45' (CTH 343.1 – Text A)."
+}
+}

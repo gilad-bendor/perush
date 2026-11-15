@@ -1,0 +1,89 @@
+{
+"kind": "MYTH",
+"cth": "CTH 341.III.17",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 341.III.17 (TX 2009-08-27, TRde 2009-08-27)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+},
+{
+"id": "§ 2'",
+"title": "§ 2'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]x x x[ ... ] ¬¬¬"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ] {d}EN.KI.DU4-u[š ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ]x {d}EN.KI.DU4-u[š ... ]"
+]
+],
+"tr": "Enkidu [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]{d}EN.KI.DU4-uš[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ]⸢{d}⸣EN.⸢KI.DU4-uš⸣[ ... ]"
+]
+],
+"tr": "Enkidu [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 2'",
+"hl": "",
+"master": "[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ]x[ ... ]"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

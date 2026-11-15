@@ -385,3 +385,4 @@ Drafted one translator at a time in that order, each following the earlier ones'
 - 2026-10-16 (after Tablet I): *ṣalālu* narrowed to `יָשֵׁן`; *sakāpu* = `שָׁכַב`, *šasû* = `צָעַק` added.
 - 2026-10-16: written before drafting Enūma eliš, from the flood corpus's shared renderings plus the creation-specific names and terms.
 - 2026-10-17: §5 added, merged from project 2's seven texts (names, the food-of-life and eternity terms, *ĝar* = `שָׂם` reserved, the work nouns without עבד, herding and farming, naming, *ki* never `אֲדָמָה`, no `טֶרֶם` without a "not yet" construction, the cohortative `נַעֲשֶׂה`, the string traps).
+- 2026-11-15 harmonization (after Round 8) (`../reports/round-8/harmonization-batch-B.md`): *la-la* = `עֹנֶג` (its Akkadian equivalent *lalû*'s, Gilgameš; `עֲתֶרֶת` is *nuḫšu*'s, LH and Enūma eliš VII 60, 69): S&W 171 `בשד[ה] עונג אני מעמיד`.

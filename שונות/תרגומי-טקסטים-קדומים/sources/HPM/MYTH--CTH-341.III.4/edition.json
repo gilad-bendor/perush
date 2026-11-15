@@ -1,0 +1,196 @@
+{
+"kind": "MYTH",
+"cth": "CTH 341.III.4",
+"citation": "E. Rieken et al. (ed.), hethiter.net/: CTH 341.III.4 (TX 2009-08-27, TRde 2009-08-27)",
+"sections": [
+{
+"id": "§ 1'",
+"title": "§ 1'",
+"hl": ""
+}
+],
+"clauses": [
+{
+"n": "1",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-kat-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"1'",
+"[ ... ]x-x-kat?-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "2",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ḫ]ūwaiš",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"[ ... ḫ]u-u-wa-iš"
+]
+],
+"tr": "[ ... l]ief [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "3",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu ANA [ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"2'",
+"nu A-NA x[ ... ]"
+]
+],
+"tr": "und zu [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "4",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] {d}EN.KI.DU4-uš ammu[k ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"3'",
+"[ ... ]x {d}EN.KI.DU4-uš am-mu-u[k ... ]"
+]
+],
+"tr": "Enkidu [ ... ] mi[r]/mic[h ... ]",
+"trlang": "DE"
+},
+{
+"n": "5",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ] ANA ZI MU{KAM.ḪI.A}-u[š? ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"4'",
+"[ ... ]x A-NA ZI MU{KAM.ḪI.A}-u[š? ... ] [ ... ]"
+]
+],
+"tr": "[ ... ] die Jahr[e] zur Seele [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "6",
+"sec": "§ 1'",
+"hl": "",
+"master": "[n]=an apēl UD-za[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"5'",
+"[n]a?-an a-pé-e-el UD-za[ ... ]"
+]
+],
+"tr": "Sein Tag [ ... ] ihn [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "7",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-a ḫāši",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"[ ... ]-a ḫa-a-ši"
+]
+],
+"tr": "[ ... ] gebiert [ ... ]",
+"trlang": "DE"
+},
+{
+"n": "8",
+"sec": "§ 1'",
+"hl": "",
+"master": "nu-[ ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"6'",
+"⸢nu⸣-x[ ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "9",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-zi",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"[ ... ]x-zi"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "10",
+"sec": "§ 1'",
+"hl": "",
+"master": "n[a?- ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"7'",
+"n[a?- ... ]"
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+},
+{
+"n": "11",
+"sec": "§ 1'",
+"hl": "",
+"master": "[ ... ]-ē[š ... ]",
+"words": [],
+"mss": [
+[
+"A",
+"8'",
+"[ ... ]-e-e[š ... ] ¬¬¬"
+],
+[
+"A",
+"",
+"Text bricht ab."
+]
+],
+"tr": "[ ... ]",
+"trlang": "DE"
+}
+],
+"notes": {}
+}

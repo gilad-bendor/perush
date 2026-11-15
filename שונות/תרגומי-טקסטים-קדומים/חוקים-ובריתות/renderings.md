@@ -499,14 +499,14 @@ vowels by *matres lectionis*; vocalized at the first occurrence per file (★ = 
 | `n[eē]rik` | `נֵרִיק` | | |
 | `\{uru\}pal[aā]\b` | `פָּלָא` | ★ | (unvocalized "wonder") |
 | `zalpa` | `זַלְפָּה` | ★ | (≠ biblical `זִלְפָּה`) |
-| `ḫatr[aā]` | `חַתְרָה` | | |
+| `\{uru\}ḫatr[aā]` | `חַתְרָה` | | |
 | `tašḫiniy` | `תַּשְׁחִינִיָּה` | | |
 | `ḫemuw` | `חֶמוּוָה` | | |
 | `zip(?:p)?al(?:a)?nt` | `זִיפַּלַנְדָּה` | | Zippalanda. |
 | `tamalki` | `תַּמַלְקִי` | | |
 | `arzaw\|arzauw\|ar-za-u-wa` | `אַרְזַוָה` | | Arzawa (western Anatolia). |
-| `\{d\}utu-ši\b\|\{d\}utu-ši=` | `שִׁמְשִׁי` | ★ | "My Sun" = His Majesty, the king's title; a note. |
-| `(?<!taknaš )(?<!takna-aš )(?<!ták-na-aš )\{d\}utu(?!-ši)` | `אֵל הַשֶּׁמֶשׁ` | | The Sun-god (Ištanu); never `שֶׁמֶשׁ` alone. |
+| `\{d\}utu-š[iī]\b\|\{d\}utu-š[iī]=` | `שִׁמְשִׁי` | ★ | "My Sun" = His Majesty, the king's title; a note. |
+| `(?<!taknaš )(?<!takna-aš )(?<!ták-na-aš )\{d\}utu(?!-š[iī])` | `אֵל הַשֶּׁמֶשׁ` | | The Sun-god (Ištanu); never `שֶׁמֶשׁ` alone. |
 | `\{d\}(?:im\|10\|u\|iškur)\b` | `אֵל הַסְּעָרָה` | | The Storm-god (Tarḫunna), as the fifth-day dossier. |
 | `\{d\}(?:lamma\|kal)\b` | `אֵל הַמָּגֵן` | | The protective god (Kurunta, Innara). |
 | `labarn\|la-ba-ar-n` | `לַבַּרְנָה` | | Labarna, the royal title (as a name; IN 11.13). |
@@ -579,7 +579,7 @@ vowels by *matres lectionis*; vocalized at the first occurrence per file (★ = 
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:זקנים\|זקני\|זקן)(?![א-ת])` | `šu\.gi\|greis\|mekkešš` | `זקנים` only for *LÚ.MEŠ ŠU.GI* (Deut 21:3) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:שכב\|ישכב\|ישכבו\|שוכב\|שוכבים\|שוכבת\|שוכבות\|שכבה\|תשכב\|שכבו\|לשכב)(?![א-ת])` | `\bšeš-(?!š)\|\bšeš(?:k\|zi\|ten\|ta\b\|un\b)\|\bše-eš-(?!š)\|šašt\|(?<![\w=])šaš\b\|šašzi\|šešzi\|šeški\|šiš=?k\|šešk\|(?<!ù ")(?<!šeš ")(?<!šeš-šu ")schlafen\|šēš` | `שכב` only for *šeš-* |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:לפנים)(?![א-ת])` | `karū\|karu\b\|karupat` | `לפנים` only for *karū* (F2) |
-| `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:מחץ\|ימחץ\|ימחצו\|מחצו\|מוחץ\|מחצה\|ימחצנו)(?![א-ת])` | `walḫ\|walaḫ\|walḫ=\|gul-aḫ\|gulaḫ` | `מחץ` only for *walḫ-* |
+| `(?<![א-ת])(?!ו?למחצה(?![א-ת]))ו?(?:ש\|כש)?[בלהמכ]?(?:מחץ\|ימחץ\|ימחצו\|מחצו\|מוחץ\|מחצה\|ימחצנו)(?![א-ת])` | `walḫ\|walaḫ\|walḫ=\|gul-aḫ\|gulaḫ` | `מחץ` only for *walḫ-* (`למחצה` "half" exempted 2026-11-14, Round 8 run 5) |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:פיצה\|יפצה\|יפצו\|פיצוי\|פיצויים\|פצה)(?![א-ת])` | `šarnink\|šarnikz\|šar=nink` | `פיצה` only for *šarnink-* |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:בן חורין\|בת חורין\|בני חורין\|בנות חורין)(?![א-ת])` | `ellu\|elletu\|el-lum\|el-li\|el-le\|araw\|\bfrei\b` | `בן חורין` only for *ELLUM* / *arawanni-* |
 | `(?<![א-ת])ו?(?:ש\|כש)?[בלהמכ]?(?:חטא\|חוטא\|חוטאת\|יחטא\|חטאו\|חטאת)(?![א-ת])` | `wašt\|wašt=\|ušt[uú]l\|freveln\|sünde\|wašd\|ušd[uú]l\|wa-aš-du` | `חטא` only for *wašta-* / *waštul* |
@@ -671,3 +671,4 @@ The F1, F2, F4, F5, F7, F9 alternatives and F11 were added for that 2026-10-25 (
 | IN 12.1 | err | `ואתם, הכוהנים, המְשׁוּחִים, אמות האל` |
 
 2026-11-09 harmonization: Sum. *alan* = `פֶּסֶל` (Ur-Namma prologue 3, 24 and the notes; [equivalent]): the Sumerian word is not the cognate of `צֶלֶם`, which stays reserved for Akk. *ṣalmu* (guidelines §6.7, the Round 6 rule). Sum. *bala* stays `שלטון` here (LI 16, UN e009, e018), after its Akkadian equivalent *palû* (LH 3389′, 3498′) – a recorded split with the laments' and flood references' `תקופה`.
+2026-11-15 harmonization (after Round 8) (`../reports/round-8/harmonization-batch-B.md`): LI epil. 499′ *maškim* `הממונה` → `הנציב` (as the school canon; `ממונה` is *nu-banda₃*'s); LH prologue 235 Dagan `דָּגַן` → `דָּגָן` (as Ugarit, the school canon, Anzû); LH epil. 3265′ `ואת תשועת מרדוך` → `ואת נצחון מרדוך`, 3578′ `את תשועתי` → `את נצחוני` (*ernittu* = `נִצָּחוֹן`, Enūma eliš I 74, IV 125 and the Akkade legends; `תְּשׁוּעָה` is *lītu*'s).
