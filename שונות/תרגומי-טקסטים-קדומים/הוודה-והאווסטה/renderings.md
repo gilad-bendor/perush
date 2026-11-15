@@ -761,3 +761,12 @@ sense (one Hebrew per lemma; the corpus majority of the lemma); the generated fi
 **Kept:** *ucátha* / *ukthá* both `אמירה` (two nouns of √*vac* in one sense; the Avestan pair is *ukthá*'s only);
 *majmán* `עוצמה` beside *śávas* `עָצְמָה` (every free word of strength is another lemma's: *ójas* `חוסן`, *sáhas* `עוז`,
 *tavasyà* `עוצם`, *mahimán* `גדולה`, *máhas* `רוממות`, *vīryà* `גבורה`, *dyumná* `הדר`) – reasons in the batch report.
+
+### 11.29 RV 3.1–3.7 (Book 3, translator 1 = part 1; merged 2026-11-15)
+- F14 revised (b `תמיד־ביותר, לקורא (לך), הבא להצלחה`, c `יהי לנו בן, תולדה, מגופנו`; §5.7, §8); every copy follows.
+- *vánaspáti* `אדון־היער` (Books 2, 7); Tanūnapāt `נכד־גופו` (translated, as Apāṃ Napāt `נכד המים`); the Āprī lines
+  shared with 7.2 / 2.3 copied character for character; *íḍ* / *íḷā* `רוויה`, the goddess `אִילָה` (3.4.8b).
+- Names written by hand (no row): the Bhṛgus `בני בְּרִגוּ`, *viśvā́mitrāḥ* `בני וִישְׁוָמִיטְרָה`; *dhiṣáṇā* `דְּהִישַׁנָה`.
+- √*daśasy* `חנן` (3.7.10d: no "forgive"); *énas* `עוון`.
+- Splits left for the round's harmonization (kept by sense): *jániman* "birth" `לידה` / Book 7 "generations" `דורות`;
+  √*vañc* `התפתל` / Book 7 `סטה`; *yogyā́* `רתמה` / Book 7 `מפעל`; *ágra* "tip" `קצה` (adverb *ágre* `בתחילה`).
