@@ -365,11 +365,11 @@ Proposals; later translators follow the merged table):
 |---|---|---|
 | *mahád devā́nām asuratvám ékam* | `גדולה היא שררת הָאֵלִים האחת` | the refrain of 3.55 (22×, F12): *asuratvá* `שְׂרָרָה` ("lordship", the *ásura*'s quality; *ásura* keeps Book 7's transliteration `אַסוּרָה`); `אסורות` would read "forbidden" – never transliterate the abstract; Deut 6:4 only in the apparatus, as a shared motif ([divergence]: one lordship of many gods) |
 | *śunáṃ huvema maghávānam índram / asmín bháre nŕ̥tamaṃ vā́jasātau / śr̥ṇvántam ugrám ūtáye samátsu / ghnántaṃ vr̥trā́ṇi saṃjítaṃ dhánānām* | `למזל נקרא נא לבעל־השפע, אינדרה,` / `לגברי ביותר בפשיטה הזאת, בזכייה בפרס,` / `השומע, העז, לסיוע בהתגוששויות,` / `ההורג מחסומים, מנצח־ההון.` | the Viśvāmitra Indra refrain (12×: 3.30.22, 31.22, 32.17, 34.11, 35.11, 36.11, 38.10, 39.9, 43.8, 48.5, 49.5, 50.5; F13): *śuná* `מַזָּל` ("luck, success", Geldner *zum Glück*; `הצלחה` is √*sādh*'s `הביא להצלחה`; Book 2's *śū́na* "lack" `חוסר` is another word – check the accent), √*hū* `קרא` (Book 7), *bhára* `פשיטה` (Book 7), *nŕ̥tama* `הגברי ביותר` (Book 7), *vā́jasāti* `זכייה בפרס` (Book 7), *ūtí* `סיוע`, *samád* `התגוששות` (Book 7), *vr̥trá* pl. `מחסומים` (§5.5), *saṃjít* = *dhanajít* `מנצח־ההון` (Book 2) |
-| *íḷām agne purudáṃsaṃ saníṃ góḥ / śaśvattamáṃ hávamānāya sādha / syā́n naḥ sūnús tánayo vijā́vā / ágne sā́ te sumatír bhūtv asmé* | `רוויה, אַגְנִי, רבת־נפלאות, זכייה בפרות,` / `תמידית־ביותר – הבא להצלחה לקורא (לך);` / `יהי לנו בן, תולדה, פורה;` / `אַגְנִי, יהי רצונך הטוב הזה עמנו.` | the Agni refrain (7×: 3.1.23, 5.11, 6.11, 7.11, 15.7, 22.5, 23.5; F14): *íḷā* `רְוָיָה` (Book 7 *íḍā*; the goddess Iḷā of the Āprī hymn 3.4.8 `אִילָה`), *purudáṃsa* `רב־הנפלאות` (Book 7), *saní* `זכייה` (Books 7, 2), *śaśvattamá* `תמיד־ביותר` (Book 2), √*sādh* `הביא להצלחה` (Books 7, 2), *tánaya* `תולדה`, *vijā́van* `פורה`, *sumatí* `רצון טוב` |
+| *íḷām agne purudáṃsaṃ saníṃ góḥ / śaśvattamáṃ hávamānāya sādha / syā́n naḥ sūnús tánayo vijā́vā / ágne sā́ te sumatír bhūtv asmé* | `רוויה, אַגְנִי, רבת־נפלאות, זכייה בפרות,` / `תמיד־ביותר, לקורא (לך), הבא להצלחה;` / `יהי לנו בן, תולדה, מגופנו;` / `אַגְנִי, יהי רצונך הטוב הזה עמנו.` | the Agni refrain (7×: 3.1.23, 5.11, 6.11, 7.11, 15.7, 22.5, 23.5; F14): *íḷā* `רְוָיָה` (Book 7 *íḍā*; the goddess Iḷā of the Āprī hymn 3.4.8 `אִילָה`), *purudáṃsa* `רב־הנפלאות` (Book 7), *saní* `זכייה` (Books 7, 2), *śaśvattamá* `תמיד־ביותר` (Book 2), √*sādh* `הביא להצלחה` (Books 7, 2), *tánaya* `תולדה`, *vijā́van* `מגופנו` ("bodily, own": Grassmann, MW, Geldner; translator 1, 2026-11-15), *sumatí* `רצון טוב` |
 | *asuratvá* | `שְׂרָרָה` | see F12 (also outside 3.55) |
 | *śuná* | `מַזָּל` | see F13 |
 | *íḷā*, *iḷā́yās padé* | `רְוָיָה`, `בְּעִקְּבוֹת הָרְוָיָה` | the "track of Refreshment" where the fire is set down (3.23.4, 3.29.3–4): the cow-goddess's footprint – say so in the note |
-| *yū́pa* | `עַמּוּד הַזֶּבַח` | 3.8 (§5.4); *vánaspati* "lord of the wood" (the post, the tree) `אֲדוֹן הָעֵץ` – check `lexmap '^vanaspati'` first |
+| *yū́pa* | `עַמּוּד הַזֶּבַח` | 3.8 (§5.4); *vánaspáti* "lord of the wood" `אדון־היער` (Books 7 and 2; translator 1) |
 | *araṇí*, √*manth* | `עֵץ הַהַצָּתָה`, `חָבַט` → **check Book 7 / Book 2 first** (`lexmap '^arani'`, `'^manth'`): the churning of the fire (3.23, 3.29) | the fire drill: the lower and the upper stick, the mother and the father of Agni |
 | *puroḍā́ś* | `עוּגַת־זֶבַח` | Book 7 (7.18.6a); 3.28, 3.52 |
 | *Viśvāmitra*, *Gāthin* | §3.1 | 3.33, 3.53 (*gāthin* is not in the text; the father's name only in the Anukramaṇī) |
@@ -427,8 +427,8 @@ where the fire-offering is near.
 | F13c | `srnvantam ugram utaye samatsu` | `השומע העז לסיוע בהתגוששויות` | pāda c |
 | F13d | `ghnantam vrtrani samjitam dhananam` | `ההורג מחסומים מנצח־ההון` | pāda d |
 | F14 | `ilam agne purudamsam sanim goh` | `רוויה אגני רבת־נפלאות זכייה בפרות` | RV 3, the Agni refrain, pāda a (7×) |
-| F14b | `sasvattamam havamanaya sadha` | `תמידית־ביותר הבא להצלחה לקורא \(לך\)` | pāda b |
-| F14c | `syan nah sunus tanayo vijava` | `יהי לנו בן תולדה פורה` | pāda c |
+| F14b | `sasvattamam havamanaya sadha` | `תמיד־ביותר לקורא \(לך\) הבא להצלחה` | pāda b |
+| F14c | `syan nah sunus tanayo vijava` | `יהי לנו בן תולדה מגופנו` | pāda c |
 | F14d | `agne sa te sumatir bhutv asme` | `אגני יהי רצונך הטוב הזה עמנו` | pāda d |
 
 
