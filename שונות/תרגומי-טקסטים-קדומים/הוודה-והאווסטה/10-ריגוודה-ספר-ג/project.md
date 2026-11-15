@@ -224,5 +224,142 @@ difference); `check_bible_quotes.py`: 0.
 - √*vr̥* "cover" `עטוף` (3.3.5c) against RV 10's `כסה` (10.16.7b, 10.18.11d) – the corpus is mixed already.
 - The §11.29 splits (*jániman*, √*vañc*, *yogyā́*, *ágra*) were left as merged.
 
+## RV3.8–3.17 (part 2: the sacrificial post, Agni, Indra and Agni; translator 2, Round 9 run 1)
+
+### Scope
+RV 3.8–3.17, 297 pādas: **3.8 the sacrificial post** (44; triṣṭubh with anuṣṭubh 3 and 7), Agni 3.9 (36; the fugitive
+fire), 3.10 (35; uṣṇih), 3.11 (27; gāyatrī), **Indra and Agni 3.12** (27; gāyatrī), Agni 3.13 (28), 3.14 (28), 3.15 (28;
+7 = F14), 3.16 (24), 3.17 (20). Ten annotated files, ten intros, built (`build RV3.8-17`); `verify RV3.8-17 --strict`: no
+problems (one listed, justified repeated-line difference, below); `check_bible_quotes.py` on all my files: 0 problems;
+`selftest`: 0 failures.
+
+### Sources consulted
+The Zurich text and morphology (`data`); Grassmann (`gra`) and Monier-Williams (`mw`) for the hapaxes (*anehás*,
+*nicirá*, *tr̥ṣṭá*, *vihavá*, *kṣetrasā́dhas*, *apiśarvará*, *śīrá*, *śreṇiśás*, *tośá*, *kavichád*, *nīthāvíd*,
+*aptū́rya*, *bárhiṣṭha*, *sahovŕ̥dh*); `freq RV3.8-17`, `lexmap` and `grep --all` for every recurring lemma; after
+drafting each hymn `tr` (Griffith, Grassmann, Geldner, Elizarenkova, Renou) and Jamison's commentary on III.8–17 (quoted
+briefly, with attribution). Adopted from Jamison: 3.8.4 (Kane: the image of the Upanayana boy "led up"), 3.8.6 (the
+number disharmony *vaḥ* / *vánaspate*), 3.8.10cd (the gods, not the posts, are the subject of *avantu*: left open in
+the Hebrew), 3.9.2a (*vanā́* instr. of *ván*), 3.9.4b (*saścát* "parched places" – in the note; the line keeps Book 7's
+`רודפים`), 3.9.5d (*mathitá* "churned" and "stolen"), 3.10.6b (*yáto jā́yate* "as soon as he is born"), 3.11.3c
+(*taráṇi*: advancing to the goal), 3.11.5c (*tū́rṇi* "advancing"), 3.13.2ab (two *yásya* clauses hanging off *ŕ̥tāvā*),
+3.13.3b (*áthā hí ṣáḥ* a separate clause), 3.14.4d (*kṣitī́ḥ* the goal of *abhí*, "(like) the sun to men"), 3.15.3d,
+3.15.4c, 3.16.1d, 3.17.3b (*uṣásaḥ* ablative: "births from Dawn", against Zurich's NOM.PL – the פירוק says so), 3.17.5
+(the earlier, better Hotar). From Geldner: 3.8.10b *caṣā́la* "Knauf"; 3.9.8b *śīrá* "scharf"; 3.12.8 *taviṣá* "Kräfte".
+
+### Decisions
+- **3.8, the post:** *yū́pa* is not in the hymn; the title and the notes say `עמוד הזבח` (renderings §5.7). *vánaspáti*
+  `אדון־היער` (Books 7, 2, 3.4); *sváru* `יתד־הזבח` (Book 7, 7.35.7c) for the posts in a row, with Jamison's "chip" in
+  the note; *svádhiti* `גרזן`; √*añj* `קישט` (never `משח`; the notes say "מורחים בחמאה", not "מושחים"); √*śri* active
+  `השעין`, middle `נשען` / imperative `הִשָּׁעֵן` (*út śrayasva*); √*mi* `קבע`; √*vr̥śc* `כרת`; √*takṣ* `חישל`;
+  *várṣman* `גובה`; *súmiti* `מדידה טובה` with Zurich's √*mā* `מדד` (the √*mi* reading in the note); *caṣā́lavant*
+  `בעל־טבעת־הראש`; *haṃsá* `אווז` (renderings §11.28); *śreṇiśás* `בשורות`; √*yat* (middle, "take one's place in line")
+  `מתיישר` as 7.79.2b; *śŕ̥ṅga* / *śr̥ṅgín* `קרן` / `בעל־קרניים`; *vihavá* `קריאה מתחרה`; *śatávalśa* /
+  *sahásravalśa* `בעל־מאה־ענפים` / `בעלי־אלף־ענפים`; *devayā́* `המתחנן לאלים` (7.68.4a), kept apart from *devayánt*
+  `שוחר־האלים` (Jamison 3.8.5–6).
+- **The fugitive fire (3.9):** *ván* `עץ`; *nivártana* `חזרה`; √*mr̥ṣ* `שכח` (*pramŕ̥ṣe* `לשכחה`); *tr̥ṣṭá* `מחוספס`;
+  *nicirá* `קשוב`; *saścát* `רודף` (Book 7); *siṃhá* `אַרְיֵה`; *tiróhita* `המוסתר`; √*math* `נחבט` (the §5.7 pre-set
+  `חבט` for the fire-churning; "stolen" in the note); *apiśarvará* `לפנות בוקר`; *śīrá* `חד`; *sudī́diti* `טוב־ההארה` =
+  *sudītí* (Grassmann: the same word); *anehás* `שאין בו פגם`; *suprátūrti* `טוב־הפריצה`.
+- **Indra and Agni (3.12):** *indrāgnī́* `אִינְדְּרָה ואַגְנִי` (Book 7); *nábhas* `ערפל` (7.97.6d); *iṣitá* `משוגר`;
+  *kavichád* `שמחי־המשוררים` (Grassmann's sense; the line carries `[היתר שער: שמחי …]`: the חי gate reads שׂמחי as
+  ש־מ־חי); *tośá* `מטפטף` (Jamison "drip"); *sajítvan* `המנצח־יחד`; *vājasā́tama* `הזוכה בפרס ביותר`; *ukthín*
+  `בעל־האמירות`; *nīthāvíd* `יודע־הלחנים` (`נעימה` is *sā́man*'s); *dāsápatnī* `נשות הדָּאסָה` (1.32.11a); *taviṣá*
+  `העצומים`; *aptū́rya* `זריזות`; √*bhūṣ* `התייצב`; *tr̥mpatām* 3rd dual (Zurich: 2nd; the פירוק says so).
+- **Recurring words fixed or confirmed:** *śárman* plural `מחסות` (2.25.5b; 3.13.4a, 3.15.5a); *ānuṣák* `בסדר רצוף`;
+  *áṣāḷha* `שאין לגבור עליו`; *ásredhant* `בלי כשל` (7.59.6c); *devávīti* `רדיפת־האלים`; *ghr̥tánirṇij*
+  `לבוש־חמאה־מזוקקת`; *kavíkratu* `בעל רצון־המשורר`; *supráṇīti* `טוב־ההנהגה` (its precedent; *sunīthá* has the same
+  Hebrew since 2.8.2a – an older collision, kept in 3.8.8a `טובי־ההנהגה`); *vyùṣṭi* `בהפציע`; *yajátha* `לזבוח`;
+  *dhárman* `יסוד`; *yájamāna* `הזובח`; *śáṃ yóḥ* `לאושר ולרווחה`; *bárhiṣṭha* `הרם ביותר` (superlative of *br̥hánt*);
+  *várṣiṣṭha* `הגבוה ביותר`; *tuvidyumná* `עצום־ההדר` (`רב־הדר` is *dyumánt*'s); *tokávant* `רב־עוללים` (*tóka* `עולל`);
+  *sahásravant* `רב־אלפים` (`בעל־אלף` is *sahasrín*'s); *puṣṭimánt* `רב־שגשוג`; *sudógha* `טוב־החליבה`; *suśárman*
+  `טוב־המחסה`; *vidyúdratha* `בעל־מרכבת־הברק`; *śocíṣkeśa* `בעל־שיער־הבערה`; *náma-ukti* `אמירת־הקידה`;
+  *uttānáhasta* `פשוטי־הידיים`; *vandhúra* `מושב־הרכב`; *adroghá* `שאין בו שקר`; *agótā* `חוסר־פרות`; *avī́ratā*
+  `חוסר־גיבורים`; *ājā́ni* `הולדה` (not `לידה`, *jánman*'s); *sáttar* `היושב`; *śévr̥dha* `מגדיל־הנועם`; *vr̥trahátha*
+  `הריגת־וְרִטְרָה`; *cákri* `עושה`; *sāsahí* `גובר`; *vánitar* `זוכה`; √*pruṣ* `זילף`; √*dru* `רץ`; √*tij* (middle)
+  `מושחז`; *bodhi* = √*bhū* `היה` (3.15.2b) and √*budh* `התעורר` (3.14.7c), as Zurich has them.
+- **Splits by sense (recorded):** *aktú* "ointment" `קישוט` (3.17.1b, with √*añj*) beside Book 7's "night" `לילה`;
+  √*yat* `מתיישר` (3.8.9a, as 7.79.2b) / `נאבק` (3.16.4c, as 7.76.5b); *purástāt* with a genitive `לפני` (3.8.2a) beside
+  the adverb `מלפנים` (3.8.9c).
+- **Repeated lines:** 3.11.4c = 7.16.12b (copied); 3.8.9d ≈ 7.47.3b and 3.16.2a ≈ 7.18.25a (copied, changing only what
+  the source changes); 3.15.7 = F14 (3.1.23, character for character); **one listed difference, justified:** 3.17.4d
+  `עשו האֵלִים טבור האלמוות.` against 2.40.1d `(אותם) עשו …` – there the object is supplied in brackets, here it is the
+  `אותך` of 4c. First copies for later parts: 3.8.3d (= 3.24.1d), 3.10.9d (= 3.29.12d), 3.9.9 (= 10.52.6); similar:
+  3.12.7c ~ 3.37.9c, 3.14.4a ~ 3.18.4a.
+
+### Open decisions for the user
+- 3.8.3c *súmitī mīyámāno*: Zurich's √*mā* "measured with good measure" (Grassmann) in the line; √*mi* "well fixed"
+  (Geldner, Renou) in the note.
+- 3.9.5d *mathitám* `שנחבט` ("churned") – Renou and Jamison prefer "stolen"; the Hebrew cannot hold both.
+- 3.11.3c *árthaṃ hy àsya taráṇi* `כי (אל) יעדו (הוא) חש` (Jamison's "it is for him to advance to his goal").
+- 3.12.3a *kavichád* (hapax): "delighting in poets" (Grassmann) against "appearing as poets" (most) – `שמחי־המשוררים`.
+- 3.17.3b *ājā́nīr uṣásaḥ*: Jamison's ablative (`שלוש הולדות – מן השחר`) against Zurich's NOM.PL / Geldner's "mothers".
+- 3.14.4d: Jamison's reading against the causative morphology (`מפיץ (אורו)`).
+
+### Progress log
+- Drafted hymn by hymn, each saved, `fill`-ed and `verify`-ed as soon as drafted, with a scratch generator that builds
+  each פירוק from the Zurich data and my per-word Hebrew. **The meaning glosses are keyed on the exact Zurich lemma**
+  (with its homonym number: √*vid* 1 "find" / 2 "know", √*pā* 1 / 2, *náva* 1 / 2), from a table I wrote and checked
+  lemma by lemma; *ná* has no default (each occurrence gets "לא" or "כמו (בדימוי)" by hand) – the review's 92 folded
+  glosses could not recur. `tr` and Jamison after each hymn; then the תרגומים bullets and the fixes.
+- **Pass (a) fidelity:** 3.9.8a `נסכו לטוב־הטקס` (Agni the recipient, not the libation); 3.10.3c `שם (לו)` and 3.17.1b
+  `(הוא) מקושט` (added pronouns in brackets); 3.13.7a `(טוב)` removed; 3.8's heading without `משיחת`.
+- **Pass (b) consistency:** a lexmap script over my lemmas against Books 7 / 2 / 3.1–7 changed *ānuṣák*, *áṣāḷha*,
+  *ásredhant*, *devávīti*, *devayā́*, *ghr̥tánirṇij*, *kavíkratu*, *supráṇīti*, *vyùṣṭi*, *yajátha*, *várṣman*, the
+  plural of *śárman* to the earlier Hebrew; then every gloss of the part listed and re-read (6 corrected: *devayā́*,
+  *nítya*, *anamīvá*, *amŕ̥ta* n., *yátas*, √*prath*).
+- **Pass (c) Hebrew:** the generated `translation-RV3.<n>.rtl.md` read through; `אֵל` / `אֵלִים` / `אֵלֶּה` / `אֶל` / `אַל`
+  vocalized; names vocalized at their first occurrence in each file.
+- `verify RV3.8-17 --strict`: no problems; `check_bible_quotes.py`: 0; reserved words of §7.4 / §7.1 grepped in notes
+  and intros: none.
+
+### The text on its own terms
+- **The post is a tree that is reborn** (3.8): anointed "with divine honey", dressed and wrapped "like a young man",
+  "born, he is born in the brightness of days" (5a), and at the end asked to sprout a hundred branches – the felled tree
+  stays alive in the rite (11ab).
+- **The posts become gods** (3.8.6c, 9d): "they, the gods, the posts standing", "the gods go to the gods' fold"; they
+  stand like a flock of geese in a row and look like the horns of cattle (9a, 10a).
+- **The fugitive fire** (3.9.2–6): Agni, "delighting in the wood", left for his mothers the waters; the gods found him
+  "in the waters, like a lion"; Mātariśvan led him back – and the poets remind him that he came back before.
+- **3,339 gods** served Agni at the first rite, sprinkled ghee and strewed the grass (3.9.9 = 10.52.6).
+- **The fire moves forward**: "an advancing chariot, ever new" (3.11.5c), "speeding to his goal" (3.11.3c), mounting the
+  ritual places as a chariot (3.14.1a, 3.14.3d).
+- **Indra and Agni as one dual god** (3.12): one name in the dual, "victorious together", who shook the ninety forts
+  "in one deed".
+- **Night and its dangers** (3.15): the fire that burns on "in the black ones" drives off the rakṣas's diseases.
+- **What they feared** (3.16.5): "poverty, lack of heroes, lack of cows, reproach" – the list of a herdsman's misfortunes.
+- **A better sacrificer than Agni** (3.17.5): an earlier Hotar, "who sacrificed better", whose "foundation" Agni must
+  follow – the rite repeats a first pattern (1a "according to the first foundations"; 2d "as at Manu's").
+- **Three lives, three births** (3.17.3): the three fires kindled at dawn.
+
+### Key parallels
+- 3.8.11a – [divergence] Job 14:7 `אִם-יִכָּרֵת וְעוֹד יַחֲלִיף`: the felled tree that sprouts again; in Job a hope the
+  tree has and man lacks, here a blessing that passes from the post to the sacrificer's people – a shared motif of
+  cultures that never met.
+- 3.14.5b – [equivalent] 1 Kgs 8:22 `וַיִּפְרֹשׂ כַּפָּיו הַשָּׁמָיִם`: hands spread out in prayer and offering.
+- 3.15.1c – [equivalent] Ps 91:2, 5–6 (`מַחְסִי`, `מִפַּחַד לָיְלָה`, `מִדֶּבֶר בָּאֹפֶל`): the god as shelter from
+  the diseases and demons of the night; *śárman* is `מחסה` in every book, so the Hebrew meets the Psalm's word – said in
+  the note.
+
+### Proposals for the shared renderings
+- **§5.7 √*math* / √*manth*:** `חבט` confirmed in 3.9.5d (*mathitá* `שנחבט`), with "stolen" in the note.
+- **New recurring words** (list above under Decisions): *sváru* `יתד־הזבח`, *caṣā́la* `טבעת־הראש`, *vihavá*
+  `קריאה מתחרה`, *ájāni* `הולדה`, *taviṣá* `עצום`, *bárhiṣṭha* `הרם ביותר`, *tuvidyumná* `עצום־ההדר`, *devayā́*
+  `המתחנן לאלים`, *śárman* pl. `מחסות`.
+- **Tool (for the coordinator):** the `חַי` gate reads `שמחי` (*śmēḥē*, "glad") and `שבחי` ("my praise") as ־חי:
+  exempt the forms of שָׂמֵחַ and שֶׁבַח (as `לשאול`, `מבקשת`); 3.12.3a carries a `[היתר שער]` meanwhile, and 3.15.2d was
+  rephrased `על השבח שלי`.
+- **Split for the round's harmonization:** *sunīthá* (2.8.2a, 3.8.8a) and *supráṇīti* (Book 7, 3.15.4d) share
+  `טוב־ההנהגה`; *aktú* "ointment" `קישוט` / "night" `לילה`.
+- **For translator 1's file (not changed):** 3.1.23a's gloss of *íḍā* reads "אילה" (the goddess's name) for the common
+  noun; 3.15.7a has "רוויה, שפע".
+
+### Lessons for the guidelines
+- **Key a scratch generator's meaning glosses on the exact Zurich lemma, homonym number included, and give the
+  look-alike particles no default**: a per-lemma table written and read through once (≈ 500 lemmas for 300 pādas) costs
+  less than a review of folded glosses, and *ná* forced per occurrence cannot fall back to "לא".
+- **Run the consistency script before the intros**: twelve of my new words had a Book 7 / Book 2 precedent that only
+  `lexmap` showed (*ásredhant* `בלי כשל`, *devayā́* `המתחנן לאלים`, *vyùṣṭi* `בהפציע`).
+
 ## Parallels index
 (Generated at the end from the translators' sections and the הקבלה bullets; see `../parallels-index.md`.)

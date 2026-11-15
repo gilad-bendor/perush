@@ -770,3 +770,11 @@ sense (one Hebrew per lemma; the corpus majority of the lemma); the generated fi
 - √*daśasy* `חנן` (3.7.10d: no "forgive"); *énas* `עוון`.
 - Splits left for the round's harmonization (kept by sense): *jániman* "birth" `לידה` / Book 7 "generations" `דורות`;
   √*vañc* `התפתל` / Book 7 `סטה`; *yogyā́* `רתמה` / Book 7 `מפעל`; *ágra* "tip" `קצה` (adverb *ágre* `בתחילה`).
+
+### 11.30 RV 3.8–3.17 (Book 3, translator 2 = part 2; merged 2026-11-15)
+- 3.8 (the post): *sváru* `יתד־הזבח` (Book 7), √*añj* `קישט` (never `משח`), √*śri* `השעין` / `הִשָּׁעֵן`, *caṣā́la*
+  `טבעת־הראש`, *haṃsá* `אווז`; *yū́pa* is not in the hymn (`עמוד הזבח` in the title and notes only).
+- *mathitá* `שנחבט` (√*manth* `חבט`, §5.7; "stolen" in the note); *ásredhant* `בלי כשל`, *devayā́* `המתחנן לאלים`,
+  *vyùṣṭi* `בהפציע`, *śárman* pl. `מחסות`.
+- Tool: `שמחי`, `שבחי` exempted from the חַי gate (false hits). Left for the harmonization: *sunīthá* and *supráṇīti*
+  both `טוב־ההנהגה` (2.8.2a).

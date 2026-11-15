@@ -735,7 +735,7 @@ def _find_word(heb, hp):
 # whole words that contain a gated string but are another word (guidelines §5.2: exempt them, do not make translators
 # write around them); Round 7 run 1: the forms of בִּקֵּשׁ contain קשת
 EXEMPT_RX = r"[ובלמהכש]{0,3}(?:מ|נ|ת|י)?בי?קש(?:ת|תי|תם|תן|ות|תו|תה)"  # every form of בִּקֵּשׁ / בַּקָּשָׁה (קשת)
-EXEMPT_WORDS = {"לשאול", "לשאל", "מבקשת", "בקשת", "ביקשת", "מבקשות", "בקשתי", "ביקשתי", "בקשתם", "ביקשתם", "ובקשת", "ומבקשת"}
+EXEMPT_WORDS = {"שמחי", "שבחי", "ושבחי", "לשאול", "לשאל", "מבקשת", "בקשת", "ביקשת", "מבקשות", "בקשתי", "ביקשתי", "בקשתם", "ביקשתם", "ובקשת", "ומבקשת"}
 
 
 def _whole_word(s, m):
