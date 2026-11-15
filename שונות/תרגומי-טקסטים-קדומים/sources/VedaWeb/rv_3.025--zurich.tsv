@@ -1,0 +1,18 @@
+# Rigveda 3.25 – the Zurich text and morphology of VedaWeb (CC BY 4.0), one pāda per row:
+# label<TAB>pāda<TAB>tokens (surface – lemma (grammar; features), joined by ' ‖ ').
+# Made by הוודה-והאווסטה/vedic_tools.py convert from ../VedaWeb/rv_book_03.tei.
+1a	ágne diváḥ sūnúr asi prácetās	`ágne` – agní- (nominal stem; VOC.M.SG) ‖ `diváḥ` – dyú- ~ div- (nominal stem; GEN.M.SG) ‖ `sūnúḥ` – sūnú- (nominal stem; NOM.M.SG) ‖ `asi` – √as- 1 (root; SG.2.IND.PRS.ACT) ‖ `prácetāḥ` – prácetas- (nominal stem; NOM.M.SG)
+1b	tánā pr̥thivyā́ utá viśvávedāḥ	`tánā` – tán- (nominal stem; INS.F.SG) ‖ `pr̥thivyā́ḥ` – pr̥thivī́- (nominal stem; GEN.F.SG) ‖ `utá` – utá (invariable) ‖ `viśvávedāḥ` – viśvávedas- (nominal stem; NOM.M.SG)
+1c	ŕ̥dhag devā́m̐ ihá yajā cikitvaḥ	`ŕ̥dhak` – ŕ̥dhak (invariable) ‖ `devā́n` – devá- (nominal stem; ACC.M.PL) ‖ `ihá` – ihá (invariable) ‖ `yaja +` – √yaj- (root; SG.2.IMP.PRS.ACT) ‖ `cikitvaḥ` – √cit- (root; VOC.M.SG.PRF.ACT.PTCP)
+2a	agníḥ sanoti vīryā̀ṇi vidvā́n	`agníḥ` – agní- (nominal stem; NOM.M.SG) ‖ `sanoti` – √sanⁱ- (root; SG.3.IND.PRS.ACT) ‖ `vīryā̀ṇi` – vīryà- (nominal stem; ACC.N.PL) ‖ `vidvā́n` – √vid- 2 (root; NOM.M.SG.PRF.ACT.PTCP)
+2b	sanóti vā́jam amŕ̥tāya bhū́ṣan	`sanóti` – √sanⁱ- (root; SG.3.IND.PRS.ACT) ‖ `vā́jam` – vā́ja- (nominal stem; ACC.M.SG) ‖ `amŕ̥tāya` – amŕ̥ta- (nominal stem; DAT.M.SG) ‖ `bhū́ṣan` – √bhūṣ- (root; NOM.M.SG.PRS.ACT.PTCP)
+2c	sá no devā́m̐ éhá vahā purukṣo	`sá` – sá- ~ tá- (pronoun; NOM.M.SG) ‖ `naḥ` – ahám (pronoun; DAT.PL) ‖ `devā́n` – devá- (nominal stem; ACC.M.PL) ‖ `ā́` – ā́ (invariable; LP) ‖ `ihá` – ihá (invariable) ‖ `vaha +` – √vah- (root; SG.2.IMP.PRS.ACT) ‖ `purukṣo` – purukṣú- (nominal stem; VOC.M.SG)
+3a	agnír dyā́vāpr̥thivī́ viśvájanye	`agníḥ` – agní- (nominal stem; NOM.M.SG) ‖ `dyā́vāpr̥thivī́` – dyā́vāpr̥thivī́- (nominal stem; ACC.F.DU) ‖ `viśvájanye` – viśvájanya- (nominal stem; ACC.F.DU)
+3b	ā́ bhāti devī́ amŕ̥te ámūraḥ	`ā́` – ā́ (invariable; LP) ‖ `bhāti` – √bhā- (root; SG.3.IND.PRS.ACT) ‖ `devī́` – devī́- (nominal stem; ACC.F.DU) ‖ `amŕ̥te` – amŕ̥ta- (nominal stem; ACC.F.DU) ‖ `ámūraḥ` – ámūra- (nominal stem; NOM.M.SG)
+3c	kṣáyan vā́jaiḥ puruścandró námobhiḥ	`kṣáyan` – √kṣā- (root; NOM.M.SG.PRS.ACT.PTCP) ‖ `vā́jaiḥ` – vā́ja- (nominal stem; INS.M.PL) ‖ `puruścandráḥ` – puruścandrá- (nominal stem; NOM.M.SG) ‖ `námobhiḥ` – námas- (nominal stem; INS.N.PL)
+4a	ágna índraś ca dāśúṣo duroṇé	`ágne` – agní- (nominal stem; VOC.M.SG) ‖ `índraḥ` – índra- (nominal stem; NOM.M.SG) ‖ `ca` – ca (invariable) ‖ `dāśúṣaḥ` – dāśváṃs- (nominal stem; GEN.M.SG) ‖ `duroṇé` – duroṇá- (nominal stem; LOC.N.SG)
+4b	sutā́vato yajñám ihópa yātam	`sutā́vataḥ` – sutā́vant- (nominal stem; GEN.M.SG) ‖ `yajñám` – yajñá- (nominal stem; ACC.M.SG) ‖ `ihá` – ihá (invariable) ‖ `úpa` – úpa (invariable; LP) ‖ `yātam` – √yā- 1 (root; DU.2.IMP.PRS.ACT)
+4c	ámardhantā somapéyāya devā	`ámardhantā` – ámardhant- (nominal stem; NOM.M.DU) ‖ `somapéyāya` – somapéya- (nominal stem; DAT.N.SG) ‖ `devā` – devá- (nominal stem; VOC.M.DU)
+5a	ágne apā́ṃ sám idhyase duroṇé	`ágne` – agní- (nominal stem; VOC.M.SG) ‖ `apā́m` – áp- (nominal stem; GEN.F.PL) ‖ `sám` – sám (invariable; LP) ‖ `idhyase` – √idh- 1 (root; SG.2.IND.PRS.PASS) ‖ `duroṇé` – duroṇá- (nominal stem; LOC.N.SG)
+5b	nítyaḥ sūno sahaso jātavedaḥ	`nítyaḥ` – nítya- (nominal stem; NOM.M.SG) ‖ `sūno` – sūnú- (nominal stem; VOC.M.SG) ‖ `sahasaḥ` – sáhas- (nominal stem; GEN.N.SG) ‖ `jātavedaḥ` – jātávedas- (nominal stem; VOC.M.SG)
+5c	sadhásthāni maháyamāna ūtī́	`sadhásthāni` – sadhástha- (nominal stem; ACC.N.PL) ‖ `maháyamānaḥ` – √mahay- (root; NOM.M.SG.PRS.MED.PTCP.DEN) ‖ `ūtī́` – ūtí- (nominal stem; INS.F.SG)

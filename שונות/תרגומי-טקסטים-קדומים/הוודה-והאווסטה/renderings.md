@@ -48,7 +48,7 @@ In the apparatus, Sanskrit and Avestan words are written in Latin transliteratio
   §7 at every occurrence.
 
 ## 3. Names (binding; checked by script: where the source regex matches the folded line, the Hebrew must be in it)
-Rows marked **(RV 7)** or **(RV 2)** apply to the whole-book projects only – Book 7 (Round 7 run 1) and Book 2 (Round 8 run 3) – both kinds to both books. The regex is matched on the **folded** source (`vedic_tools.py` `fold`: lower case, no accents or diacritics, ś/ṣ/š =
+Rows marked **(RV 7)**, **(RV 2)** or **(RV 3)** apply to the whole-book projects only – Book 7 (Round 7 run 1), Book 2 (Round 8 run 3) and Book 3 (Round 9 run 1) – every kind to every book. The regex is matched on the **folded** source (`vedic_tools.py` `fold`: lower case, no accents or diacritics, ś/ṣ/š =
 s, ṛ = r, ϑ = th, ə = e, spaces around words). A name used as a common noun in another text (Agni = fire, Mitra =
 friend, Vṛtra = obstacle) is written here only for the texts where it is a name (§3.2 says how the common noun is
 rendered).
@@ -137,6 +137,16 @@ rendered).
 | Dabhīti (RV 2) | ` dabhit` | `דַּבְּהִיטִי` |  | Indra's protégé (2.13, 2.15) |
 | Sinīvālī (RV 2) | ` siniva` | `סִינִיוָאלִי` |  | the goddess of the new moon and of offspring (2.32) |
 | Rākā (RV 2) | ` rak(?:a\|am\|e)\b` | `רָאקָא` |  | the goddess of the full moon (2.32) |
+| Kuśika (RV 3) | ` kusik` | `קוּשִׁיקָה` |  | Viśvāmitra's clan (pl. *kuśikā́saḥ* "the Kuśikas" `בני קוּשִׁיקָה`, as the Gṛtsamadas; Round 9 run 1) |
+| Vipāś (RV 3) | ` vipa(?:t\|sam)\b` | `וִיפָּאשׁ` |  | the river of 3.33 (the Beas) |
+| Śutudrī (RV 3) | ` (?:s\|c?ch)utudri` | `שׁוּטוּדְרִי` |  | the river of 3.33 (the Sutlej) |
+| Devaśravas (RV 3) | ` devasrav` | `דֵּוַשְׁרַוַס` |  | one of the two Bhāratas who churned the fire (3.23) |
+| Devavāta (RV 3) | `(?<=devasrava) devavatah\b` | `דֵּוַוָאטָה` |  | the other (3.23.2b; not *devávant*, 7.18.22a) |
+| the Kīkaṭas (RV 3) | ` kikat` | `קִיקַטָה` |  | a people whose cows give no milk to the sacrifice (3.53.14) |
+| Pramaganda (RV 3) | ` pramagand` | `פְּרַמַגַנְדָה` |  | their chief (3.53.14) |
+| Sasarparī (RV 3) | ` sasarpar` | `סַסַרְפַּרִי` |  | the speech given by Jamadagni's line (3.53.15–16) |
+| Jamadagni (RV 3) | ` jamadagn` | `גַ'מַדַגְנִי` |  | the seer (3.53.15–16, 3.62.18) |
+| the Saudhanvanas (RV 3) | ` saudhanvan` | `בְּנֵי סוּדְהַנְוַן` |  | the Ṛbhus, "sons of Sudhanvan" (3.60) |
 
 ### 3.2 Common nouns that are names elsewhere
 - *agní* outside the RV (ŚB, AB, KU, MBh): `אֵשׁ` (the fire), and `אַגְנִי` only where the text speaks of the god.
@@ -345,6 +355,26 @@ Proposals; later translators follow the merged table):
 | *bráhmaṇas páti* | `בְּרַהְמַנַסְפַּתִי` | §3.1 (the name); *bŕ̥haspáti* `בְּרִהַסְפַּתִי` – the same god, two names, kept apart as the hymns keep them |
 | *apā́ṃ nápāt* | `נכד המים` | §3.1 (RV 7) |
 
+### 5.7 The Rigveda, Book 3 (Round 9 run 1; pre-set by the coordinator before the first line, from `vedic_tools.py freq RV3` and the book's repeated pādas)
+Book 3 is the hymnal of the Viśvāmitras (the Kuśikas): 29 hymns to Agni (3.1–29), 24 to Indra (3.30–53, with the
+dialogue of Viśvāmitra and the rivers, 3.33), the All-Gods' "one great lordship" (3.55), and the closing hymns with the
+Gāyatrī (3.62.10). **Books 7 and 2 bind every lemma they fixed** (§5.5, §5.6, §11.10–§11.28; `freq` and `lexmap` print
+them) – one Hebrew per lemma across the three books. Pre-set here (translator 1 may revise a row, with a reason, in its
+Proposals; later translators follow the merged table):
+| Source | Hebrew | Why / note |
+|---|---|---|
+| *mahád devā́nām asuratvám ékam* | `גדולה היא שררת הָאֵלִים האחת` | the refrain of 3.55 (22×, F12): *asuratvá* `שְׂרָרָה` ("lordship", the *ásura*'s quality; *ásura* keeps Book 7's transliteration `אַסוּרָה`); `אסורות` would read "forbidden" – never transliterate the abstract; Deut 6:4 only in the apparatus, as a shared motif ([divergence]: one lordship of many gods) |
+| *śunáṃ huvema maghávānam índram / asmín bháre nŕ̥tamaṃ vā́jasātau / śr̥ṇvántam ugrám ūtáye samátsu / ghnántaṃ vr̥trā́ṇi saṃjítaṃ dhánānām* | `למזל נקרא נא לבעל־השפע, אינדרה,` / `לגברי ביותר בפשיטה הזאת, בזכייה בפרס,` / `השומע, העז, לסיוע בהתגוששויות,` / `ההורג מחסומים, מנצח־ההון.` | the Viśvāmitra Indra refrain (12×: 3.30.22, 31.22, 32.17, 34.11, 35.11, 36.11, 38.10, 39.9, 43.8, 48.5, 49.5, 50.5; F13): *śuná* `מַזָּל` ("luck, success", Geldner *zum Glück*; `הצלחה` is √*sādh*'s `הביא להצלחה`; Book 2's *śū́na* "lack" `חוסר` is another word – check the accent), √*hū* `קרא` (Book 7), *bhára* `פשיטה` (Book 7), *nŕ̥tama* `הגברי ביותר` (Book 7), *vā́jasāti* `זכייה בפרס` (Book 7), *ūtí* `סיוע`, *samád* `התגוששות` (Book 7), *vr̥trá* pl. `מחסומים` (§5.5), *saṃjít* = *dhanajít* `מנצח־ההון` (Book 2) |
+| *íḷām agne purudáṃsaṃ saníṃ góḥ / śaśvattamáṃ hávamānāya sādha / syā́n naḥ sūnús tánayo vijā́vā / ágne sā́ te sumatír bhūtv asmé* | `רוויה, אַגְנִי, רבת־נפלאות, זכייה בפרות,` / `תמידית־ביותר – הבא להצלחה לקורא (לך);` / `יהי לנו בן, תולדה, פורה;` / `אַגְנִי, יהי רצונך הטוב הזה עמנו.` | the Agni refrain (7×: 3.1.23, 5.11, 6.11, 7.11, 15.7, 22.5, 23.5; F14): *íḷā* `רְוָיָה` (Book 7 *íḍā*; the goddess Iḷā of the Āprī hymn 3.4.8 `אִילָה`), *purudáṃsa* `רב־הנפלאות` (Book 7), *saní* `זכייה` (Books 7, 2), *śaśvattamá* `תמיד־ביותר` (Book 2), √*sādh* `הביא להצלחה` (Books 7, 2), *tánaya* `תולדה`, *vijā́van* `פורה`, *sumatí* `רצון טוב` |
+| *asuratvá* | `שְׂרָרָה` | see F12 (also outside 3.55) |
+| *śuná* | `מַזָּל` | see F13 |
+| *íḷā*, *iḷā́yās padé* | `רְוָיָה`, `בְּעִקְּבוֹת הָרְוָיָה` | the "track of Refreshment" where the fire is set down (3.23.4, 3.29.3–4): the cow-goddess's footprint – say so in the note |
+| *yū́pa* | `עַמּוּד הַזֶּבַח` | 3.8 (§5.4); *vánaspati* "lord of the wood" (the post, the tree) `אֲדוֹן הָעֵץ` – check `lexmap '^vanaspati'` first |
+| *araṇí*, √*manth* | `עֵץ הַהַצָּתָה`, `חָבַט` → **check Book 7 / Book 2 first** (`lexmap '^arani'`, `'^manth'`): the churning of the fire (3.23, 3.29) | the fire drill: the lower and the upper stick, the mother and the father of Agni |
+| *puroḍā́ś* | `עוּגַת־זֶבַח` | Book 7 (7.18.6a); 3.28, 3.52 |
+| *Viśvāmitra*, *Gāthin* | §3.1 | 3.33, 3.53 (*gāthin* is not in the text; the father's name only in the Anukramaṇī) |
+| *tát savitúr váreṇyam bhárgo devásya dhīmahi / dhíyo yó naḥ pracodáyāt* | (translator 7; read Jamison on 3.62.10 first) | the Gāyatrī (3.62.10): *dhīmahi* is √*dhā* (root aorist optative middle: "may we receive / set in us"), not √*dhī* "meditate" (the later reading – put it in the note); *váreṇya* `הראוי־לבחירה` (Book 2); *bhárgas* `זוהר` → check `lexmap`; √*cud* caus. `דרבן` (Book 7) |
+
 ## 6. (reserved for the LXX layer – not applicable: no Greek)
 
 ## 7. Reserved and gated words, and traps (checked by `vedic_tools.py verify`; `gates` prints the regexes)
@@ -391,6 +421,15 @@ where the fire-offering is near.
 | F9 | `brhad vadema vidathe suvirah` | `נדבר נא \(בקול\) רם במועצה רבי־גיבורים` | RV 2, the Gṛtsamada refrain closing 22 hymns ("May we speak loftily at the ritual distribution, rich in heroes"; Round 8 run 3) |
 | F10 | `somasya ta mada indras cakara` | `בהתבסמות הסומה את אלה עשה אינדרה` | RV 2.15.2–9d ("These things Indra did in the exhilaration of soma") |
 | F11 | `sa janasa indrah` | `הוא אנשים אינדרה` | RV 2.12.1–14d ("He, o peoples, is Indra"; written `הוא – אנשים! – אינדרה`) |
+| F12 | `mahad devanam asuratvam ekam` | `גדולה היא שררת האלים האחת` | RV 3.55.1–22d ("Great is the one lordship of the gods"; Round 9 run 1) |
+| F13 | `sunam huvema maghavanam indram` | `למזל נקרא נא לבעל־השפע אינדרה` | RV 3, the Indra refrain, pāda a (12×; F13–F13c together) |
+| F13b | `asmin bhare nrtamam vajasatau` | `לגברי ביותר בפשיטה הזאת בזכייה בפרס` | pāda b |
+| F13c | `srnvantam ugram utaye samatsu` | `השומע העז לסיוע בהתגוששויות` | pāda c |
+| F13d | `ghnantam vrtrani samjitam dhananam` | `ההורג מחסומים מנצח־ההון` | pāda d |
+| F14 | `ilam agne purudamsam sanim goh` | `רוויה אגני רבת־נפלאות זכייה בפרות` | RV 3, the Agni refrain, pāda a (7×) |
+| F14b | `sasvattamam havamanaya sadha` | `תמידית־ביותר הבא להצלחה לקורא \(לך\)` | pāda b |
+| F14c | `syan nah sunus tanayo vijava` | `יהי לנו בן תולדה פורה` | pāda c |
+| F14d | `agne sa te sumatir bhutv asme` | `אגני יהי רצונך הטוב הזה עמנו` | pāda d |
 
 
 ## 9. Repeated lines and the dossier
@@ -426,6 +465,9 @@ where the fire-offering is near.
 | RV2.1 16d | err | `נדבר נא גדולות במועצה, רבי־גיבורים.` |
 | RV2.12 1d | ok | `הוא – אנשים! – אינדרה.` |
 | RV2.28 5a | err | `התר ממני את החטא כמו חבל;` |
+| RV3.55 1d | ok | `גדולה היא שררת הָאֵלִים האחת.` |
+| RV3.55 2d | err | `גדולה היא אלוהות הָאֵלִים האחת.` |
+| RV3.30 22a | ok | `למזל נקרא נא לבעל־השפע, אינדרה,` |
 | AB7 15.2e | ok | `שוכבים כל חטאיו, הרוגים ביגיעה שבדרך.` |
 
 ## 11. Merged from the translators (numbered by part; the coordinator)

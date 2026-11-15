@@ -1,0 +1,23 @@
+# Rigveda 3.45 – the Zurich text and morphology of VedaWeb (CC BY 4.0), one pāda per row:
+# label<TAB>pāda<TAB>tokens (surface – lemma (grammar; features), joined by ' ‖ ').
+# Made by הוודה-והאווסטה/vedic_tools.py convert from ../VedaWeb/rv_book_03.tei.
+1a	ā́ mandraír indra háribhir	`ā́` – ā́ (invariable; LP) ‖ `mandraíḥ` – mandrá- (nominal stem; INS.M.PL) ‖ `indra` – índra- (nominal stem; VOC.M.SG) ‖ `háribhiḥ` – hári- (nominal stem; INS.M.PL)
+1b	yāhí mayū́raromabhiḥ	`yāhí` – √yā- 1 (root; SG.2.IMP.PRS.ACT) ‖ `mayū́raromabhiḥ` – mayū́raroman- (nominal stem; INS.M.PL)
+1c	mā́ tvā ké cin ní yaman víṃ ná pāśínaḥ-	`mā́` – mā́ (invariable) ‖ `tvā` – tvám (pronoun; ACC.SG) ‖ `ké` – ká- (pronoun; NOM.M.PL) ‖ `cit` – cid (invariable) ‖ `ní` – ní (invariable; LP) ‖ `yaman` – √yam- (root; PL.3.INJ.AOR.ACT) ‖ `vím` – ví- (nominal stem; ACC.M.SG) ‖ `ná` – ná (invariable) ‖ `pāśínaḥ` – pāśín- (nominal stem; NOM.M.PL)
+1d	-áti dhánveva tā́m̐ ihi	`áti` – áti (invariable; LP) ‖ `dhánva` – dhánvan- (nominal stem; ACC.N.SG) ‖ `iva` – iva (invariable) ‖ `tā́n` – sá- ~ tá- (pronoun; ACC.M.PL) ‖ `ihi` – √i- 1 (root; SG.2.IMP.PRS.ACT)
+2a	vr̥trakhādó valaṃrujáḥ	`vr̥trakhādáḥ` – vr̥trakhādá- (nominal stem; NOM.M.SG) ‖ `valaṃrujáḥ` – valaṃrujá- (nominal stem; NOM.M.SG)
+2b	purā́ṃ darmó apā́m ajáḥ	`purā́m` – púr- (nominal stem; GEN.F.PL) ‖ `darmáḥ` – darmá- (nominal stem; NOM.M.SG) ‖ `apā́m` – áp- (nominal stem; GEN.F.PL) ‖ `ajáḥ` – ajá- 1 (nominal stem; NOM.M.SG)
+2c	sthā́tā ráthasya háryor abhisvaré-	`sthā́tā` – sthā́tar- (nominal stem; NOM.M.SG) ‖ `ráthasya` – rátha- (nominal stem; GEN.M.SG) ‖ `háryoḥ` – hári- (nominal stem; GEN.M.DU) ‖ `abhisvaré` – abhisvaré (invariable)
+2d	índro dr̥ḷhā́ cid ārujáḥ	`índraḥ` – índra- (nominal stem; NOM.M.SG) ‖ `dr̥ḷhā́` – √dr̥h- (root; ACC.N.PL.PTCP-ta) ‖ `cit` – cid (invariable) ‖ `ārujáḥ` – ārujá- (nominal stem; NOM.M.SG)
+3a	gambhīrā́m̐ udadhī́m̐r iva	`gambhīrā́n` – gambhīrá- (nominal stem; ACC.M.PL) ‖ `udadhī́n` – udadhí- (nominal stem; ACC.M.PL) ‖ `iva` – iva (invariable)
+3b	krátum puṣyasi gā́ iva	`krátum` – krátu- (nominal stem; ACC.M.SG) ‖ `puṣyasi` – √puṣ- (root; SG.2.IND.PRS.ACT) ‖ `gā́ḥ` – gáv- ~ gó- (nominal stem; ACC.F.PL) ‖ `iva` – iva (invariable)
+3c	prá sugopā́ yávasaṃ dhenávo yathā	`prá` – prá (invariable; LP) ‖ `sugopā́ḥ` – sugopā́- (nominal stem; NOM.F.PL) ‖ `yávasam` – yávasa- (nominal stem; ACC.N.SG) ‖ `dhenávaḥ` – dhenú- (nominal stem; NOM.F.PL) ‖ `yathā` – yathā (invariable)
+3d	hradáṃ kulyā́ ivāśata	`hradám` – hradá- (nominal stem; ACC.M.SG) ‖ `kulyā́ḥ` – kulyā́- (nominal stem; NOM.F.PL) ‖ `iva` – iva (invariable) ‖ `āśata` – √naś- 1 (root; PL.3.IND.AOR.MED)
+4a	ā́ nas tújaṃ rayím bhara-	`ā́` – ā́ (invariable; LP) ‖ `naḥ` – ahám (pronoun; DAT.PL) ‖ `tújam` – túj- 2 (nominal stem; ACC.F.SG) ‖ `rayím` – rayí- ~ rāy- (nominal stem; ACC.M.SG) ‖ `bhara` – √bhr̥- (root; SG.2.IMP.PRS.ACT)
+4b	-áṃśaṃ ná pratijānaté	`áṃśam` – áṃśa- (nominal stem; ACC.M.SG) ‖ `ná` – ná (invariable) ‖ `pratijānaté` – √jñā- (root; DAT.M.SG.PRS.ACT.PTCP.LP)
+4c	vr̥kṣám pakvám phálam aṅkī́va dhūnuhi-	`vr̥kṣám` – vr̥kṣá- (nominal stem; ACC.M.SG) ‖ `pakvám` – pakvá- (nominal stem; ACC.N.SG) ‖ `phálam` – phála- (nominal stem; ACC.N.SG) ‖ `aṅkī́` – aṅkín- (nominal stem; NOM.M.SG) ‖ `iva` – iva (invariable) ‖ `dhūnuhi` – √dhū- (root; SG.2.IMP.PRS.ACT)
+4d	-índra sampā́raṇaṃ vásu	`índra` – índra- (nominal stem; VOC.M.SG) ‖ `sampā́raṇam` – sampā́raṇa- (nominal stem; ACC.N.SG) ‖ `vásu` – vásu- (nominal stem; ACC.N.SG)
+5a	svayúr indra svarā́ḷ asi	`svayúḥ` – svayú- (nominal stem; NOM.M.SG) ‖ `indra` – índra- (nominal stem; VOC.M.SG) ‖ `svarā́ṭ` – svarā́j- (nominal stem; NOM.M.SG) ‖ `asi` – √as- 1 (root; SG.2.IND.PRS.ACT)
+5b	smáddiṣṭiḥ sváyaśastaraḥ	`smáddiṣṭiḥ` – smáddiṣṭi- (nominal stem; NOM.M.SG) ‖ `sváyaśastaraḥ` – sváyaśastara- (nominal stem; NOM.M.SG.CMP)
+5c	sá vāvr̥dhāná ójasā puruṣṭuta	`sá` – sá- ~ tá- (pronoun; NOM.M.SG) ‖ `vāvr̥dhānáḥ` – √vr̥dh- (root; NOM.M.SG.PRF.MED.PTCP) ‖ `ójasā` – ójas- (nominal stem; INS.N.SG) ‖ `puruṣṭuta` – puruṣṭutá- (nominal stem; VOC.M.SG)
+5d	bhávā naḥ suśrávastamaḥ	`bháva +` – √bhū- (root; SG.2.IMP.PRS.ACT) ‖ `naḥ` – ahám (pronoun; PL) ‖ `suśrávastamaḥ` – suśrávastama- (nominal stem; NOM.M.SG.SUP)

@@ -1,0 +1,23 @@
+# Rigveda 3.28 – the Zurich text and morphology of VedaWeb (CC BY 4.0), one pāda per row:
+# label<TAB>pāda<TAB>tokens (surface – lemma (grammar; features), joined by ' ‖ ').
+# Made by הוודה-והאווסטה/vedic_tools.py convert from ../VedaWeb/rv_book_03.tei.
+1a	ágne juṣásva no havíḥ	`ágne` – agní- (nominal stem; VOC.M.SG) ‖ `juṣásva` – √juṣ- (root; SG.2.IMP.AOR.MED) ‖ `naḥ` – ahám (pronoun; GEN.PL) ‖ `havíḥ` – havís- (nominal stem; ACC.N.SG)
+1b	puroḷā́śaṃ jātavedaḥ	`puroḷā́śam` – puroḷā́ś- (nominal stem; ACC.M.SG) ‖ `jātavedaḥ` – jātávedas- (nominal stem; VOC.M.SG)
+1c	prātaḥsāvé dhiyāvaso	`prātaḥsāvé` – prātaḥsāvá- (nominal stem; LOC.M.SG) ‖ `dhiyāvaso` – dhiyā́vasu- (nominal stem; VOC.M.SG)
+2a	puroḷā́ agne pacatás	`puroḷā́ḥ` – puroḷā́ś- (nominal stem; NOM.M.SG) ‖ `agne` – agní- (nominal stem; VOC.M.SG) ‖ `pacatáḥ` – pacatá- (nominal stem; NOM.M.SG)
+2b	túbhyaṃ vā ghā páriṣkr̥taḥ	`túbhyam` – tvám (pronoun; DAT.SG) ‖ `vā` – vā (invariable) ‖ `gha +` – gha (invariable) ‖ `páriṣkr̥taḥ` – √kr̥- (root; NOM.M.SG.PTCP-ta.LP)
+2c	táṃ juṣasva yaviṣṭhya	`tám` – sá- ~ tá- (pronoun; ACC.M.SG) ‖ `juṣasva` – √juṣ- (root; SG.2.IMP.AOR.MED) ‖ `yaviṣṭhya` – yáviṣṭhya- (nominal stem; VOC.M.SG)
+3a	ágne vīhí puroḷā́śam	`ágne` – agní- (nominal stem; VOC.M.SG) ‖ `vīhí` – √vī- (root; SG.2.IMP.PRS.ACT) ‖ `puroḷā́śam` – puroḷā́ś- (nominal stem; ACC.M.SG)
+3b	ā́hutaṃ tiróahnyam	`ā́hutam` – √hu- (root; ACC.M.SG.PTCP-ta.LP) ‖ `tiróahnyam` – tiróahnya- (nominal stem; ACC.M.SG)
+3c	sáhasaḥ sūnúr asy adhvaré hitáḥ	`sáhasaḥ` – sáhas- (nominal stem; GEN.N.SG) ‖ `sūnúḥ` – sūnú- (nominal stem; NOM.M.SG) ‖ `asi` – √as- 1 (root; SG.2.IND.PRS.ACT) ‖ `adhvaré` – adhvará- (nominal stem; LOC.M.SG) ‖ `hitáḥ` – √dhā- 1 (root; NOM.M.SG.PTCP-ta)
+4a	mā́dhyaṃdine sávane jātavedaḥ	`mā́dhyaṃdine` – mā́dhyaṃdina- (nominal stem; LOC.N.SG) ‖ `sávane` – sávana- 1 (nominal stem; LOC.N.SG) ‖ `jātavedaḥ` – jātávedas- (nominal stem; VOC.M.SG)
+4b	puroḷā́śam ihá kave juṣasva	`puroḷā́śam` – puroḷā́ś- (nominal stem; ACC.M.SG) ‖ `ihá` – ihá (invariable) ‖ `kave` – kaví- (nominal stem; VOC.M.SG) ‖ `juṣasva` – √juṣ- (root; SG.2.IMP.AOR.MED)
+4c	ágne yahvásya táva bhāgadhéyaṃ	`ágne` – agní- (nominal stem; VOC.M.SG) ‖ `yahvásya` – yahvá- (nominal stem; GEN.M.SG) ‖ `táva` – tvám (pronoun; GEN.SG) ‖ `bhāgadhéyam` – bhāgadhéya- (nominal stem; ACC.N.SG)
+4d	ná prá minanti vidátheṣu dhī́rāḥ	`ná` – ná (invariable) ‖ `prá` – prá (invariable; LP) ‖ `minanti` – √mī- (root; PL.3.IND.PRS.ACT) ‖ `vidátheṣu` – vidátha- (nominal stem; LOC.N.PL) ‖ `dhī́rāḥ` – dhī́ra- (nominal stem; NOM.M.PL)
+5a	ágne tr̥tī́ye sávane hí kā́niṣaḥ	`ágne` – agní- (nominal stem; VOC.M.SG) ‖ `tr̥tī́ye` – tr̥tī́ya- (nominal stem; LOC.N.SG) ‖ `sávane` – sávana- 1 (nominal stem; LOC.N.SG) ‖ `hí` – hí (invariable) ‖ `kā́niṣaḥ` – √kanⁱ- (root; SG.2.SBJV.AOR.ACT)
+5b	puroḷā́śaṃ sahasaḥ sūnav ā́hutam	`puroḷā́śam` – puroḷā́ś- (nominal stem; ACC.M.SG) ‖ `sahasaḥ` – sáhas- (nominal stem; GEN.N.SG) ‖ `sūno` – sūnú- (nominal stem; VOC.M.SG) ‖ `ā́hutam` – √hu- (root; ACC.M.SG.PTCP-ta.LP)
+5c	áthā devéṣv adhvaráṃ vipanyáyā	`átha +` – átha (invariable) ‖ `devéṣu` – devá- (nominal stem; LOC.M.PL) ‖ `adhvarám` – adhvará- (nominal stem; ACC.M.SG) ‖ `vipanyáyā` – vipanyā́- (nominal stem; INS.F.SG)
+5d	dhā́ rátnavantam amŕ̥teṣu jā́gr̥vim	`dhā́ḥ` – √dhā- 1 (root; SG.2.INJ.AOR.ACT) ‖ `rátnavantam` – rátnavant- (nominal stem; ACC.M.SG) ‖ `amŕ̥teṣu` – amŕ̥ta- (nominal stem; LOC.M.PL) ‖ `jā́gr̥vim` – jā́gr̥vi- (nominal stem; ACC.M.SG)
+6a	ágne vr̥dhāná ā́hutim	`ágne` – agní- (nominal stem; VOC.M.SG) ‖ `vr̥dhānáḥ` – √vr̥dh- (root; NOM.M.SG.AOR.MED.PTCP) ‖ `ā́hutim` – ā́huti- (nominal stem; ACC.F.SG)
+6b	puroḷā́śaṃ jātavedaḥ	`puroḷā́śam` – puroḷā́ś- (nominal stem; ACC.M.SG) ‖ `jātavedaḥ` – jātávedas- (nominal stem; VOC.M.SG)
+6c	juṣásva tiróahnyam	`juṣásva` – √juṣ- (root; SG.2.IMP.AOR.MED) ‖ `tiróahnyam` – tiróahnya- (nominal stem; ACC.M.SG)

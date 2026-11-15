@@ -1,0 +1,23 @@
+# Rigveda 3.21 – the Zurich text and morphology of VedaWeb (CC BY 4.0), one pāda per row:
+# label<TAB>pāda<TAB>tokens (surface – lemma (grammar; features), joined by ' ‖ ').
+# Made by הוודה-והאווסטה/vedic_tools.py convert from ../VedaWeb/rv_book_03.tei.
+1a	imáṃ no yajñám amŕ̥teṣu dhehi-	`imám` – ayám (pronoun; ACC.M.SG) ‖ `naḥ` – ahám (pronoun; PL) ‖ `yajñám` – yajñá- (nominal stem; ACC.M.SG) ‖ `amŕ̥teṣu` – amŕ̥ta- (nominal stem; LOC.M.PL) ‖ `dhehi` – √dhā- 1 (root; SG.2.IMP.PRS.ACT)
+1b	-imā́ havyā́ jātavedo juṣasva	`imā́` – ayám (pronoun; ACC.N.PL) ‖ `havyā́` – havyá- (nominal stem; ACC.N.PL) ‖ `jātavedaḥ` – jātávedas- (nominal stem; VOC.M.SG) ‖ `juṣasva` – √juṣ- (root; SG.2.IMP.AOR.MED)
+1c	stokā́nām agne médaso ghr̥tásya	`stokā́nām` – stoká- (nominal stem; GEN.M.PL) ‖ `agne` – agní- (nominal stem; VOC.M.SG) ‖ `médasaḥ` – médas- (nominal stem; GEN.N.SG) ‖ `ghr̥tásya` – ghr̥tá- (nominal stem; GEN.N.SG)
+1d	hótaḥ prā́śāna prathamó niṣádya	`hótar` – hótar- (nominal stem; VOC.M.SG) ‖ `prá` – prá (invariable; LP) ‖ `aśāna` – √aśⁱ- (root; SG.2.IMP.PRS.ACT) ‖ `prathamáḥ` – prathamá- (nominal stem; NOM.M.SG) ‖ `niṣádya` – √sad- (root; CVB.LP)
+2a	ghr̥távantaḥ pāvaka te	`ghr̥távantaḥ` – ghr̥távant- (nominal stem; NOM.M.PL) ‖ `pāvaka` – pāvaká- (nominal stem; VOC.M.SG) ‖ `te` – tvám (pronoun; DAT.SG)
+2b	stokā́ ścotanti médasaḥ	`stokā́ḥ` – stoká- (nominal stem; NOM.M.PL) ‖ `ścotanti` – √ścut- (root; PL.3.IND.PRS.ACT) ‖ `médasaḥ` – médas- (nominal stem; GEN.N.SG)
+2c	svádharman devávītaye	`svádharman` – svadharman- (nominal stem; VOC.M.SG) ‖ `devávītaye` – devávīti- (nominal stem; DAT.F.SG)
+2d	śréṣṭhaṃ no dhehi vā́ryam	`śréṣṭham` – śréṣṭha- (nominal stem; ACC.N.SG.SUP) ‖ `naḥ` – ahám (pronoun; DAT.PL) ‖ `dhehi` – √dhā- 1 (root; SG.2.IMP.PRS.ACT) ‖ `vā́ryam` – vā́rya- (nominal stem; ACC.N.SG.GDV)
+3a	túbhyaṃ stokā́ ghr̥taścútaḥ-	`túbhyam` – tvám (pronoun; DAT.SG) ‖ `stokā́ḥ` – stoká- (nominal stem; NOM.M.PL) ‖ `ghr̥taścútaḥ` – ghr̥taścút- (nominal stem; NOM.M.PL)
+3b	-ágne víprāya santya	`ágne` – agní- (nominal stem; VOC.M.SG) ‖ `víprāya` – vípra- (nominal stem; DAT.M.SG) ‖ `santya` – santya- (nominal stem; VOC.M.SG)
+3c	ŕ̥ṣiḥ śréṣṭhaḥ sám idhyase	`ŕ̥ṣiḥ` – ŕ̥ṣi- (nominal stem; NOM.M.SG) ‖ `śréṣṭhaḥ` – śréṣṭha- (nominal stem; NOM.M.SG.SUP) ‖ `sám` – sám (invariable; LP) ‖ `idhyase` – √idh- 1 (root; SG.2.IND.PRS.PASS)
+3d	yajñásya prāvitā́ bhava	`yajñásya` – yajñá- (nominal stem; GEN.M.SG) ‖ `prāvitā́` – prāvitár- (nominal stem; NOM.M.SG) ‖ `bhava` – √bhū- (root; SG.2.IMP.PRS.ACT)
+4a	túbhyaṃ ścotanty adhrigo śacīvaḥ-	`túbhyam` – tvám (pronoun; DAT.SG) ‖ `ścotanti` – √ścut- (root; PL.3.IND.PRS.ACT) ‖ `adhrigo` – ádhrigu- (nominal stem; VOC.M.SG) ‖ `śacīvaḥ` – śácīvant- (nominal stem; VOC.M.SG)
+4b	stokā́so agne médaso ghr̥tásya	`stokā́saḥ` – stoká- (nominal stem; NOM.M.PL) ‖ `agne` – agní- (nominal stem; VOC.M.SG) ‖ `médasaḥ` – médas- (nominal stem; GEN.N.SG) ‖ `ghr̥tásya` – ghr̥tá- (nominal stem; GEN.N.SG)
+4c	kaviśastó br̥hatā́ bhānúnā́gāḥ-	`kaviśastáḥ` – kaviśastá- (nominal stem; NOM.M.SG) ‖ `br̥hatā́` – br̥hánt- (nominal stem; INS.M.SG) ‖ `bhānúnā` – bhānú- (nominal stem; INS.M.SG) ‖ `ā́` – ā́ (invariable; LP) ‖ `agāḥ` – √gā- (root; SG.2.IND.AOR.ACT)
+4d	havyā́ juṣasva medhira	`havyā́` – havyá- (nominal stem; ACC.N.PL) ‖ `juṣasva` – √juṣ- (root; SG.2.IMP.AOR.MED) ‖ `medhira` – médhira- (nominal stem; VOC.M.SG)
+5a	ójiṣṭhaṃ te madhyató méda údbhr̥tam	`ójiṣṭham` – ójiṣṭha- (nominal stem; ACC.N.SG.SUP) ‖ `te` – tvám (pronoun; DAT.SG) ‖ `madhyatáḥ` – madhyatás (invariable) ‖ `médaḥ` – médas- (nominal stem; ACC.N.SG) ‖ `údbhr̥tam` – √bhr̥- (root; ACC.N.SG.PTCP-ta.LP)
+5b	prá te vayáṃ dadāmahe	`prá` – prá (invariable; LP) ‖ `te` – tvám (pronoun; DAT.SG) ‖ `vayám` – ahám (pronoun; NOM.PL) ‖ `dadāmahe` – √dad- (root; PL.1.SBJV.PRS.MED)
+5c	ścótanti te vaso stokā́ ádhi tvací	`ścótanti` – √ścut- (root; PL.3.IND.PRS.ACT) ‖ `te` – tvám (pronoun; DAT.SG) ‖ `vaso` – vásu- (nominal stem; VOC.M.SG) ‖ `stokā́ḥ` – stoká- (nominal stem; NOM.M.PL) ‖ `ádhi` – ádhi (invariable; LP) ‖ `tvací` – tvác- (nominal stem; LOC.F.SG)
+5d	práti tā́n devaśó vihi	`práti` – práti (invariable; LP) ‖ `tā́n` – sá- ~ tá- (pronoun; ACC.M.PL) ‖ `devaśás` – devaśás (invariable) ‖ `vihi` – √vī- (root; SG.2.IMP.PRS.ACT)

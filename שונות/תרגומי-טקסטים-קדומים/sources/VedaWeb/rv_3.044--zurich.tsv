@@ -1,0 +1,23 @@
+# Rigveda 3.44 – the Zurich text and morphology of VedaWeb (CC BY 4.0), one pāda per row:
+# label<TAB>pāda<TAB>tokens (surface – lemma (grammar; features), joined by ' ‖ ').
+# Made by הוודה-והאווסטה/vedic_tools.py convert from ../VedaWeb/rv_book_03.tei.
+1a	ayáṃ te astu haryatáḥ	`ayám` – ayám (pronoun; NOM.M.SG) ‖ `te` – tvám (pronoun; DAT.SG) ‖ `astu` – √as- 1 (root; SG.3.IMP.PRS.ACT) ‖ `haryatáḥ` – haryatá- (nominal stem; NOM.M.SG)
+1b	sóma ā́ háribhiḥ sutáḥ	`sómaḥ` – sóma- (nominal stem; NOM.M.SG) ‖ `ā́` – ā́ (invariable; LP) ‖ `háribhiḥ` – hári- (nominal stem; INS.M.PL) ‖ `sutáḥ` – √su- (root; NOM.M.SG.PTCP-ta)
+1c	juṣāṇá indra háribhir na ā́ gahi-	`juṣāṇáḥ` – √juṣ- (root; NOM.M.SG.AOR.MED.PTCP) ‖ `indra` – índra- (nominal stem; VOC.M.SG) ‖ `háribhiḥ` – hári- (nominal stem; INS.M.PL) ‖ `naḥ` – ahám (pronoun; ACC.PL) ‖ `ā́` – ā́ (invariable; LP) ‖ `gahi` – √gam- (root; SG.2.IMP.AOR.ACT)
+1d	ā́ tiṣṭha háritaṃ rátham	`ā́` – ā́ (invariable; LP) ‖ `tiṣṭha` – √sthā- (root; SG.2.IMP.PRS.ACT) ‖ `háritam` – hárita- (nominal stem; ACC.M.SG) ‖ `rátham` – rátha- (nominal stem; ACC.M.SG)
+2a	haryánn uṣásam arcayaḥ	`haryán` – √hary- (root; NOM.M.SG.PRS.ACT.PTCP.DEN) ‖ `uṣásam` – uṣás- (nominal stem; ACC.F.SG) ‖ `arcayaḥ` – √r̥c- (root; SG.2.INJ.PRS.ACT)
+2b	sū́ryaṃ haryánn arocayaḥ	`sū́ryam` – sū́rya- (nominal stem; ACC.M.SG) ‖ `haryán` – √hary- (root; NOM.M.SG.PRS.ACT.PTCP.DEN) ‖ `arocayaḥ` – √ruc- (root; SG.2.IND.IPRF.ACT.CAUS)
+2c	vidvā́ṃś cikitvā́n haryaśva vardhase-	`vidvā́n` – √vid- 2 (root; NOM.M.SG.PRF.ACT.PTCP) ‖ `cikitvā́n` – √cit- (root; NOM.M.SG.PRF.ACT.PTCP) ‖ `haryaśva` – háryaśva- (nominal stem; VOC.M.SG) ‖ `vardhase` – √vr̥dh- (root; SG.2.IND.PRS.MED)
+2d	índra víśvā abhí śríyaḥ	`índra` – índra- (nominal stem; VOC.M.SG) ‖ `víśvāḥ` – víśva- (nominal stem; ACC.F.PL) ‖ `abhí` – abhí (invariable; LP) ‖ `śríyaḥ` – śrī́- (nominal stem; ACC.F.PL)
+3a	dyā́m índro háridhāyasam	`dyā́m` – dyú- ~ div- (nominal stem; ACC.M.SG) ‖ `índraḥ` – índra- (nominal stem; NOM.M.SG) ‖ `háridhāyasam` – háridhāyas- (nominal stem; ACC.M.SG)
+3b	pr̥thivī́ṃ hárivarpasam	`pr̥thivī́m` – pr̥thivī́- (nominal stem; ACC.F.SG) ‖ `hárivarpasam` – hárivarpas- (nominal stem; ACC.F.SG)
+3c	ádhārayad dharítor bhū́ri bhójanaṃ	`ádhārayat` – √dhr̥- (root; SG.3.IND.IPRF.ACT.CAUS) ‖ `harítoḥ` – harít- (nominal stem; GEN.F.DU) ‖ `bhū́ri` – bhū́ri- (nominal stem; ACC.N.SG) ‖ `bhójanam` – bhójana- (nominal stem; ACC.N.SG)
+3d	yáyor antár háriś cárat	`yáyoḥ` – yá- (pronoun; LOC.F.DU) ‖ `antár` – antár (invariable; LP) ‖ `háriḥ` – hári- (nominal stem; NOM.M.SG) ‖ `cárat` – √carⁱ- (root; SG.3.INJ.PRS.ACT)
+4a	jajñānó hárito vŕ̥ṣā	`jajñānáḥ` – √janⁱ- (root; NOM.M.SG.PRF.MED.PTCP) ‖ `háritaḥ` – hárita- (nominal stem; NOM.M.SG) ‖ `vŕ̥ṣā` – vŕ̥ṣan- (nominal stem; NOM.M.SG)
+4b	víśvam ā́ bhāti rocanám	`víśvam` – víśva- (nominal stem; ACC.N.SG) ‖ `ā́` – ā́ (invariable; LP) ‖ `bhāti` – √bhā- (root; SG.3.IND.PRS.ACT) ‖ `rocanám` – rocaná- (nominal stem; ACC.N.SG)
+4c	háryaśvo háritaṃ dhatta ā́yudham	`háryaśvaḥ` – háryaśva- (nominal stem; NOM.M.SG) ‖ `háritam` – hárita- (nominal stem; ACC.N.SG) ‖ `dhatte` – √dhā- 1 (root; SG.3.IND.PRS.MED) ‖ `ā́yudham` – ā́yudha- (nominal stem; ACC.N.SG)
+4d	ā́ vájram bāhvór hárim	`ā́` – ā́ (invariable; LP) ‖ `vájram` – vájra- (nominal stem; ACC.M.SG) ‖ `bāhvóḥ` – bāhú- (nominal stem; LOC.M.DU) ‖ `hárim` – hári- (nominal stem; ACC.M.SG)
+5a	índro haryántam árjunaṃ	`índraḥ` – índra- (nominal stem; NOM.M.SG) ‖ `haryántam` – √hary- (root; ACC.M.SG.PRS.ACT.PTCP.DEN) ‖ `árjunam` – árjuna- (nominal stem; ACC.M.SG)
+5b	vájraṃ śukraír abhī́vr̥tam	`vájram` – vájra- (nominal stem; ACC.M.SG) ‖ `śukraíḥ` – śukrá- (nominal stem; INS.M.PL) ‖ `abhī́vr̥tam` – √vr̥- 1 (root; ACC.M.SG.PTCP-ta.LP)
+5c	ápāvr̥ṇod dháribhir ádribhiḥ sutám	`ápa` – ápa (invariable; LP) ‖ `avr̥ṇot` – √vr̥- 1 (root; SG.3.IND.IPRF.ACT) ‖ `háribhiḥ` – hári- (nominal stem; INS.M.PL) ‖ `ádribhiḥ` – ádri- (nominal stem; INS.M.PL) ‖ `sutám` – √su- (root; ACC.M.SG.PTCP-ta)
+5d	úd gā́ háribhir ājata	`út` – úd (invariable; LP) ‖ `gā́ḥ` – gáv- ~ gó- (nominal stem; ACC.M.PL) ‖ `háribhiḥ` – hári- (nominal stem; INS.M.PL) ‖ `ājata` – √aj- (root; SG.3.IND.IPRF.MED)

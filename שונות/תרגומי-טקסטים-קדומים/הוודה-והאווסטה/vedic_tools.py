@@ -81,11 +81,13 @@ P6 = "6-המהמר-והצפרדעים"
 P7 = "7-ריגוודה-ספר-ז"
 P8 = "8-קטהה-אופנישד"
 P9 = "9-ריגוודה-ספר-ב"
+P10 = "10-ריגוודה-ספר-ג"
 PROJECT_TITLES = {P1: "מזמורי הראשית של הריגוודה", P2: "אינדרה והנחש (ריגוודה א 32)", P3: "המבול ההודו־איראני",
                   P4: "העקדה: שונהשפה, הקרבן המחליף, נצ'יקטס", P5: "יאמה והמתים", P6: "המהמר והצפרדעים",
                   P7: "הריגוודה, ספר ז: ספר בית וסישטהה",
                   P8: "קטהה אופנישד: נצ'יקטס אצל המוות",
-                  P9: "הריגוודה, ספר ב: ספר בית גְּרִטְסַמַדָה"}
+                  P9: "הריגוודה, ספר ב: ספר בית גְּרִטְסַמַדָה",
+                  P10: "הריגוודה, ספר ג: ספר בית וִישְׁוָמִיטְרָה"}
 # a project whose clean translation also embeds a text that lives in another project (Round 7 run 1: RV 7.103, the
 # frogs, moved into the whole Book 7; project 6 keeps its title and embeds it)
 PROJECT_EMBEDS = {P6: ["RV10.34", "RV7.103"],
@@ -158,16 +160,29 @@ assert len(B2_ADDRESSEES) == 43
 for _h in range(1, 44):
     UNITS[f"RV2.{_h}"] = (P9, f"ריגוודה ב {_heb_num(_h)}: {B2_ADDRESSEES[_h - 1]}", "rv", (2, _h))
 B2_KEYS = [f"RV2.{_h}" for _h in range(1, 44)]
-BOOK_KEYS = {7: B7_KEYS, 2: B2_KEYS}
-# the whole-book projects: their name rows "(RV 7)" / "(RV 2)" and the stricter short licences apply to both
-RV_BOOK_PROJECTS = (P7, P9)
+# Rigveda Book 3 whole (Round 9 run 1): the addressees of VedaWeb's TEI (the Anukramaṇī), as fallback headings
+B3_ADDRESSEES = (
+    "אל אגני|אל אגני ואישוונרה|אל אגני ואישוונרה|שיר האפרי|אל אגני|אל אגני|אל אגני|אל עמוד הזבח|אל אגני|אל אגני|"
+    "אל אגני|אל אינדרה ואגני|אל אגני|אל אגני|אל אגני|אל אגני|אל אגני|אל אגני|אל אגני|אל אגני או אל כל האלים|"
+    "אל אגני|אל אגני|אל אגני|אל אגני|אל אגני|אל אגני ואישוונרה|אל אגני|אל אגני|אל אגני|אל אינדרה|"
+    "אל אינדרה|אל אינדרה|וישוומיטרה והנהרות|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|"
+    "אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|אל אינדרה|"
+    "אל אינדרה|אל אינדרה|אל אינדרה|אל כל האלים|אל כל האלים|אל כל האלים|אל כל האלים|אל האשווינים|אל מיטרה|אל הרבהו ואינדרה|"
+    "אל השחר|לאלים שונים").split("|")
+assert len(B3_ADDRESSEES) == 62
+for _h in range(1, 63):
+    UNITS[f"RV3.{_h}"] = (P10, f"ריגוודה ג {_heb_num(_h)}: {B3_ADDRESSEES[_h - 1]}", "rv", (3, _h))
+B3_KEYS = [f"RV3.{_h}" for _h in range(1, 63)]
+BOOK_KEYS = {7: B7_KEYS, 2: B2_KEYS, 3: B3_KEYS}
+# the whole-book projects: their name rows "(RV 7)" / "(RV 2)" / "(RV 3)" and the stricter short licences apply to all
+RV_BOOK_PROJECTS = (P7, P9, P10)
 
 
 def expand_keys(ks):
     """'RV7' (or 'B7') = all of Book 7; 'RV7.1-17' = a range of its hymns; the same for Book 2 ('RV2', 'RV2.1-10')."""
     out = []
     for k in ks:
-        m = re.fullmatch(r"(?:RV|B)([27])(?:\.(\d+)-(\d+))?", k)
+        m = re.fullmatch(r"(?:RV|B)([237])(?:\.(\d+)-(\d+))?", k)
         if m:
             bk = int(m.group(1))
             a, b = (int(m.group(2)), int(m.group(3))) if m.group(2) else (1, len(BOOK_KEYS[bk]))
@@ -362,8 +377,11 @@ def _write_tsv(path, rows, head):
             fh.write("\t".join(r) + "\n")
 
 
-def cmd_convert():
+def cmd_convert(only=None):
+    """Every unit, or only the KEYs given (Round 9 run 1: `convert RV3` – a fresh VM need not have every TEI)."""
     for key, (proj, title, kind, spec) in UNITS.items():
+        if only and key not in only:
+            continue
         if kind == "rv":
             n = convert_rv(*spec)
         elif kind == "titus_sb":
@@ -747,7 +765,7 @@ def check_line(key, lab, heb, body, out, first_seen=None):
             out.append(f"RESERVED {key} {lab}: «{m.group(0).strip()}» – {why}\n    {heb}\n    src: {src}")
             bad += 1
     for rx, hv, hp, star, what in names():
-        if not re.search(rx, srcf) or ("(RV)" in what and UNITS[key][2] != "rv") or (("(RV 7)" in what or "(RV 2)" in what) and UNITS[key][0] not in RV_BOOK_PROJECTS) \
+        if not re.search(rx, srcf) or ("(RV)" in what and UNITS[key][2] != "rv") or (re.search(r"\(RV \d+\)", what) and UNITS[key][0] not in RV_BOOK_PROJECTS) \
                 or ("(AB)" in what and UNITS[key][2] != "titus_ab"):
             continue
         if not _heb_has(plain, hp):
@@ -1310,10 +1328,10 @@ def main():
     if not a:
         sys.exit(__doc__)
     cmd, rest = a[0], [x for x in a[1:] if not x.startswith("--")]
-    if cmd in ("verify", "build"):
+    if cmd in ("verify", "build", "convert"):
         rest = expand_keys(rest)
     if cmd == "convert":
-        return cmd_convert()
+        return cmd_convert(rest)
     if cmd == "units":
         return cmd_units()
     if cmd == "data" and rest:
