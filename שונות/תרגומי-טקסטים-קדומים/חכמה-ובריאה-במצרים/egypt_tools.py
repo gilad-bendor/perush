@@ -733,7 +733,7 @@ RESERVED = [
     (W + alt("סולם", "הסולם", "סולמות", "בסולם", "סולמו") + E, r"mꜣq,t|mꜣq\.t|mꜣqt|tla67390", "סֻלָּם only for mꜣq.t 'ladder' [equivalent Gen 28:12]", UNAS),
     # --- the Instructions (renderings §14; Round 9 run 4): Proverbs', Qohelet's and the prophets' own words ---
     (W + alt("זר", "זרה", "זרים", "זרות", "הזר", "הזרה", "הזרים", "מזרה") + E, None, "זָר / זָרָה never (Prov 2:16, 5:3, 7:5 `אִשָּׁה זָרָה`): ḏrḏr = `נָכְרִי` (corpus), rwtj = `חוּץ` (§14.3)", INSTR),
-    (W + alt("כסיל", "הכסיל", "כסילים", "הכסילים", "אויל", "האויל", "אוילים", "אוולת", "סכל", "הסכל", "סכלות", "כסילות") + E, None, "Proverbs' and Qohelet's fools never: ḫm = `בּוּר` (§14.3)", INSTR),
+    (W + alt("אויל", "האויל", "אוילים", "אוולת", "סכל", "הסכל", "סכלות") + E, None, "Proverbs' and Qohelet's other fools never: ḫm = `בּוּר`; wḫꜣ = `כְּסִיל` (the corpus's §5.2 licence, AM) (§14.3)", INSTR),
     (W + alt("חכם", "החכם", "חכמים", "החכמים", "חכמה", "החכמה", "חכמתו", "חכמתך", "חכמי", "חוכמה", "החוכמה", "חוכמתו", "חוכמתך", "התחכם") + E, r"sꜣꜣ|sjꜣ|\bsꜣ\b|tla126220|tla126160|tla126230|šsꜣ", "חָכָם / חָכְמָה only for sꜣꜣ / šsꜣ 'wise, skilled' [equivalent Prov passim] (rḫ = `יָדַע`, rḫ-ḫ.t = `יוֹדֵעַ־דָּבָר`) (§14.3)", INSTR),
     (W + alt("הבל", "ההבל", "הבלים", "הבלי", "הבלו") + E, None, "הֶבֶל never (Qoh 1:2) (§14.3)", INSTR),
     (W + alt("חדש", "חדשה", "חדשים", "חדשות", "החדש", "החדשה", "החדשים", "החדשות", "מחודש", "מחודשים", "התחדש", "חידש") + E, r"mꜣw|mꜣ,w|mꜣ\.w|tla66150|tla66940|tla66830|tla66820|tla95000|\bꜣbd", "חָדָשׁ only for mꜣw 'new' (Qoh 1:9–10 `אֵין כָּל חָדָשׁ`: Khakheperreseneb's 'new words') (§14.3)", INSTR),

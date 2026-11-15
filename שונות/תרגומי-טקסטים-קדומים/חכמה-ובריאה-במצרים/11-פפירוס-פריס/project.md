@@ -268,5 +268,98 @@ None repeated verbatim. Echoes inside PH: 12,6 ≈ 5,12 (`להדוף … ברג�
 - The gate for `סרב` misses the 2nd-person prefix `ת` (`תסרב` passed in KG 1,10): the prefix class `[ובלמהכש]` lacks
   the imperfect prefixes `אתינ`. Reported to the coordinator, not edited.
 
+## PH 15,1–19,9 (Round 9 run 4, translator 1, part 3: the end of Ptahhotep)
+
+### Scope
+63 entries (`15,1`–`19,9`): the end of the bread maxim, kindness to friends, punishment and teaching, the cheerful wife,
+then the **epilogue on hearing** (15,8–17,13), the son as example and speech before the officials (17,13–19,6), the
+vizier's 110 years and the colophon (19,6–19,9). PH is now complete (195 entries, no placeholder). Obscure: 15,7–15,8
+(`hp.wj`, `ꜥqꜣꜣ`), 15,13 (`mꜥn?`), 18,5 (an omitted word).
+
+### Sources consulted
+As before; `tr PH 15,1 19,9` read after drafting, quoted from the output.
+
+### Decisions
+- **Coordinator's ruling applied first:** msd.t `שנואה` (PH 11,7 changed from `תועבה`); msdj `השנוא` (16,7 "the one hated
+  by god").
+- **The colophon (19,9)** = renderings §14.5.1 byte for byte: `בא הוא, מתחילתו עד קצו, כפי שנמצא בכתב.` (+ `[…]`).
+- **The epilogue on hearing:** every form of sḏm `שמע` (16,3–16,9 repeat it some twenty times: `השמיעה`, `השומע`,
+  `שומע`, `לשמוע`); sḏm.j (tla150680) `השומע`; sḏm.yw `השומעים` (18,10); sḏm.tj=sn `השומעים` (18,4; 19,1; 19,3). The
+  repetition is kept word for word – it is the form of the passage.
+- wḫꜣ "fool" (tla49150) `שוטה` (the INSTR gate bars `כסיל` / `אויל`); rḫ-ḫ.t `יודע־הדבר` (§14.3); jmꜣḫ `כבוד`,
+  jmꜣḫ.y `נכבד` (AM); bꜣ `בָּא` ★; nḥḥ `נצח`, ḏ.t `עד` (15,12); jsf.t `עָוֶל` (18,3); grg "lie" `כזב` (§11); sbꜣ.w
+  (tla131330) `מוסר` (as sbꜣ.yt); šms.w-Ḥr `מלווה־חוֹרוּס`; ḏfꜣ/ꜥq.w "food, bread" `לחם` (17,7); smꜣwj `חידש` (pairs with
+  4,3 `מתחדשת`); jṯj `לקח` (6,6; 18,7; 19,7); ḫsf `ייסר` (15,5); ꜣḫ with no comparison marked `[סטייה מן הנוסחה]`
+  (15,4; 16,3). Verifier: `מאת` (19,5) → `בידי` (the Maat trap).
+
+### Open decisions for the user
+- 15,9 `rwj sḫꜣ=sn m rʾ n rmṯ`: "their memory wanders from mouth to mouth" (with the TLA: they are quoted) or "does not
+  depart from the mouth" (the older reading, which needs a negation the text lacks).
+- 15,13 `mꜥn?` "joins (?) heart and tongue" (TLA "verwebt") – the reading is marked doubtful by the edition.
+- 18,7 a consistency rule (TLA) or the preservation of a text (Deut 4:2) – tagged [divergence].
+
+### Progress log
+- 2026-11-16: 11,7 msd.t revised; 15,1–17,13 drafted, `tr` read, corrected; 18,1–19,9 drafted, `tr` read, corrected;
+  placeholder removed; `fill`, `build KG PH`, `verify KG PH --strict` 0 problems; quotes 0 (Ex 20:11 numbering, Deut 4:40
+  wording fixed).
+- Pass (a): from the TLA – 15,1 (ḥntj passive "what one craves", sꜣhh "the abased"); 15,2 "do not make him one near
+  you"; 15,3 (wnn ḫ.t=k as a result clause); 15,8 (sjp / ꜥqꜣꜣ left as `…?`); 15,9 (no negation); 15,11; 15,13–16,1
+  ("joins heart and tongue; exact are his lips"); 16,10–16,11 ("a pleasant son is a master of hearing"); 17,4 (mḏd);
+  18,5 (`הוא גם` closes 18,4); 18,7 ("do not take a word away and bring it back"); 18,12 hrp "submerge"; 18,14–19,1 the
+  two sayings; 19,3 `עליך`; 17,13 "be an example" as a new command, not a quotation.
+- Pass (b): `השמיעה` / `השומע` uniform through 16,3–17,10; `מופת` (bjꜣ) 5,5 / 15,5 / 17,13; `צעדיו` (nmt.t) 10,4 /
+  17,2 / 19,6; `נעלה` (tnj) 9,1 / 17,2 / 19,2; `עושה האמת` 16,2 / 19,5; `עלי אדמות` (tp tꜣ) ×4.
+- Pass (c): the built `translation-PH.rtl.md` read through; quotation marks of 16,10–16,11, 18,14–19,1, 19,3–19,5
+  balanced.
+
+### The text on its own terms (Ptahhotep as a whole)
+- **Old age frames the book** (4,2–5,2; 16,6; 19,7): it opens with the body failing ("the good has become bad") and ends
+  with 110 years as the reward of Maat – the same old age seen from inside and from its end.
+- **Hearing is the whole of education** (5,3–5,5; 15,8–17,13): a chain of hearers from the gods to the ancestors, to the
+  vizier, to his son and his son's children; the epilogue repeats sḏm like an incantation; "it is the heart that makes
+  its owner a hearer or a non-hearer" (16,7–16,8).
+- **Silence as power** (5,13–5,14; 7,5; 11,9–11,10; 12,1): the silent man defeats his equal, wins "awe"; yet "do not be
+  silent" when speech is due – speech is "harder than any craft" (11,11).
+- **Maat is great and lasting** (6,5–6,10; 10,4; 16,2; 19,5–19,8): undisturbed since Osiris, outlasting greed; "what god
+  commands is what happens".
+- **Greed as an illness** (10,1–10,6): it splits fathers, mothers, brothers, wife and husband; the greedy man has no tomb.
+- **The table, the ka and food** (6,11–7,3; 12,7–12,9): the host's ka gives; "food makes love grow"; the kꜣ / kꜣ.w pun.
+- **The household** (10,8–10,12; 15,6–15,8): the wife as a "useful field" (ꜣḥ.t / ꜣḫ.t), fed, clothed, anointed – and
+  kept from power; the cheerful, plump wife not to be sent away.
+- **The Nile as the image of fate** (6,6; 8,1–8,2; 11,4; 18,8): the venture that never lands, the boatless man, the
+  harbour of peace, "the rope in you".
+- **Fate and freedom** (7,12–8,1; 16,7): harm "commanded in the womb" beside the heart that "makes its owner".
+- **Writing as immortality** (15,9–15,12; 16,12; 19,9): the sayings will "not perish in this land for ever", memory "in
+  the mouth of the living"; the knower "provisions his ba".
+- **Consent** (14,4–14,6, on the TLA's reading) – a rare ancient statement that the other's resistance forbids the act.
+
+### Key parallels (Ptahhotep as a whole)
+- 19,7 `rnp.t 110` ↔ Gen 50:26 `בֶּן מֵאָה וָעֶשֶׂר שָׁנִים` (Joseph; also Josh 24:29): the Egyptian ideal life span given
+  to the Bible's Egyptian vizier [equivalent] – the most concrete Egyptian contact in the text.
+- 6,10 ↔ Prov 19:21, 16:9: human schemes against the god's plan [equivalent].
+- 16,3–16,9 ↔ Prov 1:8, 15:31; Ex 24:7: hearing as obeying and doing [equivalent].
+- 16,6 ↔ Ex 20:11: the son's reward is long life (here "old age", no divine command) [equivalent].
+- 6,11 ↔ Prov 23:1 (the ruler's table), with KG 1,3–1,9 ↔ Prov 23:20–21 [equivalent].
+- 4,3–5,2 ↔ Qoh 12:3; 2 Sam 19:36 (old age by the senses) [equivalent].
+- 7,9 ↔ Qoh 11:9 ("follow your heart") [equivalent]; 10,9 ↔ Qoh 9:9 [equivalent].
+- 7,12–8,1 ↔ Deut 21:18 [divergence]; Ps 58:4 [equivalent].
+- 10,1–10,6 ↔ Prov 15:27; Ex 20:13 [equivalent].
+
+### Lines shared with other texts
+- 19,9 = SI B311 (the colophon, byte for byte; §14.5.1); KG 2,9 has its first words.
+- 12,6 ≈ 5,12; 17,2 / 19,6 ≈ 10,4 (`צעדיו`).
+
+### Proposals for the shared renderings
+1. wḫꜣ (tla49150) `שוטה` in every Instruction (the INSTR gate bars Proverbs' fools; `renderings.md` §5.2 still licenses
+   `כסיל` for wḫꜣ in the older texts – a contradiction for the finalization).
+2. jmꜣḫ (tla25060) `כבוד`, jmꜣḫ.y (tla25090) `נכבד`; s.t jmꜣḫ `מקום הכבוד` (the tomb).
+3. sḏm.j (tla150680) and sḏm.w both `השומע` (the noun / the participle).
+4. The colophon string: also for KH, NH, AN (§14.4).
+5. šms.w-Ḥr (tla851311) `מלווה־חוֹרוּס`.
+
+### Lessons for the guidelines
+- A passage built on one word (the epilogue's sḏm) is the strongest case for "one lemma, one Hebrew": any variation
+  (`ציית`, `האזין`) would have broken the incantation the Egyptian builds.
+
 ## Parallels index
 (generated from the הקבלה bullets by `../build_parallels_index.py`)
