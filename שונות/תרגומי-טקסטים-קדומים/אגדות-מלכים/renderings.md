@@ -821,6 +821,104 @@ urāk*, *innaḫū*, *…anwanda*, *uzakki*, *ušaqqûšunu*) wait for ORACC's e
 SAGA/DU10, NUMUN, ALAM) and `צלמי`. **All four projects drafted: `verify AN AK RE ID --strict` OK (1,651 entries).**
 
 
+## 14. Ur III kingship: the long Šulgi hymns, the Death of Ur-Namma, the Sumerian King List whole (projects 12–14; Round 9 run 2, 2026-11-15) – fixed before the first part
+Fixed by the coordinator from the bases (ETCSL 2.4.2.02–05, 2.4.2.24, 2.4.1.1, 2.1.1, 2.1.2; ORACC Q000396–399, Q000416,
+Q000386, Q000371–372, lemma + morph) and the earlier corpora. The rows are drafts for "look for", never "translate as"
+(guidelines §5.2 ★): the translator reads the transliteration first, may revise a row at its first occurrence with the
+reason in `project--<part>.md`; after the merge the row binds. Tool: `ur3_tools.py` (keys SHB SHC SHD SHE SHX, UN, KL RL).
+
+### 14.0 What binds, in this order
+1. **The Šulgi hymns (project 12)** are royal hymns of the same school as Šulgi A, which is translated in the school
+   canon (`../קנון-בית-הטבלה/1-העשירייה/annotated-SA.rtl.md`): **`../קנון-בית-הטבלה/renderings.md` binds them whole**
+   (names §1, key terms §2, the formulas §3 and the merged proposals §5: self-praise *X-me-en* = `X אני`, the doxology
+   `X – תְּהִלָּה!`, the fitness, wisdom, justice and school words), and its Psalm gates apply (`ur3_tools.py` gives the
+   hymns the canon's RESERVED_C). Then this corpus's §12 (the Uruk cycle: Lugalbanda, Ninsumun, Kulaba, the journey and
+   messenger formulas) and the temple corpus (royal and building words).
+2. **The Death of Ur-Namma (project 13):** the netherworld corpus (`../העולם-התחתון/renderings.md`: *kur* = `הָאָרֶץ`,
+   never `שְׁאוֹל`; Ereškigal, Nergal, Namtar, the cult of the dead), the Death of Bilgameš (`../אפוס-גילגמש/renderings.md`
+   §23: a king's death, his gifts to the netherworld's gods – the closest text; the refrain `X – שכב, ולא יקום עוד.`),
+   the city laments (`../קינות-על-ערים/renderings.md`: the lament words, *ud* `סְעָרָה`, *er₂* `דִּמְעָה`, *i-lu* …), and
+   Ur-Namma's own law prologue (`../חוקים-ובריתות/6-…`: his name and epithets, the orphan/widow formula).
+3. **The King List and the Rulers of Lagaš (project 14):** the flood references (`../סיפורי-המבול-המסופוטמיים/6-אזכורי-המבול/`
+   §1 = KL 1–47, §4 = RL 1–31, 99–108, 117–124) bind their formulas, and **their lines are already in the skeletons**
+   (copied with their apparatus): revise a copied line only by the later rules, and then the coordinator revises the
+   flood references identically (`ur3_tools.py verify KL|RL` checks the identity).
+
+### 14.1 Names (★ = vocalized at every occurrence; checked by TRAPS)
+| Source | Hebrew | Notes |
+|---|---|---|
+| Šulgi; Ur-Namma; Amar-Suen; Šu-Suen; Ibbi-Suen | שׁוּלְגִּי; אוּר־נַמָּה (plain `אור־נמה`, 55× in the law corpus; `אורנמה` is a trap); אֲמַר־סוּאֵן; שׁוּ־סוּאֵן; אִבִּי־סוּאֵן | |
+| Ninsumun; Lugalbanda; Bilgameš (Šulgi's "brother") | נִינְסוּמוּן; לוּגַלְבַּנְדָּה; בִּילְגָּמֶשׁ (the Sumerian poems' form, 71×) | §12; `../אפוס-גילגמש/renderings.md` §23 |
+| Urim ★; Nibru; Unug; Kulaba; Kiš ★; Lagaš; Girsu; Eridug; Isin; Larsa; Akšak; Agade ★; Mari ★; Ḫamazi | אוּר; נִיפּוּר; אוּרוּךְ; כּוּלַבָּה; כִּישׁ; לַגַשׁ; גִּירְסוּ; אֶרִידוּ; אִיסִין; לַרְסָה; אַכְשַׁךְ; אַגָּדֶה; מָארִי; חַמָזִי | the canon §1, the flood references; `לגש` unvocalized reads "to approach" – vocalize at the first occurrence per entry block |
+| Elam; Anšan; Marḫaši; Simaški; Gutium; Martu (Amorites); Subir | עֵילָם [cognate, Gen 10:22]; אַנְשָׁן; מַרְחַשִׁי; שִׁימַשְׁכִּי; גּוּטִיּוּם; מַרְתּוּ; סוּבִּיר | `מרתו` (Martu) reads "his bitterness": vocalize |
+| Nanna ★; Suen; Ningal; Utu ★; Inana ★; An ★; Enlil; Ninlil; Enki; Ninḫursaĝa; Nisaba; Ninurta; Nuska | as the canon §1 | |
+| Ereškigal ★; Nergal; Namtar; Ninazu; Ningišzida; Dumuzid; Gilgameš in the netherworld (*bil₃-ga-mes*); Ḫuškia; Nungal; Ninĝišzida's throne-bearer | אֶרֶשְׁכִּיגַל; נֶרְגַּל; נַמְתָּר; נִינְאָזוּ; נִינְגִּישְׁזִידָה; דּוּמוּזִי; בִּילְגָּמֶשׁ; חוּשְׁכִּיָּה; נוּנְגַּל | the netherworld corpus |
+| the King List's kings | transcribed from ETCSL as the flood references do (`אֲלוּלִים`, `אֶנְמֶנְלוּאַנָּה`), vocalized at the first occurrence; a biblical-looking name is a trap to note, never assimilated (Etana `אֵתָנָה`, Enmerkar `אֶנְמֶרְכַּר`, Lugalbanda, Dumuzid, Gilgameš `בִּילְגָּמֶשׁ`, Sargon `סַרְגּוֹן`, Ku-Baba `כּוּ־בָּבָא`) | names already fixed in other projects keep their form |
+The rest: transcribed from the base and recorded in the part's proposals.
+
+### 14.2 Formulas (the first copy fixes them; checked after the merge)
+| Source | Hebrew | Where |
+|---|---|---|
+| KL *mu N i₃-ak*; *N lugal / mu-bi N ib₂-ak*; *X{ki} ba-šub*; *nam-lugal-bi Y-še₃ ba-de₆*; *nam-lugal an-ta ed₃-de₃-a-ba* | `עשה N שנה.`; `N מלכים – / עשו שנותיהם: N.`; `X נפלה,`; `מלכותה – לY / הובלה.`; `כאשר המלוכה ירדה מן השמים,` (the flood references, binding) | KL passim |
+| KL *X{ki} {ĝiš}tukul ba-an-sag₃* (a city "struck with weapons") | the first copy (KL 93) fixes it | KL passim |
+| KL *X dumu Y-ke₄* "X, son of Y"; *lu₂ …* epithets ("a shepherd", "a fisherman") | the first copy fixes them | KL |
+| the hymns' self-praise *X-me-en*; *ĝe₂₆-e* | `X אני`; `אני` (canon §5.1) | SHB–SHX |
+| the doxology *X za₃-mi₂* | `X – תְּהִלָּה!` | the hymns' ends |
+| *gu₃ … de₂*; *inim … gi₄* | `פונה אל`; `משיב … דבר` | passim |
+| UN's lament refrains (Ur-Namma's laments 166–196) and the gift list (each god's gift) | the first copy fixes them; command ↔ execution in the same words and order (§5.2) | UN |
+
+### 14.3 Key terms (pre-set; grep before changing)
+*nam-lugal* `מלוכה` in KL (the flood references), `מלכות` in the hymns (canon §2) – kept by text, noted; *bala*
+`תְּקוּפָה` (harmonization 2026-11-09); *lugal* `מלך`; *ensi₂* `מושל`; *sipad* `רועה`; *a-ma-ru* `מבול` [equivalent]
+(gated: only *a-ma-ru*); *ki-mu-ra* / *ki-maḫ* `קבר` (gated: the burial); *kur* `הָאָרֶץ` (the netherworld; never
+`שְׁאוֹל`); *gidim* `אִט` ★; *ki-sikil* `עַלְמָה`; *dam* `בן־זוג` / `רעיה`?: the translator of SHX decides
+(gated: `רעיה`, `חתן`, `דודי` only with *dam*, *nitalam*, *e₂-gi₄-a*, *mu-ud-na*); *e₂-dub-ba-a* `בית הטבלה`;
+*dub-sar* `סופר`; *maš₂-šu-gid₂-gid₂* `הַבּוֹחֵן` (= *bārû*, the wisdom corpus); *eme* `לָשׁוֹן` (§0.3); *kaskal* `דרך`;
+*danna* `בֵּרוּ` ★ (Gilgameš; the double hour of Šulgi's run).
+
+### 14.4 Reserved and gated (RESERVED_U in `ur3_tools.py`, every key; the hymns also RESERVED_C of the canon)
+- **Never in a `>` line** (apparatus only): `תולדות` (Gen 5:1), the begetting verbs `ויחי` / `ויולד` / `הוליד`
+  (Gen 5; 11 – the King List has "son of", never "begot"), `ממלכה` (`וַתְּהִי רֵאשִׁית מַמְלַכְתּוֹ בָּבֶל` (בראשית י:י)), `מלאך`, `נביא` /
+  `נבואה`; and the canon's Psalm words (`הלל`, `משיח`, `צדק`, `חסד` …) in every key.
+- **Gated:** `מבול`, `אחר(י) המבול` only *a-ma-ru*; `ציד` / `צייד` only a hunting word (Gen 10:9 `גִּבֹּר צַיִד`: KL
+  has no hunter, Šulgi B hunts); `קבר` / `קבורה` only *ki-mu-ra*, *ki-maḫ*; the Song of Songs' `דודי`, `רעיתי`, `חתן`
+  only the marriage words (SHX; `כלה` is free: it is also "finished"); `גיבור` (the canon's gate: *ur-saĝ*, *kalag* …).
+- **Traps:** Ur-Namma `אוּר־נַמָּה` (written as one word `אורנמה`, "Ur-Namma" reads as "light"), the canon's (Keš,
+  Nanna, Agade, Dagan) and the corpus-wide ones (Inana, Utu, Urim, An, Sumer, *me*).
+
+### 14.5 What to look for ("look for", never "translate as")
+- **The King List:** kingship "descending from heaven" and passing from city to city (Gen 10:8–12, Nimrod's kingdom);
+  the reign lengths shrinking after the flood (Gen 5; 11:10–32; Ps 90:10); the epithets of humble origins (a shepherd,
+  a fisherman, a cupbearer, the tavern-keeper Ku-Baba – 1 Sam 9; 2 Sam 7:8; Amos 7:14); Etana "who went up to heaven"
+  (§10); Gilgameš "whose father was a phantom"; a city "struck with weapons" and kingship carried away (Dan 2:21;
+  4:14, the Most High rules the kingdom of men); the single line of kingship that ignores parallel dynasties – the list as
+  ideology (the books of Kings' synchronisms; 1 Kgs 14:19–20 summary formulas `וַיִּמְלֹךְ … שָׁנָה`, ↔ *mu N i₃-ak*).
+- **The Rulers of Lagaš:** mankind without tools after the flood (Gen 9:20; 4:20–22); the rulers who dig canals.
+- **The Šulgi hymns:** the king's run Nibru–Urim in one day (1 Kgs 18:46; 2 Sam 18:19–27); the king at school, who knows
+  the scribal art, music, languages, omen-reading (1 Kgs 5:9–14 Solomon; Dan 1:4, 17); the king as judge (1 Kgs 3:16–28;
+  Ps 72); the lion hunt (1 Sam 17:34–37); the king's divine birth and his "brother" Bilgameš (Ps 2:7; 2 Sam 7:14); the
+  sacred marriage with Inana in Uruk (SHX; the Song of Songs [divergence]; Ps 45); the hymn that asks to be recited for
+  ever (Ps 72:15–17; Ps 89).
+- **The Death of Ur-Namma:** the king who dies in battle and is "abandoned like a broken jar" (Jer 22:28; 2 Kgs 23:29–30
+  Josiah); the burial with his donkeys and chariot, the gifts to each netherworld god (1 Sam 28; Isa 14:9–20, the kings
+  of Sheol who greet the dead king); the king's own lament from below – his house unfinished, his wife unembraced (Deut
+  20:5–7; 28:30); the justice of the gods questioned (Job; Eccl 9:2); Ur-Namma made a judge in the netherworld beside
+  Gilgameš.
+
+### 14.6 The plan of the parts (one agent at a time; the coordinator merges proposals into §14.7 after each part)
+| Part | Lines | Translator |
+|---|---|---|
+| KL1 | the King List 48–431 with A–D (388 new; 1–47 copied) | translator A |
+| RL1 | the Rulers of Lagaš (106 new; 49 copied) | A, resumed |
+| SH1 | Šulgi B (385) | translator B |
+| SH2 | Šulgi C (253) + D (262) | B, resumed |
+| SH3 | Šulgi E (221) + X (155) | B, resumed |
+| UN1 | the Death of Ur-Namma, both versions (396) | translator C |
+Then independent fidelity reviewers (as time allows: the hymns; UN; KL + RL), and the coordinator's consistency pass.
+
+### 14.7 Merged from the parts
+(The coordinator adds one record per part.)
+
 ## Changelog
 - 2026-11-07: §12.6.1–§12.6.5 merged after each part (LC1, LC2, LZ1, LZ2, ES); *alan* reversed to `פֶּסֶל` (§12.6.3).
 - 2026-11-07: §12 the Uruk cycle (projects 5–7: LC, LZ, ES) – names, grammar, formulas, reserved and gated words, the plan of the parts; fixed by the Round 6 run 3 coordinator before the first part.
