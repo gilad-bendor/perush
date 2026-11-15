@@ -176,5 +176,97 @@ Shupak's Hebrew not consulted. Precedents through `lexmap`, `lex`, `freq`, `grep
 - The loan-word gates fire inside ordinary words (`לבסוף` ⊃ `סוף`, `הופרעה` ⊃ `פרעה`, `מעולם` ⊃ `עולם`): translators of
   the Instructions should expect these in narrative frames and choose `באחרונה`, `נתערערה`, `מימיו לא`.
 
+## PH 9,1–14,13 (Round 9 run 4, translator 1, part 2)
+
+### Scope
+76 entries (`9,1`–`14,13`, with the TLA's `9,12-13`; there is no `13,7`), the middle maxims: the leader's lasting deed,
+the petitioner, the women of another man's house, greed (ꜥwn-jb) as an incurable illness, the wife, the confidants,
+rumour and the "hot-bellied", silence and speech in council, the high heart and the hot heart, the great man's ka and
+food, the judge and the balance, the newly rich, the superior, the neighbour, the forbidden intercourse, testing a friend,
+the bread that goes out of the storehouse. Well preserved; 10,12, 11,7–11,8 and 12,5 are obscure (marked `?` / *italics*).
+`<!-- טרם תורגם: 15,1–19,9 -->` stays at the end.
+
+### Sources consulted
+As for part 1: `data`, `lexmap`, `lex`, `grep`; `tr PH 9,1 14,13` after drafting each third, quoted only from the output.
+
+### Decisions
+- Kept from part 1 and §14.5.1: sḏm `שמע` (9,3; 9,7; 12,6 "who hears his heart"; 12,13; 14,2 `עד שתישמע`), gr `שתק`
+  / `שתיקה`, ꜥwn-jb `בצע־לב` and the verb ꜥwn `בצע` (10,1–10,8), ḥnti̯ `להוט`, skn (verb tla146840) `תאווה` (9,13),
+  ḏꜣjs `התווכח` (14,8), sḫr `עצה` (but 9,13 "matter": see Proposals), ḫsf `הדף` (12,6, aligned with 5,12) / `ייסר`.
+- New recurring words: ḫnms "friend" `רֵעַ` (★, §14.3), ḫnms "friendship" (tla118250) `רֵעוּת`, ḫnms verb (tla118240)
+  `התרועע` (AM); ꜥq (tla41190) "confidant" `מקורב`; spr.w `המבקש`, spr.t `בקשה`, spr verb `ביקש`; gnf `דחה`; ẖr-jw `העשוק`;
+  ḥm.t `אשה`; mrḥ.t `משחה` (HC, NU9); ꜣḥ.t `שדה`; tꜣ-ẖ.t (tla851302) `רותח־הבטן` and tꜣ jb `רותח־הלב` (BD's tꜣ `רותח`;
+  `חם` is gated to šmm); qb ẖ.t `קר־הבטן`; qꜣi̯ jb `ירום לב` (distinct from ꜥꜣi̯ jb `יגדל לב`); mskj `שמועה`; sḥ `מועצה`;
+  wḏꜥ `דן`, wḏꜥ.t `הכרעה`, wḏꜥ (noun) `דין` (`משפט` never); qnb.t `מועצת־השופטים` (AM); zꜣ-z `בן־איש`; jtn.w `יריב`
+  (jtn verb `התנגד`); šnt `רב`; sꜣḥ.w `שכנים`; jm(,j)t-pr `צוואה` (NU1 has `שטר־הבית`: proposal below); mẖr `מחסן` (AM);
+  psš.t `חלוקה`; kꜣ.w "food" `מזון` (the kꜣ / kꜣ.w pun noted); sꜣꜣ "wisdom" `חכמה` (12,10, the gated licence); nk `שכב
+  עם` (§11); wjn `מאס` (see Problems).
+- Verifier-driven: `סרב` → `מאס` (also KG 1,10), `מאזניים` (13,2 mꜣd.w) → `זרועות־המוט`, `צדקתו` → `ישרותו` (ꜥqꜣ),
+  `סכלות` → `שטות` (jmj), `השחית` → `הזיק` (ḥḏj, as 6,3 / 7,9), `גזר` → `קבע` (šꜣj). Using the 2026-11-16 exemptions:
+  `לבסוף` restored in KG 2,4, `מעולם לא` in PH 6,6, 6,9, 14,11 (n pꜣu̯, one Hebrew).
+
+### Open decisions for the user
+- 9,13 `whh m skn`: "he who fails through lust" (chosen) or the TLA's "he who lacks lust – does not every matter succeed?".
+- 14,4 `nk ḥm.t ẖrd`: "a woman (or) a child" with the TLA's reading of consent ("resistance to the semen on the
+  forehead"), against "a woman who is a child" or a ban on intercourse with a boy.
+- 12,6 `r ḥn ꜣ` "will come to want" (dictionary) or the TLA's "will say: if only!".
+
+### Progress log
+- 2026-11-16: drafted in three blocks (9,1–10,8; 10,9–12,13; 13,1–14,13); after each block `tr` was read and the lines
+  corrected; `fill`, `verify PH`, `build KG PH`, quotes.
+- Pass (a) fidelity, from the TLA comparison: 9,3 sfꜣ.t "neglect" (not "hatred"); 9,12 "one escapes its doing while
+  the heart refuses"; 10,2 passive ssjb; 10,7 prr "betray"; 10,12 šnn "questioned"; 11,2 ꜥꜣb "self-satisfied ka" (the
+  first draft had the opposite, "generous"); 11,6–11,7 `דע את המעלה`; 12,3 the gentle man's way "paved"; 12,7 the ka
+  "detaches from" its lover; 12,10 "his wisdom" (=f); 12,11–12,12 the subject of "lives"; 13,3 the litigant as speaker;
+  13,11 "an adversary as superior"; 14,4–14,6 the consent reading; 14,7 "do not ask the one near him"; 14,10 rʾ-pw "or";
+  14,13 the jn-cleft continues into 15,1.
+- Pass (b) consistency: whh `נכשל` (9,13; 11,1), ḫsf `הדף` (12,6 = 5,12), jtn / jtn.w / šnt separated, ḥḏj `הזיק`,
+  `כל עת היותך` ×3, `אסוף את לבך` / `אסוף את עצמך` (sꜣq), `מעולם לא` for n pꜣu̯ throughout PH.
+- Pass (c) Hebrew: the built text read through; 14,12 `(קרה ש)לא באה עתו` (the double negative made readable).
+- `verify PH`: 0 problems (63 lines placeholdered); `verify KG --strict`: 0; quotes: 0 (six quotations corrected:
+  Ex 20:13 numbering, Prov 15:27 word order, maqaf in Proverbs).
+
+### The text on its own terms
+- **Being heard is half the remedy** (9,3–9,7): "the oppressed loves the washing of his heart more than the doing of
+  what he came for"; "a good hearing smooths the heart".
+- **Greed as a disease with no treatment** (10,1–10,5): the medical formula ("one does not approach it") and the
+  family it splits; the greedy man has no tomb – the worst Egyptian fate.
+- **The wife as a fertile field** (10,9–10,10): food, clothes and ointment; the pun ꜣḥ.t "field" / ꜣḫ.t "useful".
+- **The two "hot" men** (11,5; 12,2–12,3): the hot-bellied spreads rumours, the hot-hearted burns like a flame; the
+  cool-bellied (10,8) is the ideal.
+- **Speech harder than any craft** (11,10–11,11): only the craftsman of words speaks in council.
+- **The ka as food and generosity** (11,2; 12,7–12,13): kꜣ / kꜣ.w; "food makes love grow"; "who loves to hear is a ka".
+- **Consent** (14,4–14,6, on the TLA's reading): intercourse is forbidden when the other shows resistance.
+- **The balance of judgement** (13,2): the judge "rescues the arms" of the scales.
+
+### Key parallels
+- 9,3–9,7 ↔ Prov 18:13, 15:1 (hearing, the soft answer) [equivalent].
+- 10,1–10,6 ↔ Prov 15:27 (`עֹכֵר בֵּיתוֹ בּוֹצֵעַ בָּצַע`) and Ex 20:13 (coveting) [equivalent].
+- 10,9 ↔ Qoh 9:9, Prov 5:18 [equivalent]; Ex 21:10 [divergence].
+- 13,2 ↔ Deut 16:19 [equivalent]; 13,5 ↔ Prov 19:11 [equivalent].
+- 14,13 ↔ Qoh 11:1 (bread sent out) [equivalent].
+
+### Lines shared with other texts
+None repeated verbatim. Echoes inside PH: 12,6 ≈ 5,12 (`להדוף … ברגעו`); 11,9 / 14,10 sꜣq; KG 1,4 `רגע קטן` ≈ 9,11.
+
+### Proposals for the shared renderings
+1. ḫnms (tla118260) `רֵעַ`, (tla118250) `רֵעוּת`, verb (tla118240) `התרועע`; ꜥq (tla41190) `מקורב`.
+2. tꜣ-ẖ.t (tla851302) `רותח־הבטן`, tꜣ jb `רותח־הלב`, qb ẖ.t `קר־הבטן` – the hot/cool family beside šmm `הַחַם`.
+3. qꜣi̯ jb (tla159110 + jb) `ירום לב` (Deut 8:14 [equivalent] in the apparatus); keep ꜥꜣi̯ jb `יגדל לב`.
+4. wjn (tla44120) `מאס` (the TALES gate bars `סרב`); gnf `דחה`.
+5. jm(,j)t-pr (tla854489) `צוואה` (PH 10,5) vs NU1 17.63 `שטר־הבית`: harmonize (PH's context is inheritance).
+6. ꜥḥꜥ (tla40280) `ערמה` where it is a heap (5,13; 6,6), `עושר` in 13,8 – one lemma, two senses; review.
+7. sḫr (tla142800): `עצה` kept, but 9,13 `עניין` (with mꜥr "succeed"); review whether "matter" senses should take
+   `עניין` throughout (and sp then keep `עניין` / `מעשה`).
+8. qꜥḥ (tla159830): `מרפק` (8,6), `כתף` (12,12), `זרוע` (13,12) by context – one lemma, three Hebrew words; propose `כתף`
+   everywhere if the later texts allow.
+9. msd.t (tla76220) `תועבה` in 11,7 collides with bw.t `תועבה`; propose msd.t `שנאוי` / `דבר שנוא` at harmonization.
+10. dꜣjr (tla177740): `כבש` (the heart, KG 1,4; 5,12) and `גזל` (things, 14,1) – one lemma; propose `כבש` for both
+    (`אל תכבוש רכוש של קרוב`), if read naturally.
+
+### Lessons for the guidelines
+- The gate for `סרב` misses the 2nd-person prefix `ת` (`תסרב` passed in KG 1,10): the prefix class `[ובלמהכש]` lacks
+  the imperfect prefixes `אתינ`. Reported to the coordinator, not edited.
+
 ## Parallels index
 (generated from the הקבלה bullets by `../build_parallels_index.py`)
