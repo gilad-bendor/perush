@@ -931,6 +931,13 @@ the corpus-wide `פדה` gate licensed by *pad₃* (Meš-Ane-pada), `בור` by 
 (≤ 4 words) is exempt from the "fully vocalized" check (a hook `VOC_EXEMPT` in `canon_tools.py`). The translator's
 written-around spellings `מֶשְׁאַנֶּפַּדָּא`, `בּוּרְסוּאֵן` stay (both are fair transcriptions).
 
+**RL1 (the Rulers of Lagaš, 106 new entries; translator A, resumed; merged 2026-11-15).** Three passes; `verify RL`
+OK. Its proposals (`14-רשימת-המלכים-השומרית/project--RL1.md`) bind. Coordinator's decisions: its 10 revisions of the
+copied lines applied to the flood references §4 (`annotated.rtl.md`, `translation.rtl.md`): *{gi}dusu* `סל` alone
+(12 `הסל`, 108 `סלים`: the Sumerian has no *saḫar*, the `עפר` gate was right), 100 *igi ḫuš* read, 103 / 118 plene,
+20 `לַגַשׁ`, `…` for `...`; *kabar* `רועה־בקר` kept apart from *sipad* `רועה`; `אלוהו (האישי): X,` keeps the
+parenthesis in every copy (a formula); the `גן` gate licensed by *gana₂* (`ur3_tools.py`).
+
 ## Changelog
 - 2026-11-07: §12.6.1–§12.6.5 merged after each part (LC1, LC2, LZ1, LZ2, ES); *alan* reversed to `פֶּסֶל` (§12.6.3).
 - 2026-11-07: §12 the Uruk cycle (projects 5–7: LC, LZ, ES) – names, grammar, formulas, reserved and gated words, the plan of the parts; fixed by the Round 6 run 3 coordinator before the first part.

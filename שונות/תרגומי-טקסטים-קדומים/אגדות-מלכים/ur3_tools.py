@@ -95,6 +95,8 @@ for _k in KEYS:
 for _k in list(nw.RESERVED):
     if 'פדה' in _k:
         nw.RESERVED[_k] = nw.RESERVED[_k] + [r'-pad₃|-pa₃-da|-pad\b']
+    if '(גן|גנה' in _k:   # the canal name *gana₂-ḫi-li-an-na* (RL 148): *gana₂* "field" is not `גן`
+        nw.RESERVED[_k] = nw.RESERVED[_k] + [r'gana₂']
     if _k == B + P + r'בור' + E or '(בור|' in _k:
         nw.RESERVED[_k] = nw.RESERVED[_k] + [r'bur-\{d\}suen|bur-\{d\}sin|bur-\{d\}zu']
 
