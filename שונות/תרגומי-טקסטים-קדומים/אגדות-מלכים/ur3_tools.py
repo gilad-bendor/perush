@@ -110,6 +110,18 @@ def _names_only(heb):
 
 ct.VOC_EXEMPT = _names_only
 
+_gate_view = ct.gate_view
+
+
+def gate_view(heb):
+    """canon_tools.gate_view, and the verb `שבר` "break" (`שבור`, `לשבור`, `נשבור` …) is not ש / ל + `בור` "pit"
+    (SH1, 2026-11-15)."""
+    heb = re.sub(r'(?<![א-ת])(ו?[לנמ]?)ש(בור|בורה|בורים)(?![א-ת])', lambda m: m.group(1) + 'שבר', _gate_view(heb))
+    return heb
+
+
+ct.gate_view = gate_view
+
 _ct_etcsl = ct.etcsl_lines
 
 

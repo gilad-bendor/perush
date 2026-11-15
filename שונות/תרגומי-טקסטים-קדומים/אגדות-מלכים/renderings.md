@@ -850,7 +850,7 @@ reason in `project--<part>.md`; after the merge the row binds. Tool: `ur3_tools.
 | Šulgi; Ur-Namma; Amar-Suen; Šu-Suen; Ibbi-Suen | שׁוּלְגִּי; אוּר־נַמָּה (plain `אור־נמה`, 55× in the law corpus; `אורנמה` is a trap); אֲמַר־סוּאֵן; שׁוּ־סוּאֵן; אִבִּי־סוּאֵן | |
 | Ninsumun; Lugalbanda; Bilgameš (Šulgi's "brother") | נִינְסוּמוּן; לוּגַלְבַּנְדָּה; גִּלְגָּמֶשׁ (the Sumerian poems' form, `3-השירים-השומריים/`, 474×; corrected at the KL1 merge – `בילגמש` is a minority form) | §12; `../אפוס-גילגמש/renderings.md` §23 |
 | Urim ★; Nibru; Unug; Kulaba; Kiš ★; Lagaš; Girsu; Eridug; Isin; Larsa; Akšak; Agade ★; Mari ★; Ḫamazi | אוּר; נִיפּוּר; אוּרוּךְ; כּוּלַבָּה; כִּישׁ; לַגַשׁ; גִּירְסוּ; אֶרִידוּ; אִיסִין; לַרְסָה; אַכְשַׁךְ; אַגָּדֶה; מָארִי; חַמָזִי | the canon §1, the flood references; `לגש` unvocalized reads "to approach" – vocalize at the first occurrence per entry block |
-| Elam; Anšan; Marḫaši; Simaški; Gutium; Martu (Amorites); Subir | עֵילָם [cognate, Gen 10:22]; אַנְשָׁן; מַרְחַשִׁי; שִׁימַשְׁכִּי; גּוּטִיּוּם; מַרְתּוּ; סוּבִּיר | `מרתו` (Martu) reads "his bitterness": vocalize |
+| Elam; Anšan; Marḫaši; Simaški; Gutium; Martu (Amorites); Subir | עֵילָם [cognate, Gen 10:22]; אַנְשָׁן; מַרְחַשִׁי; שִׁימַשְׁכִּי; גּוּטִיּוּם; מַרְתּוּ; שׁוּבִּיר (the canon's form) | `מרתו` (Martu) reads "his bitterness": vocalize |
 | Nanna ★; Suen; Ningal; Utu ★; Inana ★; An ★; Enlil; Ninlil; Enki; Ninḫursaĝa; Nisaba; Ninurta; Nuska | as the canon §1 | |
 | Ereškigal ★; Nergal; Namtar; Ninazu; Ningišzida; Dumuzid; Gilgameš in the netherworld (*bil₃-ga-mes*); Ḫuškia; Nungal; Ninĝišzida's throne-bearer | אֶרֶשְׁכִּיגַל; נֶרְגַּל; נַמְתָּר; נִינְאָזוּ; נִינְגִּישְׁזִידָה; דּוּמוּזִי; גִּלְגָּמֶשׁ; חוּשְׁכִּיָּה; נוּנְגַּל | the netherworld corpus |
 | the King List's kings | transcribed from ETCSL as the flood references do (`אֲלוּלִים`, `אֶנְמֶנְלוּאַנָּה`), vocalized at the first occurrence; a biblical-looking name is a trap to note, never assimilated (Etana `אֵתָנָה`, Enmerkar `אֶנְמֶרְכַּר`, Lugalbanda, Dumuzid, Gilgameš `גִּלְגָּמֶשׁ`, Sargon `סַרְגּוֹן`, Ku-Baba `כּוּ־בָּבָא`) | names already fixed in other projects keep their form |
@@ -937,6 +937,15 @@ copied lines applied to the flood references §4 (`annotated.rtl.md`, `translati
 (12 `הסל`, 108 `סלים`: the Sumerian has no *saḫar*, the `עפר` gate was right), 100 *igi ḫuš* read, 103 / 118 plene,
 20 `לַגַשׁ`, `…` for `...`; *kabar* `רועה־בקר` kept apart from *sipad* `רועה`; `אלוהו (האישי): X,` keeps the
 parenthesis in every copy (a formula); the `גן` gate licensed by *gana₂* (`ur3_tools.py`).
+
+**SH1 (Šulgi B, 385 entries; translator B; merged 2026-11-15).** Three passes; `verify SHB` OK. Its proposals
+(`12-מזמורי-שולגי/project--SH1.md`: the refrain *niĝ₂ ak-a-ĝa₂ … ga-buluĝ₅*, `מיום מתי – עד ימים רחוקים –`, `מאחר ש…
+בידי מצוי`, `לאם אשר ילדה אותי, נִינְסוּמוּן –`, `של זרועי – אֵלַת־הַמָּגֵן היא; של חוזקי – שירו הוא.` and ≈ 90 words)
+bind SH2–SH3. Coordinator's decisions: (1) Subir = `שׁוּבִּיר` (the canon's form, which binds the hymns; §14.1's
+`סוּבִּיר` corrected; SHB to be aligned by its translator in SH2); (2) the weapons as drafted: *šukur* `חנית`,
+*ĝiš-gid₂-da* `רומח` (the proverbs' *šukur* `רומח` is a split for the lead), *im-dug* `כדורי־הטיט`, *dur₁₀* `קרדום`;
+(3) *unken* `כינוס` (Akk. *puḫrum* keeps `אספה`); (4) kept: *tillug* / *am-si* both `פיל` (a split by sense, noted);
+(5) gate fix in `ur3_tools.py`: the verb `שבר` (`שבור`, `לשבור`) no longer trips the `בור` gate.
 
 ## Changelog
 - 2026-11-07: §12.6.1–§12.6.5 merged after each part (LC1, LC2, LZ1, LZ2, ES); *alan* reversed to `פֶּסֶל` (§12.6.3).

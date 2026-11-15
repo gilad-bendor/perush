@@ -340,7 +340,7 @@
 
 ### 45
 `inim-ma-ni-še₃ ga-mu-un-kalag-ge LA ga-mu-un-ne₃-e`
-> לפי דברו – אחזק!, … אעשה!
+> לפי דברו – אחזק! … אעשה!
 - **פירוק:** `inim-ma-ni-še₃` – inim + -ani + -še₃ ("לפי דברו"); `ga-mu-un-kalag-ge` – ga- כוהורטטיבי + kalag "חזק" ("אחזק!"); `LA ga-mu-un-ne₃-e` – LA לא ברור + ga- + e ("… אעשה!")
 - **תרגומים:** ETCSL "by his words I am strengthened and made pugnacious (?)" – ETCSL מתרגם עובדה; התחילית *ga-* היא כוהורטטיב ("אחזק!").
 - **הערות:** *LA* לא ברור (ETCSL "pugnacious ?"): `…`.
@@ -529,7 +529,7 @@
 > ברפת ובדיר – במקום אשר ראש שוחרר בו –
 - **פירוק:** `tur₃ amaš` – "רפת, דיר"; `ki saĝ bi₂-in-bur₂-bur₂-ra` – ki + saĝ "ראש" + bur₂ "שחרר, פרש" + -a ("במקום אשר ראש שוחרר בו")
 - **תרגומים:** ETCSL "In the sheepfold and the cattle-pen, where heads are laid to rest (?)" – הקריאה אינה ודאית גם אצל ETCSL.
-- **הערות:** *tur₃* `רֶפֶת`, *amaš* `דִּיר` (הקנון §5.8). "ראש משוחרר" – מנוחה בלי פחד, אחרי שהאריות נהרגו. `*שוחרר*`? – ראו 93.
+- **הערות:** *tur₃* `רֶפֶת`, *amaš* `דִּיר` (הקנון §5.8). "ראש משוחרר" – מנוחה בלי פחד, אחרי שהאריות נהרגו; *bur₂* `שחרר` (כמו 93), והקריאה כולה בספק.
 
 ### 72
 `sipad ildum₂-ma-bi-ir su-bi ḫu-mu-dug₃`
@@ -1436,7 +1436,7 @@
 > המשולש וקנה־המידה – בוני עיר הם.
 - **פירוק:** `saĝ-gag` – saĝ-KAK "משולש, יתד" ("המשולש"); `gi-nindan` – "קנה־המידה"; `iri{ki} du₃-du₃-u₃-dam` – iri "עיר" + du₃ "בנה" (כפול) + -ed + -am₃ ("בוני עיר הם")
 - **תרגומים:** ETCSL "just as a peg and a measuring cord are the builders of cities" – מסכים בעניין.
-- **הערות:** *gi-nindan* `קנה־המידה` (הקנון: *gi-diš-nindan*). *saĝ-gag* – לפי ORACC "משולש" (צורת מתמטיקה), לפי ETCSL "יתד": `*המשולש*`? – נשאר בלי סימן כי שתי המשמעויות של כלי מדידה.
+- **הערות:** *gi-nindan* `קנה־המידה` (הקנון: *gi-diš-nindan*). *saĝ-gag* (*saĝ-KAK*) – לפי ORACC "משולש" (צורה במתמטיקה של בית הטבלה), לפי ETCSL "יתד": `המשולש`, וההערה מציינת את הספק; בשתי הקריאות – כלי של מודד ובנאי.
 
 ### 200
 `ni₂ saĝ-ki-ĝu₁₀ a-ba-da-ab-ĝal₂-la-am₃`
@@ -1455,7 +1455,7 @@
 
 ### 202
 `ni₂ me-lem₄ {ĝiš}kar₂ sig₁₀-sig₁₀ šu-ĝa₂`
-> אימה וזוהר – ה*כלי* המושת בידי –
+> אימה וזוהר – *הכלי* המושת בידי –
 - **פירוק:** `ni₂ me-lem₄` – ni₂ "אימה" + me-lem₄ "זוהר" ("אימה וזוהר"); `{ĝiš}kar₂ sig₁₀-sig₁₀` – kar₂ "כלי?" + sig₁₀ "השית" (כפול) ("הכלי המושת"); `šu-ĝa₂` ("בידי")
 - **תרגומים:** ETCSL "and the fear-inspiring lustre, my personal weapon" – מסכים בעניין.
 - **הערות:** *ni₂* / *me-lem₄* `אֵימָה` / `זֹהַר` (הקנון; לא `כָּבוֹד`). *{ĝiš}kar₂* – כלי לא ידוע (ORACC "implement").
@@ -2171,7 +2171,7 @@
 
 ### 302
 `un-ga-til₃ ud til₃-la-ni-a`
-> וכאשר יכלה (אותם) – את ימי חייו –
+> וכאשר יכלה – את ימי חייו –
 - **פירוק:** `un-ga-til₃` – u- + inga- + til "כילה" ("וכאשר יכלה"); `ud til₃-la-ni-a` – ud + til₃ "חיים" + -a + -ani + -a ("את ימי חייו")
 - **תרגומים:** ETCSL "Until he has completed the days of his life" – מסכים.
 - **הערות:** *til* `כילה`, *til₃* `חיים` – משחק הצליל *til* / *til₃* (לסיים / לחיות), שאינו נשמר בעברית.
@@ -2468,15 +2468,15 @@
 
 ### 343
 `gud kur-bi-še₃ DU-ba edin-na mi-ni-gaz-za`
-> שוורים – בלכתם אל הרם – בערבה הרגתי,
-- **פירוק:** `gud kur-bi-še₃ DU-ba` – gud + kur "הר" + -bi + -še₃ + DU "הלך" + -a + -bi + -a ("שוורים – בלכתם אל הרם"); `edin-na mi-ni-gaz-za` – edin + -a + gaz "הרג" + -a ("בערבה הרגתי")
+> שוורים – בלכתם אל ההר שלהם – בערבה הרגתי,
+- **פירוק:** `gud kur-bi-še₃ DU-ba` – gud + kur "הר" + -bi + -še₃ + DU "הלך" + -a + -bi + -a ("שוורים – בלכתם אל ההר שלהם"); `edin-na mi-ni-gaz-za` – edin + -a + gaz "הרג" + -a ("בערבה הרגתי")
 - **תרגומים:** ETCSL "cattle on their way to their mountain pastures, which were killed in the plain" – מסכים.
 - **הערות:** *gaz* `הרג` (68).
 
 ### 344
 `kur-ba šu-a bal-e-da-bi`
-> להעביר ביד בהרם –
-- **פירוק:** `kur-ba` – kur + -bi + -a ("בהרם"); `šu-a bal-e-da-bi` – šu + -a + bal "העביר" + -ed + -a + -bi ("להעביר ביד")
+> להעביר ביד בהר שלהם –
+- **פירוק:** `kur-ba` – kur + -bi + -a ("בהר שלהם"); `šu-a bal-e-da-bi` – šu + -a + bal "העביר" + -ed + -a + -bi ("להעביר ביד")
 - **תרגומים:** ETCSL "were ...... the mountains" – ETCSL משאיר חלל.
 - **הערות:** *šu-a bal* `להעביר ביד` (6). השורה לא ברורה.
 
