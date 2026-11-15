@@ -54,6 +54,9 @@ Translate, complete, two legends that the ancient Near East told about its kings
 | 9 | `9-אגדות-מלכי-אכד/` | The OB legends of the kings of Akkade: Sargon the Conquering Hero, in Foreign Lands, the Lion; *šar tamḫāri* (EA 359); the Great Revolt against Narām-Sîn A, B; Narām-Sîn and the Lord of Apišal; Erra and Narām-Sîn (Round 8 run 4) | SEAL nodes 1548, 1547, 7525, 1540, 1542, 7255, 1539; CDLI P270858 (`../sources/SEAL/…/base.tsv`, `../sources/CDLI/…/base.tsv`, by `../tools/seal_base.py`) | 532 (`CH.12`, `FL.ii1`, `RA.r1'`, `ST.29'`) | one `annotated-<text>.rtl.md` per text |
 | 10 | `10-אפוסים-מלכותיים-בבליים-קדומים/` | OB royal epics: Zimrī-Lîm, Bazi, Gulkišar (Round 8 run 4) | SEAL nodes 1552, 1551, 1597 | 321 | `annotated-ZL`, `-BZ`, `-GU` |
 | 11 | `11-פסל-אידרימי/` | The statue inscription of Idrimi of Alalaḫ (Round 8 run 4) | CDLI P500443 (ATF only; ORACC's edition unreachable: to be checked against it) | 104 | `annotated-ID.rtl.md` |
+| 12 | `12-מזמורי-שולגי/` | The long Šulgi hymns: Šulgi B, C, D, E, X (Round 9 run 2, 2026-11-15) | ETCSL 2.4.2.02–05, 2.4.2.24; ORACC Q000396–399, Q000416 | 1,276 (SHB 385, SHC 253, SHD 262, SHE 221, SHX 155) | `annotated-SHB` … `-SHX.rtl.md` |
+| 13 | `13-מות-אור-נמה/` | The Death of Ur-Namma (Ur-Namma A), the Nibru and Susa versions (Round 9 run 2) | ETCSL 2.4.1.1; ORACC Q000386 | 396 (1–242 with A, B; S.A1 … S.D…) | `annotated-UN.rtl.md` |
+| 14 | `14-רשימת-המלכים-השומרית/` | The Sumerian King List, whole, with the Rulers of Lagaš (Round 9 run 2; KL 1–47 and RL 1–31, 99–108, 117–124 = the flood references' §1, §4, kept identical by `ur3_tools.py verify KL|RL`) | ETCSL 2.1.1, 2.1.2; ORACC Q000371, Q000372 | 435 + 155 | `annotated-KL.rtl.md`, `annotated-RL.rtl.md` |
 | 3 | `3-אגדת-אתנה/` | Etana (Round 3, run 2, 2026-10-22) | eBL L/1/9 (`../sources/eBL/Etana-*/`): six chapters – OB Morgan, OB Susa, MA Aššur, SB I–III; ed. Földi et al., tr. Foster | 585 (eBL labels with the chapter key: `OBM.7`, `MA.c+3`, `II.142`) | `annotated-OBM.rtl.md`, `-OBS`, `-MA`, `-I`, `-II`, `-III` (one per eBL chapter) |
 
 Rank 3: ETCSL's English and Mittermayer 2009's German (EA); King 1907's English and the few lines of Westenholz 1997
@@ -109,6 +112,16 @@ Narām-Sîn, his alliance with Erra. The royal epics: Zimrī-Lîm's war in Mari'
 exile's first-person story. Renderings §13; brief `translator-brief--round8.md`. Reading order: AN (SB I–III, then OB
 II–III and NA) → AK (CH, FL, LI, ST; RB, RA, AP, EN) → RE (ZL, BZ, GU) → ID.
 
+**Ur III kingship (projects 12–14, added 2026-11-15, Round 9 run 2):** the kings of the Third Dynasty of Ur and the
+Sumerian idea of kingship. The Šulgi hymns: the king in his own voice – the runner, the scholar who knows the scribal
+art, music, languages and omens, the warrior, the judge, the son of Ninsumun and brother of Bilgameš, Inana's husband
+(X). The Death of Ur-Namma: the founder dies in battle, goes down to the netherworld with gifts for its gods, and
+laments from below. The King List: kingship descending from heaven and passing from city to city, before and after the
+flood; the Rulers of Lagaš: its rival, the world after the flood without tools. Renderings §14 (the school canon's
+renderings bind the hymns); brief `translator-brief--ur3.md`, reviewer brief `reviewer-brief--ur3.md`; tool
+`ur3_tools.py` (keys SHB SHC SHD SHE SHX UN KL RL; built on `../קנון-בית-הטבלה/canon_tools.py`). Reading order: KL, RL →
+UN → SHB, SHC, SHD, SHE, SHX.
+
 ## Tools (in this folder)
 | Script | What |
 |---|---|
@@ -120,6 +133,7 @@ II–III and NA) → AK (CH, FL, LI, ST; RB, RA, AP, EN) → RE (ZL, BZ, GU) →
 | `kings_tools.py data LC\|LZ\|ES FROM TO out`; `skel KEY FILE FROM TO`; `pars KEY FROM TO` | The Uruk cycle: ETCSL line, ETCSL's lemmas, ORACC lemma + morph aligned by content (LC, LZ) or each verb's parses from the form index (ES), the near-identical lines of all four poems with their Hebrew; a skeleton; the related lines across the cycle. Gates licensed by the transliteration + ETCSL and ORACC lemmas (RESERVED_CY); FORMULAS_CY. |
 | `kings_tools.py data\|pars\|fill\|verify\|build AN` | Anzû: the Etana / Cuthaean eBL machinery (six chapters, textno 10). |
 | `kings_tools.py data\|pars\|fill\|verify\|build AK\|RE\|ID` | Projects 9–11: base `base.tsv` per text (SEAL transliteration + SEAL lemmas + SEAL's English line, or CDLI ATF), labels `<text>.<label>`; related lines across all twelve texts; gates RESERVED_R8 licensed by SEAL's lemmas or the folded ATF (renderings §13.4). |
+| `ur3_tools.py verify\|build\|lines\|tr\|skel\|rel\|excerpt\|grep\|lexmap` | Projects 12–14 (keys SHB SHC SHD SHE SHX, UN, KL, RL): the school canon's ETCSL / ORACC machinery (imported), the hymns' Psalm gates, RESERVED_U (renderings §14.4), the flood-references excerpt check for KL / RL. |
 | `build_parallels_index.py` | `parallels-index.md` from the per-file tables (projects 8–11: the parts' `project--<part>.md`). |
 
 ## Status
