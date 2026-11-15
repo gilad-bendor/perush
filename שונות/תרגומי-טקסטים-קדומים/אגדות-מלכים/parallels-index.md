@@ -369,7 +369,7 @@
 | שמות לא:יח | EA 455 | inim-ma dub maḫ-gin₇ šu mu-na-an-sig₁₀ | את הדבר – כלוח נשגב – בידו נתן | `וַיִּתֵּן אֶל מֹשֶׁה ... שְׁנֵי לֻחֹת הָעֵדֻת` (שמות לא:יח) | equivalent | The word given "like a tablet" – before writing exists in the story. |
 | שמות לב:טז | EA 317 | dub … im … gi-gag unken-na | הלוח …, הטיט …, קולמוס־הקנה של האספה | `וְהַלֻּחֹת מַעֲשֵׂה אֱלֹהִים הֵמָּה וְהַמִּכְתָּב מִכְתַּב אֱלֹהִים הוּא` (שמות לב:טז) | equivalent | Tablet, clay and stylus as the goddess's attributes, before the invention of the letter. |
 | שמות לב:טז | ES 77 | [im]-gin₇ šu bi₂-in-ra im-gin₇ igi i-ni-in-bar | [כטיט] – יד בו היכה; כטיט – בו הביט | `וְהַמִּכְתָּב מִכְתַּב אֱלֹהִים הוּא חָרוּת עַל הַלֻּחֹת` (שמות לב:טז) | equivalent | The message handled like a clay tablet: the words of the invention of writing in EA 503, 539; `לוח`, `מכתב` not in the line. |
-| שמות לד:ז | CL SB.25 | *eṭem perʾi perʾīšu* | אִט צאצאי צאצאיו | `פֹּקֵד עֲוֹן אָבוֹת עַל בָּנִים וְעַל בְּנֵי בָנִים` (שמות לד:ז); `זַרְעָם נָכוֹן לִפְנֵיהֶם עִמָּם וְצֶאֱצָאֵיהֶם לְעֵינֵיהֶם` (איוב כא:ח) | [divergence] | Punishment across generations – here of the generations of *ghosts*, in the netherworld. |
+| שמות לד:ז | CL SB.25 | *eṭem perʾi perʾīšu* | אִט חוטרי חוטריו | `פֹּקֵד עֲוֹן אָבוֹת עַל בָּנִים וְעַל בְּנֵי בָנִים` (שמות לד:ז); `זַרְעָם נָכוֹן לִפְנֵיהֶם עִמָּם וְצֶאֱצָאֵיהֶם לְעֵינֵיהֶם` (איוב כא:ח) | [divergence] | Punishment across generations – here of the generations of *ghosts*, in the netherworld. |
 
 ### Leviticus, Numbers, Deuteronomy
 
@@ -857,7 +857,7 @@
 | תהלים קד:כג | LC 261 | apin-a-ni ki a₂-ba-ka am₃-mi-ni-in-gub-gub-bu | את מחרשתו – במקום, בעתה – מעמיד | `יֵצֵא אָדָם לְפָעֳלוֹ; וְלַעֲבֹדָתוֹ עֲדֵי-עָרֶב` (תהלים קד:כג) | equivalent | The farmer's day by the sun. |
 | תהלים קד:לד | EA 585 | en₃-du-ni … ba-dug₃ | זמרתה – … – ערבה | `יֶעֱרַב עָלָיו שִׂיחִי` (תהלים קד:לד) | equivalent | A song "sweet" to its hearer. |
 | תהלים קז:ל | AN I.b+57 | *māhāza ītahaz* | מחוז אחז | `וַיַּנְחֵם אֶל מְחוֹז חֶפְצָם` (תהלים קז:ל) | [cognate] | *māhāzu* (from *ahāzu*) is the source of Hebrew מָחוֹז; the pun kept. |
-| תהלים קט:יג | ID ID.94 | *perʾašu lilqut* | `את צאצאו תלקט` | `יְהִי-אַחֲרִיתוֹ לְהַכְרִית; בְּדוֹר אַחֵר יִמַּח שְׁמָם` (תהלים קט:יג) | [equivalent] | the offspring cut off |
+| תהלים קט:יג | ID ID.94 | *perʾašu lilqut* | `את חוטרו תלקט` | `יְהִי-אַחֲרִיתוֹ לְהַכְרִית; בְּדוֹר אַחֵר יִמַּח שְׁמָם` (תהלים קט:יג) | [equivalent] | the offspring cut off |
 | תהלים קי:א | ET MA.h+12 | … ina šēpīka | … לְרַגְלֶיךָ | `עַד-אָשִׁית אֹיְבֶיךָ הֲדֹם לְרַגְלֶיךָ` (תהלים קי:א) | equivalent | The interpretation turns the dream's "at my feet" (h+3) into "at your feet": rule. |
 | תהלים קי:א | AN III.b+111 | *kullat nakirī tušakniša ana šēpī abīka* | את כלל האויבים הכנעת לרגלי אביך | `עַד אָשִׁית אֹיְבֶיךָ הֲדֹם לְרַגְלֶיךָ` (תהלים קי:א) | [equivalent] |  |
 | תהלים קי:ה | RE ZL.i26 | *illak Annunītum ina imittišu* | `הולכת אֲנוּנִיתוּ – לימינו` | `אֲדֹנָי עַל-יְמִינְךָ; מָחַץ בְּיוֹם-אַפּוֹ מְלָכִים` (תהלים קי:ה) | [equivalent] | the deity at the king's right in battle (also iii37–38) |

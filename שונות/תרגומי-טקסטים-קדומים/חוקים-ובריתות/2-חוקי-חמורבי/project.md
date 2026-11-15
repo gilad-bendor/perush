@@ -390,7 +390,7 @@ The most consequential (the Parts list the rest, with alternatives):
 | epil. 3258' | idem | idem | `כְּרַחֵם אָב עַל-בָּנִים רִחַם יְהוָה עַל-יְרֵאָיו` (תהלים קג:יג) | [equivalent] | |
 | epil. 3258' | idem | idem | `אָב אָנֹכִי לָאֶבְיוֹנִים` (איוב כט:טז) | [equivalent] | Job as just judge (29:12–16). From memory. |
 | epil. 3259' | *wālidim* | יולד | `הֶאָנֹכִי הָרִיתִי אֵת כָּל הָעָם הַזֶּה אִם אָנֹכִי יְלִדְתִּיהוּ` (במדבר יא:יב) | [divergence] | *walādu* = `ילד` [cognate]; Moses denies "begetting" the people. Our proposal. |
-| epil. 3265' | *irnitti Marduk* | תשועת מרדוך | `וַיַּעַשׂ יְהוָה תְּשׁוּעָה גְדוֹלָה` (שמואל א יט:ה) | [equivalent] | `תשועה` = victory; `נצחון` avoided (*dāru* = `נצח`). |
+| epil. 3265' | *irnitti Marduk* | נצחון מרדוך | `וַיַּעַשׂ יְהוָה תְּשׁוּעָה גְדוֹלָה` (שמואל א יט:ה) | [equivalent] | Victory as the god's deed. *ernittu* = `נִצָּחוֹן` (2026-11-15 harmonization; was `תשועה`, `נצחון` having been avoided for *dāru* = `נצח`): Enūma eliš I 74, IV 125 and the Akkade legends; `תשועה` is *lītu*'s. |
 | epil. 3269'–3270' | *libbi Marduk bēlišu uṭīb* | את לב מרדוך אדוניו היטיב | `וַיִּיטַב לִבּוֹ` (רות ג:ז) | [cognate] | |
 | epil. 3282'–3283' | *ina libbišu gamrim* | בלבו השלם | `בְּכָל לְבָבְךָ` (דברים ו:ה) | [equivalent] | Not Deut's `כל`; cf. corpus *gummurtu* = `שלמות`. |
 | epil. 3282'–3283' | idem | idem | `וְהָיָה לְבַבְכֶם שָׁלֵם עִם יְהוָה אֱלֹהֵינוּ` (מלכים א ח:סא) | [equivalent] | |

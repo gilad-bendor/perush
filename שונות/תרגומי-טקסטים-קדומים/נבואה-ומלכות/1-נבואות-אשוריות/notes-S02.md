@@ -82,7 +82,7 @@ Each oracle read aloud as a whole. Changes: ii 6′ a dash at the end (`על [ב
 | iii.2′ | *dāgil iṣṣūrāti* | `מתבונן בציפו[רים]` | `לֹא יִמָּצֵא בְךָ … קֹסֵם קְסָמִים מְעוֹנֵן וּמְנַחֵשׁ וּמְכַשֵּׁף` (דברים יח:י) | [absent] | The augur beside the prophet at the Assyrian court; not named in Deut 18. |
 | iii.4′ | *agallal* | `אָגֹל` | `וְגָלְלוּ אֶת הָאֶבֶן מֵעַל פִּי הַבְּאֵר` (בראשית כט:ג) | [cognate] | |
 | iii.5′; iii.13′ | *abīar* | `אבחר` | `בְּחַרְתִּיךָ בְּכוּר עֹנִי` (ישעיהו מח:י) | [cognate] *bêru* / `בחר` | `בחר` also "test, sift" (Isa 48:10). |
-| iii.9′ | *ina mati mātu nakkuru ibbašši* | `מתי – שינוי הארץ יהיה?` | `הִנְנִי נֹתֵן בּוֹ רוּחַ וְשָׁמַע שְׁמוּעָה וְשָׁב לְאַרְצוֹ` (מלכים ב יט:ז) | [equivalent] | The rumour as a weapon against a king of Assyria. |
+| iii.9′ | *ina mati mātu nakkuru ibbašši* | `מתי – תְּמוּרַת הארץ תהיה?` | `הִנְנִי נֹתֵן בּוֹ רוּחַ וְשָׁמַע שְׁמוּעָה וְשָׁב לְאַרְצוֹ` (מלכים ב יט:ז) | [equivalent] | The rumour as a weapon against a king of Assyria. |
 | iii.10′ | *ina Kalhi Ninua* | `בְּכֶלַח, נִינְוֵה` | `וַיִּבֶן אֶת נִינְוֵה וְאֶת רְחֹבֹת עִיר וְאֶת כָּלַח` (בראשית י:יא) | [cognate] (names) | |
 | iii.11′ | *atta lū qālāka* | `אתה – היה דומם, אסרחדון!` | `יְהוָה יִלָּחֵם לָכֶם; וְאַתֶּם תַּחֲרִשׁוּן` (שמות יד:יד); `דּוֹם לַיהוָה` (תהלים לז:ז); `בְּהַשְׁקֵט וּבְבִטְחָה תִּהְיֶה גְּבוּרַתְכֶם` (ישעיהו ל:טו); `שִׁוִּיתִי וְדוֹמַמְתִּי נַפְשִׁי כְּגָמֻל עֲלֵי אִמּוֹ` (תהלים קלא:ב) | [equivalent] | The deity fights, "you" keep silent: the structure of Exod 14:14. Our proposal. |
 | iii.12′ | *ṣīrāni Elamaya* | `את צִירֵי הָעֵילָמִי` | `הַשֹּׁלֵחַ בַּיָּם צִירִים` (ישעיהו יח:ב); `וְצִיר בַּגּוֹיִם שָׁלוּחַ` (ירמיהו מט:יד) | [cognate] *ṣīru* / `צִיר` | A West-Semitic word in Neo-Assyrian. |
@@ -184,7 +184,7 @@ New shared words fixed in S02 (exact strings as used, with lines):
 - ***apālu*** = **`ענה`** (ii 29′ `כה תענה`); *akī* "thus" = `כה`; ***ḫiāṭu*** D = **`חיפש`** (ii 32′ `אחפש`); ***mādu*** pl. = `הרבים` (ii 34′, iii 8′).
 - ***etku*** = **`ער`** (iii 1′ `היה ער`, iv 5′ `עֵרָה אני`).
 - ***galālu*** = **`גלל`** [cognate] (iii 4′ `אָגֹל`).
-- ***akê*** = **`איך`** (iii 7′); ***ṣābāni*** = `אנשים` (EST); ***ina mati*** = `מתי`; ***nakkuru*** = **`שינוי`** (iii 9′ `שינוי הארץ`).
+- ***akê*** = **`איך`** (iii 7′); ***ṣābāni*** = `אנשים` (EST); ***ina mati*** = `מתי`; ***nakkuru*** = **`שינוי`** (iii 9′ `שינוי הארץ`); 2026-11-15 harmonization: **`תְּמוּרָה`** (`תמורת הארץ`), since *nakāru* D = `הֵמִיר` and `שִׁנָּה` is *šanû*'s.
 - ***ṣīru*** "envoy" = **`צִיר`** [cognate] (iii 12′ `צִירֵי`), vocalized, as the harmonization's *ra-gaba*.
 - ***šiṭru*** = **`כתב`** (iii 14′ `כתביו`); ***barāmu*** = `חתם` (decision 4); *igib* transliterated `*אִיגִיב*`; **Mugallu** = `מוּגַלּוּ`.
 - ***ēdu*** = **`יחיד`**, ***ḫablu*** = **`חבול`** (iii 16′), as Ištar's Descent (*ēdu*, *ḫabālu*).

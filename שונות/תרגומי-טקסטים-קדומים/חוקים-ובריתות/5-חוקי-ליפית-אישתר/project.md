@@ -262,7 +262,7 @@ CDLI labels (the prime is part of the label: `### 108'`). Laws as CDLI's `@law` 
 | epil. 494′ | *ma-da-na suḫuš-bi na-an-ge-ne* | את יסוד ארצו אל יכונן | `כִּי הַשָּׁתוֹת יֵהָרֵסוּן צַדִּיק מַה פָּעָל` (תהלים יא:ג) | [equivalent] | Foundations not established. |
 | epil. 495′ | *lugal-bi nam-me* | מלך אל יהיה לה | `כִּי יָמִים רַבִּים יֵשְׁבוּ בְּנֵי יִשְׂרָאֵל אֵין מֶלֶךְ וְאֵין שָׂר` (הושע ג:ד) | [equivalent] | A land without a king. |
 | epil. 495′ | *lugal-bi nam-me* | מלך אל יהיה לה | `יוֹלֵךְ יְהוָה אֹתְךָ וְאֶת מַלְכְּךָ אֲשֶׁר תָּקִים עָלֶיךָ אֶל גּוֹי` (דברים כח:לו) | [divergence] | Deut 28: the king goes into exile with the people; LI: the land has no king. |
-| epil. 499′ | *maškim nu-kur₂-ru-bi ḫe₂-a* | הממונה שלה, אשר לא ישונה, יהיה | `לַפֶּתַח חַטָּאת רֹבֵץ` (בראשית ד:ז) | [cognate] | Via the Akkadian: *maškim* = *rābiṣu*, the court's enforcer – and the demon who "lies in wait", the usual comparison for `רֹבֵץ`. Rendered by meaning (`הממונה`). |
+| epil. 499′ | *maškim nu-kur₂-ru-bi ḫe₂-a* | הנציב שלה, אשר לא ישונה, יהיה | `לַפֶּתַח חַטָּאת רֹבֵץ` (בראשית ד:ז) | [cognate] | Via the Akkadian: *maškim* = *rābiṣu*, the court's enforcer – and the demon who "lies in wait", the usual comparison for `רֹבֵץ`. Rendered by meaning (`הממונה`). |
 | epil. 500′ | *u₄ da-ri₂-iš* | לימי נצח | `וְהָיוּ בְךָ לְאוֹת וּלְמוֹפֵת וּבְזַרְעֲךָ עַד עוֹלָם` (דברים כח:מו) | [equivalent] | The curse "forever"; `עוֹלָם` kept out (corpus). |
 
 ### Proposals for the renderings

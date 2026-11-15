@@ -110,7 +110,7 @@ The project's own terms (guidelines §6.6); the corpus `../renderings.md` (§0�
 | *dub-sar-tur*; *nar* | הסופר הצעיר; זמר | | | 162, 163 |
 | *{u₂}numun₂* (rush) | אגמון | [equivalent] ↔ ישעיהו נח:ה | not *numun* "seed". | 162 |
 | *ki-nu₂* | משכב | | | 162, 184, 242, 258 |
-| *la-la* | עתרת | | | 171 |
+| *la-la* | עֹנֶג (2026-11-15 harmonization; was עתרת, which is Akk. *nuḫšu*'s) | | | 171 |
 | *saĝ-tun₃* | רושם (2026-10-23 harmonization, was מזכיר) | [equivalent] ↔ שמואל ב ח:טז (the biblical office: not our word) | as Gudea, Agade, the proverbs. | 176 |
 | *ur₃* (drag; roof) | גרר; גג | [equivalent] ↔ ישעיהו כח:כד (*ur₃* "harrow") | | 177; 214, 258 |
 | *ĝiškim* | אוֹת | | always vocalized. | 179 |

@@ -17,7 +17,9 @@ pre-set rendering of §3 with the reason in `project.md`; after that it binds ev
    wisdom corpus; guidelines §6.7.
 3. **A Sumerian word takes the Hebrew of its Akkadian equivalent** (law corpus §6, lament §0, temple §0.2). In this
    corpus that rule makes the two texts meet: Sum. *bal* "cross (a mountain)" = Akk. *nabalkutu* = `חָצָה`; Sum.
-   *kur₂* "be different, change" = Akk. *nakāru* = `שִׁנָּה` (adj. `שׁוֹנֶה`; `נָכְרִי` only for *kur₂* "foreign,
+   *kur₂* "be different, change" = `שִׁנָּה` (adj. `שׁוֹנֶה`; since the 2026-11-15 harmonization Akk. *nakāru* D is
+   `הֵמִיר` / `הֵסִיר` by sense, `שִׁנָּה` belonging to the cognate *šanû*; *kur₂* keeps `שִׁנָּה` – for the lead to
+   confirm; `נָכְרִי` only for *kur₂* "foreign,
    hostile", lament §9); Sum. *eme* = Akk. *lišānu* = `לָשׁוֹן`; Sum. *esir₂* = Akk. *iṭṭû* = `חֵמָר`; Sum. *šeg₁₂* =
    Akk. *libittu* = `לְבֵנָה`; Sum. *dugud* = Akk. *kabtu* = `כָּבֵד`.
 4. **Cross-corpus choices, followed as the most recent corpus has them** (settled by the lead's harmonization of
@@ -834,3 +836,4 @@ SAGA/DU10, NUMUN, ALAM) and `צלמי`. **All four projects drafted: `verify AN 
 - 2026-10-21: §10 Etana (project 3) – names, grammar, formulas, reserved and gated words, the plan of the parts; fixed
   by the Round 3 run 2 coordinator before the first part.
 - 2026-11-09 harmonization (Round 6 finalization, batch A): *u₅{mušen}* = `שקנאי?` (Enki and the World Order 297, 418; `אווז` stays *kur-gi₄*'s): EA 436 `כאווז?` → `כשקנאי?`, LZ 220 `כאווז` → `כשקנאי?`; *suḫ₁₀* = `נזר` (the creation corpus, LC 2, 410, HB 29): ES 89 `את עטרתי הטהורה – אינו [מביט בה]` → `את נזרי הטהור – אינו [מביט בו]`, ES 178, 191 `עטרה טהורה, בתחכום עשויה` → `נזר טהור, בתחכום עשוי`; EA 274 *saĝ muš₃* `נזר ארטה` → `עטרת ארטה` (frees `נזר` for *suḫ₁₀*; the overlap with Etana's Akk. *meānu* is cross-language, no reservation); Kulaba `כּוּלַבָּה` in every corpus (LC annotated-1's one `כֻּלַּבָּה`). Kept: *galam* `נישא` (LC 329, 330, LZ 325: the sense "lofty", ETCSL "towering / raised high / proudly") beside EA's `בתחכום` (the sense "artful") – a split by sense; `נישא` also renders *il₂* and *uru₁₆* in the Sumerian corpora (a general adjective, not a reservation).
+- 2026-11-15 harmonization (after Round 8) (`../reports/round-8/harmonization-batch-B.md`): *perʾu* = `חֹטֶר` (Gilgameš I 133, V 94, 170; `צֶאֱצָא` stays *bukru*'s): CL SB.25 `אִט חוטריו, אִט חוטרי חוטריו`, ID.94 `את חוטרו תלקט` (§11.6.1's *perʾu* `צֶאֱצָא` superseded); *nakāru* D "remove" = `הֵסִיר` (LH, EST): ID.96 `מי אשר יסיר אותו`; *zību* = `עַיִט` (Gilgameš, EST, Maqlû): GU.17 `כ[ע]יט – (אכול)!` (§13.7.6's `זְאֵב` superseded; `זְאֵב` is *barbaru*'s); *dalālu* = `פֵּאֵר` (Ludlul, Theodicy, Šamaš Hymn, Maqlû): AN III.b+134 `פֵּאַרְתִּיךָ` (`הלל` is *alālu*'s). Kept: *lītu* `תְּשׁוּעָה` (Gilgameš OB; AN II.107, 129, GU.39); *ernittu* `נִצָּחוֹן` (Enūma eliš I 74; LH moved to it); Dagan `דָּגָן` (LH moved to it); AN's `הר אין־גישה` (*âru*) beside `ניגש` (*ṭeḫû*), for the lead. Sum. *kur₂* keeps `שִׁנָּה` (§0.3 revised). In EA (project 1) and the Lugalbanda poems nothing changed.

@@ -84,7 +84,8 @@ RESERVED_C = {
     B + P + r'(הלל|הללו|הללויה|יהלל|יהללו|מהלל|מהולל|מהוללת|אהלל|נהלל|הילל|הללה|תהלל|תהללי)' + E: [],
     B + P + r'(מזמור|מזמורי|מזמורים)' + E + r'|סלה': [],
     B + P + r'(זמרה|זמרת|זימרה|זמר|זמרים|זמרו|יזמר|אזמרה|מזמר|מזמרת)' + E: [r'en₃-du|\bnar\b|nar-|\bnar\[|tigi|šir₃|šir\['],
-    B + P + r'(בחר|בחרה|בחרו|בחרני|יבחר|נבחר|נבחרת|בחיר|בחירו|בחירה|הנבחר|בוחר)' + E: [r'pa₃|pad₃|pad\['],
+    # `מבחר` "the choicest" (*niĝ₂ saĝ*, NG 113–114) is a noun, not מ + `בחר` (2026-11-15 harmonization)
+    B + r'(?!ו?[הבלכש]{0,2}מבחר)' + P + r'(בחר|בחרה|בחרו|בחרני|יבחר|נבחר|נבחרת|בחיר|בחירו|בחירה|הנבחר|בוחר)' + E: [r'pa₃|pad₃|pad\['],
     B + P + r'(משיח|משיחו|משח|משחו|משחה|נמשח|משוח|למשוח)' + E: [],
     B + P + r'(צדק|צדיק|צדיקים|צדקה|צדקתו|צדקתך|הצדיק|יצדק)' + E: [],
     B + P + r'(ישר|ישרה|ישרים|ישרות|מישרים|מישור|יושר|ביושר|הישר|יישר|יישרה|ליישר)' + E: [r'si-sa₂|si sa₂|si-sa\b|sa₂-sa₂|sa₂-e|si\[be in order|sa\[equal|sa₂-di'],
@@ -125,6 +126,28 @@ for _k in list(nw.RESERVED):
         nw.RESERVED[_k] = nw.RESERVED[_k] + [r'gi-gi|\bgi\[turn|-in-gi\b|-ni-gi\b']
 
 strip, FN = nw.strip, nw.FN
+# 2026-11-15 harmonization (after Round 8): the corpus-wide gates licensed where they misread a plain word (run 2's
+# recorded workarounds restored): `אוּבּ` the *ub* drum (`תֹּף־אוּבּ`, as the Curse of Agade 201) is not `אוב` the
+# necromancer – licensed by *ub* / *ub₃*; `בּוּר` the area unit *bur₃* is not `בור` "pit" – licensed by *bur₃*.
+for _k in list(nw.RESERVED):
+    if '(אוב|אובות)' in _k:
+        _v = nw.RESERVED.pop(_k)
+        nw.RESERVED[B + P + r'(אוב|אובות)' + E] = [r'\{kuš\}ub\b|(^|\s)ub₃|(^|\s)ub(\s|$)']
+        nw.RESERVED[r'ידעוני|יידעוני|התגודד|יתגודד|קרחה'] = _v
+    if _k == B + P + r'בור' + E:
+        nw.RESERVED[_k] = nw.RESERVED[_k] + [r'bur₃']
+
+
+def gate_view(heb):
+    """The line as the gates see it: the vocalized homograph `שֶׁבּוֹ` "that is in it" (EB 46, 105) is not `שָׁבוּ`
+    "they returned" (the `שוב` gate); 2026-11-15 harmonization."""
+    out = []
+    for tok in re.split(r'(\s+)', heb):
+        if strip(tok).strip('[](),.;:!?–') == 'שבו' and 'ֶ' in tok and 'ֹ' in tok:
+            tok = tok.replace(tok.strip('[](),.;:!?–'), 'אשר בו')
+        out.append(tok)
+    return ''.join(out)
+
 # *eš₃* `מִקְדָּשׁ` (renderings §2): the corpus-wide `קדש` gate read `מקדש` as מ + קדש; here a temple word passes
 # (2026-11-13, T1's open decision 1). `קדוש`, `קודש`, `הקדיש` stay reserved.
 for _k in list(nw.RESERVED):
@@ -256,7 +279,7 @@ def verify(key, strict=False):
         lic = srcd.get(k, ('', tr))[1]
         lic_b = re.sub(r'[\[\]⸢⸣?!]', '', lic)
         heb_b = re.sub(r'[\[\]]', '', heb)
-        nw.check_reserved(k, heb_b, lic + ' ' + lic_b, problems, key)
+        nw.check_reserved(k, gate_view(heb_b), lic + ' ' + lic_b, problems, key)
         nw.check_traps(k, heb_b, lic + ' ' + lic_b, problems, key)
         nw.check_formulas(key, k, heb, tr, problems)
         if len(re.findall(r'[א-ת]+', strip(heb))) > 2 and re.search(r'[֑-ֽֿ-ׇ]', heb) and len(re.findall(r'[֑-ֽֿ-ׇ]', heb)) > 0.6 * len(re.findall(r'[א-ת]', heb)):

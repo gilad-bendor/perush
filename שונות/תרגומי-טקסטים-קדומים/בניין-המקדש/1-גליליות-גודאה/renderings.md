@@ -406,7 +406,7 @@ Words and formulas used in this text only (the shared ones are in `../renderings
 | *kinda* | `ספר` (Kinda-zid `כִּינְדָּה־זִיד`) | equivalent ↔ נחמיה א:יא | | B.ix.13 |
 | *gigir kug an mul-a erin₂*; *anše*; *anše sig*; *sig₁₀* | `המרכבה הטהורה, הנוצצת בַּשָּׁמַיִם – לצמוד`; `חמור`; `חמור נמוך`; `לָשִׁית` | equivalent ↔ תהלים סח:יח; divergence ↔ מלכים ב כג:יא | *erin₂* verb = `צמד` (A3). | B.ix.15–18 |
 | *ug-gin₇ šeg₁₂ gi₄*; *mar-uru₅-gin₇ zig₃* | `השואג כְּלַיִשׁ`; `הקם כסופה` | equivalent ↔ ישעיהו ה:כט; נחום א:ג | *mar-uru₅* "tempest" = `סופה` (≠ A1's "quiver" `אשפה`). | B.ix.21–22 |
-| *maškim*; *dag* (verb) | `ממונה`; `משוטט` | cognate? (*rābiṣu*) ↔ בראשית ד:ז | Law corpus (LI) *maškim* = `הממונה`. | B.ix.23 |
+| *maškim*; *dag* (verb) | `נציב`; `משוטט` | cognate? (*rābiṣu*) ↔ בראשית ד:ז | *maškim* = `נְצִיב` in every corpus (2026-11-15 harmonization; was `ממונה`, which is *nu-banda₃*'s). | B.ix.23 |
 | Names: Asari; Ninmada; Suen; Šul-šaga; Lugal-kurdub; Kur-šuna-buru'am; Lugal-sisa; Šakkan-šegbar; E-duga; Kinda-zid; Papsir | `אֲסַרִי`; `נִינְמַדָּה`; `סוּאֵן`; `שׁוּל־שַׁגָּה`; `לוּגַל־קוּרְדוּבּ`; `כּוּר־שׁוּנָה־בּוּרוּאַם`; `לוּגַל־סִיסָא`; `שַׁכַּן־שֶׁגְבַּר`; `אֵדוּגָה`; `כִּינְדָּה־זִיד`; `פַּפְּסִיר` | | Meanings in the notes ("the youth of the heart", "the king who shakes the mountain", "the mountain in his hand is a sparrow", "the straight king", "the true barber"). | B.iv.1 – ix.13 |
 
 ## Run 6 (B x–xvi)
