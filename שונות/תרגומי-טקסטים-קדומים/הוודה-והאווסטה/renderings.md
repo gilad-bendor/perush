@@ -640,7 +640,7 @@ by sense (*daδuuā̊* `העושה`, Vd 2.20–21; *dātō* "I was made"). Chang
 - Tool fixes: `לשאול` "to ask" is exempt from the `שאול` gate; the `טוב` licence covers *saúbhaga*, *svápas*, *ántivāma*.
 
 ### 11.19 RV 7.89–7.97 (Book 7, translator 9 = part 9; merged 2026-11-09)
-- **Binding for Book 7:** the part's Decisions and Proposals (`7-ריגוודה-ספר-ז/project.md`, part 9). 7.89: *mr̥nmáya gr̥há* `בית החומר` (Job 4:19 tagged; open), F7 first copies, *dīnátā* `חולשה`, *tŕ̥ṣṇā* `צמא`, *abhidrohá* `שקר` (the √*druh* family; open); *vāyú* `רוּחַ` without the article (masc.), *indra-vāyú* `אִינְדְּרָה ורוח`, *niyút* `צמד`, *śucipā́* `שותה־הצח`; *indrāgní* `אִינְדְּרָה ואַגְנִי`; *prámati* `השגחה`; √*śrath* `התיר`; *stána* `שַׁד`; *yóni* `קן` in 7.97; names Dhiṣaṇā `דְּהִישַׁנָה`, Jamadagni `גַ'מַדַגְנִי`, *nā́huṣa* `בן־נַהוּשׁ`. First copies for part 10: 7.97.10 = 7.98.7.
+- **Binding for Book 7:** the part's Decisions and Proposals (`7-ריגוודה-ספר-ז/project.md`, part 9). 7.89: *mr̥nmáya gr̥há* `בית החומר` (Job 4:19 tagged; open), F7 first copies, *dīnátā* `חולשה`, *tŕ̥ṣṇā* `צמא`, *abhidrohá* `שקר` (the √*druh* family; open); *vāyú* `רוּחַ` without the article (masc.), *indra-vāyú* `אִינְדְּרָה ורוח`, *niyút* `צמד`, *śucipā́* `שותה־הצח`; *indrāgní* `אִינְדְּרָה ואַגְנִי`; *prámati* `השגחה`; √*śrath* `התיר`; *stána* `שַׁד`; *yóni* `קן` in 7.97 (superseded: 7.97.4a is `רחם` since Round 8 run 3's consistency pass, as the rest of the corpus; `קן` stays *vásman*'s, RV 2.31.1c, and RV 10.34.11b's *yóni* by sense – §11.28); names Dhiṣaṇā `דְּהִישַׁנָה`, Jamadagni `גַ'מַדַגְנִי`, *nā́huṣa* `בן־נַהוּשׁ`. First copies for part 10: 7.97.10 = 7.98.7.
 - Review of part 9 (18 lines; 7.89.5b √*car* + object `נהג ב־`, not "walk in" – Jer 23:14). For the last consistency pass: *prámati* `השגחה` / 7.29.4d `דאגתנו`; 7.48.3d `בתחרות ()` (empty brackets); *saparyú* `משרתים` (7.2.4a) / `המכבדים` (7.94.10c).
 - Tool fix: the Sarasvatī regex no longer matches *sárasvataḥ* (Sarasvant's genitive).
 
@@ -702,3 +702,20 @@ Hebrew):
 
 ### 11.27 RV 2.34–2.43 (Book 2, translator 5 = part 5; merged 2026-11-14)
 - **Binding:** the part's Decisions and Proposals (`9-ריגוודה-ספר-ב/project.md`, part 5). The season-cups 2.36–37: the offices in the ablative (`מכהונת־הקריאה` …; new `מכהונת־מצית־אַגְנִי`, the neuter `מכהונת־הנוסח`), the refrain `… שתה עם העונות!`; the superlative of a class `האם שבאמהות, הנהר שבנהרות, האֵלָה שבאֵלוֹת` (2.41.16, as 2.33's `הרופא שברופאים`); *śakuní* `צִפּוֹר`, *śakúnti* `צִפּוֹרִית`, *sumaṅgála* `טוב־הבשורה`, *udgātár* `כוהן־הזמרה`. The §3.1 Apāṃ Napāt regex now takes the sandhi form *nápād* (` apam napa[td]`).
+
+### 11.28 2026-11-15 harmonization (after Round 8; batch C, `../reports/round-8/harmonization-batch-C.md`)
+**2026-11-15 harmonization (after Round 8):** the Book 7 items found by Book 2's consistency pass, decided by lemma and
+sense (one Hebrew per lemma; the corpus majority of the lemma); the generated files rebuilt. **Changed lines:**
+- √*vakṣ* `פרח` (√*puṣ* keeps `שגשג`): RV7.8 2d `בצמחים פרח` (+ note); and *puṣpín* `מלבלב` (RV 2.13.7a): AB7 15.2d
+  `מלבלבות שתי שוקי הנודד` (was `פורחות`, now √*vakṣ*'s; + note).
+- √*jinv* `קידם` (`עורר` is √*budh* caus.'s): RV7.104 6d `קדמו` (+ note). The compound *parjányajinvita* (RV7.103 1c
+  `שעורר פַּרְגַ'נְיָה`, also in project 6) is kept: another lemma, and the frogs wake at the rain.
+- *yuvatí* `צעירה` (`נערה` is *yóṣā*'s, `עלמה` *kanyā̀*'s): RV7.1 6a `הצעירה` (+ note), RV10.18 10c `צעירה רכה כצמר`.
+- √*śū* `תפח`: RV7.74 6c `תפחו` (+ note).
+- √*guh* `החביא`: RV7.104 17b `בהחביאה`. The Kaṭha's *gūḍha* / *guhya* `הנסתר` (beside *gúhā* `סתר`) kept by sense.
+- √*str̥* `שיטח` (`פיזר` is √*vap*'s; √*str̥̄* `הציע`): RV7.18 11b (+ note).
+- *haṃsá* `אווז` (the Rigveda; `ברבור` is Greek κύκνος's): KU2 5.2a `האווז` (the verse is RV 4.40.5; + note).
+- §11.19's *yóni* `קן` marked superseded (above).
+**Kept:** *ucátha* / *ukthá* both `אמירה` (two nouns of √*vac* in one sense; the Avestan pair is *ukthá*'s only);
+*majmán* `עוצמה` beside *śávas* `עָצְמָה` (every free word of strength is another lemma's: *ójas* `חוסן`, *sáhas* `עוז`,
+*tavasyà* `עוצם`, *mahimán* `גדולה`, *máhas* `רוממות`, *vīryà* `גבורה`, *dyumná* `הדר`) – reasons in the batch report.
