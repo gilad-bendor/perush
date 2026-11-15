@@ -412,6 +412,15 @@ parallels table.
 | SS 61 | ok | `על פניי, ומצאתי: נחש` |
 | SS 64 | err | `נחש הוא` |
 | AM 7.12 | ok | `וְאַל תִּשְׁכַּב` |
+| AH 1,3 | ok | `אַל תִּבְטַח בְּאָח, אַל תֵּדַע רֵעַ,` |
+| AH 1,3 | err | `אַל תִּבְטַח בְּאָח, אַל תֵּדַע רע,` |
+| AN 22.17 | err | `הסופר אני` |
+| AN 22.17 | ok | `הַסּוֹפֵר אָנִי` |
+| AN 22.17 | err | `אִשָּׁה זָרָה` |
+| PH 12,10 | ok | `הֶחָכָם` |
+| NF 1 | err | `הַנָּבִיא` |
+| NF 1 | err | `הַמּוֹשִׁיעַ` |
+| KP R1 | err | `הֲבֵל הֲבָלִים` |
 
 ## 10. Changes and proposals merged (by run and translator)
 
@@ -1223,3 +1232,96 @@ NU7 130.8; UN3 211.1, 215.16, 215.35): UN6 258-259.10 `לא ייהרס הוא; �
 Texts: PT600, UN) / `נגש` (the tales; in the offering ritual `הגשה` is ḥnk's); ds `כד`; zḫz `עקר` (tear out the Eye) / NU5
 `ייסוטו` (draw back the bolts); mꜣj / rw both `אריה`; the in-project synonym pairs zj / šmj `הלך`, bḏ / pꜣḏ `כדור`,
 ḥnw.t / ꜥb `קרן`, spr / šbtjw `צלע`, jni̯ (tla26870) / pḥ / spr `הגיע` (§6.7 principle 1).
+
+## 14. The Instructions, each whole papyrus (Round 9 run 4, 2026-11-16; fixed by the coordinator before the first line)
+
+The plan row: `../translation-program.md`, Round 9 run 4 (EG2); the survey entries egypt-02, egypt-06, egypt-07, egypt-08
+(`../curation-surveys/program-2026-11/region--egypt.md`). Five projects, nine KEYs, 668 base lines (≈ 11,600 words), all
+from AED-TEI (TLA 2018, CC BY-SA 4.0). The corpus's §3–§13 bind (names, the grammar mapping, the key terms, the gates);
+this section adds what the Instructions need. A brief says "look for", never "translate as": read the transliteration.
+
+### 14.1 The texts (KEYs) and the labels
+| KEY | Project | Text | Base (AED folder) | Lines | Labels |
+|---|---|---|---|---|---|
+| KG | `11-פפירוס-פריס/` | the end of the Instruction for Kagemni | pPrisse cols. 1–2 (`Kagemni--pPrisse`) | 21 | `1,1`–`2,9` |
+| PH | `11-פפירוס-פריס/` | the Instruction of Ptahhotep, version P | pPrisse cols. 4–19 (`Ptahhotep--pPrisse`) | 195 | `4,1`–`19,9` (`5,6-7`, `9,12-13`: the TLA's own labels; no `13,7` in the TLA) |
+| AH | `12-פפירוס-סאלייה-2/` | the Instruction of Amenemhat | pSallier II 1,1–3,8 | 28 | `1,1`–`3,8` |
+| KH | `12-פפירוס-סאלייה-2/` | the Instruction of Khety (the Satire of the Trades) | pSallier II 3,9–11,5 | 69 | `3,9`–`11,5` |
+| NH | `12-פפירוס-סאלייה-2/` | the Hymn to Hapy (the Nile) | pSallier II 11,6–14,11 | 35 | `11,6`–`14,11` |
+| AD | `13-מוסר-אני/` | the Instruction of Any: the opening, lost in pBoulaq 4 | pDeM 1 (Quack's D) x+1,1–x+7,6 | 50 | `Dx+1.1`–`Dx+7.6` (`Dx+2.0`, `Dx+5.0`: the dates written between the lines) |
+| AN | `13-מוסר-אני/` | the Instruction of Any | pBoulaq 4 recto (Quack's B) 13,x+1–23,17 | 179 | `13.x+1`–`23.17` (`14.1-5` one TLA line) |
+| NF | `14-נבואת-נפרתי/` | Neferti | pPetersburg 1116B verso | 71 | `1`–`71` |
+| KP | `15-תלונות-חחפרעסנב/` | the Complaints of Khakheperreseneb | the writing board BM EA 5645 | 20 | `R1`–`R14`, `V1`–`V6` |
+
+- The TLA's opening `?` row of PH, KH, AN, NF (only gap marks: "the lost beginning") is not an entry; each text's intro
+  says what is lost before its first line.
+- **AD joins AN** at D x+7.7 = B 13,x+3 (`dgꜣs =k r s,t` ~ `[dgs]? =k m s,t`): AD ends at D x+7.6, and AN's first four
+  lines are the fragments of B's damaged first page. The title of Any (`ḥꜣ,t-ꜥ m sbꜣ,yt mtr.wj …`) survives only on the
+  tablet tBerlin 8934 (`data AD --wit`): the AD intro quotes it in Hebrew.
+- The witnesses (`data KEY --wit`): PH – pBM 10371+10435 (L1), pBM 10509 (L2), tCarnarvon 1 (C); AH – pMillingen; NH –
+  pChester Beatty V, pAnastasi VII; AD – tBerlin 8934, pGuimet 16959; AN – pDeM 1, pGuimet, pSaqqara, pChester Beatty V
+  and six ostraca; KP – oCairo JE 50249. A restoration from a witness is `[ ]` with "משוחזר על פי <siglum>" in the entry.
+
+### 14.2 Names (★ = always vocalized; §3, §11.2, §12.2, §13.2 hold)
+| Egyptian | Hebrew | Note |
+|---|---|---|
+| Kꜣ-gm.n=j | `קָגֶמְנִי` | |
+| Ḥwnj; Snfrw | `חוּנִי`; `סְנֶפְרוּ` | Kagemni's kings (KG 2,x); Neferti's king (NF) |
+| Ptḥ-ḥtp | `פְּתָח־חֹתֶפּ` ★ | the Ptah trap (§5.3) fires on an unvocalized `פתח` before the maqaf |
+| Jssj | `אִיסֶסִי` | the king of PH 4,1 |
+| Jmn-m-ḥꜣ.t; Sḥtp-jb-Rꜥ | `אֲמֶנֶמְחַת`; `סְחֶתֶפּ־אִיבּ־רַא` | AH's king (the pattern of `אֲמֶנֶמוֹפֶּה`); Re = `רַא` (§3) |
+| Z-n-Wsr.t | `סֶנוּסֶרֶת` | §11.2 |
+| Ḫty; Dwꜣ-ḫty / Dwꜣ=f | `חֶתִי` (MR); `דּוּאָאוּף` | KH's author and his father; spell the father as the base writes him |
+| Ḥꜥpj | `חַעְפִּי` | the Nile flood as a god (NH); jtrw = `יְאֹר` (§4.2, the loanword: only for jtrw) |
+| Jnj | `אָנִי` ★ | trap (`אני` "I"): in a line that names him, the pronoun is vocalized `אֲנִי` |
+| Ḫnsw-ḥtp | `חוֹנְסוּ־חֹתֶפּ` | Any's son |
+| Nfr.tj | `נֶפֶרְתִּי` | |
+| Jmnj | `אָמֵנִי` | Neferti's coming king (= Amenemhat I) |
+| Bꜣst.t | `בַּסְטֶת` | |
+| Ḫꜥ-ḫpr-Rꜥ-snb | `חַע־חֶפֶּר־רַא־סֶנֶבּ` | `רַא` per §3 (an unvocalized `רע` would trip the Re trap); Snj `סֶנִי` (his other name) |
+| Jwnw | `אוֹן` ★ | §3 |
+| ꜥꜣm.w; Sṯ.tjw | `הָעַאמוּ` (§11.2); `הַסֶּטִיּוּ` | the Asiatics (NF) |
+
+### 14.3 Key terms (one Hebrew per lemma; the corpus's precedents bind – check `lexmap <lemma id>` and `grep --all`)
+- **The genre's own words:** sbꜣ.yt = `מוּסָר` (corpus; `תּוֹרָה` never); the title ḥꜣ.t-ꜥ m sbꜣ.yt = `רֵאשִׁית הַמּוּסָר`
+  (AM 1.1; a formula below); sbꜣ "teach" = `לִמֵּד` (unless the corpus has fixed another: `lexmap tla131380`); mtr.t
+  "instruction, testimony" = check MR / NU (`עֵד` is mtr.w, §12); sḏm "hear, obey" = `שָׁמַע` [equivalent Prov 1:8;
+  4:1] – Ptahhotep's epilogue on hearing (PH 16–19) turns on sḏm: one Hebrew for every form (sḏm.w "the hearer"
+  `הַשּׁוֹמֵעַ`); md.t = `דָּבָר`, ḏd = `אָמַר`, mdwi̯ = `דִּבֵּר` (§4).
+- **Knowing and not knowing:** rḫ = `יָדַע`; rḫ-ḫ.t = `יוֹדֵעַ־דָּבָר`; ḫm "ignorant" = `בּוּר` (Proverbs' `כְּסִיל`,
+  `אֱוִיל`, `סָכָל` never, gated); sꜣꜣ / šsꜣ "wise, skilled" = `חָכָם` (gated to them). The "great-hearted" (ꜥꜣ jb, the
+  arrogant) = `גְּבַה־לֵב`? – the first translator fixes it (Prov 16:5 `גְּבַהּ־לֵב` would be [equivalent]).
+- **The hot and the silent:** pꜣ šmm `הַחַם` ★, gr `שָׁתַק`, gr mꜣꜥ `הַשּׁוֹתֵק הָאֲמִתִּי` (§6.4) – where Ptahhotep and Any use
+  them; ꜥwn-jb "greedy" (PH's maxim 19) and ꜥwn.t "greed" = the first translator fixes it (`חַמְדָן` is the root חמד:
+  never, TALES; consider `רְעַבְתָּן` / `תַּאַוְתָן`).
+- **People:** zꜣ = `בֵּן`; sn = `אָח`; ḫnms "friend" = `רֵעַ` ★ (vocalized always: Re / "evil", the trap); ḫnms.w
+  "friends" `רֵעִים` ★; jry "companion" (tla550359) = `חָבֵר`; ḏrḏr "stranger" = `נָכְרִי` (corpus: AM, SI) – where Any
+  warns of the woman ḏrḏr / m rwtj, `נָכְרִיָּה` and `מִבַּחוּץ` [equivalent Prov 2:16, 5:20, 7:5] – and `זָר`,
+  `זָרָה` never (gated: Prov's own pair); ḥm.t = `אִשָּׁה` (ḥm.t z `אֵשֶׁת אִישׁ`); mw.t = `אֵם`; jt = `אָב`; zẖꜣ.w /
+  sš = `סוֹפֵר` (corpus); sr = `שַׂר`; nb = `אָדוֹן`; ḥm=f = `הוֹד מַלְכוּתוֹ` (corpus).
+- **Neferti:** ẖry-ḥb = `הַכֹּהֵן־הַקּוֹרֵא` (§11.3); sr "foretell" (tla138950) = `הִגִּיד מֵרֹאשׁ` (the root נבא never);
+  the saviour king: nḥm = `הִצִּיל` (משיח and the root ישע never, gated); the chaos words by their own sense, one each
+  (ẖnnw `מְהוּמָה` from CH/MR); mꜣꜥ.t `אֱמֶת` / jsf.t `עָוֶל` (§4.1) at NF 68–69 ("Maat comes back, isfet is driven out").
+- **Khakheperreseneb:** mꜣw "new" = `חָדָשׁ` (gated to mꜣw: Qoh 1:9–10 `אֵין כָּל חָדָשׁ` is the apparatus's); `הֶבֶל`
+  and `תַּחַת הַשֶּׁמֶשׁ` never in a line; ḫpr.t "what happens" = `הַנִּהְיֶה` (corpus ḫpr `נִהְיָה`).
+- **Khety (the trades):** the trades by their own words, one Hebrew each, decided by the translator of KH and recorded
+  (the professions' list is the text: no Ben Sira 38:24–39:11 diction in the lines; the parallel goes in the apparatus,
+  tagged and said to be outside the Tanakh).
+- **The Nile Hymn:** jtrw `יְאֹר` (only for jtrw), Ḥꜥpj `חַעְפִּי`, wꜣḏ-wr `הַיָּרֹק־הַגָּדוֹל` (§11.3); mḥ "flood, fill"
+  by sense, never `מַבּוּל`; Ps 104 and Ps 65:10–14 in the apparatus only.
+- **Amenemhat:** "trust no brother, know no friend" (AH 1,3) – mḥ jb "trust" = `בָּטַח` (check `lexmap` for mḥ-jb); the
+  famous echoes Mic 7:5–6, Ps 41:10, Ps 55:13–15 belong to the apparatus.
+
+### 14.4 Formulas and gates (checked by `verify` in the INSTR keys)
+- ḥꜣ.t-ꜥ m sbꜣ.yt (jri̯.t.n X) = `רֵאשִׁית הַמּוּסָר (אֲשֶׁר עָשָׂה X)` (AM 1.1).
+- m + negative imperative (Middle Egyptian `m jri̯`, tla64410) = `אַל` + future (§6.2).
+- ꜣḫ X r Y = `מוּטָב X מִ־Y` (§6.3; the formula fires on any ꜣḫ … r): where ꜣḫ is "useful" / "effective" and not a
+  comparison, write `[סטייה מן הנוסחה: ꜣḫ "מועיל", אין כאן השוואה]` in the entry.
+- The colophons (jw=f pw … "it has come, from its beginning to its end, as it was found in writing") = one Hebrew,
+  fixed by the first translator who meets it and copied byte for byte (PH 19,x; KH, NH ends; AN 23).
+- Gated / never (INSTR; `egypt_tools.py gates`): `זר`, `זרה` never; `כסיל`, `אויל`, `אוולת`, `סכל` never; `חכם` /
+  `חכמה` only for sꜣꜣ / šsꜣ; `הבל` never; `חדש` only for mꜣw; the root נבא never; `משיח` and the root ישע never; the
+  root חזה only for a seeing verb; and the TALES gates (the Decalogue, Gen 39, Ps 15 / 24, Deut 26) apply to INSTR.
+  Traps: `אני` (Any), `רע` (the friend ḫnms).
+
+### 14.5 Proposals merged (filled by the coordinator after each translator)

@@ -70,13 +70,20 @@ P8 = "8-המלח-הנטרף"
 P9 = "9-מוסר-למריכרע"
 # the Pyramid Texts of Unas, the whole pyramid (Round 8 run 1, 2026-11-13)
 P10 = "10-טקסטי-הפירמידה-של-אונאס"
-PROJECTS = (P1, P2, P3, P4, P5, P6, P7, P8, P9, P10)
+# the Instructions, each whole papyrus (Round 9 run 4, 2026-11-16)
+P11 = "11-פפירוס-פריס"
+P12 = "12-פפירוס-סאלייה-2"
+P13 = "13-מוסר-אני"
+P14 = "14-נבואת-נפרתי"
+P15 = "15-תלונות-חחפרעסנב"
+PROJECTS = (P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, P14, P15)
+INSTR = {"KG", "PH", "AH", "KH", "NH", "AD", "AN", "NF", "KP"}   # Round 9 run 4: the Instructions (renderings §14)
 UNAS = {f"UN{i}" for i in range(1, 10)}
 NU_KEYS = {f"NU{i}" for i in range(1, 11)}
 BOOK = NU_KEYS | {"BD", "CH"}   # the Book of the Dead keys (formulas scoped to them: renderings §12)
 # the gates scoped to the tales (RESERVED entries with a key set); since Round 6 run 2 also the Book of the Dead and
 # Merikare (the Decalogue / Ps 15 / Ps 24 / Deut 26 words concern them as much as BD 125)
-TALES = {"TB", "WE", "BD", "SI", "SS"} | BOOK | {"MR"} | UNAS   # the gates scoped to the tales (RESERVED entries with a key set); UNAS since Round 8 run 1
+TALES = {"TB", "WE", "BD", "SI", "SS"} | BOOK | {"MR"} | UNAS | INSTR   # INSTR since Round 9 run 4; the gates scoped to the tales (RESERVED entries with a key set); UNAS since Round 8 run 1
 
 # The Book of the Dead of Nu (pBM EA 10477), whole (Round 6 run 2, 2026-11-06): the papyrus's 136 AED chapter texts in
 # the papyrus's order (the Bonn Totenbuch-Projekt's object record TM 134299, "Inhalt"; ../sources/AED-TEI/README.md),
@@ -324,12 +331,25 @@ UNITS = {
     "CH": (P6, "ספר המתים, פרק 175 (פפירוס חַע, טורינו 8438): נספח", "aed", "BD-175--pCha-Turin-8438/PHHTCP56KNFFXCKMBRE6SCOCGU.xml", None),
     "MR": (P9, "המוסר למֶרִיכָּרֶע (פפירוס פטרבורג 1116A)", "aed-E", "Merikare--pPetersburg-1116A/YZSISQLOINELTMJDPXQ45O5IUU.xml", (1, 149)),
 }
+UNITS.update({
+    "KG": (P11, "סוף המוסר לקָגֶמְנִי (פפירוס פְּרִיס, טורים 1–2)", "aed", "Kagemni--pPrisse/KI7QRD7K55C6PJRUN5AFW6OFLI.xml", None),
+    "PH": (P11, "מוסר פְּתָח־חֹתֶפּ (פפירוס פריס, טורים 4–19)", "aed", "Ptahhotep--pPrisse/DKAFDVSXYFADJDS3Z3AOISAP4U.xml", None),
+    "AH": (P12, "מוסר אֲמֶנֶמְחַת (פפירוס סָאלִייֶה 2, טורים 1–3)", "aed", "Amenemhat--pSallier-II/2SOSQYN3XZGMJPPSFL2PE53ONY.xml", None),
+    "KH": (P12, "מוסר חֶתִי: סאטירת המקצועות (פפירוס סאלייה 2, טורים 3–11)", "aed", "Khety--pSallier-II/L4M2NZM2YZAZRBIKQQBAVX743U.xml", None),
+    "NH": (P12, "ההמנון לחַעְפִּי, הנילוס (פפירוס סאלייה 2, טורים 11–14)", "aed", "Nile-Hymn--pSallier-II/PMARXRST45A6PL4SDWQ7URKABI.xml", None),
+    "AD": (P13, "מוסר אָנִי: הפתיחה (פפירוס דיר אל־מדינה 1)", "aed-AD", "Any--pDeM-1/B6NZVDDMZBGXHISVKURTB7QNK4.xml", ("x+1.1", "x+7.6")),
+    "AN": (P13, "מוסר אָנִי (פפירוס בּוּלָאק 4)", "aed", "Any--pBoulaq-4/PPIUFRFOXZBOXHEUKTWUNM4UYA.xml", None),
+    "NF": (P14, "נבואת נֶפֶרְתִּי (פפירוס פטרבורג 1116B)", "aed", "Neferti--pPetersburg-1116B/SSUM6V6CCVGJLB2DIIB5DQ4I6U.xml", None),
+    "KP": (P15, "תלונות חַע־חֶפֶּר־רַע־סֶנֶבּ (לוח הכתיבה BM EA 5645)", "aed", "Khakheperreseneb--tBM-EA-5645/ES5N6FKJQFCO5GTR4DVDAAUS6U.xml", None),
+})
 for _k, _t in UN_PARTS.items():
     UNITS[_k] = (P10, _t, "aed-UN", None, None)
 PROJECT_TITLES = {P1: "מוסר אמנמופה", P2: "בריאת העולם במצרים: מריכרע, התאולוגיה של מֹף, טקסטי הפירמידות",
                   P3: "ספר הפרה השמימית", P4: "מעשה בשני האחים", P5: "סיפורי פפירוס וסטקר",
                   P6: "ספר המתים של נוּ", P9: "המוסר למריכרע", P7: "סיפור סינוהה", P8: "סיפור המלח הנטרף",
-                  P10: "טקסטי הפירמידה של אוּנָאס"}
+                  P10: "טקסטי הפירמידה של אוּנָאס", P11: "פפירוס פריס: סוף המוסר לקגמני, מוסר פתח־חתפ",
+                  P12: "פפירוס סאלייה 2: מוסר אמנמחת, מוסר חתי, ההמנון לנילוס", P13: "מוסר אני",
+                  P14: "נבואת נפרתי", P15: "תלונות חע־חפר־רע־סנב"}
 # the variant witnesses a translator consults (printed by `data KEY --wit`)
 WITNESSES = {
     "AM": ["Amenemope--tLouvre-E-17173/J54RCGRIM5CYLB5T27RUS5G7D4.xml", "Amenemope--oKairo-SR-1840/WWBWAINUHFAXBCPM4JT7CR4EZA.xml",
@@ -342,6 +362,18 @@ WITNESSES = {
     "BD": ["BD-125--pJuja-CG-51189/ZJ45MN6I2BEBXIOF4E2OH4PK64.xml", "BD-125--pMaiherperi-CG-24095/S4KP2OGKXFCPPK7Q5MHFEE6R7A.xml"],
     "MR": ["Merikare--pMoskau-4658/Z3IP3NIFJVGTNIV47MWEMXKQJQ.xml", "Merikare--pCarlsberg-VI/FTVMO4SFGBHHBA4RTMZITSRNAM.xml"],
     "SI": ["Sinuhe--oAshmolean-1945.40-AOS/RP2F6BGNDBAARDBNDHGFSFPIEM.xml"],
+    # Round 9 run 4: the Instructions
+    "PH": ["Ptahhotep--pBM-EA-10371-L1/3W45TQYQ3RCX5DXZ7DIZ43JWNQ.xml", "Ptahhotep--pBM-EA-10509-L2/KETLFI2GYFFA5BT77EZJJRIEGQ.xml",
+           "Ptahhotep--tCarnarvon-1/VPAOENGVZFEZ5G5MZFIAJUBKTQ.xml"],
+    "AH": ["Amenemhat--pMillingen/SBXNEXLFQZFVZDN7QNQEUOYMDY.xml"],
+    "NH": ["Nile-Hymn--pChester-Beatty-V/LZJHQUCT6VBN7JV4GD4ZNUJ6ZM.xml", "Nile-Hymn--pAnastasi-VII/GIBRRJQX7JG7REZJDTBQFXGAUQ.xml"],
+    "AD": ["Any--tBerlin-8934/WOAIM6KKGJDJ5OUDFHRFJ542NM.xml", "Any--pGuimet-16959/XVPVMGXHBVEA3B7FGSAEEYWU44.xml"],
+    "AN": ["Any--pDeM-1/B6NZVDDMZBGXHISVKURTB7QNK4.xml", "Any--pGuimet-16959/XVPVMGXHBVEA3B7FGSAEEYWU44.xml",
+           "Any--pSaqqara-EES-75-S-45/XGPOLN6GCNCKXHZ3KCUHOSHMKE.xml", "Any--pChester-Beatty-V/BKWV6KZXZRFRXOYEBEM3UMHMHI.xml",
+           "Any--oDeM-1259/26K3H7MFJ5EZVFOLKGYCM46NPA.xml", "Any--oDeM-1659/E7Z4XR3RGRASHHBTF3AN3H7ZYA.xml",
+           "Any--oDeM-1063/AREJSMC3K5F3BLED4DZP63CGFI.xml", "Any--oDeM-1658/USV4EUUIMNEAZAFJQZLJ6NPQNE.xml",
+           "Any--oDeM-1639/32A74UPOABEMBLADK2SQG2C6FE.xml", "Any--oGardiner-357/HUZOX73ZHRB43AUMGWQCO4RXEI.xml"],
+    "KP": ["Khakheperreseneb--oKairo-JE-50249/UIJINU5ZIRFNRFODPVMJDQZUYM.xml"],
 }
 # pWestcar 2,21–4,7: the fifth-day dossier's excerpt (WC). Its `>` lines are the dossier's, kept identical by verify
 # (the dossier is not edited from here: a revision is recorded in WE's entry as `[סטייה מן התיק: <reason>]`, for the lead).
@@ -437,6 +469,19 @@ def rows(key):
                     continue
                 out.append({"label": pref + lab, "text": " ".join(w["surf"] for w in ln["words"]), "words": ln["words"],
                             "sents": ln["sents"], "orig": ln["label"]})
+    elif kind == "aed-AD":
+        # Any's lost opening (Round 9 run 4): pDeM 1 (Quack's D) from its first line to the line before pBoulaq 4's
+        # first preserved words (D x+7.7 = B 13,x+3: renderings §14.1)
+        on = False
+        for ln in aed2md.parse(os.path.join(AED, f)):
+            lab = ln["label"].strip().replace(" ", "")
+            if lab == sel[0]:
+                on = True
+            if on:
+                out.append({"label": "D" + lab, "text": " ".join(w["surf"] for w in ln["words"]), "words": ln["words"],
+                            "sents": ln["sents"], "orig": ln["label"]})
+            if lab == sel[1]:
+                break
     else:
         lines = aed2md.parse(os.path.join(AED, f))
         for i, ln in enumerate(lines):
@@ -447,6 +492,15 @@ def rows(key):
                 lab = f"E{i + 1}"
             elif key.startswith("PT"):
                 lab = _pt_label(lab)
+            elif key in INSTR:
+                # Round 9 run 4: the TLA's '?' row before a lost beginning holds only gap marks: not an entry
+                if lab.strip() == "?" and not re.sub(r"[\[\]…_ ]", "", " ".join(w["surf"] for w in ln["words"])):
+                    continue
+                lab = lab.strip().replace(" ", "").replace("Rto", "R").replace("Vso", "V").lstrip("{")
+                if key == "PH" and lab == "19.9":   # the TLA writes the last line of pPrisse 19 with a dot
+                    lab = "19,9"
+                if key == "AN" and lab == "19,9":   # … and one line of pBoulaq 4 with a comma
+                    lab = "19.9"
             elif key in TALES:
                 lab = re.sub(r"^rto\s+", "", lab.strip()).replace(" ", "")
             words = _alt_gaps(ln["words"]) if key == "AM" else ln["words"]
@@ -677,6 +731,15 @@ RESERVED = [
     # seraphim / the bronze serpent never; the angels never (the netherworld corpus's reservation)
     (W + alt("נתר", "הנתר", "בנתר") + E, r"nṯr,j|nṯr\(,j\)|nṯrj|tla90510", "נֶתֶר only for nṯr.j 'natron' [cognate: loanword, Jer 2:22]; the whole corpus since the 2026-11-15 harmonization (bd = בֹּרִית, ḥzmn = נתרון)"),
     (W + alt("סולם", "הסולם", "סולמות", "בסולם", "סולמו") + E, r"mꜣq,t|mꜣq\.t|mꜣqt|tla67390", "סֻלָּם only for mꜣq.t 'ladder' [equivalent Gen 28:12]", UNAS),
+    # --- the Instructions (renderings §14; Round 9 run 4): Proverbs', Qohelet's and the prophets' own words ---
+    (W + alt("זר", "זרה", "זרים", "זרות", "הזר", "הזרה", "הזרים", "מזרה") + E, None, "זָר / זָרָה never (Prov 2:16, 5:3, 7:5 `אִשָּׁה זָרָה`): ḏrḏr = `נָכְרִי` (corpus), rwtj = `חוּץ` (§14.3)", INSTR),
+    (W + alt("כסיל", "הכסיל", "כסילים", "הכסילים", "אויל", "האויל", "אוילים", "אוולת", "סכל", "הסכל", "סכלות", "כסילות") + E, None, "Proverbs' and Qohelet's fools never: ḫm = `בּוּר` (§14.3)", INSTR),
+    (W + alt("חכם", "החכם", "חכמים", "החכמים", "חכמה", "החכמה", "חכמתו", "חכמתך", "חכמי", "חוכמה", "החוכמה", "חוכמתו", "חוכמתך", "התחכם") + E, r"sꜣꜣ|sjꜣ|\bsꜣ\b|tla126220|tla126160|tla126230|šsꜣ", "חָכָם / חָכְמָה only for sꜣꜣ / šsꜣ 'wise, skilled' [equivalent Prov passim] (rḫ = `יָדַע`, rḫ-ḫ.t = `יוֹדֵעַ־דָּבָר`) (§14.3)", INSTR),
+    (W + alt("הבל", "ההבל", "הבלים", "הבלי", "הבלו") + E, None, "הֶבֶל never (Qoh 1:2) (§14.3)", INSTR),
+    (W + alt("חדש", "חדשה", "חדשים", "חדשות", "החדש", "החדשה", "החדשים", "החדשות", "מחודש", "מחודשים", "התחדש", "חידש") + E, r"mꜣw|mꜣ,w|mꜣ\.w|tla66150|tla66940|tla66830|tla66820|tla95000|\bꜣbd", "חָדָשׁ only for mꜣw 'new' (Qoh 1:9–10 `אֵין כָּל חָדָשׁ`: Khakheperreseneb's 'new words') (§14.3)", INSTR),
+    (W + alt("נבא", "ניבא", "נביא", "הנביא", "נביאים", "נבואה", "הנבואה", "נבואת", "התנבא", "יתנבא", "מתנבא", "נבואתו") + E, None, "the root נבא never (no Egyptian prophet: sr 'foretell' = `הִגִּיד מֵרֹאשׁ`, ẖry-ḥb = `הַכֹּהֵן־הַקּוֹרֵא`) (§14.3)", INSTR),
+    (W + alt("משיח", "המשיח", "משיחו", "ישועה", "הישועה", "מושיע", "המושיע", "הושיע", "יושיע", "ישע", "תשועה") + E, None, "משיח and the root ישע never (Neferti's saviour king: nḥm = `הִצִּיל`, ḏꜣ = `חִלֵּץ`) (§14.3)", INSTR),
+    (W + alt("חזון", "החזון", "חזיון", "חזה", "חוזה", "החוזה", "חזו") + E, r"mꜣꜣ|ptr|gmḥ|dgi̯|nwꜣ", "the root חזה only for a seeing verb (mꜣꜣ, ptr, gmḥ, dgi̯) (§14.3)", INSTR),
     (W + alt("שרף", "שרפים", "השרף", "השרפים", "שרפי") + E, None, "שָׂרָף never (Num 21:6–8, Isa 6:2, 14:29, 30:6): the serpent words by their own sense", UNAS),
     (W + alt("מלאך", "מלאכים", "המלאך", "המלאכים", "מלאכי", "מלאכיו") + E, None, "מַלְאָךְ never (Gen 28:12; the netherworld corpus's reservation): wpw.tj = שָׁלִיחַ", UNAS),
     (W + alt("נחש", "נחשים", "הנחש", "הנחשים", "נחשי", "נחשה") + E, r"ḥfꜣ|ḥfꜣw|ḥfꜣ,w|ḥfy|ḥfj|ꜥꜣpp|ḏdf|nḥꜣ|nꜣw|ꜥpp|sꜣ-tꜣ|ḏd\b|ḏd,t|ꜥrꜥr", "נָחָשׁ only for a serpent word (ḥfꜣw …) [equivalent Gen 3:1, Ex 7:9–12]", TALES),
@@ -690,6 +753,8 @@ RE_ = rf"(?![{V}א-ת])"
 TRAPS = [
     (RW + r"(?:היו)" + RE_, r"tla97860|\bhjw\b", "the serpent Hiu must be vocalized הִיוּ ('were')"),
     (RW + r"(?:אונס)" + RE_, r"wnjs", "Unas is אונאס (plene, with א): `אונס` reads 'rape' (renderings §13.2)"),
+    (RW + r"(?:אני)" + RE_, r"J~ni|Jnj\b|Jnjj|J~nj", "the scribe Any must be vocalized אָנִי ('I'); in a line that names him, vocalize the pronoun אֲנִי (§14.2)", INSTR),
+    (RW + r"(?:רע|הרע|רעי|רעך|רעו|רעהו|רעים|רעיו|לרע)" + RE_, r"ḫnms|ḫnmš|ḫnms,w|ḫnms\.w|tla118260|tla41190|tla853897", "the friend ḫnms must be vocalized רֵעַ / רֵעִים ('evil', Re) (§14.3)", INSTR),
     (RW + r"(?:רע|הרע)" + RE_, r"\brꜥ\b|rꜥw|\bRꜥ", "Re is רַא (renderings §3): an unvocalized רע where the source has Rꜥ is a trap ('evil')"),
     (RW + r"(?:פתח)" + RE_, r"ptḥ|pth", "Ptah must be vocalized פְּתָח ('open')"),
     (RW + r"(?:גב)" + RE_, r"gb\b|gbb", "Geb must be vocalized גֶּבּ ('back')"),
@@ -778,7 +843,10 @@ def check_line(key, lab, heb, body, fixed, out):
                 continue
             out.append(f"RESERVED {key} {lab}: {why}\n    {heb}\n    src: {src}")
             bad += 1
-    for rx, cond, why in TRAPS:
+    for t in TRAPS:
+        rx, cond, why = t[:3]
+        if len(t) > 3 and key not in t[3]:   # a trap scoped to a key set (Round 9 run 4)
+            continue
         if re.search(rx, heb) and lic(cond, key, lab):
             out.append(f"UNVOCALIZED {key} {lab}: {why}\n    {heb}")
             bad += 1
@@ -1208,6 +1276,81 @@ def cmd_lemma(q):
         print(f"    glosses: {'; '.join(f'{k} ({v})' for k, v in sorted(e['gloss'].items(), key=lambda x: -x[1])[:5])}")
         print(f"    morphology: {'; '.join(f'{k} ({v})' for k, v in sorted(e['feats'].items(), key=lambda x: -x[1])[:4])}")
 
+_LEXMAP = None
+
+
+def lexmap():
+    """{lemma id: {hebrew: [KEY label, …]}} from every drafted entry's פירוק bullet (Round 9 run 4): each segment
+    `` `surf` – … ("Hebrew") `` is matched to the row's word of that surface form, whose TLA lemma id it takes."""
+    global _LEXMAP
+    if _LEXMAP is not None:
+        return _LEXMAP
+    out = {}
+    seg = re.compile(r"`([^`]+)`\s*[–-][^`]*?\(\"([^\"]+)\"\)")
+    for key in present_keys():
+        ra = read_annotated(key)
+        if not ra:
+            continue
+        heb, seq, src, body, probs = ra
+        try:
+            rs = {r["label"]: r for r in rows(key)}
+        except SystemExit:
+            continue
+        for lab in seq:
+            r = rs.get(lab)
+            if not r or not r["words"]:
+                continue
+            forms = {}
+            for w in r["words"]:
+                forms.setdefault(plain_src(w["surf"]).replace(" ", ""), w.get("lemma", ""))
+            m = re.search(r"^- \*\*פירוק:\*\*(.*)$", body.get(lab, ""), re.M)
+            if not m:
+                continue
+            for sm in seg.finditer(m.group(1)):
+                f = plain_src(sm.group(1)).replace(" ", "")
+                lem = forms.get(f)
+                if not lem or not re.search(r"[א-ת]", sm.group(2)):
+                    continue
+                h = re.sub(f"[{NIQ}]", "", sm.group(2)).strip()
+                out.setdefault(lem.replace("tla", ""), {}).setdefault(h, []).append(f"{key} {lab}")
+    _LEXMAP = out
+    return out
+
+
+def cmd_lexmap(q=None):
+    """lexmap [<lemma id> | <Hebrew regex>]: the Hebrew each TLA lemma took across the drafted files (splits first)."""
+    lm = lexmap()
+    items = sorted(lm.items(), key=lambda x: (-len(x[1]), -sum(len(v) for v in x[1].values())))
+    for lem, hs in items:
+        if q:
+            if re.match(r"^(tla)?\d+$", q):
+                if lem != re.sub(r"^tla", "", q):
+                    continue
+            elif not any(re.search(q, h) for h in hs):
+                continue
+        print(f"tla{lem}: " + "; ".join(f"{h} ({len(v)}: {', '.join(v[:3])}{'…' if len(v) > 3 else ''})"
+                                         for h, v in sorted(hs.items(), key=lambda x: -len(x[1]))))
+
+
+def cmd_freq(keys, top=150):
+    """freq KEY… : the commonest lemmas of these keys, with their gloss and the Hebrew the corpus already gave them."""
+    lm = lexmap()
+    cnt, gl = {}, {}
+    for k in keys:
+        for r in rows(k):
+            for w in r["words"]:
+                lem = w.get("lemma", "").replace("tla", "")
+                if not lem or "Pron" in w.get("gloss", "") or w.get("feats", "").startswith(("pronoun", "preposition")):
+                    continue
+                cnt[lem] = cnt.get(lem, 0) + 1
+                gl.setdefault(lem, {}).setdefault(w["gloss"], 0)
+                gl[lem][w["gloss"]] += 1
+    for lem, n in sorted(cnt.items(), key=lambda x: -x[1])[:top]:
+        g = max(gl[lem].items(), key=lambda x: x[1])[0]
+        hs = lm.get(lem, {})
+        hh = "; ".join(f"{h} ×{len(v)}" for h, v in sorted(hs.items(), key=lambda x: -len(x[1]))[:4]) or "—"
+        print(f"tla{lem}\t{n}\t{g}\t{hh}")
+
 
 def cmd_grep(pat, every=False):
     rx = re.compile(pat)
@@ -1236,7 +1379,8 @@ def cmd_gates():
         scope = f" [only {', '.join(sorted(ent[3]))}]" if len(ent) > 3 else ""
         print(f"  {rx}\n      ← {allow or 'NEVER'}  ({why}){scope}")
     print("\nTRAPS:")
-    for rx, cond, why in TRAPS:
+    for t in TRAPS:
+        rx, cond, why = t[:3]
         print(f"  {rx}  [{cond}]  {why}")
     print("\nFORMULAS:")
     for ent in FORMULAS:
@@ -1410,6 +1554,10 @@ def main():
         return cmd_grep(rest[0], "--all" in a)
     if cmd == "gates":
         return cmd_gates()
+    if cmd == "lexmap":
+        return cmd_lexmap(rest[0] if rest else None)
+    if cmd == "freq" and rest:
+        return cmd_freq(rest)
     if cmd == "selftest":
         sys.exit(0 if cmd_selftest() else 1)
     sys.exit(__doc__)

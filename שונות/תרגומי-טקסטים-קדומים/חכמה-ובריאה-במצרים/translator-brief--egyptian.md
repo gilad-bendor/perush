@@ -249,3 +249,29 @@ sections of the translators before you in `10-טקסטי-הפירמידה-של-�
   ka and the akh; explain the puns (Egyptian loves them: `jr.t` "eye" ~ `jri̯` "do"; `snṯr` "incense" ~ `nṯr` "god").
   The serpent spells (PT 226–243) are the oldest spells against snakes, partly in a foreign tongue (Steiner 2011 reads
   some as Canaanite: a note, with the caution the reading deserves).
+
+## 12. The Instructions, each whole papyrus (Round 9 run 4, 2026-11-16)
+**Read `renderings.md` §14 before the first line** (the keys KG, PH, AH, KH, NH, AD, AN, NF, KP; the labels; the names;
+the key terms; the formulas and gates), then the corpus's two Instructions already done – Amenemope
+(`1-מוסר-אמנמופה/annotated-AM.rtl.md`: the wisdom vocabulary and the Proverbs table, `renderings.md` §8) and Merikare
+(`9-מוסר-למריכרע/annotated-MR.rtl.md`: Middle Egyptian of the same age, the speech and justice words) – and the sections
+of the translators before you in your project's `project.md` and in `renderings.md` §14.5.
+- **Before fixing any Hebrew word:** `python3 -I -B egypt_tools.py lexmap <tla id>` (the Hebrew the corpus already gave
+  that lemma, with its lines) and `freq KEY` (your range's commonest lemmas with the corpus's Hebrew); follow the
+  precedent unless you record a reason. Every new recurring word goes to your Proposals.
+- **The language:** Middle Egyptian (KG, PH, AH, KH, NH, NF, KP; the copies are New Kingdom and often corrupt – the
+  TLA's emendations `⟨ ⟩` / `{ }` are the editor's: follow them, and say where you read otherwise) and late Middle /
+  Late Egyptian (AD, AN: `bw sḏm=f`, `m-jri̯`, `tw=k ḥr sḏm`, the definite article `pꜣ` / `tꜣ` / `nꜣ`). The maxims are
+  terse: keep their shape (conditional `jr` "if" `אִם`, imperative, prohibitive `m` / `m-jri̯` `אַל`), and add for sense
+  only inside `( )`. A papyrus line is the unit, even where a maxim runs across it (guidelines §6.1).
+- **Echo control is the whole difficulty of this genre**: the reader knows Proverbs, Qohelet and Ben Sira by heart.
+  Render the Egyptian; never reach for `בְּנִי`, `שְׁמַע בְּנִי`, `הַט אָזְנְךָ`, `יִרְאַת`, `חָכָם בְּעֵינָיו`, `אֵין כָּל חָדָשׁ`,
+  `אִשָּׁה זָרָה` unless the Egyptian says exactly that and the word is the natural Hebrew – and then tag it in the
+  **הקבלה** bullet. The gates of §14.4 catch the worst; your judgement catches the rest.
+- **הערות on its own terms**: the scribe's world (the office, the father teaching the son, writing as immortality),
+  maat and its order, the household and the wife, the table of the great man, speech and silence, death and the tomb,
+  the king (Amenemhat's murder; Neferti's chaos and its saviour), the inundation as a god. Explain the images and the
+  wordplay as an Egyptian hearer would have heard them.
+- **The witnesses** (`data KEY --wit`): where pPrisse, pSallier II or pBoulaq 4 is corrupt or lost and a witness has the
+  better or fuller text, translate the base and give the witness's reading in the הערות; restore a lost word from a
+  witness only within `[ ]`, with "משוחזר על פי <siglum>".

@@ -15,7 +15,7 @@
 - **Licence:** **CC BY-SA 4.0** (stated in every file header) – committed, with attribution. **Never scrape the live TLA
   website** (`thesaurus-linguae-aegyptiae.de`): it sits behind a JavaScript wall and shows crawlers a decoy page of fake
   records (the Egypt survey, 2026-10-21).
-- **Retrieved:** 2026-10-23 (Round 4 run 1 for Merikare; Round 4 run 3 for the rest).
+- **Retrieved:** 2026-10-23 (Round 4 run 1 for Merikare; Round 4 run 3 for the rest); the Instructions 2026-11-16 (Round 9 run 4: raw GitHub, `<ID>.xml`, `_st`, `_wt`).
 - **What is here** (one folder per text; the TLA ID in the file names):
 
 | Folder | Text (TLA title) | TLA ID | Lines (`<lb>`) | Used in |
@@ -45,6 +45,15 @@
 | `BD-175--pCha-Turin-8438/` | Tb 175 (pTurin Museo Egizio 8438, pCha) | PHHTCP56KNFFXCKMBRE6SCOCGU | 65 | project 6 (CH, the appendix) |
 | `Bremner-Rhind--4-Overthrowing-Apophis/`, `Bremner-Rhind--5-Names-of-Apophis/` | pBM 10188: the Book of Overthrowing Apophis; the Names of Apophis | A2PTGDCYB5E4XK6OORW6V4QHOE, 2Z3OHH5EKZEUTAFMAIWR2PXTGE | 264, 60 | (the Apophis spells: for the fifth-day dossier) |
 
+| `Kagemni--pPrisse/`, `Ptahhotep--pPrisse/` | pPrisse (pBN 183–194): the Instruction for Kagemni (cols. 1–2), the Instruction of Ptahhotep, version P (cols. 4–19) | KI7QRD7K55C6PJRUN5AFW6OFLI, DKAFDVSXYFADJDS3Z3AOISAP4U | 21, 196 | project 11 (KG, PH; Round 9 run 4) |
+| `Ptahhotep--pBM-EA-10371-L1/`, `Ptahhotep--pBM-EA-10509-L2/`, `Ptahhotep--tCarnarvon-1/` | Ptahhotep, versions L1, L2+L2G, C | 3W45TQYQ3RCX5DXZ7DIZ43JWNQ, KETLFI2GYFFA5BT77EZJJRIEGQ, VPAOENGVZFEZ5G5MZFIAJUBKTQ | 174, 137, 7 | witnesses (PH) |
+| `Amenemhat--pSallier-II/`, `Khety--pSallier-II/`, `Nile-Hymn--pSallier-II/` | pSallier II (pBM EA 10182): Amenemhat (1–3), Khety (3–11), the great Nile hymn (11–14) | 2SOSQYN3XZGMJPPSFL2PE53ONY, L4M2NZM2YZAZRBIKQQBAVX743U, PMARXRST45A6PL4SDWQ7URKABI | 28, 70, 35 | project 12 (AH, KH, NH; Round 9 run 4) |
+| `Amenemhat--pMillingen/`; `Nile-Hymn--pChester-Beatty-V/`, `Nile-Hymn--pAnastasi-VII/` | Amenemhat (pMillingen); the Nile hymn (pChester Beatty V, pAnastasi VII) | SBXNEXLFQZFVZDN7QNQEUOYMDY; LZJHQUCT6VBN7JV4GD4ZNUJ6ZM, GIBRRJQX7JG7REZJDTBQFXGAUQ | 38; 56, 41 | witnesses (AH, NH). Khety's 18 other witnesses and the Nile hymn's ostraca are in AED, not downloaded |
+| `Any--pBoulaq-4/` | pBoulaq 4 recto: the Instruction of Any, version B | PPIUFRFOXZBOXHEUKTWUNM4UYA | 180 (`13.x+1`–`23.17`) | project 13 (AN; Round 9 run 4) |
+| `Any--pDeM-1/` | pDeM 1 recto: Any, version D | B6NZVDDMZBGXHISVKURTB7QNK4 | 58 | project 13 (AD: x+1.1–x+7.6, the opening lost in B); witness (AN) |
+| `Any--tBerlin-8934/`, `Any--pGuimet-16959/`, `Any--pSaqqara-EES-75-S-45/`, `Any--pChester-Beatty-V/`, `Any--oDeM-1063/`, `Any--oDeM-1259/`, `Any--oDeM-1639/`, `Any--oDeM-1658/`, `Any--oDeM-1659/`, `Any--oGardiner-357/` | Any, the other versions (tB, G, S, L, oD1, oD4, oD5, oD6, oD7, oG) | see `concordance_name_text_id.csv` ("Die Lehre des Ani") | 8, 23, 16, 6, 4, 5, 10, 2, 6, 15 | witnesses (AD, AN) |
+| `Neferti--pPetersburg-1116B/` | pPetersburg 1116B verso: Die Prophezeiungen des Neferti | SSUM6V6CCVGJLB2DIIB5DQ4I6U | 72 | project 14 (NF; Round 9 run 4) |
+| `Khakheperreseneb--tBM-EA-5645/`, `Khakheperreseneb--oKairo-JE-50249/` | the Complaints of Khakheperreseneb (the writing board; an ostracon) | ES5N6FKJQFCO5GTR4DVDAAUS6U, UIJINU5ZIRFNRFODPVMJDQZUYM | 20, 4 | project 15 (KP; Round 9 run 4); witness |
 - **The order of pNu's chapters** (not in AED: each chapter is its own text): the Bonn Totenbuch-Projekt's object record
   TM 134299 (`https://totenbuch.awk.nrw.de/objekt/tm134299`, field "Inhalt"; retrieved 2026-11-06 with curl – the site's
   lists load by JavaScript, but an object page is plain HTML), matched to AED in `egypt_tools.py` `NU_ORDER`.
