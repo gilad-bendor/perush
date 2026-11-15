@@ -138,6 +138,10 @@ for _k in list(nw.RESERVED):
         nw.RESERVED[_k] = nw.RESERVED[_k] + [r'bur₃']
 
 
+# A hook for tools that import this one (ur3_tools.py, 2026-11-15): lines exempt from the "fully vocalized" check.
+VOC_EXEMPT = lambda heb: False
+
+
 def gate_view(heb):
     """The line as the gates see it: the vocalized homograph `שֶׁבּוֹ` "that is in it" (EB 46, 105) is not `שָׁבוּ`
     "they returned" (the `שוב` gate); 2026-11-15 harmonization."""
@@ -282,7 +286,7 @@ def verify(key, strict=False):
         nw.check_reserved(k, gate_view(heb_b), lic + ' ' + lic_b, problems, key)
         nw.check_traps(k, heb_b, lic + ' ' + lic_b, problems, key)
         nw.check_formulas(key, k, heb, tr, problems)
-        if len(re.findall(r'[א-ת]+', strip(heb))) > 2 and re.search(r'[֑-ֽֿ-ׇ]', heb) and len(re.findall(r'[֑-ֽֿ-ׇ]', heb)) > 0.6 * len(re.findall(r'[א-ת]', heb)):
+        if not VOC_EXEMPT(heb) and len(re.findall(r'[א-ת]+', strip(heb))) > 2 and re.search(r'[֑-ֽֿ-ׇ]', heb) and len(re.findall(r'[֑-ֽֿ-ׇ]', heb)) > 0.6 * len(re.findall(r'[א-ת]', heb)):
             problems.append(f'{k}: the line looks fully vocalized (draft unvocalized, plene): "{heb}"')
     if pending:
         (problems if strict else notes).append(f'{pending} entries not yet drafted')

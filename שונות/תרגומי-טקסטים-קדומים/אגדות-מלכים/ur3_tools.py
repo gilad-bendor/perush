@@ -91,6 +91,23 @@ for _k in KEYS:
         'אור־נמה': ('Ur-Namma (אוּר־נַמָּה)', r'ur-{d}namma|ur-namma'),
     }
 
+# Gate licences for names (KL1, 2026-11-15): Meš-Ane-pada (*pad₃*) is not `פדה`; Būr-Suen is not `בור` "pit".
+for _k in list(nw.RESERVED):
+    if 'פדה' in _k:
+        nw.RESERVED[_k] = nw.RESERVED[_k] + [r'-pad₃|-pa₃-da|-pad\b']
+    if _k == B + P + r'בור' + E or '(בור|' in _k:
+        nw.RESERVED[_k] = nw.RESERVED[_k] + [r'bur-\{d\}suen|bur-\{d\}sin|bur-\{d\}zu']
+
+
+def _names_only(heb):
+    """A line of names (every Hebrew token vocalized, at most four tokens: KL's 'Dagan', 'Ur-Namma' lines) may be
+    vocalized whole: the first occurrence of each name is vocalized by the rules."""
+    toks = [t for t in re.split(r'[\s־]+', re.sub(r'[\[\](),.;:!?–"]', ' ', heb)) if re.search(r'[א-ת]', t)]
+    return 0 < len(re.split(r'\s+', heb.strip())) <= 4 and all(re.search(r'[ְ-ׇ]', t) for t in toks)
+
+
+ct.VOC_EXEMPT = _names_only
+
 _ct_etcsl = ct.etcsl_lines
 
 

@@ -848,12 +848,12 @@ reason in `project--<part>.md`; after the merge the row binds. Tool: `ur3_tools.
 | Source | Hebrew | Notes |
 |---|---|---|
 | Šulgi; Ur-Namma; Amar-Suen; Šu-Suen; Ibbi-Suen | שׁוּלְגִּי; אוּר־נַמָּה (plain `אור־נמה`, 55× in the law corpus; `אורנמה` is a trap); אֲמַר־סוּאֵן; שׁוּ־סוּאֵן; אִבִּי־סוּאֵן | |
-| Ninsumun; Lugalbanda; Bilgameš (Šulgi's "brother") | נִינְסוּמוּן; לוּגַלְבַּנְדָּה; בִּילְגָּמֶשׁ (the Sumerian poems' form, 71×) | §12; `../אפוס-גילגמש/renderings.md` §23 |
+| Ninsumun; Lugalbanda; Bilgameš (Šulgi's "brother") | נִינְסוּמוּן; לוּגַלְבַּנְדָּה; גִּלְגָּמֶשׁ (the Sumerian poems' form, `3-השירים-השומריים/`, 474×; corrected at the KL1 merge – `בילגמש` is a minority form) | §12; `../אפוס-גילגמש/renderings.md` §23 |
 | Urim ★; Nibru; Unug; Kulaba; Kiš ★; Lagaš; Girsu; Eridug; Isin; Larsa; Akšak; Agade ★; Mari ★; Ḫamazi | אוּר; נִיפּוּר; אוּרוּךְ; כּוּלַבָּה; כִּישׁ; לַגַשׁ; גִּירְסוּ; אֶרִידוּ; אִיסִין; לַרְסָה; אַכְשַׁךְ; אַגָּדֶה; מָארִי; חַמָזִי | the canon §1, the flood references; `לגש` unvocalized reads "to approach" – vocalize at the first occurrence per entry block |
 | Elam; Anšan; Marḫaši; Simaški; Gutium; Martu (Amorites); Subir | עֵילָם [cognate, Gen 10:22]; אַנְשָׁן; מַרְחַשִׁי; שִׁימַשְׁכִּי; גּוּטִיּוּם; מַרְתּוּ; סוּבִּיר | `מרתו` (Martu) reads "his bitterness": vocalize |
 | Nanna ★; Suen; Ningal; Utu ★; Inana ★; An ★; Enlil; Ninlil; Enki; Ninḫursaĝa; Nisaba; Ninurta; Nuska | as the canon §1 | |
-| Ereškigal ★; Nergal; Namtar; Ninazu; Ningišzida; Dumuzid; Gilgameš in the netherworld (*bil₃-ga-mes*); Ḫuškia; Nungal; Ninĝišzida's throne-bearer | אֶרֶשְׁכִּיגַל; נֶרְגַּל; נַמְתָּר; נִינְאָזוּ; נִינְגִּישְׁזִידָה; דּוּמוּזִי; בִּילְגָּמֶשׁ; חוּשְׁכִּיָּה; נוּנְגַּל | the netherworld corpus |
-| the King List's kings | transcribed from ETCSL as the flood references do (`אֲלוּלִים`, `אֶנְמֶנְלוּאַנָּה`), vocalized at the first occurrence; a biblical-looking name is a trap to note, never assimilated (Etana `אֵתָנָה`, Enmerkar `אֶנְמֶרְכַּר`, Lugalbanda, Dumuzid, Gilgameš `בִּילְגָּמֶשׁ`, Sargon `סַרְגּוֹן`, Ku-Baba `כּוּ־בָּבָא`) | names already fixed in other projects keep their form |
+| Ereškigal ★; Nergal; Namtar; Ninazu; Ningišzida; Dumuzid; Gilgameš in the netherworld (*bil₃-ga-mes*); Ḫuškia; Nungal; Ninĝišzida's throne-bearer | אֶרֶשְׁכִּיגַל; נֶרְגַּל; נַמְתָּר; נִינְאָזוּ; נִינְגִּישְׁזִידָה; דּוּמוּזִי; גִּלְגָּמֶשׁ; חוּשְׁכִּיָּה; נוּנְגַּל | the netherworld corpus |
+| the King List's kings | transcribed from ETCSL as the flood references do (`אֲלוּלִים`, `אֶנְמֶנְלוּאַנָּה`), vocalized at the first occurrence; a biblical-looking name is a trap to note, never assimilated (Etana `אֵתָנָה`, Enmerkar `אֶנְמֶרְכַּר`, Lugalbanda, Dumuzid, Gilgameš `גִּלְגָּמֶשׁ`, Sargon `סַרְגּוֹן`, Ku-Baba `כּוּ־בָּבָא`) | names already fixed in other projects keep their form |
 The rest: transcribed from the base and recorded in the part's proposals.
 
 ### 14.2 Formulas (the first copy fixes them; checked after the merge)
@@ -917,7 +917,19 @@ The rest: transcribed from the base and recorded in the part's proposals.
 Then independent fidelity reviewers (as time allows: the hymns; UN; KL + RL), and the coordinator's consistency pass.
 
 ### 14.7 Merged from the parts
-(The coordinator adds one record per part.)
+**KL1 (the King List 48–431, A–D; translator A; merged 2026-11-15).** 388 entries, three passes; `verify KL` OK,
+excerpt OK. Its formulas, words, occupations and the names' first-occurrence forms are binding as written in
+`14-רשימת-המלכים-השומרית/project--KL1.md` ("Proposals"): above all *X {ĝiš}tukul ba-an-sag₃* = `X בנשק הוכתה,`;
+*PN dumu X-ke₄* = `PN, בן X`; *lugal-am₃* = `היה מלך,`; *ab-ba-ni X* = `אביו – X,`; *šu-niĝin₂* = `סך הכול`; *bala*
+`תקופה`; *tukul* `נשק`; *sag₃* `הכה`. Coordinator's decisions: (1) Gilgameš = `גִּלְגָּמֶשׁ` (the Sumerian poems; §14.1
+corrected); (2) Etana = `אֵתָנָה` (the corpus form), applied to the flood references' notes (§1 47, §5 9) too; (3) the
+mark `{N}` for a number taken from another manuscript than the composite's lead (ETCSL's notes) is accepted – it is
+the guidelines' recension-tag brace (§6.8) used around words, and the intro explains it; (4) KL 1 `[המלו]כה` →
+`המלוכה` (only the prefix *nam-* is restored: the partial-restoration rule), applied to both copies; KL 43 `בְּכִישׁ`
+applied to the flood references §1 (`annotated.rtl.md`, `translation.rtl.md`); (5) gate bugs fixed in `ur3_tools.py`:
+the corpus-wide `פדה` gate licensed by *pad₃* (Meš-Ane-pada), `בור` by Būr-Suen; a line made only of vocalized names
+(≤ 4 words) is exempt from the "fully vocalized" check (a hook `VOC_EXEMPT` in `canon_tools.py`). The translator's
+written-around spellings `מֶשְׁאַנֶּפַּדָּא`, `בּוּרְסוּאֵן` stay (both are fair transcriptions).
 
 ## Changelog
 - 2026-11-07: §12.6.1–§12.6.5 merged after each part (LC1, LC2, LZ1, LZ2, ES); *alan* reversed to `פֶּסֶל` (§12.6.3).
