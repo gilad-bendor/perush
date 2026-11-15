@@ -181,5 +181,48 @@ the name R̥bhu; 3.6.2b *práyajyu* "(?)"; 3.7.9a √*vr̥ṣāy* "in Brunst".
   describe what √*daśasy* is, not what it is not.
 
 
+### Review (reviewer 1)
+Independent fidelity review of all 372 pādas (2026-11-15): every `>` line against the Zurich text and morphology (`data`),
+the פירוק against the line, `lexmap` over the part against Books 7 / 2, F14 (four copies identical), the Āprī lines
+3.4.8–11 = 7.2.8–11 and 3.4.7a / 3.6.9d against 2.3 (identical), names vocalized at first occurrence (all), the intros
+and notes against the lines. The grammar fields of the פירוק match Zurich in every word (checked by script: person,
+number, mood, tense, voice); the lines render every content word. **5 lines fixed**, plus the פירוק glosses and the
+intros below. After the fixes: `build RV3.1-7`; `verify RV3.1-7 --strict`: no problems (the one justified 10.14.6d
+difference); `check_bible_quotes.py`: 0.
+
+| Label | Before | After | Why |
+|---|---|---|---|
+| 3.1.4c | `נעו אליו הסוסות` | `נעו (אליו) הסוסות` | `אליו` is not in the source (*abhí* is `אֶל` of `כְּאֶל`) |
+| 3.2.6c | `מבקשים שירות (וגם) ידידות` | `מבקשים מחווה (וגם) ידידות` | *dúvas* is `מחווה` in Book 7 (7.20.6c, 7.22.4c): a split with no difference of sense |
+| 3.2.9d | `הלכו אל קרובן` | `הלכו אל בן־אחוותן` | *jāmí* `אחווה` (7.72.3b, 10.10; here 3.1.11d `בנות־האחווה`); `קרוב` is *bándhu*'s (3.1.3b, 10c) |
+| 3.4.1a | `היה קשוב לנו` | `היה לנו` | *bodhi* is √*bhū* (Zurich), `היה` in Books 7 and 2 (7.32.11c, 2.2.11a …); "attentive" (√*budh*) stays in the note |
+| 3.5.8d | `הרחיב לו אַגְנִי` | `הרחיב (לו) אַגְנִי` | no dative in the source |
+
+- **The פירוק's meaning field (92 glosses):** the drafting generator had folded homonyms, so the meaning (not the Hebrew,
+  not the grammar) was wrong: *sám* "אושר" → "יחד" (9), simile *ná* "לא" → "כמו (בדימוי)" (11), preverb *ví* "עוף" →
+  "לרווחה" (9), *íd* "רוויה" → "אכן" (7), √*īḍ* "רוויה" → "להתפלל", √*yā* "אשר" → "ללכת" / *īmahe* "להתחנן", *íṣ*
+  "לשלוט" → "רענון", √*iṣ* → "לבקש" / "לשגר", √*nī* "מטה", √*mā* "אל", √*kā* "מה", √*śās* "ישן", √*viś* / √*viṣ* "שבט",
+  √*vas* "לחפוץ" (→ "ללבוש" / "לשכון" / "להפציע" by form), √*sā* "הוא", √*ās* "להיות", √*gr̥* (*járasva*) "להלל" →
+  "להתעורר", √*śubh*, *áṅga* "אכן", *ápi* "ידיד", *ā́pya* "מימי", *kā́vya* "הקַוְיָה", *bhāgá* "בהגה", *dákṣa* "דקשה",
+  *dhā́rā* "חוד", *dhána* "קץ", *vŕ̥dh*, *yuvatí*, *ínvant*; and the nested quotation marks of 3.6.4b.
+- **Notes:** 3.7.10d "המשורר אינו מודה באשמה" and "בלשון של חנינה" removed (no confession or pardon vocabulary, even as
+  contrast); 3.2.6c, 3.2.9d, 3.4.1a notes follow the new lines.
+- **Intros (said what the lines do not):** 3.1 (`אורות השחר` as a gloss of "the ruddy ones", `עטין אביו`); 3.2 (the axe
+  quote; Mātariśvan "brought it from heaven" → "set it down, whose dwelling is in heaven"); 3.3 (Manu did not seat the
+  Hotar; "the poet pours out his song" → the line's words); 3.4 (`קשובה`; `גיבור`, not `בן`; the quote of 7c); 3.5 (Agni,
+  not Ṛbhu, protects "the hide of the grain"; `התבסמות`; Mātariśvan "found" it – not in the line); 3.6 (the ladle as
+  "tongue", "the pole of order", "the 33 gods with their wives" – misquotes); 3.7 ("the rays" and "as to one woman" –
+  not in the lines; `בן תְּוַשְׁטָר`; "pardon … not confession" removed).
+
+**Rulings left for the coordinator:**
+- 3.2.1d *r̥ṇvati* is 3 sg. (Zurich's PL is wrong; Jamison: it agrees with the simile's axe); the Hebrew keeps the plural
+  `מחברים` of the sense subject (the priests). Keep, or `מחבר` with the subject left open?
+- 3.7.3d `השכין הרחק`: *prá* (3c, already `קדימה`) + caus. √*vas* "made them leave" (Jamison) – `הרחק` renders the
+  compound's sense outside `( )`; `(הרחק)` or `הוציא` are the alternatives.
+- √*dhā* `העמיד` (3.1.3a, 3.2.5a, 3.2.13b) beside `שם` (the other √*dhā* lines of the part): both are Book 7 / RV 10 renderings of √*dhā*;
+  the corpus has not fixed when `העמיד` applies.
+- √*vr̥* "cover" `עטוף` (3.3.5c) against RV 10's `כסה` (10.16.7b, 10.18.11d) – the corpus is mixed already.
+- The §11.29 splits (*jániman*, √*vañc*, *yogyā́*, *ágra*) were left as merged.
+
 ## Parallels index
 (Generated at the end from the translators' sections and the הקבלה bullets; see `../parallels-index.md`.)
