@@ -293,8 +293,8 @@ and sets with the sun into Atum's arms, and is called to stand up, sit down and 
   alternatives (`פצה` for the mouth, `פרץ` for the way) each fit only one context.
 - **nhp `*השכים*?`** (36 times in the refrain): a guess from HC 21; the TLA's "lebensvoll sein" or a neutral
   transliteration are the alternatives.
-- **ꜥb.w "impurity" `טומאה`** (222.25, 222.32) against NU3 105.4's `עבֵרה` for the same TLA lemma: a sense split.
-- **nḏ `הגן`** (223.7, 224.4, 224.18) against PT486 / PT600's `שמר`: chosen because zꜣw `הישמר` stands in the same line.
+- **ꜥb.w "impurity" `טומאה`** (222.25, 222.32) against NU3 105.4's `עבֵרה` for the same TLA lemma: a sense split. **[2026-11-15 harmonization: NU3 105.4 moved to `טומאה`; `עבירה` is jw's]**
+- **nḏ `הגן`** (223.7, 224.4, 224.18) against PT486 / PT600's `שמר`: chosen because zꜣw `הישמר` stands in the same line. **[2026-11-15 harmonization: nḏ = `שמר` (PT600, BD; `הגן` is ḫwi̯'s): 223.7, 224.4, 224.18, UN6 250.6, 254.46; 224.4 `שמור על ילדיך! הישמר לך`]**
 - **ꜥḥꜥ `עמד` in "stand up, sit down"** (223.3, 223.12): faithful to the lemma, though Hebrew says `קום`.
 
 ### Progress log
@@ -442,7 +442,7 @@ shoulder and a ram standing at the head of the gods.
   "ram" `איל`, zj.t `כבשה`, wꜣp.t `רחל`; smꜣ `שור־בר` (NU5); ḫsbḏ jr.tj `ספיר־העיניים`; jtr.tj `שני ההיכלים`; sjn
   `מהיריו` (`רצים` is ḥwwtj's); ḏsr rmn `מרים־הכתף` (rmn = `כתף`, UN3); tp-rd.wj `לרגלי`; zn `פרץ` (NU3); fꜣi̯ ḥr
   `נשא פנים`; sḏb `תקלה` (NU5); dšr.t `כד אדום`, sḏ `שבר` (NU4); jmjm `חזק`; nri̯ `חרד`; gmḥsw `גֶּמְחֶסוּ`.
-- **Names fixed here** (first occurrence vocalized): Nḥb-kꜣw `נֶחֶבְּכָּאוּ` (NU1); Mꜣfd.t `מָאפְדֶת` (renderings §13.2;
+- **Names fixed here** (first occurrence vocalized): Nḥb-kꜣw `נֶחֶבְּכָּאוּ` (NU1); Mꜣfd.t `מַאפְדֶת` (2026-11-15, was `מָאפְדֶת`; renderings §13.2;
   NU writes `מַאפְדֶת`); ꜣbw (Elephantine) `אַבּוּ`; Ḥmn `חֶמֶן`; Dwn-ꜥnwj `דּוּן־עַנְוִי`; Nbwtj (Seth) `הנוּבְּתִי`;
   ḥḏ.t `הכתר־הלבן` (UN4 `הכתר־האדום`); Ḫꜥy-tꜣw `המופיע־בלהבה`; ḥm-psḏ.t `משרת־האור?` (the pelican?).
 - **Rejected**: `נחש` for hjw, nꜥw, kꜣ, ḏ.t (not licensed; each rendered by sense); `פתן`, `צפע`, `שפיפון`, `אפעה`
@@ -457,7 +457,7 @@ shoulder and a ram standing at the head of the gods.
 - **The "foreign" lines** (232.1–232.2, 235.1, 236.1, the names of 238): transliterated with `?`; where the TLA gives a
   lemma (mtj "vessel", hʾ "court", šs "rope") 232.1 follows it (`*עורק*?`), 236.1 does not translate hʾ (a sentence
   that does not read as Egyptian). A future check against Steiner 2011 may change this.
-- **sṯ** `ריח` (TB, here) vs MK E134 `בושם` for the same lemma, and bdd `בושם` here: the lead may unify.
+- **sṯ** `ריח` (TB, here) vs MK E134 `בושם` for the same lemma, and bdd `בושם` here: the lead may unify. **[2026-11-15 harmonization: MK / MR E134 moved to `הריח`]**
 - **ḫm** with the root נכר (`התנכר` / `הכיר`), not a separate verb: acceptable?
 
 ### Progress log
@@ -603,7 +603,7 @@ and is vindicated before the Two Truths, going forth with Maat (260).
 - **Terror**: snḏ `יראה` (UN4), nrw `אימה` (UN3), sdꜣ `רעד`, snhd `הבעית`, nrj `חרד` (UN5), ḥꜣꜥ.wt `מבוכה`.
 - **The king as judge**: wḏꜥ "separate" `הפריד` (UN4; 251.6) but the legal phrase wḏꜥ mdw / wḏꜥ X ḥnꜥ Y `דן (דין)`
   (252.5, 254.43, 260.5) – a sense split; wpj "separate, judge" `פלח` (UN5's `פלח`: 252.6 `הפולח (בין) שני האֵלִים`,
-  257.10 `פולח המהומה`); ḏꜣḏꜣ.t `ועד` (NU1); mꜣꜥ.tj `שתי האמת` (BD); mtrw `עֵד`; mꜣꜥ-ḫrw `אֲמִתִּי־הַקּוֹל` (260.4).
+  257.10 `פולח המהומה` **[2026-11-15 harmonization: 252.6 → `הפוסק (בין)`, as NU8 4.1; wpj "open the way" `פלח` (UN1 81.7, UN4 222.30, UN6 254.19); wpj rʾ `פתח`]**); ḏꜣḏꜣ.t `ועד` (NU1); mꜣꜥ.tj `שתי האמת` (BD); mtrw `עֵד`; mꜣꜥ-ḫrw `אֲמִתִּי־הַקּוֹל` (260.4).
 - **tfn / tfn.t "orphan"** (260.5; **superseded**: the coordinator licensed `יָתוֹם`, renderings §13.6.4.3, applied by the independent review) `חסר־האב` / `חסרת־האב`: `יָתוֹם` is reserved "never" (renderings §5.1) although it
   is exactly the Egyptian word and Ps 82:3 / Deut 10:18 are the parallels – **a gate that blocks the right word**
   (reported; the Hebrew was not bent: `חסר־האב` is a precise description, and the apparatus quotes the verses).
@@ -809,7 +809,7 @@ ferryman "Face-behind-him", climbs Re's ladder, stands at the gate of Nun – an
 
 ### Open decisions for the user
 - **mds** "slaughter": here `קוטל` (273-274.28, a verb with an object); NU9 / NU10 have `עורץ` / `העריץ` for the same
-  lemma in names and epithets. One Hebrew for the lemma? (Proposal: `קוטל` in the verb, the NU epithets may stay.)
+  lemma in names and epithets. One Hebrew for the lemma? (Proposal: `קוטל` in the verb, the NU epithets may stay.) **[2026-11-15 harmonization: mds = `ערץ` throughout (BD 144.19 has the verb too; `קטל` is Merikare's sqr): 273-274.28 `העורץ את האדונים`]**
 - **mšrw.t** `סעודת־ערב` vs ms.wt `ארוחת־ערב` (UN6): two Egyptian words for supper, two Hebrew compounds; `סעודה`
   alone is šbw's (UN6).
 - **ḏꜣj** `חצה` / `העביר` by valence (above) – acceptable, or one Hebrew verb throughout?
@@ -977,9 +977,9 @@ king's crossing, and the great left Eye of Horus brought back "sound", named as 
   in the entry: the חם gate does not see `Ḫm` after a hyphen); Ḫrtj `חֶרְתִּי`; Nzꜣ.t `נֶסָאת`; jqh.t `האִיקְהֶת`; Ḫnmw
   `חְנוּם` (AM); Zkr `סוֹכַּר` (NU2); Rʾ-sṯꜣw `רֶא־סְטָאוּ` (NU1); Pḏw `פֶּגֶ׳וּ`; Nn.t `נָאוּנֶת`; Jmn / Jmn.t `אָמוֹן` /
   `אָמוֹנֶת`; Rwtj `שני־אריות` (NU); mẖnm.tj `המְחֶנְמְתִי?`; Nḥj `נֶחִי`; Šꜣ.t `שָׁאת?`; Šzm.t `שֶׁסְמֶת`; Ḫnz.wt `חֶנְסוּת`;
-  Rnn-wtt `רֶנֶנוּטֶת`; Zḫn-wr `אופף־גדול` (NU9); Sbk `סֻבֶּךְ` (renderings §13.2; NU7 `סוֹבֶּךְ`); Ṯḥnw `צְ׳חֶנוּ` (not
+  Rnn-wtt `רֶנֶנוּטֶת`; Zḫn-wr `אופף־גדול` (NU9); Sbk `סוֹבֶּךְ` (BD, NU7; 2026-11-15, was `סֻבֶּךְ`); Ṯḥnw `צְ׳חֶנוּ` (not
   `לוּב`: the Bible's Lubim come from the later Rbw); ḥꜥpj `חַעְפִּי` (MR); ḏꜥꜥmjw `גַ׳עַמְיוּ`; Min `מִין` ★, Mafdet
-  `מָאפְדֶת`.
+  `מַאפְדֶת` (2026-11-15).
 - **Rejected**: `נחש` for any serpent word but ḥfꜣw (nꜣš.wtj included); `פתן`, `צפע`, `שפיפון`, `אפעה`, `עכשוב`; `רמס`
   for šꜣs (taken; Ps 91:13 stays in the apparatus); `מבול` / `שטפון` for ḥw.t (`גשם`); `לוב` for Ṯḥnw; `מצבה` for tḫn
   (284.5, transliterated); `בגד` for ꜣqs; `צל` / `מחסה` for šw.
@@ -1171,7 +1171,7 @@ in the pyramid's last line he spreads his protection over Re.
 
 ### Open decisions for the user
 - **sḏr** `לן` (302.10, "spend the night", the TLA's gloss) beside UN5's `שכב` for the same lemma – a sense split.
-- **ḥꜣj** `עירומות` (308.5) vs NU8 96.9 `חשוף` (one lemma, two words; `חשף` is kfj's in SS, AM and 302.8).
+- **ḥꜣj** `עירומות` (308.5) vs NU8 96.9 `חשוף` (one lemma, two words; `חשף` is kfj's in SS, AM and 302.8). **[2026-11-15 harmonization: NU8 96.9 moved to `עירום`]**
 - **The ladder of PT 310**: the coordinator's brief lists 310 among the ladder spells; Pepi I's copy (the base) has
   no mꜣq.t – it is the ferry spell of Face-in-front / Face-behind. Nothing to translate as `סולם` there.
 - **302.24**: the composite cuts the line after `pꜣ pꜣ`; the AED record (and Unas's wall) continues `rmṯ pꜣ r=f Wnjs =j
@@ -1320,7 +1320,7 @@ naming the item and its count.
   קח לך את עין־חוֹרוּס, <relative clause>!`; `jꜥb n=k s(j) r rʾ=k` = `קבץ לך אותה אל פיך!` (87.2, 110.1; *jꜥb* = UN3's
   `קבץ`); `ḫwi̯ … sḏm=f` = `הגן – פן …` (88.2, 116.1; *ḫwj* = AM's `הגן`).
 - **Rubrics** (renderings §13.6.3.1): action = verbal noun + full stop (`ניסוך.`, `נתינת מי־הצינה.`, `הרמה.`, `הנחה
-  לפניו.`, `הגשה, ארבע פעמים.`); item = the bare noun, then the count: `לחם־וּט, אחד.`; with a vessel `יין, קנקן־גביש שחור,
+  לפניו.`, `הגשה, ארבע פעמים.`); item = the bare noun, then the count: `לחם־וּט, אחד.`; with a vessel `יין, לגין־גביש שחור,
   אחד.` / `שֵׁכָר, קערת־גביש שחור, אחת.`; with pellets `בורית, גרגר אחד.` / `בורית של הדרום, חמישה גרגרים, נֶחֶבּ.`;
   with bowls `מים, שני ספלים.`; the "meal:" heading `סעודה: שֶׁנֶס, אחד.`; `zp 4` inside a rubric `ארבע פעמים` (108.2) or
   `(ארבע פעמים)` (95.2, as `zp 2` `(פעמיים)`).
@@ -1359,7 +1359,7 @@ naming the item and its count.
 - **ḥtp "be content" = `נח`** (the corpus rule) makes `ינוח לך רַא`, `נח הוא בגללה` – faithful to the root shared with
   the offering (ḥtp), but stiff; the alternative is `רָצָה` / `התפייס` for the verb (one lemma, two Hebrew roots).
 - **jšš `עטש`** (PT600's) for Horus and Seth "spitting out" zmjn (34.4–34.5) reads oddly; `ירק` is psg's (UN3). Keep?
-- **mnw "quartz" `גביש`**, hꜣṯs `קנקן`, ḥnw.t `קערה`: the vessel words are conventional; the TLA calls hꜣṯs and ḥnw.t only
+- **mnw "quartz" `גביש`**, hꜣṯs `קנקן` **[2026-11-15 harmonization: hꜣṯs → `לָגִין` (`קנקן` is ḏwj.w's in WE and BD; UN1 110.3 ḏwj.w → `קנקן`)]**, ḥnw.t `קערה`: the vessel words are conventional; the TLA calls hꜣṯs and ḥnw.t only
   "a jug / a vessel".
 - **The unidentified words** (zmjn, zrw, šjkw, ꜣḥꜣḥj, kkj, ꜣḥ, sfkk, ḫmḫ, nšbšb): transliterated or italicized with `?`.
 
@@ -1698,12 +1698,14 @@ bracketed): each reads well with what follows. Echo control: no new biblical phr
 - n sḏm=f: UN5–UN7 follow UN3's rule (past) with reasoned exceptions (UN5 242.1, 246.6; UN6 258-259.2, 260.25; UN7
   269.18, 273-274.58, .67 future), while UN6 258-259.10–11 (`לא נפגע הוא`, `לא ישב הוא בוועד האל`) keep the past inside a
   promise the TLA reads as future – defensible by the rule, but the lead may prefer the future in such contexts.
+  **[2026-11-15 harmonization: 258-259.10–11 now future (`לא ייהרס הוא; אין הורס אותו שם;`, `לא יֵשֵׁב הוא בוועד האל`), as the
+  corpus reads n sḏm=f in a promise (PT571 `לא ימות`, `לא ייענש`; the BD passives NU8 44.4, NU7 130.8, 154.21); ḫmi̯ = `הרס` (BD)]**
 - Brackets: UN6 254.46 `j[r]=[f]` `נגדו` and UN7 267.3 `⸢j⸣[r]` `אל` unbracketed (the r of jr restored, the j written;
   the suffix restored) – the same half-restored case as UN4 222.6 `[j]t(j)=f`, kept for consistency.
 - Collisions (two lemmas, one Hebrew), kept by sense: zwr "drinking bowl" `קערה` (UN6 254.36) beside UN1's ḥnw.t `קערה`
   (`גביע` is TB's ṯbw); dbn `סבב` and pẖr `סובב` in one line (UN7 273-274.42); pẖr n= "serve" `סובב את` (UN6 257.5) /
   `מטפל ב־` (UN7 273-274.40, .48); jni̯ "reach the limit" `הגיע` (UN7 275.3) beside pḥ `הגיע` (262.25).
-- UN6 254.18 mds.w (the noun "violent ones") `העריצים` follows NU's `עורץ`, beside UN7's verb mds `קוטל` (UN7's open
+- UN6 254.18 mds.w (the noun "violent ones") `העריצים` follows NU's `עורץ`, beside UN7's verb mds `קוטל` (now `העורץ`, 2026-11-15) (UN7's open
   question).
 - 258-259.20 sḏr `שוכב (את הלילה)` beside UN9's `לן` (already open).
 
@@ -1838,8 +1840,8 @@ Generated by `../build_parallels_index.py` from the **הקבלה** bullets of th
 | 46.2 | ḏ(d)-mdw zp 4 ḥtp-ḏi̯-nzw n kꜣ n(,j) Wnjs | דברים לאמר, ארבע פעמים: קורבן שהמלך נותן לכָּא של אונאס. | `וְלֹא נָתַתִּי מִמֶּנּוּ לְמֵת` (דברים כו:יד) | divergence | מזון למת הוא כאן לב הפולחן, והמלך החי הוא נותנו; בווידוי המעשר הוא בדיוק מה שאסור. וכן |
 | 46.2 | ḏ(d)-mdw zp 4 ḥtp-ḏi̯-nzw n kꜣ n(,j) Wnjs | דברים לאמר, ארבע פעמים: קורבן שהמלך נותן לכָּא של אונאס. | `אֶת קָרְבָּנִי לַחְמִי לְאִשַּׁי רֵיחַ נִיחֹחִי` (במדבר כח:ב) | divergence | "לחמו" של האל במקרא, "לחמו" של המת כאן. |
 | 46.6 | pꜣ,t n.t wdn | עוגה של זבח. | `וְנֶפֶשׁ כִּי תַקְרִיב קָרְבַּן מִנְחָה לַיהוָה סֹלֶת יִהְיֶה קָרְבָּנוֹ` (ויקרא ב:א) | equivalent | מנחת מאפה לצד הזבח; כאן ה"זבח" (*wdn*) הוא שם כללי לקורבן, גם של לחם. |
-| 47.4 | jrp mnw ḥḏ hꜣṯs | {נית} יין, קנקן־גביש לבן. | — | — | [מקבילה: UN1 43.4]. |
-| 48.3 | jrp mnw km hꜣṯs 1 | יין, קנקן־גביש שחור, אחד. | — | — | [מקבילה: UN1 47.4]. |
+| 47.4 | jrp mnw ḥḏ hꜣṯs | {נית} יין, לגין־גביש לבן. | — | — | [מקבילה: UN1 43.4]. |
+| 48.3 | jrp mnw km hꜣṯs 1 | יין, לגין־גביש שחור, אחד. | — | — | [מקבילה: UN1 47.4]. |
 | 49.2 | (W)sjr Wnjs m n =k ḥnq pri̯ jm =k | אוֹסִירִיס אונאס, קח לך את הליחה היוצאת ממך! | `לֹא כָהֲתָה עֵינוֹ וְלֹא נָס לֵחֹה` (דברים לד:ז) | equivalent | הליחה, נוזל החיים שבגוף; אצל משה – סימן חיוּת, כאן – הנוזל של האל המת, המוחזר אליו כמשקה. |
 | 50.1 | ḏ(d)-mdw | {נית} דְּבָרִים לֵאמֹר: | — | — | [מקבילה: UN1 35.1]. |
 | 50.4 | n(,j) kꜣ n(,j) N(j),t (j)ḫ,t nb(.t) n(,j) ḏ,t =k (j)ḫ,t nb(.t) | {נית} לכָּא של נֵית – כל מנה; לגוויתך – כל מנה. | — | — | [מקבילה: UN1 50.3]. |
@@ -2171,7 +2173,7 @@ Generated by `../build_parallels_index.py` from the **הקבלה** bullets of th
 | 297.5 | j:ḫr sḏr zbn mꜣ ṯw mʾw,t =k Nw,t | נְפוֹל! שכב! זְחַל! תחזה בך אמך, נוּת! | `עַל גְּחֹנְךָ תֵלֵךְ וְעָפָר תֹּאכַל כָּל יְמֵי חַיֶּיךָ` (בראשית ג:יד) | divergence | הנחש מושפל אל האדמה; בבראשית בגזרת האל, וכאן בפקודת הלחש ולעיני "אמו" – השמים. |
 | 298.2 | jr ḥfꜣ,w pn pri̯ m tꜣ ẖr,j ḏbꜥ.pl Wnjs | נגד הנחש הזה, היוצא מן הארץ, אשר תחת אצבעות אונאס. | `הוּא יְשׁוּפְךָ רֹאשׁ וְאַתָּה תְּשׁוּפֶנּוּ עָקֵב` (בראשית ג:טו) | divergence | הנחש שבאדמה מתחת לרגלי האדם; בבראשית הוא נושך את העקב, וכאן הוא "תחת אצבעות" המלך – מוכנע. |
 | 298.2 | jr ḥfꜣ,w pn pri̯ m tꜣ ẖr,j ḏbꜥ.pl Wnjs | נגד הנחש הזה, היוצא מן הארץ, אשר תחת אצבעות אונאס. | `עַל-שַׁחַל וָפֶתֶן תִּדְרֹךְ` (תהלים צא:יג) | equivalent | הנחש תחת רגלי המוגן. |
-| 298.3 | j:šꜥ =f tp =k m ds pn jm(,j) ḏr,t Mꜣfd,t ḥr⟨,t-jb-ḥw,t-ꜥnḫ⟩ | יחתוך הוא את ראשך במאכלת הזאת, שהיא ידה של מָאפְדֶת, אשר־בתוך־בית־החיים. | `הוּא יְשׁוּפְךָ רֹאשׁ` (בראשית ג:טו) | divergence | המכה בראש הנחש; בבראשית בידי זרע האישה, לדורות, וכאן בידי רא (או המלך) ובסכין של אלה – עכשיו. השוו UN5 227.1 ("כרות ראש הזכר השחור הגדול"). |
+| 298.3 | j:šꜥ =f tp =k m ds pn jm(,j) ḏr,t Mꜣfd,t ḥr⟨,t-jb-ḥw,t-ꜥnḫ⟩ | יחתוך הוא את ראשך במאכלת הזאת, שהיא ידה של מַאפְדֶת, אשר־בתוך־בית־החיים. | `הוּא יְשׁוּפְךָ רֹאשׁ` (בראשית ג:טו) | divergence | המכה בראש הנחש; בבראשית בידי זרע האישה, לדורות, וכאן בידי רא (או המלך) ובסכין של אלה – עכשיו. השוו UN5 227.1 ("כרות ראש הזכר השחור הגדול"). |
 | 298.4 | sṯꜣ =f tp(,j).w-rʾ =k sšr =f mtw,t =k | ימשוך הוא את שיני־פיך, ירוקן הוא את ארסך, | `אֱלֹהִים הֲרָס שִׁנֵּימוֹ בְּפִימוֹ` (תהלים נח:ז) | equivalent | אותה פעולה: שבירת שיני הנחש־הרשע בפיו, מיד אחרי הנחש החירש ש"לא ישמע לקול מלחשים" (תהלים נח:ה–ו). בתהלים זו תפילה ודימוי, וכאן לחש ממשי. |
 | 298.5 | m fd(,w) jpw rwḏ.pl jm(,j).w-ḫt ṯbw,t (W)sr(,w) | בארבע רצועות־הסנדל האלה, אשר מאחורי סנדל אוֹסִירִיס. | `תִּרְמֹס כְּפִיר וְתַנִּין` (תהלים צא:יג) | divergence | רמיסת הנחש ברגל; כאן כלי הדריכה עצמו, הסנדל, הוא הנשק: ברצועותיו עוקרים את השיניים. |
 | 299.2 | ṯb(w),t {ꜣ}⟨Ḥr,w⟩ šꜣ[s] =[f] | {פפי ב} סנדל חוֹרוּס – ידרוס הוא! | `תִּרְמֹס כְּפִיר וְתַנִּין` (תהלים צא:יג) | equivalent | רמיסת הזוחל ברגל: אותה פעולה, במלה אחרת (`רמס` שמור בקורפוס ל־*ḫbḫb*, ולכן כאן `דרס`). |

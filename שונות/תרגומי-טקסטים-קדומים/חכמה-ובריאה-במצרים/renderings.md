@@ -500,7 +500,7 @@ parallels table.
 ### 10.12 Review pass (b), consistency, projects 2–3 (2026-10-24)
 1. **New fixed words** (each the earlier text's word where one existed): šꜣs "hasten" `שׁוּט` (HC 17, 57; `רוּץ` stays sjn's); wḏꜣ "go, proceed" `נָסַע` (MT 28b, HC 33; `הָלַךְ` is šm's); ꜥḥ "palace" `אַרְמוֹן` (MT 64, HC 34), stp-sꜣ `בֵּית־הַמֶּלֶךְ`, šny.t `חָצֵר`; wpj "judge between" `פָּסַק (בֵּין)` (MT 7, 12a; AM 8.12); swḏ "hand over" `מָסַר` (MT 53; AM 21.17); smn `קָבַע` (HC 85; AM, PT486); ḥꜣw "abundance" `שֶׁפַע` (HC 81; AM); jḫ.t "property" `רְכוּשׁ` (HC 83; AM); ꜣḫ.w (HC 57) `גְּבוּרוֹת` (`סְגֻלָּה` is the law corpus's cognate of *sikiltu*: §10.11.2's `סְגֻלּוֹת` withdrawn); ḫw "deeds" `מַעֲלָלִים` (HC 35; the root זמם is MK E136's ẖꜣk.w-jb); njsw.t paired with bjtj = `מֶלֶךְ־הַדָּרוֹם` (MT 4, 8; the title njsw.t-bjtj `מֶלֶךְ־הַדָּרוֹם־וְהַצָּפוֹן` as §10.9.4); sꜣ-Rꜥ `בֶּן רַא` (MT, HC 95); mꜣꜣ `חָזָה` (HC 74, as §10.8.3).
 2. **Splits by sense, recorded at the lines:** njs `קָרָא` / `הִכְרִיז`; šdj `קָרָא` / `חִלֵּץ`; qmꜣ `יָצַר` / `הִשְׁלִיךְ` (qmꜣm, AM 9.10); ḫpš `שׁוֹק` / `כָּתֵף`; spr `הִגִּיעַ` / `הִתְיַצֵּב`; pḥ `הִגִּיעַ` / `הִשִּׂיג`; ḥꜣ `סָבִיב` / `מֵאֲחוֹרֵי`.
-3. **Two lemmas in one Hebrew word, kept (never in one line):** wꜣj / ḥrj `רָחוֹק`; zꜣw / nḏ `שָׁמַר`; šww (AM 13.3) / sšp `אוֹר`; bw / s.t `מָקוֹם`; md.t / jḫ.t `דָּבָר` (besides §10.10.5, §10.11.4).
+3. **Two lemmas in one Hebrew word, kept (never in one line):** wꜣj / ḥrj `רָחוֹק`; zꜣw / nḏ `שָׁמַר` (one line has both since 2026-11-15, PT 224.4 = 224.18 `שמור על ילדיך! הישמר לך`: the binyan keeps them apart, §13.7); šww (AM 13.3) / sšp `אוֹר`; bw / s.t `מָקוֹם`; md.t / jḫ.t `דָּבָר` (besides §10.10.5, §10.11.4).
 4. **Spelling:** the formula of §6.5 keeps the fixed spelling `דברים לאמר:` (the verifier's form, the biblical spelling of the infinitive); elsewhere the plene `לאמור` (AM, HC) – both accepted. Plene in vocalized words: `שְׂדֵה־הַקּוֹרְבָּנוֹת`, `קורבן`, `אוֹדֶם`, `אמיתי` (§4.1's `אֲמִתִּי` strips to the plene `אמיתי` in drafted lines).
 5. **Changed (2026-10-30 harmonization, row 8):** ẖr.t-nṯr = `חֶלְקַת־הָאֵל` (HC 93; was `נַחֲלַת־הָאֵל`, kept here earlier by the coordinator): *ẖr.t* is "portion, possession"; `נַחֲלָה` is the Ugaritic *nḥlt*'s cognate (Mot's land, KTU 1.4 VIII), and `נַחֲלַת ה'` would read as the biblical inheritance (a false echo). **Kept (the coordinator, §10.7.4):** MT's `פֶּטֶר־בֶּטֶן` (common Hebrew, not a loan or rare technical word).
 ### 10.13 The fifth-day dossier's Egyptian additions (WC: pWestcar, the wax crocodile; AP: pBremner-Rhind, Apophis), 2026-10-24
@@ -887,7 +887,7 @@ the dead; "they see a lifetime as an hour", Ps 90:4; a man's deeds heaped beside
    בנחיריך`; wḥm ꜥnḫ m-ḫt mt `אחזור על החיים אחרי המוות`; sḏfꜣ / ḏfꜣ.w / kꜣ.w `כלכל` / `מזון` / `צידה`; mk.t `הגנה`; mꜥwḥ.w
    `משוט` (= NU3's mjḥ.w); BD 64's light words sšp `אור`, šw `שמש`, stw.t `קרני־אור`, mꜣw.t `אלומות`, wꜣwꜣ `בוהק`, jꜣḫ.w
    `אורה`; rʾ-pr `היכל` / jwꜣ.y `קודש`. Names: `מֶנְכָּאוּרַא`, `חוֹרְגֶ׳דֶף`, `סָאח` (Orion), `סֶשָׁאת`, `רוּטִי`, `חוֹנְסוּ`,
-   `חַיִת`, `נֶדוּ`; the seven cows, the bull and the four rudders translated as names.
+   `חַיִת`, `נֶדוּ` (**2026-11-15: `נֶדִי`**, §13.7); the seven cows, the bull and the four rudders translated as names.
 3. **Copy for the later parts:** 64L.19, .32, .35, .41 ↔ 64K (NU8); 109.3–5, 109.7 ↔ BD 149 (NU10); 52.3–7 ↔ BD 189 (NU7):
    copy where the Egyptian is the same (`data` lists them).
 4. **Gates:** `כתיבה` no longer read as ־תיבה; `לשאול` "to ask" stays passed line by line with `[היתר שער]` (an exemption
@@ -1060,7 +1060,7 @@ Hymn" 273–274, east wall PT 277–301, north wall PT 302–312) and the corrid
 | psḏ.t (ꜥꜣ.t) | `התשיעייה (הגדולה)` | §10.8 |
 | Jwnw; Bꜣẖ.w; Dwꜣ.t; ẖr-nṯr | `אוֹן` ★; `בָּאחוּ`; `הַדּוּאַת`; `חֶלְקַת־הָאֵל` | §3.2, §12 |
 | sḫ.t-jꜣr.w; sḫ.t-ḥtp | `שְׂדֵה־הָאַגְמוֹנִים`; `שְׂדֵה־הַקּוֹרְבָּנוֹת` | §12.6.1 (project 2 wrote `הַקָּרְבָּנוֹת`: the same word) |
-| Ḫntj-jmn.tjw; Wp-wꜣ.wt; Spd(w); Sbk; Mꜣfd.t; Srq.t | `חֶנְתִּי־אִמֶנְתִּיו` ("Foremost of the Westerners"); `וֶפְּוָאוֶת` ("Opener of the Ways"); `סֹפְּדוּ`; `סֻבֶּךְ`; `מָאפְדֶת`; `סֶרְקֶת` | the first translator who meets a new god fixes it by §2.2 and lists it |
+| Ḫntj-jmn.tjw; Wp-wꜣ.wt; Spd(w); Sbk; Mꜣfd.t; Srq.t | `חֶנְתִּי־אִמֶנְתִּיו` ("Foremost of the Westerners"); `וֶפְּוָאוֶת` ("Opener of the Ways"); `סֹפְּדוּ`; `סוֹבֶּךְ`; `מַאפְדֶת`; `סֶרְקֶת` | the first translator who meets a new god fixes it by §2.2 and lists it (Sobek and Mafdet take the Book of the Dead's forms: 2026-11-15 harmonization) |
 
 ### 13.3 Key terms (one Hebrew per lemma; the corpus's precedents bind – grep them: `lex`, `grep --all`)
 | Egyptian | Hebrew | Note |
@@ -1127,7 +1127,7 @@ terms); "he did not go dead, he went alive" (PT 213.1: Gen 5:24 Enoch, 2 Kgs 2:1
    (the Cow's; later pyramids have wḏꜥ); Seth and Thoth passive `אשר ניתן לו …`.
 2. **Terms:** causative rḏi̯ + verb `נתן ל־` + infinitive (`הניח`: `הנחתם` trips the `חתם` gate); ski̯ `כָּלָה` ★ ("bride");
    the Red Crown `הכתר־האדום`, nsr.t `נֶסֶרֶת`, wr.t-ḥkꜣ.w `גדולת־הקסמים`; ḥtp ḥr `נח על`; ꜥb.w "purity" `זוך` / "impurity"
-   `טומאה`; hj `הֵי`, jh `אִיהּ`; nḏ `הגן` (PT486 / PT600 `שמר`: a split for the lead); bꜣ "leopard skin" `פרוות־נמר`.
+   `טומאה`; hj `הֵי`, jh `אִיהּ`; nḏ `הגן` (PT486 / PT600 `שמר`: a split for the lead; **2026-11-15: `שמר`**, §13.7); bꜣ "leopard skin" `פרוות־נמר`.
 3. **Open (for the user):** wn / wpi̯ both `פתח`; nhp `השכים`?; ꜥb.w `טומאה` vs NU3 `עבֵרה`; ꜥḥꜥ `עמוד` (not `קום`); Ndj `נֶדִי` / NU5 `נֶדוּ`.
 #### 13.6.3 UN5 (PT 226–243, 199, 32, 23, 25, 200, 244–246), translator 3, merged 2026-11-13 (full list in `10-…/project.md`, "UN5")
 1. **The passage's copies of PT 32, 23–24, 25 bind UN1's** (UN1 changes only what its Egyptian changes): `האלה, אוֹסִירִיס,
@@ -1155,7 +1155,7 @@ terms); "he did not go dead, he went alive" (PT 213.1: Gen 5:24 Enoch, 2 Kgs 2:1
 #### 13.6.5 UN7 (PT 261–276, the Cannibal Hymn), translator 5, merged 2026-11-13 (full list in `10-…/project.md`, "UN7")
 1. **Copied:** 273-274.45 = PT 254.7 (changing only `wr`, `=f`). **For later copies:** UN8 299.5 copies 273-274.45, UN9
    307.15 copies 270.4; PT 262's litany `אל תתנכר לאונאס, X: הרי יודע אתה אותו – הרי יודע הוא אותך.`
-2. **The hymn:** wnm `אכל`, ꜥm `בלע`, rḫs `שחט`, ḏꜣd `דקר`, mds `קטל`, fsj `בישל`; wḥꜣ.t `קלחת`, ktj.t `כירה`, kꜣp.t `מוקד`;
+2. **The hymn:** wnm `אכל`, ꜥm `בלע`, rḫs `שחט`, ḏꜣd `דקר`, mds `קטל` (**2026-11-15: `ערץ`**, §13.7), fsj `בישל`; wḥꜣ.t `קלחת`, ktj.t `כירה`, kꜣp.t `מוקד`;
    ḥkꜣ `קסם`, ꜣḫ.w "powers" `גבורות` (BD), sjꜣ `הכרה`; smsw `בכיר` (`בכור` never here: no Ex 12:29 echo, [absent] at
    273-274.20); jḥy `קדר` (kkw `חושך`); jꜥj `נסק` (jꜣq `עלה`); ḏꜣi̯ intransitive `חצה` / transitive `העביר`; Geb's "back"
    `גַּב` vocalized beside `גֶּבּ`.
@@ -1186,9 +1186,9 @@ terms); "he did not go dead, he went alive" (PT 213.1: Gen 5:24 Enoch, 2 Kgs 2:1
    = UN5's copies (verify: identical but for the Egyptian's own differences). Neith's rows keep the masculine grammar the
    Egyptian is written in (`קח לך`, `נֵית זה`; the TLA makes them feminine): open for the user.
 2. **The rubrics:** action = verbal noun + full stop (`ניסוך.`, `הרמה.`); item = bare noun + count (`לחם־וּט, אחד.`, `יין,
-   קנקן־גביש שחור, אחד.`, `בורית, גרגר אחד.`, `מים, שני ספלים.`); Allen's cross-reference rows `{אלן} (ראו 39.1)`.
-3. **The items:** bd `בורית`, nṯr.j `נֶתֶר`, ṯꜣ `גרגר`, snṯr `קטורת`; mnw `גביש`, hꜣṯs `קנקן`, ḥnw.t `קערה`, ꜥ `ספל`, ḏwj.w
-   `כד`; ḥnq `ליחה` / ḥnq.t `שֵׁכָר`; ḥtp-nzw `קורבן־המלך`, ḥtp-wsḫ.t `קורבן־החצר`; the seven oils `ריח־החג`, `חֶקֶנוּ`,
+   לגין־גביש שחור, אחד.`, `בורית, גרגר אחד.`, `מים, שני ספלים.`); Allen's cross-reference rows `{אלן} (ראו 39.1)`.
+3. **The items:** bd `בורית`, nṯr.j `נֶתֶר`, ṯꜣ `גרגר`, snṯr `קטורת`; mnw `גביש`, hꜣṯs `קנקן` (**2026-11-15: `לָגִין`**), ḥnw.t `קערה`, ꜥ `ספל`, ḏwj.w
+   `כד` (**2026-11-15: `קנקן`**, as WE and BD); ḥnq `ליחה` / ḥnq.t `שֵׁכָר`; ḥtp-nzw `קורבן־המלך`, ḥtp-wsḫ.t `קורבן־החצר`; the seven oils `ריח־החג`, `חֶקֶנוּ`,
    `סֶפֶצ׳`, `נֶחֶנֶם`, `תְּוָאוֶת`, `שמן־משובח של ארז`, `שמן־משובח של צְ׳חֶנוּ`; mḏ.t `מרקחת`, mrḥ.t `משחה`; sdm `כחל`,
    msdm.t `פוך`; breads transliterated after `לחם־`.
 4. **For the lead:** NU3 105.3 bd `נתר` against §13.3 / HC / UN1 `בורית`; the mineral ḥtm `קערת־אבן?` (57.3: the `חתם`
@@ -1200,3 +1200,26 @@ terms); "he did not go dead, he went alive" (PT 213.1: Gen 5:24 Enoch, 2 Kgs 2:1
    `יונה`, dꜣb `תאנים`, nbs `שיזף`, ꜥgw.t `קלי`, ḥwn.t (the pupil) `אישון`; ꜥ (measure) `ספל`; wines by their place names.
 3. **For the lead (splits found):** ꜥ tla34360 `ספל` / `זרוע`; ꜥḥ, sḫt both `צד`; jp `פקד` (UN3) / `מנה` (UN4, UN2); mz `קרב` /
    WE `נגש`; ḏwj.w, ds `כד` / WE `קנקן`; zḫz `עקר` / NU5; spr `צלע` beside UN4's šbtjw `צלעותיך`.
+
+### 13.7 2026-11-15 harmonization (after Round 8; the lead's batch A, `../reports/round-8/harmonization-batch-A.md`)
+2026-11-15 harmonization (after Round 8): **changed** – nḏ `שמר` (PT600, BD; `הגן` is ḫwi̯'s): UN4 223.7 `אשר שומרת עליו`,
+224.4 = 224.18 `שמור על ילדיך! הישמר לך` (nḏ and zꜣu̯ meet in one line for the first time: the binyan keeps them apart, §10.12.3),
+UN6 250.6 `השמור`, 254.46 `שמר אונאס על עצמו`; ꜥb.w tla36300 `טומאה` (as UN4 222.25, 222.32; `עבירה` is jw's): NU3 105.4
+`הטומאה הרעה ההיא`; bd `בֹּרִית` (HC 76, UN1): NU3 105.3 `בורית וקטורת` (+ NU4 79.7's note) – and the `נתר` gate now covers the
+whole corpus (`נֶתֶר` nṯr.j, `נתרון` ḥzmn); mds `ערץ` (BD 17.86, 144.18–19, 149.77, UN6 254.18; `קטל` is Merikare's sqr):
+UN7 273-274.28 `העורץ את האדונים`; sḏr `שכב` (§11.3; the vigil of BD 18.15): UN9 302.10 `אשר שוכבים` (the sense "sleep",
+opposite rs "wake", keeps `ישן`: AM ×4, UN3 210.2); ḥꜣi̯ "be naked" `עירום` (UN9 308.5; `חשף` is kfi̯'s): NU8 96.9 `עירום היום
+לפניי`; sṯj tla148990 `ריח` (UN1, UN5, UN7, NU4 86.2; `בושם` is bdd's): MK E134 = MR E134 `*[מן] הריח*?` (the fifth-day
+dossier's copy is the lead's: `[סטייה מן התיק]`, and `verify` now lists it as pending, as WC's); Sobek `סוֹבֶּךְ`, Mafdet
+`מַאפְדֶת` (BD's forms; §13.2): every UN line and note; Ndj / Ndw tla90700 `נֶדִי` (UN4 222.5, 222.33; as Ndj.t `נֶדִית`):
+NU5 64L.24; ḏwj.w `קנקן` (WE, BD 149.2; `כד` is ds's): UN1 110.3; hꜣṯs moved to `לָגִין` (free; `קנקן` is ḏwj.w's): UN1 43.4,
+47.4, 48.3 `לגין־גביש`; wpi̯ (the BD's sense split, §12.6.2.3): "cleave, open (a way, the earth)" `פלח` – UN1 81.7 `תפלחי
+את דרכו`, UN4 222.30 `תפלח את דרכך`, UN6 254.19 `פילח הוא את הארץ`; "judge between" `פסק בין` (NU8 4.1, TB, MT) – UN6 252.6
+`הפוסק (בין) שני האֵלִים`; "open the mouth" (wpi̯ rʾ) `פתח` – NU2 23.4 `אשר פָּתַח בה את פי הָאֵלִים`; spr `הגיע` (the whole
+corpus): UN7 268.17 `הגיע אליו הכָּא שלו`; the negated sḏm=f in a promise reads future (PT571, the BD passives NU8 44.4,
+NU7 130.8; UN3 211.1, 215.16, 215.35): UN6 258-259.10 `לא ייהרס הוא; אין הורס אותו שם;` (ḫmi̯ `הרס`, BD), 258-259.11 `לא
+יֵשֵׁב הוא בוועד האל`. **Kept** (reasons in the batch report): ꜥ tla34360 `ספל` (the offering lists' measure) / `זרוע`
+(arm); jp `פקד` (UN3: the judgment of the hearts, as §12.3's jp `מִפְקָד`) / `מנה` (count, assign); mz `קרב` (the Pyramid
+Texts: PT600, UN) / `נגש` (the tales; in the offering ritual `הגשה` is ḥnk's); ds `כד`; zḫz `עקר` (tear out the Eye) / NU5
+`ייסוטו` (draw back the bolts); mꜣj / rw both `אריה`; the in-project synonym pairs zj / šmj `הלך`, bḏ / pꜣḏ `כדור`,
+ḥnw.t / ꜥb `קרן`, spr / šbtjw `צלע`, jni̯ (tla26870) / pḥ / spr `הגיע` (§6.7 principle 1).

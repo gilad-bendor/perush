@@ -675,7 +675,7 @@ RESERVED = [
     # the serpent (the dossier rule: `נָחָשׁ` the comparison word for every culture's serpent)
     # the Pyramid Texts of Unas (renderings §13.5; Round 8 run 1): the ladder of Gen 28:12 only for mꜣq.t; the
     # seraphim / the bronze serpent never; the angels never (the netherworld corpus's reservation)
-    (W + alt("נתר", "הנתר", "בנתר") + E, r"nṯr,j|nṯr\(,j\)|nṯrj|tla90510", "נֶתֶר only for nṯr.j 'natron' [cognate: loanword, Jer 2:22]", UNAS),
+    (W + alt("נתר", "הנתר", "בנתר") + E, r"nṯr,j|nṯr\(,j\)|nṯrj|tla90510", "נֶתֶר only for nṯr.j 'natron' [cognate: loanword, Jer 2:22]; the whole corpus since the 2026-11-15 harmonization (bd = בֹּרִית, ḥzmn = נתרון)"),
     (W + alt("סולם", "הסולם", "סולמות", "בסולם", "סולמו") + E, r"mꜣq,t|mꜣq\.t|mꜣqt|tla67390", "סֻלָּם only for mꜣq.t 'ladder' [equivalent Gen 28:12]", UNAS),
     (W + alt("שרף", "שרפים", "השרף", "השרפים", "שרפי") + E, None, "שָׂרָף never (Num 21:6–8, Isa 6:2, 14:29, 30:6): the serpent words by their own sense", UNAS),
     (W + alt("מלאך", "מלאכים", "המלאך", "המלאכים", "מלאכי", "מלאכיו") + E, None, "מַלְאָךְ never (Gen 28:12; the netherworld corpus's reservation): wpw.tj = שָׁלִיחַ", UNAS),
@@ -878,18 +878,22 @@ def gt_lines(path):
     return out
 
 
-def check_excerpt(name, heb, other, other_name):
+def check_excerpt(name, heb, other, other_name, body=None):
     """An excerpt kept identical to the whole (guidelines §1): every label of `other` present in `heb` must be equal,
-    byte for byte (a revision goes to both files at once)."""
-    bad, n = 0, 0
+    byte for byte (a revision goes to both files at once). With `body` (the dossier's MK, which is not edited from
+    here), a line marked `[סטייה מן התיק: <reason>]` is listed as a pending dossier revision (for the lead), as WC's."""
+    bad, n, pend = 0, 0, []
     for lab, oh in other.items():
         if lab not in heb:
             continue
         n += 1
         if heb[lab] != oh:
+            if body is not None and "[סטייה מן התיק:" in body.get(lab, ""):
+                pend.append(lab)
+                continue
             print(f"{name} {lab}: differs from {other_name}\n    {other_name}: {oh}\n    {name}: {heb[lab]}")
             bad += 1
-    print(f"{name}: {n} line(s) shared with {other_name} checked")
+    print(f"{name}: {n} line(s) shared with {other_name} checked" + (f"; pending dossier revisions: {', '.join(pend)}" if pend else ""))
     return bad
 
 
@@ -949,7 +953,7 @@ def verify(keys, strict=False):
         if key == "WE":
             bad += check_dossier_wc(heb, body)
         if key == "MK":   # Merikare E 130–136: the fifth-day dossier's excerpt (MK), identical to project 2's
-            bad += check_excerpt("MK", heb, gt_lines(DOSSIER_MK), "the dossier's MK")
+            bad += check_excerpt("MK", heb, gt_lines(DOSSIER_MK), "the dossier's MK", body)
         if key == "MR":   # Merikare whole: E 130–138 = project 2's MK (the hymn), identical
             bad += check_excerpt("MR", heb, gt_lines(annotated_path("MK")), "project 2's MK")
         tr = translation_lines(key)
