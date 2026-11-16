@@ -947,6 +947,16 @@ bind SH2–SH3. Coordinator's decisions: (1) Subir = `שׁוּבִּיר` (the c
 (3) *unken* `כינוס` (Akk. *puḫrum* keeps `אספה`); (4) kept: *tillug* / *am-si* both `פיל` (a split by sense, noted);
 (5) gate fix in `ur3_tools.py`: the verb `שבר` (`שבור`, `לשבור`) no longer trips the `בור` gate.
 
+**SH2 (Šulgi C 253, Šulgi D 262; translator B, resumed; merged 2026-11-16).** Three passes; `verify SHC`, `SHD`, `SHB`
+OK; SHB aligned to `שׁוּבִּיר`. Šulgi C: ETCSL's English covers only A1–A17, B1–B16 – 182 entries are our own reading
+from the morphology (marked `?`, `*…*`). Its proposals (`12-מזמורי-שולגי/project--SH2.md`) bind SH3. The vow (SHD
+211–234) and its fulfilment (331–348) in the same Hebrew, person and tense changed (the vow's restored `[פיזרתי]` /
+`פיזר` is the one intended "same source, different Hebrew"). Coordinator's decisions: (1) *tun₃* keeps `קרדום` (the
+canon); *dur₁₀* (alone and in *dur₁₀-gag*) = `כשיל` (Lugalbanda's precedent; SHB 341 to be aligned in SH3);
+(2) kept by sense, noted: *uš₂* / *u₃-mun* both `דם`, *ki-ur₃* / *šubtum* both `מאורה`; (3) gate fixes in
+`ur3_tools.py`: `הַבְּדִיל` "the tin" licensed by *nagga*, `קטורת` by *šim*; `שבו` "in it" is written vocalized `שֶׁבּוֹ`
+(the canon's gate_view lets it pass).
+
 ## Changelog
 - 2026-11-07: §12.6.1–§12.6.5 merged after each part (LC1, LC2, LZ1, LZ2, ES); *alan* reversed to `פֶּסֶל` (§12.6.3).
 - 2026-11-07: §12 the Uruk cycle (projects 5–7: LC, LZ, ES) – names, grammar, formulas, reserved and gated words, the plan of the parts; fixed by the Round 6 run 3 coordinator before the first part.

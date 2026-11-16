@@ -93,7 +93,7 @@
    interpreter (Gen 42:23), copier of old wisdom (Prov 25:1) – all shared motifs of ancient Near Eastern kingship.
 
 ## Open decisions
-1. **Subir:** §14.1 `סוּבִּיר` (used, 216) vs the canon's EB `שׁוּבִּיר`. One form for the corpus and the canon.
+1. **Subir:** decided `שׁוּבִּיר` (the canon's form); SHB 216 aligned.
 2. **Elephant:** *tillug* (58) and the canon's *am-si* (EB) are both `פיל` – Hebrew has no second word; kept, noted.
 3. **Lance and spear:** *šukur* = `חנית` (34, 65, 339), because the canon (EB) and SHB 138 give *ĝiš-gid₂-da* `רומח`;
    the proverbs (c3 A52) have *šukur* `רומח`. One of the two moves (proposal: the proverbs to `חנית`).
@@ -154,12 +154,12 @@ the instruments transliterated (`האַדַּבּ`, `גּוּאוּשׁ`, `סָ�
 `מופת`; *mul-an* `כוכבי השמים` (also "writing"); *ud su₃-ra₂* `ימים ארוכים`; *eĝer ud-da* `סוף הימים`;
 *šag₄-bal-bal* `צאצאים`; *a-gar₃* `שדמה`; *eg₂* `סוללה`; *ki-lul-la* `מקום־הרצח`; *šag₄-zaraḫ* `אנקת־לב`.
 Names: Šulgi `שׁוּלְגִּי`; Nanibgal `נַנִּיבְּגַל`; Nisaba `נִיסָבָּה`; Ninsumun `נִינְסוּמוּן`; Nintur `נִינְתּוּר`; Ningal
-`נִינְגַּל`; Ištaran `אִישְׁתַּרַן`; Gutium `גּוּטִיּוּם`; Martu `מַרְתּוּ`; Subir `סוּבִּיר` (open 1); Elam `עֵילָם`; Ḫilzum
+`נִינְגַּל`; Ištaran `אִישְׁתַּרַן`; Gutium `גּוּטִיּוּם`; Martu `מַרְתּוּ`; Subir `שׁוּבִּיר` (decided by the coordinator, aligned); Elam `עֵילָם`; Ḫilzum
 `חִילְזוּם`; the E-ḫursaĝ `אֵחוּרְסַג`; the House of the Wisdom of Nisaba `בית־בינת־נִיסָבָּה` (translated); the Anuna
 `הָאֲנוּנָּה`; Ekur `הָאֵכּוּר`.
 
 ## Gate bugs
 - `שבור` (passive participle, 301) and `לשבור` (infinitive, 340) trip the `בור` gate (prefix ש / לש read as
-  ש־בור): written `נשבר`, `לְשַׁבֵּר` instead – the gate should exempt these forms of שבר (or license by *zir*, *ša₅*).
+  ש־בור): written around at first; the gate was fixed by the coordinator and the natural forms restored.
 - `שבו` "in it" (35, 46, 350) trips the `שוב` gate as before (the known homograph); written `שֶׁבּוֹ` (passes).
 - None forced a paraphrase of meaning.

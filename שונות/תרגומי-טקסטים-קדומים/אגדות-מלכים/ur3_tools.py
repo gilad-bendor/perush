@@ -95,6 +95,10 @@ for _k in KEYS:
 for _k in list(nw.RESERVED):
     if 'פדה' in _k:
         nw.RESERVED[_k] = nw.RESERVED[_k] + [r'-pad₃|-pa₃-da|-pad\b']
+    if '(הבדיל|' in _k:   # `הַבְּדִיל` "the tin" (*nagga*, SHD 2026-11-15) is not `הִבְדִּיל` "separated"
+        nw.RESERVED[_k] = nw.RESERVED[_k] + [r'nagga|an-na\[tin|anna\[tin']
+    if 'קטורת' in _k:   # an incense ingredient (*šim*) in the Šulgi hymns
+        nw.RESERVED[_k] = nw.RESERVED[_k] + [r'\{?šim\}?|šim\[']
     if '(גן|גנה' in _k:   # the canal name *gana₂-ḫi-li-an-na* (RL 148): *gana₂* "field" is not `גן`
         nw.RESERVED[_k] = nw.RESERVED[_k] + [r'gana₂']
     if _k == B + P + r'בור' + E or '(בור|' in _k:
