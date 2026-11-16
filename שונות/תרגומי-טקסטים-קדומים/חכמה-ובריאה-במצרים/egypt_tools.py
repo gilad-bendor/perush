@@ -742,7 +742,7 @@ RESERVED = [
     (W + alt("חזון", "החזון", "חזיון", "חזה", "חוזה", "החוזה", "חזו") + E, r"mꜣꜣ|ptr|gmḥ|dgi̯|nwꜣ", "the root חזה only for a seeing verb (mꜣꜣ, ptr, gmḥ, dgi̯) (§14.3)", INSTR),
     (W + alt("שרף", "שרפים", "השרף", "השרפים", "שרפי") + E, None, "שָׂרָף never (Num 21:6–8, Isa 6:2, 14:29, 30:6): the serpent words by their own sense", UNAS),
     (W + alt("מלאך", "מלאכים", "המלאך", "המלאכים", "מלאכי", "מלאכיו") + E, None, "מַלְאָךְ never (Gen 28:12; the netherworld corpus's reservation): wpw.tj = שָׁלִיחַ", UNAS),
-    (W + alt("נחש", "נחשים", "הנחש", "הנחשים", "נחשי", "נחשה") + E, r"ḥfꜣ|ḥfꜣw|ḥfꜣ,w|ḥfy|ḥfj|ꜥꜣpp|ḏdf|nḥꜣ|nꜣw|ꜥpp|sꜣ-tꜣ|ḏd\b|ḏd,t|ꜥrꜥr", "נָחָשׁ only for a serpent word (ḥfꜣw …) [equivalent Gen 3:1, Ex 7:9–12]", TALES),
+    (W + alt("נחש", "נחשים", "הנחש", "הנחשים", "נחשי", "נחשה") + E, r"ḥfꜣ|ḥfꜣw|ḥfꜣ,w|ḥfy|ḥfj|ꜥꜣpp|ḏdf|nḥꜣ|nꜣw|ꜥpp|sꜣ-tꜣ|zꜣ-tꜣ|ḏd\b|ḏd,t|ꜥrꜥr", "נָחָשׁ only for a serpent word (ḥfꜣw …) [equivalent Gen 3:1, Ex 7:9–12]", TALES),
 ]
 
 V = NIQ
