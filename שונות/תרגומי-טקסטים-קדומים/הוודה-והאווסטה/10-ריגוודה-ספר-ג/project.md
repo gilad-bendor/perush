@@ -361,5 +361,48 @@ the Hebrew), 3.9.2a (*vanā́* instr. of *ván*), 3.9.4b (*saścát* "parched pl
 - **Run the consistency script before the intros**: twelve of my new words had a Book 7 / Book 2 precedent that only
   `lexmap` showed (*ásredhant* `בלי כשל`, *devayā́* `המתחנן לאלים`, *vyùṣṭi* `בהפציע`).
 
+### Review (reviewer 2)
+Independent fidelity review of all 297 pādas (2026-11-16): every `>` line against the Zurich text and morphology
+(`data`), word by word beside the פירוק (script: every Hebrew word of each line is covered by a פירוק rendering or
+stands in `( )` – no unbracketed additions found beyond 3.8.4a's unglossed *ā́*); every meaning gloss of the part
+listed by lemma (511 pairs) and read against the lemma; `lexmap` over every part-2 lemma marked "more than one Hebrew"
+against Books 7 / 2 / part 1 (all inflectional variants, or splits already recorded); F14 (3.15.7 = 3.1.23) and the
+copied lines identical; names vocalized at first occurrence; §7.4 / biblical idiom grepped in lines, notes and intros
+(none in lines; one `משיחת` in a note); the ten intros and ten "ההקשר" paragraphs against the lines. The translator's
+grammar fields match Zurich throughout. **2 lines fixed**, plus glosses, notes and intros below. After the fixes:
+`build RV3.8-17`, `build RV3.7`; `verify RV3.1-17 --strict`: no problems (the two justified differences, 10.14.6d and
+2.40.1d); `check_bible_quotes.py`: 0; `selftest`: 0 failures.
+
+| Label | Before | After | Why |
+|---|---|---|---|
+| 3.8.11c | `אתה, אשר הגרזן הזה, המושחז,` | `אותך, אשר הגרזן הזה, המושחז,` | *yáṃ tvā́m* is accusative (the object of *praṇinā́ya*, 11d) |
+| 3.12.6b | `של נשות הדָּאסָה ניערתם` | `נשות הדָּאסָה, ניערתם` | *dāsápatnīḥ* is an accusative adjective of *púraḥ* ("having the Dāsa as lord"), not a genitive: "forts of the Dāsa's wives" misread it; `נשות הדאסה` (1.32.11a) kept, in apposition; the note says so |
+
+- **פירוק:** 3.8.4a *ā́* rendered `הנה` (was "–", though the line has `הנה`); 3.9.1d *anehás* gloss "שאין לו משווה"
+  → "שאין בו פגם, ללא דופי" (the line's sense); 3.14.3c *sīm* "אותה" → "אותו, אותה"; 3.17.1b *aktú* "משחה, קישוט" →
+  "קישוט, מריחה" (√*añj* never `משח`, glosses too); **3.7.5d** *íḷā* "אילה" (the goddess's name) → "רוויה" (the
+  common noun; the goddess `אִילָה` stays only in 3.4.8b). 3.1.23a already reads "רוויה".
+- **Headings and notes:** 3.11's first section `(1–3)` → `(1–4)` (stanza 4 had no heading); 3.8 "ההקשר" `משיחת
+  העמוד` → `מריחת העמוד`; 3.12.6b note rewritten for the apposition.
+- **Intros / "ההקשר" (said what the lines do not):** 3.8 "על פסגת הארץ" → "על גובה הארץ" (3b); 3.9 "מבקשים שלא ישכח
+  לחזור" → the line's words (2c is a statement, open to two readings); 3.10 the imperative *bharata* and the
+  imperative *vardhantu* were told as facts; `שם לו` → `שם (לו)`; 3.11 "אל האלים" (not in 3c / 5c); 3.12 "נגלית באזורי
+  האור" (9c says only `נגלתה`; the realms are 9a's object) and the forts; 3.13 "מחסים" → `מחסות`, "מן השמים ומן המים"
+  → "בשמים", "במים" (4d locatives), "אושר מן הבערה" → "יבער לאושר"; 3.14 "שיטעם" → "שיטעים" (*svada* causative sense);
+  3.15 "להעניק מחסות" (no such verb: *vakṣi* "convey"), the imperatives *bhāhi* / *néṣi* / *párṣi* told as facts, "כשתי
+  פרות" and "כמי שמעניק את שתי המחצות" (5d / 6b depend on *pīpaya* "make swell"); 3.16 "אל העושרים" (2b: the riches
+  are *in* him), "עוני … וחרפה" → the line's `דלות` … `גנאי`; 3.17 "בשביל הארץ ובשביל השמים" (Jamison's
+  alternative, not the line: `את כהונת־הקריאה … של הארץ`), the misquote "לבוש־החמאה־המזוקקת", and "אַגְנִי זובח כמו
+  (אצל) מנו" (2d is the imperative `הַעֲבֵר`).
+
+**Rulings left for the coordinator:**
+- 3.15.2c *nítya* `משלך` against Books 7 / 2 `קבוע` (7.88.6a, 2.2.11d, 2.27.12b): kept as a split by sense ("one's
+  own offspring", Grassmann *eigen*), but 7.88.6a's *āpír nítyaḥ* is arguably the same sense – harmonize one way.
+- 3.12.4a `את שני המטפטפים` and 3.14.3a `שני השחרים`: `שני` renders the dual outside `( )` (as 3.4.6); keep as the
+  book's dual convention, or `(שני)`?
+- 3.8.10c *vāghádbhiḥ* (instrumental) `שומעים לאנשי־הטקס` – Geldner's sense; the case relation is the note's
+  ("(the call) by the priests"). The gloss "כוהני הפולחן" differs in wording only from the Hebrew `אנשי־הטקס`.
+- 3.12.7b *úpa* is rendered only inside `(אליכם)`.
+
 ## Parallels index
 (Generated at the end from the translators' sections and the הקבלה bullets; see `../parallels-index.md`.)
